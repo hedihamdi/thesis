@@ -1,0 +1,1859 @@
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %                                                               %
+    %        tkz-2d.sty      encodage : utf8                        %
+    %                                                               %
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %                                                               %
+    %           Créé par Alain Matthes le 07-07-2007.               %
+    %                                                               %
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 23 septembre 2007
+%% Objet :  outils avancés por la création en 2d
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tkz-2d}[2007/09/23 v3  for 1.18 users plots 2d ]
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                          Initialisation
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\RequirePackage{tkz-base}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                 Suite de l'initialisation
+\newdimen\tkz@rayon
+\newdimen\tkzrayon
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––> 
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                    Coordonnées d'un vecteur (couple de points)
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%result in #2x et #2y #1 est le point
+\newcommand*{\tkzGetPointxy}{\tkz@extractxy}
+\def\tkz@extractxy(#1)#2{%
+\pgfextractx{\pgf@x}{\pgfpointanchor{#1}{center}}
+\pgfmathparse{\pgf@sys@tonumber{\pgf@x}/28.4528}
+\global\let\tkzresultx\pgfmathresult
+\global\expandafter\edef\csname #2x\endcsname{\tkzresultx}% 
+\pgfextracty{\pgf@y}{\pgfpointanchor{#1}{center}}
+\pgfmathparse{\pgf@sys@tonumber{\pgf@y}/28.4528}
+\global\let\tkzresulty\pgfmathresult
+\global\expandafter\edef\csname #2y\endcsname{\tkzresulty}}  
+
+\def\tkz@@extractxy#1{%
+\pgfextractx{\pgf@x}{\pgfpointanchor{#1}{center}}
+\pgfextracty{\pgf@y}{\pgfpointanchor{#1}{center}} 
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                    Coordonnées d'un vecteur  
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%result in #3x et #3y #1 et #2 sont les points
+\newcommand*{\tkzGetVectxy}{\tkz@GetVectxy}
+\def\tkz@GetVectxy(#1,#2)#3{%
+\pgfpointdiff{\pgfpointanchor{#1}{center}}%
+             {\pgfpointanchor{#2}{center}}%
+\pgfmathparse{\pgf@sys@tonumber{\pgf@x}/28.4528}
+\global\let\tkzresultx\pgfmathresult
+\pgfmathparse{\pgf@sys@tonumber{\pgf@y}/28.4528}
+\global\let\tkzresulty\pgfmathresult
+\global\expandafter\edef\csname #3x\endcsname{\tkzresultx}% 
+\global\expandafter\edef\csname #3y\endcsname{\tkzresulty}%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                             Draw   vector
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzDrawVector}[1][]{\tkz@DrawVector[#1]}%
+\def\tkz@DrawVector[#1](#2){%
+    \setkeys[TKZ]{seg}{#1}%
+    \begingroup%
+        \foreach \deb/\fin in {#2}{%
+        \ifthenelse{\equal{\cmdTKZ@seg@symbol}{}}
+        {\draw[>=latex,->,line width = \cmdTKZ@seg@lw,%
+              color      = \cmdTKZ@seg@color](\deb.center)--(\fin.center);}%
+        {\protected@edef\tkz@temp{%
+         \noexpand \draw[>          = latex,%
+                         ->,%
+                         line width = \cmdTKZ@seg@lw,%
+                         color      = \cmdTKZ@seg@color]%
+          (\deb.center) to node[sloped]}\tkz@temp%
+          {\textcolor{\cmdTKZ@seg@colorsymbol}{\cmdTKZ@seg@symbol}}%
+          (\fin.center);}%
+          \ifthenelse{\equal{\cmdTKZ@seg@label}{}}%
+            {}%
+            {\path (\deb.center)%
+             to  node[above=\cmdTKZ@seg@poslabel,sloped]%
+                     {\textcolor{\cmdTKZ@seg@colorlabel}{\cmdTKZ@seg@label}}%
+                     (\fin.center);}}%
+    \endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                          Slope
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzFindSlope}{\tkz@FindSlope}
+\def\tkz@FindSlope(#1,#2){%
+    \begingroup%
+       \pgfpointnormalised{%
+       \pgfpointdiff{\pgfpointanchor{#1}{center}}
+                    {\pgfpointanchor{#2}{center}}}
+       \pgfmathparse{\pgf@y/\pgf@x}%
+       \xdef\tkzSlope{\pgfmathresult}%
+    \endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                   VectorNormalised
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzVectorNormalised}{\tkz@Vectnorm} 
+\def\tkz@Vectnorm(#1,#2)#3{%
+    \begingroup%
+    \pgfpointnormalised{%
+    \pgfpointdiff{\pgfpointanchor{#1}{center}}
+                 {\pgfpointanchor{#2}{center}}}
+    \tkz@ax=\pgf@x\relax%
+    \tkz@ay=\pgf@y\relax%
+    \path coordinate(#3) at%
+           ([shift={(\pgfmath@tonumber{\tkz@ax},%
+                     \pgfmath@tonumber{\tkz@ay})}]#1);
+    \endgroup%
+}%
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                   tkzVectorOrth
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzVectorOrth}{\@ifstar%
+                             \tkzVectorOrthStar%
+                             \tkzVectorOrthNoStar}
+\newcommand*{\tkzVectorOrthNoStar}[1][]{\tkz@VectorOrthNoStar[#1]}
+\def\tkz@VectorOrthNoStar[#1](#2,#3)#4{%
+    \setkeys[TKZ]{pt}{#1}% 
+    \begingroup%
+    \@tkz@visibletrue%
+    \tkz@VectorOrthStar[#1](#2,#3){#4}
+    \@tkz@visiblefalse%
+    \endgroup%
+}% 
+\newcommand*{\tkzVectorOrthStar}[1][]{\tkz@VectorOrthStar[#1]}
+\def\tkz@VectorOrthStar[#1](#2,#3)#4{%
+    \setkeys[TKZ]{pt}{#1}% 
+    \begingroup%
+    \pgfpointdiff{\pgfpointanchor{#2}{center}}%
+                 {\pgfpointanchor{#3}{center}}%
+    \pgf@xa=\pgf@y%
+    \pgf@ya=\pgf@x%
+    \pgfmathparse{\cmdTKZ@pt@k}\edef\tkz@coeff{\pgfmathresult}
+    \path[coordinate](#2)--++(-\pgf@xa *\tkz@coeff,%
+                               \pgf@ya *\tkz@coeff)%
+          coordinate (#4);%
+    \if@tkz@visible 
+         \tkz@DrawPoint{#4}%
+    \fi%
+    \endgroup%
+}% 
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                VectorOrthNormalised
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzVectorOrthNormalised}[1][]{\tkz@vorthonorm[#1]}
+\def\tkz@vorthonorm[#1](#2,#3)#4{%
+    \setkeys[TKZ]{pt}{#1}% 
+\begingroup%
+ \pgfpointnormalised{\pgfpointdiff{\pgfpointanchor{#2}{center}}%
+                                  {\pgfpointanchor{#3}{center}}} 
+  \pgf@xa=-\pgf@y%
+  \pgf@ya=\pgf@x%
+  \path[coordinate](#2)--++(\pgf@sys@tonumber{\pgf@xa} cm,%
+                            \pgf@sys@tonumber{\pgf@ya} cm)%
+        coordinate (#4);%
+\endgroup%
+}% 
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                    VectorKLinear    
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzVectorKLinear}{\@ifstar%
+                             \tkzVectorKLinearStar%
+                             \tkzVectorKLinearNoStar}
+\newcommand*{\tkzVectorKLinearNoStar}[1][]{\tkz@VectorKLinearNoStar[#1]}%
+\def\tkz@VectorKLinearNoStar[#1](#2,#3,#4)#5{% 
+   \setkeys[TKZ]{pt}{#1}% 
+\begingroup%
+    \@tkz@visibletrue%
+    \tkz@VectorKLinearStar[#1](#2,#3,#4){#5}
+    \@tkz@visiblefalse%
+\endgroup%
+}% 
+\newcommand*{\tkzVectorKLinearStar}[1][]{\tkz@VectorKLinearStar[#1]}%
+\def\tkz@VectorKLinearStar[#1](#2,#3,#4)#5{% 
+   \setkeys[TKZ]{pt}{#1}% 
+\begingroup%
+   \pgfpointdiff{\pgfpointanchor{#2}{center}}%
+                {\pgfpointanchor{#3}{center}}%
+   \pgf@xa=\pgf@x%
+   \pgf@ya=\pgf@y% 
+   \pgfmathparse{\cmdTKZ@pt@k}\edef\tkz@coeff{\pgfmathresult}
+    \path[coordinate](#4)--++(\pgf@xa *\tkz@coeff,%
+                              \pgf@ya *\tkz@coeff)%
+          coordinate (#5);%
+    \if@tkz@visible \tkz@DrawPoint{#5}\fi%
+\endgroup%
+}% 
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%             Duplicate Length  
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzDuplicateLength}{\@ifstar%
+                                  \tkzDuplicateLengthStar%
+                                  \tkzDuplicateLengthNoStar}
+\newcommand*{\tkzDuplicateLengthNoStar}[1][]{\tkz@DuplicateLengthNoStar[#1]}
+\def\tkz@DuplicateLengthNoStar[#1](#2,#3)(#4,#5)#6{%
+    \setkeys[TKZ]{pt}{#1}%
+\begingroup%
+    \tkzmathLength(#2,#3)
+    \global\let\tkzfirstlen\tkzmathLen
+    \tkzmathLength(#4,#5)
+    \global\let\tkzsecondlen\tkzmathLen
+    \pgfmathdivide@{\tkzfirstlen}{\tkzsecondlen}
+    \global\let\tkz@ratio\pgfmathresult
+    \tkz@HomoNoStar[#1](#4,\tkz@ratio)(#5/#6)
+\endgroup%
+}
+\newcommand*{\tkzDuplicateLengthStar}{\tkz@DuplicateLengthStar}
+\def\tkz@DuplicateLengthStar(#1,#2)(#3,#4)#5{%
+\begingroup%
+    \tkzmathLength(#1,#2)
+    \global\let\tkzfirstlen{\tkzmathLen}
+    \tkzmathLength(#3,#4)
+    \global\let\tkzsecondlen{\tkzmathLen}
+    \pgfmathdivide@{\tkzsecondlen}{\tkzfirstlen}
+    \global\let\ratio{\pgfmathresult}
+    \tkz@HomoStar(#1,\ratio)(#4/#5)
+\endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                               Setup   MLine
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+\define@cmdkey [TKZ] {SUPL} {color}{}
+\define@cmdkey [TKZ] {SUPL} {style}{}
+\define@cmdkey [TKZ] {SUPL} {lw}{}
+\presetkeys    [TKZ] {SUPL} {%
+                            color       = black,%
+                            style       = solid,%
+                            lw          = 0.4pt}{}
+                            \newcommand*{\tkzSetUpPLine}[1][]{\tkz@SetUpPLine[#1]}%
+\def\tkz@SetUpPLine[#1]{%
+    \setkeys       [TKZ] {SUPL} {#1}%
+    \presetkeys    [TKZ] {pline} {%
+                                  color       = \cmdTKZ@SUPL@color,%
+                                  style       = \cmdTKZ@SUPL@style,%
+                                  lw          = \cmdTKZ@SUPL@lw}{}
+}
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                                Polygons
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+\define@cmdkey [TKZ] {pline} {color}{}
+\define@cmdkey [TKZ] {pline} {lw}{}
+\define@cmdkey [TKZ] {pline} {style}{}
+\presetkeys    [TKZ] {pline} {%
+                              color = black,%
+                              lw    = 0.4 pt,%
+                              style = solid}{}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                                 Polygon 
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+\newcommand*{\tkzPolygon}[1][]{\tkz@Polygon[#1]}%
+\def\tkz@Polygon[#1](#2){% 
+\setkeys[TKZ]{pline}{#1}%
+\begingroup%
+  \setcounter{tkz@nb@gon}{0}
+  \foreach \pt in {#2}{%
+     \ifthenelse{\value{tkz@nb@gon} = 0}{\global\let\firstpt\pt}{%
+     \tkzSegment[lw         = \cmdTKZ@pline@lw,%
+                 color      = \cmdTKZ@pline@color,%
+                 style      = \cmdTKZ@pline@style](\lastpt/\pt)}%
+     \global\let\lastpt\pt%
+     \stepcounter{tkz@nb@gon}}%
+     \tkzSegment[lw         = \cmdTKZ@pline@lw,%
+                 color      = \cmdTKZ@pline@color,%
+                 style      = \cmdTKZ@pline@style](\lastpt/\firstpt)
+\endgroup%
+}   
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                                     parallélogramme
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzLLgram}{\@ifstar
+                     \tkzLLgramStar%
+                     \tkzLLgramNoStar}%
+\newcommand*{\tkzLLgramNoStar}[1][]{\tkz@LLgramNoStar[#1]}% 
+\def\tkz@LLgramNoStar[#1](#2,#3,#4)#5{%
+    \setkeys[TKZ]{pline}{#1}%
+\begingroup%
+    \tkzVectorKLinear(#3,#2,#4){#5}
+    \tkzPolygon(#2,#3,#4,#5)
+\endgroup%
+}
+
+\newcommand*{\tkzLLgramStar}{\tkz@LLgramStar}% 
+\def\tkz@LLgramStar(#1,#2,#3)#4{%
+    \tkzVectorKLinear*(#2,#1,#3){#4}
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                                     square
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+\newcommand*{\tkzSquare}{\@ifstar\tkzSquareStar\tkzSquareNoStar}
+\newcommand*{\tkzSquareNoStar}[1][]{\tkz@SquareNoStar[#1]}
+\def\tkz@SquareNoStar[#1](#2,#3)#4#5{%
+    \setkeys[TKZ]{pline}{#1}%
+\begingroup%
+   \tkzRotate(#3,-90)(#2/#4)
+   \tkzRotate(#2,90)(#3/#5)
+   \tkzPolygon[#1](#2,#3,#4,#5)
+\endgroup%
+}
+\newcommand*{\tkzSquareStar}{\tkz@SquareStar}
+\def\tkz@SquareStar(#1,#2)#3#4{%
+\begingroup%
+   \tkzRotate*(#2,-90)(#1/#3)
+   \tkzRotate*(#1,90)(#2/#4)
+\endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                       Triangle Equilateral
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+\newcommand*{\tkzTrEqui}{\@ifstar\tkzTrEquiStar\tkzTrEquiNoStar}
+\newcommand*{\tkzTrEquiNoStar}{\tkz@TrEquiNoStar}
+\def\tkz@TrEquiNoStar(#1,#2)#3{%
+\begingroup%
+    \tkzRotate(#1,60)(#2/#3)
+    \tkzPolygon(#1,#2,#3)
+\endgroup%
+}
+\newcommand*{\tkzTrEquiStar}{\tkz@TrEquiStar}
+\def\tkz@TrEquiStar(#1,#2)#3{%
+\begingroup%
+    \tkzRotate*(#1,60)(#2/#3)
+\endgroup%
+}
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                       tkzCircle   
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+\newcommand*{\tkzCircle}{\@ifstar
+                     \tkzCircleStar%
+                     \tkzCircleNoStar}%
+\newcommand*{\tkzCircleNoStar}[1][]{\tkz@circleNoStar[#1]}% 
+\def\tkz@circleNoStar[#1](#2,#3){% 
+    \setkeys[TKZ]{pline}{#1}%
+\begingroup%
+    \tkzmathLength(#2,#3)%
+    \protected@edef\tkz@temp{%
+        \noexpand\draw[line width = \cmdTKZ@pline@lw,%
+                       color      = \cmdTKZ@pline@color,%
+                                     \cmdTKZ@pline@style]}\tkz@temp%
+                      (#2) circle (\tkzmathLen pt);%
+\endgroup%
+}
+\newcommand*{\tkzCircleStar}[1][]{\tkz@circleStar[#1]}% 
+\def\tkz@circleStar[#1](#2,#3){% 
+    \setkeys[TKZ]{pline}{#1}
+\begingroup%
+    \tkz@MidPointStar(#2,#3){my@tkz@pt}
+    \tkzCircle[#1](my@tkz@pt,#3)
+\endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%             tkzCircleR
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+\newcommand*{\tkzCircleR}{\@ifstar
+                     \tkzCircleRStar%
+                     \tkzCircleRNoStar}%
+\newcommand*{\tkzCircleRNoStar}[1][]{\tkz@CircleRNoStar[#1]}%
+\def\tkz@CircleRNoStar[#1](#2,#3){%    
+    \setkeys[TKZ]{pline}{#1}%
+\begingroup%
+    \protected@edef\tkz@temp{%
+        \noexpand\draw[line width = \cmdTKZ@pline@lw,%
+                       color      = \cmdTKZ@pline@color,%
+                                    \cmdTKZ@pline@style]}\tkz@temp%
+                      (#2) circle (#3);%
+\endgroup%
+}
+\newcommand*{\tkzCircleRStar}[1][]{\tkz@CircleRStar[#1]}%
+\def\tkz@CircleRStar[#1](#2,#3,#4){%    
+    \setkeys[TKZ]{pline}{#1}%
+\begingroup%
+    \tkzmathLength(#3,#4)
+    \protected@edef\tkz@temp{%
+        \noexpand\draw[line width = \cmdTKZ@pline@lw,%
+                       color      = \cmdTKZ@pline@color,%
+                                    \cmdTKZ@pline@style]}\tkz@temp%
+                      (#2) circle (\tkzmathLen pt);%
+\endgroup%
+}
+
+
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                               Setup   Line
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+\define@cmdkey [TKZ] {SUL} {color}{}
+\define@cmdkey [TKZ] {SUL} {style}{}
+\define@cmdkey [TKZ] {SUL} {lw}{}
+\define@cmdkey [TKZ] {SUL} {kl}{}
+\define@cmdkey [TKZ] {SUL} {kr}{}
+\define@cmdkey [TKZ] {SUL} {prefix}{}
+\define@cmdkey [TKZ] {SUL} {len}{}
+\presetkeys    [TKZ] {SUL} {%
+                            color       = black,%
+                            style       = solid,%
+                            lw          = 0.4pt,%
+                            kr          = {},%  
+                            kl          = {},%
+                            len         = 5,% 
+                            prefix      = {}}{}
+\newcommand*{\SetUpLine}[1][]{\tkz@SetUpLine[#1]}%
+\def\tkz@SetUpLine[#1]{%
+    \setkeys       [TKZ] {SUL} {#1}%
+    \presetkeys    [TKZ] {line} {%
+                            color       = \cmdTKZ@SUL@color,%
+                            style       = \cmdTKZ@SUL@style,%
+                            lw          = \cmdTKZ@SUL@lw,%
+                            kr          = \cmdTKZ@SUL@kr,%
+                            kl          = \cmdTKZ@SUL@kl,%
+                            len         = \cmdTKZ@SUL@len,%   
+                            prefix      = \cmdTKZ@SUL@prefix}{}
+}
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                    line
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newlength{\tkz@ptAx}
+\newlength{\tkz@ptAy}
+
+\define@cmdkey [TKZ] {line} {lw}{}
+\define@cmdkey [TKZ] {line} {color}{}
+\define@cmdkey [TKZ] {line} {style}{}
+\define@cmdkey [TKZ] {line} {kr}{}
+\define@cmdkey [TKZ] {line} {kl}{}
+\define@cmdkey [TKZ] {line} {len}{} 
+\define@cmdkey [TKZ] {line} {prefix}{}
+\presetkeys    [TKZ] {line} {%
+                             color  = black,%
+                             style  = solid,%
+                             lw     = 0.6 pt,%
+                             kr     = 1,%
+                             kl     = 1,%
+                             len    = 5,% 
+                             prefix = d}{}
+
+\newcommand*{\tkzLine}[1][]{\tkz@Line[#1]}% 
+\def\tkz@Line[#1](#2){%
+    \setkeys[TKZ]{line}{#1}%
+    \begingroup%
+       \foreach \deb/\fin in {#2}{% 
+          \pgfpointdiff{\pgfpointanchor{\deb}{center}}%
+                       {\pgfpointanchor{\fin}{center}}%
+          \tkz@ax =\pgf@x%
+          \tkz@ay =\pgf@y%
+          \pgfmathparse{\cmdTKZ@line@kl}
+          \edef\tkz@cl{\pgfmathresult}
+          \pgfmathparse{\cmdTKZ@line@kr}
+          \edef\tkz@cr{\pgfmathresult}
+          \draw[line width = \cmdTKZ@line@lw,%
+                color      = \cmdTKZ@line@color,%
+                             \cmdTKZ@line@style]%
+               (\deb)--++%
+               (-\tkz@ax  *\tkz@cl,-\tkz@ay *\tkz@cl)%
+          coordinate(\cmdTKZ@line@prefix l)--(\fin)--++%
+               (\tkz@ax  *\tkz@cr,\tkz@ay *\tkz@cr)%
+          coordinate(\cmdTKZ@line@prefix r);}
+   \endgroup%
+}
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                                 PolySeg
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+\newcommand*{\tkzPolySeg}[1][]{\tkz@Polyline[#1]}%
+\def\tkz@Polyline[#1](#2){% 
+    \setkeys[TKZ]{pline}{#1}%
+    \setcounter{tkz@nb@gon}{0}
+    \foreach \pt in {#2}{%
+       \ifthenelse{\value{tkz@nb@gon} = 0}{}{%
+          \tkzSegment[lw         = \cmdTKZ@pline@lw,%
+                      color      = \cmdTKZ@pline@color,%
+                      style      = \cmdTKZ@pline@style](\lastpt/\pt)}%
+          \global\let\lastpt\pt%
+          \stepcounter{tkz@nb@gon}}%
+}
+
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                            tkzParaLL
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzParaLL}{\@ifstar%
+                           \tkzParaLLStar%
+                           \tkzParaLLNoStar}
+
+\newcommand*{\tkzParaLLNoStar}[1][]{\tkz@ParaLLNoStar[#1]}%
+\def\tkz@ParaLLNoStar[#1](#2,#3)(#4){%
+    \setkeys[TKZ]{line}{#1}%
+    \begingroup%
+      \tkzVectorKLinear*(#2,#3,#4){tkz@point}
+      \tkz@Line[#1](#4/tkz@point)
+    \endgroup%
+}
+\newcommand*{\tkzParaLLStar}[1][]{\tkz@ParaLLStar[#1]}%
+\def\tkz@ParaLLStar[#1](#2,#3)(#4){%
+    \setkeys[TKZ]{line}{#1}%
+    \begingroup%
+        \tkzVectorKLinear*(#2,#3,#4){tkz@point}
+        \pgfpointdiff{\pgfpointanchor{#4}{center}}%
+                     {\pgfpointanchor{tkz@point}{center}}%
+        \tkz@ax =\pgf@x%
+        \tkz@ay =\pgf@y%
+        \pgfmathparse{\cmdTKZ@line@kl}
+        \edef\tkz@cl{\pgfmathresult}
+        \pgfmathparse{\cmdTKZ@line@kr}
+        \edef\tkz@cr{\pgfmathresult}
+        \path[line width = \cmdTKZ@line@lw,%
+              color      = \cmdTKZ@line@color,%
+                           \cmdTKZ@line@style]%
+             (#4)--++%
+             (-\tkz@ax  *\tkz@cl,-\tkz@ay *\tkz@cl)%
+        coordinate(\cmdTKZ@line@prefix l)--(tkz@point)--++%
+             (\tkz@ax  *\tkz@cr,\tkz@ay *\tkz@cr)%
+        coordinate(\cmdTKZ@line@prefix r);
+    \endgroup%
+} 
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                        tkzLineOrth 
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzLineOrth}{\@ifstar%
+                           \tkzLineOrthStar%
+                           \tkzLineOrthNoStar}
+
+\newcommand*{\tkzLineOrthNoStar}[1][]{\tkz@LineOrthNoStar[#1]}%
+\def\tkz@LineOrthNoStar[#1](#2,#3)(#4){%  
+    \setkeys[TKZ]{line}{#1}%
+    \begingroup%
+      \tkz@@extractxy{#4}
+      \tkz@bx =\pgf@x\relax%
+      \tkz@by =\pgf@y\relax%
+      \pgfpointdiff{\pgfpointanchor{#2}{center}}%
+                   {\pgfpointanchor{#3}{center}}%
+      \tkz@ax =\pgf@x%
+      \tkz@ay =\pgf@y%
+      \pgfmathparse{\cmdTKZ@line@kl}\edef\tkz@cl{\pgfmathresult}
+      \pgfmathparse{\cmdTKZ@line@kr}\edef\tkz@cr{\pgfmathresult}
+      \draw[line width = \cmdTKZ@line@lw,%
+            color      = \cmdTKZ@line@color,%
+                         \cmdTKZ@line@style]%
+            (\tkz@bx,\tkz@by)--++(-\tkz@ay*\tkz@cr,%
+                                   \tkz@ax*\tkz@cr)%
+      coordinate(\cmdTKZ@line@prefix r);
+      \draw[line width = \cmdTKZ@line@lw,%
+             color      = \cmdTKZ@line@color,%
+                          \cmdTKZ@line@style]%
+             (\tkz@bx,\tkz@by)--++(\tkz@ay*\tkz@cl,%
+                                  -\tkz@ax*\tkz@cl)%
+      coordinate(\cmdTKZ@line@prefix l);
+    \endgroup%
+}
+
+\newcommand*{\tkzLineOrthStar}[1][]{\tkz@LineOrthStar[#1]}%
+\def\tkz@LineOrthStar[#1](#2,#3)(#4){%
+    \setkeys[TKZ]{line}{#1}%
+    \begingroup%
+       \tkz@@extractxy{#4}
+       \tkz@bx =\pgf@x\relax%
+       \tkz@by =\pgf@y\relax%
+       \pgfpointnormalised{\pgfpointdiff{\pgfpointanchor{#2}{center}}%
+                                        {\pgfpointanchor{#3}{center}}}%
+       \tkz@ax =\pgf@x%
+       \tkz@ay =\pgf@y%
+       \pgfmathparse{\cmdTKZ@line@kl}\edef\tkz@cl{\pgfmathresult}
+       \pgfmathparse{\cmdTKZ@line@kr}\edef\tkz@cr{\pgfmathresult}
+       \path[coordinate]%
+                  (\tkz@bx,\tkz@by)--++(-\tkz@ay*\tkz@cr,%
+                                         \tkz@ax*\tkz@cr)%
+       coordinate(\cmdTKZ@line@prefix r);
+       \path[coordinate]%
+                  (\tkz@bx,\tkz@by)--++(\tkz@ay*\tkz@cl,%
+                                       -\tkz@ax*\tkz@cl)%
+       coordinate(\cmdTKZ@line@prefix l);
+     \endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                      milieu  de deux points
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzMidPoint}{\@ifstar\tkzMidPointStar\tkzMidPointNoStar}
+
+\newcommand*{\tkzMidPointNoStar}[1][]{\tkz@MidPointNoStar[#1]}%
+\def\tkz@MidPointNoStar[#1](#2,#3)#4{%
+    \begingroup%
+      \setkeys[TKZ]{pt}{#1}%
+      \tkz@MidPointStar(#2,#3){#4}
+      \tkz@DrawPoint{#4}
+    \endgroup%
+}
+
+\newcommand*{\tkzMidPointStar}{\tkz@MidPointStar}%
+\def\tkz@MidPointStar(#1,#2)#3{%
+\begingroup%
+  \pgfextractx{\pgf@x}{\pgfpointanchor{#1}{center}}
+   \pgf@xa=\pgf@x%
+   \pgfextracty{\pgf@y}{\pgfpointanchor{#1}{center}}
+   \pgf@ya=\pgf@y%
+   \pgfextractx{\pgf@x}{\pgfpointanchor{#2}{center}}
+   \pgfextracty{\pgf@y}{\pgfpointanchor{#2}{center}}
+   \advance\pgf@xa by-\pgf@x\relax%
+   \advance\pgf@ya by-\pgf@y\relax%
+   \advance\pgf@x by 0.5\pgf@xa\relax%
+   \advance\pgf@y by 0.5\pgf@ya\relax% 
+   \global\pgf@x=\pgf@x\global\pgf@y=\pgf@y
+   \path[coordinate] (\the\pgf@x,\the\pgf@y) coordinate (#3);
+\endgroup%
+}
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                            tkzMediatorLine
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzMediatorLine}{\@ifstar%
+                               \tkzMediatorLineStar%
+                               \tkzMediatorLineNoStar}
+
+\newcommand*{\tkzMediatorLineNoStar}[1][]{\tkz@MediatorLineNoStar[#1]}%
+\def\tkz@MediatorLineNoStar[#1](#2,#3){%
+\setkeys[TKZ]{line}{#1}%
+\begingroup%
+   \tkz@MidPointStar(#2,#3){tkzmidpoint}
+   \tkz@LineOrthNoStar[#1](#2,#3)(tkzmidpoint)
+\endgroup%
+} 
+
+\newcommand*{\tkzMediatorLineStar}[1][]{\tkz@MediatorLineStar[#1]}%
+\def\tkz@MediatorLineStar[#1](#2,#3){%
+\setkeys[TKZ]{line}{#1}%
+\begingroup% 
+   \tkz@MidPointStar(#2,#3){tkzmidpoint}
+   \tkzLineOrth*[#1](#2,#3)(tkzmidpoint)
+\endgroup%
+} 
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                      CircumCenter
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzCircumCenter}{\@ifstar%
+                               \tkzCircumCenterStar%
+                               \tkzCircumCenterNoStar}
+
+\newcommand*{\tkzCircumCenterNoStar}[1][]{\tkz@CircumCenterNoStar[#1]}%
+\def\tkz@CircumCenterNoStar[#1](#2,#3,#4)#5{%
+    \setkeys[TKZ]{pt}{#1}%
+    \begingroup%  
+       \tkz@MediatorLineStar[prefix=tkz@di](#2,#3)
+       \tkz@MediatorLineStar[prefix=tkz@dii](#2,#4)
+       \tkz@InterLLNoStar[#1](tkz@dir,tkz@dil)(tkz@diir,tkz@diil){#5}%  
+    \endgroup%
+} 
+\newcommand*{\tkzCircumCenterStar}{\tkz@CircumCenterStar}%
+\def\tkz@CircumCenterStar(#1,#2,#3)#4{%
+    \begingroup%
+       \tkz@MediatorLineStar[prefix=tkz@di](#1,#2)
+       \tkz@MediatorLineStar[prefix=tkz@dii](#1,#3)
+       \tkz@InterLLStar(tkz@dir,tkz@dil)(tkz@diir,tkz@diil){#4}%  
+    \endgroup%
+}
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                     Circumcircle
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzCircumCircle}[1][]{\tkz@CircumCircle[#1]}%
+\def\tkz@CircumCircle[#1](#2,#3,#4){%
+    \setkeys[TKZ]{pline}{#1}%
+    \begingroup%   
+       \tkz@CircumCenterStar(#2,#3,#4){tkz@ccenter}
+       \tkzCircle[#1](tkz@ccenter,#2)
+    \endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                     InCenter
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzInCenter}{\@ifstar\tkzInCenterStar\tkzInCenterNoStar}
+
+\newcommand*{\tkzInCenterNoStar}[1][]{\tkz@InCenterNoStar[#1]}%
+\def\tkz@InCenterNoStar[#1](#2,#3,#4)#5{%
+    \setkeys[TKZ]{pt}{#1}%  
+    \begingroup%
+    \tkzBisector*(#2,#3,#4){tempa}
+    \tkzBisector*(#3,#2,#4){tempb}
+    \tkz@InterLLNoStar[#1](#2,tempb)(#3,tempa){#5}
+    \endgroup%
+} 
+\newcommand*{\tkzInCenterStar}{\tkz@InCenterStar}%
+\def\tkz@InCenterStar(#1,#2,#3)#4{%
+    \begingroup%
+    \tkzBisector*(#1,#2,#3){tempa}
+    \tkzBisector*(#2,#1,#3){tempb}
+    \tkz@InterLLStar(#1,tempb)(#2,tempa){#4}
+    \endgroup%
+} 
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                     InCircle
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzInCircle}[1][]{\tkz@InCircle[#1]}%
+\def\tkz@InCircle[#1](#2,#3,#4){%
+    \setkeys[TKZ]{pline}{#1}%
+    \begingroup%
+      \tkz@InCenterStar(#2,#3,#4){tkz@center}
+      \tkzProjection*(#2,#3)(tkz@center/tkz@InProj)
+      \tkzCircle[#1](tkz@center,tkz@InProj)
+    \endgroup%
+}
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                    OrthoCenter
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+\newcommand*{\tkzOrthoCenter}{\@ifstar\tkzOrthoCenterStar\tkzOrthoCenterNoStar}
+\newcommand*{\tkzOrthoCenterNoStar}[1][]{\tkz@OrthoCenterNoStar[#1]}%
+\def\tkz@OrthoCenterNoStar[#1](#2,#3,#4)#5{%
+    \setkeys[TKZ]{pt}{#1}%
+    \tkz@ProjectionStar(#2,#3)(#4/tempa)
+    \tkz@ProjectionStar(#2,#4)(#3/tempb)
+    \tkz@InterLLNoStar[#1](#3,tempb)(#4,tempa){#5}
+} 
+\newcommand*{\tkzOrthoCenterStar}{\tkz@OrthoCenterStar}%
+\def\tkz@OrthoCenterStar(#1,#2,#3)#4{%
+     \begingroup%
+       \tkz@ProjectionStar(#1,#2)(#3,tempa)
+       \tkz@ProjectionStar(#1,#3)(#2,tempb)
+       \tkz@InterLLStar(#2,tempb)(#3,tempa){#4}
+     \endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                                    median
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzMedian}[1][]{\tkz@Median[#1]}%
+\def\tkz@Median[#1](#2,#3)(#4){%
+    \setkeys[TKZ]{line}{#1}%
+% calculs des  coordonnées todo star
+\begingroup%
+   \tkzMidPoint*(#3,#2){tkz@mypoint}%
+   \tkzSegment[#1](#4/tkz@mypoint)
+\endgroup%
+}  
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                      GravityCenter
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzGravityCenter}{\@ifstar%
+                                \tkzGravityCenterStar%
+                                \tkzGravityCenterNoStar}
+
+\newcommand*{\tkzGravityCenterNoStar}[1][]{\tkz@GravityCenterNoStar[#1]}%
+\def\tkz@GravityCenterNoStar[#1](#2,#3,#4)#5{%
+    \setkeys[TKZ]{pt}{#1}%  
+    \begingroup%
+      \tkzMidPoint*(#3,#2){tkz@mida}
+      \tkzMidPoint*(#4,#2){tkz@midb}
+      \tkz@InterLLNoStar[#1](#4,tkz@mida)(#3,tkz@midb){#5}%
+    \endgroup%
+} 
+\newcommand*{\tkzGravityCenterStar}{\tkz@GravityCenterStar}%
+\def\tkz@GravityCenterStar(#1,#2,#3)#4{%
+   \begingroup%   
+     \tkzMidPoint*(#3,#2){tkz@mida}
+     \tkzMidPoint*(#1,#2){tkz@midb}
+     \tkz@InterLLStar(#1,tkz@mida)(#3,tkz@midb){#4}%
+   \endgroup%
+} 
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                                    altitude
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzAltitude}[1][]{\tkz@Altitude[#1]}%
+\def\tkz@Altitude[#1](#2,#3)(#4){%
+    \setkeys[TKZ]{line}{#1}%
+    \begingroup%
+       \tkzProjection*(#2,#3)(#4/tkz@InProj)
+       \tkzSegment[#1](#4/tkz@InProj)
+    \endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                 intersection  de deux lignes
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzInterLL}{\@ifstar%
+                          \tkzInterLLStar%
+                          \tkzInterLLNoStar}
+
+\newcommand*{\tkzInterLLNoStar}[1][]{\tkz@InterLLNoStar[#1]}%
+\def\tkz@InterLLNoStar[#1](#2,#3)(#4,#5)#6{%
+    \setkeys[TKZ]{pt}{#1}%
+    \begingroup%
+       \path (intersection of #2--#3 and #4--#5) coordinate(#6);
+       \tkz@DrawPoint{#6}%
+    \endgroup%
+}
+ 
+\newcommand*{\tkzInterLLStar}{\tkz@InterLLStar}%
+\def\tkz@InterLLStar(#1,#2)(#3,#4)#5{%
+    \path (intersection of #1--#2 and #3--#4) coordinate(#5);%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                 intersection  de Ligne Cercle rayon connu
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+\newcommand*{\tkzInterLCR}[1][]{\tkz@InterLCR[#1]}%
+\def\tkz@InterLCR[#1](#2,#3)(#4,#5)#6#7{%
+\setkeys[TKZ]{pt}{#1}%
+\begingroup%
+    \tkz@rayon=#5%
+    \tkz@@extractxy{#4}
+    \tkz@bx =\pgf@x\relax%
+    \tkz@by =\pgf@y\relax%
+    \tkzProjection*(#2,#3)(#4/tkz@pth)
+    \tkzmathLength(#4,tkz@pth)
+    \ifdim\tkzmathLen pt<0.05pt\relax%
+           \pgfpointdiff{\pgfpointanchor{#2}{center}}%
+                        {\pgfpointanchor{#3}{center}}%
+           \tkz@ax=\pgf@x%
+           \tkz@ay=\pgf@y%
+           \pgfpointborderellipse{\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                                 {\pgfpoint{\tkz@rayon}{\tkz@rayon}}
+           \tkz@ax=\pgf@x\relax%
+           \tkz@ay=\pgf@y\relax%
+           \advance\tkz@bx by\tkz@ax\relax%
+           \advance\tkz@by by\tkz@ay\relax%
+           \path[coordinate] (\tkz@bx,\tkz@by) coordinate (#7);
+           \tkzCSym*(#4)(#7/#6)
+    \else  
+           \pgfmathdivide@{\tkzmathLen}%
+                          {\pgfmath@tonumber{\tkz@rayon}}
+           \pgfmathacos@{\pgfmathresult}%
+           \let\tkz@angle\pgfmathresult%
+           \pgfpointdiff{\pgfpointanchor{#4}{center}}%
+                        {\pgfpointanchor{tkz@pth}{center}}%
+           \tkz@ax=\pgf@x%
+           \tkz@ay=\pgf@y%
+           \pgfpointborderellipse{\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                                 {\pgfpoint{\tkz@rayon}{\tkz@rayon}}
+           \tkz@ax =\pgf@x\relax%
+           \tkz@ay =\pgf@y\relax%
+           \advance\tkz@bx by\tkz@ax\relax%
+           \advance\tkz@by by\tkz@ay\relax%
+           \tkz@@extractxy{#4}
+           \tkz@ax =\pgf@x\relax%
+           \tkz@ay =\pgf@y\relax%
+           \tkz@@extractxy{tkz@pth}
+           \ifdim\pgf@y<\tkz@ay \edef\tkz@angle{-\tkz@angle}%
+           \fi%
+           \pgfmathrotatepointaround{\pgfpoint{\tkz@bx}{\tkz@by}}%
+                                    {\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                                    {\tkz@angle}
+           \path[coordinate] (\pgf@x,\pgf@y) coordinate (#6);
+           \pgfmathrotatepointaround{\pgfpoint{\tkz@bx}{\tkz@by}}%
+                                    {\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                                    {-\tkz@angle}
+            \path[coordinate] (\pgf@x,\pgf@y) coordinate (#7);
+     \fi%
+     \endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                 intersection  de Ligne Cercle rayon inconnu
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzInterLC}[1][]{\tkz@InterLC[#1]}%
+\def\tkz@InterLC[#1](#2,#3)(#4,#5,#6)#7#8{%
+    \setkeys[TKZ]{pt}{#1}%
+    \begingroup%
+    \tkzmathLength(#5,#6)
+    \tkz@InterLCR[#1](#2,#3)(#4,\tkzmathLen pt){#7}{#8}
+    \endgroup%
+}
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%    Intersection de deux cercles  
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newdimen\tkz@la
+\newdimen\tkz@lb
+
+\newcommand*{\tkzInterCCR}[1][]{\tkz@InterCCR[#1]}%
+\def\tkz@InterCCR[#1](#2,#3)(#4,#5)#6#7{%
+    \setkeys[TKZ]{pt}{#1}%
+    \begingroup%
+    \pgfpointdiff{\pgfpointanchor{#2}{center}}%
+                 {\pgfpointanchor{#4}{center}}%
+    \tkz@ax=\pgf@x%
+    \tkz@ay=\pgf@y%
+    \pgfmathveclen{\pgfmath@tonumber{\tkz@ax}}%
+                  {\pgfmath@tonumber{\tkz@ay}}
+    \let\tkz@dc\pgfmathresult
+    \pgfmathparse{\tkz@dc/8}
+    \let\tkz@dc\pgfmathresult
+    \tkz@lb=#3\relax%
+    \tkz@la=#5\relax%
+    
+    \ifdim\tkz@lb<0.01 pt\relax%
+          \edef\tkz@db{0}
+    \else
+          \edef\tkz@db{\tkz@lb/8}%
+    \fi
+    \ifdim\tkz@la<0.01 pt\relax%
+          \edef\tkz@da{0}
+    \else
+          \edef\tkz@da{\tkz@la/8}
+    \fi
+    \pgfmathparse{acos((\tkz@db*\tkz@db+\tkz@dc*\tkz@dc-\tkz@da*\tkz@da)%
+                        /(2*\tkz@db*\tkz@dc))}
+    \edef\tkz@angle{\pgfmathresult}
+    \pgfpointdiff{\pgfpointanchor{#2}{center}}%
+                 {\pgfpointanchor{#4}{center}}%
+    \tkz@bx=\pgf@x%
+    \tkz@by=\pgf@y%
+    \pgfpointborderellipse{\pgfpoint{\tkz@bx}{\tkz@by}}%
+                          {\pgfpoint{\tkz@lb}{\tkz@lb}}
+    \tkz@ax=\pgf@x\relax%
+    \tkz@ay=\pgf@y\relax%
+    \tkz@@extractxy{#2}
+    \tkz@bx =\pgf@x\relax%
+    \tkz@by =\pgf@y\relax%
+
+    \advance\tkz@bx by\tkz@ax\relax%
+    \advance\tkz@by by\tkz@ay\relax%
+    \tkz@@extractxy{#2}
+    \tkz@ax=\pgf@x\relax%
+    \tkz@ay=\pgf@y\relax%
+
+    \pgfmathrotatepointaround{\pgfpoint{\tkz@bx}{\tkz@by}}%
+                             {\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                             {\tkz@angle}
+    \path[coordinate](\pgf@x,\pgf@y) coordinate (#6);
+    \pgfmathrotatepointaround{\pgfpoint{\tkz@bx}{\tkz@by}}%
+                             {\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                             {-\tkz@angle}
+     \path[coordinate](\pgf@x,\pgf@y) coordinate (#7);
+     \endgroup%
+}
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%    Intersection de deux cercles   Avec deux points
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+\newcommand*{\tkzInterCC}[1][]{\tkz@InterCC[#1]}%
+\def\tkz@InterCC[#1](#2,#3,#4)(#5,#6,#7)#8#9{%
+    \setkeys[TKZ]{pt}{#1}%
+    \begingroup%
+      \tkzmathLength(#3,#4)
+      \let\tkz@rayA\tkzmathLen
+      \tkzmathLength(#6,#7)
+      \let\tkz@rayB\tkzmathLen
+      \tkz@InterCCR[#1](#2,\tkz@rayA pt)(#5,\tkz@rayB pt){#8}{#9}
+    \endgroup%
+}
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%    tangente à cercle passant par un point donné
+%    todo version star + rayon avec deux points
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzTgtFromPR}[1][]{\tkz@TgtFromPR[#1]}%
+\def\tkz@TgtFromPR[#1](#2,#3)(#4)#5#6{%
+    \setkeys[TKZ]{pt}{#1}%
+    \begingroup%
+    \tkzMidPoint*(#2,#4){tkzmypoint}%
+    \tkzmathLength(tkzmypoint,#2)%
+    \tkzInterCCR(#2,#3)(tkzmypoint,\tkzmathLen pt){#5}{#6}%
+    \endgroup%
+}
+\newcommand*{\tkzTgtFromP}[1][]{\tkz@TgtFromP[#1]}%
+\def\tkz@TgtFromP[#1](#2,#3,#4)(#5)#6#7{%
+    \setkeys[TKZ]{pt}{#1}%
+    \begingroup%
+    \tkzMidPoint*(#2,#5){tkzmypoint}%
+    \tkzmathLength(#3,#4)%
+    \let\tkz@radius\tkzmathLen
+    \tkzmathLength(tkzmypoint,#2)%
+    \tkzInterCCR(#2,\tkz@radius pt)(tkzmypoint,\tkzmathLen pt){#6}{#7}%
+    \endgroup%
+}
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                        Transformations Géométriques
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%  Translation par rapport à un point
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzTranslation}{\@ifstar\tkzTranslationStar\tkzTranslationNoStar}
+\newcommand*{\tkzTranslationNoStar}[1][]{\tkz@TranslationNoStar[#1]}%
+\def\tkz@TranslationNoStar[#1](#2,#3)(#4){%
+    \setkeys[TKZ]{pt}{#1}%
+    \begingroup%
+    \@tkz@visibletrue%
+    \tkz@TranslationStar(#2,#3)(#4)
+    \@tkz@visiblefalse%
+    \endgroup%
+}
+\newcommand*{\tkzTranslationStar}{\tkz@TranslationStar}%
+\def\tkz@TranslationStar(#1,#2)(#3){%
+    \begingroup%
+    \foreach \point/\transfpoint in {#3}{%
+        \ifthenelse{\equal{\transfpoint}{}}{%
+                    \def\tkz@pointtsf{\point'}}{%
+                    \def\tkz@pointtsf{\transfpoint}}
+        \tkzVectorKLinear*(#1,#2,\point){\tkz@pointtsf}
+        \if@tkz@visible \tkz@DrawPoint{\tkz@pointtsf} \fi}%
+\endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%  Symétrie par rapport à un point Homo with (-1)
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzCSym}{\@ifstar%
+                       \tkzCSymStar%
+                       \tkzCSymNoStar}
+\newcommand*{\tkzCSymNoStar}[1][]{\tkz@CSymNoStar[#1]}%
+\def\tkz@CSymNoStar[#1](#2)(#3){%
+    \setkeys[TKZ]{pt}{#1}%
+    \begingroup%
+    \@tkz@visibletrue%
+    \tkz@CSymStar(#2)(#3)%
+    \@tkz@visiblefalse
+    \endgroup%
+}
+\newcommand*{\tkzCSymStar}{\tkz@CSymStar}%
+\def\tkz@CSymStar(#1)(#2){%
+    \begingroup%
+    \foreach \point/\transfpoint in {#2}{%
+        \pgfpointdiff{\pgfpointanchor{#1}{center}}%
+                     {\pgfpointanchor{\point}{center}}%
+        \tkz@ax=\pgf@x%
+        \tkz@ay=\pgf@y%
+        \ifthenelse{\equal{\transfpoint}{}}{%
+                    \def\tkz@pointtsf{\point'}}{%
+                    \def\tkz@pointtsf{\transfpoint}}
+         \path(#1)--++(-\tkz@ax,-\tkz@ay)coordinate (\tkz@pointtsf);
+         \if@tkz@visible \tkz@DrawPoint{\tkz@pointtsf}%
+         \fi}%
+    \endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%  Symétrie orthogonale par rapport à une droite
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––> 
+\newcommand*{\tkzSymOrth}{\@ifstar%
+                             \tkzSymOrthStar%
+                             \tkzSymOrthNoStar} 
+\newcommand*{\tkzSymOrthNoStar}[1][]{\tkz@SymOrthNoStar[#1]}%
+\def\tkz@SymOrthNoStar[#1](#2,#3)(#4){%
+    \setkeys[TKZ]{pt}{#1}%
+    \@tkz@visibletrue
+    \tkz@SymOrthStar(#2,#3)(#4)
+    \@tkz@visiblefalse
+}
+\newcommand*{\tkzSymOrthStar}{\tkz@SymOrthStar}%
+\def\tkz@SymOrthStar(#1,#2)(#3){%
+    \begingroup%
+    \pgfpointdiff{\pgfpointanchor{#1}{center}}%
+                 {\pgfpointanchor{#2}{center}}%
+    \tkz@ax =\pgf@y%
+    \tkz@ay =\pgf@x%
+    \foreach \deb/\fin in {#3}{% 
+        \path[coordinate](\deb)--++(-\tkz@ax,\tkz@ay) coordinate (tkzptp@int);
+        \tkz@InterLLStar(#1,#2)(\deb,tkzptp@int){tkzPointofSym}
+        \if@tkz@visible%
+            \tkzCSym(tkzPointofSym)(\deb/\fin)%
+        \else%
+            \tkzCSym*(tkzPointofSym)(\deb/\fin) \fi}%
+    \endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%  Projection orthogonale sur une droite
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzProjection}{\@ifstar%
+                             \tkzProjectionStar%
+                             \tkzProjectionNoStar} 
+\newcommand*{\tkzProjectionNoStar}[1][]{\tkz@ProjectionNoStar[#1]}%
+\def\tkz@ProjectionNoStar[#1](#2,#3)(#4){%
+    \setkeys[TKZ]{pt}{#1}%
+    \@tkz@visibletrue
+    \tkz@ProjectionStar(#2,#3)(#4)
+    \@tkz@visiblefalse
+}
+\newcommand*{\tkzProjectionStar}{\tkz@ProjectionStar}%
+\def\tkz@ProjectionStar(#1,#2)(#3){%
+   \begingroup%
+  \pgfpointdiff{\pgfpointanchor{#1}{center}}%
+                                    {\pgfpointanchor{#2}{center}}%
+   \tkz@ax =\pgf@y%
+   \tkz@ay =\pgf@x%
+   \foreach \point/\transfpoint in {#3}{%
+       \path[coordinate](\point)--++(-\tkz@ax,\tkz@ay)%
+           coordinate (tkz@point);
+       \ifthenelse{\equal{\transfpoint}{}}{%
+                   \def\tkz@pointtsf{\point'}}{%
+                   \def\tkz@pointtsf{\transfpoint}}
+        \tkz@InterLLStar(#1,#2)(\point,tkz@point){\tkz@pointtsf}%
+        \if@tkz@visible \tkz@DrawPoint{\tkz@pointtsf}%
+        \fi}%
+\endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%  Homothétie par rapport à un point
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzHomo}{\@ifstar\tkzHomoStar\tkzHomoNoStar} 
+\newcommand*{\tkzHomoNoStar}[1][]{\tkz@HomoNoStar[#1]}%
+\def\tkz@HomoNoStar[#1](#2,#3)(#4){%
+    \setkeys[TKZ]{pt}{#1}%
+    \@tkz@visibletrue
+    \tkz@HomoStar(#2,#3)(#4)%
+    \@tkz@visiblefalse
+}
+\newcommand*{\tkzHomoStar}{\tkz@HomoStar}%
+\def\tkz@HomoStar(#1,#2)(#3){%
+    \begingroup%
+    \foreach \point/\transfpoint in {#3}{%
+        \pgfpointdiff{\pgfpointanchor{#1}{center}}%
+                     {\pgfpointanchor{\point}{center}}%
+        \pgf@xa=\pgf@x%
+        \pgf@ya=\pgf@y% 
+        \ifthenelse{\equal{\transfpoint}{}}{%
+                    \def\tkz@pointtsf{\point'}}{%
+                    \def\tkz@pointtsf{\transfpoint}}
+       \pgfmathparse{#2}\edef\tkz@coeff{\pgfmathresult}%
+       \path[coordinate](#1)--++(\tkz@coeff\pgf@xa,\tkz@coeff\pgf@ya)%
+             coordinate(\tkz@pointtsf);
+       \if@tkz@visible \tkz@DrawPoint{\tkz@pointtsf} \fi}%
+    \endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                 rotation  en degré
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzRotate}{\@ifstar\tkzRotateStar\tkzRotateNoStar%
+}% #2 center #3 angle #4 pt and pttsf
+\newcommand*{\tkzRotateNoStar}[1][]{\tkz@RotateNoStar[#1]}%
+\def\tkz@RotateNoStar[#1](#2,#3)(#4){%
+    \setkeys[TKZ]{pt}{#1}%
+    \begingroup%
+    \@tkz@visibletrue
+    \tkz@RotateStar(#2,#3)(#4)%
+    \@tkz@visiblefalse
+    \endgroup%
+}
+\newcommand*{\tkzRotateStar}{\tkz@RotateStar}%
+\def\tkz@RotateStar(#1,#2)(#3){%
+    \begingroup%
+    \foreach \point/\transfpoint in {#3}{%
+        \tkz@@extractxy{\point}
+        \global\tkz@ax\pgf@x%
+        \global\tkz@ay\pgf@y%
+        \tkz@@extractxy{#1}
+        \global\tkz@bx\pgf@x%
+        \global\tkz@by\pgf@y%
+        \pgfmathrotatepointaround{\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                                 {\pgfpoint{\tkz@bx}{\tkz@by}}%
+                                 {#2}
+        \global\tkz@bx\pgf@x%
+        \global\tkz@by\pgf@y%
+        \ifthenelse{\equal{\transfpoint}{}}{%
+                    \def\tkz@pointtsf{\point'}}{%
+                    \def\tkz@pointtsf{\transfpoint}}
+        \path[coordinate](\tkz@bx,\tkz@by)coordinate(\tkz@pointtsf);
+        \if@tkz@visible \tkz@DrawPoint{\tkz@pointtsf}%
+        \fi}%
+    \endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                 rotation  en radian
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzRotateR}{\@ifstar
+                     \tkzRotateRStar%
+                     \tkzRotateRNoStar%
+}
+\newcommand*{\tkzRotateRNoStar}[1][]{\tkz@RotateRNoStar[#1]}%
+\def\tkz@RotateRNoStar[#1](#2,#3)(#4){%
+    \setkeys[TKZ]{pt}{#1}%
+    \begingroup%
+    \@tkz@visibletrue
+    \tkz@RotateRStar(#2,#3)(#4)%
+    \@tkz@visiblefalse
+    \endgroup% 
+}
+\newcommand*{\tkzRotateRStar}{\tkz@RotateRStar}%
+\def\tkz@RotateRStar(#1,#2)(#3){%
+     \pgfmathparse{#2 r}
+     \let\tkz@angle\pgfmathresult
+     \foreach \point/\transfpoint in {#3}{%
+        \tkz@@extractxy{\point}
+        \tkz@ax\pgf@x%
+        \tkz@ay\pgf@y%
+        \tkz@@extractxy{#1}
+        \tkz@bx\pgf@x%
+        \tkz@by\pgf@y%
+        \pgfmathrotatepointaround{\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                                 {\pgfpoint{\tkz@bx}{\tkz@by}}%
+                                 {\tkz@angle}
+        \tkz@bx\pgf@x%
+        \tkz@by\pgf@y%
+        \ifthenelse{\equal{\transfpoint}{}}{%
+                    \def\tkz@pointtsf{\point'}}{%
+                    \def\tkz@pointtsf{\transfpoint}}
+        \path[coordinate](\tkz@bx,\tkz@by)coordinate(\tkz@pointtsf);
+        \if@tkz@visible%
+             \tkz@DrawPoint{\tkz@pointtsf}%
+        \fi}%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                   Fin des transformations
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%              Bisector
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkz@len@seg}{5}
+\newcommand*{\tkzBisector}{\@ifstar\tkzBisectorStar\tkzBisectorNoStar}
+ 
+\newcommand*{\tkzBisectorNoStar}[1][]{\tkz@BisectorNoStar[#1]}%
+\def\tkz@BisectorNoStar[#1](#2,#3,#4)#5{%
+    \setkeys[TKZ]{line}{#1}%
+    \begingroup%
+    \pgfpointnormalised{%
+              \pgfpointdiff{\pgfpointanchor{#3}{center}}{%
+                            \pgfpointanchor{#2}{center}}}%  
+    \tkz@ax=\pgf@x\relax%
+    \tkz@ay=\pgf@y\relax%   
+    \path  coordinate(tkz@au) at%
+           ([shift={(\pgfmath@tonumber{\tkz@ax},%
+                     \pgfmath@tonumber{\tkz@ay})}]#3) ;
+    \pgfpointnormalised{%
+              \pgfpointdiff{\pgfpointanchor{#3}{center}}{%
+                            \pgfpointanchor{#4}{center}}}%  
+    \tkz@bx=\pgf@x\relax%
+    \tkz@by=\pgf@y\relax%
+    \path  coordinate(tkz@bv) at%
+           ([shift={(\pgfmath@tonumber{\tkz@bx},%
+                     \pgfmath@tonumber{\tkz@by})}]#3);
+    \tkzVectorKLinear*(#3,tkz@au,tkz@bv){tkz@point}
+    \pgfpointnormalised{%
+              \pgfpointdiff{\pgfpointanchor{#3}{center}}{%
+                            \pgfpointanchor{tkz@point}{center}}}%  
+    \tkz@bx=\pgf@x\relax%
+    \tkz@by=\pgf@y\relax%
+    \path[coordinate]% 
+           ([shift={(\cmdTKZ@line@len*\pgfmath@tonumber{\tkz@bx},%
+                     \cmdTKZ@line@len*\pgfmath@tonumber{\tkz@by})}]#3)%
+            coordinate(#5);
+    \tkz@Line[#1](#3/#5)%
+    \endgroup%
+}%
+
+\newcommand*{\tkzBisectorStar}[1][]{\tkz@BisectorStar[#1]}%
+\def\tkz@BisectorStar[#1](#2,#3,#4)#5{%
+    \setkeys[TKZ]{line}{#1}%
+    \begingroup%
+    \pgfpointnormalised{%
+              \pgfpointdiff{\pgfpointanchor{#3}{center}}{%
+                            \pgfpointanchor{#2}{center}}}%  
+    \tkz@ax=\pgf@x\relax%
+    \tkz@ay=\pgf@y\relax%   
+    \path  coordinate(tkz@au) at%
+           ([shift={(\pgfmath@tonumber{\tkz@ax},%
+                     \pgfmath@tonumber{\tkz@ay})}]#3) ;
+    \pgfpointnormalised{%
+              \pgfpointdiff{\pgfpointanchor{#3}{center}}{%
+                            \pgfpointanchor{#4}{center}}}%  
+    \tkz@bx=\pgf@x\relax%
+    \tkz@by=\pgf@y\relax%
+    \path  coordinate(tkz@bv) at%
+           ([shift={(\pgfmath@tonumber{\tkz@bx},%
+                     \pgfmath@tonumber{\tkz@by})}]#3);
+    \tkzVectorKLinear*(#3,tkz@au,tkz@bv){tkz@point}
+    \pgfpointnormalised{%
+              \pgfpointdiff{\pgfpointanchor{#3}{center}}{%
+                            \pgfpointanchor{tkz@point}{center}}}%  
+    \tkz@bx=\pgf@x\relax%
+    \tkz@by=\pgf@y\relax%
+    \path[coordinate]% 
+           ([shift={(\cmdTKZ@line@len*\pgfmath@tonumber{\tkz@bx},%
+                     \cmdTKZ@line@len*\pgfmath@tonumber{\tkz@by})}]#3)%
+            coordinate(#5);
+    \endgroup%
+}%
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%              Out Bisector
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzBisectorOut}{\@ifstar%
+                              \tkzBisectorOutStar%
+                              \tkzBisectorOutNoStar}
+ 
+\newcommand*{\tkzBisectorOutNoStar}[1][]{\tkz@BisectorOutNoStar[#1]}%
+\def\tkz@BisectorOutNoStar[#1](#2,#3,#4)#5{%
+    \setkeys[TKZ]{line}{#1}%  
+    \begingroup%
+    \tkzVectorOrthNormalised(#3,#2){tkz@tmpa}
+    \tkz@ax=\pgf@x\relax% 
+    \tkz@ay=\pgf@y\relax%
+    \path [coordinate] (\tkz@ax,\tkz@ay) coordinate (tkz@point@au) ;
+    \tkzVectorOrthNormalised(#3,#4){tkz@tmpb}
+    \tkz@bx=\pgf@x\relax% 
+    \tkz@by=\pgf@y\relax% 
+    \path [coordinate] (\tkz@bx,\tkz@by) coordinate (tkz@point@bv) ;
+    \tkzVectorKLinear*(#3,tkz@point@au,tkz@point@bv){tkz@point}
+    \pgfpointnormalised{%
+              \pgfpointdiff{\pgfpointanchor{#3}{center}}{%
+                            \pgfpointanchor{tkz@point}{center}}}%  
+    \tkz@bx=\pgf@x\relax%
+    \tkz@by=\pgf@y\relax%
+    \path  coordinate(#5) at%
+           ([shift={(\cmdTKZ@line@len*\pgfmath@tonumber{\tkz@bx},%
+                     \cmdTKZ@line@len*\pgfmath@tonumber{\tkz@by})}]#3);
+    \tkz@Line[#1](#3/#5)
+    \endgroup%
+}
+\newcommand*{\tkzBisectorOutStar}[1][]{\tkz@BisectorOutStar[#1]}%
+\def\tkz@BisectorOutStar[#1](#2,#3,#4)#5{%
+    \setkeys[TKZ]{line}{#1}%  
+    \tkz@InterLLStar[#1](tkz@dir,tkz@dil)(tkz@diir,tkz@diil){#5}%  
+} 
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%              Symbole angle    todo pb color
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\tikzstyle{ai}=[draw,line width=.5pt] 
+\tikzstyle{aii}=[draw,line width=.5pt,double,double distance=1pt] 
+\tikzstyle{aiii}=[draw,line width=.5pt,double=red,double distance=2pt] 
+
+\define@cmdkey [TKZ] {maka} {color}{}
+\define@cmdkey [TKZ] {maka} {fillcolor}{}
+\define@cmdkey [TKZ] {maka} {size}{}
+\define@cmdkey [TKZ] {maka} {opacity}{} 
+\define@cmdkey [TKZ] {maka} {style}{}
+\define@cmdkey [TKZ] {maka} {label}{}
+\define@cmdkey [TKZ] {maka} {labelsize}{}
+\define@cmdkey [TKZ] {maka} {labelcolor}{}
+\define@cmdkey [TKZ] {maka} {pos}{} 
+\define@cmdkey [TKZ] {maka} {dist}{} 
+\presetkeys    [TKZ] {maka} {%
+                     color      = black,%
+                     fillcolor  = white,%
+                     size       = 1 cm,%
+                     opacity    = 0.5,%
+                     style      = {ai},%
+                     label      = {},%
+                     labelcolor = black,%
+                     labelsize  = \scriptstyle,%
+                     pos        = {},%
+                     dist       = 0.5}{}
+
+\newcommand*{\tkzMarkAngle}[1][]{\tkz@MarkAngle[#1]}%
+\def\tkz@MarkAngle[#1](#2){%   
+\setkeys[TKZ]{maka}{#1}%
+\begingroup%
+\foreach \tkz@sidea/\tkz@sommet/\tkz@sideb in {#2}{%
+       \begin{scope}
+          \clip (\tkz@sidea.center)--(\tkz@sommet.center)%
+                                   --(\tkz@sideb.center)--cycle;
+          \draw[color   = \cmdTKZ@maka@color,%
+                fill    = \cmdTKZ@maka@fillcolor,%
+                opacity = .4,%
+                          \cmdTKZ@maka@style](\tkz@sommet)%
+                circle (\cmdTKZ@maka@size); 
+        \tkz@BisectorStar[](\tkz@sidea,\tkz@sommet,\tkz@sideb){tkz@point}
+               \tkzVectorKLinear*[k=\cmdTKZ@maka@dist]%
+                                (\tkz@sommet,tkz@point,\tkz@sommet){tkz@z}
+               \ifthenelse{\equal{\cmdTKZ@maka@label}{}}{}
+               {\node[\cmdTKZ@maka@pos] at (tkz@z)%
+                     {$\cmdTKZ@maka@labelsize{\cmdTKZ@maka@label}$};}
+      \end{scope}}   
+\endgroup% 
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                     Symbole droites perpendiculaires
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\define@cmdkey [TKZ] {ra} {size}{}
+\define@cmdkey [TKZ] {ra} {color}{} 
+\presetkeys    [TKZ] {ra} {size = 0.25,color=black}{}
+\newcommand*{\tkzRightAngle}[1][]{\tkz@rangle[#1]}
+\def\tkz@rangle[#1](#2){% 
+    \setkeys[TKZ]{ra}{#1}% 
+\begingroup%
+\foreach \tkz@sidea/\tkz@sommet/\tkz@sideb in {#2}{%
+    \pgfpointnormalised{\pgfpointdiff{\pgfpointanchor{\tkz@sommet}{center}}{%
+                                      \pgfpointanchor{\tkz@sidea}{center}}} 
+    \tkz@ax=\pgf@x\relax%
+    \tkz@ay=\pgf@y\relax%
+
+    \pgfpointnormalised{\pgfpointdiff{\pgfpointanchor{\tkz@sommet}{center}}{%
+                                      \pgfpointanchor{\tkz@sideb}{center}}} 
+    \tkz@bx=\pgf@x\relax%
+    \tkz@by=\pgf@y\relax%
+    \path[coordinate]%
+      (\tkz@sommet.center)--++%
+      ( 28.4528*\cmdTKZ@ra@size\tkz@ax , 28.4528*\cmdTKZ@ra@size\tkz@ay)%
+        coordinate (debra);%
+
+    \draw[line width = .5pt,\cmdTKZ@ra@color]%
+      (debra)--++%
+      ( 28.4528*\cmdTKZ@ra@size\tkz@bx ,28.4528*\cmdTKZ@ra@size\tkz@by)--++%
+      (-28.4528*\cmdTKZ@ra@size\tkz@ax ,-28.4528*\cmdTKZ@ra@size\tkz@ay);}%
+\endgroup%
+} 
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%              Arc
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+\define@cmdkey [TKZ] {arc} {style}{}
+\define@cmdkey [TKZ] {arc} {lw}{}
+\define@cmdkey [TKZ] {arc} {color}{}
+\define@boolkey[TKZ] {arc} {out}[true]{} 
+\presetkeys    [TKZ] {arc} {%
+                      style   = solid,%
+                      lw     = .4pt,% 
+                      out    = false,%
+                      color  = black}{}
+\newcommand*{\tkzArcR}{\@ifstar%
+                       \tkzArcRStar%
+                       \tkzArcRNoStar}
+\newcommand*{\tkzArcRNoStar}[1][]{\tkz@ArcRNoStar[#1]}
+\def\tkz@ArcRNoStar[#1](#2,#3)(#4,#5){%
+    \setkeys[TKZ]{arc}{#1}%
+    \tkz@@extractxy{#2}
+    \tkz@ax=\pgf@x%
+    \tkz@ay=\pgf@y% 
+    \edef\firstangle{#4}\edef\secondangle{#5} 
+    \ifTKZ@arc@out%
+      \pgfmathgreaterthan{#4}{#5}
+      \ifdim\pgfmathresult pt=1 pt\relax%
+        \pgfmathsubtract{#4}{360}
+        \edef\firstangle{\pgfmathresult}%
+       \else
+        \pgfmathsubtract{#5}{360}
+        \edef\secondangle{\pgfmathresult}
+      \fi%
+    \fi%
+    \draw[line width  = \cmdTKZ@arc@lw,%
+          color       = \cmdTKZ@arc@color,%
+          shift       = {(\tkz@ax,\tkz@ay)},%
+                        \cmdTKZ@arc@style]%
+          (\firstangle:#3) arc (\firstangle:\secondangle:#3);
+}
+\newcommand*{\tkzArcRStar}[1][]{\tkz@ArcRStar[#1]}
+\def\tkz@ArcRStar[#1](#2,#3)(#4,#5){%
+    \setkeys[TKZ]{arc}{#1}%
+    \tkz@@extractxy{#2}
+    \tkz@ax=\pgf@x\relax%
+    \tkz@ay=\pgf@y\relax%
+    \tkz@@extractxy{#4}
+    \tkz@bx=\pgf@x\relax%
+    \tkz@by=\pgf@y\relax%
+    \tkz@@extractxy{#5}
+    \tkz@cx=\pgf@x\relax%
+    \tkz@cy=\pgf@y\relax%
+    \pgfmathanglebetweenpoints{\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                              {\pgfpoint{\tkz@bx}{\tkz@by}}
+    \edef\tkzfirstangle{\pgfmathresult}
+    \pgfmathanglebetweenpoints{\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                              {\pgfpoint{\tkz@cx}{\tkz@cy}}
+    \edef\tkzsecondangle{\pgfmathresult}
+    \tkz@ArcRNoStar[#1](#2,#3)(\tkzfirstangle,\tkzsecondangle)
+}
+
+\newcommand*{\tkzArc}{\@ifstar\tkzArcStar\tkzArcNoStar}
+\newcommand*{\tkzArcNoStar}[1][]{\tkz@ArcNoStar[#1]}
+\def\tkz@ArcNoStar[#1](#2,#3,#4)(#5,#6){%
+    \setkeys[TKZ]{arc}{#1}%
+    \begingroup%
+    \tkzmathLength(#3,#4)
+    \tkz@@extractxy{#2}
+    \tkz@ax=\pgf@x%
+    \tkz@ay=\pgf@y%
+    \pgfmathround{#5}\edef\firstangle{\pgfmathresult}
+    \edef\secondangle{#6}   
+    \ifTKZ@arc@out%
+         \pgfmathgreaterthan{#5}{#6}
+        \ifdim\pgfmathresult pt=1 pt\relax%
+          \pgfmathsubtract{#5}{360}
+          \edef\firstangle{\pgfmathresult}%
+        \else%
+          \pgfmathsubtract{#6}{360}
+          \edef\secondangle{\pgfmathresult}
+         \fi%
+      \fi%
+       \draw[line width  = \cmdTKZ@arc@lw,%
+            color       = \cmdTKZ@arc@color,%
+            shift       = {(\tkz@ax,\tkz@ay)},%
+                          \cmdTKZ@arc@style]%
+           (\firstangle:\tkzmathLen pt)%
+           arc (\firstangle:\secondangle:\tkzmathLen pt);
+    \endgroup%
+}
+\newcommand*{\tkzArcStar}[1][]{\tkz@ArcStar[#1]}
+\def\tkz@ArcStar[#1](#2,#3,#4)(#5,#6){%
+    \setkeys[TKZ]{arc}{#1}%
+\begingroup%
+    \tkz@@extractxy{#2}
+    \tkz@ax=\pgf@x\relax%
+    \tkz@ay=\pgf@y\relax%
+    \tkz@@extractxy{#5}
+    \tkz@bx=\pgf@x\relax%
+    \tkz@by=\pgf@y\relax%
+    \tkz@@extractxy{#6}
+    \tkz@cx=\pgf@x\relax%
+    \tkz@cy=\pgf@y\relax%
+    \pgfmathanglebetweenpoints{\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                              {\pgfpoint{\tkz@bx}{\tkz@by}}
+    \pgfmathround{\pgfmathresult}\edef\tkzfirstangle{\pgfmathresult} 
+    \pgfmathanglebetweenpoints{\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                              {\pgfpoint{\tkz@cx}{\tkz@cy}}
+    \edef\tkzsecondangle{\pgfmathresult} 
+    \tkz@ArcNoStar[#1](#2,#3,#4)(\tkzfirstangle,\tkzsecondangle)       
+\endgroup%
+}
+
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                                 Fill 
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\define@cmdkey [TKZ] {fill}{color}{}
+\define@boolkey[TKZ] {fill}{out}[true]{}
+\define@cmdkey [TKZ] {fill}{opacity}{}
+\define@cmdkey [TKZ] {fill}{pattern}{} %18/03
+\presetkeys    [TKZ] {fill}{%
+                     color     = lightgray,
+                     opacity   = 1,
+                     out       = false,
+                     pattern   = {},
+                     }{}
+\newcommand*{\tkzFillPolygon}[1][]{\tkz@FillPolygon[#1]}
+\def\tkz@FillPolygon[#1](#2,#3){%
+    \setkeys[TKZ]{fill}{#1}%
+ \begingroup%
+   \ifthenelse{\equal{\cmdTKZ@fill@pattern}{}}
+              {\fill[color        = \cmdTKZ@fill@color,%
+                     fill opacity = \cmdTKZ@fill@opacity](#2) }
+              {\fill[pattern      = \cmdTKZ@fill@pattern](#2)}
+    \foreach \pt in {#3}{--(\pt)}--cycle;%
+\endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzFillCircle}{\@ifstar
+                             \tkzFillCircleStar%
+                             \tkzFillCircleNoStar}%
+\newcommand*{\tkzFillCircleNoStar}[1][]{\tkz@FillCircleNoStar[#1]}
+\def\tkz@FillCircleNoStar[#1](#2,#3){%
+    \setkeys[TKZ]{fill}{#1}%
+\begingroup%
+    \ifthenelse{\equal{\cmdTKZ@fill@pattern}{}}
+              {\fill[color        = \cmdTKZ@fill@color,%
+                     fill opacity = \cmdTKZ@fill@opacity]}
+              {\fill[pattern      = \cmdTKZ@fill@pattern]}%
+               (#2) circle (#3);%
+\endgroup%
+}
+\newcommand*{\tkzFillCircleStar}[1][]{\tkz@FillCircleStar[#1]}
+\def\tkz@FillCircleStar[#1](#2,#3,#4){%
+    \setkeys[TKZ]{fill}{#1}%
+\begingroup%
+    \tkzmathLength(#3,#4)
+     \ifthenelse{\equal{\cmdTKZ@fill@pattern}{}}
+              {\fill[color        = \cmdTKZ@fill@color,%
+                     fill opacity = \cmdTKZ@fill@opacity]}
+              {\fill[pattern      = \cmdTKZ@fill@pattern]}%
+                    (#2) circle (\tkzmathLen pt);%
+\endgroup%
+}
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzFillSector}{\@ifstar
+                             \tkzFillSectorStar%
+                             \tkzFillSectorNoStar}%
+
+\newcommand*{\tkzFillSectorNoStar}[1][]{\tkz@FillSectorNoStar[#1]}
+\def\tkz@FillSectorNoStar[#1](#2,#3)(#4,#5){%
+    \setkeys[TKZ]{fill}{#1}%
+\begingroup%
+    \tkz@@extractxy{#2}
+    \tkz@ax=\pgf@x%
+    \tkz@ay=\pgf@y% 
+    \pgfmathround{#4}\edef\firstangle{\pgfmathresult}
+    \edef\secondangle{#5}  
+    \ifTKZ@fill@out%
+      \pgfmathgreaterthan{#4}{#5}
+      \ifdim\pgfmathresult pt=1 pt\relax%
+         \pgfmathsubtract{#4}{360}
+         \edef\firstangle{\pgfmathresult}
+      \else
+         \pgfmathsubtract{#5}{360}
+         \edef\secondangle{\pgfmathresult}
+      \fi%
+    \fi%
+    \ifthenelse{\equal{\cmdTKZ@fill@pattern}{}}
+              {\path[fill,%
+                     color        = \cmdTKZ@fill@color,%
+                     fill opacity = \cmdTKZ@fill@opacity,%
+                     shift        = {(\tkz@ax,\tkz@ay)}]}
+              {\path[fill,%
+                     pattern      = \cmdTKZ@fill@pattern,%
+                     shift        = {(\tkz@ax,\tkz@ay)}]}
+                     (0:0)--(\firstangle:#3)%
+                      arc (\firstangle:\secondangle:#3)--cycle;
+
+\endgroup%
+}
+
+\newcommand*{\tkzFillSectorStar}[1][]{\tkz@FillSectorStar[#1]}
+\def\tkz@FillSectorStar[#1](#2,#3)(#4,#5){%
+    \setkeys[TKZ]{fill}{#1}%
+    \begingroup% 
+        \tkz@@extractxy{#2}
+        \tkz@ax=\pgf@x\relax%
+        \tkz@ay=\pgf@y\relax%
+        \tkz@@extractxy{#4}
+        \tkz@bx=\pgf@x\relax%
+        \tkz@by=\pgf@y\relax%
+        \tkz@@extractxy{#5}
+        \tkz@cx=\pgf@x\relax%
+        \tkz@cy=\pgf@y\relax%
+        \pgfmathanglebetweenpoints{\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                                  {\pgfpoint{\tkz@bx}{\tkz@by}}
+        \pgfmathround{\pgfmathresult}
+        \edef\tkzfirstangle{\pgfmathresult}
+        \pgfmathanglebetweenpoints{\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                                  {\pgfpoint{\tkz@cx}{\tkz@cy}} 
+        \edef\tkzsecondangle{\pgfmathresult}
+        \tkz@FillSectorNoStar[#1](#2,#3)(\tkzfirstangle,\tkzsecondangle) 
+    \endgroup% 
+}
+
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                                 Clip 
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzClipPolygon}{\tkz@ClipPolygon}
+\def\tkz@ClipPolygon(#1,#2){%
+\begingroup%
+    \setcounter{tkz@cnt}{0}
+    \path[clip] (#1)
+   \foreach \pt in {#2}{%
+    --(\pt)}--cycle;
+\endgroup%
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzClipCircle}{\@ifstar
+                             \tkzClipCircleStar%
+                             \tkzClipCircleNoStar}%
+\newcommand*{\tkzClipCircleNoStar}{\tkz@ClipCircleNoStar}
+\def\tkz@ClipCircleNoStar(#1,#2){%
+\begingroup%
+     \clip  (#1) circle(#2);
+    \endgroup%
+    }
+
+\newcommand*{\tkzClipCircleStar}{\tkz@ClipCircleStar}
+\def\tkz@ClipCircleStar(#1,#2,#3){%
+\begingroup%
+     \tkzmathLength(#2,#3)
+     \clip  (#1) circle(\tkzmathLen pt);
+\endgroup%
+}
+
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzClipSector}{\@ifstar
+                             \tkzClipSectorStar%
+                             \tkzClipSectorNoStar}%
+\newcommand*{\tkzClipSectorNoStar}{\tkz@ClipSectorNoStar}
+\def\tkz@ClipSectorNoStar(#1,#2)(#3,#4){%
+\begingroup%
+   \tkz@@extractxy{#1}
+    \tkz@ax=\pgf@x%
+    \tkz@ay=\pgf@y%
+    \pgfmathparse{(\tkz@ax)/28.4528}\edef\tkz@debx{\pgfmathresult}%
+    \pgfmathparse{(\tkz@ay)/28.4528}\edef\tkz@deby{\pgfmathresult}%
+    \clip[shift={(\tkz@debx,\tkz@deby)}]
+    (0:0)--(#3:#2) arc (#3:#4:#2)--cycle;
+\endgroup%
+}
+\newcommand*{\tkzClipSectorStar}{\tkz@ClipSectorStar}
+\def\tkz@ClipSectorStar(#1,#2)(#3,#4){%
+\begingroup%
+     \tkz@@extractxy{#1}
+     \tkz@ax=\pgf@x\relax%
+     \tkz@ay=\pgf@y\relax%
+     \tkz@@extractxy{#3}
+     \tkz@bx=\pgf@x\relax%
+     \tkz@by=\pgf@y\relax%
+     \tkz@@extractxy{#4}
+     \tkz@cx=\pgf@x\relax%
+     \tkz@cy=\pgf@y\relax%
+          \pgfmathanglebetweenpoints{\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                                    {\pgfpoint{\tkz@bx}{\tkz@by}}
+           \edef\tkzfirstangle{\pgfmathresult}
+          \pgfmathanglebetweenpoints{\pgfpoint{\tkz@ax}{\tkz@ay}}%
+                                    {\pgfpoint{\tkz@cx}{\tkz@cy}}
+           \edef\tkzsecondangle{\pgfmathresult}
+     \tkz@ClipSectorNoStar(#1,#2)(\tkzfirstangle,\tkzsecondangle)
+\endgroup% 
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                Utilisation du Compas : Compass     manque version *
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––> 
+\define@cmdkey [TKZ] {Compass} {style}{} 
+\define@cmdkey [TKZ] {Compass} {lw}{} 
+\define@cmdkey [TKZ] {Compass} {color}{} 
+\define@cmdkey [TKZ] {Compass} {delta}{}
+\define@boolkey[TKZ] {Compass} {clock}[true]{}  
+\presetkeys    [TKZ] {Compass} {%
+                      style  = solid,%
+                      lw     = .4pt,%
+                      color  = black,% 
+                      delta  = 10,%
+                      clock  = false}{}
+% attention angle par rapport à l'horizontale  
+
+\newcommand*{\tkzCompass}[1][]{\tkz@Compass[#1]}%
+\def\tkz@Compass[#1](#2,#3){%   
+    \setkeys[TKZ]{Compass}{#1}%
+    \pgfpointdiff{\pgfpointanchor{#2}{center}}
+                 {\pgfpointanchor{#3}{center}}
+    \tkz@ax=\pgf@x%
+    \tkz@ay=\pgf@y%
+    \pgfmathveclen{\pgf@x}{\pgf@y}\edef\tkztempLen{\pgfmathresult}%
+    \pgfpointnormalised{\tkz@ax,\tkz@ay}
+    \pgfmathparse{atan(\pgf@y/\pgf@x)}\edef\tkz@GammaD{\pgfmathresult}%
+    \ifTKZ@Compass@clock%
+    \pgfmathparse{\tkz@GammaD+180}\edef\tkz@GammaD{\pgfmathresult} \fi
+    \draw[shift ={(#2)},%
+          \cmdTKZ@Compass@style,%
+          \cmdTKZ@Compass@color,%
+          line width  = \cmdTKZ@Compass@lw]%
+     (\tkz@GammaD-\cmdTKZ@Compass@delta:\tkztempLen pt)%
+      arc (\tkz@GammaD-\cmdTKZ@Compass@delta:%
+           \tkz@GammaD+\cmdTKZ@Compass@delta:%
+           \tkztempLen pt);
+}
+%<––––––––––––––––––––––––– for compatibility –––––––––––––––––––––––––––––––––––––––>
+\def\pgfmathanglebetweenpoints#1#2{%
+  \begingroup%
+    \pgf@process{\pgfpointdiff{#1}{#2}}%
+    %
+    % First approximate the angle of the external point...
+    %
+    \pgf@xa\pgf@x%
+    \pgf@ya\pgf@y%
+    \pgf@xb\pgf@x%
+    \pgf@yb\pgf@y%
+    \ifdim\pgf@xa<0pt\relax%
+      \pgf@xa-\pgf@xa%
+    \fi%
+    \ifdim\pgf@ya<0pt\relax%
+      \pgf@ya-\pgf@ya%
+    \fi%
+    \ifdim\pgf@ya>\pgf@xa%
+      \pgf@x\pgf@xa%
+      \pgf@y\pgf@ya%
+    \else%
+      \pgf@x\pgf@ya%
+      \pgf@y\pgf@xa%
+    \fi%
+    \ifdim\pgf@y=0pt\relax%
+      \pgf@x0pt%
+    \else%
+      \pgfmathreciprocal@{\pgf@sys@tonumber{\pgf@y}}%
+      \pgf@x\pgfmathresult\pgf@x%
+    \fi%
+    \multiply\pgf@x1000\relax%
+    \afterassignment\pgfmath@gobbletilpgfmath@%
+    \expandafter\c@pgf@counta\the\pgf@x\relax\pgfmath@%
+    \expandafter\pgf@x\csname pgfmath@atan@\the\c@pgf@counta\endcsname pt\relax%
+    \ifdim\pgfmath@ya>\pgfmath@xa\relax%
+      \pgf@x-\pgf@x%
+      \advance\pgf@x90pt%
+    \fi%
+    \ifdim\pgf@xb<0pt%
+      \ifdim\pgf@yb>0pt%
+        \pgf@x-\pgf@x%
+      \fi%
+      \advance\pgf@x180pt\relax%
+    \else%
+      \ifdim\pgf@yb<0pt%
+      \pgf@x-\pgf@x%
+      \advance\pgf@x360pt\relax%
+    \fi\fi%
+    \pgfmath@returnone\pgf@x%
+  \endgroup%
+}
+
+% \pgfmathrotatepointaround
+%
+% Rotate point #1 about point #2 by #3 degrees.
+%
+\def\pgfmathrotatepointaround#1#2#3{%
+  \begingroup%
+    \pgf@process{#2}%
+    \pgf@xa\pgf@x%
+    \pgf@ya\pgf@y%
+    \pgf@process{#1}%
+    \advance\pgf@x-\pgf@xa%
+    \advance\pgf@y-\pgf@ya%
+    \pgfmathsetmacro\angle{#3}%
+    \pgfmathsin@{\angle}%
+    \let\sineangle\pgfmathresult%
+    \pgfmathcos@{\angle}%
+    \let\cosineangle\pgfmathresult%
+    \pgf@xa\cosineangle\pgf@x%
+    \advance\pgf@xa-\sineangle\pgf@y%
+    \pgf@ya\sineangle\pgf@x%
+    \advance\pgf@ya\cosineangle\pgf@y%
+    \pgf@process{#2}%
+    \pgf@process{%
+      \advance\pgf@x\pgf@xa%
+      \advance\pgf@y\pgf@ya%
+    }%
+  \endgroup%
+}
+
+% \pgfmathanglebetweenlines
+%
+% Calculate the clockwise angle between a line from point #1
+% to point #2 and a line from #3 to point #4.
+%
+\def\pgfmathanglebetweenlines#1#2#3#4{%
+  \begingroup%
+    \pgfmathanglebetweenpoints{#1}{#2}%
+    \let\firstangle\pgfmathresult%
+    \pgfmathanglebetweenpoints{#3}{#4}%
+    \let\secondangle\pgfmathresult%
+    \ifdim\firstangle pt>\secondangle pt\relax%
+      \pgfmathadd@{\secondangle}{360}%
+      \let\secondangle\pgfmathresult%
+    \fi%
+    \pgfmathsubtract@{\secondangle}{\firstangle}%
+    \pgfmath@smuggleone\pgfmathresult%
+  \endgroup%
+} 
+%<–––––––––––––––––––––––––  The End  –––––––––––––––––––––––––––––––––––––––>
+\endinput

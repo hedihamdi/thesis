@@ -1,0 +1,581 @@
+%%%%%%%%%%%%%%%%%%%%%%%
+%TITRE DES CHAPITRES
+\newcommand{\ChUnTitre}{Titre du chapitre 1}
+\newcommand{\ChDeuxTitre}{Chapitre 2}
+\newcommand{\ChTroisTitre}{Chapitre 3}
+\newcommand{\ChQuatreTitre}{Chapitre 4}
+
+
+
+
+% Supprime de la version compilée ce qu'il y a en argument : utile si on veut garder une trace de ce qui ne passe pas le barrage de la relecture!
+\newcommand{\EnFaitNon}[1]{}
+
+% Pour avoir des références du style XX page YY
+\newcommand{\FullRef}[1]{\ref{#1} page \pageref{#1}}
+% Idem pour les équations (rajoute des parenthèses)
+\newcommand{\FullEqRef}[1]{\eqref{#1} page \pageref{#1}}
+
+% Pour rajouter un enlever localement une ligne à la page courante sans modifier tout le reste : très utile pour la version finale
+\newcommand{\AjouteLigne}{\enlargethispage{1\baselineskip}}
+\newcommand{\RetireLigne}{\enlargethispage{-1\baselineskip}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TIKZ : Pour pouvoir avoir des supers jolies boites avec du texte et des formules exemple:
+% http://www.fauskes.net/pgftikzexamples/boxes-with-text-and-math/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boite de Définition
+\tikzstyle{DefinitionBox}=[draw=black, fill=black!5, very thick, rectangle, rounded corners, inner sep=10pt, inner ysep=15pt]
+\tikzstyle{DefinitionTitre}=[draw=black, rectangle, rounded corners, fill=white, text=black]
+\newcommand{\Definition}[1]{%
+\begin{center}\begin{tikzpicture}
+\node [DefinitionBox] (box){%
+	\begin{minipage}{0.92\textwidth}
+		{\color{black}{#1}}
+	\end{minipage}};
+\node[DefinitionTitre, right=10pt] at (box.north west) {\sffamily Définition\rmfamily};
+\end{tikzpicture}\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boite de Notation
+\tikzstyle{NotationBox}=[draw=black, fill=black!5, very thick, rectangle, rounded corners, inner sep=10pt, inner ysep=15pt]
+\tikzstyle{NotationTitre}=[draw=black, rectangle, rounded corners, fill=white, text=black]
+\newcommand{\Notation}[1]{%
+\begin{center}\begin{tikzpicture}
+\node [NotationBox] (box){%
+	\begin{minipage}{0.92\textwidth}
+		{\color{black}{#1}}
+	\end{minipage}};
+\node[NotationTitre, right=10pt] at (box.north west) {\sffamily Notation\rmfamily};
+\end{tikzpicture}\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boite personnalisable
+\tikzstyle{PersoBox}=[draw=black, fill=black!5, very thick, rectangle, rounded corners, inner sep=10pt, inner ysep=15pt]
+\tikzstyle{PersoTitre}=[draw=black, rectangle, rounded corners, fill=white, text=black]
+\newcommand{\Perso}[3]{%
+\begin{figure}[!ht]
+	\begin{center}\begin{tikzpicture}
+	\node [PersoBox] (box){%
+		\begin{minipage}{0.85\textwidth}
+			{\color{black}{\small #3}}
+		\end{minipage}};
+	\refstepcounter{compteurencadres}\label{#2}
+	\node[PersoTitre, right=10pt] at (box.north west) {\sffamily Encadré \thecompteurencadres : #1\rmfamily};
+	\end{tikzpicture}\end{center}
+\end{figure}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boite de technique (un trait)
+\tikzstyle{TechBox}=[draw=white, fill=black!1, rectangle, inner sep=5pt, inner ysep=10pt]
+\tikzstyle{TechTitre}=[draw=black!1,  rectangle, fill=black!1, text=black]
+\tikzstyle{TechLigne}=[color=black!30, line width=0.03cm, cap=round]
+\newcommand{\Tech}[1]{%
+\begin{center}\begin{tikzpicture}
+\node [TechBox, below right,right=20pt] (box)
+{%
+    \begin{minipage}{0.85\textwidth}%
+        {\color{black!85}{\footnotesize #1}}%
+    \end{minipage}%
+};
+\node[TechTitre, right=0pt] at (box.north west) {\sffamily\small Démonstration\rmfamily};
+\draw[TechLigne] (box.north west)--(box.south west);
+\draw[TechLigne] (box.north west)++(0,-0.2)--++(1.9,0);
+\end{tikzpicture}\end{center}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boite d'Application numérique
+\tikzstyle{ApplicationNumeriqueBox}=[draw=green!80, fill=green!2, very thick, rectangle, rounded corners, inner sep=10pt, inner ysep=15pt]
+\tikzstyle{ApplicationNumeriqueTitre}=[draw=green!80, rectangle, rounded corners, fill=white, text=black]
+\newcommand{\AN}[1]{%
+\begin{center}\begin{tikzpicture}
+\node [ApplicationNumeriqueBox] (box){%
+	\begin{minipage}{0.95\textwidth}
+		{\color{black}{#1}}
+	\end{minipage}};
+\node[ApplicationNumeriqueTitre, right=10pt] at (box.north west) {\sffamily Application numérique\rmfamily};
+\end{tikzpicture}\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boite de Resultat important
+\tikzstyle{ResultatBox}=[draw=red, fill=red!1, very thick, rectangle, rounded corners, inner sep=10pt, inner ysep=10pt]
+\tikzstyle{ResultatTitre}=[draw=red, rectangle, rounded corners, fill=red, text=black]
+\newcommand{\Resultat}[1]{%
+\begin{center}\begin{tikzpicture}
+\node [ResultatBox] (box){%
+	\begin{minipage}{0.90\textwidth}
+		{\color{black}{#1}\vskip-3mm}
+	\end{minipage}};
+%\node[ResultatTitre, right=10pt] at (box.north west) {Résultat};
+\end{tikzpicture}\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boite d'Interprétation
+\tikzstyle{InterpretationBox}=[draw=blue, fill=blue!9, very thick,rectangle, rounded corners, inner sep=10pt, inner ysep=15pt]
+\tikzstyle{InterpretationTitre}=[draw=blue, rectangle, rounded corners, fill=white, text=black]
+\newcommand{\Interpretation}[1]{%
+\begin{center}\begin{tikzpicture}\node [InterpretationBox] (box){%
+	\begin{minipage}{0.95\textwidth}
+		{\color{black}{#1}}
+	\end{minipage}};
+\node[InterpretationTitre, right=10pt] at (box.north west) {\sffamily Interprétation\rmfamily};
+\end{tikzpicture}\end{center}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boite de Remarque %%deux traits
+\tikzstyle{RemarqueBox}=[fill=white, rectangle, inner sep=5pt, inner ysep=5pt]
+\tikzstyle{RemarqueTitre}=[draw=white, thick, fill=white, text=black]
+\tikzstyle{RemarqueLigne}=[color=black, line width=0.03cm, cap=round]
+\newcommand{\Remarque}[1]{%
+\begin{center}\begin{tikzpicture}
+\node [RemarqueBox, below right] (box)
+{%
+    \begin{minipage}{0.85\textwidth}%
+        {\color{black}{#1}}%
+    \end{minipage}%
+};
+\node[RemarqueTitre, above right] at (box.north west) {\sffamily Remarque\rmfamily};
+\draw[RemarqueLigne] (box.north west)++(0,0.6)--(box.south west);
+\draw[RemarqueLigne] (box.north west)--++(2,0);
+\draw (box.south west)++(-0.1,0)--(-0.1,0.6);
+%\draw[very thick] (box.north east)--(box.south east);
+\end{tikzpicture}\end{center}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boite de Remarquee %%un trait, un titre, écrit petit
+\tikzstyle{RemarqueeBox}=[fill=blue!2, rectangle, inner sep=5pt, inner ysep=5pt]
+\tikzstyle{RemarqueeTitre}=[draw=white, thick, fill=white, text=black]
+\tikzstyle{RemarqueeLigne}=[color=black, line width=0.03cm, cap=round]
+\newcommand{\Remarquee}[2]{%
+\begin{center}\begin{tikzpicture}
+\node [RemarqueeBox, below right] (box)
+{%
+    \begin{minipage}{0.90\textwidth}%
+        {\small \color{black}{#2}\normalsize}%
+    \end{minipage}%
+};
+\node[RemarqueeTitre, above right] at (box.north west) {\sffamily Remarque~:~#1\rmfamily};
+\draw[RemarqueeLigne] (box.north west)++(0,0.6)--(box.south west);
+\draw[RemarqueeLigne] (box.north west)--++(2,0);
+%\draw (box.south west)++(-0.1,0)--(-0.1,0.6);
+%\draw[very thick] (box.north east)--(box.south east);
+\end{tikzpicture}\end{center}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Les figures%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{fminipage}{%
+\begin{Sbox}\begin{minipage}}
+{%
+\end{minipage}\end{Sbox}
+\ifthenelse{\CadresOvales > 0}{\Ovalbox{\TheSbox}}{\TheSbox}
+}
+
+\newenvironment{cminipage}{%
+\begin{Sbox}\begin{minipage}}
+{%
+\end{minipage}\end{Sbox}
+\ifthenelse{\CadresOvales > 0}{\shadowbox{\TheSbox}}{\TheSbox}
+}
+
+\newcommand{\MinipageWidth}{15cm}
+\newcommand{\CaptionWidth}{14.6cm}
+\newcommand{\CaptionMargin}{0.4cm}
+\newcommand{\FigWidth}{14.5cm}
+\newcommand{\CaptionFig}[1]{\caption{\small{#1}}}
+\newcommand{\CaptionTocCaptionFig}[2]{\caption[#1]{\small{#2}}}
+
+% Les figures ombrées *********************************************
+\newenvironment{GaelFigureSh}[1][\MinipageWidth]{%
+\begin{figure}[!ht]
+\centering
+\begin{cminipage}{#1}
+\centering
+\vspace{\CaptionMargin}
+\pgfmathqparse{#1-\CaptionMargin-\CaptionMargin}
+\begin{minipage}{\pgfmathresult pt}
+\centering
+}{%
+\end{minipage}
+\end{cminipage}
+\end{figure}}
+\newcommand{\bfigsh}{\begin{GaelFigureSh}}
+\newcommand{\efigsh}{\end{GaelFigureSh}}
+
+% Les figures normales *********************************************
+\newenvironment{GaelFigure}[1][\MinipageWidth]{%
+\begin{figure}[!ht]
+\centering
+\begin{fminipage}{#1}
+\centering
+\vspace{\CaptionMargin}
+\pgfmathqparse{#1-\CaptionMargin-\CaptionMargin}
+\begin{minipage}{\pgfmathresult pt}
+\centering
+}{%
+\end{minipage}
+\end{fminipage}
+\end{figure}}
+\newcommand{\bfig}{\begin{GaelFigure}}
+\newcommand{\efig}{\end{GaelFigure}}
+
+% Les figures : pleine page ***************************************
+\newenvironment{GaelFigurep}[1][\MinipageWidth]{%
+\begin{figure}[!htbp]
+\centering
+\begin{fminipage}{#1}
+\centering
+\vspace{\CaptionMargin}
+\pgfmathqparse{#1-\CaptionMargin-\CaptionMargin}
+\begin{minipage}{\pgfmathresult pt}
+\centering
+}{%
+\end{minipage}
+\end{fminipage}
+\end{figure}}
+\newcommand{\bfigp}{\begin{GaelFigurep}}
+\newcommand{\efigp}{\end{GaelFigurep}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Les tableaux%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{CedTableau}[1][\MinipageWidth]{%
+\begin{table}[!ht]
+\centering
+\begin{fminipage}{#1}
+\centering
+\vspace{\CaptionMargin}
+\pgfmathqparse{#1-\CaptionMargin-\CaptionMargin}
+\begin{minipage}{\pgfmathresult pt}
+\centering
+}{%
+\end{minipage}
+\end{fminipage}
+\end{table}}
+\newcommand{\btab}{\begin{CedTableau}}
+\newcommand{\etab}{\end{CedTableau}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Pour faire des supers fleches d'highlight entre texte et équation %%
+%% http://www.fauskes.net/pgftikzexamples/global-nodes/
+%% On définit un bout de fleche, et un départ de fleche, puis on dit de faire les fleches....
+
+\newcommand{\DepartHighlightColorNoTexte}[1]{ \tikz\node[fill=#1!20,draw, circle](From#1){};}
+
+\newcommand{\DepartHighlightColor}[2]{ \tikz[baseline=(From#1.base)] {\node[fill=#1!20](From#1){#2};}}
+
+\newcommand{\ArriveeHiglightColor}[2]{
+\tikz[baseline=(To#1.base)] {\node[fill=#1!20](To#1){#2};}}
+
+\newcommand{\MakeFlecheHighlightColor}[1]{ \begin{tikzpicture}
+[overlay]\path[->](From#1)edge%[bend left]
+(To#1);
+\end{tikzpicture}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Les listes%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%check tick : \surd
+%flèche droite creuse : \triangleright
+%rond : bullet 	
+%%%REFERENCE : http://www.artofproblemsolving.com/LaTeX/AoPS_L_GuideSym.php
+
+
+\newenvironment{maliste}[1]%
+{ \begin{list}%
+	{$\triangleright$}%
+	{\setlength{\labelwidth}{10pt}%
+	 \setlength{\leftmargin}{#1pt}%
+	 %\setlength{\itemsep}{\parsep}
+	\setlength{\itemsep}{0pt}
+}}%
+{ \end{list} }
+
+\newenvironment{malistee}[1]%
+{ \begin{list}%
+	{$\to$}%
+	{\setlength{\labelwidth}{0pt}%
+	 \setlength{\leftmargin}{#1pt}%
+	 %\setlength{\itemsep}{\parsep}
+	\setlength{\itemsep}{0pt}
+}}%
+{ \end{list} }
+
+\newenvironment{malistebullet}[1]%
+{ \begin{list}%
+	{$\bullet$\refstepcounter{subsubsection}}%
+	{\setlength{\labelwidth}{0pt}%
+	 \setlength{\leftmargin}{#1pt}%
+	 %\setlength{\itemsep}{\parsep}
+	%\setlength{\itemsep}{0pt}
+}}%
+{ \end{list} }
+
+\newcommand{\blst}[1]{\begin{maliste}{#1}}
+\newcommand{\elst}{\end{maliste}}
+\newcommand{\blste}[1]{\begin{malistee}{#1}}
+\newcommand{\elste}{\end{malistee}}
+\newcommand{\blstbul}[1]{\begin{malistebullet}{#1}}
+\newcommand{\elstbul}{\end{malistebullet}}
+
+%%Liste personnalisable
+\newenvironment{malisteperso}[2]%
+{ \begin{list}%
+	{$#2$}%
+	{\setlength{\labelwidth}{10pt}%
+	 \setlength{\leftmargin}{#1pt}%
+	 %\setlength{\itemsep}{\parsep}
+	\setlength{\itemsep}{0pt}
+}}%
+{ \end{list} }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Les annexes (c'est crad de mettre ça là mais bon!) %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\AnnexTitreCed}[4]
+{
+%\pagestyle{plain}
+\renewcommand{\leftmark}{Annexe #1 - #2}
+\renewcommand{\rightmark}{Annexe #1 - #2}
+ %\hrule
+  \vspace{15pt}%
+  {\Huge \fontfamily{ppl}\selectfont \textbf{Annexe #1}}
+   \par\nobreak
+    \vspace{20pt}
+   {\Huge \fontfamily{ppl}\selectfont #2}
+    \vspace{10pt}
+       \hrule
+   \vskip20pt
+	\refstepcounter{compteurannexes}\label{#3}
+  \normalsize
+  #4
+  \EmptyNewPage
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Le texte%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\rf}{radio-fréquence\xspace}
+\newcommand{\RF}{radio-fréquence\xspace}
+\newcommand{\rb}{rubidium\xspace}
+\newcommand{\Rb}{$^{87}$Rb\xspace}
+\newcommand{\bec}{condensat de Bose-Einstein\xspace}
+\newcommand{\becs}{condensats de Bose-Einstein\xspace}
+\newcommand{\becion}{condensation de Bose-Einstein\xspace}
+\newcommand{\seqexp}{séquence expérimentale\xspace}
+\newcommand{\cad}{c'est-à-dire\xspace}
+\newcommand{\edp}{espace des phases\xspace}
+\newcommand{\psd}{densité dans l'espace des phases\xspace}
+\newcommand{\setup}{dispositif expérimental\xspace}
+\newcommand{\tof}{temps de vol\xspace}
+
+\newcommand{\pmo}{piège magnéto-optique\xspace}
+\newcommand{\Pmo}{Piège magnéto-optique\xspace}
+\newcommand{\mot}{\pmo}
+\newcommand{\MOT}{\pmo}
+\newcommand{\pmos}{pièges magnéto-optiques\xspace}
+\newcommand{\pmag}{piège magnétique\xspace}
+\newcommand{\mMOT}{piège magnéto-optique miroir\xspace}
+\newcommand{\UMOT}{\pmo en \textbf{U}\xspace}
+\newcommand{\pmoq}{\pmo quadrupolaire\xspace}
+\newcommand{\pmocryo}{\pmo cryogénique\xspace}
+
+\newcommand{\bU}{\textbf{U}\xspace}
+\newcommand{\bZ}{\textbf{Z}\xspace}
+\newcommand{\bZrf}{\textbf{Z\ensuremath{_\text{rf}}}\xspace}
+
+\newcommand{\aom}{modulateur acousto-optique\xspace}
+\newcommand{\aoms}{modulateurs acousto-optiques\xspace}
+\newcommand{\pmqc}{\ensuremath{\pm \Si{45}{\arcdeg}}}
+\newcommand{\pqc}{\ensuremath{+\Si{45}{\arcdeg}}\xspace}
+\newcommand{\mqc}{\ensuremath{-\Si{45}{\arcdeg}}\xspace}
+\newcommand{\mathbold}{\boldmath}
+
+\newcommand{\etal}{\textit{et al.}\xspace}
+\newcommand{\tn}{Thomas Nirrengarten\xspace}
+
+\newcommand{\ltp}{\textit{loose trap}\xspace}
+\newcommand{\ttp}{\textit{tight trap}\xspace}
+
+\newcommand{\tce}{taux de collisions élastiques\xspace}
+
+\newcommand{\tfd}{théorème fluctuation-dissipation\xspace}
+\newcommand{\cem}{champ électromagnétique\xspace}
+\newcommand{\ff}{\textit{flux-flow}\xspace}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Les maths%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\pointformule}{\: .}
+\newcommand{\virguleformule}{\: ,}
+\newcommand{\finformule}{\vspace{-1cm}}
+
+\newcommand{\OS}{\ensuremath{5^2 {\rm S}_{{1}/{2}}}\xspace}
+\newcommand{\OPDD}{\ensuremath{5^2 {\rm P}_{{3}/{2}}}\xspace}
+\newcommand{\OPDU}{\ensuremath{5^2 {\rm P}_{{1}/{2}}}\xspace}
+
+\newcommand{\Etat}[1]{{| {#1} \rangle}}
+\newcommand{\ket}[1]{\ensuremath{\left|#1\right\rangle}}
+\newcommand{\bra}[1]{\left\langle #1\right|}
+
+\newcommand{\Spin}[3]{\bra{#1} \widehat{S}_{#2} \ket{#3}}
+\newcommand{\vr}{\ve{r}}
+\newcommand{\rp}{\ve{r}^\prime}
+\newcommand{\rpp}{\ve{r_\parallel}^{\prime\prime}}
+\newcommand{\rA}{\ve{r_A}}
+\newcommand{\uchap}{\widehat{u}}
+\newcommand{\rrp}{(\ve{r},\rp)}
+\newcommand{\rrpp}{(\ve{r},\rpp)}
+\newcommand{\vu}{\ve{u}}
+
+\newcommand{\FmF}[2]{{F=#1 , m_F=#2}\xspace}
+\newcommand{\EtatFmF}[2]{\ensuremath{\Etat{ \FmF{#1}{#2} }}\xspace}
+\newcommand{\EtatFprimemFprime}[2]{\ensuremath{\Etat{ F^\prime=#1 , m_F^\prime=#2 }}\xspace}
+\newcommand{\EtatF}[1]{\ensuremath{\Etat{ F=#1 }}\xspace}
+\newcommand{\EtatFprime}[1]{\ensuremath{\Etat{ F^\prime=#1 }}\xspace}
+\newcommand{\mF}[1]{\ensuremath{\Etat{ m_F=#1 }}\xspace}
+\newcommand{\mFprime}[1]{\ensuremath{\Etat{ m_{F^\prime}=#1 }}\xspace}
+\newcommand{\mFv}[1]{\ensuremath{\Etat{ m_F }}\xspace}
+
+\newcommand{\trdt}{\ensuremath{\EtatF{2} \to \EtatFprime{3}}\xspace}
+\newcommand{\trud}{\ensuremath{\EtatF{1} \to \EtatFprime{2}}\xspace}
+
+
+\newcommand{\keket}{\ensuremath{\left|\left|I=\frac32, m_I=\frac32; S=\frac12, m_s=\frac12 \right.\right\rangle}}
+\newcommand{\kekett}{\ensuremath{\left|\left|I=\frac32, m_I=\frac32; S=\frac12, m_s=-\frac12 \right.\right\rangle}}
+\newcommand{\kekettt}{\ensuremath{\left|\left|I=\frac32, m_I=\frac12; S=\frac12, m_s=\frac12 \right.\right\rangle}}
+\newcommand{\kekk}{\EtatFmF{2}{2}}
+\newcommand{\kek}{\EtatFmF{2}{1}}
+
+
+\newcommand{\lambdaDB}{{\lambda_{\rm dB}}}
+
+\newcommand{\mRb}{{m_{\rm Rb}}}
+\newcommand{\Br}{{\ve{B\left( \ve{r} \right)}}}
+\newcommand{\vectB}   {{\ve{B}}}
+\newcommand{\vectBr}  {{\ve{B\left( \ve{r} \right)}}}
+\newcommand{\vectBxyz}{{\ve{B\left( x,y,z \right)}}}
+\newcommand{\modB}{{\Module{\vectB}}}
+\newcommand{\modBr}{{\Module{\Br}}}
+
+\newcommand{\omegaHF}{{\omega_{\rm hf}}}
+
+\newcommand{\kb}{k_{\rm B}}
+\newcommand{\muB}{\mu_{\rm B}}
+\newcommand{\const}{{\mbox{const}}}
+
+\newcommand{\Dix}[1]{\cdot 10^{#1}}
+
+\newcommand{\Expo}[1]{\mathrm{e}^{\left(#1\right)}}
+
+\newcommand{\ve}[1]{\overrightarrow{#1}}
+\newcommand{\Module}[1]{\lvert #1 \rvert}
+
+\newcommand{\Gradient}[1]{\ve{\nabla} \left( #1 \right) }
+\newcommand{\Divergence}[1]{\ve{\nabla} \cdot #1 }
+
+\newcommand{\rotr}{\ve{\nabla}_{\vr}}
+\newcommand{\rotrp}{\ve{\nabla}_{\rp}}
+\newcommand{\Erw}{\ve{E}(\vr,\om)}
+
+\newcommand{\nonum}{\thispagestyle{empty}\addtocounter{page}{-1}}
+\newcommand{\Ry}{Rydberg~}
+\newcommand{\e}{\varepsilon}
+\newcommand{\p}{\varphi}
+\newcommand{\om}{\omega}
+\newcommand{\de}{\delta}
+\newcommand{\Om}{\Omega}
+\newcommand{\ld}{\lambda}
+\newcommand{\lV}{\lambda_V}
+\newcommand{\lL}{\lambda_L}
+\newcommand{\lac}{\lambda_{ac}}
+\newcommand{\sh}{\sinh}
+\newcommand{\ch}{\cosh}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\bs}{\bigskip}
+
+\newcommand{\Si}{\SI} % prévient les fautes de frappe!
+
+\renewcommand{\tanh}{\mathrm{th}} % tangente hyperbolique
+\renewcommand{\cosh}{\mathrm{ch}} % cosinus hyperbolique
+\renewcommand{\sinh}{\mathrm{sh}} % sinus hyperbolique
+
+\newcommand{\Bb}[3]{\ensuremath{\ve{B}_\text{biais}=(#1,#2,#3)}~G}
+
+\newcommand{\omb}{\overline{\omega}}
+
+
+\newcommand{\Vr}{\overrightarrow{r}}
+\newcommand{\phir}{\phi(\Vr)}
+
+
+\newcommand{\ReIm}[1]{\textup{#1}\,}
+\renewcommand{\Re}{\ReIm{Re}}
+\renewcommand{\Im}{\ReIm{Im}} 
+
+\newcommand{\Gr}{\overleftrightarrow{G}}
+\newcommand{\Gif}{\Gamma_{i\to f}}
+\newcommand{\Gift}{\widetilde{\Gamma}_{i\to f}}
+\newcommand{\Giftt}{\widetilde{\widetilde{\Gamma}}_{i\to f}}
+\newcommand{\trif}{\ensuremath{\ket{i}\to\ket{f}}\xspace}
+
+\newcommand{\pr}{^\prime}
+\newcommand{\prpr}{^{\prime\prime}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Pour la liste des notations %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+	% ************************************************************************
+		% Pour fair une note dans la marge !
+		% Command for inserting a todo item
+		\definecolor{orange}{rgb}{1,0.5,0}
+		\tikzstyle{notestyleright} = [right, draw=black, fill=blue!1]%, text width = 1cm]
+		\tikzstyle{notestyleleft} = [notestyleright, left]
+		\tikzstyle{connectstyle} = [draw = orange, thick]
+		\newcommand{\todo}[1]{%
+		% Add to todo list
+		%\addcontentsline{tdo}{todo}{\protect{#1}}%
+		%
+		\begin{tikzpicture}[remember picture]%, baseline=7.5ex]%
+		  \node [coordinate] (inText) {};
+		\end{tikzpicture}%
+		%
+		% Make the margin par
+		\marginpar[%
+		{% Draw note in left margin
+		 \tikz[remember picture] \path (0,0)++(1.8,0)++(-0.2,0)node[notestyleleft] (inNote) {\hyperlink{nomenclaturepage}{#1}};}%
+		]{% Draw note in right margin
+		  \tikz[remember picture] \path (0,0)++(0.2,0)node[notestyleright] (inNote) {\hyperlink{nomenclaturepage}{#1}};%
+		}
+		}
+
+ %\ChCourantTitre est défini dans le fichier packages...
+	\newcommand{\nome}[2]{%
+      \nomenclature[\ChCourantTitre]{#1}{#2}%
+      \todo{#1}%  ---------------------------------------la commande todo{truc} fout le truc dans la marge du bon coté
+  }

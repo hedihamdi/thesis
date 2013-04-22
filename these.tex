@@ -1,0 +1,115 @@
+\documentclass[11pt, a4paper, french]{thloria}
+
+\newcommand{\FaitMinitocs}{1} \newcommand{\CadresOvales}{1}
+\newcommand{\FaitNomenclature}{1}
+
+\input{mep/packages}
+
+\newcommand{\IncludePartOne}{1} 	\newcommand{\IncludePartTwo}{1}
+\newcommand{\IncludePartThree}{1} \newcommand{\IncludePartFour}{1}
+
+\newcommand{\IncludeAnnexes}{1} \newcommand{\IncludeAbstract}{1}
+
+\input{mep/mep_avant}
+
+\begin{document}
+
+\input{mep/macros}
+
+\input{mep/mep_apres}
+
+\input{packaging/titre}
+
+\input{packaging/merci} \tableofcontents
+
+\WriteThisInToc\listoffigures 
+
+\ifthenelse{\FaitNomenclature > 0}{ \printnomenclature[1.5cm]
+   \hypertarget{nomenclaturepage}{} }{}
+
+
+% La commande \mainmatter (nouvelle commande LaTeX2e) permet de passer a la
+% numerotation arabe (ce que fait \pagenumbering{arabic}) et de faire commencer
+% la nouvelle page 1 sur une page impaire. On evitera donc d'utiliser
+% directement \pagenumbering{arabic}.
+\mainmatter
+
+\include{packaging/Introduction_Generale}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifthenelse{\IncludePartOne > 0}{
+
+\chapter{\ChUnTitre}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+	
+   \newpage
+	
+      \input{chapters/Chapter1}
+		
+}{\stepcounter{chapter}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\part{Obtention expérimentale d'un \bec sur une puce à atomes
+%supraconductrice}
+
+\ifthenelse{\IncludePartTwo > 0}{
+
+\chapter{\ChDeuxTitre} \ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+
+   \newpage
+
+      \input{chapters/Chapter2}
+	
+}{\stepcounter{chapter}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\IncludePartThree > 0}{
+
+\chapter{\ChTroisTitre}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+
+   \newpage
+
+      \input{chapters/Chapter3}
+		
+      }{\stepcounter{chapter}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\IncludePartFour > 0}{
+
+\chapter{\ChQuatreTitre}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+
+   \newpage
+
+      \input{chapters/Chapter4}
+ 
+}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{packaging/Conclusion_Generale}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifthenelse{\IncludeAnnexes > 0}{ \include{annexes/annexes} }{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\EmptyNewPage \appendix \renewcommand{\leftmark}{Bibliographie}
+\renewcommand{\rightmark}{Bibliographie} \bibliographystyle{biblio/paolostyle}
+\BeginBibWith{\vskip7mm\noindent Dans la version pdf, les numéros de page sont
+des liens qui renvoient à l'occurence de la citation dans le texte.}
+\bibliography{biblio/cedbib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\IncludeAbstract > 0}{ \include{packaging/abstract}}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

@@ -1,0 +1,122 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% PACKAGES FONDAMENTAUX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{ifthen}
+\usepackage{ifpdf}
+
+\usepackage[pdftex]{graphicx} % pour l'incusion de graphiques en pdf
+
+\usepackage[intlimits]{amsmath} % amsmath, pour les maths
+\usepackage{amssymb} % amssymb pour les symboles maths
+
+%Pour pouvoir utiliser \allsectionsfont (utilisé dans le template)
+\usepackage{sectsty}
+
+% C'est quand même mieux, un pdf cliquable!
+\usepackage[pdftex, colorlinks = true
+						, pdfstartview = FitH
+						, linkcolor = black, citecolor = blue, urlcolor = blue, bookmarksnumbered = true, bookmarksopen = true , pdfpagelabels, pagebackref
+						]{tlhypref}
+
+
+\usepackage{fancybox} %pour encadrer les images en oval, shadow... Utilisé dans les macros
+
+
+%%% Backref : permet de faire automatiquement des références en arrière cliquables dans la biblio, très utile!
+% setup the style of the backrefs from the bibliography %version gaël compliqué!
+\newcommand{\backrefnotcitedstring}{\relax}%(Not cited.)
+\newcommand{\backrefcitedsinglestring}[1]{(Page~#1.)}
+\newcommand{\backrefcitedmultistring}[1]{(Pages~#1.)}
+\RequirePackage[hyperpageref]{backref} % to be loaded after hyperref package
+ \renewcommand{\backreftwosep}{ et~} % seperate 2 pages
+ \renewcommand{\backreflastsep}{, et~} % seperate last of longer list
+ \renewcommand*{\backref}[1]{}  % Disable standard
+ \renewcommand*{\backrefalt}[4]{% Detailed backref
+    \ifcase #1 %
+       \backrefnotcitedstring%
+    \or
+       \backrefcitedsinglestring{#2}%
+    \else
+       \backrefcitedmultistring{#2}%
+    \fi}
+
+% Si on veut des mini-tables des matieres :
+	\ifthenelse{\FaitMinitocs > 0}{
+	\usepackage[french,nohints]{minitoc}%
+	\mtcsetrules{minitoc}{off} % pour virer les lignes horizontales
+		\mtcsettitle{minitoc}{} % pour virer le mot "<Sommaire"> au début des minitoc
+		\setlength{\mtcindent}{0pt} % moins d'indentation à gauche des minitoc (défaut 24pt)
+		\mtcsetdepth{minitoc}{2} % pour voir sections et subsections.
+	}{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pour pouvoir avoir des fleches depuis le texte vers des formules par exemple: TIKZ. Sert aussi pour l'index des notations, et pour les cadres
+% http://www.fauskes.net/pgftikzexamples/global-nodes/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz,tkz-fct,tkz-2d}			% pour des supers graphiques trop cool, mieux que PSTricks.
+\usetikzlibrary{snakes,arrows,shapes,backgrounds}
+% For every picture that defines or uses external nodes, you'll have to apply the 'remember picture' style. To avoid some typing, we'll apply the style to all pictures.
+\tikzstyle{every picture}+=[remember picture] 
+
+% espace intelligent pour la fin d'une newcommand en tex (utilisé partout dans le fichier macro pour les maths)
+\usepackage{xspace}
+
+%gestion des unités !
+\usepackage{sistyle}
+%\SIstyle{German}   % Utile pour avoir une virgule avant les décimales et pas un point
+
+% Les polices latex
+%\usepackage[francais]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+%Pour faire l'index des notations
+\ifthenelse{\FaitNomenclature > 0}{
+	\usepackage[refpage,french,intoc]{nomencl}  %intoc rajoute une ligne dans la toc
+	\renewcommand{\nomname}{\fontfamily{ppl}\selectfont Principales notations utilisées} %Titre de la page
+	\renewcommand{\pagedeclaration}[1]{~\dotfill\hyperpage{#1}}  %pour avoir des lignes de ... entre la description et le #page
+	\renewcommand{\nomgroup}[1]{%
+		\ifthenelse{\equal{#1}{A}}{\item[\textbf{\ChUnTitre}]}	  {
+			\ifthenelse{\equal{#1}{B}}{\medskip\item[\textbf{\ChDeuxTitre}]}{
+				\ifthenelse{\equal{#1}{C}}{\medskip\item[\textbf{\ChTroisTitre}]}{
+					\ifthenelse{\equal{#1}{D}}{\medskip\item[\textbf{\ChQuatreTitre}]}{
+				}}}}
+		}
+	\def\ChCourantTitre{\ifcase\value{chapter} \or A\or B\or C \or D\fi}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%% Définition de \ChCourantTitre ici!!!	
+	
+	
+	\makenomenclature
+	}{\newcommand{\nome}[2]{}}
+	
+
+% Pour ajouter des lignes comme biblio à la table des matières. Utilisé dans le template
+\usepackage[none]{tocbibind} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ù
+%%%% PACKAGES NON FONDAMENTAUX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%permet d'inclure des fichiers pdf directement dans le tex (articles en annexe), avec \includepdf[pages=-]{votre_fichier} 
+\usepackage{pdfpages}
+
+
+\usepackage{picins} %pour \parpic : images dans le texte à gauche ou à droite...
+
+%http://www.cs.brown.edu/system/software/latex/doc/eqnarray.pdf
+%Le fichier est à la racine du projet.
+\usepackage{equationarray}
+
+% pour avoir les symboles \diameter, \frownie et \smiley
+\usepackage{wasysym}
+
+% pour avoir les \ding{} : numéros encerclés
+\usepackage{pifont}
+
+% pour des représentation de vecteur sympa pour les physiciens
+\usepackage{vector}
+
+% figures avec sous-figures et sous-captions:
+\usepackage[labelformat=empty, caption=true]{subfig}

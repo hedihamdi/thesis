@@ -1,0 +1,125 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%TOUT CE QUI CONCERNE TLORIA%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%(cf _doc/TL-user.pdf pour plus de détails)
+%-------------------------------------------------------------------
+%                             En-tetes
+%-------------------------------------------------------------------
+
+% Les en-tetes: quelques exemples
+%\UppercaseHeadings 
+%\UnderlineHeadings
+%\newcommand\bfheadings[1]{{\bf #1}}
+%\FormatHeadingsWith{\bfheadings}
+%\FormatHeadingsWith{\uppercase}
+%\FormatHeadingsWith{\underline}
+\newcommand\upun[1]{\uppercase{\underline{\underline{#1}}}}
+\FormatHeadingsWith\upun
+
+\newcommand\itheadings[1]{\textit{#1}}
+\FormatHeadingsWith{\itheadings}
+
+% pour avoir un trait sous l'en-tete:
+\setlength{\HeadRuleWidth}{0.4pt}
+
+%-------------------------------------------------------------------
+%                         Les references
+%-------------------------------------------------------------------
+
+\NoChapterNumberInRef
+\NoChapterPrefix
+
+%-------------------------------------------------------------------
+%                           Brouillons
+%-------------------------------------------------------------------
+
+% ceci ajoute une marque `brouillon' et la date
+%\ThesisDraft
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%TOUT CE QUI NE CONCERNE PAS THLORIA%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Solution à la hache pour éviter les warning \oval et compagnie
+\makeatletter
+\renewcommand\@picture@warn{}
+\makeatletter
+
+
+% Un nouveau compteur pour les annexes
+\newcounter{compteurannexes}
+\renewcommand\thecompteurannexes{\Alph{compteurannexes}}
+
+
+%%%% debut macro %%%% pour refaire les têtes de chapitres
+\makeatletter
+\def\@makechapterhead#1{%
+  %\vspace*{50\p@}% pour enlever l'espace avant le titre => minitoc rentre dans 1 page!
+  \hrule
+  \vspace*{10\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \huge{\fontfamily{ppl}\selectfont \bfseries \@chapapp\space \thechapter}
+        \par\nobreak
+          \vskip 10\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge {\fontfamily{ppl}\selectfont #1}\par\nobreak
+    \vspace*{10\p@}%
+        \hrule
+    \vskip 10\p@
+}}
+%%%%%Starred chapters (toc, lof, biblio)
+\def\@schapter#1{\if@twocolumn
+                   \@topnewpage[\@makeschapterhead{#1}]%
+                 \else
+                   \@makeschapterhead{#1}%
+                   \@afterheading
+                 \fi}
+\def\@makeschapterhead#1{%
+  \hrule
+  \vspace*{10\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+    \Huge{\fontfamily{ppl}\selectfont #1}
+    \par\nobreak
+    \vspace*{10\p@}%
+        \hrule
+    %\vskip 10\p@
+  }}
+\rmfamily
+\makeatother
+%%%% fin macro %%%%
+
+
+% pour changer la police de toutes les sections
+\allsectionsfont{\fontfamily{ppl}\selectfont}
+
+% Numérote les subsubsection pour pouvoir leur mettre un label et donc les voir apparaître dans les minitocs
+\setcounter{secnumdepth}{4}
+
+% Mise en page des subsubsection avec un bullet, écrit en sffamily
+\makeatletter
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{10pt}%
+                                     {-1.5ex \@plus -.2ex \@minus -.2ex}%
+                                     {0.1ex \@plus.2ex}%
+                                     {\sffamily\bf}}
+\renewcommand\thesubsubsection{$\bullet$}          
+\renewcommand*\l@subsubsection{\@dottedtocline{3}{7.0em}{1.5em}}                           
+\makeatother              
+
+% profondeur de la toc principale : 1 (minitoc : 2)
+\setcounter{tocdepth}{1}
+
+
+%%Pour avoir le titre du chapitre dans la liste des figures
+%(xchapter est généré par minitoc)
+\makeatletter
+\let\l@xchapter\l@chapter
+\makeatother

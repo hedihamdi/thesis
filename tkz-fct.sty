@@ -1,0 +1,351 @@
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %                                                               %
+    %          tkz-func.sty      encodage : utf8                    %
+    %                                                               %
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %                                                               %
+    %           Créé par Alain Matthes le 07-07-2007.               %
+    %                                                               %
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 14/09/2007 twoptoff --->off
+%% Objet :  fonctions numériques en 2D
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tkz-fct}[2007/06/07 v2 function ]
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                          Initialisation
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\RequirePackage{tkz-base}
+\FPmessagesfalse% 
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%            Tools
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%<–––––––– code from TeX in Practice ––––––––>
+\newif\if@TestSubString
+\def\SubStringConditional #1#2{%
+    TT\fi
+    \edef\@MainString{#1}%
+    \edef\@SubStringConditionalTemp{{#1}{#2}}%
+    \expandafter\@SubStringConditional\@SubStringConditionalTemp
+}
+\def\@SubStringConditional #1#2{% 
+    \def\@TestSubS ##1#2##2\\{% 
+        \def\@TestTemp{##1}% 
+    }% 
+    \@TestSubS #1#2\\
+    \ifx\@MainString\@TestTemp
+        \@TestSubStringfalse
+    \else
+        \@TestSubStringtrue
+    \fi
+    \if@TestSubString
+}
+
+\def\RecursionMacroEnd #1#2#3{% 
+    #1\relax
+        \def\@RecursionMacroEndNext{#2}% 
+    \else
+        \def\@RecursionMacroEndNext{#3}% 
+    \fi
+    \@RecursionMacroEndNext
+}
+
+\def\ReplaceSubStrings #1#2#3#4{%
+    \def\@ReplaceResult{#1}%
+    \edef\@ReplaceMain{#2}%
+    \edef\@ReplaceSub{#3}%
+    \edef\@ReplaceSubRep{#4}%
+    \@ReplaceSubStrings
+}
+\def\@ReplaceSubStrings{% 
+    \RecursionMacroEnd
+        {\if\SubStringConditional{\@ReplaceMain}{\@ReplaceSub}}%
+      {\@ReplaceSubStringsDo}{\expandafter\edef\@ReplaceResult{\@ReplaceMain}}%
+}
+\def\@ReplaceSubStringsDoX{%
+    \def\@ReplaceSubStringsDoA ##1%
+}%
+\def\@ReplaceSubStringsDo{% 
+    \expandafter\@ReplaceSubStringsDoX \@ReplaceSub
+                                    ##2\@EndReplaceSubStrings{%
+        \edef\@ReplaceMain{##1\@ReplaceSubRep ##2}%
+    }%
+    \expandafter\@ReplaceSubStringsDoA\@ReplaceMain
+        \@EndReplaceSubStrings
+    \@ReplaceSubStrings
+}   
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                               tkzfonct 
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\define@cmdkey  [TKZ] {tkzf}{samples}{}
+\define@cmdkey  [TKZ] {tkzf}{label}{}
+\define@cmdkey  [TKZ] {tkzf}{lw}{}
+\define@cmdkey  [TKZ] {tkzf}{style}{}
+\define@cmdkey  [TKZ] {tkzf}{color}{}
+\presetkeys     [TKZ] {tkzf}{%
+                       samples   = 100,%
+                       label     = {},%
+                       color     = black,%
+                       lw        = 0.8pt,%
+                       style     = solid%
+                       }{}
+
+\newcommand*{\tkzFct}[1][]{\tkz@fct[#1]}% 
+
+\def\tkz@fct[#1](#2..#3)#4{%
+\setkeys[TKZ]{tkzf}{#1}%
+  \ifTKZ@tkzInit@NO%
+     \FPdiv{\xdelta}{\cmdTKZ@tkzInit@xorigine}{\cmdTKZ@tkzInit@xstep}%
+     \FPdiv{\ydelta}{\cmdTKZ@tkzInit@yorigine}{\cmdTKZ@tkzInit@ystep}%
+  \else        
+     \FPset{\xdelta}{0}
+     \FPset{\ydelta}{0}%
+  \fi%
+  \stepcounter{cmdTKZ@tkzf@fct}
+  \expandafter\def\csname tkzFctgnu\alph{cmdTKZ@tkzf@fct}\endcsname{#4}%
+  \def\x{(x*\cmdTKZ@tkzInit@xstep)}
+  \FPeval\tkz@min{(#2)}  
+  \FPeval\tkz@max{(#3)}  
+  \FPdiv\tkz@ba{\tkz@min}{\cmdTKZ@tkzInit@xstep}
+  \FPdiv\tkz@bb{\tkz@max}{\cmdTKZ@tkzInit@xstep} 
+
+  \begin{scope}
+    \clip (\tkz@xa,\tkz@ya) rectangle (\tkz@xb,\tkz@yb);
+    \draw [xshift     = -\xdelta cm,%
+           yshift     = -\ydelta cm,%
+           line width = \cmdTKZ@tkzf@lw,%
+           color      = \cmdTKZ@tkzf@color,\cmdTKZ@tkzf@style]%
+     plot [id         = tkzfonct,%
+           domain     = \tkz@ba:\tkz@bb,%
+           samples    = \cmdTKZ@tkzf@samples]%
+          function{(#4)/\cmdTKZ@tkzInit@ystep}%
+     node[above left =6pt] {\cmdTKZ@tkzf@label};
+  \end{scope}
+  \ReplaceSubStrings{\tkz@tempa}{#4}{log}{ln}
+  \ReplaceSubStrings{\tkz@tempb}{\tkz@tempa}{**}{^}
+  \ReplaceSubStrings{\tkz@tempc}{\tkz@tempb}{\x}{x}
+  \expandafter\edef\csname tkzFct\alph{cmdTKZ@tkzf@fct}\endcsname{\tkz@tempc}%
+}
+
+\newcommand*{\tkzFctPar}[1][]{\tkz@fctp[#1]}% 
+
+\def\tkz@fctp[#1](#2..#3)#4#5{%
+\setkeys[TKZ]{tkzf}{#1}%
+  \ifTKZ@tkzInit@NO%
+     \FPdiv{\xdelta}{\cmdTKZ@tkzInit@xorigine}{\cmdTKZ@tkzInit@xstep}%
+     \FPdiv{\ydelta}{\cmdTKZ@tkzInit@yorigine}{\cmdTKZ@tkzInit@ystep}%
+  \else        
+     \FPset{\xdelta}{0}
+     \FPset{\ydelta}{0}%
+  \fi%
+  \stepcounter{cmdTKZ@tkzf@fct}
+  \def\t{(t*\cmdTKZ@tkzInit@xstep)} 
+  \FPeval\tkz@min{(#2)}  
+  \FPeval\tkz@max{(#3)}  
+  \FPdiv\tkz@ba{\tkz@min}{\cmdTKZ@tkzInit@xstep}
+  \FPdiv\tkz@bb{\tkz@max}{\cmdTKZ@tkzInit@xstep} 
+
+  \begin{scope}
+	\twoptoff
+    \clip (\tkz@xa,\tkz@ya) rectangle (\tkz@xb,\tkz@yb);
+    \draw [xshift     = -\xdelta cm,%
+           yshift     = -\ydelta cm,%
+           line width = \cmdTKZ@tkzf@lw,%
+           color      = \cmdTKZ@tkzf@color,\cmdTKZ@tkzf@style]%
+     plot [parametric,%
+           id         = tkzfonct,%
+           domain     = \tkz@ba:\tkz@bb,%
+           samples    = \cmdTKZ@tkzf@samples]%
+         function {(#4)/\cmdTKZ@tkzInit@ystep,(#5)/\cmdTKZ@tkzInit@ystep}
+     node[above left =6pt] {\cmdTKZ@tkzf@label};
+\twopton
+  \end{scope}
+}
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                                  tangente 
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\tikzstyle{StyleTan}=[->,>=latex]
+\define@cmdkey [TKZ] {tan} {color}{}
+\define@cmdkey [TKZ] {tan} {lw}{}
+\define@cmdkey [TKZ] {tan} {style}{}
+\define@cmdkey [TKZ] {tan} {kr}{}
+\define@cmdkey [TKZ] {tan} {kl}{}
+\define@cmdkey [TKZ] {tan} {pos}{}
+\define@cmdkey [TKZ] {tan} {mark}{}
+\define@cmdkey [TKZ] {tan} {size}{}
+\define@cmdkey [TKZ] {tan} {colorpt}{}
+\define@boolkey[TKZ] {tan} {nopoint}[true]{}  
+\define@boolkey[TKZ] {tan} {noname}[true]{}
+\define@boolkey[TKZ] {tan} {coord}[true]{}  
+\presetkeys    [TKZ] {tan} {%
+                   style     = solid,%
+                   lw        = .8pt,%
+                   color     = blue,%
+                   kr        = 1,%
+                   kl        = 1,%
+                   mark      = *,% 
+                   size      = 1pt,%
+                   colorpt   = black,%
+                   pos       = below right,%
+                   nopoint   = false,%
+                   coord     = false,% 
+                   noname    = false}{}%
+
+\newcommand*{\tkzTan}[1][]{\tkz@Tan[#1]}%
+\def\tkz@Tan[#1]#2(#3)#{
+  \setkeys[TKZ]{tan}{#1}%
+  \FPeval\x{(#3)}%
+  \FPeval\img{#2}
+  \let\y #2%
+  \let\xx\x%
+  \let\ydeltah\img
+  \tkz@@Tan
+}
+\def\tkz@@Tan#1{%
+  \tkz@ptStar(\x,\img){#1}
+  \FPdiv{\krx}{\cmdTKZ@tan@kr}{\cmdTKZ@tkzInit@xstep}
+  \FPdiv{\kry}{\cmdTKZ@tan@kr}{\cmdTKZ@tkzInit@ystep}
+  \FPdiv{\klx}{\cmdTKZ@tan@kl}{\cmdTKZ@tkzInit@xstep}
+  \FPdiv{\kly}{\cmdTKZ@tan@kl}{\cmdTKZ@tkzInit@ystep}
+   % demi tgt--> droite
+  \FPifzero{\cmdTKZ@tan@kr} \else%
+  \FPadd{\x}{\xx}{0.000001}
+  \FPeval\img{\y}% 
+  \FPadd{\deltay}{\ydeltah}{-\img}
+  \FPmul{\tkz@pente}{\deltay}{1000000}
+  \draw[StyleTan,%
+        color      = \cmdTKZ@tan@color,%
+        line width = \cmdTKZ@tan@lw]%
+        (#1.center)--++(1 cm * \real{\krx},%
+                           -\tkz@pente cm * \real{\kry});\fi%
+  % demi tgt --> gauche
+  \FPifzero{\cmdTKZ@tan@kl} \else%
+  \FPadd{\x}{\xx}{-0.000001} 
+  \FPeval\img{\y}% 
+  \FPadd{\deltay}{\ydeltah}{-\img}
+  \FPmul{\tkz@pente}{\deltay}{-1000000}
+  \draw[StyleTan,%
+        color      = \cmdTKZ@tan@color,%
+        line width = \cmdTKZ@tan@lw]%
+        (#1.center)--++(-1 cm * \real{\klx},%
+                           \tkz@pente cm * \real{\kly});\fi%
+   \presetkeys  [TKZ] {pt}{%
+                   mark     = \cmdTKZ@tan@mark,% 
+                   size     = \cmdTKZ@tan@size,%
+                   color    = \cmdTKZ@tan@colorpt,% 
+                   pos      = \cmdTKZ@tan@pos}{}
+
+\ifTKZ@tan@nopoint \else%
+  \ifTKZ@tan@noname \presetkeys[TKZ]{pt}{noname = true}{}%
+         \else%
+              \presetkeys[TKZ]{pt}{noname = false}{}%
+           \fi%
+  \ifTKZ@tan@coord \presetkeys[TKZ]{pt}{coord = true}{}%
+         \else%
+              \presetkeys[TKZ]{pt}{coord = false}{}%
+         \fi% 
+
+\tkzDrawPoint(#1) \fi   
+}  
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                            point d'une courbe 
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzFctPt}[1][]{\tkz@fctpt[#1]}%
+\def\tkz@fctpt[#1]#2(#3)#{
+  \setkeys[TKZ]{pt}{#1}%
+  \FPeval\x{(#3)}%
+  \FPeval\y{#2}
+   \tkz@defpoint
+}
+\def\tkz@defpoint#1{
+  \tkz@ptStar(\x,\y){#1}%
+  \tkz@DrawPoint{#1}%
+} 
+
+
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                               tkzAera 
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>% pb avec les unités
+\define@cmdkey [TKZ] {aire}{color}{}
+\define@cmdkey [TKZ] {aire}{opacity}{}
+\define@cmdkey [TKZ] {aire}{samples}{}
+\define@cmdkey [TKZ] {aire}{style}{} %18/03
+\presetkeys    [TKZ] {aire}{%
+                     color   = lightgray,
+                     opacity = 0.5,
+                     style   = {},
+                     samples = 200%
+                     }{}
+
+\newcommand*{\tkzAera}[1][]{\tkz@aire[#1]}%
+\def\tkz@aire[#1](#2..#3){%
+   \setkeys[TKZ]{aire}{#1}%
+   \ifTKZ@tkzInit@NO%
+      \FPdiv{\xdelta}{\cmdTKZ@tkzInit@xorigine}{\cmdTKZ@tkzInit@xstep}%
+      \FPdiv{\ydelta}{\cmdTKZ@tkzInit@yorigine}{\cmdTKZ@tkzInit@ystep}%
+   \else        
+      \FPset{\xdelta}{0}
+      \FPset{\ydelta}{0}%
+   \fi%
+   % essai du test sur xstep
+  \def\x{(x*\cmdTKZ@tkzInit@xstep)}
+  \FPeval\tkz@min{(#2)}  
+  \FPeval\tkz@max{(#3)}  
+  \FPdiv\tkz@ba{\tkz@min}{\cmdTKZ@tkzInit@xstep}
+  \FPdiv\tkz@bb{\tkz@max}{\cmdTKZ@tkzInit@xstep} 
+
+   \begin{scope} 
+   \protected@edef\@tempa{%
+   \noexpand  \fill[color        = \cmdTKZ@aire@color,%
+                    fill opacity = \cmdTKZ@aire@opacity,%
+                    \cmdTKZ@aire@style]%18/03/07
+     (\tkz@ba,0)--plot [id          = tkzfonct,%
+                        domain     = \tkz@ba:\tkz@bb,%
+                        samples    = \cmdTKZ@tkzf@samples]%
+       function{(\tkzFctgnua)/\cmdTKZ@tkzInit@ystep}--(\tkz@bb,0);}\@tempa
+   \end{scope}
+}
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+%                             tkzAerafg
+%<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+\newcommand*{\tkzAerafg}[1][]{\tkz@airefg[#1]}%
+\def\tkz@airefg[#1](#2..#3)#4#5{%
+\setkeys[TKZ]{aire}{#1}%
+\ifTKZ@tkzInit@NO%
+   \FPdiv{\xdelta}{\cmdTKZ@tkzInit@xorigine}{\cmdTKZ@tkzInit@xstep}%
+   \FPdiv{\ydelta}{\cmdTKZ@tkzInit@yorigine}{\cmdTKZ@tkzInit@xstep}%
+\else        
+   \FPset{\xdelta}{0}
+   \FPset{\ydelta}{0}%
+\fi%
+% essai du test sur xstep
+\def\x{(x*\cmdTKZ@tkzInit@xstep)}
+  \FPeval\tkz@min{(#2)}  
+  \FPeval\tkz@max{(#3)}  
+  \FPdiv\tkz@ba{\tkz@min}{\cmdTKZ@tkzInit@xstep}
+  \FPdiv\tkz@bb{\tkz@max}{\cmdTKZ@tkzInit@xstep} 
+  \begin{scope} 
+    \clip (\tkz@ba,\tkz@ya)--plot[id=tkzfonct,%
+          domain = \tkz@ba:\tkz@bb,samples=\cmdTKZ@aire@samples]%
+          function{(#4)/\cmdTKZ@tkzInit@ystep}--(\tkz@bb,\tkz@ya);%
+    \clip (\tkz@ba,\tkz@yb)--plot[id=tkzfonct,%
+          domain = \tkz@ba:\tkz@bb,samples=\cmdTKZ@aire@samples]%
+          function{(#5)/\cmdTKZ@tkzInit@ystep}--(\tkz@bb,\tkz@yb);
+   \protected@edef\@tempa{%
+      \noexpand%
+      \fill[color=\cmdTKZ@aire@color,%
+            fill opacity=0.4,%
+            \cmdTKZ@aire@style]%
+         (\tkz@ba,\tkz@ya) rectangle (\tkz@bb,\tkz@yb);}\@tempa
+  \end{scope}
+}
+
+
+%<––––––––––––––––––––––––––––––– fin –––––––––––––––––––––––––––––––––––––––>
+\endinput
