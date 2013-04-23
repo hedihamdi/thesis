@@ -5,18 +5,22 @@
 \contentsline {spsection}{Liste des figures}{vii}{division.1}
 \@frame@switchfalse 
 \contentsline {starchapter}{Introduction}{1}{division.1}
-\contentsline {chapter}{\numberline {Chapitre\ 1~-}Titre du chapitre 1}{3}{division.2}
-\contentsline {section}{\numberline {1.1}Titre de la section}{5}{section.2.1}
-\contentsline {subsection}{\numberline {1.1.1}Titre de la sous-section}{5}{subsection.2.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Titre de la sous-sous-section}{5}{subsubsection.2.1.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Titre de la sous-sous-section}{5}{subsubsection.2.1.1.2}
+\contentsline {chapter}{\numberline {Chapitre\ 1~-}Mod\`eles d'accrochage des Facteurs de Transcription \`a l'ADN.}{3}{division.2}
+\contentsline {section}{\numberline {1.1}Mod\`eles existants}{5}{section.2.1}
+\contentsline {subsection}{\numberline {1.1.1}Le mod\`ele PWM}{5}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {1.1.2}Conclusion de la section 1.1}{5}{subsection.2.1.2}
-\contentsline {chapter}{\numberline {Chapitre\ 2~-}Chapitre 2}{7}{division.3}
+\contentsline {chapter}{\numberline {Chapitre\ 2~-}{\em Imogene}: un alogrithme d'identification de motifs et de modules de r\'egulation transcriptionnelle}{7}{division.3}
 \contentsline {section}{\numberline {2.1}}{9}{section.3.1}
-\contentsline {chapter}{\numberline {Chapitre\ 3~-}Chapitre 3}{11}{division.4}
+\contentsline {chapter}{\numberline {Chapitre\ 3~-}\'Etude de la diff\'erenciation \'epidermale chez la drosophile}{11}{division.4}
 \contentsline {section}{\numberline {3.1}}{13}{section.4.1}
-\contentsline {chapter}{\numberline {Chapitre\ 4~-}Chapitre 4}{15}{division.5}
+\contentsline {chapter}{\numberline {Chapitre\ 4~-}\'Etude de la diff\'erenciation musculaire chez la souris}{15}{division.5}
 \contentsline {section}{\numberline {4.1}}{17}{section.5.1}
-\contentsline {starchapter}{Conclusion}{18}{section*.9}
-\contentsline {tlstarchapter}{\appendixname s}{21}{division.6}
-\contentsline {spsection}{Bibliographie}{35}{division.7}
+\contentsline {chapter}{\numberline {Chapitre\ 5~-}Chapitre d'exemples}{19}{division.6}
+\contentsline {section}{\numberline {5.1}Titre de la section}{21}{section.6.1}
+\contentsline {subsection}{\numberline {5.1.1}Titre de la sous-section}{21}{subsection.6.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Titre de la sous-sous-section}{21}{subsubsection.6.1.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Titre de la sous-sous-section}{21}{subsubsection.6.1.1.2}
+\contentsline {subsection}{\numberline {5.1.2}Conclusion de la section 5.1}{21}{subsection.6.1.2}
+\contentsline {starchapter}{Conclusion}{22}{subsection.6.1.2}
+\contentsline {tlstarchapter}{\appendixname s}{25}{division.7}
+\contentsline {spsection}{Bibliographie}{31}{division.8}

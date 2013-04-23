@@ -1216,8 +1216,11 @@
 \newcommand{\AbstractsOnOddPage}{\abstracts@evenfalse}
 \newcommand{\AbstractsOnEvenPage}{\abstracts@eventrue}
 \newcommand{\@abstract@hook}[1]{}
+\RequirePackage[latin1]{inputenc}
 \newenvironment{ThesisAbstract}
-    {\ifabstracts@even\@newevendoublepage\else\@newdoublepage\fi
+    {
+       
+       \ifabstracts@even\@newevendoublepage\else\@newdoublepage\fi
      \edef\saved@ps{\current@ps}%
      \pagestyle{\abs@ps}
      \markboth{}{}
@@ -1237,7 +1240,8 @@
          \def\KeyWords####1{\par\bigskip\noindent\textbf{##2:} ####1\par}
          }
      \newenvironment{FrenchAbstract}
-        {\@abstr@ct@beginning{R\'esum\'e}{Mots-cl\'es}}
+        {
+           \@abstr@ct@beginning{R\'esum\'e}{Mots-cl\'es}}
         {\vglue1cm minus 8mm}
      \newenvironment{EnglishAbstract}
         {\@abstr@ct@beginning{Abstract}{Keywords}%

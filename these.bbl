@@ -1,4 +1,11 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
 \newcommand{\enquote}[1]{``#1''}
+
+\bibitem{Rouault2010p327}
+{\sc H.~Rouault}, {\sc K.~Mazouni}, {\sc L.~Couturier}, {\sc V.~Hakim} et {\sc
+  F.~Schweisguth}, \enquote{Genome-wide identification of cis-regulatory motifs
+  and modules underlying gene coregulation using statistics and phylogeny},
+  {\em Proceedings of the National Academy of Sciences\/} {\bf 107},
+  n\textsuperscript{o}\kern.2em\relax~33, 14615 (2010).
 
 \end{thebibliography}

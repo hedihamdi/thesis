@@ -1,5 +1,6 @@
 \documentclass[11pt, a4paper, french]{thloria}
 
+
 \newcommand{\FaitMinitocs}{1} \newcommand{\CadresOvales}{1}
 \newcommand{\FaitNomenclature}{1}
 
@@ -88,6 +89,14 @@
       \input{chapters/Chapter4}
  
 }{}
+
+\chapter{\ChTestTitre}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+
+   \newpage
+
+      \input{chapters/ChapterTest}
+ 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -104,7 +113,7 @@
 \renewcommand{\rightmark}{Bibliographie} \bibliographystyle{biblio/paolostyle}
 \BeginBibWith{\vskip7mm\noindent Dans la version pdf, les numéros de page sont
 des liens qui renvoient à l'occurence de la citation dans le texte.}
-\bibliography{biblio/cedbib}
+\bibliography{biblio/papers}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

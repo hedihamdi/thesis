@@ -14,9 +14,14 @@
 
 % C'est quand même mieux, un pdf cliquable!
 \usepackage[pdftex, colorlinks = true
-						, pdfstartview = FitH
-						, linkcolor = black, citecolor = blue, urlcolor = blue, bookmarksnumbered = true, bookmarksopen = true , pdfpagelabels, pagebackref
-						]{tlhypref}
+                  , pdfstartview = FitH 
+                  , linkcolor = black
+                  , citecolor = blue
+                  , urlcolor = blue
+                  , bookmarksnumbered = true
+                  , bookmarksopen = true
+                  , pdfpagelabels
+                  , pagebackref = true ]{tlhypref}
 
 
 \usepackage{fancybox} %pour encadrer les images en oval, shadow... Utilisé dans les macros
@@ -24,10 +29,10 @@
 
 %%% Backref : permet de faire automatiquement des références en arrière cliquables dans la biblio, très utile!
 % setup the style of the backrefs from the bibliography %version gaël compliqué!
+\RequirePackage[hyperpageref]{backref} % to be loaded after hyperref package
 \newcommand{\backrefnotcitedstring}{\relax}%(Not cited.)
 \newcommand{\backrefcitedsinglestring}[1]{(Page~#1.)}
 \newcommand{\backrefcitedmultistring}[1]{(Pages~#1.)}
-\RequirePackage[hyperpageref]{backref} % to be loaded after hyperref package
  \renewcommand{\backreftwosep}{ et~} % seperate 2 pages
  \renewcommand{\backreflastsep}{, et~} % seperate last of longer list
  \renewcommand*{\backref}[1]{}  % Disable standard
@@ -67,9 +72,10 @@
 %\SIstyle{German}   % Utile pour avoir une virgule avant les décimales et pas un point
 
 % Les polices latex
-%\usepackage[francais]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[frenchb]{babel}
 
 
 %Pour faire l'index des notations
