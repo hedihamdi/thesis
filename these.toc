@@ -6,7 +6,7 @@
 \@frame@switchfalse 
 \contentsline {starchapter}{Introduction}{1}{division.1}
 \contentsline {chapter}{\numberline {Chapitre\ 1~-}Mod\`eles d'accrochage des Facteurs de Transcription \`a l'ADN.}{3}{division.2}
-\contentsline {section}{\numberline {1.1}Mod\`eles existants}{5}{section.2.1}
+\contentsline {section}{\numberline {1.1}Mod\`eles de maximum d'entropie}{5}{section.2.1}
 \contentsline {subsection}{\numberline {1.1.1}Le mod\`ele PWM}{5}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {1.1.2}Conclusion de la section 1.1}{5}{subsection.2.1.2}
 \contentsline {chapter}{\numberline {Chapitre\ 2~-}{\em Imogene}: un alogrithme d'identification de motifs et de modules de r\'egulation transcriptionnelle}{7}{division.3}

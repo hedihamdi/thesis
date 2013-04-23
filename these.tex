@@ -1,5 +1,8 @@
 \documentclass[11pt, a4paper, french]{thloria}
 
+% to be removed for final version
+\ThesisDraft
+
 
 \newcommand{\FaitMinitocs}{1} \newcommand{\CadresOvales}{1}
 \newcommand{\FaitNomenclature}{1}
@@ -25,8 +28,11 @@
 
 \WriteThisInToc\listoffigures 
 
-\ifthenelse{\FaitNomenclature > 0}{ \printnomenclature[1.5cm]
-   \hypertarget{nomenclaturepage}{} }{}
+
+\ifthenelse{\FaitNomenclature > 0}{ 
+   \printnomenclature[1.5cm]
+   \hypertarget{nomenclaturepage}{} 
+}{}
 
 
 % La commande \mainmatter (nouvelle commande LaTeX2e) permet de passer a la
@@ -40,15 +46,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifthenelse{\IncludePartOne > 0}{
+%\part{Première partie}
+
+%\ifthenelse{\IncludePartOne > 0}{
 
 \chapter{\ChUnTitre}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
-	
-   \newpage
-	
-      \input{chapters/Chapter1}
-		
-}{\stepcounter{chapter}}
+
+\newpage
+
+\input{chapters/Chapter1}
+
+%}{\stepcounter{chapter}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -56,46 +64,45 @@
 %\part{Obtention expérimentale d'un \bec sur une puce à atomes
 %supraconductrice}
 
-\ifthenelse{\IncludePartTwo > 0}{
+%\ifthenelse{\IncludePartTwo > 0}{
 
 \chapter{\ChDeuxTitre} \ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
 
-   \newpage
+\newpage
 
-      \input{chapters/Chapter2}
-	
-}{\stepcounter{chapter}}
+\input{chapters/Chapter2}
+
+%}{\stepcounter{chapter}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ifthenelse{\IncludePartThree > 0}{
+%\ifthenelse{\IncludePartThree > 0}{
 
 \chapter{\ChTroisTitre}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
 
-   \newpage
+\newpage
 
-      \input{chapters/Chapter3}
-		
-      }{\stepcounter{chapter}}
+\input{chapters/Chapter3}
+
+%}{\stepcounter{chapter}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ifthenelse{\IncludePartFour > 0}{
+%\ifthenelse{\IncludePartFour > 0}{
 
 \chapter{\ChQuatreTitre}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
 
-   \newpage
+\newpage
 
-      \input{chapters/Chapter4}
- 
-}{}
+\input{chapters/Chapter4}
+
+%}{}
 
 \chapter{\ChTestTitre}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
 
-   \newpage
+\newpage
 
-      \input{chapters/ChapterTest}
- 
+\input{chapters/ChapterTest}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -111,8 +118,10 @@
 
 \EmptyNewPage \appendix \renewcommand{\leftmark}{Bibliographie}
 \renewcommand{\rightmark}{Bibliographie} \bibliographystyle{biblio/paolostyle}
-\BeginBibWith{\vskip7mm\noindent Dans la version pdf, les numéros de page sont
-des liens qui renvoient à l'occurence de la citation dans le texte.}
+\BeginBibWith{\vskip7mm\noindent 
+   Dans la version pdf, les numéros de page sont
+   des liens qui renvoient à l'occurence de la citation dans le texte.
+}
 \bibliography{biblio/papers}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

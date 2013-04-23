@@ -1,11 +1,14 @@
 \begin{thebibliography}{1}
 \newcommand{\enquote}[1]{``#1''}
 
-\bibitem{Rouault2010p327}
-{\sc H.~Rouault}, {\sc K.~Mazouni}, {\sc L.~Couturier}, {\sc V.~Hakim} et {\sc
-  F.~Schweisguth}, \enquote{Genome-wide identification of cis-regulatory motifs
-  and modules underlying gene coregulation using statistics and phylogeny},
-  {\em Proceedings of the National Academy of Sciences\/} {\bf 107},
-  n\textsuperscript{o}\kern.2em\relax~33, 14615 (2010).
+\bibitem{Mora2011p3888}
+{\sc T.~Mora} et {\sc W.~Bialek}, \enquote{Are biological systems poised at
+  criticality?}, {\em J Stat Phys\/} {\bf 144},
+  n\textsuperscript{o}\kern.2em\relax~2, 268--302 (2011).
+
+\bibitem{Jaynes1957p3771}
+{\sc E.~Jaynes}, \enquote{Information theory and statistical mechanics. II},
+  {\em Physical review\/} {\bf 108}, n\textsuperscript{o}\kern.2em\relax~2, 171
+  (1957).
 
 \end{thebibliography}
