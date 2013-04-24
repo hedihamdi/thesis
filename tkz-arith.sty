@@ -13,7 +13,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{tkz-arith}[2007/09/27 v1 integers numbers  ]
 %<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
-\RequirePackage{ifthen,pgfmath,pgffor}
+% conflicts with pgfmath in TexLive 2012
+\RequirePackage{ifthen,pgffor}%,pgfmath
 
 %<–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
 %                            arithmetic tools 
