@@ -1,14 +1,39 @@
 \begin{thebibliography}{1}
 \newcommand{\enquote}[1]{``#1''}
 
-\bibitem{Mora2011p3888}
-{\sc T.~Mora} et {\sc W.~Bialek}, \enquote{Are biological systems poised at
-  criticality?}, {\em J Stat Phys\/} {\bf 144},
-  n\textsuperscript{o}\kern.2em\relax~2, 268--302 (2011).
-
 \bibitem{Jaynes1957p3771}
 {\sc E.~Jaynes}, \enquote{Information theory and statistical mechanics. II},
   {\em Physical review\/} {\bf 108}, n\textsuperscript{o}\kern.2em\relax~2, 171
   (1957).
+
+\bibitem{Shannon1948p699}
+{\sc C.~Shannon}, \enquote{A Mathematical Theory of Communication}, {\em Bell
+  Syst Tech J\/} {\bf 27}, n\textsuperscript{o}\kern.2em\relax~4, 623--656 (Jan
+  1948).
+
+\bibitem{Zinzen2009p760}
+{\sc R.~Zinzen}, {\sc C.~Girardot}, {\sc J.~Gagneur}, {\sc M.~Braun} et {\sc
+  E.~Furlong}, \enquote{Combinatorial binding predicts spatio-temporal
+  cis-regulatory activity}, {\em Nature\/} {\bf 462},
+  n\textsuperscript{o}\kern.2em\relax 7269, 65--70 (2009).
+
+\bibitem{Chen2008p3738}
+{\sc X.~Chen}, {\sc H.~Xu}, {\sc P.~Yuan}, {\sc F.~Fang}, {\sc M.~Huss}, {\sc
+  V.~B. Vega}, {\sc E.~Wong}, {\sc Y.~L. Orlov}, {\sc W.~Zhang}, {\sc
+  J.~Jiang}, {\sc Y.-H. Loh}, {\sc H.~C. Yeo}, {\sc Z.~X. Yeo}, {\sc
+  V.~Narang}, {\sc K.~R. Govindarajan}, {\sc B.~Leong}, {\sc A.~Shahab}, {\sc
+  Y.~Ruan}, {\sc G.~Bourque}, {\sc W.-K. Sung}, {\sc N.~D. Clarke}, {\sc C.-L.
+  Wei} et {\sc H.-H. Ng}, \enquote{Integration of external signaling pathways
+  with the core transcriptional network in embryonic stem cells}, {\em Cell\/}
+  {\bf 133}, n\textsuperscript{o}\kern.2em\relax~6, 1106--17 (Jun 2008).
+
+\bibitem{ENCODEProjectConsortium2011p3726}
+{\sc E.~P. Consortium}, \enquote{A user's guide to the encyclopedia of DNA
+  elements (ENCODE)}, {\em Plos Biol\/} {\bf 9},
+  n\textsuperscript{o}\kern.2em\relax~4, e1001046 (Apr 2011).
+
+\bibitem{Smit2010}
+{\sc A.~F.~A. Smit}, {\sc R.~Hubley} et {\sc P.~Green}, \enquote{RepeatMasker
+  Open-3.0},  (1996-2010).
 
 \end{thebibliography}
