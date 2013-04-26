@@ -4,35 +4,36 @@
 \@thisnotframedtrue 
 \contentsline {spsection}{Liste des figures}{vii}{division.1}
 \@frame@switchfalse 
-\contentsline {starchapter}{Introduction}{1}{division.1}
-\contentsline {chapter}{\numberline {Chapitre\ 1~-}Mod\`eles d'accrochage des Facteurs de Transcription \`a l'ADN.}{3}{division.2}
-\contentsline {section}{\numberline {1.1}Les mod\`eles de fixation}{5}{section.2.1}
-\contentsline {subsection}{\numberline {1.1.1}Mod\`eles de maximum d'entropie}{5}{subsection.2.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Le mod\`ele PWM}{6}{subsubsection.2.1.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Le mod\`ele de corr\'elation de paires}{6}{subsubsection.2.1.1.2}
-\contentsline {subsection}{\numberline {1.1.2}Mod\`eles de m\'elange}{6}{subsection.2.1.2}
-\contentsline {section}{\numberline {1.2}Description des donn\'ees biologiques}{6}{section.2.2}
-\contentsline {subsection}{\numberline {1.2.1}Les donn\'ees ChIP}{6}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Statistique \FB@og background \FB@fg des s\'equences}{6}{subsection.2.2.2}
-\contentsline {section}{\numberline {1.3}Pr\'esentation de l'algorithme}{6}{section.2.3}
-\contentsline {section}{\numberline {1.4}Performance des mod\`eles}{6}{section.2.4}
-\contentsline {section}{\numberline {1.5}Analyse des corr\'elations}{6}{section.2.5}
-\contentsline {subsection}{\numberline {1.5.1}Quantification par l'Information Directe\xspace }{6}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {1.5.2}Description par des patterns de Hopfield}{6}{subsection.2.5.2}
-\contentsline {section}{\numberline {1.6}Comparaison avec des donn\'ees \textit {in vitro}\xspace }{6}{section.2.6}
-\contentsline {subsection}{\numberline {1.6.1}Conclusion de la section 1.6}{7}{subsection.2.6.1}
-\contentsline {chapter}{\numberline {Chapitre\ 2~-}{\em Imogene}: un algorithme d'identification de motifs et de modules de r\'egulation transcriptionnelle}{11}{division.3}
-\contentsline {section}{\numberline {2.1}}{13}{section.3.1}
-\contentsline {chapter}{\numberline {Chapitre\ 3~-}\'Etude de la diff\'erenciation \'epidermale chez la drosophile}{15}{division.4}
-\contentsline {section}{\numberline {3.1}}{17}{section.4.1}
-\contentsline {chapter}{\numberline {Chapitre\ 4~-}\'Etude de la diff\'erenciation musculaire chez la souris}{19}{division.5}
-\contentsline {section}{\numberline {4.1}}{21}{section.5.1}
-\contentsline {chapter}{\numberline {Chapitre\ 5~-}Chapitre d'exemples}{23}{division.6}
-\contentsline {section}{\numberline {5.1}Titre de la section}{25}{section.6.1}
-\contentsline {subsection}{\numberline {5.1.1}Titre de la sous-section}{25}{subsection.6.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Titre de la sous-sous-section}{25}{subsubsection.6.1.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Titre de la sous-sous-section}{25}{subsubsection.6.1.1.2}
-\contentsline {subsection}{\numberline {5.1.2}Conclusion de la section 5.1}{25}{subsection.6.1.2}
-\contentsline {starchapter}{Conclusion}{26}{subsection.6.1.2}
-\contentsline {tlstarchapter}{\appendixname s}{29}{division.7}
-\contentsline {spsection}{Bibliographie}{35}{division.8}
+\contentsline {starchapter}{Avant-propos}{1}{division.1}
+\contentsline {chapter}{\numberline {Chapitre\ 1~-}Introduction g\'en\'erale.}{3}{division.2}
+\contentsline {section}{\numberline {1.1}Diff\'erentes cellules expriment diff\'erent g\`enes}{4}{section.2.1}
+\contentsline {chapter}{\numberline {Chapitre\ 2~-}Mod\`eles de fixation des Facteurs de Transcription\xspace \`a l'ADN.}{5}{division.3}
+\contentsline {section}{\numberline {2.1}Les mod\`eles de fixation}{7}{section.3.1}
+\contentsline {subsection}{\numberline {2.1.1}Mod\`eles de maximum d'entropie}{7}{subsection.3.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Le mod\`ele PWM}{8}{subsubsection.3.1.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Le mod\`ele de corr\'elation de paires}{8}{subsubsection.3.1.1.2}
+\contentsline {subsection}{\numberline {2.1.2}Mod\`eles de m\'elange}{8}{subsection.3.1.2}
+\contentsline {section}{\numberline {2.2}Description des donn\'ees biologiques}{8}{section.3.2}
+\contentsline {subsection}{\numberline {2.2.1}Les donn\'ees ChIP}{8}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Statistique \FB@og background \FB@fg des s\'equences}{8}{subsection.3.2.2}
+\contentsline {section}{\numberline {2.3}Pr\'esentation de l'algorithme}{8}{section.3.3}
+\contentsline {section}{\numberline {2.4}Performance des mod\`eles}{8}{section.3.4}
+\contentsline {section}{\numberline {2.5}Analyse des corr\'elations}{8}{section.3.5}
+\contentsline {subsection}{\numberline {2.5.1}Quantification par l'Information Directe\xspace }{8}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Description par des patterns de Hopfield}{8}{subsection.3.5.2}
+\contentsline {section}{\numberline {2.6}Comparaison avec des donn\'ees \textit {in vitro}\xspace }{8}{section.3.6}
+\contentsline {subsection}{\numberline {2.6.1}Conclusion de la section 2.6}{9}{subsection.3.6.1}
+\contentsline {chapter}{\numberline {Chapitre\ 3~-}{\em Imogene}: un algorithme d'identification de motifs et de modules de r\'egulation transcriptionnelle}{11}{division.4}
+\contentsline {section}{\numberline {3.1}}{13}{section.4.1}
+\contentsline {chapter}{\numberline {Chapitre\ 4~-}\'Etude de la diff\'erenciation \'epidermale chez la drosophile}{15}{division.5}
+\contentsline {section}{\numberline {4.1}}{17}{section.5.1}
+\contentsline {chapter}{\numberline {Chapitre\ 5~-}\'Etude de la diff\'erenciation musculaire chez la souris}{19}{division.6}
+\contentsline {section}{\numberline {5.1}}{21}{section.6.1}
+\contentsline {chapter}{\numberline {Chapitre\ 6~-}Chapitre d'exemples}{23}{division.7}
+\contentsline {section}{\numberline {6.1}Titre de la section}{25}{section.7.1}
+\contentsline {subsection}{\numberline {6.1.1}Titre de la sous-section}{25}{subsection.7.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Titre de la sous-sous-section}{25}{subsubsection.7.1.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Titre de la sous-sous-section}{25}{subsubsection.7.1.1.2}
+\contentsline {subsection}{\numberline {6.1.2}Conclusion de la section 6.1}{25}{subsection.7.1.2}
+\contentsline {starchapter}{Conclusion}{26}{subsection.7.1.2}
+\contentsline {spsection}{Bibliographie}{29}{division.8}

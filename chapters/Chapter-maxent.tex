@@ -1,0 +1,170 @@
+
+\section*{Introduction du chapitre \thechapter}
+intro : insister sur description de ce qui s'est fait
+ensuite : ne pas traduire l'article mais approfondir les points non abordés
+(entropie maximale, info directe etc)
+\begin{malistebullet}{15}
+\item L'énérgie de fixation. Les \TFs peuvent s'accrocher à l'ADN. La fixation est décrite par une énergie
+   qui peut se décomposer en deux composantes. L'une est indépendante de la
+   séquence et prend en considération la courbure de l'ADN etc. L'autre dépend de
+   la séquence. Cette dernière peut être décrite par divers modèles de fixation.\\
+
+\item  {\bf Description des modèles existants}.\\
+
+\item  Différentes données biologiques utilisées : PBM, SELEX, ChIP. \\
+
+\item  Différences in vitro et in vivo.\\
+\end{malistebullet}
+
+\newpage 
+
+\section{Les modèles de fixation}\label{sec-modeles}
+\subsection{Modèles de maximum d'entropie}\label{subsec-modeles-maxent}
+
+La théorie de l'information offre un cadre conceptuel permettant de déterminer
+les probabilités d'un ensemble d'états étant données plusieurs contraintes
+mesurables, ou \textit{observables}. L'étape clé consiste à maximiser
+une fonctionnelle connue sous le nom d'entropie
+\cite{Jaynes1957p3771,Shannon1948p699} sur l'ensemble des distributions de
+probabilités des états étant données les contraintes imposées. Cette
+fonctionnelle s'écrit  \cite{Sigal2006p3278}
+
+
+\begin{equation}
+   \label{eq-entropy}
+   S[P_m] = - \sum_{\left\{ s \right\}}P_m(s) \ln P_m(s)
+\end{equation}
+
+où $P_m(s)$ est la probabilité modèle d'une séquence d'ADN $s$ appartenant à l'ensemble
+$\left\{ s \right\}$ des sites de fixation d'un \tf. Notons
+$\mathcal{O}_\al(s)$ une quantité attachée à $s$. Dans notre cas, cette
+quantité peut représenter la présence d'un certain nucléotide à une position donnée,
+ou d'une paire de nucléotide à deux positions données. Ce que l'on nomme
+observable correspond en fait à la moyenne de cette quantité sur l'ensemble des
+états donnés : $\langle\mathcal{O}_\al(s)\rangle_r$, où l'indice $r$ signifie
+que nous moyennons en utilisant la statistique $P_r$ sur les séquences
+observées. La contrainte associée s'écrit :
+
+\begin{equation}
+   \label{eq-constraints}
+   \langle\mathcal{O}_\al(s)\rangle_m = \langle\mathcal{O}_\al(s)\rangle_r
+\end{equation}
+
+où l'indice $m$ signifie que la moyenne est prise sur la distribution
+modèle. Nous pouvons alors écrire le Lagrangien suivant
+
+\begin{equation}
+   \mathcal{L}  =  - \sum_{\{ s \}} P(s) \ln P(s) + \lambda \left(\sum_{\{ s \}}
+   P(s) -1\right)  +  \sum_\al \beta_\al \left( \langle\mathcal{O}_\al(s)\rangle_m
+   - \langle\mathcal{O}_\al(s)\rangle_r \right) 
+\end{equation}
+
+où $\lambda$ et les $\beta_\al$ sont les multiplicateurs de Lagrange
+correspondant respectivement à la contrainte de normalisation de la
+distribution de probabilité et aux différentes observables $\mathcal{O}_\al$.
+La maximisation de ce Lagrangien est obtenue en annulant la
+dérivée fonctionnelle par rapport à la distribution de probabilité $P_m$ :
+
+\begin{equation}
+   \frac{\delta \mathcal{L}}{\delta  P_m(s)}   =  0  
+   = - \ln P_m(s) - 1  + \lambda  
+   +  \sum_{\al} \beta_\al \mathcal{O}_\al(s)
+\end{equation}
+
+La solution peut finalement se mettre sous la forme 
+
+\begin{equation}
+   P_m(s) = \frac{1}{\mathcal{Z}} e^{-\mathcal{H}(s)}
+\end{equation}
+
+où $\mathcal{H}$ est l'Hamiltonien du système :
+
+\begin{equation}
+   \mathcal{H} = \sum_\al \beta_\al\mathcal{O}_\al(s)
+\end{equation}
+
+et $\mathcal{Z}$ est la fonction de partition permettant la normalisation de la
+distribution $P_m$ :
+
+\begin{equation}
+   \mathcal{Z}=\sum_{\{s\}} \exp[- \mathcal{H}(s)].
+\end{equation}
+
+%in the set of TFBSs for a transcription factor, given the constraints that the
+%probability distribution $P$ retrieves the one- and two-point correlations
+%observed in a set of bound DNA sequences. We denote by $\mathcal{A}$ the
+%alphabet of possible nucleotides, $\mathcal{A}= \{A,C,G,T\}$ and by $s_i$ the
+%nucleotide at position i in the sequence $s$ so that $s=s_1\cdots s_L$. With
+%these notations,  the entropy with the considered constraints  translates into
+%the  the following functional:
+%
+%
+%Modèle le moins biaisé prenant en compte les données observées.  Nous suivons
+%la méthodologie de \cite{Mora2011p3888,Jaynes1957p3771}.
+
+\subsubsection{Le modèle PWM}\label{subsub:PWM}
+
+\subsubsection{Le modèle de corrélation de paires}\label{subsub:pairwise}
+
+Fixation de jauge.
+
+\subsection{Modèles de mélange}\label{subsec-modeles-melange}
+
+%\includepdf[pages=-]{articles/maxent-arxiv.pdf}
+
+\section{Description des données biologiques}\label{sec-descr-donnees-maxent}
+
+\subsection{Les données ChIP}
+
+Les données que nous utilisons proviennent d'expériences \chipchip réalisées
+chez la mouche (\dromel) et d'expériences \chipseq réalisées chez la souris
+(\musmus). Ces données ont été récupérées à partir de la littérature
+\cite{Zinzen2009p760,Chen2008p3738} et à partir des données du projet ENCODE
+\cite{ENCODEProjectConsortium2011p3726} accessibles à partir du site internet
+de UCSC
+\footnote{\url{http://hgdownload.cse.ucsc.edu/goldenPath/mm9/encodeDCC/wgEncodeCaltechTfbs/}}, 
+pour un total de $27$ \TFs. Parmi eux, il y a $5$ \TFs impliqués dans le
+développement de la mouche : Bap, Bin, Mef2, Tin, Twi, $11$ \TFs régulant les
+cellules souches chez les mammifères: c-Myc, E2f1, Esrrb, Klf4, Nanog, n-Myc,
+Oct4, Sox2, Stat3, Tcfcp2l1, Zfx, et $11$ facteurs impliqués dans la myogenèse
+chez les mammifères : Cebpb, E2f4, Fosl1, Max, MyoD, Myog, Nrsf, Smad1, Srf,
+Tcf3, Usf1. Au total, il y a entre $678$ et $38292$ pics de \chip, avec une
+taille moyenne de $280$bp.\\  
+
+Les séquences d'ADN peuvent contenir un certain nombre de séquences \og polluantes
+\fg peu informatives issues de rétrotransposons ou de duplication excessives de
+dinucléotides. Ces séquences répétées, ou {\em repeats}, sont en grand nombre
+et peuvent donc biaiser la statistique lors de la recherche de sites de
+fixation. Pour éviter ce biais, ces séquences ont été masquées à l'aide du
+logiciel RepeatMasker~\cite{Smit2010}.
+
+\subsection{Statistique \og background \fg des séquences}
+
+Présence de corrélations.
+
+
+\section{Présentation de l'algorithme}\label{sec-pres-algo}
+
+\bfig
+\includegraphics[width=\textwidth]{figures/maxent/workflow.pdf}
+\caption[Description graphique de l'algorithme.]{
+   Workflow.
+} 
+\label{fig-workflow} 
+\efig
+
+Descente de gradient.
+
+\section{Performance des modèles}\label{sec-perf-mod}
+
+\section{Analyse des corrélations}
+
+\subsection{Quantification par l'\ID}
+
+\subsection{Description par des patterns de Hopfield}
+
+\section{Comparaison avec des données \invitro}
+
+\newpage
+\subsection{Conclusion de la section \thesection}
+

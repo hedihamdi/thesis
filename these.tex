@@ -3,6 +3,8 @@
 % to be removed for final version
 \ThesisDraft
 
+\let\oldleftmark=\leftmark
+\let\oldrightmark=\rightmark
 
 \newcommand{\FaitMinitocs}{1} \newcommand{\CadresOvales}{1}
 \newcommand{\FaitNomenclature}{1}
@@ -12,7 +14,7 @@
 \newcommand{\IncludePartOne}{1} 	\newcommand{\IncludePartTwo}{1}
 \newcommand{\IncludePartThree}{1} \newcommand{\IncludePartFour}{1}
 
-\newcommand{\IncludeAnnexes}{1} \newcommand{\IncludeAbstract}{1}
+\newcommand{\IncludeAnnexes}{0} \newcommand{\IncludeAbstract}{1}
 
 \input{mep/mep_avant}
 
@@ -41,83 +43,57 @@
 % directement \pagenumbering{arabic}.
 \mainmatter
 
-\include{packaging/Introduction_Generale}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\include{packaging/Avant_Propos}
 %\part{Première partie}
-
-%\ifthenelse{\IncludePartOne > 0}{
-
-\chapter{\ChUnTitre}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{\ChIntro}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
 \newpage
+\input{chapters/Chapter-intro}
+\newpage 
 
-\input{chapters/Chapter1}
-
-%}{\stepcounter{chapter}}
+%\Article{
+%   %\includepdf[pages=-]{annexes/maxent-PNAS}
+%}
+%\let\leftmark=\oldleftmark
+%\let\rightmark=\oldrightmark
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\part{Obtention expérimentale d'un \bec sur une puce à atomes
-%supraconductrice}
-
-%\ifthenelse{\IncludePartTwo > 0}{
-
-\chapter{\ChDeuxTitre} \ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
-
+\chapter{\ChMaxent} \ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
 \newpage
-
-\input{chapters/Chapter2}
-
-%}{\stepcounter{chapter}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\ifthenelse{\IncludePartThree > 0}{
-
-\chapter{\ChTroisTitre}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
-
+\input{chapters/Chapter-maxent}
 \newpage
-
-\input{chapters/Chapter3}
-
-%}{\stepcounter{chapter}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\ifthenelse{\IncludePartFour > 0}{
-
-\chapter{\ChQuatreTitre}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
-
+\chapter{\ChImogene} \ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
 \newpage
-
-\input{chapters/Chapter4}
-
-%}{}
-
-\chapter{\ChTestTitre}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
-
+\input{chapters/Chapter-imogene}
 \newpage
-
-\input{chapters/ChapterTest}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{\ChTrichomes}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+\newpage
+\input{chapters/Chapter-trichomes}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{\ChMuscle}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+\newpage
+\input{chapters/Chapter-muscle}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{\ChTest}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+\newpage
+\input{chapters/Chapter-test}
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{packaging/Conclusion_Generale}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \ifthenelse{\IncludeAnnexes > 0}{ \include{annexes/annexes} }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\EmptyNewPage \appendix \renewcommand{\leftmark}{Bibliographie}
-\renewcommand{\rightmark}{Bibliographie} \bibliographystyle{biblio/paolostyle}
+\EmptyNewPage 
+\appendix 
+\renewcommand{\leftmark}{Bibliographie}
+\renewcommand{\rightmark}{Bibliographie} 
+\bibliographystyle{biblio/paolostyle}
 \BeginBibWith{\vskip7mm\noindent 
    Dans la version pdf, les numéros de page sont
    des liens qui renvoient à l'occurence de la citation dans le texte.
