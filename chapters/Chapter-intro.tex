@@ -2,42 +2,85 @@
 aller rapidement sur nouvelles techniques.
 statistiques du genome
 
-\noindent\textbf{\LARGE\sffamily\scshape Différentes cellules expriment
-différent gènes}
-\section{Différentes cellules expriment différent gènes}
-\medskip
+
+\section{La différenciation cellulaire}
+
+\subsection{Qu'est-ce que le phénotype d'une cellule?}
+
+\subsection{Les cellules se spécialisent au cours du développement}
+
+\bfig
+\includegraphics[width=0.5\textwidth]{figures/furusawa-epigenetic-landscape.pdf}
+\captionbf{Le paysage de la différenciation cellulaire}{
+   Figure tirée de \cite{Furusawa2012p3898}.
+   \textbf{A.} Paysage épigénétique tel qu'imaginé par Waddington
+   \cite{waddington1957strategy} en résonance avec la notion de paysage
+   énergétique en physique. Le développement cellulaire est représenté
+   par une bille dévalant un paysage composé de différentes vallées séparées
+   par des barrières montagneuses, représentant les différents types
+   cellulaires et leur robustesse face aux fluctuations.  
+   \textbf{B.} Représentation dynamique de l'évolution des états cellulaires.
+   Le phénotype est ici caractérisé par l'expression de
+   trois protéines A, B et C, dont l'évolution dans le temps peut être
+   représentée par une trajectoire dans un espace tridimensionnel.
+   Les états souche et différenciés sont caractérisés par des bassins
+   d'attraction correspondant à différents types cellulaires.
+} 
+\label{fig-furusawa-epigenetic-landscape}
+\efig
+
+\subsection{Les cellules sont reprogrammables}
+Fibroblastes, IPS : seulement un ou quelques facteurs suffisent à changer le
+phénotype d'une cellule.
 
 
-\begin{malistebullet}{15}
-\bs\item{\textbf{\sffamily{Les cellules se spécialisent au cours du
-   développement}}}\\
-   Waddington, destin cellulaire. 
-\bs\item{\textbf{\sffamily{Les cellules sont reprogrammables}}}\\
-   Fibroblastes, IPS : seulement un ou quelques facteurs suffisent à changer le
-   phénotype d'une cellule.
-\end{malistebullet}
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/siggia-fate.pdf}
+\captionbf{Vision géométrique des transitions entre types cellulaire}{
+   Figure tirée de \cite{Corson2012p3973} schématisant le processus de
+   différenciation des cellules de la vulve de \celegans.
+   \textbf{A.} La cellule est dans un état précurseur représenté par une
+   bille au fond d'une vallée.
+   \textbf{B.} La cellule est dans état dit \textit{compétent} où elle peut basculer
+   vers différents destins cellulaires.
+   \textbf{C.} Un signal externe représenté par une flèche rouge modifie le
+   paysage de manière à favoriser l'un des états finaux possibles.
+} 
+\efig
+
+
+\bfig
+\includegraphics[width=\textwidth]{figures/graf-cells-lineages.pdf}
+\captionbf{Différents exemples de reprogrammation cellulaire}{
+   Figure tirée de \cite{Graf2009p2592}. Exemples d'expériences de
+   surexpression ou d'ablation de \fts qui aboutissent à des changements de
+   destins cellulaires.
+} 
+\efig
 
 $\rightarrow$ comment interpréter ces résultats?
 
-\vskip7mm
-\noindent\textbf{\LARGE\sffamily\scshape Les réseaux de régulation
-génétique }
-\medskip
+\section{Les réseaux de régulation génétique}
 
-\begin{malistebullet}{15}
-\bs\item{\textbf{\sffamily{Bref historique}}}\\
-   Monod, Jacob. Promoteurs. 
-\bs\item{\textbf{\sffamily{Divers modes de régulation}}}\\
-   Enhancers, épigénétique, post-transcriptionnelle, etc.
-\end{malistebullet}
+\subsection{Vision cybernétique de la cellule}
+Monod, Jacob. Promoteurs. 
+\subsection{Divers modes de régulation}
+Enhancers, épigénétique, post-transcriptionnelle, etc.
 
 $\rightarrow$ quels outils pour exhiber cette circuiterie?
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vskip7mm
-\noindent\textbf{\LARGE\sffamily\scshape Décrire les interactions au seins des
-réseaux.}
-\medskip
+
+\bfig
+\includegraphics[width=\textwidth]{figures/graf-differentiation-landscape.pdf}
+\captionbf{Les antagonismes entre \tfs sculptent le paysage des destins
+cellulaires}{
+   Figure tirée de \cite{Graf2009p2592}. Vision géométrique de la
+   différenciation cellulaire inspirée de Waddington (voir
+   fig.\ref{fig-furusawa-epigenetic-landscape}).
+} 
+\efig
+
+\section{Décrire les interactions au seins des réseaux.}
 
 \begin{malistebullet}{15}
 \item Régulation transcriptionnelle. Facteurs de transcription. Diffusion, fixation. \\
@@ -49,15 +92,95 @@ réseaux.}
 \end{malistebullet}
 
 
+\bfig
+\includegraphics[width=.8\textwidth]{figures/wasserman-transcriptional-regulation.pdf}
+\captionbf{Les différentes composantes de la régulation transcriptionnelle}{
+   Figure tirée de \cite{Wasserman2004p624}. Les \TFs se fixent à des sites
+   spécifiques de longueur $\sim10$bp qui peuvent être proximaux (promoteur,
+   premiers introns) ou distaux (plus de $100$kb) d'un \TSS. Différents \TFs
+   peuvent s'assembler sur des régions d'ADN de taille typique $\sim 1000$bp
+   appelées \CRMs afin de conduire à une régulation spécifique, par simple effet
+   de communauté par exemple lorsque la fixation de tous les \tfs est requise pour
+   que la régulation opère. Les interactions entres les \tfs et différents
+   cofacteurs stabilisent la machinerie d'initiation de transcription pour
+   permettre l'expression génétique. La régulation distale est quant à elle
+   fortement dépendante de la structure tridimensionnelle de la chromatine.
+   tridimensionnelle.
+} 
+\efig
+
+\subsection{Le modèle PWM}
+Le modèle PWM est le modèle le
+plus simple décrivant l'énergie de fixation entre un \tf et un site de
+fixation sur l'ADN. Ce modèle est basé sur l'hypothèse que l'énergie
+de fixation à un site est la somme des énergies de fixation à chaque
+nucléotide. Si la concentration du \tf est faible, ce modèle se réduit à un
+modèle biophysique.
+
+\bfig
+\includegraphics[width=.7\textwidth]{figures/wasserman-PWM.pdf}
+\captionbf{Construction et utilisation du modèle PWM}{
+   Figure tirée de \cite{Wasserman2004p624}. (a) Supposons connus un certain nombre
+   de sites de fixation d'un \tf (dans ce cas MEF2).(b) Séquence consensus
+   correspondante utilisant les symboles IUPAC. (c) Une matrice de fréquence
+   est construite, indiquant pour chaque nucléotide sa multiplicité à une
+   position donnée dans le site. (d) La PWM est simplement construite en
+   prenant le logarithme relatif des fréquences PWMs par rapport aux fréquences
+   \textit{background} des nucléotides. (e) Le score (ou énergie) d'une séquence d'ADN
+   donnée est calculé en additionnant les poids PWMs correspondant. (f) La PWM
+   peut être représentée sous forme de logo \cite{Giocomo2011p3442}. Dans cette
+   représentation, la hauteur d'une colonne représente le contenu en
+   information ou information relative moyenne d'une position, et la taille des
+   bases reflète leur fréquence observée.
+   
+} 
+\efig
+
+
+\bfig
+\includegraphics[width=.6\textwidth]{figures/hardison-enhancer-states.pdf}
+\captionbf{Les états épigénétiques des CRMs}{
+   Figure tirée de \cite{Hartwell1999p560}.
+} 
+\efig
+
+\bfig
+\includegraphics[width=\textwidth]{figures/hardison-CRM-prediction.pdf}
+\captionbf{Approches pour la prédiction des CRMs}{
+   Figure tirée de \cite{Hartwell1999p560}.
+} 
+\efig
+
+\bfig
+\includegraphics[width=\textwidth]{figures/hardison-CRM-test.pdf}
+\captionbf{Méthodes de validation des CRMs}{
+   Figure tirée de \cite{Hartwell1999p560}.
+} 
+\efig
+
+
+\bfig
+\includegraphics[width=.4\textwidth]{figures/furey-chipseq.pdf}
+\captionbf{Étapes d'une expérience de \chipseq}{
+   Figure tirée de \cite{Furey2012p3920}.
+} 
+\efig
+
+\bfig
+\includegraphics[width=.8\textwidth]{figures/furlong-eve-enhancers-to-stripes.pdf}
+\captionbf{Différents CRMs conduisent à différents patterns d'expression}{
+   Figure tirée de \cite{Liu2009p556}.
+} 
+\efig
+
+\bfig
+\includegraphics[width=\textwidth]{figures/furlong-network-evolution.pdf}
+\captionbf{}{
+   Figure tirée de \cite{Liu2009p556}.
+} 
+\efig
+
+
 Visualisation sur UCSC.
 
-
-%\newpage \noindent\textbf{\sffamily\scshape Quelques remarques sur la version
-%pdf du manuscrit}
-
-Voici quelques remarques sur la version pdf de ce manuscrit, qui peuvent rendre
-la lecture plus aisée. Dans la table des matières, la liste des figures et la
-liste des annexes, les titres sont des liens hypertexte qui pointent vers
-l'item décrit. Dans la liste des notations utilisées et la bibliographie, ce
-sont les numéros de page qui sont des liens hypertexte.
 
