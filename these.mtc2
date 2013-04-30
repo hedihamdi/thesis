@@ -1,9 +1,41 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.1}La diff\'erenciation cellulaire}{\reset@font\mtcSfont 4}{section.2.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.1}Le ph\'enotype cellulaire}{\reset@font\mtcSfont 4}{section.2.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.1}Qu'est-ce que le ph\'enotype d'une cellule?}{\reset@font\mtcSSfont 4}{subsection.2.1.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.2}Les cellules se sp\'ecialisent au cours du d\'eveloppement}{\reset@font\mtcSSfont 4}{subsection.2.1.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.3}Les cellules sont reprogrammables}{\reset@font\mtcSSfont 4}{subsection.2.1.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.2}Les r\'eseaux de r\'egulation g\'en\'etique}{\reset@font\mtcSfont 5}{section.2.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.1}Vision cybern\'etique de la cellule}{\reset@font\mtcSSfont 5}{subsection.2.2.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.2}Divers modes de r\'egulation}{\reset@font\mtcSSfont 5}{subsection.2.2.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.3}D\'ecrire les interactions au seins des r\'eseaux.}{\reset@font\mtcSfont 6}{section.2.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.3.1}Le mod\`ele PWM}{\reset@font\mtcSSfont 6}{subsection.2.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.2}La diff\'erenciation cellulaire}{\reset@font\mtcSSfont 5}{subsection.2.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.3}La reprogrammation cellulaire}{\reset@font\mtcSSfont 6}{subsection.2.1.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.4}La cellule dans l'organisme : une sp\'ecification spatio-temporelle}{\reset@font\mtcSSfont 6}{subsection.2.1.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.2}Les r\'eseaux de r\'egulation g\'en\'etique}{\reset@font\mtcSfont 7}{section.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.1}Vision cybern\'etique de la cellule}{\reset@font\mtcSSfont 7}{subsection.2.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.2}Divers modes de r\'egulation}{\reset@font\mtcSSfont 7}{subsection.2.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}R\'egulation g\'en\'etique}{\reset@font\mtcSSSfont 7}{subsubsection.2.2.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}R\'egulation \'epig\'en\'etique}{\reset@font\mtcSSSfont 7}{subsubsection.2.2.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}R\'egulation post-transcriptionnelle}{\reset@font\mtcSSSfont 7}{subsubsection.2.2.2.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}R\'egulation post-traductionelle}{\reset@font\mtcSSSfont 7}{subsubsection.2.2.2.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.3}C\^ablage du r\'eseau et fonction}{\reset@font\mtcSSfont 8}{subsection.2.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.4}\'Evolution des r\'eseaux g\'en\'etiques}{\reset@font\mtcSSfont 9}{subsection.2.2.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.3}Mod\`eles math\'ematiques des interactions prot\'eine-ADN}{\reset@font\mtcSfont 10}{section.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.3.1}Mod\`ele biophysique}{\reset@font\mtcSSfont 10}{subsection.2.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.3.2}Mod\`ele thermodynamique}{\reset@font\mtcSSfont 10}{subsection.2.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.3.3}Mod\`ele PWM}{\reset@font\mtcSSfont 10}{subsection.2.3.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.4}Mesures exp\'erimentales des interactions prot\'eine-ADN}{\reset@font\mtcSfont 12}{section.2.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.1}Approches \textit {in vitro}\xspace : PBM, SELEX, HT-SELEX}{\reset@font\mtcSSfont 12}{subsection.2.4.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}PBM}{\reset@font\mtcSSSfont 12}{subsubsection.2.4.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}SELEX}{\reset@font\mtcSSSfont 12}{subsubsection.2.4.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}HT-SELEX}{\reset@font\mtcSSSfont 12}{subsubsection.2.4.1.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.2}Approches \textit {in vivo}\xspace : ChIP-on-chip\xspace , ChIP-seq\xspace , DNAse}{\reset@font\mtcSSfont 12}{subsection.2.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}ChIP-on-chip\xspace }{\reset@font\mtcSSSfont 12}{subsubsection.2.4.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}ChIP-seq\xspace }{\reset@font\mtcSSSfont 12}{subsubsection.2.4.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}DNAse}{\reset@font\mtcSSSfont 13}{subsubsection.2.4.2.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.5}Les modules de cis-r\'egulation}{\reset@font\mtcSfont 13}{section.2.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.1}Modules et fonctions logiques}{\reset@font\mtcSSfont 13}{subsection.2.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.2}Encodage de patterns spatiaux}{\reset@font\mtcSSfont 13}{subsection.2.5.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.3}Diff\'erents \'etats des CRMs}{\reset@font\mtcSSfont 15}{subsection.2.5.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.4}Pr\'ediction des CRMs}{\reset@font\mtcSSfont 16}{subsection.2.5.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.5}Grammaire des enhancers : enhanceosome vs billboard}{\reset@font\mtcSSfont 17}{subsection.2.5.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.6}\'Evolution des enhancers}{\reset@font\mtcSSfont 18}{subsection.2.5.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.7}Validation exp\'erimentale}{\reset@font\mtcSSfont 20}{subsection.2.5.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.6}Banques de donn\'ees}{\reset@font\mtcSfont 20}{section.2.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.1}S\'equences g\'enomiques et alignements}{\reset@font\mtcSSfont 20}{subsection.2.6.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.2}Annotations (TSSs, repeats\ldots )}{\reset@font\mtcSSfont 20}{subsection.2.6.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.3}Jaspar et Transfac}{\reset@font\mtcSSfont 20}{subsection.2.6.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.4}Visualisation sur UCSC}{\reset@font\mtcSSfont 20}{subsection.2.6.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.5}Le projet ENCODE}{\reset@font\mtcSSfont 20}{subsection.2.6.5}}

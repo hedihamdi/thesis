@@ -2,12 +2,12 @@
 aller rapidement sur nouvelles techniques.
 statistiques du genome
 
-
-\section{La différenciation cellulaire}
+\section{Le phénotype cellulaire}
 
 \subsection{Qu'est-ce que le phénotype d'une cellule?}
 
-\subsection{Les cellules se spécialisent au cours du développement}
+\newpage
+\subsection{La différenciation cellulaire}
 
 \bfig
 \includegraphics[width=0.5\textwidth]{figures/furusawa-epigenetic-landscape.pdf}
@@ -29,25 +29,10 @@ statistiques du genome
 \label{fig-furusawa-epigenetic-landscape}
 \efig
 
-\subsection{Les cellules sont reprogrammables}
+\newpage
+\subsection{La reprogrammation cellulaire}
 Fibroblastes, IPS : seulement un ou quelques facteurs suffisent à changer le
 phénotype d'une cellule.
-
-
-\bfig
-\includegraphics[width=0.8\textwidth]{figures/siggia-fate.pdf}
-\captionbf{Vision géométrique des transitions entre types cellulaire}{
-   Figure tirée de \cite{Corson2012p3973} schématisant le processus de
-   différenciation des cellules de la vulve de \celegans.
-   \textbf{A.} La cellule est dans un état précurseur représenté par une
-   bille au fond d'une vallée.
-   \textbf{B.} La cellule est dans état dit \textit{compétent} où elle peut basculer
-   vers différents destins cellulaires.
-   \textbf{C.} Un signal externe représenté par une flèche rouge modifie le
-   paysage de manière à favoriser l'un des états finaux possibles.
-} 
-\efig
-
 
 \bfig
 \includegraphics[width=\textwidth]{figures/graf-cells-lineages.pdf}
@@ -58,39 +43,38 @@ phénotype d'une cellule.
 } 
 \efig
 
-$\rightarrow$ comment interpréter ces résultats?
+
+\subsection{La cellule dans l'organisme : une spécification spatio-temporelle}
+
+\bfig
+\includegraphics[width=.4\textwidth]{figures/embrys-myog.jpg}
+\captionbf{}{
+} 
+\efig
+
 
 \section{Les réseaux de régulation génétique}
 
 \subsection{Vision cybernétique de la cellule}
-Monod, Jacob. Promoteurs. 
+
+%\bfig
+%\includegraphics[width=0.8\textwidth]{figures/siggia-fate.pdf}
+%\captionbf{Vision géométrique des transitions entre types cellulaire}{
+%   Figure tirée de \cite{Corson2012p3973} schématisant le processus de
+%   différenciation des cellules de la vulve de \celegans.
+%   \textbf{A.} La cellule est dans un état précurseur représenté par une
+%   bille au fond d'une vallée.
+%   \textbf{B.} La cellule est dans état dit \textit{compétent} où elle peut basculer
+%   vers différents destins cellulaires.
+%   \textbf{C.} Un signal externe représenté par une flèche rouge modifie le
+%   paysage de manière à favoriser l'un des états finaux possibles.
+%} 
+%\efig
+%
+
 \subsection{Divers modes de régulation}
-Enhancers, épigénétique, post-transcriptionnelle, etc.
 
-$\rightarrow$ quels outils pour exhiber cette circuiterie?
-
-
-\bfig
-\includegraphics[width=\textwidth]{figures/graf-differentiation-landscape.pdf}
-\captionbf{Les antagonismes entre \tfs sculptent le paysage des destins
-cellulaires}{
-   Figure tirée de \cite{Graf2009p2592}. Vision géométrique de la
-   différenciation cellulaire inspirée de Waddington (voir
-   fig.\ref{fig-furusawa-epigenetic-landscape}).
-} 
-\efig
-
-\section{Décrire les interactions au seins des réseaux.}
-
-\begin{malistebullet}{15}
-\item Régulation transcriptionnelle. Facteurs de transcription. Diffusion, fixation. \\
-\item   Modèles mathématiques (PWM, biophysiques). \\
-\item   Coopérativité, fonctions logiques, coefficients de Hill (Uri Alon).\\
-\item   Données biologiques grande échelle : \chipseq etc\ldots Bioinformatique.\\
-\item   ENCODE, Taipale, etc.\\
-\item   Evolution de la régulation Odom, Sinha.\\
-\end{malistebullet}
-
+\subsubsection{Régulation génétique}
 
 \bfig
 \includegraphics[width=.8\textwidth]{figures/wasserman-transcriptional-regulation.pdf}
@@ -109,7 +93,40 @@ cellulaires}{
 } 
 \efig
 
-\subsection{Le modèle PWM}
+\subsubsection{Régulation épigénétique} 
+\subsubsection{Régulation post-transcriptionnelle}
+\subsubsection{Régulation post-traductionelle}
+
+
+\newpage
+\subsection{Câblage du réseau et fonction}
+
+\bfig
+\includegraphics[width=\textwidth]{figures/lee-network-motifs-yeast.pdf}
+\captionbf{}{
+   figure tirée de \cite{Lee2002p537}.
+} 
+\efig
+
+\newpage
+\subsection{Évolution des réseaux génétiques}
+
+\bfig
+\includegraphics[width=\textwidth]{figures/furlong-network-evolution.pdf}
+\captionbf{}{
+   Figure tirée de \cite{Liu2009p556}.
+} 
+\efig
+
+
+
+
+\newpage
+\section{Modèles mathématiques des interactions protéine-ADN}
+
+\subsection{Modèle biophysique}
+\subsection{Modèle thermodynamique}
+\subsection{Modèle PWM}
 Le modèle PWM est le modèle le
 plus simple décrivant l'énergie de fixation entre un \tf et un site de
 fixation sur l'ADN. Ce modèle est basé sur l'hypothèse que l'énergie
@@ -132,17 +149,73 @@ modèle biophysique.
    représentation, la hauteur d'une colonne représente le contenu en
    information ou information relative moyenne d'une position, et la taille des
    bases reflète leur fréquence observée.
-   
+
+} 
+\efig
+
+\newpage
+\section{Mesures expérimentales des interactions protéine-ADN}
+\subsection{Approches \invitro : PBM, SELEX, HT-SELEX}
+\subsubsection{PBM}
+\subsubsection{SELEX}
+\subsubsection{HT-SELEX}
+
+\subsection{Approches \invivo : \chipchip, \chipseq, DNAse}
+\subsubsection{\chipchip}
+\subsubsection{\chipseq}
+
+\bfig
+\includegraphics[width=.4\textwidth]{figures/furey-chipseq.pdf}
+\captionbf{Étapes d'une expérience de \chipseq}{
+   Figure tirée de \cite{Furey2012p3920}.
+} 
+\efig
+\subsubsection{DNAse}
+
+
+\section{Les modules de cis-régulation}
+%
+%\begin{malistebullet}{15}
+%\item Régulation transcriptionnelle. Facteurs de transcription. Diffusion, fixation. \\
+%\item   Modèles mathématiques (PWM, biophysiques). \\
+%\item   Coopérativité, fonctions logiques, coefficients de Hill (Uri Alon).\\
+%\item   Données biologiques grande échelle : \chipseq etc\ldots Bioinformatique.\\
+%\item   ENCODE, Taipale, etc.\\
+%\item   Evolution de la régulation Odom, Sinha.\\
+%\end{malistebullet}
+
+\subsection{Modules et fonctions logiques}
+
+\subsection{Encodage de patterns spatiaux}
+
+\bfig
+\includegraphics[width=.8\textwidth]{figures/furlong-eve-enhancers-to-stripes.pdf}
+\captionbf{Différents CRMs conduisent à différents patterns d'expression}{
+   Figure tirée de \cite{Liu2009p556}.
 } 
 \efig
 
 
+\newpage
 \bfig
-\includegraphics[width=.6\textwidth]{figures/hardison-enhancer-states.pdf}
+\includegraphics[width=\textwidth]{figures/stathopoulos-CRMs-sites-twist-dorsal-snail.pdf}
+\captionbf{}{
+   Figure tirée de \cite{Stathopoulos2005p4051}.
+} 
+\efig
+
+
+\newpage
+\subsection{Différents états des CRMs}
+\bfig
+\includegraphics[width=.8\textwidth]{figures/hardison-enhancer-states.pdf}
 \captionbf{Les états épigénétiques des CRMs}{
    Figure tirée de \cite{Hartwell1999p560}.
 } 
 \efig
+
+\newpage
+\subsection{Prédiction des CRMs}
 
 \bfig
 \includegraphics[width=\textwidth]{figures/hardison-CRM-prediction.pdf}
@@ -150,6 +223,40 @@ modèle biophysique.
    Figure tirée de \cite{Hartwell1999p560}.
 } 
 \efig
+
+\newpage
+\subsection{Grammaire des enhancers : enhanceosome vs billboard}
+
+\bfig
+\includegraphics[width=\textwidth]{figures/arnosti-enhanceosome.pdf}
+\captionbf{}{
+   figure tirée de \cite{Arnosti2005p3786}.
+} 
+\efig
+
+\newpage
+\subsection{Évolution des enhancers}
+
+\bfig
+\includegraphics[width=\textwidth]{figures/liberman-crm-conservation-flexibility.pdf}
+\captionbf{}{
+   figure tirée de \cite{liberman2009p3886}.
+} 
+\efig
+
+\newpage
+\bfig
+\includegraphics[width=\textwidth]{figures/wilson-CRMs-evolution.pdf}
+\captionbf{}{
+   figure tirée de \cite{Wittkopp2011p3240}.
+} 
+\efig
+
+
+
+\newpage
+\subsection{Validation expérimentale}
+
 
 \bfig
 \includegraphics[width=\textwidth]{figures/hardison-CRM-test.pdf}
@@ -159,28 +266,23 @@ modèle biophysique.
 \efig
 
 
-\bfig
-\includegraphics[width=.4\textwidth]{figures/furey-chipseq.pdf}
-\captionbf{Étapes d'une expérience de \chipseq}{
-   Figure tirée de \cite{Furey2012p3920}.
-} 
-\efig
+%\bfig
+%\includegraphics[width=\textwidth]{figures/graf-differentiation-landscape.pdf}
+%\captionbf{Les antagonismes entre \tfs sculptent le paysage des destins
+%cellulaires}{
+%   Figure tirée de \cite{Graf2009p2592}. Vision géométrique de la
+%   différenciation cellulaire inspirée de Waddington (voir
+%   fig.\ref{fig-furusawa-epigenetic-landscape}).
+%} 
+%\efig
+%
 
-\bfig
-\includegraphics[width=.8\textwidth]{figures/furlong-eve-enhancers-to-stripes.pdf}
-\captionbf{Différents CRMs conduisent à différents patterns d'expression}{
-   Figure tirée de \cite{Liu2009p556}.
-} 
-\efig
+\section{Banques de données}
 
-\bfig
-\includegraphics[width=\textwidth]{figures/furlong-network-evolution.pdf}
-\captionbf{}{
-   Figure tirée de \cite{Liu2009p556}.
-} 
-\efig
-
-
-Visualisation sur UCSC.
+\subsection{Séquences génomiques et alignements}
+\subsection{Annotations (TSSs, repeats\ldots)}
+\subsection{Jaspar et Transfac}
+\subsection{Visualisation sur UCSC}
+\subsection{Le projet ENCODE}
 
 

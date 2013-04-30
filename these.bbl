@@ -12,11 +12,6 @@
   Kacser.}, {\em The strategy of the genes. A discussion of some aspects of
   theoretical biology. With an appendix by H. Kacser.\/} pages ix+--262 (1957).
 
-\bibitem{Corson2012p3973}
-{\sc F.~Corson} et {\sc E.~D. Siggia}, \enquote{Geometry, epistasis, and
-  developmental patterning}, {\em Proc Natl Acad Sci USA\/} {\bf 109},
-  n\textsuperscript{o}\kern.2em\relax~15, 5568--75 (Apr 2012).
-
 \bibitem{Graf2009p2592}
 {\sc T.~Graf} et {\sc T.~Enver}, \enquote{Forcing cells to change lineages},
   {\em Nature\/} {\bf 462}, n\textsuperscript{o}\kern.2em\relax 7273, 587--94
@@ -27,21 +22,12 @@
   the identification of regulatory elements}, {\em Nature Reviews Genetics\/}
   {\bf 5}, n\textsuperscript{o}\kern.2em\relax~4, 276--87 (Apr 2004).
 
-\bibitem{Giocomo2011p3442}
-{\sc L.~M. Giocomo}, {\sc M.-B. Moser} et {\sc E.~I. Moser},
-  \enquote{Computational models of grid cells}, {\em Neuron\/} {\bf 71},
-  n\textsuperscript{o}\kern.2em\relax~4, 589--603 (Aug 2011).
-
-\bibitem{Hartwell1999p560}
-{\sc L.~Hartwell}, {\sc J.~Hopfield}, {\sc S.~Leibler} et {\sc A.~Murray},
-  \enquote{From molecular to modular cell biology}, {\em Nature\/} {\bf 402},
-  n\textsuperscript{o}\kern.2em\relax 6761, 47 (1999).
-
-\bibitem{Furey2012p3920}
-{\sc T.~S. Furey}, \enquote{ChIP-seq and beyond: new and improved methodologies
-  to detect and characterize protein-DNA interactions}, {\em Nature Reviews
-  Genetics\/} {\bf 13}, n\textsuperscript{o}\kern.2em\relax~12, 840--52 (Dec
-  2012).
+\bibitem{Lee2002p537}
+{\sc T.~Lee}, {\sc N.~Rinaldi}, {\sc F.~Robert}, {\sc D.~Odom}, {\sc
+  Z.~Bar-Joseph}, {\sc G.~Gerber}, {\sc N.~Hannett}, {\sc C.~Harbison}, {\sc
+  C.~Thompson} et {\sc I.~Simon}, \enquote{Transcriptional regulatory networks
+  in Saccharomyces cerevisiae}, {\em Science\/} {\bf 298},
+  n\textsuperscript{o}\kern.2em\relax 5594, 799 (2002).
 
 \bibitem{Liu2009p556}
 {\sc Y.-H. Liu}, {\sc J.~S. Jakobsen}, {\sc G.~Valentin}, {\sc I.~Amarantos},
@@ -49,6 +35,45 @@
   of Tinman function reveals Eya and JAK-STAT signaling as essential regulators
   of muscle development}, {\em Developmental Cell\/} {\bf 16},
   n\textsuperscript{o}\kern.2em\relax~2, 280--91 (Feb 2009).
+
+\bibitem{Giocomo2011p3442}
+{\sc L.~M. Giocomo}, {\sc M.-B. Moser} et {\sc E.~I. Moser},
+  \enquote{Computational models of grid cells}, {\em Neuron\/} {\bf 71},
+  n\textsuperscript{o}\kern.2em\relax~4, 589--603 (Aug 2011).
+
+\bibitem{Furey2012p3920}
+{\sc T.~S. Furey}, \enquote{ChIP-seq and beyond: new and improved methodologies
+  to detect and characterize protein-DNA interactions}, {\em Nature Reviews
+  Genetics\/} {\bf 13}, n\textsuperscript{o}\kern.2em\relax~12, 840--52 (Dec
+  2012).
+
+\bibitem{Stathopoulos2005p4051}
+{\sc A.~Stathopoulos} et {\sc M.~Levine}, \enquote{Genomic regulatory networks
+  and animal development}, {\em Dev Cell\/} {\bf 9},
+  n\textsuperscript{o}\kern.2em\relax~4, 449--62 (Oct 2005).
+
+\bibitem{Hartwell1999p560}
+{\sc L.~Hartwell}, {\sc J.~Hopfield}, {\sc S.~Leibler} et {\sc A.~Murray},
+  \enquote{From molecular to modular cell biology}, {\em Nature\/} {\bf 402},
+  n\textsuperscript{o}\kern.2em\relax 6761, 47 (1999).
+
+\bibitem{Arnosti2005p3786}
+{\sc D.~N. Arnosti} et {\sc M.~M. Kulkarni}, \enquote{Transcriptional
+  enhancers: Intelligent enhanceosomes or flexible billboards?}, {\em J Cell
+  Biochem\/} {\bf 94}, n\textsuperscript{o}\kern.2em\relax~5, 890--8 (Apr
+  2005).
+
+\bibitem{liberman2009p3886}
+{\sc L.~M. Liberman} et {\sc A.~Stathopoulos}, \enquote{Design flexibility in
+  cis-regulatory control of gene expression: Synthetic and comparative
+  evidence}, {\em Developmental Biology\/} {\bf 327},
+  n\textsuperscript{o}\kern.2em\relax~2, 578--589 (Mar 2009).
+
+\bibitem{Wittkopp2011p3240}
+{\sc P.~J. Wittkopp} et {\sc G.~Kalay}, \enquote{Cis-regulatory elements:
+  molecular mechanisms and evolutionary processes underlying divergence}, {\em
+  Nature Reviews Genetics\/} {\bf 13}, n\textsuperscript{o}\kern.2em\relax~1,
+  59--69 (Dec 2011).
 
 \bibitem{Jaynes1957p3771}
 {\sc E.~Jaynes}, \enquote{Information theory and statistical mechanics. II},
