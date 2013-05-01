@@ -6,47 +6,44 @@ A level-1 auxiliary file: packaging/Conclusion_Generale.aux
 The style file: biblio/paolostyle.bst
 A level-1 auxiliary file: packaging/abstract.aux
 Database file #1: biblio/papers.bib
-Warning--entry type for "Smit2010" isn't style-file defined
---line 46 of file biblio/papers.bib
-You've used 20 entries,
+You've used 22 entries,
             2272 wiz_defined-function locations,
-            1133 strings with 15280 characters,
-and the built_in function-call counts, 8718 in all, are:
-= -- 465
-> -- 272
-< -- 19
-+ -- 104
-- -- 84
-* -- 793
-:= -- 904
-add.period$ -- 20
-call.type$ -- 20
+            1147 strings with 15848 characters,
+and the built_in function-call counts, 9545 in all, are:
+= -- 501
+> -- 310
+< -- 20
++ -- 118
+- -- 96
+* -- 871
+:= -- 991
+add.period$ -- 22
+call.type$ -- 22
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 987
-empty$ -- 886
-format.name$ -- 100
-if$ -- 1775
+cite$ -- 22
+duplicate$ -- 1081
+empty$ -- 969
+format.name$ -- 114
+if$ -- 1945
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 258
-newline$ -- 64
-num.names$ -- 20
-pop$ -- 349
+int.to.str$ -- 22
+missing$ -- 283
+newline$ -- 70
+num.names$ -- 22
+pop$ -- 382
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 92
+skip$ -- 99
 stack$ -- 0
-substring$ -- 395
-swap$ -- 793
-text.length$ -- 19
+substring$ -- 410
+swap$ -- 873
+text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 55
-width$ -- 22
-write$ -- 181
-(There was 1 warning)
+while$ -- 58
+width$ -- 24
+write$ -- 199

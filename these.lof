@@ -5,12 +5,12 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Le paysage de la diff\'erenciation cellulaire}}{5}{figure.caption.2}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Diff\'erents exemples de reprogrammation cellulaire}}{6}{figure.caption.3}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Les diff\'erentes composantes de la r\'egulation transcriptionnelle}}{7}{figure.caption.5}
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Construction et utilisation du mod\`ele PWM}}{11}{figure.caption.8}
-\contentsline {figure}{\numberline {1.8}{\ignorespaces \'Etapes d'une exp\'erience de ChIP-seq\xspace }}{12}{figure.caption.9}
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Diff\'erents CRMs conduisent \`a diff\'erents patterns d'expression}}{13}{figure.caption.10}
-\contentsline {figure}{\numberline {1.11}{\ignorespaces Les \'etats \'epig\'en\'etiques des CRMs}}{15}{figure.caption.12}
-\contentsline {figure}{\numberline {1.12}{\ignorespaces Approches pour la pr\'ediction des CRMs}}{16}{figure.caption.13}
-\contentsline {figure}{\numberline {1.16}{\ignorespaces M\'ethodes de validation des CRMs}}{20}{figure.caption.17}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Construction et utilisation du mod\`ele PWM}}{10}{figure.caption.8}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces \'Etapes d'une exp\'erience de ChIP-seq\xspace }}{11}{figure.caption.9}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Diff\'erents CRMs conduisent \`a diff\'erents patterns d'expression}}{12}{figure.caption.10}
+\contentsline {figure}{\numberline {1.11}{\ignorespaces Les \'etats \'epig\'en\'etiques des CRMs}}{14}{figure.caption.12}
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Approches pour la pr\'ediction des CRMs}}{15}{figure.caption.13}
+\contentsline {figure}{\numberline {1.16}{\ignorespaces M\'ethodes de validation des CRMs}}{19}{figure.caption.17}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Mod\`eles de fixation des Facteurs de Transcription\xspace \`a l'ADN.}{21}{division.3}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Description graphique de l'algorithme.}}{25}{figure.caption.19}

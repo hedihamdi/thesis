@@ -1,6 +1,19 @@
 \begin{thebibliography}{10}
 \newcommand{\enquote}[1]{``#1''}
 
+\bibitem{Keim2004uq}
+{\sc C.~N. Keim}, {\sc J.~L. Martins}, {\sc F.~Abreu}, {\sc A.~S. Rosado}, {\sc
+  H.~L. de~Barros}, {\sc R.~Borojevic}, {\sc U.~Lins} et {\sc M.~Farina},
+  \enquote{Multicellular life cycle of magnetotactic prokaryotes}, {\em FEMS
+  Microbiol Lett\/} {\bf 240}, n\textsuperscript{o}\kern.2em\relax~2, 203--8
+  (Nov 2004).
+
+\bibitem{EMBL2001}
+{\sc A.~Brazma}, {\sc H.~Parkinson}, {\sc T.~Schlitt} et {\sc M.~Shojatalab},
+  \enquote{A quick introduction to elements of biology - cells, molecules,
+  genes, functional genomics, microarrays},
+  \url{http://www.ebi.ac.uk/microarray/biology_intro.html} (Oct 2001).
+
 \bibitem{Furusawa2012p3898}
 {\sc C.~Furusawa} et {\sc K.~Kaneko}, \enquote{A Dynamical-Systems View of Stem
   Cell Biology}, {\em Science\/} {\bf 338}, n\textsuperscript{o}\kern.2em\relax
@@ -115,6 +128,6 @@
 
 \bibitem{Smit2010}
 {\sc A.~F.~A. Smit}, {\sc R.~Hubley} et {\sc P.~Green}, \enquote{RepeatMasker
-  Open-3.0},  (1996-2010).
+  Open-3.0}, \url{http://www.repeatmasker.org} (1996-2010).
 
 \end{thebibliography}
