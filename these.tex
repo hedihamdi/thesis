@@ -32,9 +32,13 @@
 
 
 \ifthenelse{\FaitNomenclature > 0}{ 
+    \cleardoublepage% or \clearpage
+    \markboth{\nomname}{\nomname}
    \printnomenclature[1.5cm]
    \hypertarget{nomenclaturepage}{} 
 }{}
+
+\input{packaging/nomenclature}
 
 
 % La commande \mainmatter (nouvelle commande LaTeX2e) permet de passer a la
@@ -46,42 +50,41 @@
 \include{packaging/Avant_Propos}
 %\part{Première partie}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{\ChIntro}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+\chapter{\ChIntro}
+\ifthenelse{\FaitMinitocs > 0}{\mtcaddchapter\minitoc}{Minitoc}
 \newpage
 \input{chapters/Chapter-intro}
 \newpage 
 
-%\Article{
-%   %\includepdf[pages=-]{annexes/maxent-PNAS}
-%}
-%\let\leftmark=\oldleftmark
-%\let\rightmark=\oldrightmark
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{\ChMaxent} \ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+\chapter{\ChMaxent} 
+\ifthenelse{\FaitMinitocs > 0}{\mtcaddchapter\minitoc}{Minitoc}
 \newpage
 \input{chapters/Chapter-maxent}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{\ChImogene} \ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+\chapter{\ChImogene} 
+\ifthenelse{\FaitMinitocs > 0}{\mtcaddchapter\minitoc}{Minitoc}
 \newpage
 \input{chapters/Chapter-imogene}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{\ChTrichomes}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+\chapter{\ChTrichomes}
+\ifthenelse{\FaitMinitocs > 0}{\mtcaddchapter\minitoc}{Minitoc}
 \newpage
 \input{chapters/Chapter-trichomes}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{\ChMuscle}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+\chapter{\ChMuscle}
+\ifthenelse{\FaitMinitocs > 0}{\mtcaddchapter\minitoc}{Minitoc}
 \newpage
 \input{chapters/Chapter-muscle}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{\ChTest}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
-\newpage
-\input{chapters/Chapter-test}
-\newpage
+%\chapter{\ChTest}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+%\newpage
+%\input{chapters/Chapter-test}
+%\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{packaging/Conclusion_Generale}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,8 +1,9 @@
 \vskip7mm
 
-\section{Le phénotype cellulaire}
+\section{Le phénotype cellulaire} \label{sec:phenotype}
 
 \subsection{Qu'est-ce que le phénotype d'une cellule?}
+\label{sub:phenotype}
 
 
 Tous les organismes sont constitués de cellules de l'ordre de quelques microns,
@@ -27,17 +28,17 @@ biconcave, dépourvues de noyau et riches en hémoglobine, tandis que les fibres
 musculaires squelettiques sont de forme longue et tubulaire, possèdent
 plusieurs noyaux et expriment actine et myosine. 
 
-Cette diversité semble néanmoins pouvoir se réduire à un certain nombre de cas
-possibles. Aussi, parmi les $\sim6\ 10^{13}$ cellules du corps humain, on peut
-distinguer $\sim 320$ différents types cellulaires~\cite{EMBL2001}. Bien entendu, ce
-nombre dépend du seuil de similarité choisi : deux cellules d'un même type ont
-peu de chance d'exprimer exactement le même nombre de molécules.
-Classiquement, la classification d'un type cellulaire se base sur des
-propriétés morphologiques observables au microscope ou encore sur l'analyse des
-molécules présentes à la surface des cellules. Par ailleurs, différents types
-cellulaires sont associés à différentes fonctions : dans notre exemple
-la fixation et le transport de l'oxygène dans le cas des globules rouges, la
-contraction dans le cas des fibres musculaires. 
+Cette diversité semble néanmoins limitée. Aussi, parmi les $\sim6\ 10^{13}$
+cellules du corps humain, on peut distinguer $\sim 320$ différents types
+cellulaires~\cite{EMBL2001}. Bien entendu, ce nombre dépend du seuil de
+similarité choisi : deux cellules d'un même type ont peu de chance d'exprimer
+exactement le même nombre de molécules.  Classiquement, la classification d'un
+type cellulaire se base sur des propriétés morphologiques observables au
+microscope ou encore sur l'analyse des molécules présentes à la surface des
+cellules. Par ailleurs, différents types cellulaires sont associés
+à différentes fonctions : dans notre exemple la fixation et le transport de
+l'oxygène dans le cas des globules rouges, la contraction dans le cas des
+fibres musculaires. 
 
 Ces différentes propriétés observables caractérisent le \textit{phénotype}
 cellulaire (littéralement \og exhiber un type \fg en grec). Ce phénotype
@@ -63,90 +64,278 @@ génétique qui détermine le contenu en protéines de la cellule.
    Les états souche et différenciés sont caractérisés par des bassins
    d'attraction correspondant à différents types cellulaires.
 } 
-\label{fig-furusawa-epigenetic-landscape}
+\label{fig:furusawa-epigenetic-landscape}
 \efig
 
 L'acquisition d'un phénotype cellulaire particulier au sein d'un organisme est
 le sujet de la biologie du développement. Cette acquisition passe par
 différentes étapes de différenciation cellulaire. Ainsi, au cours du
-développement, les cellules empruntent un chemin unidirectionnel de
-différenciation qui restreint peu à peu le nombre de types cellulaires qu'elles
-peuvent potentiellement acquérir, passant d'un état souche totipotent à des
-états pluripotents successifs avant la différenciation finale. Dans un écrit
-aujourd'hui célèbre datant de 1957, Waddington proposa une représentation de
-ces différentes étapes sous la forme d'un paysage épigéné
+développement d'un organisme, les cellules empruntent un chemin unidirectionnel
+de différenciation qui restreint peu à peu le nombre de types cellulaires
+qu'elles peuvent potentiellement devenir, passant d'un état souche totipotent à
+des états pluripotents successifs avant la différenciation finale. Ainsi, la
+formation des cellules somatiques, qui sont les cellules du corps n'étant ni
+souches ni germinales (cellules donnant naissance aux gamètes ou cellules
+sexuelles), est le résultat d'un processus de différenciation initial au cours
+duquel les cellules souches donnent naissance à trois couches de tissus
+distinctes : l'endoderme (feuillet interne), l'ectoderme (feuillet externe) et
+le mésoderme (feuillet intermédiaire). Des différenciations successives ont
+ensuite lieu au sein de ces couches pour former divers organes tels que le tube
+digestif (endoderme), les muscles ou les os (mésoderme), la peau et le système
+nerveux (ectoderme).
 
+Dans un écrit aujourd'hui célèbre datant de 1957 \cite{waddington1957strategy},
+Waddington proposa une représentation de ces différentes étapes sous la forme
+d'un paysage épigénénétique semblable aux paysages énergétiques dont sont
+coutumiers les physiciens (fig~\ref{fig:furusawa-epigenetic-landscape}A).  Dans
+cette représentation, le processus de différenciation cellulaire est comparé
+à une bille dévalant une pente et dont la trajectoire suit les multiples
+embranchements de vallées escarpées, chacune représentant un état de
+développement différent.  Les vallées sont séparées par des pics dont la
+hauteur reflète la difficulté de passer d'un état à un autre, et les
+destinations finales possibles de la bille correspondent aux différents types
+cellulaires.
 
-
-
-\newpage
-\subsection{La reprogrammation cellulaire}
-Fibroblastes, IPS : seulement un ou quelques facteurs suffisent à changer le
-phénotype d'une cellule.
-
-\bfig
-\includegraphics[width=\textwidth]{figures/graf-cells-lineages.pdf}
-\captionbf{Différents exemples de reprogrammation cellulaire}{
-   Figure tirée de \cite{Graf2009p2592}. Exemples d'expériences de
-   surexpression ou d'ablation de \fts qui aboutissent à des changements de
-   destins cellulaires.
-} 
-\efig
+La notion de trajectoire de différenciation peut être rendue plus parlante en
+adoptant une représentation de système dynamique. Comme nous l'avons vu en
+\ref{sub:phenotype}, la cellule contient de nombreux composants : gènes,
+protéines ou encore métabolites, qui pris dans leur ensemble déterminent à un
+instant donné l'état cellulaire. Il est ainsi possible de représenter l'état
+cellulaire à un temps donné comme un point dans un espace de grande dimension
+dans lequel chaque axe représente l'abondance d'un certain composant
+(fig~\ref{fig:furusawa-epigenetic-landscape}B). De manière habituelle,
+l'expression des protéines (et donc des gènes qui les produisent) domine ces
+composants, et on parle de \og niveau d'expression génétique \fg pour décrire
+leur abondance. Les changements d'expression génétique, au cours desquels
+certains gènes vont être activés et d'autres réprimés, causent un changement de
+l'état cellulaire, ce qui se traduit par une trajectoire dans l'espace d'états.
+Ces changements d'expression restreignent finalement l'état cellulaire à une
+certaine région, définie comme un \og attracteur \fg de la dynamique. Une fois
+au sein d'un attracteur, l'état cellulaire est robuste aux perturbations du
+niveau d'expression génétique des différentes composantes. Les attracteurs
+peuvent alors être vu comme des types cellulaires distincts correspondant aux
+différentes vallées de la représentation de Waddington
+\cite{kaufmann1993origins}.
 
 
 \subsection{La cellule dans l'organisme : une spécification spatio-temporelle}
 
 \bfig
 \includegraphics[width=.4\textwidth]{figures/embrys-myog.jpg}
-\captionbf{}{
+\captionbf{Spécification spatio-temporelle du type cellulaire}{ Hybridization
+    \insitu de \myog, marqueur des cellules musculaires squelettiques
+    différenciées, chez un embryon de souris de $11.5$ jours. Le pattern de
+    spécification des cellules myogéniques est clairement visible au niveau des
+    futures vertèbres.
 } 
+\label{fig:embrys-myog}
 \efig
+
+Un fait remarquable à propos de la différenciation cellulaire est que celle-ci
+opère à un rythme précis et dans un contexte cellulaire bien défini. Aussi, les
+trajectoires dans l'espace d'expression génétique que nous avons présentées
+précédemment sont fonction de l'espace -- la position de la cellule dans
+l'organisme, qui détermine en particulier la concentration des signaux qu'elle
+reçoit -- et du temps -- les étapes de développement se succédant de manière
+irréversible --. Ainsi, la différenciation des cellules observe certains
+\textit{patterns} spatio-temporels bien définis : par exemple, dans le cas de
+la formation des muscles, le marqueur des cellules du muscle squelettique \myog
+est exprimé chez la souris dès $8$ jours embryonnaires au niveau des somites,
+les futures vertèbres de la souris adulte (voir fig~\ref{fig:embrys-myog}).
+
+
+\subsection{La reprogrammation cellulaire} 
+%Fibroblastes, IPS : seulement un ou quelques facteurs suffisent à changer le
+%phénotype d'une cellule.
+
+\bfig
+\includegraphics[width=\textwidth]{figures/graf-cells-lineages.pdf}
+\captionbf{Différents exemples de reprogrammation cellulaire}{
+    Figure tirée de \cite{Graf2009p2592}. Exemples d'expériences de
+    surexpression ou d'ablation de \fts qui aboutissent à des changements de
+types cellulaires.  } \label{fig:graf-cells-lineages} \efig 
+
+Dans les paragraphes précédents, nous avons présenté la vision classique selon
+laquelle des cellules souches totipotentes se différencient en des cellules de
+moins en moins plastiques, jusqu'à atteindre un état différencié stable.
+Néanmoins, depuis plusieurs décénies, différentes expériences ont exhibé la
+plasticité des états différenciés. Par exemple, Blau et al. ont montré en
+1985 que des programmes d'expression génétiques dormants peuvent être exprimés
+de manière dominante dans des cellules différenciées par la fusion de
+différents types cellulaires \cite{Blau:1985vn}. Puis différents travaux ont
+montré qu'il était possible de convertir des lignées de cellules en introdusant
+certaines protéines régulatrices de la transcription, ou \FTs (TFs)
+\cite{davis1987expression,Kulessa:1995ys} (voir fig
+\ref{fig:graf-cells-lineages}).  Parallèlement, des expériences réalisées chez
+plusieurs espèces ont montré que le transfert de noyaux de cellules
+différenciées embryonnaires ou adultes dans un oeuf énucléé peut mener à la
+formation d'un organisme complet, montrant de manière univoque que l'identité
+des cellules différenciées peut être complètement
+renversée~\cite{Gurdon:2008zr}. Enfin, l'avancée la plus récente dans ce
+domaine a été la démonstration que des cellules somatiques différenciées
+peuvent être reprogrammées en cellules souches puripotentes par simple
+introduction d'un cocktail de 4 \tfs~\cite{Takahashi:2006kx} (fig
+\ref{fig:graf-cells-lineages}C).
 
 
 \section{Les réseaux de régulation génétique}
 
+Afin de pouvoir mieux comprendre les mécanismes de différenciation et de
+reprogrammation exposés en~\ref{sec:phenotype}, il convient de se plonger dans
+les mécanismes internes de la cellule qui régissent ses changements d'états.
+
 \subsection{Vision cybernétique de la cellule}
 
-%\bfig
-%\includegraphics[width=0.8\textwidth]{figures/siggia-fate.pdf}
-%\captionbf{Vision géométrique des transitions entre types cellulaire}{
-%   Figure tirée de \cite{Corson2012p3973} schématisant le processus de
-%   différenciation des cellules de la vulve de \celegans.
-%   \textbf{A.} La cellule est dans un état précurseur représenté par une
-%   bille au fond d'une vallée.
-%   \textbf{B.} La cellule est dans état dit \textit{compétent} où elle peut basculer
-%   vers différents destins cellulaires.
-%   \textbf{C.} Un signal externe représenté par une flèche rouge modifie le
-%   paysage de manière à favoriser l'un des états finaux possibles.
-%} 
-%\efig
-%
+\bfig \includegraphics[width=\textwidth]{figures/us-cybernetics.pdf}
+\captionbf{Vision cybernétique du traitement de l'information par la cellule}{
+    Figure tirée du programme ``Genomes to life'' du Département de l'Énergie
+    des États-Unis datant de 2001 \cite{us2001genomes} schématisant un réseau
+    de régulation cellulaire comme un système de traitement entrée/sortie,
+    possédant trois composantes fondamentales : (1) un système de réception et
+    de transduction des signaux d'entrées qui peuvent être intra- ou
+    extra-cellulaires (plusieurs signaux pouvant affecter un même gène cible),
+    (2) un ``composant central'' (\textit{core component}) composé du réseau de
+    régulation génétique traitant les signaux, et (3) de l'expression moléculaire
+    des ARNs et protéines des gènes cibles observée en sortie. Le processus résulte
+    en la modification du phénotype ou de la fonction de la cellule. Des boucles de
+    régulation (\textit{feedback}) assurent le contrôle et la stabilité des
+différentes étapes.
+} \label{fig:us-cybernetics} \efig
+
+
+Le paradigme qui règne sur la biologie moléculaire depuis plus d'un demi siècle
+est celui des réseaux génétiques. L'expression est gènes est en effet régulée
+par des protéines, les \fts, qui sont elles-mêmes exprimées par d'autres gènes,
+créant ainsi des interactions entre gènes.  Par ailleurs, les protéines peuvent
+réguler l'activité d'autres protéines, et certains ARN issus de la
+transcription de gènes non codants opèrent aussi de manière primordiale dans la
+régulation de l'activité génétique, le tout formant un réseau complexe
+d'interactions. La compréhension de ce réseau et des fonctions qu'il englobe
+forme le socle de la discipline de biologie des systèmes. Dans ce cadre, la
+cellule est vue comme une machine interprétant différents signaux reçus en
+entrée et qui, une fois traités par le réseau interne de régulation, réagit en
+sortie en modifiant son état ou son comportement
+(fig~\ref{fig:us-cybernetics}). L'intérêt d'une telle description mécanistique
+est qu'elle permet d'opérer quantifications mathématiques et prédictions, ce
+qui l'a rendue extrêmement fertile au cours des dernières décennies
+\cite{Nurse2011p2308}.
 
 \subsection{Divers modes de régulation}
 
+\bfig \includegraphics[width=1.0\textwidth]{figures/us-grn.pdf} \captionbf{Un
+réseau de régulation génétique type}{ Dans cette représentation schématique
+    tirée de \cite{us2001genomes}, deux voies de signalisation A et
+    B transmettent des signaux d'entrée (qui peuvent être intra ou extra
+    cellulaires)  en activant des \fts.  Une fois activés, ces derniers
+    interagissent avec des séquences d'ADN proches d'un gène cible en se fixant
+    sur des sites de petite taille ($\sim10$bp).  Les différents \tfs
+    interagissent entre eux pour former des complexes occupant des régions de
+    $\sim1000$bp appelées \crms ou CRMs.  Lorsque les \tfs sont fixés sur le
+    CRM de leur gène cible, il peuvent activer ou inhiber la transcription
+    d'ARN et donc la production de la protéine correspondante.}
+    \label{fig:us-grn} \efig
+
+Les modes de régulation qui permettent à la cellule d'interpréter des signaux
+et de changer d'état sont nombreux. Nous allons nous concentrer ici sur ceux
+internes aux réseaux génétiques, et affectant au final la production de
+protéines ou d'ARNs et donc l'état cellulaire (fig.~\ref{fig:us-grn})}.
+
 \subsubsection{Régulation génétique}
 
-\bfig
-\includegraphics[width=.8\textwidth]{figures/wasserman-transcriptional-regulation.pdf}
-\captionbf{Les différentes composantes de la régulation transcriptionnelle}{
-   Figure tirée de \cite{Wasserman2004p624}. Les \TFs se fixent à des sites
-   spécifiques de longueur $\sim10$bp qui peuvent être proximaux (promoteur,
-   premiers introns) ou distaux (plus de $100$kb) d'un \TSS. Différents \TFs
-   peuvent s'assembler sur des régions d'ADN de taille typique $\sim 1000$bp
-   appelées \CRMs afin de conduire à une régulation spécifique, par simple effet
-   de communauté par exemple lorsque la fixation de tous les \tfs est requise pour
-   que la régulation opère. Les interactions entres les \tfs et différents
-   cofacteurs stabilisent la machinerie d'initiation de transcription pour
-   permettre l'expression génétique. La régulation distale est quant à elle
-   fortement dépendante de la structure tridimensionnelle de la chromatine.
-   tridimensionnelle.
-} 
-\efig
+Tout d'abord, un réseau d'expression génétique est caractérisé par un jeu
+d'interactions entre différents gènes. Ces interactions se font par
+l'intermédiaire de protéines régulatrices appelées \fts ou TFs, qui sont au
+nombre de $\sim830$ chez l'homme \cite{Jolma2013p3971}. Les gènes qui les
+expriment représentent donc $\sim3$\% de l'ensemble des $30,000$ gènes connus
+à ce jour. Pour réguler (activer ou inhiber) la transcription d'un gène cible,
+les TFs se fixent sur des sites de reconnaissance spécifiques sur l'ADN de
+$\sim10$bp et interagissent avec la machinerie transcriptionnelle au niveau du
+promoteur du gène cible. Les TFs peuvent se fixer sur le promoteur même, comme
+c'est souvent le cas chez la bactérie, ou dans des régions distales allant
+jusqu'à plusieurs centaines de kb, comme on trouve plus couramment chez les
+organismes complexes. Par ailleurs, différents TFs peuvent se combiner sur
+certaines régions de régulation contenant de multiples sites de fixation pour
+former des complexes protéiques.  Ces régions, appelées \crms (CRMs) ou plus
+communément \textit{enhancers}, sont d'une taille typique de $\sim1000$bp et
+ont la particularité de conduire à une expression spatio-temporelle très
+spécifique du gène cible. Ces différents points seront amplement développés en
+section~\ref{sec:CRMs}.
 
 \subsubsection{Régulation épigénétique} 
-\subsubsection{Régulation post-transcriptionnelle}
-\subsubsection{Régulation post-traductionelle}
 
+\bfig
+\includegraphics[width=0.7\textwidth]{figures/schones-epigenome.pdf}
+\captionbf{Caractéristiques de l'épigénome}{ Figure tirée
+    de~\cite{Schones2008nx}. Les chromosomes sont partagés entre régions
+accessibles d'euchromatine et régions difficilement accessibles
+d'hétérochromatine. Les régions hétérochromatiques sont marquées par de la di-
+et triméthylation de la lysine 9 de l'histone H3 (H3K9me2 et H3K9me3). La
+méthylation de l'ADN est pervasive à travers le génome et est seulement absente
+dans les régions telles que les îlots CpG, les promoteurs et les CRMs. La
+modification H3K27me3 couvre de larges régions englobant des gènes inactifs.
+Les marques H3K4me3, H3K4me2, H3K4me1 et l'acétylation des histones marquent
+les TSSs des gènes actifs. Les marques H3K4, H3K9, H3K27, H4K20 et H2BK5
+marquent les régions transcrites activement à proximité de la région 5' des
+gènes (en aval), alors que la marque H3K36 marque les gènes transcrits dans
+leur région 3' (en amont). } \label{fig:schones-epigenome} \efig
+
+
+Outre la régulation génétique, due à l'action de protéines issues de séquences
+codantes et se fixant sur des séquences d'ADN, régulation qui est donc
+entièrement encodée dans le génome et transmise à la descendance, il existe un
+autre mode de régulation de la transcription des gènes qui permet notamment
+d'acquérir une modification d'expression génétique transmise à la descendance
+sans qu'il y ait modification du code génétique : on parle de régulation
+épigénétique. Cette régulation passe notamment par la modification des
+propriétés chimiques de l'ADN et des histones sur lequel il s'enroule pour
+former la chromatine. Ainsi, la méthylation des dimères CpG de
+l'ADN\footnote{Les dimères C-G sont appelés CpG, où p caractérise le phosphore
+liant les deux bases, pour les différencier du CG utilisé pour parler de la
+statistique en C et G de l'ADN} au niveau des régions riches en CG, ou îlots
+CpG, situées près de nombreux promoteurs et habituellement dépourvues de ces
+marques conduit à une inactivation du gène cible~\cite{Bird2002oq}.  Par
+ailleurs, la méthylation des histones au niveau des résidus lysines entraîne la
+fermeture de la chromatine, empêchant l'expression du ou des gène(s) situés
+à leur niveau, alors que l'acétylation des mêmes lysines entraîne au contraire
+une ouverture de la chromatine, favorisant ainsi la transcription
+génétique~\cite{Greer2012ve}.  Ce mode de régulation sera développé plus en
+détails en section~\ref{sub:CRMs-epigenetique}.
+
+% lincRNAs? \cite{Rinn2012p3940}
+
+\subsubsection{Régulation post-transcriptionnelle} 
+
+Les modifications post-transcriptionnelles affectent les ARNs issus de la
+transcription des gènes. Ces modifications peuvent être causées par des ARNs
+doubles brins ou dsRNA (\textit{double-stranded RNAs)} qui, une fois clivés par
+la protéine Dicer, forment des petits peptides de 22 nts appelés siRNAs
+(\textit{small interfering RNAs)}) qui recrutent le complexe protéique RISC
+(\textit{RNA-induced silencing complex}) et ciblent spécifiquement des
+ARNm~\cite{Hammond2001bh,Hannon2002qf}. Cette méthode est connue sous le nom
+d'interférence ARN (RNAi) et est aujourd'hui couramment utilisée pour inhiber
+l'expression d'un gène. De manière similaire, les microARNs ou miRNAs sont des
+ARNs de $\sim23$ nts issus d'ARNs plus longs appelés \og épingles à cheveux \fg
+ou \textit{hairpins} qui s'associent à la protéine \textit{Argonaute} du
+complexe RISC pour entraîner la dégradation spécifique
+d'ARNms~\cite{Bartel2009cr}.
+
+
+
+
+\subsubsection{Régulation post-traductionnelle}
+
+Les modifications post-traductionnelles affectent les protéines issues de la
+traduction des ARNs. Ces modifications passent par une modification chimique
+des protéines, typiquement la phosphorylation, ou comme nous l'avons vu pour la
+régulation épigénétique, la méthylation ou l'acétylation. Ces modifications
+peuvent avoir pour effet de changer l'activité de la protéine, que ce soit en
+modifiant son activité enzymatique ou en déclenchant sa relocalisation
+nucléaire. Par ailleurs, il existe aussi des modifications de structure de la
+protéine, comme c'est le cas du \tf \textit{Shavenbaby} chez la Drosophile:
+dans sa forme native, cette protéine inhibe la transcription de ses gènes cible
+; cependant ses résidus terminaux peuvent être clivés par des petits peptides
+de 11 à 32 acides aminés encodés par le gène \textit{Pri}, rendant la protéine
+transcriptionnellement active \cite{Kondo2010ly}.
 
 \newpage
 \subsection{Câblage du réseau et fonction}
@@ -223,7 +412,7 @@ modèle biophysique.
 \subsubsection{DNAse}
 
 
-\section{Les modules de cis-régulation}
+\section{Les modules de cis-régulation} \label{sec:CRMs} 
 %
 %\begin{malistebullet}{15}
 %\item Régulation transcriptionnelle. Facteurs de transcription. Diffusion, fixation. \\
@@ -255,14 +444,11 @@ modèle biophysique.
 \efig
 
 
-\newpage
-\subsection{Différents états des CRMs}
-\bfig
+\newpage \subsection{Différents états des CRMs}
+\label{sub:CRMs-epigenetique} \bfig
 \includegraphics[width=.8\textwidth]{figures/hardison-enhancer-states.pdf}
-\captionbf{Les états épigénétiques des CRMs}{
-   Figure tirée de \cite{Hartwell1999p560}.
-} 
-\efig
+\captionbf{Les états épigénétiques des CRMs}{ Figure tirée de
+    \cite{Hartwell1999p560}.  } \efig
 
 \newpage
 \subsection{Prédiction des CRMs}
@@ -302,7 +488,7 @@ modèle biophysique.
 } 
 \efig
 
-
+\cite{Feschotte2008dq}
 
 \newpage
 \subsection{Les \og shadow enhancers \fg}
@@ -326,7 +512,7 @@ modèle biophysique.
 %cellulaires}{
 %   Figure tirée de \cite{Graf2009p2592}. Vision géométrique de la
 %   différenciation cellulaire inspirée de Waddington (voir
-%   fig.\ref{fig-furusawa-epigenetic-landscape}).
+%   fig.\ref{fig:furusawa-epigenetic-landscape}).
 %} 
 %\efig
 %
@@ -340,4 +526,34 @@ statistiques du genome (lognormal)
 \subsection{Visualisation sur UCSC}
 \subsection{Le projet ENCODE}
 
+
+
+%\bfig
+%\includegraphics[width=0.8\textwidth]{figures/siggia-fate.pdf}
+%\captionbf{Vision géométrique des transitions entre types cellulaire}{
+%   Figure tirée de \cite{Corson2012p3973} schématisant le processus de
+%   différenciation des cellules de la vulve de \celegans.
+%   \textbf{A.} La cellule est dans un état précurseur représenté par une
+%   bille au fond d'une vallée.
+%   \textbf{B.} La cellule est dans état dit \textit{compétent} où elle peut basculer
+%   vers différents destins cellulaires.
+%   \textbf{C.} Un signal externe représenté par une flèche rouge modifie le
+%   paysage de manière à favoriser l'un des états finaux possibles.
+%} 
+%\efig
+
+%\bfig
+%\includegraphics[width=.8\textwidth]{figures/wasserman-transcriptional-regulation.pdf}
+%\captionbf{Les différentes composantes de la régulation transcriptionnelle}{
+    %Figure tirée de \cite{Wasserman2004p624}. Les \TFs se fixent à des sites
+    %spécifiques de longueur $\sim10$bp qui peuvent être proximaux (promoteur,
+    %premiers introns) ou distaux (plus de $100$kb) d'un \TSS. Différents \TFs
+    %peuvent s'assembler sur des régions d'ADN de taille typique $\sim 1000$bp
+    %appelées \CRMs afin de conduire à une régulation spécifique, par simple
+    %effet de communauté par exemple lorsque la fixation de tous les \tfs est
+    %requise pour que la régulation opère. Les interactions entres les \tfs et
+    %différents cofacteurs stabilisent la machinerie d'initiation de
+    %transcription pour permettre l'expression génétique. La régulation distale
+    %est quant à elle fortement dépendante de la structure tridimensionnelle de
+%la chromatine.  } \efig
 

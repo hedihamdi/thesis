@@ -80,17 +80,19 @@
 
 %Pour faire l'index des notations
 \ifthenelse{\FaitNomenclature > 0}{
-   \usepackage[refpage,french,intoc]{nomencl}  %intoc rajoute une ligne dans la toc
-   \renewcommand{\nomname}{\fontfamily{ppl}\selectfont Principales notations utilisées} %Titre de la page
-   \renewcommand{\pagedeclaration}[1]{~\dotfill\hyperpage{#1}}  %pour avoir des lignes de ... entre la description et le #page
-   \renewcommand{\nomgroup}[1]{%
-   \ifthenelse{\equal{#1}{A}}{\item[\textbf{\ChUnTitre}]}	  {
-      \ifthenelse{\equal{#1}{B}}{\medskip\item[\textbf{\ChDeuxTitre}]}{
-         \ifthenelse{\equal{#1}{C}}{\medskip\item[\textbf{\ChTroisTitre}]}{
-            \ifthenelse{\equal{#1}{D}}{\medskip\item[\textbf{\ChQuatreTitre}]}{
-               }}}}
-            }
-            \def\ChCourantTitre{\ifcase\value{chapter} \or A\or B\or C \or D\fi}
+    \usepackage[norefpage,french,intoc]{nomencl}  %intoc rajoute une ligne dans la toc
+    \renewcommand{\nomname}{\fontfamily{ppl}\selectfont Principales abbréviations utilisées} %Titre de la page
+    \renewcommand{\pagedeclaration}[1]{~\dotfill\hyperpage{#1}}  %pour avoir des lignes de ... entre la description et le #page
+    \renewcommand{\nomgroup}[1]{\bigskip}
+    %\renewcommand{\nomgroup}[1]{%
+    %\ifthenelse{\equal{#1}{A}}{\item[\textbf{\ChIntro}]}	  {
+        %\ifthenelse{\equal{#1}{B}}{\medskip\item[\textbf{\ChMaxent}]}{
+            %\ifthenelse{\equal{#1}{C}}{\medskip\item[\textbf{\ChImogene}]}{
+                %\ifthenelse{\equal{#1}{D}}{\medskip\item[\textbf{\ChTrichomes}]}{
+                    %\ifthenelse{\equal{#1}{E}}{\medskip\item[\textbf{\ChMuscle}]}{
+                        %}}}}}
+                    %}
+                    %\def\ChCourantTitre{\ifcase\value{chapter} \or A\or B\or C \or D \or E\fi}
    %%%%%%%%%%%%%%%%%%%%%%%%%%%% Définition de \ChCourantTitre ici!!!	
 
 

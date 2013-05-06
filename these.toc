@@ -4,77 +4,77 @@
 \@thisnotframedtrue 
 \contentsline {spsection}{Liste des figures}{vii}{division.1}
 \@frame@switchfalse 
+\contentsline {chapter}{\fontfamily {ppl}\selectfont Principales abbr\'eviations utilis\'ees}{ix}{division.1}
 \contentsline {starchapter}{Avant-propos}{1}{division.1}
 \contentsline {chapter}{\numberline {Chapitre\ 1~-}Introduction g\'en\'erale.}{3}{division.2}
+\contentsline {xchapter}{}{3}{division.2}
 \contentsline {section}{\numberline {1.1}Le ph\'enotype cellulaire}{4}{section.2.1}
 \contentsline {subsection}{\numberline {1.1.1}Qu'est-ce que le ph\'enotype d'une cellule?}{4}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {1.1.2}La diff\'erenciation cellulaire}{4}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {1.1.3}La reprogrammation cellulaire}{5}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {1.1.4}La cellule dans l'organisme : une sp\'ecification spatio-temporelle}{5}{subsection.2.1.4}
-\contentsline {section}{\numberline {1.2}Les r\'eseaux de r\'egulation g\'en\'etique}{5}{section.2.2}
-\contentsline {subsection}{\numberline {1.2.1}Vision cybern\'etique de la cellule}{5}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Divers modes de r\'egulation}{5}{subsection.2.2.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation g\'en\'etique}{5}{subsubsection.2.2.2.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation \'epig\'en\'etique}{5}{subsubsection.2.2.2.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation post-transcriptionnelle}{5}{subsubsection.2.2.2.3}
-\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation post-traductionelle}{5}{subsubsection.2.2.2.4}
-\contentsline {subsection}{\numberline {1.2.3}C\^ablage du r\'eseau et fonction}{6}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {1.2.4}\'Evolution des r\'eseaux g\'en\'etiques}{7}{subsection.2.2.4}
-\contentsline {section}{\numberline {1.3}Mod\`eles math\'ematiques des interactions prot\'eine-ADN}{8}{section.2.3}
-\contentsline {subsection}{\numberline {1.3.1}Mod\`ele biophysique}{8}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Mod\`ele thermodynamique}{8}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Mod\`ele PWM}{8}{subsection.2.3.3}
-\contentsline {section}{\numberline {1.4}Mesures exp\'erimentales des interactions prot\'eine-ADN}{9}{section.2.4}
-\contentsline {subsection}{\numberline {1.4.1}Approches \textit {in vitro}\xspace : PBM, SELEX, HT-SELEX}{9}{subsection.2.4.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}PBM}{9}{subsubsection.2.4.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}SELEX}{9}{subsubsection.2.4.1.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}HT-SELEX}{9}{subsubsection.2.4.1.3}
-\contentsline {subsection}{\numberline {1.4.2}Approches \textit {in vivo}\xspace : ChIP-on-chip\xspace , ChIP-seq\xspace , DNAse}{9}{subsection.2.4.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}ChIP-on-chip\xspace }{9}{subsubsection.2.4.2.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}ChIP-seq\xspace }{9}{subsubsection.2.4.2.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}DNAse}{9}{subsubsection.2.4.2.3}
-\contentsline {section}{\numberline {1.5}Les modules de cis-r\'egulation}{9}{section.2.5}
-\contentsline {subsection}{\numberline {1.5.1}Modules et fonctions logiques}{9}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {1.5.2}Encodage de patterns spatiaux}{9}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {1.5.3}Diff\'erents \'etats des CRMs}{10}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {1.5.4}Pr\'ediction des CRMs}{11}{subsection.2.5.4}
-\contentsline {subsection}{\numberline {1.5.5}Grammaire des enhancers : enhanceosome vs billboard}{12}{subsection.2.5.5}
-\contentsline {subsection}{\numberline {1.5.6}\'Evolution des enhancers}{13}{subsection.2.5.6}
-\contentsline {subsection}{\numberline {1.5.7}Les \FB@og shadow enhancers \FB@fg }{14}{subsection.2.5.7}
-\contentsline {subsection}{\numberline {1.5.8}Validation exp\'erimentale}{15}{subsection.2.5.8}
-\contentsline {section}{\numberline {1.6}Banques de donn\'ees}{15}{section.2.6}
-\contentsline {subsection}{\numberline {1.6.1}S\'equences g\'enomiques et alignements}{15}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {1.6.2}Annotations (TSSs, repeats\ldots )}{15}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {1.6.3}Jaspar et Transfac}{15}{subsection.2.6.3}
-\contentsline {subsection}{\numberline {1.6.4}Visualisation sur UCSC}{15}{subsection.2.6.4}
-\contentsline {subsection}{\numberline {1.6.5}Le projet ENCODE}{15}{subsection.2.6.5}
-\contentsline {chapter}{\numberline {Chapitre\ 2~-}Mod\`eles de fixation des Facteurs de Transcription\xspace \`a l'ADN.}{21}{division.3}
-\contentsline {section}{\numberline {2.1}Les mod\`eles de fixation}{23}{section.3.1}
-\contentsline {subsection}{\numberline {2.1.1}Mod\`eles de maximum d'entropie}{23}{subsection.3.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Le mod\`ele PWM}{24}{subsubsection.3.1.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Le mod\`ele de corr\'elation de paires}{24}{subsubsection.3.1.1.2}
-\contentsline {subsection}{\numberline {2.1.2}Mod\`eles de m\'elange}{24}{subsection.3.1.2}
-\contentsline {section}{\numberline {2.2}Description des donn\'ees biologiques}{24}{section.3.2}
-\contentsline {subsection}{\numberline {2.2.1}Les donn\'ees ChIP}{24}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Statistique \FB@og background \FB@fg des s\'equences}{24}{subsection.3.2.2}
-\contentsline {section}{\numberline {2.3}Pr\'esentation de l'algorithme}{24}{section.3.3}
-\contentsline {section}{\numberline {2.4}Performance des mod\`eles}{24}{section.3.4}
-\contentsline {section}{\numberline {2.5}Analyse des corr\'elations}{24}{section.3.5}
-\contentsline {subsection}{\numberline {2.5.1}Quantification par l'Information Directe\xspace }{24}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Description par des patterns de Hopfield}{24}{subsection.3.5.2}
-\contentsline {section}{\numberline {2.6}Comparaison avec des donn\'ees \textit {in vitro}\xspace }{24}{section.3.6}
-\contentsline {subsection}{\numberline {2.6.1}Conclusion de la section 2.6}{25}{subsection.3.6.1}
-\contentsline {chapter}{\numberline {Chapitre\ 3~-}{\em Imogene}: un algorithme d'identification de motifs et de modules de r\'egulation transcriptionnelle}{27}{division.4}
-\contentsline {section}{\numberline {3.1}}{29}{section.4.1}
-\contentsline {chapter}{\numberline {Chapitre\ 4~-}\'Etude de la diff\'erenciation \'epidermale chez la drosophile}{31}{division.5}
-\contentsline {section}{\numberline {4.1}}{33}{section.5.1}
-\contentsline {chapter}{\numberline {Chapitre\ 5~-}\'Etude de la diff\'erenciation musculaire chez la souris}{35}{division.6}
-\contentsline {section}{\numberline {5.1}}{37}{section.6.1}
-\contentsline {chapter}{\numberline {Chapitre\ 6~-}Chapitre d'exemples}{39}{division.7}
-\contentsline {section}{\numberline {6.1}Titre de la section}{41}{section.7.1}
-\contentsline {subsection}{\numberline {6.1.1}Titre de la sous-section}{41}{subsection.7.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Titre de la sous-sous-section}{41}{subsubsection.7.1.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Titre de la sous-sous-section}{41}{subsubsection.7.1.1.2}
-\contentsline {subsection}{\numberline {6.1.2}Conclusion de la section 6.1}{41}{subsection.7.1.2}
-\contentsline {starchapter}{Conclusion}{42}{subsection.7.1.2}
-\contentsline {spsection}{Bibliographie}{45}{division.8}
+\contentsline {subsection}{\numberline {1.1.3}La cellule dans l'organisme : une sp\'ecification spatio-temporelle}{6}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {1.1.4}La reprogrammation cellulaire}{6}{subsection.2.1.4}
+\contentsline {section}{\numberline {1.2}Les r\'eseaux de r\'egulation g\'en\'etique}{7}{section.2.2}
+\contentsline {subsection}{\numberline {1.2.1}Vision cybern\'etique de la cellule}{7}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Divers modes de r\'egulation}{8}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation g\'en\'etique}{8}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation \'epig\'en\'etique}{9}{subsubsection.2.2.2.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation post-transcriptionnelle}{11}{subsubsection.2.2.2.3}
+\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation post-traductionnelle}{11}{subsubsection.2.2.2.4}
+\contentsline {subsection}{\numberline {1.2.3}C\^ablage du r\'eseau et fonction}{12}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {1.2.4}\'Evolution des r\'eseaux g\'en\'etiques}{13}{subsection.2.2.4}
+\contentsline {section}{\numberline {1.3}Mod\`eles math\'ematiques des interactions prot\'eine-ADN}{14}{section.2.3}
+\contentsline {subsection}{\numberline {1.3.1}Mod\`ele biophysique}{14}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Mod\`ele thermodynamique}{14}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Mod\`ele PWM}{14}{subsection.2.3.3}
+\contentsline {section}{\numberline {1.4}Mesures exp\'erimentales des interactions prot\'eine-ADN}{16}{section.2.4}
+\contentsline {subsection}{\numberline {1.4.1}Approches \textit {in vitro}\xspace : PBM, SELEX, HT-SELEX}{16}{subsection.2.4.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}PBM}{16}{subsubsection.2.4.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}SELEX}{16}{subsubsection.2.4.1.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}HT-SELEX}{16}{subsubsection.2.4.1.3}
+\contentsline {subsection}{\numberline {1.4.2}Approches \textit {in vivo}\xspace : ChIP-on-chip\xspace , ChIP-seq\xspace , DNAse}{16}{subsection.2.4.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}ChIP-on-chip\xspace }{16}{subsubsection.2.4.2.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}ChIP-seq\xspace }{16}{subsubsection.2.4.2.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}DNAse}{17}{subsubsection.2.4.2.3}
+\contentsline {section}{\numberline {1.5}Les modules de cis-r\'egulation}{17}{section.2.5}
+\contentsline {subsection}{\numberline {1.5.1}Modules et fonctions logiques}{17}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Encodage de patterns spatiaux}{17}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {1.5.3}Diff\'erents \'etats des CRMs}{19}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {1.5.4}Pr\'ediction des CRMs}{20}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {1.5.5}Grammaire des enhancers : enhanceosome vs billboard}{21}{subsection.2.5.5}
+\contentsline {subsection}{\numberline {1.5.6}\'Evolution des enhancers}{22}{subsection.2.5.6}
+\contentsline {subsection}{\numberline {1.5.7}Les \FB@og shadow enhancers \FB@fg }{24}{subsection.2.5.7}
+\contentsline {subsection}{\numberline {1.5.8}Validation exp\'erimentale}{25}{subsection.2.5.8}
+\contentsline {section}{\numberline {1.6}Banques de donn\'ees}{25}{section.2.6}
+\contentsline {subsection}{\numberline {1.6.1}S\'equences g\'enomiques et alignements}{25}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Annotations (TSSs, repeats\ldots )}{25}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {1.6.3}Jaspar et Transfac}{25}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {1.6.4}Visualisation sur UCSC}{25}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {1.6.5}Le projet ENCODE}{25}{subsection.2.6.5}
+\contentsline {chapter}{\numberline {Chapitre\ 2~-}Mod\`eles de fixation des Facteurs de Transcription\xspace \`a l'ADN.}{27}{division.3}
+\contentsline {xchapter}{}{27}{division.3}
+\contentsline {section}{\numberline {2.1}Les mod\`eles de fixation}{29}{section.3.1}
+\contentsline {subsection}{\numberline {2.1.1}Mod\`eles de maximum d'entropie}{29}{subsection.3.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Le mod\`ele PWM}{30}{subsubsection.3.1.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Le mod\`ele de corr\'elation de paires}{30}{subsubsection.3.1.1.2}
+\contentsline {subsection}{\numberline {2.1.2}Mod\`eles de m\'elange}{30}{subsection.3.1.2}
+\contentsline {section}{\numberline {2.2}Description des donn\'ees biologiques}{30}{section.3.2}
+\contentsline {subsection}{\numberline {2.2.1}Les donn\'ees ChIP}{30}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Statistique \FB@og background \FB@fg des s\'equences}{30}{subsection.3.2.2}
+\contentsline {section}{\numberline {2.3}Pr\'esentation de l'algorithme}{30}{section.3.3}
+\contentsline {section}{\numberline {2.4}Performance des mod\`eles}{30}{section.3.4}
+\contentsline {section}{\numberline {2.5}Analyse des corr\'elations}{30}{section.3.5}
+\contentsline {subsection}{\numberline {2.5.1}Quantification par l'Information Directe\xspace }{30}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Description par des patterns de Hopfield}{30}{subsection.3.5.2}
+\contentsline {section}{\numberline {2.6}Comparaison avec des donn\'ees \textit {in vitro}\xspace }{30}{section.3.6}
+\contentsline {subsection}{\numberline {2.6.1}Conclusion de la section 2.6}{31}{subsection.3.6.1}
+\contentsline {chapter}{\numberline {Chapitre\ 3~-}{\em Imogene}: un algorithme d'identification de motifs et de modules de r\'egulation transcriptionnelle}{33}{division.4}
+\contentsline {xchapter}{}{33}{division.4}
+\contentsline {section}{\numberline {3.1}}{35}{section.4.1}
+\contentsline {chapter}{\numberline {Chapitre\ 4~-}\'Etude de la diff\'erenciation \'epidermale chez la drosophile}{37}{division.5}
+\contentsline {xchapter}{}{37}{division.5}
+\contentsline {section}{\numberline {4.1}}{39}{section.5.1}
+\contentsline {chapter}{\numberline {Chapitre\ 5~-}\'Etude de la diff\'erenciation musculaire chez la souris}{41}{division.6}
+\contentsline {xchapter}{}{41}{division.6}
+\contentsline {section}{\numberline {5.1}}{43}{section.6.1}
+\contentsline {starchapter}{Conclusion}{45}{section*.26}
+\contentsline {spsection}{Bibliographie}{47}{division.7}
