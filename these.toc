@@ -21,35 +21,35 @@
 \contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation post-transcriptionnelle}{11}{subsubsection.2.2.2.3}
 \contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation post-traductionnelle}{11}{subsubsection.2.2.2.4}
 \contentsline {subsection}{\numberline {1.2.3}C\^ablage du r\'eseau et fonction}{12}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {1.2.4}\'Evolution des r\'eseaux g\'en\'etiques}{13}{subsection.2.2.4}
-\contentsline {section}{\numberline {1.3}Mod\`eles math\'ematiques des interactions prot\'eine-ADN}{14}{section.2.3}
-\contentsline {subsection}{\numberline {1.3.1}Mod\`ele biophysique}{14}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Mod\`ele thermodynamique}{14}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Mod\`ele PWM}{14}{subsection.2.3.3}
-\contentsline {section}{\numberline {1.4}Mesures exp\'erimentales des interactions prot\'eine-ADN}{16}{section.2.4}
-\contentsline {subsection}{\numberline {1.4.1}Approches \textit {in vitro}\xspace : PBM, SELEX, HT-SELEX}{16}{subsection.2.4.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}PBM}{16}{subsubsection.2.4.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}SELEX}{16}{subsubsection.2.4.1.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}HT-SELEX}{16}{subsubsection.2.4.1.3}
-\contentsline {subsection}{\numberline {1.4.2}Approches \textit {in vivo}\xspace : ChIP-on-chip\xspace , ChIP-seq\xspace , DNAse}{16}{subsection.2.4.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}ChIP-on-chip\xspace }{16}{subsubsection.2.4.2.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}ChIP-seq\xspace }{16}{subsubsection.2.4.2.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}DNAse}{17}{subsubsection.2.4.2.3}
-\contentsline {section}{\numberline {1.5}Les modules de cis-r\'egulation}{17}{section.2.5}
-\contentsline {subsection}{\numberline {1.5.1}Modules et fonctions logiques}{17}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {1.5.2}Encodage de patterns spatiaux}{17}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {1.5.3}Diff\'erents \'etats des CRMs}{19}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {1.5.4}Pr\'ediction des CRMs}{20}{subsection.2.5.4}
-\contentsline {subsection}{\numberline {1.5.5}Grammaire des enhancers : enhanceosome vs billboard}{21}{subsection.2.5.5}
-\contentsline {subsection}{\numberline {1.5.6}\'Evolution des enhancers}{22}{subsection.2.5.6}
-\contentsline {subsection}{\numberline {1.5.7}Les \FB@og shadow enhancers \FB@fg }{24}{subsection.2.5.7}
-\contentsline {subsection}{\numberline {1.5.8}Validation exp\'erimentale}{25}{subsection.2.5.8}
-\contentsline {section}{\numberline {1.6}Banques de donn\'ees}{25}{section.2.6}
-\contentsline {subsection}{\numberline {1.6.1}S\'equences g\'enomiques et alignements}{25}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {1.6.2}Annotations (TSSs, repeats\ldots )}{25}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {1.6.3}Jaspar et Transfac}{25}{subsection.2.6.3}
-\contentsline {subsection}{\numberline {1.6.4}Visualisation sur UCSC}{25}{subsection.2.6.4}
-\contentsline {subsection}{\numberline {1.6.5}Le projet ENCODE}{25}{subsection.2.6.5}
+\contentsline {subsection}{\numberline {1.2.4}\'Evolution des r\'eseaux g\'en\'etiques}{14}{subsection.2.2.4}
+\contentsline {section}{\numberline {1.3}Mod\`eles math\'ematiques des interactions prot\'eine-ADN}{15}{section.2.3}
+\contentsline {subsection}{\numberline {1.3.1}Mod\`ele biophysique}{15}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Mod\`ele thermodynamique}{15}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Mod\`ele PWM}{15}{subsection.2.3.3}
+\contentsline {section}{\numberline {1.4}Mesures exp\'erimentales des interactions prot\'eine-ADN}{17}{section.2.4}
+\contentsline {subsection}{\numberline {1.4.1}Approches \textit {in vitro}\xspace : PBM, SELEX, HT-SELEX}{17}{subsection.2.4.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}PBM}{17}{subsubsection.2.4.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}SELEX}{17}{subsubsection.2.4.1.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}HT-SELEX}{17}{subsubsection.2.4.1.3}
+\contentsline {subsection}{\numberline {1.4.2}Approches \textit {in vivo}\xspace : ChIP-on-chip\xspace , ChIP-seq\xspace , DNAse}{17}{subsection.2.4.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}ChIP-on-chip\xspace }{17}{subsubsection.2.4.2.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}ChIP-seq\xspace }{17}{subsubsection.2.4.2.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}DNAse}{18}{subsubsection.2.4.2.3}
+\contentsline {section}{\numberline {1.5}Les modules de cis-r\'egulation}{18}{section.2.5}
+\contentsline {subsection}{\numberline {1.5.1}Modules et fonctions logiques}{18}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Encodage de patterns spatiaux}{18}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {1.5.3}Diff\'erents \'etats des CRMs}{20}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {1.5.4}Pr\'ediction des CRMs}{21}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {1.5.5}Grammaire des enhancers : enhanceosome vs billboard}{22}{subsection.2.5.5}
+\contentsline {subsection}{\numberline {1.5.6}\'Evolution des enhancers}{23}{subsection.2.5.6}
+\contentsline {subsection}{\numberline {1.5.7}Les \FB@og shadow enhancers \FB@fg }{25}{subsection.2.5.7}
+\contentsline {subsection}{\numberline {1.5.8}Validation exp\'erimentale}{26}{subsection.2.5.8}
+\contentsline {section}{\numberline {1.6}Banques de donn\'ees}{26}{section.2.6}
+\contentsline {subsection}{\numberline {1.6.1}S\'equences g\'enomiques et alignements}{26}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Annotations (TSSs, repeats\ldots )}{26}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {1.6.3}Jaspar et Transfac}{26}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {1.6.4}Visualisation sur UCSC}{26}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {1.6.5}Le projet ENCODE}{26}{subsection.2.6.5}
 \contentsline {chapter}{\numberline {Chapitre\ 2~-}Mod\`eles de fixation des Facteurs de Transcription\xspace \`a l'ADN.}{27}{division.3}
 \contentsline {xchapter}{}{27}{division.3}
 \contentsline {section}{\numberline {2.1}Les mod\`eles de fixation}{29}{section.3.1}

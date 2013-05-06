@@ -341,11 +341,40 @@ transcriptionnellement active \cite{Kondo2010ly}.
 \subsection{Câblage du réseau et fonction}
 
 \bfig
-\includegraphics[width=\textwidth]{figures/lee-network-motifs-yeast.pdf}
-\captionbf{}{
-   figure tirée de \cite{Lee2002p537}.
-} 
-\efig
+\includegraphics[width=0.7\textwidth]{figures/lee-network-motifs-yeast.pdf}
+\includegraphics[width=0.9\textwidth]{figures/odom-network-motifs-human.pdf}
+\captionbf{Exemples de motifs dans les réseaux de régulation génétique}{Figure
+    tirée de .  Ces exemples sont issus d'analyses d'interactions entre \tfs
+    (cercles bleus) et promoteurs (rectangles rouges) chez la
+    levure~\cite{Lee2002p537} (A) et chez l'homme~\cite{Odom2004hc} (B).  Les
+flèches solides indiquent la fixation d'un \tf à un promoteur, et les flèches
+en pointillé indiquent l'expression d'un \tf à partir de son gène.} \efig
+
+Maintenant que nous avons vu la nature des interactions au sein des réseaux
+génétiques, nous pouvons nous pencher sur leur structure. Celle-ci est en effet
+loin d'être due au hasard. Ainsi, plusieurs études, réalisées chez divers
+organismes de la bactérie à l'homme, ont révélé que les réseaux de
+transcription contiennent un petit ensemble de motifs de régulation récurrents,
+appelés motifs de
+réseaux~\cite{alon2007introduction,ShenOrr2002p648,Milo2002tg}. Ces motifs
+peuvent être vus comme les pièces élémentaires servant à la construction de
+réseaux fonctionnels. De tels motifs furent d'abord détectés de manière
+systématique chez la bactérie \ecoli en remarquant qu'ils apparaissaient dans
+le réseau de transcription bien plus souvent qu'on ne l'attendrait dans un
+réseau aléatoire~\cite{ShenOrr2002p648}. Les mêmes motifs ont ensuite été
+trouvés chez la levure~\cite{Milo2002tg,Lee2002p537} et chez
+l'homme~\cite{Odom2004hc}. La récurrence de ces motifs est liée aux fonctions
+qu'ils remplissent. Par exemple, la boucle d'autorégulation négative, qui est
+trouvée chez la moitié des répresseurs d'\ecoli, possède deux fonctions : l'une
+est de parvenir rapidement à un état d'équilibre en utilisant un promoteur
+fort, l'autre est de servir de tampon au bruit
+d'expression~\cite{Alon2007p2353}. Un autre motif récurrent est la boucle
+feedforward. Celle-ci consiste en 3 gènes : un régulateur X, qui régule Y, tous
+deux régulant Z. Dans le cas où des interactions sont des activations et que
+X et Y sont requis pour activer Z, cette boucle peut servir de tampon au bruit
+d'expression de X, évitant que des fluctuations de son niveau d'expression
+n'entraîne par erreur l'activation de Z.
+
 
 \newpage
 \subsection{Évolution des réseaux génétiques}
