@@ -337,7 +337,6 @@ dans sa forme native, cette protéine inhibe la transcription de ses gènes cible
 de 11 à 32 acides aminés encodés par le gène \textit{Pri}, rendant la protéine
 transcriptionnellement active \cite{Kondo2010ly}.
 
-\newpage
 \subsection{Câblage du réseau et fonction}
 
 \bfig
@@ -348,7 +347,8 @@ transcriptionnellement active \cite{Kondo2010ly}.
     (cercles bleus) et promoteurs (rectangles rouges) chez la
     levure~\cite{Lee2002p537} (A) et chez l'homme~\cite{Odom2004hc} (B).  Les
 flèches solides indiquent la fixation d'un \tf à un promoteur, et les flèches
-en pointillé indiquent l'expression d'un \tf à partir de son gène.} \efig
+en pointillé indiquent l'expression d'un \tf à partir de son gène.}
+\label{fig:lee-odom-networks}\efig
 
 Maintenant que nous avons vu la nature des interactions au sein des réseaux
 génétiques, nous pouvons nous pencher sur leur structure. Celle-ci est en effet
@@ -356,51 +356,130 @@ loin d'être due au hasard. Ainsi, plusieurs études, réalisées chez divers
 organismes de la bactérie à l'homme, ont révélé que les réseaux de
 transcription contiennent un petit ensemble de motifs de régulation récurrents,
 appelés motifs de
-réseaux~\cite{alon2007introduction,ShenOrr2002p648,Milo2002tg}. Ces motifs
-peuvent être vus comme les pièces élémentaires servant à la construction de
-réseaux fonctionnels. De tels motifs furent d'abord détectés de manière
-systématique chez la bactérie \ecoli en remarquant qu'ils apparaissaient dans
-le réseau de transcription bien plus souvent qu'on ne l'attendrait dans un
-réseau aléatoire~\cite{ShenOrr2002p648}. Les mêmes motifs ont ensuite été
-trouvés chez la levure~\cite{Milo2002tg,Lee2002p537} et chez
-l'homme~\cite{Odom2004hc}. La récurrence de ces motifs est liée aux fonctions
-qu'ils remplissent. Par exemple, la boucle d'autorégulation négative, qui est
-trouvée chez la moitié des répresseurs d'\ecoli, possède deux fonctions : l'une
-est de parvenir rapidement à un état d'équilibre en utilisant un promoteur
-fort, l'autre est de servir de tampon au bruit
-d'expression~\cite{Alon2007p2353}. Un autre motif récurrent est la boucle
-feedforward. Celle-ci consiste en 3 gènes : un régulateur X, qui régule Y, tous
-deux régulant Z. Dans le cas où des interactions sont des activations et que
-X et Y sont requis pour activer Z, cette boucle peut servir de tampon au bruit
-d'expression de X, évitant que des fluctuations de son niveau d'expression
-n'entraîne par erreur l'activation de Z.
+réseaux~\cite{alon2007introduction,ShenOrr2002p648,Milo2002tg}
+(fig.~\ref{fig:lee-odom-networks}).  Ces motifs peuvent être vus comme les
+pièces élémentaires servant à la construction de réseaux fonctionnels. De tels
+motifs furent d'abord détectés de manière systématique chez la bactérie \ecoli
+en remarquant qu'ils apparaissaient dans le réseau de transcription bien plus
+souvent qu'on ne l'attendrait dans un réseau aléatoire~\cite{ShenOrr2002p648}.
+Les mêmes motifs ont ensuite été trouvés chez la
+levure~\cite{Milo2002tg,Lee2002p537} et chez l'homme~\cite{Odom2004hc}. La
+récurrence de ces motifs est liée aux fonctions qu'ils remplissent. Par
+exemple, la boucle d'autorégulation négative, qui est trouvée chez la moitié
+des répresseurs d'\ecoli, possède deux fonctions : l'une est de parvenir
+rapidement à un état d'équilibre en utilisant un promoteur fort, l'autre est de
+servir de tampon au bruit d'expression~\cite{Alon2007p2353}. Un autre motif
+récurrent est la boucle feedforward. Celle-ci consiste en 3 gènes : un
+régulateur X, qui régule Y, tous deux régulant Z. Dans le cas où des
+interactions sont des activations et que X et Y sont requis pour activer Z,
+cette boucle peut servir de tampon au bruit d'expression de X, évitant que des
+fluctuations de son niveau d'expression n'entraîne par erreur l'activation de
+Z.
 
 
-\newpage
 \subsection{Évolution des réseaux génétiques}
 
 \bfig
 \includegraphics[width=\textwidth]{figures/furlong-network-evolution.pdf}
-\captionbf{}{
-   Figure tirée de \cite{Liu2009p556}.
-} 
-\efig
+\captionbf{Évolution du réseau transcriptionnel : l'exemple de la régulation
+myogénique.}{ Figure tirée de \cite{Liu2009p556}. Les lignes pleines indiquent
+une régulation transcriptionnelle directe, les tirets indiquent des
+interactions génétiques dont le caractère direct n'a pas été montré, et les
+lignes pointillés indiquent que l'interaction est suggérée par des donnés
+d'expression. \myod est l'analogue structurel de \textit{Nautilus} mais est
+l'analogue fonctionnel de \textit{Twist} chez la Drosophile et de
+\textit{HLH-1} chez C. Elegans. Les couleurs indiquent respectivement des voies
+de signalisation externes au mésoderme (bleu), les régulateurs myogéniques de
+la famille bHLH (vert), les protéines Six/Eya (orange), les protéines de la
+famille \textit{paired-box} Pax (violet), les TFs des familles MADS/SRF
+(rouge), et les régulateurs d'autres familles de protéines (noir).}
+\label{fig:furlong-network-evolution}\efig
+
+Au cours de l'évolution, les réseaux de régulation génétique changent
+: modification des constituants, recâblage du réseau, duplication
+d'éléments\ldots Néanmoins, certaines modifications sont plus défavorisées du
+point de vue évolutif que des autres.  Par exemple, la modification d'un
+régulateur, par exemple une mutation d'un certain acide aminé d'un \tf, aura
+des conséquences sur l'ensemble des éléments régulés par ce \tf. Par contre, la
+modification d'un site de reconnaissance de ce \tf sur l'ADN n'aura qu'une
+portée locale sur la régulation du gène associé. Par ailleurs, certains motifs
+du réseau, comme les boucles d'autorégulation ou les boucles feedforward,
+peuvent avoir une grande importance fonctionnelle, favorisant leur
+conservation. \\
+À titre d'exemple, prenons le cas du réseau de différenciation du muscle
+squelettique présenté en figure~\ref{fig:furlong-network-evolution}, que nous
+étudierons plus en détail dans le chapitre \ref{chap:muscle} de ce manuscrit.
+Au coeur de ce réseau génétique se trouvent les facteurs de régulation
+myogéniques ou MRFs, des \fts de type bHLH qui ont la capacité de convertir des
+cellules non mesodermales, \cad n'étant pas destinées à devenir des
+progéniteurs musculaires, en cellules ayant des propriétés
+musculaires~\cite{Weintraub1989ij}. Ces facteurs sont dits \og régulateurs
+maîtres \fg de la différenciation musculaire. Chez les vertébrés il y a quatre
+MRFs: \myf, \mrf, \myod, qui ont des roles redondant dans la spécification des
+progéniteurs musculaires, et \myog, qui conduit à la différenciation terminale.
+Chez la \droso c'est le TF  \twi qui semble être le principal MRF, mais
+contrairement aux MRFs des vertébrés, son rôle ne s'arrête pas au contrôle de
+la différenciation musculaire mais est plus général dans le développement du
+mésoderme~\cite{Baylies1998bs}. C'est cependant le gène \textit{Nautilus} qui
+possède la séquence d'acides aminés la plus proche de celle des MRFs vertébrés.
+Ce dernier permet la spécification des progéniteurs myogéniques, et son
+expression est restreinte au développement musculaire. Néanmoins, les mutants
+\textit{nautilus} sont viables et son rôle semble mineur comparé aux MRFs
+vertébrés. Enfin, chez le ver \celegans, c'est l'orthologue de \myod,
+\textit{hlh-1}, qui tient rôle de MRF.\\ Malgré ces différences (nombre de
+MRFs, membre de la famille bHLH tenant ce rôle), on retrouve dans les trois cas
+une boucle feedforward conservée au niveau de la régulation des cibles des MRFs
+(fig.~\ref{fig:furlong-network-evolution}).  Ainsi, MyoD régule l'expression de
+Mef2 et l'activité de MAPK p38 en même temps que l'expression de plusieurs
+cibles initiales, et par la suite MyoD et phospho-Mef2 co-régulent des gènes
+plus tardifs. Ce mécanisme permet ainsi de réguler l'aspect temporel de
+l'expression génétique.  Chez la Drosophile, le même motif est observé avec
+Twist et Mef2 et chez C.  Elegans avec HLH-1 et le TF UNC-129, de la même
+famille que Mef2.  \\ Ainsi le coeur du réseau est conservé dans la forme
+(topologie), même s'il y a des divergences dans le fond (membres de la famille
+de TFs impliqués). Néanmoins, les éléments régulateurs en amont, ainsi que les
+membres périphériques du réseau ont rapidement évolué. Par exemple, chez les
+vertébrés le TF Pax3 est très en amont dans la hiérarchie génétique et permet
+l'activation des MRFs et la spécification myogénique, alors que chez la
+Drosophile son homologue \textit{poxm} est en aval des MRFs et sa perte de
+fonction n'a que des effets mineurs sur la myogenèse. Par ailleurs, le complexe
+composé de protéine Six et de leur cofacteur Eya, initialement découvert comme
+régulateur majeur de la différenciation oculaire chez la \droso, est chez les
+vertébrés un régulateur essentiel situés en amont des MRFs. Chez la Drosophile,
+il possède aussi un rôle dans la spécification myogénique, mais bien plus en
+aval que chez les vertébrés. Enfin, chez C.Elegans ce complexe est aussi en
+aval des MRFs mais il participe en plus à la détermination de cellules non
+myogéniques.  \\
+
+Nous voyons donc que l'évolution d'un réseau génétique possède de multiples
+facettes : conservation de motifs de réseau fonctionnellement importants (dans
+notre exemple, la boucle feedforward au coeur du réseau régissant l'aspect
+temporel de l'expression des cibles), recâblage des interactions pour traiter
+différents signaux d'entrée\ldots Par ailleurs, il apparaît que plus qu'à des
+TFs particuliers, c'est à des familles de TFs que nous avons affaire. Aussi un
+même rôle au sein du réseau peut-il être rempli par différents membres d'une
+même famille, comme c'est le cas pour \myod et \twi. Ceci s'explique par le
+fait que les membres d'une même famille partagent des propriétés d'interaction
+avec l'ADN semblables. Ces interactions sont à la source du fonctionnement du
+réseau, et nous allons maintenant présenter plus en avant leurs propriétés.
 
 
 
 
-\newpage
 \section{Modèles mathématiques des interactions protéine-ADN}
 
-\subsection{Modèle biophysique}
-\subsection{Modèle thermodynamique}
-\subsection{Modèle PWM}
-Le modèle PWM est le modèle le
-plus simple décrivant l'énergie de fixation entre un \tf et un site de
-fixation sur l'ADN. Ce modèle est basé sur l'hypothèse que l'énergie
-de fixation à un site est la somme des énergies de fixation à chaque
-nucléotide. Si la concentration du \tf est faible, ce modèle se réduit à un
-modèle biophysique.
+Nous l'avons vu, les interactions entre \tfs et ADN sont une composante
+essentielle des réseaux génétiques. Les TFs se fixent sur des sites spécifiques
+de $\sim10$ bp dans le voisinage des gènes qu'ils régulent. Trouver ces sites
+est donc un premier pas vers la reconstruction du réseau de régulation
+sous-jacent. Pour ce faire, plusieurs modèles d'interactions protéine-ADN ont
+été proposés.
+
+\subsection{Modèle PWM} Le modèle PWM est le modèle le plus simple décrivant
+l'énergie de fixation entre un \tf et un site de fixation sur l'ADN. Ce modèle
+est basé sur l'hypothèse que l'énergie de fixation à un site est la somme des
+énergies de fixation à chaque nucléotide. Si la concentration du \tf est
+faible, ce modèle se réduit à un modèle biophysique.
 
 \bfig
 \includegraphics[width=.7\textwidth]{figures/wasserman-PWM.pdf}
@@ -420,6 +499,8 @@ modèle biophysique.
 
 } 
 \efig
+\subsection{Modèle biophysique}
+\subsection{Modèle thermodynamique}
 
 \newpage
 \section{Mesures expérimentales des interactions protéine-ADN}
