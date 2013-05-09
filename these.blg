@@ -3,47 +3,49 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: these.aux
 A level-1 auxiliary file: packaging/Avant_Propos.aux
 A level-1 auxiliary file: packaging/Conclusion_Generale.aux
-The style file: biblio/paolostyle.bst
+The style file: acm.bst
 A level-1 auxiliary file: packaging/abstract.aux
 Database file #1: biblio/papers.bib
-You've used 46 entries,
-            2272 wiz_defined-function locations,
-            1299 strings with 20026 characters,
-and the built_in function-call counts, 19298 in all, are:
-= -- 978
-> -- 625
-< -- 40
-+ -- 239
-- -- 193
-* -- 1753
-:= -- 1998
-add.period$ -- 46
-call.type$ -- 46
-change.case$ -- 0
+Warning--to sort, need author or key in us2001genomes
+You've used 47 entries,
+            2253 wiz_defined-function locations,
+            855 strings with 12705 characters,
+and the built_in function-call counts, 17227 in all, are:
+= -- 1596
+> -- 1058
+< -- 0
++ -- 442
+- -- 386
+* -- 1663
+:= -- 2900
+add.period$ -- 138
+call.type$ -- 47
+change.case$ -- 333
 chr.to.int$ -- 0
-cite$ -- 46
-duplicate$ -- 2204
-empty$ -- 1986
-format.name$ -- 227
-if$ -- 3957
+cite$ -- 48
+duplicate$ -- 417
+empty$ -- 1196
+format.name$ -- 386
+if$ -- 3396
 int.to.chr$ -- 0
-int.to.str$ -- 46
-missing$ -- 579
-newline$ -- 142
-num.names$ -- 46
-pop$ -- 785
+int.to.str$ -- 47
+missing$ -- 42
+newline$ -- 235
+num.names$ -- 92
+pop$ -- 273
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 286
 quote$ -- 0
-skip$ -- 197
+skip$ -- 249
 stack$ -- 0
-substring$ -- 783
-swap$ -- 1778
-text.length$ -- 40
+substring$ -- 1047
+swap$ -- 93
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 106
-width$ -- 48
-write$ -- 409
+type$ -- 188
+warning$ -- 1
+while$ -- 153
+width$ -- 49
+write$ -- 465
+(There was 1 warning)

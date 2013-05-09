@@ -471,35 +471,106 @@ réseau, et nous allons maintenant présenter plus en avant leurs propriétés.
 Nous l'avons vu, les interactions entre \tfs et ADN sont une composante
 essentielle des réseaux génétiques. Les TFs se fixent sur des sites spécifiques
 de $\sim10$ bp dans le voisinage des gènes qu'ils régulent. Trouver ces sites
-est donc un premier pas vers la reconstruction du réseau de régulation
-sous-jacent. Pour ce faire, plusieurs modèles d'interactions protéine-ADN ont
+est donc un premier pas vers la reconstruction des réseaux de régulation
+sous-jacents. Pour ce faire, plusieurs modèles d'interactions protéine-ADN ont
 été proposés.
 
-\subsection{Modèle PWM} Le modèle PWM est le modèle le plus simple décrivant
-l'énergie de fixation entre un \tf et un site de fixation sur l'ADN. Ce modèle
-est basé sur l'hypothèse que l'énergie de fixation à un site est la somme des
-énergies de fixation à chaque nucléotide. Si la concentration du \tf est
-faible, ce modèle se réduit à un modèle biophysique.
+\subsection{Modèle PWM} 
+Présenté en 1987 par Berg et von Hippel~\cite{Berg1987p3746}, le modèle PWM est
+le modèle le plus simple décrivant l'énergie de fixation entre un \tf et un
+site de fixation sur l'ADN.  Ce modèle repose sur plusieurs hypothèses. Tout
+d'abord, il y a l'hypothèse importante que les sites de fixation des TFs sur
+l'ADN ont été sélectionnés au cours de l'évolution pour leur propriété de sites
+de reconnaissance, qu'elle que soit la concentration du TF dans la cellule. En
+d'autres termes, le processus de sélection discrimine les sites de fixation sur
+la seule base de leur énergie de fixation à un TF donné : les sites ayant une
+énergie fixation dans une certaine gamme sont retenus, les autres rejetés.  Par
+ailleurs, au sein de cette gamme d'énérgie \og utile \fg, toutes les séquences
+sont équiprobables. Enfin, la dernière hypothèse est que chaque nucléotide d'un
+site de fixation contribue de manière indépendante, \cad additive à l'énergie
+totale du site.  Cette hypothèse permet de simplifier le problème en gardant le
+nombre de paramètres petit. L'argument de Berg et von Hippel est que ce
+problème est analogue à celui de physique statistique consistant à déduire les
+taux d'occupation des niveaux d'énergie de particules indépendantes sachant que
+l'énergie totale doit avoir une certaine valeur moyenne $E$. La solution de ce
+problème est donnée par la formule de Boltzmann reliant énergie et taux
+d'occupation :
+
+\begin{equation} 
+    f_{i,b} = \exp(-\lambda E_{i,b}) / \Z_i}
+    \label{eq:boltzmann}
+\end{equation}
+
+où $f_{i,b}$ est la probabilité d'observer la base $b$ à la position $i$ du
+site de fixation, $E_{i,b}$ est l'énergie associée (en $k_BT$), $\Z_i$ est la
+fonction partition qui permet de normaliser la distribution à la position $i$,
+et $\lambda$ est un facteur sans dimension, analogue du $\beta$ de la
+thermodynamique, et lié au processus de sélection. Dans la suite, nous
+intégrerons ce facteur à l'énergie.  \\ La connaissance des fréquences des
+bases permet de définir une autre quantité utile caractérisant la variabilité
+des séquences de fixation, l'information relative des sites par rapport à une
+séquence d'ADN aléatoire :
+
+\begin{equation} 
+    I = \sum_{i=1}^{L}\sum_{b = A,C,G,T}^{}f_{i,b}\ln(\frac{f_{i,b}}{\pi_b}) 
+\end{equation}
+
+où $L$ est la taille du site de fixation et $\pi_b$ correspond à la probabilité
+\apriori d'observer la base $b$ dans le génome. Parce que l'énergie est définie
+à une constante près, il est usuel de la définir relativement au ``background''
+: 
+
+\begin{equation} \tilde{E}_{i,b} = \ln(\frac{f_{i,b}}{\pi_b})} \end{equation}
+
+L'énergie totale 
+
+\begin{equation}
+    \begin{align}
+        E &= \sum_{i=1}^{L}\tilde{E}_{i,b} \\
+        &= \sum_{i=1}^{L}\ln(\frac{f_{b(i)}}{\pi_b})\\
+        &=\ln\left(\frac{\prod_{i=1}^{L}f_{b(i)}}{\prod_{i=1}^{L}\pi_b}\right)
+    \end{align}
+\end{equation} 
+
+où $b(i)$ est la base située à la position $i$, quantifie alors simplement
+à quel point la séquence est plus ($E>0$) ou moins ($E<0$) probablement un site
+de fixation qu'un site tiré au hasard dans le génome. On parle aussi de
+\textit{score} de la séquence. L'information relative $I$ peut alors être vue
+comme quantifiant à quel point l'ensemble des sites de fixation se distingue
+d'un ensemble de même taille de sites tirés au hasard.
+
+Avec ces outils en main, il devient alors simple de bâtir un modèle PWM et de
+l'utiliser (fig.~\ref{fig:wasserman-PWM}). Étant donnés des sites de fixation
+connus, il suffit d'évaluer la fréquence d'occurrence de chaque base à chaque
+position. La comparaison avec les probabilités génomiques \apriori d'occurrence
+permet alors de bâtir une matrice score, la PWM. Cette matrice peut alors être
+utilisée pour attribuer un score aux séquences d'ADN en additionnant les scores
+à chaque position. Finalement, les séquences ayant un score dépassant un
+certain seuil sont considérées comme des séquences de fixation.
 
 \bfig
 \includegraphics[width=.7\textwidth]{figures/wasserman-PWM.pdf}
 \captionbf{Construction et utilisation du modèle PWM}{
-   Figure tirée de \cite{Wasserman2004p624}. (a) Supposons connus un certain nombre
-   de sites de fixation d'un \tf (dans ce cas MEF2).(b) Séquence consensus
-   correspondante utilisant les symboles IUPAC. (c) Une matrice de fréquence
-   est construite, indiquant pour chaque nucléotide sa multiplicité à une
-   position donnée dans le site. (d) La PWM est simplement construite en
-   prenant le logarithme relatif des fréquences PWMs par rapport aux fréquences
-   \textit{background} des nucléotides. (e) Le score (ou énergie) d'une séquence d'ADN
-   donnée est calculé en additionnant les poids PWMs correspondant. (f) La PWM
-   peut être représentée sous forme de logo \cite{Giocomo2011p3442}. Dans cette
-   représentation, la hauteur d'une colonne représente le contenu en
-   information ou information relative moyenne d'une position, et la taille des
-   bases reflète leur fréquence observée.
+    Figure tirée de \cite{Wasserman2004p624}. (a) Supposons connus un certain nombre
+    de sites de fixation d'un \tf (dans ce cas MEF2).(b) Séquence consensus
+    correspondante utilisant les symboles IUPAC. (c) Une matrice de fréquence
+    est construite, indiquant pour chaque nucléotide sa multiplicité à une
+    position donnée dans le site. (d) La PWM est simplement construite en
+    prenant le logarithme relatif des fréquences PWMs par rapport aux fréquences
+    \apriori des nucléotides. (e) Le score (ou énergie) d'une séquence d'ADN
+    donnée est calculé en additionnant les poids PWMs correspondant. (f) La PWM
+    peut être représentée sous forme de logo \cite{Giocomo2011p3442}. Dans cette
+    représentation, la hauteur d'une colonne représente le contenu en
+    information ou information relative moyenne d'une position, et la taille des
+    bases reflète leur fréquence observée.
 
 } 
+\label{fig:wasserman-PWM}
 \efig
 \subsection{Modèle biophysique}
+
+Si la concentration du \tf est faible, ce modèle se réduit au modèle PWM.
+
 \subsection{Modèle thermodynamique}
 
 \newpage
@@ -516,7 +587,7 @@ faible, ce modèle se réduit à un modèle biophysique.
 \bfig
 \includegraphics[width=.4\textwidth]{figures/furey-chipseq.pdf}
 \captionbf{Étapes d'une expérience de \chipseq}{
-   Figure tirée de \cite{Furey2012p3920}.
+    Figure tirée de \cite{Furey2012p3920}.
 } 
 \efig
 \subsubsection{DNAse}
@@ -540,7 +611,7 @@ faible, ce modèle se réduit à un modèle biophysique.
 \bfig
 \includegraphics[width=.8\textwidth]{figures/furlong-eve-enhancers-to-stripes.pdf}
 \captionbf{Différents CRMs conduisent à différents patterns d'expression}{
-   Figure tirée de \cite{Liu2009p556}.
+    Figure tirée de \cite{Liu2009p556}.
 } 
 \efig
 
@@ -549,7 +620,7 @@ faible, ce modèle se réduit à un modèle biophysique.
 \bfig
 \includegraphics[width=\textwidth]{figures/stathopoulos-CRMs-sites-twist-dorsal-snail.pdf}
 \captionbf{}{
-   Figure tirée de \cite{Stathopoulos2005p4051}.
+    Figure tirée de \cite{Stathopoulos2005p4051}.
 } 
 \efig
 
@@ -560,60 +631,60 @@ faible, ce modèle se réduit à un modèle biophysique.
 \captionbf{Les états épigénétiques des CRMs}{ Figure tirée de
     \cite{Hartwell1999p560}.  } \efig
 
-\newpage
-\subsection{Prédiction des CRMs}
+    \newpage
+    \subsection{Prédiction des CRMs}
 
-\bfig
-\includegraphics[width=\textwidth]{figures/hardison-CRM-prediction.pdf}
-\captionbf{Approches pour la prédiction des CRMs}{
-   Figure tirée de \cite{Hartwell1999p560}.
-} 
-\efig
+    \bfig
+    \includegraphics[width=\textwidth]{figures/hardison-CRM-prediction.pdf}
+    \captionbf{Approches pour la prédiction des CRMs}{
+        Figure tirée de \cite{Hartwell1999p560}.
+    } 
+    \efig
 
-\newpage
-\subsection{Grammaire des enhancers : enhanceosome vs billboard}
+    \newpage
+    \subsection{Grammaire des enhancers : enhanceosome vs billboard}
 
-\bfig
-\includegraphics[width=\textwidth]{figures/arnosti-enhanceosome.pdf}
-\captionbf{}{
-   figure tirée de \cite{Arnosti2005p3786}.
-} 
-\efig
+    \bfig
+    \includegraphics[width=\textwidth]{figures/arnosti-enhanceosome.pdf}
+    \captionbf{}{
+        figure tirée de \cite{Arnosti2005p3786}.
+    } 
+    \efig
 
-\newpage
-\subsection{Évolution des enhancers}
+    \newpage
+    \subsection{Évolution des enhancers}
 
-\bfig
-\includegraphics[width=\textwidth]{figures/liberman-crm-conservation-flexibility.pdf}
-\captionbf{}{
-   figure tirée de \cite{liberman2009p3886}.
-} 
-\efig
+    \bfig
+    \includegraphics[width=\textwidth]{figures/liberman-crm-conservation-flexibility.pdf}
+    \captionbf{}{
+        figure tirée de \cite{liberman2009p3886}.
+    } 
+    \efig
 
-\newpage
-\bfig
-\includegraphics[width=\textwidth]{figures/wilson-CRMs-evolution.pdf}
-\captionbf{}{
-   figure tirée de \cite{Wittkopp2011p3240}.
-} 
-\efig
+    \newpage
+    \bfig
+    \includegraphics[width=\textwidth]{figures/wilson-CRMs-evolution.pdf}
+    \captionbf{}{
+        figure tirée de \cite{Wittkopp2011p3240}.
+    } 
+    \efig
 
-\cite{Feschotte2008dq}
+    \cite{Feschotte2008dq}
 
-\newpage
-\subsection{Les \og shadow enhancers \fg}
-
-
-\newpage
-\subsection{Validation expérimentale}
+    \newpage
+    \subsection{Les \og shadow enhancers \fg}
 
 
-\bfig
-\includegraphics[width=\textwidth]{figures/hardison-CRM-test.pdf}
-\captionbf{Méthodes de validation des CRMs}{
-   Figure tirée de \cite{Hartwell1999p560}.
-} 
-\efig
+    \newpage
+    \subsection{Validation expérimentale}
+
+
+    \bfig
+    \includegraphics[width=\textwidth]{figures/hardison-CRM-test.pdf}
+    \captionbf{Méthodes de validation des CRMs}{
+        Figure tirée de \cite{Hartwell1999p560}.
+    } 
+    \efig
 
 
 %\bfig
@@ -627,14 +698,14 @@ faible, ce modèle se réduit à un modèle biophysique.
 %\efig
 %
 
-\section{Banques de données}
+    \section{Banques de données}
 
-\subsection{Séquences génomiques et alignements}
-statistiques du genome (lognormal)
-\subsection{Annotations (TSSs, repeats\ldots)}
-\subsection{Jaspar et Transfac}
-\subsection{Visualisation sur UCSC}
-\subsection{Le projet ENCODE}
+    \subsection{Séquences génomiques et alignements}
+    statistiques du genome (lognormal)
+    \subsection{Annotations (TSSs, repeats\ldots)}
+    \subsection{Jaspar et Transfac}
+    \subsection{Visualisation sur UCSC}
+    \subsection{Le projet ENCODE}
 
 
 

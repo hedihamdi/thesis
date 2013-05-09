@@ -1,270 +1,274 @@
 \begin{thebibliography}{10}
-\newcommand{\enquote}[1]{``#1''}
-
-\bibitem{Keim2004uq}
-{\sc C.~N. Keim}, {\sc J.~L. Martins}, {\sc F.~Abreu}, {\sc A.~S. Rosado}, {\sc
-  H.~L. de~Barros}, {\sc R.~Borojevic}, {\sc U.~Lins} et {\sc M.~Farina},
-  \enquote{Multicellular life cycle of magnetotactic prokaryotes}, {\em FEMS
-  Microbiol Lett\/} {\bf 240}, n\textsuperscript{o}\kern.2em\relax~2, 203--8
-  (Nov 2004).
-
-\bibitem{EMBL2001}
-{\sc A.~Brazma}, {\sc H.~Parkinson}, {\sc T.~Schlitt} et {\sc M.~Shojatalab},
-  \enquote{A quick introduction to elements of biology - cells, molecules,
-  genes, functional genomics, microarrays},
-  \url{http://www.ebi.ac.uk/microarray/biology_intro.html} (Oct 2001).
-
-\bibitem{Furusawa2012p3898}
-{\sc C.~Furusawa} et {\sc K.~Kaneko}, \enquote{A Dynamical-Systems View of Stem
-  Cell Biology}, {\em Science\/} {\bf 338}, n\textsuperscript{o}\kern.2em\relax
-  6104, 215--217 (Oct 2012).
-
-\bibitem{waddington1957strategy}
-{\sc C.~H. Waddington} {\sc et~al.}, \enquote{The strategy of the genes. A
-  discussion of some aspects of theoretical biology. With an appendix by H.
-  Kacser.}, {\em The strategy of the genes. A discussion of some aspects of
-  theoretical biology. With an appendix by H. Kacser.\/} pages ix+--262 (1957).
-
-\bibitem{kaufmann1993origins}
-{\sc S.~Kaufmann}, \enquote{The origins of order},  (1993).
-
-\bibitem{Graf2009p2592}
-{\sc T.~Graf} et {\sc T.~Enver}, \enquote{Forcing cells to change lineages},
-  {\em Nature\/} {\bf 462}, n\textsuperscript{o}\kern.2em\relax 7273, 587--94
-  (Dec 2009).
-
-\bibitem{Blau:1985vn}
-{\sc H.~M. Blau}, {\sc G.~K. Pavlath}, {\sc E.~C. Hardeman}, {\sc C.~P. Chiu},
-  {\sc L.~Silberstein}, {\sc S.~G. Webster}, {\sc S.~C. Miller} et {\sc
-  C.~Webster}, \enquote{Plasticity of the differentiated state}, {\em
-  Science\/} {\bf 230}, n\textsuperscript{o}\kern.2em\relax 4727, 758--66 (Nov
-  1985).
-
-\bibitem{davis1987expression}
-{\sc R.~L. Davis}, {\sc H.~Weintraub} et {\sc A.~B. Lassar},
-  \enquote{Expression of a single transfected cDNA converts fibroblasts to
-  myoblasts}, {\em Cell\/} {\bf 51}, n\textsuperscript{o}\kern.2em\relax~6,
-  987--1000 (1987).
-
-\bibitem{Kulessa:1995ys}
-{\sc H.~Kulessa}, {\sc J.~Frampton} et {\sc T.~Graf}, \enquote{GATA-1
-  reprograms avian myelomonocytic cell lines into eosinophils, thromboblasts,
-  and erythroblasts}, {\em Genes Dev\/} {\bf 9},
-  n\textsuperscript{o}\kern.2em\relax~10, 1250--62 (May 1995).
-
-\bibitem{Gurdon:2008zr}
-{\sc J.~B. Gurdon} et {\sc D.~A. Melton}, \enquote{Nuclear reprogramming in
-  cells}, {\em Science\/} {\bf 322}, n\textsuperscript{o}\kern.2em\relax 5909,
-  1811--5 (Dec 2008).
-
-\bibitem{Takahashi:2006kx}
-{\sc K.~Takahashi} et {\sc S.~Yamanaka}, \enquote{Induction of pluripotent stem
-  cells from mouse embryonic and adult fibroblast cultures by defined factors},
-  {\em Cell\/} {\bf 126}, n\textsuperscript{o}\kern.2em\relax~4, 663--76 (Aug
-  2006).
 
 \bibitem{us2001genomes}
-{\sc O.~of~Biological}, {\sc E.~Research} et {\sc O.~of~Advanced Scientific
-  Computing Research of the U.S. Department~of Energy}, \enquote{Genomes to
-  life: accelerating biological discovery},
-  http://genomicscience.energy.gov/roadmap/GTLcomplete_web.pdf (Apr 2001).
-
-\bibitem{Nurse2011p2308}
-{\sc P.~Nurse{\ldots}}, \enquote{The Cell in an Era of Systems Biology}, {\em
-  Cell\/}  (Jan 2011).
-
-\bibitem{Jolma2013p3971}
-{\sc A.~Jolma}, {\sc J.~Yan}, {\sc T.~Whitington}, {\sc J.~Toivonen}, {\sc
-  K.~R. Nitta}, {\sc P.~Rastas}, {\sc E.~Morgunova}, {\sc M.~Enge}, {\sc
-  M.~Taipale}, {\sc G.~Wei}, {\sc K.~Palin}, {\sc J.~M. Vaquerizas}, {\sc
-  R.~Vincentelli}, {\sc N.~M. Luscombe}, {\sc T.~R. Hughes}, {\sc P.~Lemaire},
-  {\sc E.~Ukkonen}, {\sc T.~Kivioja} et {\sc J.~Taipale}, \enquote{DNA-Binding
-  Specificities of Human Transcription Factors}, {\em Cell\/} {\bf 152},
-  n\textsuperscript{o}\kern.2em\relax 1-2, 327--39 (Jan 2013).
-
-\bibitem{Schones2008nx}
-{\sc D.~E. Schones} et {\sc K.~Zhao}, \enquote{Genome-wide approaches to
-  studying chromatin modifications}, {\em Nat Rev Genet\/} {\bf 9},
-  n\textsuperscript{o}\kern.2em\relax~3, 179--91 (Mar 2008).
-
-\bibitem{Bird2002oq}
-{\sc A.~Bird}, \enquote{DNA methylation patterns and epigenetic memory}, {\em
-  Genes Dev\/} {\bf 16}, n\textsuperscript{o}\kern.2em\relax~1, 6--21 (Jan
-  2002).
-
-\bibitem{Greer2012ve}
-{\sc E.~L. Greer} et {\sc Y.~Shi}, \enquote{Histone methylation: a dynamic mark
-  in health, disease and inheritance}, {\em Nat Rev Genet\/} {\bf 13},
-  n\textsuperscript{o}\kern.2em\relax~5, 343--57 (May 2012).
-
-\bibitem{Hammond2001bh}
-{\sc S.~M. Hammond}, {\sc A.~A. Caudy} et {\sc G.~J. Hannon},
-  \enquote{Post-transcriptional gene silencing by double-stranded RNA}, {\em
-  Nat Rev Genet\/} {\bf 2}, n\textsuperscript{o}\kern.2em\relax~2, 110--9 (Feb
-  2001).
-
-\bibitem{Hannon2002qf}
-{\sc G.~J. Hannon}, \enquote{RNA interference}, {\em Nature\/} {\bf 418},
-  n\textsuperscript{o}\kern.2em\relax 6894, 244--51 (Jul 2002).
-
-\bibitem{Bartel2009cr}
-{\sc D.~P. Bartel}, \enquote{MicroRNAs: target recognition and regulatory
-  functions}, {\em Cell\/} {\bf 136}, n\textsuperscript{o}\kern.2em\relax~2,
-  215--33 (Jan 2009).
-
-\bibitem{Kondo2010ly}
-{\sc T.~Kondo}, {\sc S.~Plaza}, {\sc J.~Zanet}, {\sc E.~Benrabah}, {\sc
-  P.~Valenti}, {\sc Y.~Hashimoto}, {\sc S.~Kobayashi}, {\sc F.~Payre} et {\sc
-  Y.~Kageyama}, \enquote{Small peptides switch the transcriptional activity of
-  Shavenbaby during Drosophila embryogenesis}, {\em Science\/} {\bf 329},
-  n\textsuperscript{o}\kern.2em\relax 5989, 336--9 (Jul 2010).
-
-\bibitem{Lee2002p537}
-{\sc T.~Lee}, {\sc N.~Rinaldi}, {\sc F.~Robert}, {\sc D.~Odom}, {\sc
-  Z.~Bar-Joseph}, {\sc G.~Gerber}, {\sc N.~Hannett}, {\sc C.~Harbison}, {\sc
-  C.~Thompson} et {\sc I.~Simon}, \enquote{Transcriptional regulatory networks
-  in Saccharomyces cerevisiae}, {\em Science\/} {\bf 298},
-  n\textsuperscript{o}\kern.2em\relax 5594, 799 (2002).
-
-\bibitem{Odom2004hc}
-{\sc D.~T. Odom}, {\sc N.~Zizlsperger}, {\sc D.~B. Gordon}, {\sc G.~W. Bell},
-  {\sc N.~J. Rinaldi}, {\sc H.~L. Murray}, {\sc T.~L. Volkert}, {\sc
-  J.~Schreiber}, {\sc P.~A. Rolfe}, {\sc D.~K. Gifford}, {\sc E.~Fraenkel},
-  {\sc G.~I. Bell} et {\sc R.~A. Young}, \enquote{Control of pancreas and liver
-  gene expression by HNF transcription factors}, {\em Science\/} {\bf 303},
-  n\textsuperscript{o}\kern.2em\relax 5662, 1378--81 (Feb 2004).
+{Genomes to life: accelerating biological discovery (Office of Biological and
+  Environmental Research and Office of Advanced Scientific Computing Research
+  of the U.S. Department of Energy)}.
+\newblock \url{http://genomicscience.energy.gov/roadmap/GTLcomplete\_web.pdf},
+  Apr 2001.
 
 \bibitem{alon2007introduction}
-{\sc U.~Alon}, \enquote{An Introduction to Systems Biology: Design Principles
-  of Biological Circuits (Mathematical and Computational Biology Series vol
-  10)},  (2007).
-
-\bibitem{ShenOrr2002p648}
-{\sc S.~Shen-Orr}, {\sc R.~Milo}, {\sc S.~Mangan} et {\sc U.~Alon},
-  \enquote{Network motifs in the transcriptional regulation network of
-  Escherichia coli}, {\em Nature genetics\/} {\bf 31},
-  n\textsuperscript{o}\kern.2em\relax~1, 64--68 (2002).
-
-\bibitem{Milo2002tg}
-{\sc R.~Milo}, {\sc S.~Shen-Orr}, {\sc S.~Itzkovitz}, {\sc N.~Kashtan}, {\sc
-  D.~Chklovskii} et {\sc U.~Alon}, \enquote{Network motifs: simple building
-  blocks of complex networks}, {\em Science\/} {\bf 298},
-  n\textsuperscript{o}\kern.2em\relax 5594, 824--7 (Oct 2002).
+{\sc Alon, U.}
+\newblock An introduction to systems biology: Design principles of biological
+  circuits (mathematical and computational biology series vol 10), 2007.
 
 \bibitem{Alon2007p2353}
-{\sc U.~Alon}, \enquote{Network motifs: theory and experimental approaches},
-  {\em Nat Rev Genet\/} {\bf 8}, n\textsuperscript{o}\kern.2em\relax~6,
-  450--461 (2007).
-
-\bibitem{Liu2009p556}
-{\sc Y.-H. Liu}, {\sc J.~S. Jakobsen}, {\sc G.~Valentin}, {\sc I.~Amarantos},
-  {\sc D.~T. Gilmour} et {\sc E.~E.~M. Furlong}, \enquote{A systematic analysis
-  of Tinman function reveals Eya and JAK-STAT signaling as essential regulators
-  of muscle development}, {\em Developmental Cell\/} {\bf 16},
-  n\textsuperscript{o}\kern.2em\relax~2, 280--91 (Feb 2009).
-
-\bibitem{Weintraub1989ij}
-{\sc H.~Weintraub}, {\sc S.~J. Tapscott}, {\sc R.~L. Davis}, {\sc M.~J.
-  Thayer}, {\sc M.~A. Adam}, {\sc A.~B. Lassar} et {\sc A.~D. Miller},
-  \enquote{Activation of muscle-specific genes in pigment, nerve, fat, liver,
-  and fibroblast cell lines by forced expression of MyoD}, {\em Proc Natl Acad
-  Sci U S A\/} {\bf 86}, n\textsuperscript{o}\kern.2em\relax~14, 5434--8 (Jul
-  1989).
-
-\bibitem{Baylies1998bs}
-{\sc M.~K. Baylies}, {\sc M.~Bate} et {\sc M.~Ruiz~Gomez}, \enquote{Myogenesis:
-  a view from Drosophila}, {\em Cell\/} {\bf 93},
-  n\textsuperscript{o}\kern.2em\relax~6, 921--7 (Jun 1998).
-
-\bibitem{Wasserman2004p624}
-{\sc W.~W. Wasserman} et {\sc A.~Sandelin}, \enquote{Applied bioinformatics for
-  the identification of regulatory elements}, {\em Nature Reviews Genetics\/}
-  {\bf 5}, n\textsuperscript{o}\kern.2em\relax~4, 276--87 (Apr 2004).
-
-\bibitem{Giocomo2011p3442}
-{\sc L.~M. Giocomo}, {\sc M.-B. Moser} et {\sc E.~I. Moser},
-  \enquote{Computational models of grid cells}, {\em Neuron\/} {\bf 71},
-  n\textsuperscript{o}\kern.2em\relax~4, 589--603 (Aug 2011).
-
-\bibitem{Furey2012p3920}
-{\sc T.~S. Furey}, \enquote{ChIP-seq and beyond: new and improved methodologies
-  to detect and characterize protein-DNA interactions}, {\em Nature Reviews
-  Genetics\/} {\bf 13}, n\textsuperscript{o}\kern.2em\relax~12, 840--52 (Dec
-  2012).
-
-\bibitem{Stathopoulos2005p4051}
-{\sc A.~Stathopoulos} et {\sc M.~Levine}, \enquote{Genomic regulatory networks
-  and animal development}, {\em Dev Cell\/} {\bf 9},
-  n\textsuperscript{o}\kern.2em\relax~4, 449--62 (Oct 2005).
-
-\bibitem{Hartwell1999p560}
-{\sc L.~Hartwell}, {\sc J.~Hopfield}, {\sc S.~Leibler} et {\sc A.~Murray},
-  \enquote{From molecular to modular cell biology}, {\em Nature\/} {\bf 402},
-  n\textsuperscript{o}\kern.2em\relax 6761, 47 (1999).
+{\sc Alon, U.}
+\newblock Network motifs: theory and experimental approaches.
+\newblock {\em Nat Rev Genet 8}, 6 (2007), 450--461.
 
 \bibitem{Arnosti2005p3786}
-{\sc D.~N. Arnosti} et {\sc M.~M. Kulkarni}, \enquote{Transcriptional
-  enhancers: Intelligent enhanceosomes or flexible billboards?}, {\em J Cell
-  Biochem\/} {\bf 94}, n\textsuperscript{o}\kern.2em\relax~5, 890--8 (Apr
-  2005).
+{\sc Arnosti, D.~N., and Kulkarni, M.~M.}
+\newblock Transcriptional enhancers: Intelligent enhanceosomes or flexible
+  billboards?
+\newblock {\em J Cell Biochem 94}, 5 (Apr 2005), 890--8.
 
-\bibitem{liberman2009p3886}
-{\sc L.~M. Liberman} et {\sc A.~Stathopoulos}, \enquote{Design flexibility in
-  cis-regulatory control of gene expression: Synthetic and comparative
-  evidence}, {\em Developmental Biology\/} {\bf 327},
-  n\textsuperscript{o}\kern.2em\relax~2, 578--589 (Mar 2009).
+\bibitem{Bartel2009cr}
+{\sc Bartel, D.~P.}
+\newblock Micrornas: target recognition and regulatory functions.
+\newblock {\em Cell 136}, 2 (Jan 2009), 215--33.
 
-\bibitem{Wittkopp2011p3240}
-{\sc P.~J. Wittkopp} et {\sc G.~Kalay}, \enquote{Cis-regulatory elements:
-  molecular mechanisms and evolutionary processes underlying divergence}, {\em
-  Nature Reviews Genetics\/} {\bf 13}, n\textsuperscript{o}\kern.2em\relax~1,
-  59--69 (Dec 2011).
+\bibitem{Baylies1998bs}
+{\sc Baylies, M.~K., Bate, M., and Ruiz~Gomez, M.}
+\newblock Myogenesis: a view from drosophila.
+\newblock {\em Cell 93}, 6 (Jun 1998), 921--7.
 
-\bibitem{Feschotte2008dq}
-{\sc C.~Feschotte}, \enquote{Transposable elements and the evolution of
-  regulatory networks}, {\em Nat Rev Genet\/} {\bf 9},
-  n\textsuperscript{o}\kern.2em\relax~5, 397--405 (May 2008).
+\bibitem{Berg1987p3746}
+{\sc Berg, O., and von Hippel, P.}
+\newblock Selection of dna binding sites by regulatory proteins:
+  Statistical-mechanical theory and application to operators and promoters.
+\newblock {\em Journal of molecular biology 193}, 4 (1987), 723--743.
 
-\bibitem{Jaynes1957p3771}
-{\sc E.~Jaynes}, \enquote{Information theory and statistical mechanics. II},
-  {\em Physical review\/} {\bf 108}, n\textsuperscript{o}\kern.2em\relax~2, 171
-  (1957).
+\bibitem{Bird2002oq}
+{\sc Bird, A.}
+\newblock Dna methylation patterns and epigenetic memory.
+\newblock {\em Genes Dev 16}, 1 (Jan 2002), 6--21.
 
-\bibitem{Shannon1948p699}
-{\sc C.~Shannon}, \enquote{A Mathematical Theory of Communication}, {\em Bell
-  Syst Tech J\/} {\bf 27}, n\textsuperscript{o}\kern.2em\relax~4, 623--656 (Jan
-  1948).
+\bibitem{Blau:1985vn}
+{\sc Blau, H.~M., Pavlath, G.~K., Hardeman, E.~C., Chiu, C.~P., Silberstein,
+  L., Webster, S.~G., Miller, S.~C., and Webster, C.}
+\newblock Plasticity of the differentiated state.
+\newblock {\em Science 230}, 4727 (Nov 1985), 758--66.
 
-\bibitem{Sigal2006p3278}
-{\sc A.~Sigal}, {\sc R.~Milo}, {\sc A.~Cohen}, {\sc N.~Geva-Zatorsky}, {\sc
-  Y.~Klein}, {\sc Y.~Liron}, {\sc N.~Rosenfeld}, {\sc T.~Danon}, {\sc
-  N.~Perzov} et {\sc U.~Alon}, \enquote{Variability and memory of protein
-  levels in human cells}, {\em Nature\/} {\bf 444},
-  n\textsuperscript{o}\kern.2em\relax 7119, 643--646 (Nov 2006).
-
-\bibitem{Zinzen2009p760}
-{\sc R.~Zinzen}, {\sc C.~Girardot}, {\sc J.~Gagneur}, {\sc M.~Braun} et {\sc
-  E.~Furlong}, \enquote{Combinatorial binding predicts spatio-temporal
-  cis-regulatory activity}, {\em Nature\/} {\bf 462},
-  n\textsuperscript{o}\kern.2em\relax 7269, 65--70 (2009).
+\bibitem{EMBL2001}
+{\sc Brazma, A., Parkinson, H., Schlitt, T., and Shojatalab, M.}
+\newblock A quick introduction to elements of biology - cells, molecules,
+  genes, functional genomics, microarrays.
+\newblock \url{http://www.ebi.ac.uk/microarray/biology_intro.html}, Oct 2001.
 
 \bibitem{Chen2008p3738}
-{\sc X.~Chen}, {\sc H.~Xu}, {\sc P.~Yuan}, {\sc F.~Fang}, {\sc M.~Huss}, {\sc
-  V.~B. Vega}, {\sc E.~Wong}, {\sc Y.~L. Orlov}, {\sc W.~Zhang}, {\sc
-  J.~Jiang}, {\sc Y.-H. Loh}, {\sc H.~C. Yeo}, {\sc Z.~X. Yeo}, {\sc
-  V.~Narang}, {\sc K.~R. Govindarajan}, {\sc B.~Leong}, {\sc A.~Shahab}, {\sc
-  Y.~Ruan}, {\sc G.~Bourque}, {\sc W.-K. Sung}, {\sc N.~D. Clarke}, {\sc C.-L.
-  Wei} et {\sc H.-H. Ng}, \enquote{Integration of external signaling pathways
-  with the core transcriptional network in embryonic stem cells}, {\em Cell\/}
-  {\bf 133}, n\textsuperscript{o}\kern.2em\relax~6, 1106--17 (Jun 2008).
+{\sc Chen, X., Xu, H., Yuan, P., Fang, F., Huss, M., Vega, V.~B., Wong, E.,
+  Orlov, Y.~L., Zhang, W., Jiang, J., Loh, Y.-H., Yeo, H.~C., Yeo, Z.~X.,
+  Narang, V., Govindarajan, K.~R., Leong, B., Shahab, A., Ruan, Y., Bourque,
+  G., Sung, W.-K., Clarke, N.~D., Wei, C.-L., and Ng, H.-H.}
+\newblock Integration of external signaling pathways with the core
+  transcriptional network in embryonic stem cells.
+\newblock {\em Cell 133}, 6 (Jun 2008), 1106--17.
 
 \bibitem{ENCODEProjectConsortium2011p3726}
-{\sc E.~P. Consortium}, \enquote{A user's guide to the encyclopedia of DNA
-  elements (ENCODE)}, {\em Plos Biol\/} {\bf 9},
-  n\textsuperscript{o}\kern.2em\relax~4, e1001046 (Apr 2011).
+{\sc Consortium, E.~P.}
+\newblock A user's guide to the encyclopedia of dna elements (encode).
+\newblock {\em Plos Biol 9}, 4 (Apr 2011), e1001046.
+
+\bibitem{davis1987expression}
+{\sc Davis, R.~L., Weintraub, H., and Lassar, A.~B.}
+\newblock Expression of a single transfected cdna converts fibroblasts to
+  myoblasts.
+\newblock {\em Cell 51}, 6 (1987), 987--1000.
+
+\bibitem{Feschotte2008dq}
+{\sc Feschotte, C.}
+\newblock Transposable elements and the evolution of regulatory networks.
+\newblock {\em Nat Rev Genet 9}, 5 (May 2008), 397--405.
+
+\bibitem{Furey2012p3920}
+{\sc Furey, T.~S.}
+\newblock Chip-seq and beyond: new and improved methodologies to detect and
+  characterize protein-dna interactions.
+\newblock {\em Nature Reviews Genetics 13}, 12 (Dec 2012), 840--52.
+
+\bibitem{Furusawa2012p3898}
+{\sc Furusawa, C., and Kaneko, K.}
+\newblock A dynamical-systems view of stem cell biology.
+\newblock {\em Science 338}, 6104 (Oct 2012), 215--217.
+
+\bibitem{Giocomo2011p3442}
+{\sc Giocomo, L.~M., Moser, M.-B., and Moser, E.~I.}
+\newblock Computational models of grid cells.
+\newblock {\em Neuron 71}, 4 (Aug 2011), 589--603.
+
+\bibitem{Graf2009p2592}
+{\sc Graf, T., and Enver, T.}
+\newblock Forcing cells to change lineages.
+\newblock {\em Nature 462}, 7273 (Dec 2009), 587--94.
+
+\bibitem{Greer2012ve}
+{\sc Greer, E.~L., and Shi, Y.}
+\newblock Histone methylation: a dynamic mark in health, disease and
+  inheritance.
+\newblock {\em Nat Rev Genet 13}, 5 (May 2012), 343--57.
+
+\bibitem{Gurdon:2008zr}
+{\sc Gurdon, J.~B., and Melton, D.~A.}
+\newblock Nuclear reprogramming in cells.
+\newblock {\em Science 322}, 5909 (Dec 2008), 1811--5.
+
+\bibitem{Hammond2001bh}
+{\sc Hammond, S.~M., Caudy, A.~A., and Hannon, G.~J.}
+\newblock Post-transcriptional gene silencing by double-stranded rna.
+\newblock {\em Nat Rev Genet 2}, 2 (Feb 2001), 110--9.
+
+\bibitem{Hannon2002qf}
+{\sc Hannon, G.~J.}
+\newblock Rna interference.
+\newblock {\em Nature 418}, 6894 (Jul 2002), 244--51.
+
+\bibitem{Hartwell1999p560}
+{\sc Hartwell, L., Hopfield, J., Leibler, S., and Murray, A.}
+\newblock From molecular to modular cell biology.
+\newblock {\em Nature 402}, 6761 (1999), 47.
+
+\bibitem{Jaynes1957p3771}
+{\sc Jaynes, E.}
+\newblock Information theory and statistical mechanics. ii.
+\newblock {\em Physical review 108}, 2 (1957), 171.
+
+\bibitem{Jolma2013p3971}
+{\sc Jolma, A., Yan, J., Whitington, T., Toivonen, J., Nitta, K.~R., Rastas,
+  P., Morgunova, E., Enge, M., Taipale, M., Wei, G., Palin, K., Vaquerizas,
+  J.~M., Vincentelli, R., Luscombe, N.~M., Hughes, T.~R., Lemaire, P., Ukkonen,
+  E., Kivioja, T., and Taipale, J.}
+\newblock Dna-binding specificities of human transcription factors.
+\newblock {\em Cell 152}, 1-2 (Jan 2013), 327--39.
+
+\bibitem{kaufmann1993origins}
+{\sc Kaufmann, S.}
+\newblock The origins of order, 1993.
+
+\bibitem{Keim2004uq}
+{\sc Keim, C.~N., Martins, J.~L., Abreu, F., Rosado, A.~S., de~Barros, H.~L.,
+  Borojevic, R., Lins, U., and Farina, M.}
+\newblock Multicellular life cycle of magnetotactic prokaryotes.
+\newblock {\em FEMS Microbiol Lett 240}, 2 (Nov 2004), 203--8.
+
+\bibitem{Kondo2010ly}
+{\sc Kondo, T., Plaza, S., Zanet, J., Benrabah, E., Valenti, P., Hashimoto, Y.,
+  Kobayashi, S., Payre, F., and Kageyama, Y.}
+\newblock Small peptides switch the transcriptional activity of shavenbaby
+  during drosophila embryogenesis.
+\newblock {\em Science 329}, 5989 (Jul 2010), 336--9.
+
+\bibitem{Kulessa:1995ys}
+{\sc Kulessa, H., Frampton, J., and Graf, T.}
+\newblock Gata-1 reprograms avian myelomonocytic cell lines into eosinophils,
+  thromboblasts, and erythroblasts.
+\newblock {\em Genes Dev 9}, 10 (May 1995), 1250--62.
+
+\bibitem{Lee2002p537}
+{\sc Lee, T., Rinaldi, N., Robert, F., Odom, D., Bar-Joseph, Z., Gerber, G.,
+  Hannett, N., Harbison, C., Thompson, C., and Simon, I.}
+\newblock Transcriptional regulatory networks in saccharomyces cerevisiae.
+\newblock {\em Science 298}, 5594 (2002), 799.
+
+\bibitem{liberman2009p3886}
+{\sc Liberman, L.~M., and Stathopoulos, A.}
+\newblock Design flexibility in cis-regulatory control of gene expression:
+  Synthetic and comparative evidence.
+\newblock {\em Developmental Biology 327}, 2 (Mar 2009), 578--589.
+
+\bibitem{Liu2009p556}
+{\sc Liu, Y.-H., Jakobsen, J.~S., Valentin, G., Amarantos, I., Gilmour, D.~T.,
+  and Furlong, E. E.~M.}
+\newblock A systematic analysis of tinman function reveals eya and jak-stat
+  signaling as essential regulators of muscle development.
+\newblock {\em Developmental Cell 16}, 2 (Feb 2009), 280--91.
+
+\bibitem{Milo2002tg}
+{\sc Milo, R., Shen-Orr, S., Itzkovitz, S., Kashtan, N., Chklovskii, D., and
+  Alon, U.}
+\newblock Network motifs: simple building blocks of complex networks.
+\newblock {\em Science 298}, 5594 (Oct 2002), 824--7.
+
+\bibitem{Nurse2011p2308}
+{\sc Nurse, P., and Hayles, J.}
+\newblock The cell in an era of systems biology.
+\newblock {\em Cell\/} (Jan 2011).
+
+\bibitem{Odom2004hc}
+{\sc Odom, D.~T., Zizlsperger, N., Gordon, D.~B., Bell, G.~W., Rinaldi, N.~J.,
+  Murray, H.~L., Volkert, T.~L., Schreiber, J., Rolfe, P.~A., Gifford, D.~K.,
+  Fraenkel, E., Bell, G.~I., and Young, R.~A.}
+\newblock Control of pancreas and liver gene expression by hnf transcription
+  factors.
+\newblock {\em Science 303}, 5662 (Feb 2004), 1378--81.
+
+\bibitem{Schones2008nx}
+{\sc Schones, D.~E., and Zhao, K.}
+\newblock Genome-wide approaches to studying chromatin modifications.
+\newblock {\em Nat Rev Genet 9}, 3 (Mar 2008), 179--91.
+
+\bibitem{Shannon1948p699}
+{\sc Shannon, C.}
+\newblock A mathematical theory of communication.
+\newblock {\em Bell Syst Tech J 27}, 4 (Jan 1948), 623--656.
+
+\bibitem{ShenOrr2002p648}
+{\sc Shen-Orr, S., Milo, R., Mangan, S., and Alon, U.}
+\newblock Network motifs in the transcriptional regulation network of
+  escherichia coli.
+\newblock {\em Nature genetics 31}, 1 (2002), 64--68.
+
+\bibitem{Sigal2006p3278}
+{\sc Sigal, A., Milo, R., Cohen, A., Geva-Zatorsky, N., Klein, Y., Liron, Y.,
+  Rosenfeld, N., Danon, T., Perzov, N., and Alon, U.}
+\newblock Variability and memory of protein levels in human cells.
+\newblock {\em Nature 444}, 7119 (Nov 2006), 643--646.
 
 \bibitem{Smit2010}
-{\sc A.~F.~A. Smit}, {\sc R.~Hubley} et {\sc P.~Green}, \enquote{RepeatMasker
-  Open-3.0}, \url{http://www.repeatmasker.org} (1996-2010).
+{\sc Smit, A. F.~A., Hubley, R., and Green, P.}
+\newblock Repeatmasker open-3.0.
+\newblock \url{http://www.repeatmasker.org}, 1996-2010.
+
+\bibitem{Stathopoulos2005p4051}
+{\sc Stathopoulos, A., and Levine, M.}
+\newblock Genomic regulatory networks and animal development.
+\newblock {\em Dev Cell 9}, 4 (Oct 2005), 449--62.
+
+\bibitem{Takahashi:2006kx}
+{\sc Takahashi, K., and Yamanaka, S.}
+\newblock Induction of pluripotent stem cells from mouse embryonic and adult
+  fibroblast cultures by defined factors.
+\newblock {\em Cell 126}, 4 (Aug 2006), 663--76.
+
+\bibitem{waddington1957strategy}
+{\sc Waddington, C.~H., et~al.}
+\newblock The strategy of the genes. a discussion of some aspects of
+  theoretical biology. with an appendix by h. kacser.
+\newblock {\em The strategy of the genes. A discussion of some aspects of
+  theoretical biology. With an appendix by H. Kacser.\/} (1957), ix+--262.
+
+\bibitem{Wasserman2004p624}
+{\sc Wasserman, W.~W., and Sandelin, A.}
+\newblock Applied bioinformatics for the identification of regulatory elements.
+\newblock {\em Nature Reviews Genetics 5}, 4 (Apr 2004), 276--87.
+
+\bibitem{Weintraub1989ij}
+{\sc Weintraub, H., Tapscott, S.~J., Davis, R.~L., Thayer, M.~J., Adam, M.~A.,
+  Lassar, A.~B., and Miller, A.~D.}
+\newblock Activation of muscle-specific genes in pigment, nerve, fat, liver,
+  and fibroblast cell lines by forced expression of myod.
+\newblock {\em Proc Natl Acad Sci U S A 86}, 14 (Jul 1989), 5434--8.
+
+\bibitem{Wittkopp2011p3240}
+{\sc Wittkopp, P.~J., and Kalay, G.}
+\newblock Cis-regulatory elements: molecular mechanisms and evolutionary
+  processes underlying divergence.
+\newblock {\em Nature Reviews Genetics 13}, 1 (Dec 2011), 59--69.
+
+\bibitem{Zinzen2009p760}
+{\sc Zinzen, R., Girardot, C., Gagneur, J., Braun, M., and Furlong, E.}
+\newblock Combinatorial binding predicts spatio-temporal cis-regulatory
+  activity.
+\newblock {\em Nature 462}, 7269 (2009), 65--70.
 
 \end{thebibliography}
