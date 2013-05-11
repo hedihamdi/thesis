@@ -238,7 +238,7 @@ réseau de régulation génétique type}{ Dans cette représentation schématique
 Les modes de régulation qui permettent à la cellule d'interpréter des signaux
 et de changer d'état sont nombreux. Nous allons nous concentrer ici sur ceux
 internes aux réseaux génétiques, et affectant au final la production de
-protéines ou d'ARNs et donc l'état cellulaire (fig.~\ref{fig:us-grn})}.
+protéines ou d'ARNs et donc l'état cellulaire (fig.~\ref{fig:us-grn}).
 
 \subsubsection{Régulation génétique}
 
@@ -263,6 +263,23 @@ section~\ref{sec:CRMs}.
 
 \subsubsection{Régulation épigénétique} 
 
+\bfig
+\includegraphics[width=0.7\textwidth]{figures/schones-epigenome.pdf}
+\captionbf{Caractéristiques de l'épigénome}{ Figure tirée
+    de~\cite{Schones2008nx}. Les chromosomes sont partagés entre régions
+accessibles d'euchromatine et régions difficilement accessibles
+d'hétérochromatine. Les régions hétérochromatiques sont marquées par de la di-
+et triméthylation de la lysine 9 de l'histone H3 (H3K9me2 et H3K9me3). La
+méthylation de l'ADN est pervasive à travers le génome et est seulement absente
+dans les régions telles que les îlots CpG, les promoteurs et les CRMs. La
+modification H3K27me3 couvre de larges régions englobant des gènes inactifs.
+Les marques H3K4me3, H3K4me2, H3K4me1 et l'acétylation des histones marquent
+les TSSs des gènes actifs. Les marques H3K4, H3K9, H3K27, H4K20 et H2BK5
+marquent les régions transcrites activement à proximité de la région 5' des
+gènes (en aval), alors que la marque H3K36 marque les gènes transcrits dans
+leur région 3' (en amont). } \label{fig:schones-epigenome} \efig
+
+
 Outre la régulation génétique, due à l'action de protéines issues de séquences
 codantes et se fixant sur des séquences d'ADN, régulation qui est donc
 entièrement encodée dans le génome et transmise à la descendance, il existe un
@@ -271,78 +288,475 @@ d'acquérir une modification d'expression génétique transmise à la descendance
 sans qu'il y ait modification du code génétique : on parle de régulation
 épigénétique. Cette régulation passe notamment par la modification des
 propriétés chimiques de l'ADN et des histones sur lequel il s'enroule pour
-former la chromatine. Ainsi, la méthylation des dimères CpG \footnote{Les
-    dimères C-G sont appelés CpG, où p caractérise le phosphore liant les deux
-bases, pour les différencier du CG utilisé pour parler de la statistique en
-C et G de l'ADN} de l'ADN situés dans des îlots au niveau de nombreux
-promoteurs conduit à une inactivation du gène cible. Par ailleurs, la
-méthylation des histones au niveau des résidus lysines entraîne la fermeture de
-la chromatine, empêchant l'expression du ou des gène(s) situés à leur niveau,
-alors que l'acétylation des mêmes lysines entraîne au contraire une ouverture
-de la chromatine, favorisant ainsi la transcription génétique. Ce mode de
-régulation sera développé plus en détails en section~\ref{sub:}
+former la chromatine. Ainsi, la méthylation des dimères CpG de
+l'ADN\footnote{Les dimères C-G sont appelés CpG, où p caractérise le phosphore
+liant les deux bases, pour les différencier du CG utilisé pour parler de la
+statistique en C et G de l'ADN} au niveau des régions riches en CG, ou îlots
+CpG, situées près de nombreux promoteurs et habituellement dépourvues de ces
+marques conduit à une inactivation du gène cible~\cite{Bird2002oq}.  Par
+ailleurs, la méthylation des histones au niveau des résidus lysines entraîne la
+fermeture de la chromatine, empêchant l'expression du ou des gène(s) situés
+à leur niveau, alors que l'acétylation des mêmes lysines entraîne au contraire
+une ouverture de la chromatine, favorisant ainsi la transcription
+génétique~\cite{Greer2012ve}.  Ce mode de régulation sera développé plus en
+détails en section~\ref{sub:CRMs-epigenetique}.
+
+% lincRNAs? \cite{Rinn2012p3940}
 
 \subsubsection{Régulation post-transcriptionnelle} 
 
-\subsubsection{Régulation post-traductionelle}
+Les modifications post-transcriptionnelles affectent les ARNs issus de la
+transcription des gènes. Ces modifications peuvent être causées par des ARNs
+doubles brins ou dsRNA (\textit{double-stranded RNAs)} qui, une fois clivés par
+la protéine Dicer, forment des petits peptides de 22 nts appelés siRNAs
+(\textit{small interfering RNAs)}) qui recrutent le complexe protéique RISC
+(\textit{RNA-induced silencing complex}) et ciblent spécifiquement des
+ARNm~\cite{Hammond2001bh,Hannon2002qf}. Cette méthode est connue sous le nom
+d'interférence ARN (RNAi) et est aujourd'hui couramment utilisée pour inhiber
+l'expression d'un gène. De manière similaire, les microARNs ou miRNAs sont des
+ARNs de $\sim23$ nts issus d'ARNs plus longs appelés \og épingles à cheveux \fg
+ou \textit{hairpins} qui s'associent à la protéine \textit{Argonaute} du
+complexe RISC pour entraîner la dégradation spécifique
+d'ARNms~\cite{Bartel2009cr}.
 
 
-\newpage
+
+
+\subsubsection{Régulation post-traductionnelle}
+
+Les modifications post-traductionnelles affectent les protéines issues de la
+traduction des ARNs. Ces modifications passent par une modification chimique
+des protéines, typiquement la phosphorylation, ou comme nous l'avons vu pour la
+régulation épigénétique, la méthylation ou l'acétylation. Ces modifications
+peuvent avoir pour effet de changer l'activité de la protéine, que ce soit en
+modifiant son activité enzymatique ou en déclenchant sa relocalisation
+nucléaire. Par ailleurs, il existe aussi des modifications de structure de la
+protéine, comme c'est le cas du \tf \textit{Shavenbaby} chez la Drosophile:
+dans sa forme native, cette protéine inhibe la transcription de ses gènes cible
+; cependant ses résidus terminaux peuvent être clivés par des petits peptides
+de 11 à 32 acides aminés encodés par le gène \textit{Pri}, rendant la protéine
+transcriptionnellement active \cite{Kondo2010ly}.
+
 \subsection{Câblage du réseau et fonction}
 
 \bfig
-\includegraphics[width=\textwidth]{figures/lee-network-motifs-yeast.pdf}
-\captionbf{}{
-   figure tirée de \cite{Lee2002p537}.
-} 
-\efig
+\includegraphics[width=0.7\textwidth]{figures/lee-network-motifs-yeast.pdf}
+\includegraphics[width=0.9\textwidth]{figures/odom-network-motifs-human.pdf}
+\captionbf{Exemples de motifs dans les réseaux de régulation génétique}{Figure
+    tirée de .  Ces exemples sont issus d'analyses d'interactions entre \tfs
+    (cercles bleus) et promoteurs (rectangles rouges) chez la
+    levure~\cite{Lee2002p537} (A) et chez l'homme~\cite{Odom2004hc} (B).  Les
+flèches solides indiquent la fixation d'un \tf à un promoteur, et les flèches
+en pointillé indiquent l'expression d'un \tf à partir de son gène.}
+\label{fig:lee-odom-networks}\efig
 
-\newpage
+Maintenant que nous avons vu la nature des interactions au sein des réseaux
+génétiques, nous pouvons nous pencher sur leur structure. Celle-ci est en effet
+loin d'être due au hasard. Ainsi, plusieurs études, réalisées chez divers
+organismes de la bactérie à l'homme, ont révélé que les réseaux de
+transcription contiennent un petit ensemble de motifs de régulation récurrents,
+appelés motifs de
+réseaux~\cite{alon2007introduction,ShenOrr2002p648,Milo2002tg}
+(fig.~\ref{fig:lee-odom-networks}).  Ces motifs peuvent être vus comme les
+pièces élémentaires servant à la construction de réseaux fonctionnels. De tels
+motifs furent d'abord détectés de manière systématique chez la bactérie \ecoli
+en remarquant qu'ils apparaissaient dans le réseau de transcription bien plus
+souvent qu'on ne l'attendrait dans un réseau aléatoire~\cite{ShenOrr2002p648}.
+Les mêmes motifs ont ensuite été trouvés chez la
+levure~\cite{Milo2002tg,Lee2002p537} et chez l'homme~\cite{Odom2004hc}. La
+récurrence de ces motifs est liée aux fonctions qu'ils remplissent. Par
+exemple, la boucle d'autorégulation négative, qui est trouvée chez la moitié
+des répresseurs d'\ecoli, possède deux fonctions : l'une est de parvenir
+rapidement à un état d'équilibre en utilisant un promoteur fort, l'autre est de
+servir de tampon au bruit d'expression~\cite{Alon2007p2353}. Un autre motif
+récurrent est la boucle feedforward. Celle-ci consiste en 3 gènes : un
+régulateur X, qui régule Y, tous deux régulant Z. Dans le cas où des
+interactions sont des activations et que X et Y sont requis pour activer Z,
+cette boucle peut servir de tampon au bruit d'expression de X, évitant que des
+fluctuations de son niveau d'expression n'entraîne par erreur l'activation de
+Z.
+
+
 \subsection{Évolution des réseaux génétiques}
 
 \bfig
 \includegraphics[width=\textwidth]{figures/furlong-network-evolution.pdf}
-\captionbf{}{
-   Figure tirée de \cite{Liu2009p556}.
-} 
-\efig
+\captionbf{Évolution du réseau transcriptionnel : l'exemple de la régulation
+myogénique.}{ Figure tirée de \cite{Liu2009p556}. Les lignes pleines indiquent
+une régulation transcriptionnelle directe, les tirets indiquent des
+interactions génétiques dont le caractère direct n'a pas été montré, et les
+lignes pointillés indiquent que l'interaction est suggérée par des donnés
+d'expression. \myod est l'analogue structurel de \textit{Nautilus} mais est
+l'analogue fonctionnel de \textit{Twist} chez la Drosophile et de
+\textit{HLH-1} chez C. Elegans. Les couleurs indiquent respectivement des voies
+de signalisation externes au mésoderme (bleu), les régulateurs myogéniques de
+la famille bHLH (vert), les protéines Six/Eya (orange), les protéines de la
+famille \textit{paired-box} Pax (violet), les TFs des familles MADS/SRF
+(rouge), et les régulateurs d'autres familles de protéines (noir).}
+\label{fig:furlong-network-evolution}\efig
+
+Au cours de l'évolution, les réseaux de régulation génétique changent
+: modification des constituants, recâblage du réseau, duplication
+d'éléments\ldots Néanmoins, certaines modifications sont plus défavorisées du
+point de vue évolutif que des autres.  Par exemple, la modification d'un
+régulateur, par exemple une mutation d'un certain acide aminé d'un \tf, aura
+des conséquences sur l'ensemble des éléments régulés par ce \tf. Par contre, la
+modification d'un site de reconnaissance de ce \tf sur l'ADN n'aura qu'une
+portée locale sur la régulation du gène associé. Par ailleurs, certains motifs
+du réseau, comme les boucles d'autorégulation ou les boucles feedforward,
+peuvent avoir une grande importance fonctionnelle, favorisant leur
+conservation. \\
+À titre d'exemple, prenons le cas du réseau de différenciation du muscle
+squelettique présenté en figure~\ref{fig:furlong-network-evolution}, que nous
+étudierons plus en détail dans le chapitre \ref{chap:muscle} de ce manuscrit.
+Au coeur de ce réseau génétique se trouvent les facteurs de régulation
+myogéniques ou MRFs, des \fts de type bHLH qui ont la capacité de convertir des
+cellules non mesodermales, \cad n'étant pas destinées à devenir des
+progéniteurs musculaires, en cellules ayant des propriétés
+musculaires~\cite{Weintraub1989ij}. Ces facteurs sont dits \og régulateurs
+maîtres \fg de la différenciation musculaire. Chez les vertébrés il y a quatre
+MRFs: \myf, \mrf, \myod, qui ont des roles redondant dans la spécification des
+progéniteurs musculaires, et \myog, qui conduit à la différenciation terminale.
+Chez la \droso c'est le TF  \twi qui semble être le principal MRF, mais
+contrairement aux MRFs des vertébrés, son rôle ne s'arrête pas au contrôle de
+la différenciation musculaire mais est plus général dans le développement du
+mésoderme~\cite{Baylies1998bs}. C'est cependant le gène \textit{Nautilus} qui
+possède la séquence d'acides aminés la plus proche de celle des MRFs vertébrés.
+Ce dernier permet la spécification des progéniteurs myogéniques, et son
+expression est restreinte au développement musculaire. Néanmoins, les mutants
+\textit{nautilus} sont viables et son rôle semble mineur comparé aux MRFs
+vertébrés. Enfin, chez le ver \celegans, c'est l'orthologue de \myod,
+\textit{hlh-1}, qui tient rôle de MRF.\\ Malgré ces différences (nombre de
+MRFs, membre de la famille bHLH tenant ce rôle), on retrouve dans les trois cas
+une boucle feedforward conservée au niveau de la régulation des cibles des MRFs
+(fig.~\ref{fig:furlong-network-evolution}).  Ainsi, MyoD régule l'expression de
+Mef2 et l'activité de MAPK p38 en même temps que l'expression de plusieurs
+cibles initiales, et par la suite MyoD et phospho-Mef2 co-régulent des gènes
+plus tardifs. Ce mécanisme permet ainsi de réguler l'aspect temporel de
+l'expression génétique.  Chez la Drosophile, le même motif est observé avec
+Twist et Mef2 et chez C.  Elegans avec HLH-1 et le TF UNC-129, de la même
+famille que Mef2.  \\ Ainsi le coeur du réseau est conservé dans la forme
+(topologie), même s'il y a des divergences dans le fond (membres de la famille
+de TFs impliqués). Néanmoins, les éléments régulateurs en amont, ainsi que les
+membres périphériques du réseau ont rapidement évolué. Par exemple, chez les
+vertébrés le TF Pax3 est très en amont dans la hiérarchie génétique et permet
+l'activation des MRFs et la spécification myogénique, alors que chez la
+Drosophile son homologue \textit{poxm} est en aval des MRFs et sa perte de
+fonction n'a que des effets mineurs sur la myogenèse. Par ailleurs, le complexe
+composé de protéine Six et de leur cofacteur Eya, initialement découvert comme
+régulateur majeur de la différenciation oculaire chez la \droso, est chez les
+vertébrés un régulateur essentiel situés en amont des MRFs. Chez la Drosophile,
+il possède aussi un rôle dans la spécification myogénique, mais bien plus en
+aval que chez les vertébrés. Enfin, chez C.Elegans ce complexe est aussi en
+aval des MRFs mais il participe en plus à la détermination de cellules non
+myogéniques.  \\
+
+Nous voyons donc que l'évolution d'un réseau génétique possède de multiples
+facettes : conservation de motifs de réseau fonctionnellement importants (dans
+notre exemple, la boucle feedforward au coeur du réseau régissant l'aspect
+temporel de l'expression des cibles), recâblage des interactions pour traiter
+différents signaux d'entrée\ldots Par ailleurs, il apparaît que plus qu'à des
+TFs particuliers, c'est à des familles de TFs que nous avons affaire. Aussi un
+même rôle au sein du réseau peut-il être rempli par différents membres d'une
+même famille, comme c'est le cas pour \myod et \twi. Ceci s'explique par le
+fait que les membres d'une même famille partagent des propriétés d'interaction
+avec l'ADN semblables. Ces interactions sont à la source du fonctionnement du
+réseau, et nous allons maintenant présenter plus en avant leurs propriétés.
 
 
 
 
-\newpage
 \section{Modèles mathématiques des interactions protéine-ADN}
 
-\subsection{Modèle biophysique}
-\subsection{Modèle thermodynamique}
-\subsection{Modèle PWM}
-Le modèle PWM est le modèle le
-plus simple décrivant l'énergie de fixation entre un \tf et un site de
-fixation sur l'ADN. Ce modèle est basé sur l'hypothèse que l'énergie
-de fixation à un site est la somme des énergies de fixation à chaque
-nucléotide. Si la concentration du \tf est faible, ce modèle se réduit à un
-modèle biophysique.
+Nous l'avons vu, les interactions entre \tfs et ADN sont une composante
+essentielle des réseaux génétiques. Les TFs se fixent sur des sites spécifiques
+de $\sim10$ bp dans le voisinage des gènes qu'ils régulent. Trouver ces sites
+est donc un premier pas vers la reconstruction des réseaux de régulation
+sous-jacents. Dans cette section nous présentons les modèles d'interactions
+protéine-ADN qui ont été proposés, et leur application concrète à la recherche
+de sites de fixation. 
+
+\subsection{Modes de recherche du site de fixation par le TF}
+\label{sub:modes_de_recherche_du_site_de_fixation_par_le_tf}
+
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/lassig-TF-search.pdf}
+\captionbf{Différents états du \tf}{
+Figure tirée de \cite{Lassig2007p539}. Lors de sa recherche de site de
+fixation, le TF peut se trouver dans trois états distincts : (1) un état libre
+de diffusion tridimensionnelle, (2) un état de diffusion unidimensionnelle sur
+l'ADN par fixation non spécifique, et (3) un état de fixation spécifique.
+L'énergie de fixation dépend du site de fixation, de taille $l$ et de
+coordonnée $r$.
+}
+\label{fig:lassig-TF-search}
+\efig
+
+Un \ft peut être dans plusieurs états : en diffusion tridimensionnelle, auquel
+cas il est dit ``libre'', ou bien fixé sur l'ADN. Dans ce dernier cas, il
+interagit avec l'ADN selon deux modes : une attraction non spécifique d'énergie
+$E_{ns}$ indépendante de la position sur $r$ l'ADN, et une interaction
+spécifique $E_s(r)$ qui dépend de la séquence de taille $l\sim10$ à la position
+$r$.  L'interaction non spécifique est due à l'interaction électrostatique
+entre la protéine chargée positivement et l'ADN chargé négativement, alors que
+l'interaction spécifique implique des liaisons hydrogènes entre le domaine de
+fixation de la protéine et les nucléotides du site de fixation. La protéine
+passe d'un mode à l'autre en changeant de conformation. Au final, le \tf peut
+être dans trois états thermodynamiques représentés en figure
+\ref{fig:lassig-TF-search} : en diffusion tridimensionnelle libre, fixé non
+spécifiquement (diffusion unidimensionnelle le long de la structure d'ADN), et
+fixé spécifiquement sur l'ADN. Ces trois modes contribuent à la cinétique de la
+recherche d'un site fonctionnelle \cite{Berg1981kx,Winter1981fk,Winter1981uq}.
+Ainsi, l'attraction non spécifique conduit la protéine à passer à peu près
+autant de tant fixé sur l'ADN qu'en diffusion libre. La recherche de site de
+reconnaissance est donc un processus mixte de diffusion unidimensionnelle sur
+l'ADN et de diffusion tridimensionnelle dans le milieu. Lorsqu'il est fixé sur
+l'ADN, le facteur diffuse dans un paysage d'énergie $E_{ns}$ plat lorsqu'il est
+dans sa conformation de fixation non spécifique, ou dans un paysage d'énergie
+$E_s(r)$ dans sa conformation de fixation spécifique. Cela permet au facteur
+d'échantillonner les sites de faible énergie $E_s(r)$ tout en évitant les
+barrières de haute énergie en passant en mode de recherche non spécifique. Ce
+processus s'avère au final très efficace~\cite{Gerland2002p397,Slutsky2004vn}.
+Les temps de recherche sont typiquement inférieurs à une minute, ce qui est
+petit devant les processus de régulation de la cellule qui se déroulent au
+mieux sur quelques minutes. Il est donc pertinent de décrire l'effet d'un site
+de fixation sur la régulation d'un gène cible par la probabilité qu'il a de
+fixer un TF à l'équilibre thermodynamique.
+
+
+% subsection modes_de_recherche_du_site_de_fixation_par_le_tf (end)
+
+\subsection{Modèle PWM} 
+Présenté en 1987 par Berg et von Hippel~\cite{Berg1987p3746}, le modèle PWM est
+le modèle le plus simple décrivant l'énergie de fixation spécifique entre un \tf et un
+site de fixation sur l'ADN.  Ce modèle repose sur plusieurs hypothèses. Tout
+d'abord, il y a l'hypothèse importante que les sites de fixation des TFs sur
+l'ADN ont été sélectionnés au cours de l'évolution pour leur propriété de sites
+de reconnaissance, qu'elle que soit la concentration du TF dans la cellule. En
+d'autres termes, le processus de sélection discrimine les sites de fixation sur
+la seule base de leur énergie de fixation à un TF donné : les sites ayant une
+énergie fixation dans une certaine gamme sont retenus, les autres rejetés.  Par
+ailleurs, au sein de cette gamme d'énérgie \og utile \fg, toutes les séquences
+sont équiprobables. Enfin, la dernière hypothèse est que chaque nucléotide d'un
+site de fixation contribue de manière indépendante, \cad additive à l'énergie
+totale du site.  Cette hypothèse permet de simplifier le problème en gardant le
+nombre de paramètres petit. L'argument de Berg et von Hippel est que ce
+problème est analogue à celui de physique statistique consistant à déduire les
+taux d'occupation des niveaux d'énergie de particules indépendantes sachant que
+l'énergie totale doit avoir une certaine valeur moyenne $E$. La solution de ce
+problème est donnée par la formule de Boltzmann reliant énergie et taux
+d'occupation :
+
+\begin{equation} 
+    f_{i,b} = \exp(-\lambda E_{i,b}) / \Z_i
+    \label{eq:boltzmann}
+\end{equation}
+
+où $f_{i,b}$ est la probabilité d'observer la base $b$ à la position $i$ du
+site de fixation, $E_{i,b}$ est l'énergie associée (en $k_BT$), $\Z_i$ est la
+fonction partition qui permet de normaliser la distribution à la position $i$,
+et $\lambda$ est un facteur sans dimension, analogue du $\beta$ de la
+thermodynamique, et lié au processus de sélection. Dans la suite, nous
+intégrerons ce facteur à l'énergie.  \\ La connaissance des fréquences des
+bases permet de définir une autre quantité utile caractérisant la variabilité
+des séquences de fixation, l'information relative des sites par rapport à une
+séquence d'ADN aléatoire~\cite{Stormo1998p471}:
+
+\begin{equation} 
+    I = \sum_{i=1}^{L}\sum_{b = A,C,G,T}^{}f_{i,b}\ln\left(\frac{f_{i,b}}{\pi_b}\right) 
+\end{equation}
+
+où $L$ est la taille du site de fixation et $\pi_b$ correspond à la probabilité
+\apriori d'observer la base $b$ dans le génome. Parce que l'énergie est définie
+à une constante près, il est usuel de la définir relativement au fond génomique
+: 
+
+\begin{equation} 
+    \tilde{E}_{i,b} = \ln\left(\frac{f_{i,b}}{\pi_b}\right) 
+\end{equation}
+
+L'énergie totale d'un site $S_i$ est alors
+
+\begin{equation}
+    \begin{aligned}
+        E &= \sum_{i=1}^{L}\tilde{E}_{i,b} \\
+        &= \sum_{i=1}^{L}\ln\left(\frac{f_{b(i)}}{\pi_b}\right)\\
+        &=\ln\left(\frac{\prod_{i=1}^{L}f_{b(i)}}{\prod_{i=1}^{L}\pi_b}\right)\\
+        &=\ln\left(\frac{P(S_i|\text{TF})}{P(S_i|\text{fond génomique})}\right)
+    \end{aligned}
+\end{equation} 
+
+où $b(i)$ est la base située à la position $i$ du site de fixation. Cette
+énergie quantifie simplement à quel point la séquence $S_i$ est plus ($E>0$) ou
+moins ($E<0$) probablement un site de fixation (de probabilité
+$P(S_i|\text{TF})$) qu'un site tiré au hasard dans le génome (de probabilité
+$P(S_i|\text{fond génomique})$). On parle aussi de \textit{score} de la
+séquence. L'information relative $I$, qui est le score moyen des séquences
+fixées par le TF,  peut alors être vue comme quantifiant à quel point
+l'ensemble des sites de fixation se distingue d'un ensemble de même taille de
+sites tirés au hasard.
+
+Avec ces outils en main, il devient alors simple de bâtir un modèle PWM et de
+l'utiliser (fig.~\ref{fig:wasserman-PWM}). Étant donnés des sites de fixation
+connus, il suffit d'évaluer la fréquence d'occurrence de chaque base à chaque
+position. La comparaison avec les probabilités génomiques \apriori d'occurrence
+permet alors de bâtir une matrice score, la PWM. Cette matrice peut alors être
+utilisée pour attribuer un score aux séquences d'ADN en additionnant les scores
+à chaque position. Finalement, les séquences ayant un score dépassant un
+certain seuil sont considérées comme des séquences de fixation.
 
 \bfig
 \includegraphics[width=.7\textwidth]{figures/wasserman-PWM.pdf}
 \captionbf{Construction et utilisation du modèle PWM}{
-   Figure tirée de \cite{Wasserman2004p624}. (a) Supposons connus un certain nombre
-   de sites de fixation d'un \tf (dans ce cas MEF2).(b) Séquence consensus
-   correspondante utilisant les symboles IUPAC. (c) Une matrice de fréquence
-   est construite, indiquant pour chaque nucléotide sa multiplicité à une
-   position donnée dans le site. (d) La PWM est simplement construite en
-   prenant le logarithme relatif des fréquences PWMs par rapport aux fréquences
-   \textit{background} des nucléotides. (e) Le score (ou énergie) d'une séquence d'ADN
-   donnée est calculé en additionnant les poids PWMs correspondant. (f) La PWM
-   peut être représentée sous forme de logo \cite{Giocomo2011p3442}. Dans cette
-   représentation, la hauteur d'une colonne représente le contenu en
-   information ou information relative moyenne d'une position, et la taille des
-   bases reflète leur fréquence observée.
+    Figure tirée de \cite{Wasserman2004p624}. (a) Supposons connus un certain nombre
+    de sites de fixation d'un \tf (dans ce cas MEF2).(b) Séquence consensus
+    correspondante utilisant les symboles IUPAC. (c) Une matrice de fréquence
+    est construite, indiquant pour chaque nucléotide sa multiplicité à une
+    position donnée dans le site. (d) La PWM est simplement construite en
+    prenant le logarithme relatif des fréquences PWMs par rapport aux fréquences
+    \apriori des nucléotides. (e) Le score (ou énergie) d'une séquence d'ADN
+    donnée est calculé en additionnant les poids PWMs correspondant. (f) La PWM
+    peut être représentée sous forme de logo \cite{Giocomo2011p3442}. Dans cette
+    représentation, la hauteur d'une colonne représente le contenu en
+    information ou information relative moyenne d'une position, et la taille des
+    bases reflète leur fréquence observée.
 
 } 
+\label{fig:wasserman-PWM}
 \efig
 
-\newpage
+\subsection{Modèle biophysique}
+\label{sub:modele-biophys}
+
+Dans le paragraphe précédent, nous avons vu que le modèle PWM est basé sur une
+hypothèse forte, celle que les sites de fixation ont été sélectionnés sur la
+base de leur seule affinité ou énergie envers un TF. Néanmoins, à aucun moment
+n'intervient la concentration du TF dans la cellule, dont dépend pourtant la
+probabilité de fixation. C'est ce que tente de capturer le modèle
+biophysique~\cite{Gerland2002p397,Djordjevic2003p2932,Zhao2009p3948}.  \\
+
+Considérons l'interaction entre un TF et une séquence d'ADN $S_i$ :
+
+\begin{equation}
+    TF+S_i \rightleftharpoons TF:S_i
+\end{equation}
+
+où $TF:S_i$ dénote le complexe entre le TF et le site $S_i$. La constante d'équilibre de cette réaction s'écrit selon la loi d'action de masse :
+
+\begin{equation}
+    K_i = \frac{[TF:S_i]}{[TF][S_i]}
+\end{equation}
+
+Le site peut être dans deux états : occupé par le TF où libre. Aussi, la probabilité que le TF soit fixé au site s'écrit simplement
+
+\begin{equation}
+    P(\text{fixation}|S_i) = \frac{[TF:S_i]}{[TF:S_i]+[S_i]}
+    = \frac{1}{1+\frac{1}{K_i [TF]}} = \frac{1}{1+\exp(E_i-\mu)}
+    \label{eq:modele-biophys}
+\end{equation}
+
+où $E_i=-\ln(K_i)$ est l'énergie libre standard de fixation (souvent notée
+$\Delta G$), et $\mu=\ln[TF]$ est le potentiel chimique, ces deux quantités
+étant exprimées en $kT$.  Ici nous avons considéré qu'il n'y avait qu'un seul
+site de fixation. De manière générale, le site est en compétition avec le fond
+génomique, ce qui ajoute une contribution à $\mu$ (voir description
+thermodynamique).  À l'instar du modèle PWM, l'énergie $E_i$ est généralement prise comme
+étant une fonction additive des énergies individuelles des différentes bases du
+site. Ainsi, lorsque le TF est à faible concentration ($\mu \to -\infty$), le
+modèle biophysique écrit en équation~\ref{eq:modele-biophys} se réduit au
+modèle PWM.
+
+
+\subsection{Modèle thermodynamique}
+
+La description biophysique peut être réécrite en termes thermodynamiques en
+utilisant des raisonnements simples sur le nombre d'états possibles et leur
+énergie (et donc poids de Boltzmann) associée. Nous adoptons ici l'approche
+de~\cite{Gerland2002p397}. On pourra par ailleurs se référer à l'excellente
+revue~\cite{Lassig2007p539}.  Considérons le cas simple d'un seul \ft
+interagissant avec un génome de taille $L \gg 1$ ne contenant qu'un seul site
+fonctionnel, le reste de la séquence étant aléatoire. La protéine se fixe
+à l'ADN avec une probabilité $1/2$.  Lorsqu'elle est fixée, elle est
+à l'équilibre entre le mode spécifique et le mode non spécifique. Nous désirons
+savoir avec quelle probabilité elle est fixée de manière spécifique. La
+fonction de partition, énumérant tous les poids de Boltzmann associés aux
+différents états accessibles au TF fixé, s'écrit :
+
+\begin{equation}
+    \Z = \sum\limits_{r=1}^{L} e^{-E_s(r)} + L e^{-E_{ns}}
+\end{equation}
+
+où les énergies spécifique $E_s(r)$ et non spécifique $E_{ns}$ sont exprimées
+en unités de $k_BT$. Notons $i$ la position du site fonctionnel. On peut écrire :
+
+\begin{equation}
+    \begin{aligned}
+        \Z & = e^{-E_s(i)} + e^{-E_{ns}} + \sum\limits_{r \neq i} e^{-E_s(r)} + (L - 1) e^{-E_{ns}}\\
+    & \simeq e^{-E_i} + \Z_0
+\end{aligned}
+\end{equation}
+
+où $Z_0$ est la fonction de partition d'une séquence aléatoire, et nous avons introduit l'énergie $E_i$ définie par
+
+\begin{equation}
+    e^{-E_i} = e^{-E_s(i)} + e^{-E_{ns}}
+    \label{eq:Ei}
+\end{equation}
+
+Dans le cas d'un site de reconnaissance, $E_s(i) \gg E_{ns}$ de sorte que $E_i
+\simeq E_s(i)$~\cite{Gerland2002p397} (ZZ Check ZZ). La probabilité que le
+facteur soit fixé sur le site fonctionnel s'écrit finalement :
+
+\begin{equation}
+    P(\text{fixation spécifique}|E_i) = \frac{e^{-E_i}}{\Z} = \frac{1}{1+e^{E_i-F_0}}
+    \label{eq:fixation-un-tf}
+\end{equation}
+
+où $F_0 = - \log \Z_0$ est l'énergie libre d'une séquence génomique aléatoire.
+On reconnait une fonction de Fermi, avec un seuil d'énergie à $F_0$ : pour $E_i
+< F_0$, la protéine est essentiellement fixée de manière spécifique à son site
+de reconnaissance, alors que pour $E_i > F_0$, elle ne distingue plus le site
+du fond génomique et y est faiblement fixée.\\
+
+Généralisons à présent au cas de plusieurs \fts et sites de reconnaissance.
+Nous négligeons le recouvrement entre \fts fixés sur des sites proches, qui
+poserait des problèmes stériques et corrèlerait les sites de fixation dans un
+certain voisinage, et considérons que le nombre de TFs est grand devant le
+nombre de sites de reconnaissance : ainsi, le génome est composé de $L$
+séquences indépendantes, chacune pouvant être soit non occupée, soit occupée de
+manière non spécifique, soit occupée de manière spécifique. Notons $\mu$ le
+potentiel chimique du TF en solution. La fonction de partition totale est le
+produit des fonctions de partition des sites indépendants,
+
+\begin{equation}
+    \Z(\mu) = \prod\limits_{r=1}^{L}\Z(\mu,r)
+\end{equation}
+
+où la fonction de partition d'un site s'écrit :
+
+\begin{equation}
+    \Z(\mu,r) = e^{-\mu} + e^{-E_s(r)} + e^{-E_{ns}}
+\end{equation}
+
+En utilisant à nouveau la définition de $E_i$ en éq.\ref{eq:Ei}, la probabilité
+de fixation d'un site à la position $i$ s'écrit finalement
+
+\begin{equation}
+    P(\text{fixation spécifique}|E_i) = \frac{e^{-E_i}}{\Z(\mu,i)} = \frac{1}{1+e^{E_i-\mu}}
+\end{equation}
+
+La valeur de $\mu$ est liée à la fois au nombre de TFs ainsi qu'à la
+possibilité de se fixer dans le fond génomique. Elle est bien approximée par~\cite{Gerland2002p397}
+
+\begin{equation}
+    \mu = F_0 + \log n
+\end{equation}
+
+où $F_0$ est l'énergie libre du fond génomique introduite en
+éq.~\ref{eq:fixation-un-tf}. Ainsi, la prise en compte d'une multiplicité de
+TFs ajoute seuil de la fonction de Fermi un facteur $\log n$ par rapport au cas
+d'un seul TF. Par ailleurs, cette approche thermodynamique nous a permis de généraliser le modèle biophysique simple introduit en \S~\ref{sub:mo
+
 \section{Mesures expérimentales des interactions protéine-ADN}
 \subsection{Approches \invitro : PBM, SELEX, HT-SELEX}
 \subsubsection{PBM}
@@ -356,7 +770,7 @@ modèle biophysique.
 \bfig
 \includegraphics[width=.4\textwidth]{figures/furey-chipseq.pdf}
 \captionbf{Étapes d'une expérience de \chipseq}{
-   Figure tirée de \cite{Furey2012p3920}.
+    Figure tirée de \cite{Furey2012p3920}.
 } 
 \efig
 \subsubsection{DNAse}
@@ -380,7 +794,7 @@ modèle biophysique.
 \bfig
 \includegraphics[width=.8\textwidth]{figures/furlong-eve-enhancers-to-stripes.pdf}
 \captionbf{Différents CRMs conduisent à différents patterns d'expression}{
-   Figure tirée de \cite{Liu2009p556}.
+    Figure tirée de \cite{Liu2009p556}.
 } 
 \efig
 
@@ -389,7 +803,7 @@ modèle biophysique.
 \bfig
 \includegraphics[width=\textwidth]{figures/stathopoulos-CRMs-sites-twist-dorsal-snail.pdf}
 \captionbf{}{
-   Figure tirée de \cite{Stathopoulos2005p4051}.
+    Figure tirée de \cite{Stathopoulos2005p4051}.
 } 
 \efig
 
@@ -400,60 +814,60 @@ modèle biophysique.
 \captionbf{Les états épigénétiques des CRMs}{ Figure tirée de
     \cite{Hartwell1999p560}.  } \efig
 
-\newpage
-\subsection{Prédiction des CRMs}
+    \newpage
+    \subsection{Prédiction des CRMs}
 
-\bfig
-\includegraphics[width=\textwidth]{figures/hardison-CRM-prediction.pdf}
-\captionbf{Approches pour la prédiction des CRMs}{
-   Figure tirée de \cite{Hartwell1999p560}.
-} 
-\efig
+    \bfig
+    \includegraphics[width=\textwidth]{figures/hardison-CRM-prediction.pdf}
+    \captionbf{Approches pour la prédiction des CRMs}{
+        Figure tirée de \cite{Hartwell1999p560}.
+    } 
+    \efig
 
-\newpage
-\subsection{Grammaire des enhancers : enhanceosome vs billboard}
+    \newpage
+    \subsection{Grammaire des enhancers : enhanceosome vs billboard}
 
-\bfig
-\includegraphics[width=\textwidth]{figures/arnosti-enhanceosome.pdf}
-\captionbf{}{
-   figure tirée de \cite{Arnosti2005p3786}.
-} 
-\efig
+    \bfig
+    \includegraphics[width=\textwidth]{figures/arnosti-enhanceosome.pdf}
+    \captionbf{}{
+        figure tirée de \cite{Arnosti2005p3786}.
+    } 
+    \efig
 
-\newpage
-\subsection{Évolution des enhancers}
+    \newpage
+    \subsection{Évolution des enhancers}
 
-\bfig
-\includegraphics[width=\textwidth]{figures/liberman-crm-conservation-flexibility.pdf}
-\captionbf{}{
-   figure tirée de \cite{liberman2009p3886}.
-} 
-\efig
+    \bfig
+    \includegraphics[width=\textwidth]{figures/liberman-crm-conservation-flexibility.pdf}
+    \captionbf{}{
+        figure tirée de \cite{liberman2009p3886}.
+    } 
+    \efig
 
-\newpage
-\bfig
-\includegraphics[width=\textwidth]{figures/wilson-CRMs-evolution.pdf}
-\captionbf{}{
-   figure tirée de \cite{Wittkopp2011p3240}.
-} 
-\efig
+    \newpage
+    \bfig
+    \includegraphics[width=\textwidth]{figures/wilson-CRMs-evolution.pdf}
+    \captionbf{}{
+        figure tirée de \cite{Wittkopp2011p3240}.
+    } 
+    \efig
 
+    \cite{Feschotte2008dq}
 
-
-\newpage
-\subsection{Les \og shadow enhancers \fg}
-
-
-\newpage
-\subsection{Validation expérimentale}
+    \newpage
+    \subsection{Les \og shadow enhancers \fg}
 
 
-\bfig
-\includegraphics[width=\textwidth]{figures/hardison-CRM-test.pdf}
-\captionbf{Méthodes de validation des CRMs}{
-   Figure tirée de \cite{Hartwell1999p560}.
-} 
-\efig
+    \newpage
+    \subsection{Validation expérimentale}
+
+
+    \bfig
+    \includegraphics[width=\textwidth]{figures/hardison-CRM-test.pdf}
+    \captionbf{Méthodes de validation des CRMs}{
+        Figure tirée de \cite{Hartwell1999p560}.
+    } 
+    \efig
 
 
 %\bfig
@@ -467,14 +881,14 @@ modèle biophysique.
 %\efig
 %
 
-\section{Banques de données}
+    \section{Banques de données}
 
-\subsection{Séquences génomiques et alignements}
-statistiques du genome (lognormal)
-\subsection{Annotations (TSSs, repeats\ldots)}
-\subsection{Jaspar et Transfac}
-\subsection{Visualisation sur UCSC}
-\subsection{Le projet ENCODE}
+    \subsection{Séquences génomiques et alignements}
+    statistiques du genome (lognormal)
+    \subsection{Annotations (TSSs, repeats\ldots)}
+    \subsection{Jaspar et Transfac}
+    \subsection{Visualisation sur UCSC}
+    \subsection{Le projet ENCODE}
 
 
 

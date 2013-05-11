@@ -11,23 +11,24 @@
 \contentsline {figure}{\numberline {1.6}{\ignorespaces Caract\'eristiques de l'\'epig\'enome}}{10}{figure.caption.7}
 \contentsline {figure}{\numberline {1.7}{\ignorespaces Exemples de motifs dans les r\'eseaux de r\'egulation g\'en\'etique}}{12}{figure.caption.8}
 \contentsline {figure}{\numberline {1.8}{\ignorespaces \'Evolution du r\'eseau transcriptionnel : l'exemple de la r\'egulation myog\'enique.}}{13}{figure.caption.9}
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Construction et utilisation du mod\`ele PWM}}{16}{figure.caption.10}
-\contentsline {figure}{\numberline {1.10}{\ignorespaces \'Etapes d'une exp\'erience de ChIP-seq\xspace }}{17}{figure.caption.11}
-\contentsline {figure}{\numberline {1.11}{\ignorespaces Diff\'erents CRMs conduisent \`a diff\'erents patterns d'expression}}{18}{figure.caption.12}
-\contentsline {figure}{\numberline {1.13}{\ignorespaces Les \'etats \'epig\'en\'etiques des CRMs}}{20}{figure.caption.14}
-\contentsline {figure}{\numberline {1.14}{\ignorespaces Approches pour la pr\'ediction des CRMs}}{21}{figure.caption.15}
-\contentsline {figure}{\numberline {1.18}{\ignorespaces M\'ethodes de validation des CRMs}}{26}{figure.caption.19}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Diff\'erents \'etats du facteur de transcription\xspace }}{15}{figure.caption.10}
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Construction et utilisation du mod\`ele PWM}}{17}{figure.caption.11}
+\contentsline {figure}{\numberline {1.11}{\ignorespaces \'Etapes d'une exp\'erience de ChIP-seq\xspace }}{20}{figure.caption.12}
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Diff\'erents CRMs conduisent \`a diff\'erents patterns d'expression}}{22}{figure.caption.13}
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Les \'etats \'epig\'en\'etiques des CRMs}}{24}{figure.caption.15}
+\contentsline {figure}{\numberline {1.15}{\ignorespaces Approches pour la pr\'ediction des CRMs}}{25}{figure.caption.16}
+\contentsline {figure}{\numberline {1.19}{\ignorespaces M\'ethodes de validation des CRMs}}{29}{figure.caption.20}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Mod\`eles de fixation des Facteurs de Transcription\xspace \`a l'ADN.}{27}{division.3}
-\contentsline {xchapter}{}{27}{division.3}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Description graphique de l'algorithme.}}{31}{figure.caption.21}
+\contentsline {xchapter}{Mod\`eles de fixation des Facteurs de Transcription\xspace \`a l'ADN.}{31}{division.3}
+\contentsline {xchapter}{}{31}{division.3}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Description graphique de l'algorithme.}}{35}{figure.caption.22}
 \addvspace {10\p@ }
-\contentsline {xchapter}{{\em Imogene}: un algorithme d'identification de motifs et de modules de r\'egulation transcriptionnelle}{33}{division.4}
-\contentsline {xchapter}{}{33}{division.4}
+\contentsline {xchapter}{{\em Imogene}: un algorithme d'identification de motifs et de modules de r\'egulation transcriptionnelle}{37}{division.4}
+\contentsline {xchapter}{}{37}{division.4}
 \addvspace {10\p@ }
-\contentsline {xchapter}{\'Etude de la diff\'erenciation \'epidermale chez la drosophile}{37}{division.5}
-\contentsline {xchapter}{}{37}{division.5}
+\contentsline {xchapter}{\'Etude de la diff\'erenciation \'epidermale chez la drosophile}{41}{division.5}
+\contentsline {xchapter}{}{41}{division.5}
 \addvspace {10\p@ }
-\contentsline {xchapter}{\'Etude de la diff\'erenciation musculaire chez la souris}{41}{division.6}
-\contentsline {xchapter}{}{41}{division.6}
+\contentsline {xchapter}{\'Etude de la diff\'erenciation musculaire chez la souris}{45}{division.6}
+\contentsline {xchapter}{}{45}{division.6}
 \addvspace {10\p@ }

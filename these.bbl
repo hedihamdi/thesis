@@ -39,16 +39,16 @@
   Statistical-mechanical theory and application to operators and promoters.
 \newblock {\em Journal of molecular biology 193}, 4 (1987), 723--743.
 
+\bibitem{Berg1981kx}
+{\sc Berg, O.~G., Winter, R.~B., and von Hippel, P.~H.}
+\newblock Diffusion-driven mechanisms of protein translocation on nucleic
+  acids. 1. models and theory.
+\newblock {\em Biochemistry 20}, 24 (Nov 1981), 6929--48.
+
 \bibitem{Bird2002oq}
 {\sc Bird, A.}
 \newblock Dna methylation patterns and epigenetic memory.
 \newblock {\em Genes Dev 16}, 1 (Jan 2002), 6--21.
-
-\bibitem{Blau:1985vn}
-{\sc Blau, H.~M., Pavlath, G.~K., Hardeman, E.~C., Chiu, C.~P., Silberstein,
-  L., Webster, S.~G., Miller, S.~C., and Webster, C.}
-\newblock Plasticity of the differentiated state.
-\newblock {\em Science 230}, 4727 (Nov 1985), 758--66.
 
 \bibitem{EMBL2001}
 {\sc Brazma, A., Parkinson, H., Schlitt, T., and Shojatalab, M.}
@@ -76,6 +76,12 @@
   myoblasts.
 \newblock {\em Cell 51}, 6 (1987), 987--1000.
 
+\bibitem{Djordjevic2003p2932}
+{\sc Djordjevic, M., Sengupta, A.~M., and Shraiman, B.~I.}
+\newblock A biophysical approach to transcription factor binding site
+  discovery.
+\newblock {\em Genome Res 13}, 11 (Nov 2003), 2381--90.
+
 \bibitem{Feschotte2008dq}
 {\sc Feschotte, C.}
 \newblock Transposable elements and the evolution of regulatory networks.
@@ -92,6 +98,13 @@
 \newblock A dynamical-systems view of stem cell biology.
 \newblock {\em Science 338}, 6104 (Oct 2012), 215--217.
 
+\bibitem{Gerland2002p397}
+{\sc Gerland, U., Moroz, J., and Hwa, T.}
+\newblock Physical constraints and functional characteristics of transcription
+  factor--dna interaction.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America 99}, 19 (2002), 12015.
+
 \bibitem{Giocomo2011p3442}
 {\sc Giocomo, L.~M., Moser, M.-B., and Moser, E.~I.}
 \newblock Computational models of grid cells.
@@ -107,11 +120,6 @@
 \newblock Histone methylation: a dynamic mark in health, disease and
   inheritance.
 \newblock {\em Nat Rev Genet 13}, 5 (May 2012), 343--57.
-
-\bibitem{Gurdon:2008zr}
-{\sc Gurdon, J.~B., and Melton, D.~A.}
-\newblock Nuclear reprogramming in cells.
-\newblock {\em Science 322}, 5909 (Dec 2008), 1811--5.
 
 \bibitem{Hammond2001bh}
 {\sc Hammond, S.~M., Caudy, A.~A., and Hannon, G.~J.}
@@ -158,11 +166,11 @@
   during drosophila embryogenesis.
 \newblock {\em Science 329}, 5989 (Jul 2010), 336--9.
 
-\bibitem{Kulessa:1995ys}
-{\sc Kulessa, H., Frampton, J., and Graf, T.}
-\newblock Gata-1 reprograms avian myelomonocytic cell lines into eosinophils,
-  thromboblasts, and erythroblasts.
-\newblock {\em Genes Dev 9}, 10 (May 1995), 1250--62.
+\bibitem{Lassig2007p539}
+{\sc L{\"a}ssig, M.}
+\newblock From biophysics to evolutionary genetics: statistical aspects of gene
+  regulation.
+\newblock {\em BMC Bioinformatics 8}, Suppl 6 (2007), S7.
 
 \bibitem{Lee2002p537}
 {\sc Lee, T., Rinaldi, N., Robert, F., Odom, D., Bar-Joseph, Z., Gerber, G.,
@@ -224,6 +232,12 @@
 \newblock Variability and memory of protein levels in human cells.
 \newblock {\em Nature 444}, 7119 (Nov 2006), 643--646.
 
+\bibitem{Slutsky2004vn}
+{\sc Slutsky, M., and Mirny, L.~A.}
+\newblock Kinetics of protein-dna interaction: facilitated target location in
+  sequence-dependent potential.
+\newblock {\em Biophys J 87}, 6 (Dec 2004), 4021--35.
+
 \bibitem{Smit2010}
 {\sc Smit, A. F.~A., Hubley, R., and Green, P.}
 \newblock Repeatmasker open-3.0.
@@ -234,11 +248,11 @@
 \newblock Genomic regulatory networks and animal development.
 \newblock {\em Dev Cell 9}, 4 (Oct 2005), 449--62.
 
-\bibitem{Takahashi:2006kx}
-{\sc Takahashi, K., and Yamanaka, S.}
-\newblock Induction of pluripotent stem cells from mouse embryonic and adult
-  fibroblast cultures by defined factors.
-\newblock {\em Cell 126}, 4 (Aug 2006), 663--76.
+\bibitem{Stormo1998p471}
+{\sc Stormo, G., and Fields, D.}
+\newblock Specificity, free energy and information content in protein-dna
+  interactions.
+\newblock {\em Trends in biochemical sciences 23}, 3 (1998), 109--113.
 
 \bibitem{waddington1957strategy}
 {\sc Waddington, C.~H., et~al.}
@@ -259,11 +273,30 @@
   and fibroblast cell lines by forced expression of myod.
 \newblock {\em Proc Natl Acad Sci U S A 86}, 14 (Jul 1989), 5434--8.
 
+\bibitem{Winter1981uq}
+{\sc Winter, R.~B., Berg, O.~G., and von Hippel, P.~H.}
+\newblock Diffusion-driven mechanisms of protein translocation on nucleic
+  acids. 3. the escherichia coli lac repressor--operator interaction: kinetic
+  measurements and conclusions.
+\newblock {\em Biochemistry 20}, 24 (Nov 1981), 6961--77.
+
+\bibitem{Winter1981fk}
+{\sc Winter, R.~B., and von Hippel, P.~H.}
+\newblock Diffusion-driven mechanisms of protein translocation on nucleic
+  acids. 2. the escherichia coli repressor--operator interaction: equilibrium
+  measurements.
+\newblock {\em Biochemistry 20}, 24 (Nov 1981), 6948--60.
+
 \bibitem{Wittkopp2011p3240}
 {\sc Wittkopp, P.~J., and Kalay, G.}
 \newblock Cis-regulatory elements: molecular mechanisms and evolutionary
   processes underlying divergence.
 \newblock {\em Nature Reviews Genetics 13}, 1 (Dec 2011), 59--69.
+
+\bibitem{Zhao2009p3948}
+{\sc Zhao, Y., Granas, D., and Stormo, G.~D.}
+\newblock Inferring binding energies from selected binding sites.
+\newblock {\em PLoS Comput Biol 5}, 12 (Dec 2009), e1000590.
 
 \bibitem{Zinzen2009p760}
 {\sc Zinzen, R., Girardot, C., Gagneur, J., Braun, M., and Furlong, E.}

@@ -238,7 +238,7 @@ réseau de régulation génétique type}{ Dans cette représentation schématique
 Les modes de régulation qui permettent à la cellule d'interpréter des signaux
 et de changer d'état sont nombreux. Nous allons nous concentrer ici sur ceux
 internes aux réseaux génétiques, et affectant au final la production de
-protéines ou d'ARNs et donc l'état cellulaire (fig.~\ref{fig:us-grn})}.
+protéines ou d'ARNs et donc l'état cellulaire (fig.~\ref{fig:us-grn}).
 
 \subsubsection{Régulation génétique}
 
@@ -472,12 +472,63 @@ Nous l'avons vu, les interactions entre \tfs et ADN sont une composante
 essentielle des réseaux génétiques. Les TFs se fixent sur des sites spécifiques
 de $\sim10$ bp dans le voisinage des gènes qu'ils régulent. Trouver ces sites
 est donc un premier pas vers la reconstruction des réseaux de régulation
-sous-jacents. Pour ce faire, plusieurs modèles d'interactions protéine-ADN ont
-été proposés.
+sous-jacents. Dans cette section nous présentons les modèles d'interactions
+protéine-ADN qui ont été proposés, et leur application concrète à la recherche
+de sites de fixation. 
+
+\subsection{Modes de recherche du site de fixation par le TF}
+\label{sub:modes_de_recherche_du_site_de_fixation_par_le_tf}
+
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/lassig-TF-search.pdf}
+\captionbf{Différents états du \tf}{
+Figure tirée de \cite{Lassig2007p539}. Lors de sa recherche de site de
+fixation, le TF peut se trouver dans trois états distincts : (1) un état libre
+de diffusion tridimensionnelle, (2) un état de diffusion unidimensionnelle sur
+l'ADN par fixation non spécifique, et (3) un état de fixation spécifique.
+L'énergie de fixation dépend du site de fixation, de taille $l$ et de
+coordonnée $r$.
+}
+\label{fig:lassig-TF-search}
+\efig
+
+Un \ft peut être dans plusieurs états : en diffusion tridimensionnelle, auquel
+cas il est dit ``libre'', ou bien fixé sur l'ADN. Dans ce dernier cas, il
+interagit avec l'ADN selon deux modes : une attraction non spécifique d'énergie
+$E_{ns}$ indépendante de la position sur $r$ l'ADN, et une interaction
+spécifique $E_s(r)$ qui dépend de la séquence de taille $l\sim10$ à la position
+$r$.  L'interaction non spécifique est due à l'interaction électrostatique
+entre la protéine chargée positivement et l'ADN chargé négativement, alors que
+l'interaction spécifique implique des liaisons hydrogènes entre le domaine de
+fixation de la protéine et les nucléotides du site de fixation. La protéine
+passe d'un mode à l'autre en changeant de conformation. Au final, le \tf peut
+être dans trois états thermodynamiques représentés en figure
+\ref{fig:lassig-TF-search} : en diffusion tridimensionnelle libre, fixé non
+spécifiquement (diffusion unidimensionnelle le long de la structure d'ADN), et
+fixé spécifiquement sur l'ADN. Ces trois modes contribuent à la cinétique de la
+recherche d'un site fonctionnelle \cite{Berg1981kx,Winter1981fk,Winter1981uq}.
+Ainsi, l'attraction non spécifique conduit la protéine à passer à peu près
+autant de tant fixé sur l'ADN qu'en diffusion libre. La recherche de site de
+reconnaissance est donc un processus mixte de diffusion unidimensionnelle sur
+l'ADN et de diffusion tridimensionnelle dans le milieu. Lorsqu'il est fixé sur
+l'ADN, le facteur diffuse dans un paysage d'énergie $E_{ns}$ plat lorsqu'il est
+dans sa conformation de fixation non spécifique, ou dans un paysage d'énergie
+$E_s(r)$ dans sa conformation de fixation spécifique. Cela permet au facteur
+d'échantillonner les sites de faible énergie $E_s(r)$ tout en évitant les
+barrières de haute énergie en passant en mode de recherche non spécifique. Ce
+processus s'avère au final très efficace~\cite{Gerland2002p397,Slutsky2004vn}.
+Les temps de recherche sont typiquement inférieurs à une minute, ce qui est
+petit devant les processus de régulation de la cellule qui se déroulent au
+mieux sur quelques minutes. Il est donc pertinent de décrire l'effet d'un site
+de fixation sur la régulation d'un gène cible par la probabilité qu'il a de
+fixer un TF à l'équilibre thermodynamique.
+
+
+% subsection modes_de_recherche_du_site_de_fixation_par_le_tf (end)
 
 \subsection{Modèle PWM} 
 Présenté en 1987 par Berg et von Hippel~\cite{Berg1987p3746}, le modèle PWM est
-le modèle le plus simple décrivant l'énergie de fixation entre un \tf et un
+le modèle le plus simple décrivant l'énergie de fixation spécifique entre un \tf et un
 site de fixation sur l'ADN.  Ce modèle repose sur plusieurs hypothèses. Tout
 d'abord, il y a l'hypothèse importante que les sites de fixation des TFs sur
 l'ADN ont été sélectionnés au cours de l'évolution pour leur propriété de sites
@@ -497,7 +548,7 @@ problème est donnée par la formule de Boltzmann reliant énergie et taux
 d'occupation :
 
 \begin{equation} 
-    f_{i,b} = \exp(-\lambda E_{i,b}) / \Z_i}
+    f_{i,b} = \exp(-\lambda E_{i,b}) / \Z_i
     \label{eq:boltzmann}
 \end{equation}
 
@@ -509,35 +560,41 @@ thermodynamique, et lié au processus de sélection. Dans la suite, nous
 intégrerons ce facteur à l'énergie.  \\ La connaissance des fréquences des
 bases permet de définir une autre quantité utile caractérisant la variabilité
 des séquences de fixation, l'information relative des sites par rapport à une
-séquence d'ADN aléatoire :
+séquence d'ADN aléatoire~\cite{Stormo1998p471}:
 
 \begin{equation} 
-    I = \sum_{i=1}^{L}\sum_{b = A,C,G,T}^{}f_{i,b}\ln(\frac{f_{i,b}}{\pi_b}) 
+    I = \sum_{i=1}^{L}\sum_{b = A,C,G,T}^{}f_{i,b}\ln\left(\frac{f_{i,b}}{\pi_b}\right) 
 \end{equation}
 
 où $L$ est la taille du site de fixation et $\pi_b$ correspond à la probabilité
 \apriori d'observer la base $b$ dans le génome. Parce que l'énergie est définie
-à une constante près, il est usuel de la définir relativement au ``background''
+à une constante près, il est usuel de la définir relativement au fond génomique
 : 
 
-\begin{equation} \tilde{E}_{i,b} = \ln(\frac{f_{i,b}}{\pi_b})} \end{equation}
+\begin{equation} 
+    \tilde{E}_{i,b} = \ln\left(\frac{f_{i,b}}{\pi_b}\right) 
+\end{equation}
 
-L'énergie totale 
+L'énergie totale d'un site $S_i$ est alors
 
 \begin{equation}
-    \begin{align}
+    \begin{aligned}
         E &= \sum_{i=1}^{L}\tilde{E}_{i,b} \\
-        &= \sum_{i=1}^{L}\ln(\frac{f_{b(i)}}{\pi_b})\\
-        &=\ln\left(\frac{\prod_{i=1}^{L}f_{b(i)}}{\prod_{i=1}^{L}\pi_b}\right)
-    \end{align}
+        &= \sum_{i=1}^{L}\ln\left(\frac{f_{b(i)}}{\pi_b}\right)\\
+        &=\ln\left(\frac{\prod_{i=1}^{L}f_{b(i)}}{\prod_{i=1}^{L}\pi_b}\right)\\
+        &=\ln\left(\frac{P(S_i|\text{TF})}{P(S_i|\text{fond génomique})}\right)
+    \end{aligned}
 \end{equation} 
 
-où $b(i)$ est la base située à la position $i$, quantifie alors simplement
-à quel point la séquence est plus ($E>0$) ou moins ($E<0$) probablement un site
-de fixation qu'un site tiré au hasard dans le génome. On parle aussi de
-\textit{score} de la séquence. L'information relative $I$ peut alors être vue
-comme quantifiant à quel point l'ensemble des sites de fixation se distingue
-d'un ensemble de même taille de sites tirés au hasard.
+où $b(i)$ est la base située à la position $i$ du site de fixation. Cette
+énergie quantifie simplement à quel point la séquence $S_i$ est plus ($E>0$) ou
+moins ($E<0$) probablement un site de fixation (de probabilité
+$P(S_i|\text{TF})$) qu'un site tiré au hasard dans le génome (de probabilité
+$P(S_i|\text{fond génomique})$). On parle aussi de \textit{score} de la
+séquence. L'information relative $I$, qui est le score moyen des séquences
+fixées par le TF,  peut alors être vue comme quantifiant à quel point
+l'ensemble des sites de fixation se distingue d'un ensemble de même taille de
+sites tirés au hasard.
 
 Avec ces outils en main, il devient alors simple de bâtir un modèle PWM et de
 l'utiliser (fig.~\ref{fig:wasserman-PWM}). Étant donnés des sites de fixation
@@ -567,13 +624,141 @@ certain seuil sont considérées comme des séquences de fixation.
 } 
 \label{fig:wasserman-PWM}
 \efig
-\subsection{Modèle biophysique}
 
-Si la concentration du \tf est faible, ce modèle se réduit au modèle PWM.
+\subsection{Modèle biophysique}
+\label{sub:modele-biophys}
+
+Dans le paragraphe précédent, nous avons vu que le modèle PWM est basé sur une
+hypothèse forte, celle que les sites de fixation ont été sélectionnés sur la
+base de leur seule affinité ou énergie envers un TF. Néanmoins, à aucun moment
+n'intervient la concentration du TF dans la cellule, dont dépend pourtant la
+probabilité de fixation. C'est ce que tente de capturer le modèle
+biophysique~\cite{Gerland2002p397,Djordjevic2003p2932,Zhao2009p3948}.  \\
+
+Considérons l'interaction entre un TF et une séquence d'ADN $S_i$ :
+
+\begin{equation}
+    TF+S_i \rightleftharpoons TF:S_i
+\end{equation}
+
+où $TF:S_i$ dénote le complexe entre le TF et le site $S_i$. La constante d'équilibre de cette réaction s'écrit selon la loi d'action de masse :
+
+\begin{equation}
+    K_i = \frac{[TF:S_i]}{[TF][S_i]}
+\end{equation}
+
+Le site peut être dans deux états : occupé par le TF où libre. Aussi, la probabilité que le TF soit fixé au site s'écrit simplement
+
+\begin{equation}
+    P(\text{fixation}|S_i) = \frac{[TF:S_i]}{[TF:S_i]+[S_i]}
+    = \frac{1}{1+\frac{1}{K_i [TF]}} = \frac{1}{1+\exp(E_i-\mu)}
+    \label{eq:modele-biophys}
+\end{equation}
+
+où $E_i=-\ln(K_i)$ est l'énergie libre standard de fixation (souvent notée
+$\Delta G$), et $\mu=\ln[TF]$ est le potentiel chimique, ces deux quantités
+étant exprimées en $kT$.  Ici nous avons considéré qu'il n'y avait qu'un seul
+site de fixation. De manière générale, le site est en compétition avec le fond
+génomique, ce qui ajoute une contribution à $\mu$ (voir description
+thermodynamique).  À l'instar du modèle PWM, l'énergie $E_i$ est généralement prise comme
+étant une fonction additive des énergies individuelles des différentes bases du
+site. Ainsi, lorsque le TF est à faible concentration ($\mu \to -\infty$), le
+modèle biophysique écrit en équation~\ref{eq:modele-biophys} se réduit au
+modèle PWM.
+
 
 \subsection{Modèle thermodynamique}
 
-\newpage
+La description biophysique peut être réécrite en termes thermodynamiques en
+utilisant des raisonnements simples sur le nombre d'états possibles et leur
+énergie (et donc poids de Boltzmann) associée. Nous adoptons ici l'approche
+de~\cite{Gerland2002p397}. On pourra par ailleurs se référer à l'excellente
+revue~\cite{Lassig2007p539}.  Considérons le cas simple d'un seul \ft
+interagissant avec un génome de taille $L \gg 1$ ne contenant qu'un seul site
+fonctionnel, le reste de la séquence étant aléatoire. La protéine se fixe
+à l'ADN avec une probabilité $1/2$.  Lorsqu'elle est fixée, elle est
+à l'équilibre entre le mode spécifique et le mode non spécifique. Nous désirons
+savoir avec quelle probabilité elle est fixée de manière spécifique. La
+fonction de partition, énumérant tous les poids de Boltzmann associés aux
+différents états accessibles au TF fixé, s'écrit :
+
+\begin{equation}
+    \Z = \sum\limits_{r=1}^{L} e^{-E_s(r)} + L e^{-E_{ns}}
+\end{equation}
+
+où les énergies spécifique $E_s(r)$ et non spécifique $E_{ns}$ sont exprimées
+en unités de $k_BT$. Notons $i$ la position du site fonctionnel. On peut écrire :
+
+\begin{equation}
+    \begin{aligned}
+        \Z & = e^{-E_s(i)} + e^{-E_{ns}} + \sum\limits_{r \neq i} e^{-E_s(r)} + (L - 1) e^{-E_{ns}}\\
+    & \simeq e^{-E_i} + \Z_0
+\end{aligned}
+\end{equation}
+
+où $Z_0$ est la fonction de partition d'une séquence aléatoire, et nous avons introduit l'énergie $E_i$ définie par
+
+\begin{equation}
+    e^{-E_i} = e^{-E_s(i)} + e^{-E_{ns}}
+    \label{eq:Ei}
+\end{equation}
+
+Dans le cas d'un site de reconnaissance, $E_s(i) \gg E_{ns}$ de sorte que $E_i
+\simeq E_s(i)$~\cite{Gerland2002p397} (ZZ Check ZZ). La probabilité que le
+facteur soit fixé sur le site fonctionnel s'écrit finalement :
+
+\begin{equation}
+    P(\text{fixation spécifique}|E_i) = \frac{e^{-E_i}}{\Z} = \frac{1}{1+e^{E_i-F_0}}
+    \label{eq:fixation-un-tf}
+\end{equation}
+
+où $F_0 = - \log \Z_0$ est l'énergie libre d'une séquence génomique aléatoire.
+On reconnait une fonction de Fermi, avec un seuil d'énergie à $F_0$ : pour $E_i
+< F_0$, la protéine est essentiellement fixée de manière spécifique à son site
+de reconnaissance, alors que pour $E_i > F_0$, elle ne distingue plus le site
+du fond génomique et y est faiblement fixée.\\
+
+Généralisons à présent au cas de plusieurs \fts et sites de reconnaissance.
+Nous négligeons le recouvrement entre \fts fixés sur des sites proches, qui
+poserait des problèmes stériques et corrèlerait les sites de fixation dans un
+certain voisinage, et considérons que le nombre de TFs est grand devant le
+nombre de sites de reconnaissance : ainsi, le génome est composé de $L$
+séquences indépendantes, chacune pouvant être soit non occupée, soit occupée de
+manière non spécifique, soit occupée de manière spécifique. Notons $\mu$ le
+potentiel chimique du TF en solution. La fonction de partition totale est le
+produit des fonctions de partition des sites indépendants,
+
+\begin{equation}
+    \Z(\mu) = \prod\limits_{r=1}^{L}\Z(\mu,r)
+\end{equation}
+
+où la fonction de partition d'un site s'écrit :
+
+\begin{equation}
+    \Z(\mu,r) = e^{-\mu} + e^{-E_s(r)} + e^{-E_{ns}}
+\end{equation}
+
+En utilisant à nouveau la définition de $E_i$ en éq.\ref{eq:Ei}, la probabilité
+de fixation d'un site à la position $i$ s'écrit finalement
+
+\begin{equation}
+    P(\text{fixation spécifique}|E_i) = \frac{e^{-E_i}}{\Z(\mu,i)} = \frac{1}{1+e^{E_i-\mu}}
+\end{equation}
+
+La valeur de $\mu$ est liée à la fois au nombre de TFs ainsi qu'à la
+possibilité de se fixer dans le fond génomique. Elle est bien approximée par~\cite{Gerland2002p397}
+
+\begin{equation}
+    \mu = F_0 + \log n
+\end{equation}
+
+où $F_0$ est l'énergie libre du fond génomique introduite en
+éq.~\ref{eq:fixation-un-tf}. Ainsi, la prise en compte d'une multiplicité de
+TFs ajoute seuil de la fonction de Fermi un facteur $\log n$ par rapport au cas
+d'un seul TF. Par ailleurs, cette approche thermodynamique nous a permis de
+généraliser le modèle biophysique simple introduit au paragraphe
+\S\ref{sub:modele-biophys}.
+
 \section{Mesures expérimentales des interactions protéine-ADN}
 \subsection{Approches \invitro : PBM, SELEX, HT-SELEX}
 \subsubsection{PBM}
