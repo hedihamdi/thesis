@@ -6,50 +6,46 @@ A level-1 auxiliary file: packaging/Conclusion_Generale.aux
 The style file: acm.bst
 A level-1 auxiliary file: packaging/abstract.aux
 Database file #1: biblio/papers.bib
-Warning--I didn't find a database entry for "Blau:1985vn"
-Warning--I didn't find a database entry for "Kulessa:1995ys"
-Warning--I didn't find a database entry for "Gurdon:2008zr"
-Warning--I didn't find a database entry for "Takahashi:2006kx"
 Warning--to sort, need author or key in us2001genomes
-You've used 52 entries,
+You've used 75 entries,
             2253 wiz_defined-function locations,
-            897 strings with 13866 characters,
-and the built_in function-call counts, 18692 in all, are:
-= -- 1744
-> -- 1103
+            1040 strings with 18587 characters,
+and the built_in function-call counts, 27364 in all, are:
+= -- 2538
+> -- 1644
 < -- 0
-+ -- 462
-- -- 400
-* -- 1794
-:= -- 3136
-add.period$ -- 153
-call.type$ -- 52
-change.case$ -- 355
++ -- 685
+- -- 598
+* -- 2668
+:= -- 4601
+add.period$ -- 222
+call.type$ -- 75
+change.case$ -- 523
 chr.to.int$ -- 0
-cite$ -- 53
-duplicate$ -- 462
-empty$ -- 1328
-format.name$ -- 400
-if$ -- 3698
+cite$ -- 76
+duplicate$ -- 669
+empty$ -- 1921
+format.name$ -- 598
+if$ -- 5419
 int.to.chr$ -- 0
-int.to.str$ -- 52
-missing$ -- 47
-newline$ -- 260
-num.names$ -- 102
-pop$ -- 285
+int.to.str$ -- 75
+missing$ -- 70
+newline$ -- 375
+num.names$ -- 148
+pop$ -- 407
 preamble$ -- 1
-purify$ -- 303
+purify$ -- 448
 quote$ -- 0
-skip$ -- 274
+skip$ -- 389
 stack$ -- 0
-substring$ -- 1177
-swap$ -- 103
+substring$ -- 1701
+swap$ -- 149
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 208
+type$ -- 300
 warning$ -- 1
-while$ -- 170
-width$ -- 54
-write$ -- 515
-(There were 5 warnings)
+while$ -- 241
+width$ -- 77
+write$ -- 745
+(There was 1 warning)

@@ -162,19 +162,19 @@ Néanmoins, depuis plusieurs décénies, différentes expériences ont exhibé la
 plasticité des états différenciés. Par exemple, Blau et al. ont montré en
 1985 que des programmes d'expression génétiques dormants peuvent être exprimés
 de manière dominante dans des cellules différenciées par la fusion de
-différents types cellulaires \cite{Blau:1985vn}. Puis différents travaux ont
-montré qu'il était possible de convertir des lignées de cellules en introdusant
+différents types cellulaires \cite{Blau1985vn}. Puis différents travaux ont
+montré qu'il était possible de convertir des lignées de cellules en introduisant
 certaines protéines régulatrices de la transcription, ou \FTs (TFs)
-\cite{davis1987expression,Kulessa:1995ys} (voir fig
+\cite{davis1987expression,Kulessa1995ys} (voir fig
 \ref{fig:graf-cells-lineages}).  Parallèlement, des expériences réalisées chez
 plusieurs espèces ont montré que le transfert de noyaux de cellules
 différenciées embryonnaires ou adultes dans un oeuf énucléé peut mener à la
 formation d'un organisme complet, montrant de manière univoque que l'identité
 des cellules différenciées peut être complètement
-renversée~\cite{Gurdon:2008zr}. Enfin, l'avancée la plus récente dans ce
+renversée~\cite{Gurdon2008zr}. Enfin, l'avancée la plus récente dans ce
 domaine a été la démonstration que des cellules somatiques différenciées
 peuvent être reprogrammées en cellules souches puripotentes par simple
-introduction d'un cocktail de 4 \tfs~\cite{Takahashi:2006kx} (fig
+introduction d'un cocktail de 4 \tfs~\cite{Takahashi2006kx} (fig
 \ref{fig:graf-cells-lineages}C).
 
 
@@ -245,20 +245,21 @@ protéines ou d'ARNs et donc l'état cellulaire (fig.~\ref{fig:us-grn}).
 Tout d'abord, un réseau d'expression génétique est caractérisé par un jeu
 d'interactions entre différents gènes. Ces interactions se font par
 l'intermédiaire de protéines régulatrices appelées \fts ou TFs, qui sont au
-nombre de $\sim830$ chez l'homme \cite{Jolma2013p3971}. Les gènes qui les
-expriment représentent donc $\sim3$\% de l'ensemble des $30,000$ gènes connus
-à ce jour. Pour réguler (activer ou inhiber) la transcription d'un gène cible,
-les TFs se fixent sur des sites de reconnaissance spécifiques sur l'ADN de
-$\sim10$bp et interagissent avec la machinerie transcriptionnelle au niveau du
-promoteur du gène cible. Les TFs peuvent se fixer sur le promoteur même, comme
-c'est souvent le cas chez la bactérie, ou dans des régions distales allant
-jusqu'à plusieurs centaines de kb, comme on trouve plus couramment chez les
-organismes complexes. Par ailleurs, différents TFs peuvent se combiner sur
-certaines régions de régulation contenant de multiples sites de fixation pour
-former des complexes protéiques.  Ces régions, appelées \crms (CRMs) ou plus
-communément \textit{enhancers}, sont d'une taille typique de $\sim1000$bp et
-ont la particularité de conduire à une expression spatio-temporelle très
-spécifique du gène cible. Ces différents points seront amplement développés en
+nombre de $\sim1400$ chez l'homme \cite{Vaquerizas2009ys}, soit $6\%$ des
+protéines encodées. Les gènes qui les expriment représentent donc $\sim3$\% de
+l'ensemble des $30,000$ gènes connus à ce jour. Pour réguler (activer ou
+inhiber) la transcription d'un gène cible, les TFs se fixent sur des sites de
+reconnaissance spécifiques sur l'ADN de $\sim10$bp et interagissent avec la
+machinerie transcriptionnelle au niveau du promoteur du gène cible. Les TFs
+peuvent se fixer sur le promoteur même, comme c'est souvent le cas chez la
+bactérie, ou dans des régions distales allant jusqu'à plusieurs centaines de
+kb, comme on trouve plus couramment chez les organismes complexes. Par
+ailleurs, différents TFs peuvent se combiner sur certaines régions de
+régulation contenant de multiples sites de fixation pour former des complexes
+protéiques.  Ces régions, appelées \crms (CRMs) ou plus communément
+\textit{enhancers}, sont d'une taille typique de $\sim1000$bp et ont la
+particularité de conduire à une expression spatio-temporelle très spécifique du
+gène cible. Ces différents points seront amplement développés en
 section~\ref{sec:CRMs}.
 
 \subsubsection{Régulation épigénétique} 
@@ -644,6 +645,7 @@ Considérons l'interaction entre un TF et une séquence d'ADN $S_i$ :
 où $TF:S_i$ dénote le complexe entre le TF et le site $S_i$. La constante d'équilibre de cette réaction s'écrit selon la loi d'action de masse :
 
 \begin{equation}
+    \label{eq:TF-equilibrium}
     K_i = \frac{[TF:S_i]}{[TF][S_i]}
 \end{equation}
 
@@ -760,10 +762,164 @@ généraliser le modèle biophysique simple introduit au paragraphe
 \S\ref{sub:modele-biophys}.
 
 \section{Mesures expérimentales des interactions protéine-ADN}
-\subsection{Approches \invitro : PBM, SELEX, HT-SELEX}
-\subsubsection{PBM}
-\subsubsection{SELEX}
-\subsubsection{HT-SELEX}
+
+Ces dernières années, des avancées technologiques considérables ont permis
+d'une part d'établir des modèles de fixation spécifique pour de nombreux TFs,
+d'autre part de localiser leurs sites de fixation dans le génome. Ces avancées
+ont eu lieu autant sur le plan \invitro, utilisant protéines purifiées et
+séquences nucléiques artificielles pour déduire l'affinité protéine-ADN, que
+sur le plan \invivo, mesurant l'interaction de la protéine avec l'ADN
+génomique~\cite{Stormo2010p3947}. 
+
+\subsection{Approches \invitro : MITOMI, SPR, PBM, CSI, SELEX, et HT-SELEX}
+
+\subsubsection{Approche microfluidique : MITOMI}
+
+En 2007, Maerkl et Quake ont mis au point une technique appelée MITOMI
+(Mechanically Induced Trapping Of Molecular Interactions) permettant une mesure
+directe de l'affinité d'un TF à des centaines de séquences d'ADN à la
+fois~\cite{Maerkl2007p840}.  Cette technique repose sur l'utilisation d'un
+système microfluidique composé de chambres dans lesquelles un fluide dont on
+peut facilement modifier la composition circule dans des canaux d'un diamètre
+de l'ordre de $1\mu$m dont le microenvironnement est ainsi finement contrôlé.
+Dans ce cas, le fluide contient des gènes synthétique codant pour le TF ainsi
+que du matériel permettant la synthèse de la protéine au sein de la chambre,
+évitant l'étape de purification du TF. Chaque chambre du système contient des
+anticorps attachés à la surface permettant de capturer le TF et une certaine
+concentration d'une séquence d'ADN spécifique contenant une marque
+fluorescente. Le système contient ainsi des centaines de séquences d'ADN
+différentes, chacune étant présente à différentes concentrations. Lorsque le TF
+est fixé par les anticorps, il recrute des séquences d'ADN selon leur affinité.
+Celles qui ne se fixent pas sont lavées. Au final, les séquences fixées
+produisent un signal de fluorescence. La comparaison des signaux pour
+différentes concentrations d'ADN donne accès au rapport des constantes
+d'équilibre $K_{eq}$ (eq.~\ref{eq:TF-equilibrium}). La comparaison avec une
+séquence référence dont la constante $K_{eq}$ est connue permet alors de
+déterminer le $K_{eq}$ absolu pour chaque séquence de fixation.  \\ 
+
+En utilisant $17$ systèmes de ce type, ils ont ainsi pu mesurer l'affinité de
+$4$ TFs de type bHLH à $464$ séquences d'ADN différentes: les séquences
+consensus et des séquences ayant une, deux, trois ou quatre mutations. À titre
+de comparaison, ils ont construit une PWM à partir des séquences contenant une
+seule mutation, puis ont prédit les énergies attendues des séquences
+à plusieurs mutations. La prédiction de la PWM s'est avérée bonne dans
+seulement $56\%$ des cas pour les séquences à deux mutations, $10\%$ pour les
+séquences à $3$ mutations et $0\%$ des cas pour les séquences à $4$ mutations,
+montrant les limites de ce modèle indépendant confronté à des données
+d'interactions d'ordre supérieur. Ainsi, un modèle plus raffiné prenant en
+compte l'énergie d'interaction non spécifique et incluant des interactions
+entre nucléotides voisins permet de rendre compte des valeurs
+observées~\cite{Stormo2007bh}. Nous reviendrons amplement sur la nécessité de
+prendre en compte les interactions entre paires de nucléotides lors de
+l'interaction spécifique entre TF et ADN dans le chapitre~\ref{ch:maxent}.
+
+\subsubsection{Approche physique : la microscopie SPR}
+
+La méthode de résonance des plasmons de surface (SPR en anglais) est
+habituellement utilisée pour étudier l'interaction d'une protéine avec un
+ligand (qui peut être une autre protéine), mais elle peut aussi être utilisée
+pour mesurer les interactions entre une protéine et quelques centaines de
+séquences d'ADN différentes~\cite{Shumaker-Parry2004ve,Campbell2007ly}. Le
+principe de la microscopie SPR est que l'angle de réflection de la lumière sur
+une fine surface d'or, par exemple, dépend de la masse de molécules attachées
+de l'autre côté de sa surface. Si de l'ADN est attaché à la surface, la
+fixation du TF induit un changement d'angle de reflection lumineuse mesurable
+au cours du temps. Ainsi, la cinétique de fixation du TF jusqu'à l'atteinte de
+l'équilibre est accessible. On peut de même étudier la dissociation du TF lors
+du lavage de la surface. Ces mesures donnent directement accès aux taux
+d'association $k_{on}$ et de dissociation $k_{off}$ que la simple mesure de la
+constante d'équilibre $K_{eq}=k_{on}/k_{off}$ ne permet habituellement pas de
+déterminer.
+
+\subsubsection{Approches basées sur des puces à ADN : PBM et CSI}
+
+L'analyse de fixation des protéines par puce à ADN (\textit{Protein-Binding
+Microarray} ou PBM) est une technologie haut débit qui a été développée au
+cours des 10 dernières années~\cite{Berger2006qf}. Les puces sont composées de
+$44,000$ puits auxquels sont fixés des brins d'ADN. Une puce contient tous les
+sites de fixation de $10$bp possibles, groupés dans les puits en fonction de
+leur coeur de $8$bp ($32,768$ séquences en comptant les deux brins) avec
+possibilité de distinguer les bases flanquantes dans certains cas spécifiés. Un
+TF, purifié à partir de cellules ou synthétisé \invitro, est ajouté à la puce,
+qui est ensuite lavée pour se débarrasser des fixations non spécifiques. La
+quantité de protéine fixée à un puits donné est déterminée grâce à un anticorps
+fluorescent contre la protéine. L'enrichissement en protéine est calculé
+relativement au bruit de fond (anticorps non spécifique par exemple). Il est
+alors possible d'utiliser ces mesures pour bâtir une PWM du TF (voir par
+exemple~\cite{Kinney2007p3977}).\\
+
+Une autre méthode utilise aussi des puces à ADN incluant toutes les séquences
+de $10$ bases possibles : c'est l'identification de site apparenté
+(\textit{Cognate Site Identifier} ou CSI)~\cite{Warren2006cr}. Une différence
+technique avec les PBMs est que l'ADN est d'abord synthétisé en simple brin
+puis se replie en double brin pour former le site de fixation, évitant ainsi de
+devoir générer l'ADN double brin à partir de précurseurs. Par ailleurs, le TF
+est en compétition avec un marqueur fluorescent qui peut se fixer à l'ADN: il
+n'est donc pas nécessaire d'utiliser un marquage spécifique sur le TF ou sur un
+anticorps, ce qui rend la procédure plus généralisable. Finalement, la
+spécificité du TF est représentée par un ``paysage de spécificité'' qui
+encapsule l'information de fluorescence de l'ensemble des variations par
+rapport à une séquence consensus dans une représentation
+simple~\cite{Carlson2010dq}.
+
+\subsubsection{Approche par purification des séquences fixées : SELEX et HT-SELEX}
+
+Mise au point il y a plus de $20$ ans, la méthode SELEX (\textit{Systematic
+Evolution of Ligands by EXponential enrichment}) repose sur la sélection de
+séquences d'ADN aléatoires par un TF
+\invitro~\cite{Oliphant1989nx,Tuerk1990qe,Blackwell1990ai,Wright1991dp}. Une
+bibliothèque de sites de fixation potentiels est d'abord générée en
+synthétisant des séquences d'ADN aléatoires ou en utilisant des séquences
+génomiques. Les bouts de ces séquences contiennent des précurseurs permettant
+l'amplification exponentielle par PCR. Le TF purifié est ajouté aux sites et
+les séquences fixées sont séparées des séquences non fixées, par exemple par
+retard sur gel. Après un cycle de sélection, les séquences récupérées sont
+enrichies en séquences de basse affinité pour le TF, car celles-ci sont
+simplement initialement bien plus abondantes que les séquences de haute
+affinité. Afin d'augmenter la proportion de séquence de grande affinité, les
+séquences filtrées sont amplifiées avant d'être filtrées à nouveau, ceci sur
+plusieurs cycles. À la fin de ce processus, les séquences sélectionnées sont
+clonées et séquencées, résultant en un nombre typique de moins de $\sim100$
+séquences indépendantes~\cite{Fields1997yq}. Si les séquences initiales sont
+issues d'ADN génomique, il est possible d'utiliser l'hybridation des séquences
+à des puces à ADN. La présence de plusieurs cycles de sélection rend néanmoins
+la détermination des énergies de fixation moins directe qu'avec les techniques
+précédentes. Une variante de la technique appelée SELEX-SAGE utilise des
+multimères de sites à la place de sites uniques et permet de réduire le nombre
+de cycles de sélection et d'augmenter ainsi le nombre de séquences de fixation
+obtenues~\cite{Roulet2002rt}, permettant de réaliser des modèles plus
+précis~\cite{Nagaraj2008p3749}.
+
+Depuis la méthode SELEX a été mise au point, des avancées considérables ont été
+faites dans les techniques de séquençage, permettant l'obtention de millions de
+séquences à la fois : on parle de séquence haut-débit
+(\textit{high-throughput}) ou encore séquençage massivement parallèle.
+L'utilisation de ces nouvelles techniques dans l'expérience SELEX a mené à la
+méthode HT-SELEX~\cite{Nagaraj2008p3749}, aussi appelée
+Bind-n-Seq~\cite{Zykovich2009gf}. Il est alors possible d'estimer un modèle
+d'énergie à partir des fréquences d'observation des différentes séquences dès
+le premier cycle~\cite{Nagaraj2008p3749}. Des cycles supplémentaires permettent
+d'obtenir plus d'information sur les séquences les plus spécifiques, notamment
+sur la présence de contributions non indépendantes à l'énergie, ou de compenser
+la faible spécificité d'un TF. L'avantage de cette technique est que la taille
+des sites de fixation n'est pas limitée. Ainsi, avec une nanomole d'ADN
+($\sim10^{15}$ séquences) on peut couvrir l'ensemble des sites de $25$bp
+possibles. Le séquençage haut-débit permet d'en échantillonner $\sim10^8$, ce
+qui est largement suffisant pour contraindre des modèles d'énergie
+indépendants, même pour des TFs ayant des sites de fixations de taille $>15$bp
+comme c'est souvent le cas chez la bactérie. Cette technique a récemment été
+poussée encore plus loin~\cite{Jolma2010ul}. En utilisant des protéines
+marquées, les auteurs ont réalisé un HT-SELEX à partir d'extraits cellulaires,
+et en utilisant un code barre aux séquences d'ADN de chaque expérience, ils ont
+pu analyser les sites de fixation pour plusieurs TFs en parallèle. Ils ont
+récemment pu utiliser cette technique pour obtenir des modèles de spécificité
+pour $411$ TFs humains, la plus grande étude de ce genre réalisée à ce
+jour~\cite{Jolma2013p3971}.
+
+
+
+
+
 
 \subsection{Approches \invivo : \chipchip, \chipseq, DNAse}
 \subsubsection{\chipchip}

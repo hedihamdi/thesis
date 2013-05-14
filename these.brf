@@ -4,14 +4,14 @@
 \backcite {Furusawa2012p3898}{{5}{1.1}{figure.caption.2}}
 \backcite {waddington1957strategy}{{5}{1.1}{figure.caption.2}}
 \backcite {kaufmann1993origins}{{6}{1.1.2}{figure.caption.2}}
-\backcite {Blau:1985vn}{{6}{1.1.4}{figure.caption.4}}
-\backcite {davis1987expression,Kulessa:1995ys}{{6}{1.1.4}{figure.caption.4}}
-\backcite {Gurdon:2008zr}{{6}{1.1.4}{figure.caption.4}}
+\backcite {Blau1985vn}{{6}{1.1.4}{figure.caption.4}}
+\backcite {davis1987expression,Kulessa1995ys}{{6}{1.1.4}{figure.caption.4}}
+\backcite {Gurdon2008zr}{{6}{1.1.4}{figure.caption.4}}
 \backcite {Graf2009p2592}{{7}{1.3}{figure.caption.4}}
-\backcite {Takahashi:2006kx}{{7}{1.1.4}{figure.caption.4}}
+\backcite {Takahashi2006kx}{{7}{1.1.4}{figure.caption.4}}
 \backcite {Nurse2011p2308}{{7}{1.2.1}{figure.caption.5}}
 \backcite {us2001genomes}{{8}{1.4}{figure.caption.5}}
-\backcite {Jolma2013p3971}{{8}{$\bullet $}{subsubsection.2.2.2.1}}
+\backcite {Vaquerizas2009ys}{{8}{$\bullet $}{subsubsection.2.2.2.1}}
 \backcite {us2001genomes}{{9}{1.5}{figure.caption.6}}
 \backcite {Bird2002oq}{{9}{$\bullet $}{figure.caption.7}}
 \backcite {Greer2012ve}{{9}{$\bullet $}{figure.caption.7}}
@@ -41,18 +41,35 @@
 \backcite {Lassig2007p539}{{18}{1.3.4}{subsection.2.3.4}}
 \backcite {Gerland2002p397}{{18}{1.3.4}{equation.2.3.10}}
 \backcite {Gerland2002p397}{{19}{1.3.4}{equation.2.3.14}}
-\backcite {Furey2012p3920}{{20}{1.11}{figure.caption.12}}
-\backcite {Liu2009p556}{{22}{1.12}{figure.caption.13}}
-\backcite {Stathopoulos2005p4051}{{23}{1.13}{figure.caption.14}}
-\backcite {Hartwell1999p560}{{24}{1.14}{figure.caption.15}}
-\backcite {Hartwell1999p560}{{25}{1.15}{figure.caption.16}}
-\backcite {Arnosti2005p3786}{{26}{1.16}{figure.caption.17}}
-\backcite {Feschotte2008dq}{{26}{1.5.6}{figure.caption.19}}
-\backcite {liberman2009p3886}{{27}{1.17}{figure.caption.18}}
-\backcite {Wittkopp2011p3240}{{28}{1.18}{figure.caption.19}}
-\backcite {Hartwell1999p560}{{29}{1.19}{figure.caption.20}}
-\backcite {Jaynes1957p3771,Shannon1948p699}{{33}{2.1.1}{subsection.3.1.1}}
-\backcite {Sigal2006p3278}{{33}{2.1.1}{subsection.3.1.1}}
-\backcite {Zinzen2009p760,Chen2008p3738}{{34}{2.2.1}{subsection.3.2.1}}
-\backcite {ENCODEProjectConsortium2011p3726}{{34}{2.2.1}{subsection.3.2.1}}
-\backcite {Smit2010}{{34}{2.2.1}{subsection.3.2.1}}
+\backcite {Stormo2010p3947}{{19}{1.4}{section.2.4}}
+\backcite {Maerkl2007p840}{{20}{$\bullet $}{subsubsection.2.4.1.1}}
+\backcite {Stormo2007bh}{{20}{$\bullet $}{subsubsection.2.4.1.1}}
+\backcite {Shumaker-Parry2004ve,Campbell2007ly}{{20}{$\bullet $}{subsubsection.2.4.1.2}}
+\backcite {Berger2006qf}{{21}{$\bullet $}{subsubsection.2.4.1.3}}
+\backcite {Kinney2007p3977}{{21}{$\bullet $}{subsubsection.2.4.1.3}}
+\backcite {Warren2006cr}{{21}{$\bullet $}{subsubsection.2.4.1.3}}
+\backcite {Carlson2010dq}{{21}{$\bullet $}{subsubsection.2.4.1.3}}
+\backcite {Oliphant1989nx,Tuerk1990qe,Blackwell1990ai,Wright1991dp}{{21}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Fields1997yq}{{21}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Roulet2002rt}{{21}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Nagaraj2008p3749}{{21}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Nagaraj2008p3749}{{21}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Zykovich2009gf}{{21}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Nagaraj2008p3749}{{22}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Jolma2010ul}{{22}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Jolma2013p3971}{{22}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Furey2012p3920}{{23}{1.11}{figure.caption.12}}
+\backcite {Liu2009p556}{{24}{1.12}{figure.caption.13}}
+\backcite {Stathopoulos2005p4051}{{25}{1.13}{figure.caption.14}}
+\backcite {Hartwell1999p560}{{26}{1.14}{figure.caption.15}}
+\backcite {Hartwell1999p560}{{27}{1.15}{figure.caption.16}}
+\backcite {Feschotte2008dq}{{27}{1.5.6}{figure.caption.19}}
+\backcite {Arnosti2005p3786}{{28}{1.16}{figure.caption.17}}
+\backcite {liberman2009p3886}{{29}{1.17}{figure.caption.18}}
+\backcite {Wittkopp2011p3240}{{30}{1.18}{figure.caption.19}}
+\backcite {Hartwell1999p560}{{31}{1.19}{figure.caption.20}}
+\backcite {Jaynes1957p3771,Shannon1948p699}{{35}{2.1.1}{subsection.3.1.1}}
+\backcite {Sigal2006p3278}{{35}{2.1.1}{subsection.3.1.1}}
+\backcite {Zinzen2009p760,Chen2008p3738}{{36}{2.2.1}{subsection.3.2.1}}
+\backcite {ENCODEProjectConsortium2011p3726}{{36}{2.2.1}{subsection.3.2.1}}
+\backcite {Smit2010}{{36}{2.2.1}{subsection.3.2.1}}

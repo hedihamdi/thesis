@@ -45,16 +45,48 @@
   acids. 1. models and theory.
 \newblock {\em Biochemistry 20}, 24 (Nov 1981), 6929--48.
 
+\bibitem{Berger2006qf}
+{\sc Berger, M.~F., Philippakis, A.~A., Qureshi, A.~M., He, F.~S., Estep, 3rd,
+  P.~W., and Bulyk, M.~L.}
+\newblock Compact, universal dna microarrays to comprehensively determine
+  transcription-factor binding site specificities.
+\newblock {\em Nat Biotechnol 24}, 11 (Nov 2006), 1429--35.
+
 \bibitem{Bird2002oq}
 {\sc Bird, A.}
 \newblock Dna methylation patterns and epigenetic memory.
 \newblock {\em Genes Dev 16}, 1 (Jan 2002), 6--21.
+
+\bibitem{Blackwell1990ai}
+{\sc Blackwell, T.~K., and Weintraub, H.}
+\newblock Differences and similarities in dna-binding preferences of myod and
+  e2a protein complexes revealed by binding site selection.
+\newblock {\em Science 250}, 4984 (Nov 1990), 1104--10.
+
+\bibitem{Blau1985vn}
+{\sc Blau, H.~M., Pavlath, G.~K., Hardeman, E.~C., Chiu, C.~P., Silberstein,
+  L., Webster, S.~G., Miller, S.~C., and Webster, C.}
+\newblock Plasticity of the differentiated state.
+\newblock {\em Science 230}, 4727 (Nov 1985), 758--66.
 
 \bibitem{EMBL2001}
 {\sc Brazma, A., Parkinson, H., Schlitt, T., and Shojatalab, M.}
 \newblock A quick introduction to elements of biology - cells, molecules,
   genes, functional genomics, microarrays.
 \newblock \url{http://www.ebi.ac.uk/microarray/biology_intro.html}, Oct 2001.
+
+\bibitem{Campbell2007ly}
+{\sc Campbell, C.~T., and Kim, G.}
+\newblock Spr microscopy and its applications to high-throughput analyses of
+  biomolecular binding events and their kinetics.
+\newblock {\em Biomaterials 28}, 15 (May 2007), 2380--92.
+
+\bibitem{Carlson2010dq}
+{\sc Carlson, C.~D., Warren, C.~L., Hauschild, K.~E., Ozers, M.~S., Qadir, N.,
+  Bhimsaria, D., Lee, Y., Cerrina, F., and Ansari, A.~Z.}
+\newblock Specificity landscapes of dna binding molecules elucidate biological
+  function.
+\newblock {\em Proc Natl Acad Sci U S A 107}, 10 (Mar 2010), 4544--9.
 
 \bibitem{Chen2008p3738}
 {\sc Chen, X., Xu, H., Yuan, P., Fang, F., Huss, M., Vega, V.~B., Wong, E.,
@@ -86,6 +118,11 @@
 {\sc Feschotte, C.}
 \newblock Transposable elements and the evolution of regulatory networks.
 \newblock {\em Nat Rev Genet 9}, 5 (May 2008), 397--405.
+
+\bibitem{Fields1997yq}
+{\sc Fields, D.~S., He, Y., Al-Uzri, A.~Y., and Stormo, G.~D.}
+\newblock Quantitative specificity of the mnt repressor.
+\newblock {\em J Mol Biol 271}, 2 (Aug 1997), 178--94.
 
 \bibitem{Furey2012p3920}
 {\sc Furey, T.~S.}
@@ -121,6 +158,11 @@
   inheritance.
 \newblock {\em Nat Rev Genet 13}, 5 (May 2012), 343--57.
 
+\bibitem{Gurdon2008zr}
+{\sc Gurdon, J.~B., and Melton, D.~A.}
+\newblock Nuclear reprogramming in cells.
+\newblock {\em Science 322}, 5909 (Dec 2008), 1811--5.
+
 \bibitem{Hammond2001bh}
 {\sc Hammond, S.~M., Caudy, A.~A., and Hannon, G.~J.}
 \newblock Post-transcriptional gene silencing by double-stranded rna.
@@ -141,6 +183,15 @@
 \newblock Information theory and statistical mechanics. ii.
 \newblock {\em Physical review 108}, 2 (1957), 171.
 
+\bibitem{Jolma2010ul}
+{\sc Jolma, A., Kivioja, T., Toivonen, J., Cheng, L., Wei, G., Enge, M.,
+  Taipale, M., Vaquerizas, J.~M., Yan, J., Sillanp{\"a}{\"a}, M.~J., Bonke, M.,
+  Palin, K., Talukder, S., Hughes, T.~R., Luscombe, N.~M., Ukkonen, E., and
+  Taipale, J.}
+\newblock Multiplexed massively parallel selex for characterization of human
+  transcription factor binding specificities.
+\newblock {\em Genome Res 20}, 6 (Jun 2010), 861--73.
+
 \bibitem{Jolma2013p3971}
 {\sc Jolma, A., Yan, J., Whitington, T., Toivonen, J., Nitta, K.~R., Rastas,
   P., Morgunova, E., Enge, M., Taipale, M., Wei, G., Palin, K., Vaquerizas,
@@ -159,12 +210,24 @@
 \newblock Multicellular life cycle of magnetotactic prokaryotes.
 \newblock {\em FEMS Microbiol Lett 240}, 2 (Nov 2004), 203--8.
 
+\bibitem{Kinney2007p3977}
+{\sc Kinney, J.~B., Tkacik, G., and Callan, C.~G.}
+\newblock Precise physical models of protein-dna interaction from
+  high-throughput data.
+\newblock {\em Proc Natl Acad Sci USA 104}, 2 (Jan 2007), 501--6.
+
 \bibitem{Kondo2010ly}
 {\sc Kondo, T., Plaza, S., Zanet, J., Benrabah, E., Valenti, P., Hashimoto, Y.,
   Kobayashi, S., Payre, F., and Kageyama, Y.}
 \newblock Small peptides switch the transcriptional activity of shavenbaby
   during drosophila embryogenesis.
 \newblock {\em Science 329}, 5989 (Jul 2010), 336--9.
+
+\bibitem{Kulessa1995ys}
+{\sc Kulessa, H., Frampton, J., and Graf, T.}
+\newblock Gata-1 reprograms avian myelomonocytic cell lines into eosinophils,
+  thromboblasts, and erythroblasts.
+\newblock {\em Genes Dev 9}, 10 (May 1995), 1250--62.
 
 \bibitem{Lassig2007p539}
 {\sc L{\"a}ssig, M.}
@@ -191,11 +254,23 @@
   signaling as essential regulators of muscle development.
 \newblock {\em Developmental Cell 16}, 2 (Feb 2009), 280--91.
 
+\bibitem{Maerkl2007p840}
+{\sc Maerkl, S., and Quake, S.}
+\newblock A systems approach to measuring the binding energy landscapes of
+  transcription factors.
+\newblock {\em Science 315}, 5809 (2007), 233.
+
 \bibitem{Milo2002tg}
 {\sc Milo, R., Shen-Orr, S., Itzkovitz, S., Kashtan, N., Chklovskii, D., and
   Alon, U.}
 \newblock Network motifs: simple building blocks of complex networks.
 \newblock {\em Science 298}, 5594 (Oct 2002), 824--7.
+
+\bibitem{Nagaraj2008p3749}
+{\sc Nagaraj, V.~H., O'flanagan, R.~A., and Sengupta, A.~M.}
+\newblock Better estimation of protein-dna interaction parameters improve
+  prediction of functional sites.
+\newblock {\em BMC Biotechnol 8}, 1 (Jan 2008), 94.
 
 \bibitem{Nurse2011p2308}
 {\sc Nurse, P., and Hayles, J.}
@@ -209,6 +284,20 @@
 \newblock Control of pancreas and liver gene expression by hnf transcription
   factors.
 \newblock {\em Science 303}, 5662 (Feb 2004), 1378--81.
+
+\bibitem{Oliphant1989nx}
+{\sc Oliphant, A.~R., Brandl, C.~J., and Struhl, K.}
+\newblock Defining the sequence specificity of dna-binding proteins by
+  selecting binding sites from random-sequence oligonucleotides: analysis of
+  yeast gcn4 protein.
+\newblock {\em Mol Cell Biol 9}, 7 (Jul 1989), 2944--9.
+
+\bibitem{Roulet2002rt}
+{\sc Roulet, E., Busso, S., Camargo, A.~A., Simpson, A. J.~G., Mermod, N., and
+  Bucher, P.}
+\newblock High-throughput selex sage method for quantitative modeling of
+  transcription-factor binding sites.
+\newblock {\em Nat Biotechnol 20}, 8 (Aug 2002), 831--5.
 
 \bibitem{Schones2008nx}
 {\sc Schones, D.~E., and Zhao, K.}
@@ -225,6 +314,13 @@
 \newblock Network motifs in the transcriptional regulation network of
   escherichia coli.
 \newblock {\em Nature genetics 31}, 1 (2002), 64--68.
+
+\bibitem{Shumaker-Parry2004ve}
+{\sc Shumaker-Parry, J.~S., Aebersold, R., and Campbell, C.~T.}
+\newblock Parallel, quantitative measurement of protein binding to a
+  120-element double-stranded dna array in real time using surface plasmon
+  resonance microscopy.
+\newblock {\em Anal Chem 76}, 7 (Apr 2004), 2071--82.
 
 \bibitem{Sigal2006p3278}
 {\sc Sigal, A., Milo, R., Cohen, A., Geva-Zatorsky, N., Klein, Y., Liron, Y.,
@@ -254,12 +350,47 @@
   interactions.
 \newblock {\em Trends in biochemical sciences 23}, 3 (1998), 109--113.
 
+\bibitem{Stormo2007bh}
+{\sc Stormo, G.~D., and Zhao, Y.}
+\newblock Putting numbers on the network connections.
+\newblock {\em Bioessays 29}, 8 (Aug 2007), 717--21.
+
+\bibitem{Stormo2010p3947}
+{\sc Stormo, G.~D., and Zhao, Y.}
+\newblock Determining the specificity of protein-dna interactions.
+\newblock {\em Nature Reviews Genetics 11}, 11 (Nov 2010), 751--60.
+
+\bibitem{Takahashi2006kx}
+{\sc Takahashi, K., and Yamanaka, S.}
+\newblock Induction of pluripotent stem cells from mouse embryonic and adult
+  fibroblast cultures by defined factors.
+\newblock {\em Cell 126}, 4 (Aug 2006), 663--76.
+
+\bibitem{Tuerk1990qe}
+{\sc Tuerk, C., and Gold, L.}
+\newblock Systematic evolution of ligands by exponential enrichment: Rna
+  ligands to bacteriophage t4 dna polymerase.
+\newblock {\em Science 249}, 4968 (Aug 1990), 505--10.
+
+\bibitem{Vaquerizas2009ys}
+{\sc Vaquerizas, J.~M., Kummerfeld, S.~K., Teichmann, S.~A., and Luscombe,
+  N.~M.}
+\newblock A census of human transcription factors: function, expression and
+  evolution.
+\newblock {\em Nat Rev Genet 10}, 4 (Apr 2009), 252--63.
+
 \bibitem{waddington1957strategy}
 {\sc Waddington, C.~H., et~al.}
 \newblock The strategy of the genes. a discussion of some aspects of
   theoretical biology. with an appendix by h. kacser.
 \newblock {\em The strategy of the genes. A discussion of some aspects of
   theoretical biology. With an appendix by H. Kacser.\/} (1957), ix+--262.
+
+\bibitem{Warren2006cr}
+{\sc Warren, C.~L., Kratochvil, N. C.~S., Hauschild, K.~E., Foister, S.,
+  Brezinski, M.~L., Dervan, P.~B., Phillips, Jr, G.~N., and Ansari, A.~Z.}
+\newblock Defining the sequence-recognition profile of dna-binding molecules.
+\newblock {\em Proc Natl Acad Sci U S A 103}, 4 (Jan 2006), 867--72.
 
 \bibitem{Wasserman2004p624}
 {\sc Wasserman, W.~W., and Sandelin, A.}
@@ -293,6 +424,12 @@
   processes underlying divergence.
 \newblock {\em Nature Reviews Genetics 13}, 1 (Dec 2011), 59--69.
 
+\bibitem{Wright1991dp}
+{\sc Wright, W.~E., Binder, M., and Funk, W.}
+\newblock Cyclic amplification and selection of targets (casting) for the
+  myogenin consensus binding site.
+\newblock {\em Mol Cell Biol 11}, 8 (Aug 1991), 4104--10.
+
 \bibitem{Zhao2009p3948}
 {\sc Zhao, Y., Granas, D., and Stormo, G.~D.}
 \newblock Inferring binding energies from selected binding sites.
@@ -303,5 +440,11 @@
 \newblock Combinatorial binding predicts spatio-temporal cis-regulatory
   activity.
 \newblock {\em Nature 462}, 7269 (2009), 65--70.
+
+\bibitem{Zykovich2009gf}
+{\sc Zykovich, A., Korf, I., and Segal, D.~J.}
+\newblock Bind-n-seq: high-throughput analysis of in vitro protein-dna
+  interactions using massively parallel sequencing.
+\newblock {\em Nucleic Acids Res 37}, 22 (Dec 2009), e151.
 
 \end{thebibliography}
