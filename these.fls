@@ -1,4 +1,4 @@
-PWD /Users/Marc/Desktop/work/these/manuscript
+PWD /Users/Marc/Desktop/Work/these/manuscript
 INPUT /usr/local/texlive/2012/texmf.cnf
 INPUT /usr/local/texlive/2012/texmf/web2c/texmf.cnf
 INPUT /usr/local/texlive/2012/texmf-var/web2c/pdftex/pdflatex.fmt
@@ -771,9 +771,15 @@ INPUT ./figures/wasserman-PWM.pdf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplbi8t.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplbi8t.vf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplbi8r.tfm
-INPUT figures/furey-chipseq.pdf
-INPUT ./figures/furey-chipseq.pdf
-INPUT ./figures/furey-chipseq.pdf
+INPUT figures/farnham-chip.pdf
+INPUT ./figures/farnham-chip.pdf
+INPUT ./figures/farnham-chip.pdf
+INPUT figures/park-chip-resolution.pdf
+INPUT ./figures/park-chip-resolution.pdf
+INPUT ./figures/park-chip-resolution.pdf
+INPUT figures/hesselberth-dnase.pdf
+INPUT ./figures/hesselberth-dnase.pdf
+INPUT ./figures/hesselberth-dnase.pdf
 INPUT figures/furlong-eve-enhancers-to-stripes.pdf
 INPUT ./figures/furlong-eve-enhancers-to-stripes.pdf
 INPUT ./figures/furlong-eve-enhancers-to-stripes.pdf

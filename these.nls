@@ -6,7 +6,11 @@
   \item [{bHLH}]\begingroup \textit{basic Helix-Loop-Helix}\nomeqref {0}
 		\nompageref{ix}
   \item [{bp}]\begingroup Paire de base\nomeqref {0}\nompageref{ix}
+  \item [{ChIP}]\begingroup Immunoprécipitation de la chromatine (\textit{Chromatin immunoprecipitation})\nomeqref {0}
+		\nompageref{ix}
   \item [{CRM}]\begingroup Module de cis-régulation (\textit{Cis-Regulatory Module})\nomeqref {0}
+		\nompageref{ix}
+  \item [{DHS}]\begingroup Hypersensible à la DNase I (\textit{DNaseI-hypersensistive})\nomeqref {0}
 		\nompageref{ix}
   \item [{ISH}]\begingroup Hybridation \insitu (\textit{In-Situ} Hybridization)\nomeqref {0}
 		\nompageref{ix}

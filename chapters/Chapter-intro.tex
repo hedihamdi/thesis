@@ -921,17 +921,179 @@ jour~\cite{Jolma2013p3971}.
 
 
 
+\subsection{Approche clonale : la technique de simple hybride}
+\label{sub:approche_clonale_la_technique_de_simple_hybride}
+
+Contrairement aux approches précédentes, la technique de simple hybride
+(\textit{Bacterial one-hybrid} ou B1H) n'est pas purement \invitro, au sens où
+l'interaction protéine-ADN est testée au sein d'une bactérie.  Néanmoins, parce
+que l'interaction n'est pas testée dans son contexte cellulaire d'origine, nous
+la considérerons comme telle. Cette approche repose sur l'intégration par une
+bactérie hôte de deux vecteurs d'expression génétique, ou plasmides. Le premier
+exprime le \tf d'intérêt fusionné à une sous-unité de l'ARN polymérase
+(l'appât), c'est la protéine ``hybride''. L'autre contient une région de
+séquence aléatoire représentant un site de fixation potentiel (la proie) en
+amont d'un promoteur à faible activité. La fixation de cette région par la
+protéine hybride permet l'activation d'un gène de sélection, généralement
+\textit{HIS3}, un gène de la levure requis pour la biosynthèse de l'histidine
+et dont l'homologue bactérien est absent de la souche d'\ecoli utilisée. La
+croissance des cellules a lieu dans un milieu ne contenant pas l'histidine.
+Dans ces conditions, les bactéries n'exprimant pas \textit{HIS3} ne peuvent
+croître. Ainsi, seules les bactéries dans lesquelles le \tf se fixe à la proie
+expriment \textit{HIS3}, croissent et forment des colonies, d'où la notion de
+gène de sélection. Par ailleurs, la stringence de la sélection peut être
+modulée en ajoutant au milieu différentes concentrations de 3-amino-triazole
+(3-AT), un inhibiteur de \textit{HIS3}. De cette façon l'affinité du site de
+fixation peut être estimée plus finement.  
+\\ 
+
+Dans les études de ce type, les sites de fixation présents au sein des colonies
+sont séquencés individuellement, ce qui permet d'obtenir environ $50$ séquences
+pour une expérience de sélection donnée~\cite{}. Néanmoins, il semble possible
+d'utiliser les nouvelles technologies de séquençage pour récupérer l'ensemble
+des sites de fixation des bactéries présentes sur une
+plaque~\cite{Stormo2010p3947}.  À l'instar de la méthode HT-SELEX, on obtient
+des millions de sites, ceux ayant une plus grande affinité étant présents
+à plusieurs centaines de milliers d'exemplaires, et ceux ayant une faible
+affinité étant présent en un seul voire aucun exemplaire.
+\\
+
+Notons qu'il est aussi possible d'adopter la démarche inverse, \cad de partir
+de quelques sites de fixation présumés fonctionnels mais pour lesquels on ne
+connaît pas le TF associé. En utilisant une bibliothèque de plasmides codant
+pour différents TFs hybrides, il est alors possible de déterminer si l'un
+d'entre eux possède une affinité importante avec les sites testés.
+
+% subsection approche_clonale_la_technique_de_simple_hybride (end)
 \subsection{Approches \invivo : \chipchip, \chipseq, DNAse}
-\subsubsection{\chipchip}
-\subsubsection{\chipseq}
+
+Dans cette section, nous nous intéressons aux techniques permettant
+d'identifier les sites de fixation d'un \tf sur le génome. Ces méthodes se
+basent sur des extraits cellulaires (de $10^4$ à $10^8$ cellules) qui peuvent
+provenir d'un tissu homogène (un seul type de cellule) ou hétérogène (plusieurs
+types de cellules), voire de l'organisme entier si la dissection est impossible
+(embryon de mouche par exemple). L'information obtenue est donc toujours
+conditionnée par ce matériau de départ, et l'on n'obtient que les sites
+\textit{accessibles} étant données le type cellulaire et la période de
+développement étudiés.
+
+\subsubsection{Immunoprécipitation de la chromatine : \chipchip et \chipseq}
 
 \bfig
-\includegraphics[width=.4\textwidth]{figures/furey-chipseq.pdf}
+\includegraphics[width=0.8\textwidth]{figures/farnham-chip.pdf}
 \captionbf{Étapes d'une expérience de \chipseq}{
-    Figure tirée de \cite{Furey2012p3920}.
-} 
+    Figure tirée de \cite{Farnham2009fk}.
+}
+\label{fig:farnham-chip}
 \efig
-\subsubsection{DNAse}
+
+
+La technique d'immunoprécipitation de la chromatine (ChIP)
+(fig.~\ref{fig:farnham-chip}) consiste dans un premier temps à induire la
+réticulation (\textit{crosslink}) des protéines se liant à l'ADN avec l'ADN en
+traitant les cellules avec de la formaldéhyde. Cette étape permet de
+transformer les liaisons faibles protéine-ADN en liaisons covalentes. Une fois
+les protéines fixées, la chromatine est découpée par digestion enzymatique ou
+en la soumettant à des ultrasons (c'est la sonication), résultant en des
+fragments de taille variant entre $200$ et $600$bp. Ces fragments sont ensuite
+immunoprécipités en présence d'un anticorps spécifique d'un \tf ou d'un isoforme
+d'histone (dans le cas d'une étude du paysage épigénétique) d'intérêt, permettant ainsi de récupérer tous les sites de fixation dans le génome. Après purification des fragments précipités, l'échantillon peut être analysé soit par hybridation sur puce (\chip) ou par séquençage haut débit (\chipseq).\\
+
+Dans le cas de la \chipchip, l'échantillon immunoprécipité et l'ADN de départ
+(\textit{input}) sont marqués avec des colorants fluorescents et hybdridés
+à une puce à ADN composée de très nombreux puits contenant des
+oligonucléotides (courtes séquences d'ADN) correspondant à différentes régions
+du génome. Dans le meilleur cas, ces oligonucléotides couvrent l'ensemble du
+génome. Les sites de liaison sont identifiés par l'écart d'intensité entre les
+signaux de fluorescence des conditions d'immunoprécipitation et
+d'\textit{input}.
+\\
+
+\bfig
+\includegraphics[width=0.6\textwidth]{figures/park-chip-resolution.pdf}
+\captionbf{Résolution des expériences \chipchip et \chipseq}{
+Figure tirée de \cite{Park2009kx}. Exemples de profils de fixation de la
+protéine à chromodomaine Chromator générés à partir d'expériences de \chipchip
+(intensité relative par rapport au contrôle, bleu) et de \chipseq (densité de
+séquences, rouge) dans la lignée cellulaire S2 de \dmel. On peut noter la plus
+grande résolution de l'expérience \chipseq pour déterminer les sites de
+liaison. L'ADN utilisé en \textit{input} de l'expérience de \chipseq et servant
+de contrôle est montré en gris.
+}
+\label{fig:park-chip-resolution}
+\efig
+
+Dans le cas du \chipseq, l'échantillon immunoprécipité est analysé par
+séquençage à haut débit, résultant en une librairie de \textit{reads} d'une
+longueur typique variant entre $27$ et $50$bp issus des bouts des séquences.
+Ces \textit{reads} sont ensuite alignés sur un génome de référence. À chaque
+position du génome correspond ainsi un certain nombre de séquences précipitées
+et d'\textit{input}. En comparant ce nombre au nombre moyen dans le locus et
+à l'\textit{input}, il est possible d'identifier des pics correspondant à la
+fixation du facteur (voir par exemple le programme d'appel de pics \chipseq
+MACS \cite{Zhang2008uq}).  \\
+
+Dans les deux cas, il faut noter que l'on a affaire à la fixation
+\textit{moyenne} du facteur sur l'ADN dans la population de cellules étudiée.
+Ainsi, un petit pic peut représenter aussi bien une fixation forte dans un
+petit sous-ensemble de cellules (par exemple celles qui sont à un certain état
+d'avancement du cycle cellulaire) qu'une fixation moyenne dans l'ensemble de la
+population. L'expérience de \chipseq offre une résolution bien plus précise
+($\leq100$nt) que la méthode \chipchip (fig.~\ref{fig:park-chip-resolution}).
+En effet, dans ce dernier cas la résolution est limitée par le nombre
+d'oligonucléotides utilisés, qui sont dans le meilleur des cas répartis sur le
+génome avec $35-100$ nucléotides d'écart entre deux instances. Pour se comparer
+à la \chipseq, il faudrait que tous les oligonucléotides se superposent à une
+base près, ce qui demanderait un trop grand nombre de puces.
+
+
+\subsubsection{Empreinte à la DNase I (\textit{DNase I footprinting})}
+
+\bfig
+\includegraphics[width=\textwidth]{figures/hesselberth-dnase.pdf}
+\captionbf{Expérience d'empreinte à la DNase I chez la levure : vers une résolution au nucléotide près}{
+Figure tirée de \cite{Hesselberth2009vn}. (a) Densité de digestion de la DNase
+I par nucléotide dans une région de $100$kb du génome de la levure contenant
+$\sim50$ gènes (boîtes bleues). On voit clairement certaines régions
+promotrices marquées par la DNase I. (b) Zoom sur deux régions de $2.5$kb. (c)
+Zoom sur des régions de $250$bp. Le nombre d'événements de digestion par
+nucléotide est marqué par des empilements de boîtes noires, révélant des
+régions protégées : ce sont les empreintes à la DNase I. (d) Les empreintes
+sont associées à des motifs de régulation de la levure connus. Les pointillés
+noirs indiquent le nombre moyen de digestion par nucléotide dans le génome
+($\sim2$ digestions par base).
+}
+\label{fig:hesselberth-dnase}
+\efig
+
+Contrairement aux techniques précédentes, l'empreinte à la DNase 1 ne repose
+pas sur l'étude d'un \tf précis, mais permet au contraire d'avoir un ensemble
+de sites de fixation dans le génome pour un type cellulaire donné, avec une
+précision au nucléotide près. Cette méthode repose sur le fait que la fixation
+stable des \tfs à l'ADN n'est possible que si la région est pauvre en
+nucléosomes, les protéines autour desquelles s'enroule l'ADN : on parle de
+région de chromatine ouverte. Ces régions sont préférentiellement digérées par
+l'endonucléase DNase I. Étant donné que la majorité de l'ADN est enroulé autour
+de nucléosomes, les sites hypersensibles à la digestion par DNase
+I (\textit{DNaseI-hypersensitive} ou DHS) correspondent essentiellement à des
+régions de chromatine ouverte ayant des roles de régulation génétique
+: promoteurs, enhancers\ldots 
+\\
+
+En combinant la technique de DHS avec le séquençage à haut débit, l'expérience
+de DNase-seq permet d'identifier tous les types de région de régulation
+à l'échelle du génome~\cite{Thurman2012ys}. Les régions riches en sites de digestion
+identifient alors les sites DHS. Par ailleurs, au sein d'un site DHS, il y a de
+petites régions ($\sim15$bp) qui sont protégées de la digestion par DNase
+I : ce sont les empreintes à la DNase I ou \textit{DNaseI footprints}
+(fig.~\ref{fig:hesselberth-dnase}). Ces empreintes sont dues à la présence de
+protéines ou de complexes fixés à l'ADN. Cette technique de détection de sites
+de liaison par empreinte à la DNase I existe depuis $30$ ans mais n'a que
+récemment été porté à l'échelle génomique. En comparant à des données \chipseq
+ou en utilisant des bases de données de motifs de \tfs, il est possible
+d'identifier le facteur correspondant dont les sites de fixation sont alors
+connus au nucléotide près.
+
 
 
 \section{Les modules de cis-régulation} \label{sec:CRMs} 
