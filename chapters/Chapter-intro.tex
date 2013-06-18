@@ -122,11 +122,14 @@ différentes vallées de la représentation de Waddington
 
 \bfig
 \includegraphics[width=.4\textwidth]{figures/embrys-myog.jpg}
-\captionbf{Spécification spatio-temporelle du type cellulaire}{ Hybridization
-    \insitu de \myog, marqueur des cellules musculaires squelettiques
-    différenciées, chez un embryon de souris de $11.5$ jours. Le pattern de
-    spécification des cellules myogéniques est clairement visible au niveau des
-    futures vertèbres.
+\captionbf{Spécification spatio-temporelle du type cellulaire}{ 
+    
+    Hybridization \insitu de \myog, marqueur des cellules musculaires
+    squelettiques différenciées, chez un embryon de souris de $11.5$ jours. Le
+    pattern de spécification des cellules myogéniques est clairement visible au
+    niveau des futures vertèbres. L'image est tirée de la base de donnée Embrys
+    disponible sur \url{http://embrys.jp}.
+
 } 
 \label{fig:embrys-myog}
 \efig
@@ -189,7 +192,7 @@ les mécanismes internes de la cellule qui régissent ses changements d'états.
 \bfig \includegraphics[width=\textwidth]{figures/us-cybernetics.pdf}
 \captionbf{Vision cybernétique du traitement de l'information par la cellule}{
     Figure tirée du programme ``Genomes to life'' du Département de l'Énergie
-    des États-Unis datant de 2001 \cite{us2001genomes} schématisant un réseau
+    des États-Unis datant de 2001 \cite{USDE} schématisant un réseau
     de régulation cellulaire comme un système de traitement entrée/sortie,
     possédant trois composantes fondamentales : (1) un système de réception et
     de transduction des signaux d'entrées qui peuvent être intra- ou
@@ -221,10 +224,11 @@ qui l'a rendue extrêmement fertile au cours des dernières décennies
 \cite{Nurse2011p2308}.
 
 \subsection{Divers modes de régulation}
+\label{sub:divers_modes_de_regulation}
 
 \bfig \includegraphics[width=1.0\textwidth]{figures/us-grn.pdf} \captionbf{Un
 réseau de régulation génétique type}{ Dans cette représentation schématique
-    tirée de \cite{us2001genomes}, deux voies de signalisation A et
+    tirée de \cite{USDE}, deux voies de signalisation A et
     B transmettent des signaux d'entrée (qui peuvent être intra ou extra
     cellulaires)  en activant des \fts.  Une fois activés, ces derniers
     interagissent avec des séquences d'ADN proches d'un gène cible en se fixant
@@ -300,7 +304,7 @@ fermeture de la chromatine, empêchant l'expression du ou des gène(s) situés
 à leur niveau, alors que l'acétylation des mêmes lysines entraîne au contraire
 une ouverture de la chromatine, favorisant ainsi la transcription
 génétique~\cite{Greer2012ve}.  Ce mode de régulation sera développé plus en
-détails en section~\ref{sub:CRMs-epigenetique}.
+détails en section~\ref{sub:les_diff_rents_types_de_crms}.
 
 % lincRNAs? \cite{Rinn2012p3940}
 
@@ -965,7 +969,7 @@ pour différents TFs hybrides, il est alors possible de déterminer si l'un
 d'entre eux possède une affinité importante avec les sites testés.
 
 % subsection approche_clonale_la_technique_de_simple_hybride (end)
-\subsection{Approches \invivo : \chipchip, \chipseq, DNAse}
+\subsection{Approches \invivo : \chipchip, \chipseq, DNAse I}
 
 Dans cette section, nous nous intéressons aux techniques permettant
 d'identifier les sites de fixation d'un \tf sur le génome. Ces méthodes se
@@ -1066,7 +1070,7 @@ noirs indiquent le nombre moyen de digestion par nucléotide dans le génome
 \label{fig:hesselberth-dnase}
 \efig
 
-Contrairement aux techniques précédentes, l'empreinte à la DNase 1 ne repose
+Contrairement aux techniques précédentes, l'empreinte à la DNase I ne repose
 pas sur l'étude d'un \tf précis, mais permet au contraire d'avoir un ensemble
 de sites de fixation dans le génome pour un type cellulaire donné, avec une
 précision au nucléotide près. Cette méthode repose sur le fait que la fixation
@@ -1075,7 +1079,7 @@ nucléosomes, les protéines autour desquelles s'enroule l'ADN : on parle de
 région de chromatine ouverte. Ces régions sont préférentiellement digérées par
 l'endonucléase DNase I. Étant donné que la majorité de l'ADN est enroulé autour
 de nucléosomes, les sites hypersensibles à la digestion par DNase
-I (\textit{DNaseI-hypersensitive} ou DHS) correspondent essentiellement à des
+I (\textit{DNase I-hypersensitive} ou DHS) correspondent essentiellement à des
 régions de chromatine ouverte ayant des roles de régulation génétique
 : promoteurs, enhancers\ldots 
 \\
@@ -1085,7 +1089,7 @@ de DNase-seq permet d'identifier tous les types de région de régulation
 à l'échelle du génome~\cite{Thurman2012ys}. Les régions riches en sites de digestion
 identifient alors les sites DHS. Par ailleurs, au sein d'un site DHS, il y a de
 petites régions ($\sim15$bp) qui sont protégées de la digestion par DNase
-I : ce sont les empreintes à la DNase I ou \textit{DNaseI footprints}
+I : ce sont les empreintes à la DNase I ou \textit{DNase I footprints}
 (fig.~\ref{fig:hesselberth-dnase}). Ces empreintes sont dues à la présence de
 protéines ou de complexes fixés à l'ADN. Cette technique de détection de sites
 de liaison par empreinte à la DNase I existe depuis $30$ ans mais n'a que
@@ -1107,87 +1111,372 @@ connus au nucléotide près.
 %\item   Evolution de la régulation Odom, Sinha.\\
 %\end{malistebullet}
 
-\subsection{Modules et fonctions logiques}
+Nous l'avons vu en \ref{sub:divers_modes_de_regulation}, les séquences d'ADN
+régulant l'expression génétique -- CRMs pour \textit{Cis-Regulatory Modules} --
+jouent un rôle prépondérant au cours du développement des organismes. Ces CRMs
+assurent en effet l'orchestration de l'expression de gènes spécifiques aux
+différentes étapes du développement et aux divers types cellulaires. Ils sont
+au coeur de l'évolution des réseaux génétiques, car ils dictent les
+interactions entre gènes. De plus, leur altération peut être au coeur de
+nombreuses pathologies, liées pour la plupart à une expression génétique
+aberrante. Par exemple, la majeure partie des variants génétiques qui sont
+associés de manière significative à une susceptibilité envers une maladie sont
+situés hors des régions codant pour des protéines, suggérant qu'un certain
+nombre affectent non pas la forme de la protéine engendrée mais l'expression du
+gène la produisant en détruisant une activité CRM. Dans cette partie, nous
+proposons un survol des différents types de CRMs, de leur structure, leur
+évolution et leur prédiction.
 
+\subsection{Les différents types de CRMs}
+\label{sub:les_diff_rents_types_de_crms}
+
+\bfig
+\includegraphics[width=.8\textwidth]{figures/hardison-enhancer-states.pdf}
+\captionbf{Les différents types de CRMs et leurs marques épigénétiques} 
+{ 
+    
+    Figure tirée de \cite{Hardison2012p3778}. La notion de CRM renvoie à un
+    regroupement de sites de liaison pour un ou plusieurs \fts. Les CRMs
+    peuvent être regroupés en plusieurs classes : les promoteurs, les
+    \textit{enhancers}/\textit{silencers}, et les insulateurs. Les CRMs des
+    différentes classes partagent les marques d'acétylation H3Ac et H4Ac, les
+    promoteurs actifs sont spécifiquement marqués par H3K4me$3$, et les enhancers
+    et insulateurs sont marqués par H3K4me$1$. Les enhancers sont par ailleiurs souvent
+    fixés par le co-activateur p300. Enfin, chez les mammifères les insulateurs
+    recrutent CTCF pour bloquer l'activation par les enhancers.
+
+} 
+\label{fig:hardison-enhancer-states}
+\efig
+
+La régulation de l'expression génétique implique l'interaction entre des \fts
+et des CRMs. Selon leur rôle dans la régulation de l'expression génétique, les
+CRMs peuvent être distingués en trois catégories.
+
+\subsubsection{Promoteurs}
+\label{ssub:promoteurs}
+
+Les promoteurs permettent la fixation de l'ARN polymérase pour débuter la
+formation d'un transcrit ARN au site d'initiation de transcription
+(\textit{Transcription Start Site} ou TSS). Dans les promoteurs fixant l'ARN
+polymérase II (la majorité des promoteurs eucaryotes), des \fts généraux se
+fixent à un coeur de $\sim100$bp autour du TSS afin de faciliter la fixation du
+complexe de polymérase. Ces coeurs de promoteurs contiennent pour certains des
+motifs stéréotypés, comme la boîte TATA, et on un TSS bien déterminé; néanmoins
+la plupart des promoteurs des génomes mammifères sont des régions riches en GC
+et en dinuclétoides CpG (les \og îlots CpG \fg) qui ne possèdent pas de boîte
+TATA et permettent l'initiation de la transcription dans un interval d'environ
+$100$ bases~\cite{Carninci2006qf}. Au niveau épigénétique, les promoteurs
+actifs possèdent une région pauvre en nucléosomes en amont du TSS, flanquée de
+nucléosomes possédant la marque de méthylation H3K4me3.
+
+% subsubsection promoteurs (end)
+
+\subsubsection{\textit{Enhancers} et \textit{silencers}}
+\label{ssub:enhancers_et_silencers}
+
+Les \textit{enhancers} et \textit{silencers} sont respectivement définis par
+leur effet positif ou négatif sur l'expression d'un gène cible. Cet effet peut
+notamment être observé par transfert d'un plasmide contenant l'élément
+régulateur en amont d'un gène rapporteur dans un animal transgénique ou dans
+des cultures cellulaires transfectées (voir
+\ref{sub:validation_experimentale}). Leur activité ne dépend généralement pas
+de leur position et de leur orientation sur le plasmide. Selon l'environnement
+cellulaire, une région régulatrice peut être soit \textit{enhancer} soit
+\textit{silencer}, en fonction de la nature de co-activateurs ou de
+co-répresseurs des TFs recrutés. Il y a néanmoins relativement peu de
+\textit{silencers} caractérisés et l'on utilise le terme d'\textit{enhancers}
+pour désigner de manière générale ces régions régulatrices.
+
+Les \textit{enhancers} peuvent se situer à des distances variables du gène
+qu'ils régulent~\cite{Maniatis1987fk}, pouvant parfois aller jusqu'à $1$ Mb
+comme dans le cas de \textit{Shh} chez la souris~\cite{Lettice2003uq}. Les
+enhancers contiennent de multiples sites de fixations de TFs. Cette
+multiplicité est requise pour l'activité enhancer, comme cela l'a été montré
+pour le premier enhancer découvert : celui du virus simien 40
+(SV40)~\cite{Schirm1987kx,Ondek1988vn}. Un gène peut par ailleurs posséder
+plusieurs enhancers distincts conduisant à des expressions spécifiques
+à différents tissus, comme cela l'a été montré dans le cas du cluster des gènes
+de détermination myogénique \textit{Myf5} et
+\textit{Mrf4}~\cite{Carvajal2008p395}. Comme décrit en
+fig.~\ref{fig:hardison-enhancer-states}, les enhancers sont associés à de hauts
+niveaux de marque épigénétique H3K4me$1$~\cite{Heintzman2009ys} et sont souvent
+fixés par le co-activateur p$300$~\cite{Wang2005zr,Heintzman2009ys}.
+
+\subsubsection{Insulateurs}
+\label{ssub:insulateurs}
+
+Les insulateurs sont des CRMs qui restreignent l'effet des enhancers sur leur
+gène cible~\cite{Wallace2007ly}. Ainsi, certains insulateurs possèdent une
+activité de blocage d'enhancers. Situés entre un enhancer et un promoteur
+cible, ces insulateurs bloquent l'activité de l'enhancer, conduisant à une
+réduction de l'expression du gène cible~\cite{Chung1993ve}. Chez les
+mammifères, la fixation de la protéine CTCF est nécessaire à cette activité de
+blocage de l'activité enhancer~\cite{Bell1999qf}, alors que chez la
+\textit{Drosophile}et plusieurs autres insectes il existe au moins quatre
+protéines additionnelles qui sont suffisantes à la réalisation de cette
+activité~\cite{Schoborg2010bh}. Par ailleurs, les insulateurs peuvent aussi
+servir de barrière de protection contre des marques d'hétérochromatine
+répressives. De tels insulateurs permettent de manière pratique d'éviter les
+effets de positions -- la modification de l'expression d'un gène selon sa
+position dans le chromosome -- lorsqu'ils entourent un gène rapporteur intégré
+au hasard dans le génome~\cite{Recillas-Targa2002dq}. Cette activité passe
+notamment par le recrutement de \textit{USF}, protéine qui recrute des enzymes
+de modification de la chromatine. Cette activité de barrière de protection peut
+très bien s'associer à celle de blocage d'enhancer.
+
+De même que les enhancers, les insulateurs peuvent se situer à des distances
+variables des gènes qu'ils régulent. Par ailleurs, bien que la fixation de CTCF
+soit requise chez les mammifères, cette protéine possède d'autres fonctions que
+celle d'isolation, et tous les sites de CTCF ne correspondent pas forcément
+à des insulateurs~\cite{Phillips2009cr}.
+
+% subsubsection insulateurs (end)
+
+% subsubsection enhancers_et_silencers (end)
+
+
+
+% subsection les_diff_rents_types_de_crms (end)
+
+%\subsection{Modules et fonctions logiques}
+
+\newpage
 \subsection{Encodage de patterns spatiaux}
 
 \bfig
 \includegraphics[width=.8\textwidth]{figures/furlong-eve-enhancers-to-stripes.pdf}
 \captionbf{Différents CRMs conduisent à différents patterns d'expression}{
-    Figure tirée de \cite{Liu2009p556}.
+    
+    Figure tirée de \cite{Wilczynski2010p575}, montrant le réseau de
+    cis-régulation du gène \textit{even-skipped} chez la \textit{Drosophile}.
+    Des enhancers individuels (boîtes colorées) conduisent à des motifs
+    d'expression distincts (indiqués dans les embryons par la même couleur).
+    Les cercles colorés au sein des régulateurs indiquent les couleurs des CRMs
+    régulés.
+
 } 
 \efig
+
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/carvajal-myf5-enhancers.pdf}
+\captionbf{Régulation spatio-temporelle par des CRMs distincts}{
+Figure tirée de \cite{Carvajal2008p395}.
+Maps of the regulatory elements in the Mrf4/Myf5 locus and of the constructs generated for the study of global regulation. (A) Schematic representation of the regions involved in the transcriptional regulation of the Mrf4/Myf5 locus. Each colored box represents transcription occurring at either differ- ent times or anatomical locations in embryonic or adult skeletal muscle. The color key is included below the map. (
+}
+\label{fig:carvajal-myf5-enhancers}
+\efig
+
+%\bfig
+%\includegraphics[width=\textwidth]{figures/stathopoulos-CRMs-sites-twist-dorsal-snail.pdf}
+%\captionbf{}{
+    %Figure tirée de \cite{Stathopoulos2005p4051}.
+%} 
+%\efig
+
+\newpage
+\subsection{Grammaire des enhancers : enhanceosome vs billboard}
+
+
+Nous l'avons vu, les CRMs contiennent en général de multiples sites de liaisons
+(TFBS) pour un ou plusieurs TFs. On parle de \textit{clustering}
+(regroupement). Lorsque les TFBS correspondent à plusieurs TFs différents, on
+parle de CRM hétérotypique, et dans le cas où ils correspondent à un même TF,
+on parle de CRM homotypique. Cette distinction est surtout utile pour décrire
+les différentes méthodes de prédiction de CRM, car la plupart des CRMs
+identifiés chez les Métazoaires sont hétérotypiques~\cite{Aerts2012p3868}.
+L'organisation de ces sites de liaison relève de deux types d'architecture
+principaux (fig.~\ref{fig:kulkarni-billboard}).
+
+\begin{figure}
+    \centering
+\includegraphics[width=.8\textwidth]{figures/kulkarni-billboard.pdf}
+\captionbf{Deux modèles d'enhancers: enhanceosome et billboard}{
+
+    Figure tirée de~\cite{Kulkarni2003nx}. (A) Dans le modèle enhanceosome,
+    l'enhancer traite l'information des multiples TFs qui le fixent. Un
+    complexe très structuré ou enhanceosome crée une interface qui recrute la
+    machinerie de transcription basale. L'enhancer peut être vu comme un
+    ordinateur moléculaire qui produit à partir d'entrées multiples un seul
+    signal vers la machinerie de transcription. Le gène cible n'est activé
+    qu'en cas de formation du complexe entier, ce qui fournit un interrupteur
+    binaire on/off seulement activé en cas de stimulus adéquat. La
+    déstabilisation du complexe en changeant par exemple la concentration d'une
+    des protéines permettrait alors d'obtenir une réponse graduelle.  (B,C)
+    Modèle d'enhancer ``billboard''. Dans ce cas, l'enhancer ne consiste pas en
+    une seule unité de régulation, mais des sous-unités peuvent contenir
+    différentes informations (répression ou activation par exemple) que la
+    machinerie basale échantillonne soit itérativement (B), soit simultanément
+    (C).
+
+} 
+\label{fig:kulkarni-billboard}
+\end{figure}
+
+\subsubsection{Le modèle ``billboard''}
+\label{ssub:le_mod_le_billboard_}
+
+La majorité des CRMs adhèrent à ce type d'organisation. L'architecture y est
+libre : les sites de liaisons n'ont pas de contrainte de nombre, d'ordre, de
+sens, ou d'espacement~\cite{Kulkarni2003nx}. De tels CRMs sont propices à une
+détection informatique basée sur la densité de sites de liaisons pour
+différents TFs.
+
+% subsubsection le_mod_le_billboard_ (end)
+
+\subsubsection{Le modèle ``enhanceosome''}
+\label{ssub:le_mod_le_enhanceosome_}
+
+Dans ce modèle, l'architecture des sites de liaison est de prime importance. Le
+paradigme en est l'enhancer du gène humain interferon-$\beta$, sur lequel $8$
+TFs se fient pour former une surface de reconnaissance
+continue~\cite{Panne2008kl}. Les TFBS de cet enhancer se recouvrent les uns les
+autres, créant au final un complexe de TFs fixés à l'ADN agissant comme une
+seule unité de régulation (fig.~\ref{fig:panne-enhanceosome}).
+
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/panne-enhanceosome.pdf}
+\captionbf{L'enhanceosome de l'interferon-$\beta$}{
+Figure tirée de~\cite{Panne2008kl} représentant le complexe de TFs assemblés sur l'enhanceosome IFN-$\beta$.
+}
+\label{fig:panne-enhanceosome}
+\efig
+
+
+% subsubsection le_mod_le_enhanceosome_ (end)
+
 
 
 \newpage
+\subsection{Évolution des enhancers}
+
 \bfig
-\includegraphics[width=\textwidth]{figures/stathopoulos-CRMs-sites-twist-dorsal-snail.pdf}
+\includegraphics[width=\textwidth]{figures/liberman-crm-conservation-flexibility.pdf}
 \captionbf{}{
-    Figure tirée de \cite{Stathopoulos2005p4051}.
+    figure tirée de \cite{liberman2009p3886}.
 } 
 \efig
 
+\bfig
+\includegraphics[width=\textwidth]{figures/wilson-CRMs-evolution.pdf}
+\captionbf{}{
+    figure tirée de \cite{Wittkopp2011p3240}.
+} 
+\efig
 
-\newpage \subsection{Différents états des CRMs}
-\label{sub:CRMs-epigenetique} \bfig
-\includegraphics[width=.8\textwidth]{figures/hardison-enhancer-states.pdf}
-\captionbf{Les états épigénétiques des CRMs}{ Figure tirée de
-    \cite{Hartwell1999p560}.  } \efig
+\cite{Feschotte2008dq}
 
-    \newpage
-    \subsection{Prédiction des CRMs}
+\newpage
+\subsection{Les \og shadow enhancers \fg}
 
-    \bfig
-    \includegraphics[width=\textwidth]{figures/hardison-CRM-prediction.pdf}
-    \captionbf{Approches pour la prédiction des CRMs}{
-        Figure tirée de \cite{Hartwell1999p560}.
-    } 
-    \efig
+L'évolution des éléments de cis-régulation est un mécanisme majeur permettant
+la diversité animale. Néanmoins, de tels changements pourraient compromettre
+certaines activités génétiques essentielles. Récemment, des expériences de
+\chipchip ont suggéré que plusieurs gènes de développement actifs lors du
+développement précoce de l'embryon de Drosophile possèdent des CRMs
+secondaires, qui conduisent à des motifs d'expression génétique comparables
+à ceux produits par des CRMs \og primaires \fg plus
+proximaux~\cite{Zeitlinger2007ly}. L'expression de \og shadow enhancer \fg
+a été proposée par Michael Levine en 2008 pour décrire ces CRMs redondants et
+souvent distaux de plusieurs dizaines de kb du gène régulé~\cite{Hong2008zr}.
+Il est probable que de tels CRMs soient apparus au cours de l'évolution par
+duplication du CRM primaire, à l'instar du phénomène de duplication des
+séquences codant pour des protéines.  L'avantage évident que peut conférer la
+redondance d'un élément de régulation est d'offrir de la robustesse face aux
+mutations. Par ailleurs, une telle redondance permet de faciliter la divergence
+et donc la spécialisation des différents CRMs. Ainsi les \se semblent évoluer
+plus rapidement que les CRMs primaires auxquels ils sont
+apparentés~\cite{Hong2008zr} pour fournir de nouveaux sites de fixation et
+conduire à de nouvelles activités de régulation sans bloquer la fonction
+critique de certains gènes de développement.
+\\
 
-    \newpage
-    \subsection{Grammaire des enhancers : enhanceosome vs billboard}
+Un exemple mêlant robustesse et divergence est le
+cas des multiples CRMs régulant le gène \textit{Svb} chez la Drosophile.
+Chaque CRM est lié à la production d'un motif distinct de trichomes
+(excroissances de l'épithélium comparables à des poils) sur la larve : ainsi,
+plusieurs mutations dans ces différents CRMs sont nécessaires pour observer un
+changement morphologique conséquent~\cite{McGregor2007p400}. Dans ce même
+système, il a été montré que deux CRMs supplémentaires, des \se, sont
+dispensables dans des conditions de température usuelles, mais requis lorsque
+les embryons se développent dans des conditions de température
+extrêmes~\cite{Frankel2010p463}.
+\\
 
-    \bfig
-    \includegraphics[width=\textwidth]{figures/arnosti-enhanceosome.pdf}
-    \captionbf{}{
-        figure tirée de \cite{Arnosti2005p3786}.
-    } 
-    \efig
-
-    \newpage
-    \subsection{Évolution des enhancers}
-
-    \bfig
-    \includegraphics[width=\textwidth]{figures/liberman-crm-conservation-flexibility.pdf}
-    \captionbf{}{
-        figure tirée de \cite{liberman2009p3886}.
-    } 
-    \efig
-
-    \newpage
-    \bfig
-    \includegraphics[width=\textwidth]{figures/wilson-CRMs-evolution.pdf}
-    \captionbf{}{
-        figure tirée de \cite{Wittkopp2011p3240}.
-    } 
-    \efig
-
-    \cite{Feschotte2008dq}
-
-    \newpage
-    \subsection{Les \og shadow enhancers \fg}
+Par ailleurs, il a été montré que les gènes gap de la Drosophile possèdent tous
+des \se, dont le rôle semble être d'assurer une plus grande précision spatiale
+du motif d'expression du gène régulé~\cite{Perry2011ve}. La perte de l'un des
+CRMs, proximal comme \se, conduit à une expression trop restreinte ou trop
+répandue spatialement selon le cas.
+\\
 
 
-    \newpage
-    \subsection{Validation expérimentale}
+\newpage
+\subsection{Les super enhancers}
+\label{sub:les_super_enhancers}
 
 
-    \bfig
-    \includegraphics[width=\textwidth]{figures/hardison-CRM-test.pdf}
-    \captionbf{Méthodes de validation des CRMs}{
-        Figure tirée de \cite{Hartwell1999p560}.
-    } 
-    \efig
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/whyte-super-enhancer-cluster.pdf}
+\captionbf{De l'enhancer au super-enhancer}{
+
+    Figure tirée de~\cite{Whyte2013tg}, montrant les profils de \chipseq de
+    Oct4, Sox2, Nanog, Klf4 et Esrrb aux loci de \textit{Gck} et
+    \textit{miR-290-295} dans les cellules souches embryonnaires.
+
+}
+\label{fig:}
+\efig
+
+% subsection les_super_enhancers (end)
+
+\subsection{Validation expérimentale}
+\label{sub:validation_experimentale}
+
+Lorsqu'un CRM est prédit, il existe plusieurs méthodes pour s'assurer de sa fonctionnalité. 
+
+Tout d'abord, une méthode indirecte donnant du crédit à la prédiction d'un CRM
+est d'examiner le motif d'expression du gène dont le TSS est le plus proche. Si
+cette expression reproduit les caractéristiques utilisées pour prédire le CRM
+(par exemple, s'exprimer dans le muscle pour une prédiction de CRMs utilisant
+l'abondance de sites de liaison de TFs musculaires), alors cela soutient l'idée
+(mais ne la démontre pas) que la présence du CRM en est la cause.
+
+Une méthode plus directe permettant de démontrer qu'un fragment d'ADN régule
+l'expression génétique consiste en une expérience de gain de fonction dans
+laquelle un plasmide contenant le CRM prédit à proximité d'un gène rapporteur
+est introduit par transfection \invitro en cellule, permettant un suivi
+quantitatif de l'activité, ou par transgenèse \invivo dans un organisme, auquel
+cas le suivi est plus qualitatif mais permet d'établir la spécificité
+spatio-temporelle (tissu et stade de développement) de l'élément de régulation
+(fig.~\ref{fig:hardison-CRM-test}). Ce type d'expérience montre que le CRM
+prédit est \textit{suffisant} pour reproduire le motif génétique observé. De
+manière optimale, il faudrait aussi montrer par délétion ciblée de l'élément de
+régulation au sein du génome que ce dernier est \textit{nécessaire}
+à l'expression du gène endogène.
+
+\bfig
+\includegraphics[width=\textwidth]{figures/hardison-CRM-test.pdf}
+\captionbf{Méthodes de validation des CRMs par transfection et transgenèse}{
+    
+    Figure tirée de \cite{Hartwell1999p560} présentant les méthodes \invitro et
+    \invivo de validation des CRMs. La région dont on souhaite tester
+    l'activité est insérée dans un plasmide codant pour un gène rapporteur qui
+    est transféré dans une culture cellulaire (transfection, panel a) ou dans
+    un organisme entier (transgenèse, panel b). Dans le cas du test d'un
+    promoteur, le CRM est placé directement en amont du gène rapporteur (on
+    utilise généralement la luciférase \textit{Luc}), alors que dans le cas
+    d'un enhancer, le CRM est placé en amont d'un promoteur minimal de faible
+    activité. L'activité de la luciférase donne une information quantitative
+    sur l'activité de la région testée (boîtes à moustache, panel a). Dans le
+    cas d'une transgenèse, le gène rapporteur généralement utilisé est
+    \textit{lacZ} qui encode la $\beta$-galactosidase. La révélation par
+    coloration permet de visualiser en bleu les tissus au sein lesquels
+    l'enhancer est actif.
+
+} 
+\label{fig:hardison-CRM-test}
+\efig
 
 
 %\bfig
@@ -1201,14 +1490,33 @@ connus au nucléotide près.
 %\efig
 %
 
-    \section{Banques de données}
+\newpage
+\subsection{Prédiction des CRMs}
 
-    \subsection{Séquences génomiques et alignements}
-    statistiques du genome (lognormal)
-    \subsection{Annotations (TSSs, repeats\ldots)}
-    \subsection{Jaspar et Transfac}
-    \subsection{Visualisation sur UCSC}
-    \subsection{Le projet ENCODE}
+\bfig
+\includegraphics[width=\textwidth]{figures/hardison-CRM-prediction.pdf}
+\captionbf{Approches pour la prédiction des CRMs}{
+    Figure tirée de \cite{Hartwell1999p560}.
+} 
+\efig
+
+\section{Banques de données}
+
+\subsection{Séquences génomiques et alignements}
+
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/sboner-cost-sequencing.jpg}
+\captionbf{Évolution du coût de séquençage}{
+Figure tirée de~\cite{Sboner2011fk}.
+}
+\label{fig:sboner-cost-sequencing.jpg}
+\efig
+
+statistiques du genome (lognormal)
+\subsection{Annotations (TSSs, repeats\ldots)}
+\subsection{Jaspar et Transfac}
+\subsection{Visualisation sur UCSC}
+\subsection{Le projet ENCODE}
 
 
 

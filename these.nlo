@@ -3,7 +3,6 @@
 \nomenclatureentry{aCRM@[{CRM}]\begingroup Module de cis-régulation (\textit{Cis-Regulatory Module})\nomeqref {0}|nompageref}{ix}
 \nomenclatureentry{aTF@[{TF}]\begingroup Facteur de transcription (\textit{Transcription Factor})\nomeqref {0}|nompageref}{ix}
 \nomenclatureentry{aTFBS@[{TFBS}]\begingroup Site de fixation d'un \tf (\textit{Transcription Factor Binding Site})\nomeqref {0}|nompageref}{ix}
-\nomenclatureentry{aTSS@[{TSS}]\begingroup Site de début de transcription (\textit{Transcription Start Site})\nomeqref {0}|nompageref}{ix}
 \nomenclatureentry{aARNm@[{ARNm}]\begingroup ARN messager\nomeqref {0}|nompageref}{ix}
 \nomenclatureentry{ant@[{nt}]\begingroup Nucléotide\nomeqref {0}|nompageref}{ix}
 \nomenclatureentry{abp@[{bp}]\begingroup Paire de base\nomeqref {0}|nompageref}{ix}
@@ -13,3 +12,4 @@
 \nomenclatureentry{aPCR@[{PCR}]\begingroup Réaction en chaîne par polymérase (\textit{Polymerase Chain Reaction})\nomeqref {0}|nompageref}{ix}
 \nomenclatureentry{aChIP@[{ChIP}]\begingroup Immunoprécipitation de la chromatine (\textit{Chromatin immunoprecipitation})\nomeqref {0}|nompageref}{ix}
 \nomenclatureentry{aDHS@[{DHS}]\begingroup Hypersensible à la DNase I (\textit{DNaseI-hypersensistive})\nomeqref {0}|nompageref}{ix}
+\nomenclatureentry{aTSS@[{TSS}]\begingroup Site d'initiation de la transcription (\textit{Transcription Start Site})\nomeqref {0}|nompageref}{ix}

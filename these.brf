@@ -1,81 +1,123 @@
 \backcite {EMBL2001}{{4}{1.1.1}{subsection.2.1.1}}
-\backcite {waddington1957strategy}{{4}{1.1.2}{figure.caption.2}}
 \backcite {Keim2004uq}{{4}{1}{Hfootnote.1}}
 \backcite {Furusawa2012p3898}{{5}{1.1}{figure.caption.2}}
 \backcite {waddington1957strategy}{{5}{1.1}{figure.caption.2}}
+\backcite {waddington1957strategy}{{5}{1.1.2}{figure.caption.2}}
 \backcite {kaufmann1993origins}{{6}{1.1.2}{figure.caption.2}}
 \backcite {Blau1985vn}{{6}{1.1.4}{figure.caption.4}}
-\backcite {davis1987expression,Kulessa1995ys}{{6}{1.1.4}{figure.caption.4}}
-\backcite {Gurdon2008zr}{{6}{1.1.4}{figure.caption.4}}
 \backcite {Graf2009p2592}{{7}{1.3}{figure.caption.4}}
+\backcite {davis1987expression}{{7}{1.1.4}{figure.caption.4}}
+\backcite {Kulessa1995ys}{{7}{1.1.4}{figure.caption.4}}
+\backcite {Gurdon2008zr}{{7}{1.1.4}{figure.caption.4}}
 \backcite {Takahashi2006kx}{{7}{1.1.4}{figure.caption.4}}
-\backcite {Nurse2011p2308}{{7}{1.2.1}{figure.caption.5}}
-\backcite {us2001genomes}{{8}{1.4}{figure.caption.5}}
+\backcite {USDE}{{8}{1.4}{figure.caption.5}}
+\backcite {Nurse2011p2308}{{8}{1.2.1}{figure.caption.5}}
 \backcite {Vaquerizas2009ys}{{8}{$\bullet $}{subsubsection.2.2.2.1}}
-\backcite {us2001genomes}{{9}{1.5}{figure.caption.6}}
-\backcite {Bird2002oq}{{9}{$\bullet $}{figure.caption.7}}
-\backcite {Greer2012ve}{{9}{$\bullet $}{figure.caption.7}}
+\backcite {USDE}{{9}{1.5}{figure.caption.6}}
 \backcite {Schones2008nx}{{10}{1.6}{figure.caption.7}}
-\backcite {Hammond2001bh,Hannon2002qf}{{11}{$\bullet $}{subsubsection.2.2.2.3}}
+\backcite {Bird2002oq}{{11}{$\bullet $}{figure.caption.7}}
+\backcite {Greer2012ve}{{11}{$\bullet $}{figure.caption.7}}
+\backcite {Hammond2001bh}{{11}{$\bullet $}{subsubsection.2.2.2.3}}
+\backcite {Hannon2002qf}{{11}{$\bullet $}{subsubsection.2.2.2.3}}
 \backcite {Bartel2009cr}{{11}{$\bullet $}{subsubsection.2.2.2.3}}
 \backcite {Kondo2010ly}{{11}{$\bullet $}{subsubsection.2.2.2.4}}
-\backcite {alon2007introduction,ShenOrr2002p648,Milo2002tg}{{11}{1.2.3}{figure.caption.8}}
+\backcite {alon2007introduction}{{11}{1.2.3}{figure.caption.8}}
 \backcite {ShenOrr2002p648}{{11}{1.2.3}{figure.caption.8}}
-\backcite {Milo2002tg,Lee2002p537}{{11}{1.2.3}{figure.caption.8}}
+\backcite {Milo2002tg}{{11}{1.2.3}{figure.caption.8}}
+\backcite {ShenOrr2002p648}{{11}{1.2.3}{figure.caption.8}}
+\backcite {Milo2002tg}{{11}{1.2.3}{figure.caption.8}}
+\backcite {Lee2002p537}{{11}{1.2.3}{figure.caption.8}}
 \backcite {Odom2004hc}{{11}{1.2.3}{figure.caption.8}}
-\backcite {Alon2007p2353}{{11}{1.2.3}{figure.caption.8}}
 \backcite {Lee2002p537}{{12}{1.7}{figure.caption.8}}
 \backcite {Odom2004hc}{{12}{1.7}{figure.caption.8}}
+\backcite {Alon2007p2353}{{12}{1.2.3}{figure.caption.8}}
 \backcite {Liu2009p556}{{13}{1.8}{figure.caption.9}}
 \backcite {Weintraub1989ij}{{13}{1.2.4}{figure.caption.9}}
 \backcite {Baylies1998bs}{{13}{1.2.4}{figure.caption.9}}
-\backcite {Berg1981kx,Winter1981fk,Winter1981uq}{{14}{1.3.1}{figure.caption.10}}
 \backcite {Lassig2007p539}{{15}{1.9}{figure.caption.10}}
-\backcite {Gerland2002p397,Slutsky2004vn}{{15}{1.3.1}{figure.caption.10}}
-\backcite {Berg1987p3746}{{15}{1.3.2}{subsection.2.3.2}}
+\backcite {Berg1981kx}{{15}{1.3.1}{figure.caption.10}}
+\backcite {Winter1981fk}{{15}{1.3.1}{figure.caption.10}}
+\backcite {Winter1981uq}{{15}{1.3.1}{figure.caption.10}}
+\backcite {Gerland2002p397}{{15}{1.3.1}{figure.caption.10}}
+\backcite {Slutsky2004vn}{{15}{1.3.1}{figure.caption.10}}
+\backcite {Berg1987p3746}{{16}{1.3.2}{subsection.2.3.2}}
 \backcite {Stormo1998p471}{{16}{1.3.2}{equation.2.3.1}}
-\backcite {Wasserman2004p624}{{17}{1.10}{figure.caption.11}}
-\backcite {Giocomo2011p3442}{{17}{1.10}{figure.caption.11}}
-\backcite {Gerland2002p397,Djordjevic2003p2932,Zhao2009p3948}{{17}{1.3.3}{subsection.2.3.3}}
+\backcite {Gerland2002p397}{{17}{1.3.3}{subsection.2.3.3}}
+\backcite {Djordjevic2003p2932}{{17}{1.3.3}{subsection.2.3.3}}
+\backcite {Zhao2009p3948}{{17}{1.3.3}{subsection.2.3.3}}
+\backcite {Wasserman2004p624}{{18}{1.10}{figure.caption.11}}
+\backcite {Giocomo2011p3442}{{18}{1.10}{figure.caption.11}}
 \backcite {Gerland2002p397}{{18}{1.3.4}{subsection.2.3.4}}
-\backcite {Lassig2007p539}{{18}{1.3.4}{subsection.2.3.4}}
-\backcite {Gerland2002p397}{{18}{1.3.4}{equation.2.3.10}}
-\backcite {Gerland2002p397}{{19}{1.3.4}{equation.2.3.14}}
-\backcite {Stormo2010p3947}{{19}{1.4}{section.2.4}}
+\backcite {Lassig2007p539}{{19}{1.3.4}{subsection.2.3.4}}
+\backcite {Gerland2002p397}{{19}{1.3.4}{equation.2.3.10}}
+\backcite {Gerland2002p397}{{20}{1.3.4}{equation.2.3.14}}
+\backcite {Stormo2010p3947}{{20}{1.4}{section.2.4}}
 \backcite {Maerkl2007p840}{{20}{$\bullet $}{subsubsection.2.4.1.1}}
-\backcite {Stormo2007bh}{{20}{$\bullet $}{subsubsection.2.4.1.1}}
-\backcite {Shumaker-Parry2004ve,Campbell2007ly}{{20}{$\bullet $}{subsubsection.2.4.1.2}}
+\backcite {Stormo2007bh}{{21}{$\bullet $}{subsubsection.2.4.1.1}}
+\backcite {Shumaker-Parry2004ve}{{21}{$\bullet $}{subsubsection.2.4.1.2}}
+\backcite {Campbell2007ly}{{21}{$\bullet $}{subsubsection.2.4.1.2}}
 \backcite {Berger2006qf}{{21}{$\bullet $}{subsubsection.2.4.1.3}}
 \backcite {Kinney2007p3977}{{21}{$\bullet $}{subsubsection.2.4.1.3}}
 \backcite {Warren2006cr}{{21}{$\bullet $}{subsubsection.2.4.1.3}}
 \backcite {Carlson2010dq}{{21}{$\bullet $}{subsubsection.2.4.1.3}}
-\backcite {Oliphant1989nx,Tuerk1990qe,Blackwell1990ai,Wright1991dp}{{21}{$\bullet $}{subsubsection.2.4.1.4}}
-\backcite {Fields1997yq}{{21}{$\bullet $}{subsubsection.2.4.1.4}}
-\backcite {Roulet2002rt}{{21}{$\bullet $}{subsubsection.2.4.1.4}}
-\backcite {Nagaraj2008p3749}{{21}{$\bullet $}{subsubsection.2.4.1.4}}
-\backcite {Nagaraj2008p3749}{{21}{$\bullet $}{subsubsection.2.4.1.4}}
-\backcite {Zykovich2009gf}{{21}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Oliphant1989nx}{{22}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Tuerk1990qe}{{22}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Blackwell1990ai}{{22}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Wright1991dp}{{22}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Fields1997yq}{{22}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Roulet2002rt}{{22}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Nagaraj2008p3749}{{22}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Nagaraj2008p3749}{{22}{$\bullet $}{subsubsection.2.4.1.4}}
+\backcite {Zykovich2009gf}{{22}{$\bullet $}{subsubsection.2.4.1.4}}
 \backcite {Nagaraj2008p3749}{{22}{$\bullet $}{subsubsection.2.4.1.4}}
 \backcite {Jolma2010ul}{{22}{$\bullet $}{subsubsection.2.4.1.4}}
 \backcite {Jolma2013p3971}{{22}{$\bullet $}{subsubsection.2.4.1.4}}
-\backcite {}{{22}{1.4.2}{subsection.2.4.2}}
-\backcite {Stormo2010p3947}{{22}{1.4.2}{subsection.2.4.2}}
-\backcite {Farnham2009fk}{{23}{1.11}{figure.caption.12}}
-\backcite {Park2009kx}{{24}{1.12}{figure.caption.13}}
-\backcite {Zhang2008uq}{{24}{$\bullet $}{figure.caption.13}}
-\backcite {Hesselberth2009vn}{{25}{1.13}{figure.caption.14}}
+\backcite {Stormo2010p3947}{{23}{1.4.2}{subsection.2.4.2}}
+\backcite {Farnham2009fk}{{24}{1.11}{figure.caption.12}}
+\backcite {Park2009kx}{{25}{1.12}{figure.caption.13}}
+\backcite {Zhang2008uq}{{25}{$\bullet $}{figure.caption.13}}
+\backcite {Hesselberth2009vn}{{26}{1.13}{figure.caption.14}}
 \backcite {Thurman2012ys}{{26}{$\bullet $}{figure.caption.14}}
-\backcite {Liu2009p556}{{27}{1.14}{figure.caption.15}}
-\backcite {Stathopoulos2005p4051}{{28}{1.15}{figure.caption.16}}
-\backcite {Hartwell1999p560}{{29}{1.16}{figure.caption.17}}
-\backcite {Hartwell1999p560}{{30}{1.17}{figure.caption.18}}
-\backcite {Arnosti2005p3786}{{31}{1.18}{figure.caption.19}}
-\backcite {Feschotte2008dq}{{31}{1.5.6}{figure.caption.21}}
-\backcite {liberman2009p3886}{{32}{1.19}{figure.caption.20}}
-\backcite {Wittkopp2011p3240}{{33}{1.20}{figure.caption.21}}
-\backcite {Hartwell1999p560}{{34}{1.21}{figure.caption.22}}
-\backcite {Jaynes1957p3771,Shannon1948p699}{{37}{2.1.1}{subsection.3.1.1}}
-\backcite {Sigal2006p3278}{{37}{2.1.1}{subsection.3.1.1}}
-\backcite {Zinzen2009p760,Chen2008p3738}{{38}{2.2.1}{subsection.3.2.1}}
-\backcite {ENCODEProjectConsortium2011p3726}{{38}{2.2.1}{subsection.3.2.1}}
-\backcite {Smit2010}{{38}{2.2.1}{subsection.3.2.1}}
+\backcite {Carninci2006qf}{{27}{$\bullet $}{subsubsection.2.5.1.1}}
+\backcite {Hardison2012p3778}{{28}{1.14}{figure.caption.15}}
+\backcite {Maniatis1987fk}{{28}{$\bullet $}{subsubsection.2.5.1.2}}
+\backcite {Lettice2003uq}{{28}{$\bullet $}{subsubsection.2.5.1.2}}
+\backcite {Schirm1987kx}{{28}{$\bullet $}{subsubsection.2.5.1.2}}
+\backcite {Ondek1988vn}{{28}{$\bullet $}{subsubsection.2.5.1.2}}
+\backcite {Carvajal2008p395}{{28}{$\bullet $}{subsubsection.2.5.1.2}}
+\backcite {Heintzman2009ys}{{29}{$\bullet $}{subsubsection.2.5.1.2}}
+\backcite {Wang2005zr}{{29}{$\bullet $}{subsubsection.2.5.1.2}}
+\backcite {Heintzman2009ys}{{29}{$\bullet $}{subsubsection.2.5.1.2}}
+\backcite {Wallace2007ly}{{29}{$\bullet $}{subsubsection.2.5.1.3}}
+\backcite {Chung1993ve}{{29}{$\bullet $}{subsubsection.2.5.1.3}}
+\backcite {Bell1999qf}{{29}{$\bullet $}{subsubsection.2.5.1.3}}
+\backcite {Schoborg2010bh}{{29}{$\bullet $}{subsubsection.2.5.1.3}}
+\backcite {Recillas-Targa2002dq}{{29}{$\bullet $}{subsubsection.2.5.1.3}}
+\backcite {Phillips2009cr}{{29}{$\bullet $}{subsubsection.2.5.1.3}}
+\backcite {Wilczynski2010p575}{{30}{1.15}{figure.caption.16}}
+\backcite {Carvajal2008p395}{{31}{1.16}{figure.caption.17}}
+\backcite {Aerts2012p3868}{{31}{1.5.3}{subsection.2.5.3}}
+\backcite {Kulkarni2003nx}{{31}{$\bullet $}{subsubsection.2.5.3.1}}
+\backcite {Panne2008kl}{{31}{$\bullet $}{subsubsection.2.5.3.2}}
+\backcite {Kulkarni2003nx}{{32}{1.17}{figure.caption.18}}
+\backcite {Panne2008kl}{{33}{1.18}{figure.caption.19}}
+\backcite {liberman2009p3886}{{33}{1.19}{figure.caption.20}}
+\backcite {Feschotte2008dq}{{33}{1.5.4}{figure.caption.21}}
+\backcite {Wittkopp2011p3240}{{34}{1.20}{figure.caption.21}}
+\backcite {Zeitlinger2007ly}{{34}{1.5.5}{subsection.2.5.5}}
+\backcite {Hong2008zr}{{34}{1.5.5}{subsection.2.5.5}}
+\backcite {Hong2008zr}{{34}{1.5.5}{subsection.2.5.5}}
+\backcite {McGregor2007p400}{{35}{1.5.5}{subsection.2.5.5}}
+\backcite {Frankel2010p463}{{35}{1.5.5}{subsection.2.5.5}}
+\backcite {Perry2011ve}{{35}{1.5.5}{subsection.2.5.5}}
+\backcite {Whyte2013tg}{{36}{1.21}{figure.caption.22}}
+\backcite {Hartwell1999p560}{{37}{1.22}{figure.caption.23}}
+\backcite {Hartwell1999p560}{{38}{1.23}{figure.caption.24}}
+\backcite {Sboner2011fk}{{38}{1.24}{figure.caption.25}}
+\backcite {Jaynes1957p3771}{{41}{2.1.1}{subsection.3.1.1}}
+\backcite {Shannon1948p699}{{41}{2.1.1}{subsection.3.1.1}}
+\backcite {Sigal2006p3278}{{41}{2.1.1}{subsection.3.1.1}}
+\backcite {Zinzen2009p760}{{42}{2.2.1}{subsection.3.2.1}}
+\backcite {Chen2008p3738}{{42}{2.2.1}{subsection.3.2.1}}
+\backcite {ENCODEProjectConsortium2011p3726}{{42}{2.2.1}{subsection.3.2.1}}
+\backcite {Smit2010}{{42}{2.2.1}{subsection.3.2.1}}

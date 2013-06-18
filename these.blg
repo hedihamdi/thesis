@@ -2,50 +2,51 @@ This is BibTeX, Version 0.99d (TeX Live 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: these.aux
 A level-1 auxiliary file: packaging/Avant_Propos.aux
+A level-1 auxiliary file: chapters/Chapter-imogene.aux
 A level-1 auxiliary file: packaging/Conclusion_Generale.aux
-The style file: acm.bst
+The style file: apalike.bst
 A level-1 auxiliary file: packaging/abstract.aux
 Database file #1: biblio/papers.bib
-Warning--to sort, need author or key in us2001genomes
-You've used 79 entries,
-            2253 wiz_defined-function locations,
-            1065 strings with 20621 characters,
-and the built_in function-call counts, 30959 in all, are:
-= -- 2805
-> -- 2082
-< -- 0
-+ -- 862
-- -- 770
-* -- 3089
-:= -- 5264
-add.period$ -- 234
-call.type$ -- 79
-change.case$ -- 621
-chr.to.int$ -- 0
-cite$ -- 80
-duplicate$ -- 705
-empty$ -- 2021
-format.name$ -- 770
-if$ -- 6054
-int.to.chr$ -- 0
-int.to.str$ -- 79
-missing$ -- 74
-newline$ -- 395
-num.names$ -- 156
-pop$ -- 497
+Warning--I didn't find a database entry for ""
+You've used 103 entries,
+            1935 wiz_defined-function locations,
+            1152 strings with 26443 characters,
+and the built_in function-call counts, 49127 in all, are:
+= -- 4501
+> -- 2978
+< -- 45
++ -- 1117
+- -- 1074
+* -- 4817
+:= -- 8746
+add.period$ -- 307
+call.type$ -- 103
+change.case$ -- 1051
+chr.to.int$ -- 102
+cite$ -- 103
+duplicate$ -- 1433
+empty$ -- 2901
+format.name$ -- 1230
+if$ -- 9262
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 98
+newline$ -- 516
+num.names$ -- 309
+pop$ -- 812
 preamble$ -- 1
-purify$ -- 542
+purify$ -- 1051
 quote$ -- 0
-skip$ -- 409
+skip$ -- 1077
 stack$ -- 0
-substring$ -- 1778
-swap$ -- 157
-text.length$ -- 0
+substring$ -- 3098
+swap$ -- 110
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 316
-warning$ -- 1
-while$ -- 252
-width$ -- 81
-write$ -- 785
+type$ -- 618
+warning$ -- 0
+while$ -- 332
+width$ -- 0
+write$ -- 1331
 (There was 1 warning)

@@ -26,7 +26,10 @@
 
 \input{packaging/titre}
 
-\input{packaging/merci} \tableofcontents
+\input{packaging/merci} 
+
+
+\tableofcontents
 
 \WriteThisInToc\listoffigures 
 
@@ -51,7 +54,7 @@
 %\part{Première partie}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{\ChIntro}
-\ifthenelse{\FaitMinitocs > 0}{\mtcaddchapter\minitoc}{Minitoc}
+\ifthenelse{\FaitMinitocs > 0}{\adjustmtc\minitoc}{Minitoc}
 \newpage
 \input{chapters/Chapter-intro}
 \newpage 
@@ -59,26 +62,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{\ChMaxent} 
 \label{ch:maxent}
-\ifthenelse{\FaitMinitocs > 0}{\mtcaddchapter\minitoc}{Minitoc}
+\ifthenelse{\FaitMinitocs > 0}{\adjustmtc\minitoc}{Minitoc}
 \newpage
 \input{chapters/Chapter-maxent}
+%\includepdf[pages=-]{articles/maxent-arxiv}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{\ChImogene} 
-\ifthenelse{\FaitMinitocs > 0}{\mtcaddchapter\minitoc}{Minitoc}
+\ifthenelse{\FaitMinitocs > 0}{\adjustmtc \minitoc}{Minitoc}
 \newpage
-\input{chapters/Chapter-imogene}
+\include{chapters/Chapter-imogene}
+%\includepdf[pages=-]{articles/imogene-genomebiol.pdf}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{\ChTrichomes}
-\ifthenelse{\FaitMinitocs > 0}{\mtcaddchapter\minitoc}{Minitoc}
+\ifthenelse{\FaitMinitocs > 0}{\adjustmtc \minitoc}{Minitoc}
 \newpage
 \input{chapters/Chapter-trichomes}
+%\includepdf[pages=-]{articles/trichomes-plosbiol-merged.pdf}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{\ChMuscle}
 \label{chap:muscle}
-\ifthenelse{\FaitMinitocs > 0}{\mtcaddchapter\minitoc}{Minitoc}
+\ifthenelse{\FaitMinitocs > 0}{\adjustmtc \minitoc}{Minitoc}
 \newpage
 \input{chapters/Chapter-muscle}
 \newpage
@@ -98,7 +104,7 @@
 \appendix 
 \renewcommand{\leftmark}{Bibliographie}
 \renewcommand{\rightmark}{Bibliographie} 
-\bibliographystyle{acm}%biblio/paolostyle}
+\bibliographystyle{apalike}%biblio/paolostyle}
 \BeginBibWith{\vskip7mm\noindent 
    Dans la version pdf, les numéros de page sont
    des liens qui renvoient à l'occurence de la citation dans le texte.
