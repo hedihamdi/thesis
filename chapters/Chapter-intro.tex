@@ -1244,28 +1244,30 @@ celle d'isolation, et tous les sites de CTCF ne correspondent pas forcément
 \newpage
 \subsection{Encodage de patterns spatiaux}
 
+%\begin{figure}
 \bfig
-\includegraphics[width=.8\textwidth]{figures/furlong-eve-enhancers-to-stripes.pdf}
+    \centering
+\includegraphics[width=1.0\textwidth]{figures/furlong-carvajal-enhancers-patterns.pdf}
 \captionbf{Différents CRMs conduisent à différents patterns d'expression}{
     
-    Figure tirée de \cite{Wilczynski2010p575}, montrant le réseau de
+    (A) Figure tirée de \cite{Wilczynski2010p575}, montrant le réseau de
     cis-régulation du gène \textit{even-skipped} chez la \textit{Drosophile}.
     Des enhancers individuels (boîtes colorées) conduisent à des motifs
     d'expression distincts (indiqués dans les embryons par la même couleur).
     Les cercles colorés au sein des régulateurs indiquent les couleurs des CRMs
     régulés.
 
-} 
-\efig
+    (B) Figure tirée de \cite{Carvajal2008p395}, représentant les différents
+    éléments régulateur du locus \textit{Mrf4}/\textit{Myf5}. Chaque boîte
+    colorée représente une régulation de la transcription à un stade de
+    développement particulier ou dans une région anatomique spécifique du
+    muscle embryonnaire ou adulte.
 
-\bfig
-\includegraphics[width=0.8\textwidth]{figures/carvajal-myf5-enhancers.pdf}
-\captionbf{Régulation spatio-temporelle par des CRMs distincts}{
-Figure tirée de \cite{Carvajal2008p395}.
-Maps of the regulatory elements in the Mrf4/Myf5 locus and of the constructs generated for the study of global regulation. (A) Schematic representation of the regions involved in the transcriptional regulation of the Mrf4/Myf5 locus. Each colored box represents transcription occurring at either differ- ent times or anatomical locations in embryonic or adult skeletal muscle. The color key is included below the map. (
-}
-\label{fig:carvajal-myf5-enhancers}
+} 
+\label{fig:enhancers-pattern}
 \efig
+%\end{figure}
+
 
 %\bfig
 %\includegraphics[width=\textwidth]{figures/stathopoulos-CRMs-sites-twist-dorsal-snail.pdf}
@@ -1337,7 +1339,11 @@ seule unité de régulation (fig.~\ref{fig:panne-enhanceosome}).
 \bfig
 \includegraphics[width=0.8\textwidth]{figures/panne-enhanceosome.pdf}
 \captionbf{L'enhanceosome de l'interferon-$\beta$}{
-Figure tirée de~\cite{Panne2008kl} représentant le complexe de TFs assemblés sur l'enhanceosome IFN-$\beta$.
+
+    Figure tirée de~\cite{Panne2008kl} représentant le complexe de TFs
+    assemblés sur l'enhanceosome IFN-$\beta$, formant une surface de
+    reconnaissance agissant comme une seule unité de régulation.
+
 }
 \label{fig:panne-enhanceosome}
 \efig
@@ -1420,13 +1426,33 @@ répandue spatialement selon le cas.
 \includegraphics[width=0.8\textwidth]{figures/whyte-super-enhancer-cluster.pdf}
 \captionbf{De l'enhancer au super-enhancer}{
 
-    Figure tirée de~\cite{Whyte2013tg}, montrant les profils de \chipseq de
-    Oct4, Sox2, Nanog, Klf4 et Esrrb aux loci de \textit{Gck} et
-    \textit{miR-290-295} dans les cellules souches embryonnaires.
+    Figure tirée de~\cite{Whyte2013tg}, montrant les profils de \chipseq des
+    TFs maîtres Oct4, Sox2, Nanog, Klf4 et Esrrb aux loci de \textit{Gck} et
+    \textit{miR-290-295} dans les cellules souches embryonnaires. Le
+    super-enhancer se distingue du simple enhancer par sa taille ($27$kb), sa
+    grande concentration en TFs maîtres, notamment Klf4 et Esrrb, et la
+    fixation de la protéine Med1 du complexe Mediator.
 
 }
-\label{fig:}
+\label{fig:whyte-super-enhancer}
 \efig
+
+Récemment, il a été montré que certains groupements d'enhancers peuvent agir
+comme une même unité de régulation : on parle de \textit{super-enhancers}
+\cite{Whyte2013tg}. Ces régions de taille typique $\sim10$kb
+(fig.~\ref{fig:whyte-super-enhancer}), sont fixées par des TFs maîtres et sont
+associées à des gènes encodant des régulateurs clés de l'identité cellulaire.
+Identifiés dans les cellules souches embryonnaires (ESCs), ces ensembles
+d'enhancers sont fixés par le complexe co-activateur Mediator, qui interagit
+avec la cohésine pour former un anneau permettant de connecter la région de
+régulation au promoteur~\cite{Kagey2010p606}. Par ailleurs, les gènes associés
+aux super-enhancers possèdent un niveau particulièrement élevé d'expression et
+leur absence est associée à une perte de l'état souche des cellules.
+
+Ainsi, ce second niveau d'organisation de la régulation pourrait simplifier la
+modélisation de la régulation du type cellulaire, en passant de millier de
+traces de fixation pour différents TFs à quelques centaines de super-enhancers
+contrôlant les gènes clés de l'identité cellulaire.
 
 % subsection les_super_enhancers (end)
 
