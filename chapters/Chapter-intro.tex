@@ -984,24 +984,27 @@ développement étudiés.
 \subsubsection{Immunoprécipitation de la chromatine : \chipchip et \chipseq}
 
 \bfig
-\includegraphics[width=0.8\textwidth]{figures/farnham-chip.pdf}
+\includegraphics[width=0.6\textwidth]{figures/visel-chipseq.pdf}
 \captionbf{Étapes d'une expérience de \chipseq}{
-    Figure tirée de \cite{Farnham2009fk}.
+    Figure tirée de~\cite{Visel2009kx}.
 }
-\label{fig:farnham-chip}
+\label{fig:visel-chip}
 \efig
 
 
 La technique d'immunoprécipitation de la chromatine (ChIP)
-(fig.~\ref{fig:farnham-chip}) consiste dans un premier temps à induire la
+(fig.~\ref{fig:visel-chip}) consiste dans un premier temps à induire la
 réticulation (\textit{crosslink}) des protéines se liant à l'ADN avec l'ADN en
 traitant les cellules avec de la formaldéhyde. Cette étape permet de
 transformer les liaisons faibles protéine-ADN en liaisons covalentes. Une fois
 les protéines fixées, la chromatine est découpée par digestion enzymatique ou
 en la soumettant à des ultrasons (c'est la sonication), résultant en des
 fragments de taille variant entre $200$ et $600$bp. Ces fragments sont ensuite
-immunoprécipités en présence d'un anticorps spécifique d'un \tf ou d'un isoforme
-d'histone (dans le cas d'une étude du paysage épigénétique) d'intérêt, permettant ainsi de récupérer tous les sites de fixation dans le génome. Après purification des fragments précipités, l'échantillon peut être analysé soit par hybridation sur puce (\chip) ou par séquençage haut débit (\chipseq).\\
+immunoprécipités en présence d'un anticorps spécifique d'un \tf ou d'un
+isoforme d'histone (dans le cas d'une étude du paysage épigénétique) d'intérêt,
+permettant ainsi de récupérer tous les sites de fixation dans le génome. Après
+purification des fragments précipités, l'échantillon peut être analysé soit par
+hybridation sur puce (\chip) ou par séquençage haut débit (\chipseq).\\
 
 Dans le cas de la \chipchip, l'échantillon immunoprécipité et l'ADN de départ
 (\textit{input}) sont marqués avec des colorants fluorescents et hybdridés
@@ -1014,7 +1017,7 @@ d'\textit{input}.
 \\
 
 \bfig
-\includegraphics[width=0.6\textwidth]{figures/park-chip-resolution.pdf}
+\includegraphics[width=0.8\textwidth]{figures/park-chip-resolution.pdf}
 \captionbf{Résolution des expériences \chipchip et \chipseq}{
 Figure tirée de \cite{Park2009kx}. Exemples de profils de fixation de la
 protéine à chromodomaine Chromator générés à partir d'expériences de \chipchip
@@ -1196,12 +1199,43 @@ multiplicité est requise pour l'activité enhancer, comme cela l'a été montré
 pour le premier enhancer découvert : celui du virus simien 40
 (SV40)~\cite{Schirm1987kx,Ondek1988vn}. Un gène peut par ailleurs posséder
 plusieurs enhancers distincts conduisant à des expressions spécifiques
-à différents tissus, comme cela l'a été montré dans le cas du cluster des gènes
-de détermination myogénique \textit{Myf5} et
-\textit{Mrf4}~\cite{Carvajal2008p395}. Comme décrit en
-fig.~\ref{fig:hardison-enhancer-states}, les enhancers sont associés à de hauts
-niveaux de marque épigénétique H3K4me$1$~\cite{Heintzman2009ys} et sont souvent
-fixés par le co-activateur p$300$~\cite{Wang2005zr,Heintzman2009ys}.
+à différents tissus, comme cela l'a été montré dans le cas du gène \textit{eve}
+chez la \textit{Drosophile}~\cite{Wilson2009p3225} ou dans le cas du cluster de
+gènes de détermination myogénique \textit{Myf5} et \textit{Mrf4} chez les
+mammifères~\cite{Carvajal2008p395} (fig.~\ref{fig:enhancers-pattern}). Ainsi,
+les différents enhancers d'un même gène peuvent être vus comme autant de points
+d'entrée d'un réseau de régulation génétique, représentant diverses fonctions
+logiques et intégrant différentes information spatio-temporelles pour produire
+en sortie une expression génétique finement contrôlée~\cite{Bolouri2002uq}.
+
+Enfin, comme décrit en fig.~\ref{fig:hardison-enhancer-states}, les enhancers
+sont associés à de hauts niveaux de marque épigénétique
+H3K4me$1$~\cite{Heintzman2009ys} et sont souvent fixés par le co-activateur
+p$300$~\cite{Wang2005zr,Heintzman2009ys}.
+
+%\begin{figure}
+\bfig
+    \centering
+\includegraphics[width=1.0\textwidth]{figures/furlong-carvajal-enhancers-patterns.pdf}
+\captionbf{Différents \textit{enhancers} conduisent à différents patterns d'expression}{
+    
+    (A) Figure tirée de \cite{Wilczynski2010p575}, montrant le réseau de
+    cis-régulation du gène \textit{even-skipped} chez la \textit{Drosophile}.
+    Des enhancers individuels (boîtes colorées) conduisent à des motifs
+    d'expression distincts (indiqués dans les embryons par la même couleur).
+    Les cercles colorés au sein des régulateurs indiquent les couleurs des CRMs
+    régulés.
+
+    (B) Figure tirée de \cite{Carvajal2008p395}, représentant les différents
+    éléments régulateur du locus \textit{Mrf4}/\textit{Myf5}. Chaque boîte
+    colorée représente une régulation de la transcription à un stade de
+    développement particulier ou dans une région anatomique spécifique du
+    muscle embryonnaire ou adulte.
+
+} 
+\label{fig:enhancers-pattern}
+\efig
+%\end{figure}
 
 \subsubsection{Insulateurs}
 \label{ssub:insulateurs}
@@ -1235,39 +1269,9 @@ celle d'isolation, et tous les sites de CTCF ne correspondent pas forcément
 
 % subsubsection enhancers_et_silencers (end)
 
-
-
 % subsection les_diff_rents_types_de_crms (end)
 
 %\subsection{Modules et fonctions logiques}
-
-\newpage
-\subsection{Encodage de patterns spatiaux}
-
-%\begin{figure}
-\bfig
-    \centering
-\includegraphics[width=1.0\textwidth]{figures/furlong-carvajal-enhancers-patterns.pdf}
-\captionbf{Différents CRMs conduisent à différents patterns d'expression}{
-    
-    (A) Figure tirée de \cite{Wilczynski2010p575}, montrant le réseau de
-    cis-régulation du gène \textit{even-skipped} chez la \textit{Drosophile}.
-    Des enhancers individuels (boîtes colorées) conduisent à des motifs
-    d'expression distincts (indiqués dans les embryons par la même couleur).
-    Les cercles colorés au sein des régulateurs indiquent les couleurs des CRMs
-    régulés.
-
-    (B) Figure tirée de \cite{Carvajal2008p395}, représentant les différents
-    éléments régulateur du locus \textit{Mrf4}/\textit{Myf5}. Chaque boîte
-    colorée représente une régulation de la transcription à un stade de
-    développement particulier ou dans une région anatomique spécifique du
-    muscle embryonnaire ou adulte.
-
-} 
-\label{fig:enhancers-pattern}
-\efig
-%\end{figure}
-
 
 %\bfig
 %\includegraphics[width=\textwidth]{figures/stathopoulos-CRMs-sites-twist-dorsal-snail.pdf}
@@ -1276,23 +1280,23 @@ celle d'isolation, et tous les sites de CTCF ne correspondent pas forcément
 %} 
 %\efig
 
-\newpage
 \subsection{Grammaire des enhancers : enhanceosome vs billboard}
 
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/panne-enhanceosome.pdf}
+\captionbf{L'enhanceosome de l'interferon-$\beta$}{
 
-Nous l'avons vu, les CRMs contiennent en général de multiples sites de liaisons
-(TFBS) pour un ou plusieurs TFs. On parle de \textit{clustering}
-(regroupement). Lorsque les TFBS correspondent à plusieurs TFs différents, on
-parle de CRM hétérotypique, et dans le cas où ils correspondent à un même TF,
-on parle de CRM homotypique. Cette distinction est surtout utile pour décrire
-les différentes méthodes de prédiction de CRM, car la plupart des CRMs
-identifiés chez les Métazoaires sont hétérotypiques~\cite{Aerts2012p3868}.
-L'organisation de ces sites de liaison relève de deux types d'architecture
-principaux (fig.~\ref{fig:kulkarni-billboard}).
+    Figure tirée de~\cite{Panne2008kl} représentant le complexe de TFs
+    assemblés sur l'enhanceosome IFN-$\beta$, formant une surface de
+    reconnaissance agissant comme une seule unité de régulation.
 
-\begin{figure}
+}
+\label{fig:panne-enhanceosome}
+\efig
+
+\begin{figure}[ht!]
     \centering
-\includegraphics[width=.8\textwidth]{figures/kulkarni-billboard.pdf}
+\includegraphics[width=.6\textwidth]{figures/kulkarni-billboard.pdf}
 \captionbf{Deux modèles d'enhancers: enhanceosome et billboard}{
 
     Figure tirée de~\cite{Kulkarni2003nx}. (A) Dans le modèle enhanceosome,
@@ -1315,16 +1319,16 @@ principaux (fig.~\ref{fig:kulkarni-billboard}).
 \label{fig:kulkarni-billboard}
 \end{figure}
 
-\subsubsection{Le modèle ``billboard''}
-\label{ssub:le_mod_le_billboard_}
 
-La majorité des CRMs adhèrent à ce type d'organisation. L'architecture y est
-libre : les sites de liaisons n'ont pas de contrainte de nombre, d'ordre, de
-sens, ou d'espacement~\cite{Kulkarni2003nx}. De tels CRMs sont propices à une
-détection informatique basée sur la densité de sites de liaisons pour
-différents TFs.
-
-% subsubsection le_mod_le_billboard_ (end)
+Nous l'avons vu, les CRMs contiennent en général de multiples sites de liaisons
+(TFBS) pour un ou plusieurs TFs. On parle de \textit{clustering}
+(regroupement). Lorsque les TFBS correspondent à plusieurs TFs différents, on
+parle de CRM hétérotypique, et dans le cas où ils correspondent à un même TF,
+on parle de CRM homotypique. Cette distinction est surtout utile pour décrire
+les différentes méthodes de prédiction de CRM, car la plupart des CRMs
+identifiés chez les Métazoaires sont hétérotypiques~\cite{Aerts2012p3868}.
+L'organisation de ces sites de liaison relève de deux types d'architecture
+principaux (fig.~\ref{fig:kulkarni-billboard}).
 
 \subsubsection{Le modèle ``enhanceosome''}
 \label{ssub:le_mod_le_enhanceosome_}
@@ -1336,43 +1340,93 @@ continue~\cite{Panne2008kl}. Les TFBS de cet enhancer se recouvrent les uns les
 autres, créant au final un complexe de TFs fixés à l'ADN agissant comme une
 seule unité de régulation (fig.~\ref{fig:panne-enhanceosome}).
 
-\bfig
-\includegraphics[width=0.8\textwidth]{figures/panne-enhanceosome.pdf}
-\captionbf{L'enhanceosome de l'interferon-$\beta$}{
-
-    Figure tirée de~\cite{Panne2008kl} représentant le complexe de TFs
-    assemblés sur l'enhanceosome IFN-$\beta$, formant une surface de
-    reconnaissance agissant comme une seule unité de régulation.
-
-}
-\label{fig:panne-enhanceosome}
-\efig
-
 
 % subsubsection le_mod_le_enhanceosome_ (end)
 
 
+\subsubsection{Le modèle ``billboard''}
+\label{ssub:le_mod_le_billboard_}
 
-\newpage
+La majorité des CRMs adhèrent à ce type d'organisation. L'architecture y est
+libre : les sites de liaisons n'ont pas de contrainte de nombre, d'ordre, de
+sens, ou d'espacement~\cite{Kulkarni2003nx}. De tels CRMs sont propices à une
+détection informatique basée sur la densité de sites de liaisons pour
+différents TFs.
+
+% subsubsection le_mod_le_billboard_ (end)
+
+
+
 \subsection{Évolution des enhancers}
+
+La fonction centrale que jouent les enhancers dans la régulation de
+l'expression génétique laisse à penser que ceux-ci seraient sous sélection et
+leur séquence serait donc plus conservée que celle des régions non codantes du
+génome. De fait, la comparaison de séquences non-codantes entre espèces proches
+s'avère être un mode de détection puissant des régions de
+régulation~\cite{Prabhakar2006ys}. Ainsi, l'utilisation de la conservation
+entre des espèces lointaines comme l'homme et le poisson \textit{Fugu} ou de
+l'extrême conservation entre des espèces proches comme l'homme, la souris et le
+rat, permet de détecter des régions ayant une activité enhancer \invivo avec un
+succès proche de $50\%$~\cite{Pennacchio2006vn}. À l'instar de la régulation de
+l'interféron-$\beta$, de telles séquences très contraintes obéissent à une
+logique de type \og enhanceosome \fg où la fonction est intimement liée à la
+séquence.
+
+
 
 \bfig
 \includegraphics[width=\textwidth]{figures/liberman-crm-conservation-flexibility.pdf}
-\captionbf{}{
-    figure tirée de \cite{liberman2009p3886}.
+\captionbf{Flexibilité du code de cis-régulation au cours de l'évolution chez les \textit{Drosophiles}}{
+
+    Figure tirée de \cite{liberman2009p3886}, montrant l'expression du gène
+    \textit{sog} par ISH chez plusieurs espèces de \textit{Drosophilid\ae}
+    (A,D,G,J), ainsi que l'expression d'un rapporteur \textit{LacZ} sous
+    contrôle de la région de régulation de \textit{sog} chez l'espèce
+    considérée (B,E,H,K), dont une représentation schématique est donnée pour
+    chaque cas (C,F,I,L).  Les sites de fixation pour différents TFs sont
+    indiqués par un rectangle de couleur.
+
 } 
+\label{fig:liberman-crm-flexibility}
 \efig
 
 \bfig
 \includegraphics[width=\textwidth]{figures/wilson-CRMs-evolution.pdf}
-\captionbf{}{
-    figure tirée de \cite{Wittkopp2011p3240}.
+\captionbf{Conservation et divergence de la fixation de HNF$4\alpha$ chez les mammifères}{
+    
+    Figure tirée de \cite{Wilson2009p3225}, représentant la fixation par
+    \chipseq (pics de couleur) du facteur de transcription humain HNF$4\alpha$
+    (ou son homologue murin HNF4a) chez l'homme, le macaque, le chien, ainsi
+    qu'une souris transgénique contenant le chromosome 21 humain. Les zones
+    grisées indiquent : (i) une fixation de HNF$4\alpha$ chez l'homme retrouvée
+    sur le chromosome 21 humain de la souris mais pas chez le macaque malgré la
+    conservation de séquence, (ii) une fixation de HNF4a spécifique à la
+    souris, et (iii) une fixation spécifique aux primates qui a lieu sur des
+    éléments transposables. 
+
 } 
 \efig
 
+Contrastant avec cette vision d'enhancers très contraints, plusieurs études
+pointent vers une plus grande flexibilité, voire divergence des séquences
+enhancers~\cite{Ludwig2000zr,Dermitzakis2002ly,Moses2006ve}. Supportant l'idée
+que la plupart des enhancers se comportent selon le modèle ``billboard'', la
+grammaire des sites de fixation apparaît comme étant loin d'être
+figée~\cite{liberman2009p3886}. Ainsi, l'enhancer régulant le gène
+\textit{short gastrulation} (\textit{sog}), bien que présentant chez
+différentes espèces de \textit{Drosophiles} une architecture variable des sites
+de fixation le composant, conduit à un même motif d'expression
+(fig.~\ref{fig:liberman-crm-flexibility}). Cette idée qu'une panoplie de
+grammaires conduisent à une même régulation est confortée par les résultats
+de~\cite{Zinzen2009p760} où des enhancers ayant des \og entrées \fg différentes
+(i.e étant fixés par des TFs différents pendant des durées variables)
+produisent des \og sorties \fg similaires, dans ce cas une expression
+spécifique à un tissu donné.  \\
+
+Par ailleurs, en plus d'évoluer de manière interne, un 
 \cite{Feschotte2008dq}
 
-\newpage
 \subsection{Les \og shadow enhancers \fg}
 
 L'évolution des éléments de cis-régulation est un mécanisme majeur permettant
@@ -1395,7 +1449,6 @@ plus rapidement que les CRMs primaires auxquels ils sont
 apparentés~\cite{Hong2008zr} pour fournir de nouveaux sites de fixation et
 conduire à de nouvelles activités de régulation sans bloquer la fonction
 critique de certains gènes de développement.
-\\
 
 Un exemple mêlant robustesse et divergence est le
 cas des multiples CRMs régulant le gène \textit{Svb} chez la Drosophile.
@@ -1407,17 +1460,30 @@ système, il a été montré que deux CRMs supplémentaires, des \se, sont
 dispensables dans des conditions de température usuelles, mais requis lorsque
 les embryons se développent dans des conditions de température
 extrêmes~\cite{Frankel2010p463}.
-\\
 
-Par ailleurs, il a été montré que les gènes gap de la Drosophile possèdent tous
-des \se, dont le rôle semble être d'assurer une plus grande précision spatiale
-du motif d'expression du gène régulé~\cite{Perry2011ve}. La perte de l'un des
-CRMs, proximal comme \se, conduit à une expression trop restreinte ou trop
-répandue spatialement selon le cas.
-\\
+Par ailleurs, il a été montré que les gènes de segmentation (ou gènes
+\textit{gap}) de la Drosophile possèdent tous des \se
+(fig.~\ref{fig:perry-shadow-enhancer}). Leur rôle semble être d'assurer une
+plus grande précision spatiale du motif d'expression du gène
+régulé : la perte de l'un des CRMs, proximal aussi bien que
+\og shadow \fg, conduit à une expression trop restreinte ou trop répandue
+spatialement selon le cas~\cite{Perry2011ve}.
+
+\bfig
+\includegraphics[width=1.0\textwidth]{figures/perry-shadow-enhancer.pdf}
+\captionbf{\og Shadow enhancer \fg du gène de segmentation \textit{Hunchback}}{
+    
+    Figure tirée de~\cite{Perry2011ve}, montrant des hybdridations \insitu de
+    transgènes contenant le gène rapporteur \textit{LacZ} sous contrôle de
+    l'enhancer proximal (A) ou du \og shadow enhancer \fg plus distal (B) du
+    gène de segmentation \textit{Hb}. La position de ces enhancers par rapport
+    à \textit{Hb} est montrée en (C). 
+
+}
+\label{fig:perry-shadow-enhancer}
+\efig
 
 
-\newpage
 \subsection{Les super enhancers}
 \label{sub:les_super_enhancers}
 
@@ -1516,7 +1582,6 @@ régulation au sein du génome que ce dernier est \textit{nécessaire}
 %\efig
 %
 
-\newpage
 \subsection{Prédiction des CRMs}
 
 \bfig

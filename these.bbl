@@ -69,6 +69,11 @@ Blau, H.~M., Pavlath, G.~K., Hardeman, E.~C., Chiu, C.~P., Silberstein, L.,
 \newblock Plasticity of the differentiated state.
 \newblock {\em Science}, 230(4727):758--66.
 
+\bibitem[Bolouri and Davidson, 2002]{Bolouri2002uq}
+Bolouri, H. and Davidson, E.~H. (2002).
+\newblock Modeling dna sequence-based cis-regulatory gene networks.
+\newblock {\em Dev Biol}, 246(1):2--13.
+
 \bibitem[Brazma et~al., 2001]{EMBL2001}
 Brazma, A., Parkinson, H., Schlitt, T., and Shojatalab, M. (2001).
 \newblock A quick introduction to elements of biology - cells, molecules,
@@ -133,16 +138,17 @@ Davis, R.~L., Weintraub, H., and Lassar, A.~B. (1987).
   myoblasts.
 \newblock {\em Cell}, 51(6):987--1000.
 
+\bibitem[Dermitzakis and Clark, 2002]{Dermitzakis2002ly}
+Dermitzakis, E.~T. and Clark, A.~G. (2002).
+\newblock Evolution of transcription factor binding sites in mammalian gene
+  regulatory regions: conservation and turnover.
+\newblock {\em Mol Biol Evol}, 19(7):1114--21.
+
 \bibitem[Djordjevic et~al., 2003]{Djordjevic2003p2932}
 Djordjevic, M., Sengupta, A.~M., and Shraiman, B.~I. (2003).
 \newblock A biophysical approach to transcription factor binding site
   discovery.
 \newblock {\em Genome Res}, 13(11):2381--90.
-
-\bibitem[Farnham, 2009]{Farnham2009fk}
-Farnham, P.~J. (2009).
-\newblock Insights from genomic profiling of transcription factors.
-\newblock {\em Nat Rev Genet}, 10(9):605--16.
 
 \bibitem[Feschotte, 2008]{Feschotte2008dq}
 Feschotte, C. (2008).
@@ -333,6 +339,11 @@ Liu, Y.-H., Jakobsen, J.~S., Valentin, G., Amarantos, I., Gilmour, D.~T., and
   signaling as essential regulators of muscle development.
 \newblock {\em Developmental Cell}, 16(2):280--91.
 
+\bibitem[Ludwig et~al., 2000]{Ludwig2000zr}
+Ludwig, M.~Z., Bergman, C., Patel, N.~H., and Kreitman, M. (2000).
+\newblock Evidence for stabilizing selection in a eukaryotic enhancer element.
+\newblock {\em Nature}, 403(6769):564--7.
+
 \bibitem[Maerkl and Quake, 2007]{Maerkl2007p840}
 Maerkl, S. and Quake, S. (2007).
 \newblock A systems approach to measuring the binding energy landscapes of
@@ -356,6 +367,13 @@ Milo, R., Shen-Orr, S., Itzkovitz, S., Kashtan, N., Chklovskii, D., and Alon,
   U. (2002).
 \newblock Network motifs: simple building blocks of complex networks.
 \newblock {\em Science}, 298(5594):824--7.
+
+\bibitem[Moses et~al., 2006]{Moses2006ve}
+Moses, A.~M., Pollard, D.~A., Nix, D.~A., Iyer, V.~N., Li, X.-Y., Biggin,
+  M.~D., and Eisen, M.~B. (2006).
+\newblock Large-scale turnover of functional transcription factor binding sites
+  in drosophila.
+\newblock {\em PLoS Comput Biol}, 2(10):e130.
 
 \bibitem[Nagaraj et~al., 2008]{Nagaraj2008p3749}
 Nagaraj, V.~H., O'flanagan, R.~A., and Sengupta, A.~M. (2008).
@@ -398,6 +416,14 @@ Park, P.~J. (2009).
 \newblock Chip-seq: advantages and challenges of a maturing technology.
 \newblock {\em Nat Rev Genet}, 10(10):669--80.
 
+\bibitem[Pennacchio et~al., 2006]{Pennacchio2006vn}
+Pennacchio, L.~A., Ahituv, N., Moses, A.~M., Prabhakar, S., Nobrega, M.~A.,
+  Shoukry, M., Minovitsky, S., Dubchak, I., Holt, A., Lewis, K.~D.,
+  Plajzer-Frick, I., Akiyama, J., De~Val, S., Afzal, V., Black, B.~L.,
+  Couronne, O., Eisen, M.~B., Visel, A., and Rubin, E.~M. (2006).
+\newblock In vivo enhancer analysis of human conserved non-coding sequences.
+\newblock {\em Nature}, 444(7118):499--502.
+
 \bibitem[Perry et~al., 2011]{Perry2011ve}
 Perry, M.~W., Boettiger, A.~N., and Levine, M. (2011).
 \newblock Multiple enhancers ensure precision of gap gene-expression patterns
@@ -408,6 +434,13 @@ Perry, M.~W., Boettiger, A.~N., and Levine, M. (2011).
 Phillips, J.~E. and Corces, V.~G. (2009).
 \newblock Ctcf: master weaver of the genome.
 \newblock {\em Cell}, 137(7):1194--211.
+
+\bibitem[Prabhakar et~al., 2006]{Prabhakar2006ys}
+Prabhakar, S., Poulin, F., Shoukry, M., Afzal, V., Rubin, E.~M., Couronne, O.,
+  and Pennacchio, L.~A. (2006).
+\newblock Close sequence comparisons are sufficient to identify human
+  cis-regulatory elements.
+\newblock {\em Genome Res}, 16(7):855--63.
 
 \bibitem[Recillas-Targa et~al., 2002]{Recillas-Targa2002dq}
 Recillas-Targa, F., Pikaart, M.~J., Burgess-Beusse, B., Bell, A.~C., Litt,
@@ -539,6 +572,11 @@ Vaquerizas, J.~M., Kummerfeld, S.~K., Teichmann, S.~A., and Luscombe, N.~M.
   evolution.
 \newblock {\em Nat Rev Genet}, 10(4):252--63.
 
+\bibitem[Visel et~al., 2009]{Visel2009kx}
+Visel, A., Rubin, E.~M., and Pennacchio, L.~A. (2009).
+\newblock Genomic views of distant-acting enhancers.
+\newblock {\em Nature}, 461(7261):199--205.
+
 \bibitem[Waddington et~al., 1957]{waddington1957strategy}
 Waddington, C.~H. et~al. (1957).
 \newblock The strategy of the genes. a discussion of some aspects of
@@ -588,6 +626,11 @@ Wilczynski, B. and Furlong, E. E.~M. (2010).
   development: Insights from drosophila.
 \newblock {\em Developmental Biology}, 340(2):161--169.
 
+\bibitem[Wilson and Odom, 2009]{Wilson2009p3225}
+Wilson, M.~D. and Odom, D.~T. (2009).
+\newblock Evolution of transcriptional control in mammals.
+\newblock {\em Curr Opin Genet Dev}, 19(6):579--85.
+
 \bibitem[Winter et~al., 1981]{Winter1981uq}
 Winter, R.~B., Berg, O.~G., and von Hippel, P.~H. (1981).
 \newblock Diffusion-driven mechanisms of protein translocation on nucleic
@@ -601,12 +644,6 @@ Winter, R.~B. and von Hippel, P.~H. (1981).
   acids. 2. the escherichia coli repressor--operator interaction: equilibrium
   measurements.
 \newblock {\em Biochemistry}, 20(24):6948--60.
-
-\bibitem[Wittkopp and Kalay, 2011]{Wittkopp2011p3240}
-Wittkopp, P.~J. and Kalay, G. (2011).
-\newblock Cis-regulatory elements: molecular mechanisms and evolutionary
-  processes underlying divergence.
-\newblock {\em Nature Reviews Genetics}, 13(1):59--69.
 
 \bibitem[Wright et~al., 1991]{Wright1991dp}
 Wright, W.~E., Binder, M., and Funk, W. (1991).
