@@ -347,13 +347,17 @@ transcriptionnellement active \cite{Kondo2010ly}.
 \bfig
 \includegraphics[width=0.7\textwidth]{figures/lee-network-motifs-yeast.pdf}
 \includegraphics[width=0.9\textwidth]{figures/odom-network-motifs-human.pdf}
-\captionbf{Exemples de motifs dans les réseaux de régulation génétique}{Figure
-    tirée de .  Ces exemples sont issus d'analyses d'interactions entre \tfs
-    (cercles bleus) et promoteurs (rectangles rouges) chez la
-    levure~\cite{Lee2002p537} (A) et chez l'homme~\cite{Odom2004hc} (B).  Les
-flèches solides indiquent la fixation d'un \tf à un promoteur, et les flèches
-en pointillé indiquent l'expression d'un \tf à partir de son gène.}
-\label{fig:lee-odom-networks}\efig
+\captionbf{Exemples de motifs dans les réseaux de régulation génétique}{
+    
+    Ces exemples sont issus d'analyses d'interactions entre \tfs (cercles
+    bleus) et promoteurs (rectangles rouges) chez la levure~\cite{Lee2002p537}
+    (A) et chez l'homme~\cite{Odom2004hc} (B).  Les flèches solides indiquent
+    la fixation d'un \tf à un promoteur, et les flèches en pointillé indiquent
+    l'expression d'un \tf à partir de son gène.
+
+}
+\label{fig:lee-odom-networks}
+\efig
 
 Maintenant que nous avons vu la nature des interactions au sein des réseaux
 génétiques, nous pouvons nous pencher sur leur structure. Celle-ci est en effet
@@ -471,7 +475,7 @@ réseau, et nous allons maintenant présenter plus en avant leurs propriétés.
 
 
 
-\section{Modèles mathématiques des interactions protéine-ADN}
+\section{Les interactions protéine-ADN : modèles mathématiques}
 
 Nous l'avons vu, les interactions entre \tfs et ADN sont une composante
 essentielle des réseaux génétiques. Les TFs se fixent sur des sites spécifiques
@@ -709,7 +713,7 @@ où $Z_0$ est la fonction de partition d'une séquence aléatoire, et nous avons in
     \label{eq:Ei}
 \end{equation}
 
-Dans le cas d'un site de reconnaissance, $E_s(i) \gg E_{ns}$ de sorte que $E_i
+Dans le cas d'un site de reconnaissance, $E_{ns} \gg E_s(i)$ de sorte que $E_i
 \simeq E_s(i)$~\cite{Gerland2002p397} (ZZ Check ZZ). La probabilité que le
 facteur soit fixé sur le site fonctionnel s'écrit finalement :
 
@@ -765,7 +769,7 @@ d'un seul TF. Par ailleurs, cette approche thermodynamique nous a permis de
 généraliser le modèle biophysique simple introduit au paragraphe
 \S\ref{sub:modele-biophys}.
 
-\section{Mesures expérimentales des interactions protéine-ADN}
+\section{Les interactions protéine-ADN : mesures expérimentales}
 
 Ces dernières années, des avancées technologiques considérables ont permis
 d'une part d'établir des modèles de fixation spécifique pour de nombreux TFs,
@@ -953,7 +957,7 @@ fixation peut être estimée plus finement.
 
 Dans les études de ce type, les sites de fixation présents au sein des colonies
 sont séquencés individuellement, ce qui permet d'obtenir environ $50$ séquences
-pour une expérience de sélection donnée~\cite{}. Néanmoins, il semble possible
+pour une expérience de sélection donnée. Néanmoins, il semble possible
 d'utiliser les nouvelles technologies de séquençage pour récupérer l'ensemble
 des sites de fixation des bactéries présentes sur une
 plaque~\cite{Stormo2010p3947}.  À l'instar de la méthode HT-SELEX, on obtient
@@ -985,8 +989,24 @@ développement étudiés.
 
 \bfig
 \includegraphics[width=0.6\textwidth]{figures/visel-chipseq.pdf}
-\captionbf{Étapes d'une expérience de \chipseq}{
-    Figure tirée de~\cite{Visel2009kx}.
+\captionbf{Étapes d'une expérience de \chipchip et \chipseq}{
+
+    Figure tirée de~\cite{Visel2009kx}. À partir d'extraits cellulaires issus
+    de cultures \invitro ou prélevés \invivo, plusieurs étapes permettent de
+    récupérer les régions fixées par un TF d'intérêt. D'abord, les protéines,
+    liées de manière non covalente à l'ADN, sont fixées par utilisation d'un
+    agent de réticulation, le formaldéhyde. Puis la chromatine est découpée par
+    utilisation d'ultrasons, on parle de sonication. L'utilisation d'un
+    anticorps spécifique au TF d'intérêt permet de précipiter les fragments
+    d'ADN fixés. Les fragments résultants sont alors soit hybridés à une puce
+    à ADN contenant de nombreuses séquences génomiques (\chipchip), soit
+    directement séquencés et alignés à un génome de référence (\chipseq). La
+    comparaison à un échantillon d'ADN non précipité (\og input \fg) permet
+    alors de définir les régions significativement fixées, avec une résolution
+    plus précise dans e cas du \chipseq, où l'ensemble du génome est couvert,
+    par rapport au \chipchip, pour lequel seulement un sous ensemble du génome
+    est analysé.
+
 }
 \label{fig:visel-chip}
 \efig
@@ -1103,7 +1123,7 @@ connus au nucléotide près.
 
 
 
-\section{Les modules de cis-régulation} \label{sec:CRMs} 
+\section{Les modules de cis-régulation (CRMs)} \label{sec:CRMs} 
 %
 %\begin{malistebullet}{15}
 %\item Régulation transcriptionnelle. Facteurs de transcription. Diffusion, fixation. \\
@@ -1191,28 +1211,6 @@ co-répresseurs des TFs recrutés. Il y a néanmoins relativement peu de
 \textit{silencers} caractérisés et l'on utilise le terme d'\textit{enhancers}
 pour désigner de manière générale ces régions régulatrices.
 
-Les \textit{enhancers} peuvent se situer à des distances variables du gène
-qu'ils régulent~\cite{Maniatis1987fk}, pouvant parfois aller jusqu'à $1$ Mb
-comme dans le cas de \textit{Shh} chez la souris~\cite{Lettice2003uq}. Les
-enhancers contiennent de multiples sites de fixations de TFs. Cette
-multiplicité est requise pour l'activité enhancer, comme cela l'a été montré
-pour le premier enhancer découvert : celui du virus simien 40
-(SV40)~\cite{Schirm1987kx,Ondek1988vn}. Un gène peut par ailleurs posséder
-plusieurs enhancers distincts conduisant à des expressions spécifiques
-à différents tissus, comme cela l'a été montré dans le cas du gène \textit{eve}
-chez la \textit{Drosophile}~\cite{Wilson2009p3225} ou dans le cas du cluster de
-gènes de détermination myogénique \textit{Myf5} et \textit{Mrf4} chez les
-mammifères~\cite{Carvajal2008p395} (fig.~\ref{fig:enhancers-pattern}). Ainsi,
-les différents enhancers d'un même gène peuvent être vus comme autant de points
-d'entrée d'un réseau de régulation génétique, représentant diverses fonctions
-logiques et intégrant différentes information spatio-temporelles pour produire
-en sortie une expression génétique finement contrôlée~\cite{Bolouri2002uq}.
-
-Enfin, comme décrit en fig.~\ref{fig:hardison-enhancer-states}, les enhancers
-sont associés à de hauts niveaux de marque épigénétique
-H3K4me$1$~\cite{Heintzman2009ys} et sont souvent fixés par le co-activateur
-p$300$~\cite{Wang2005zr,Heintzman2009ys}.
-
 %\begin{figure}
 \bfig
     \centering
@@ -1236,6 +1234,30 @@ p$300$~\cite{Wang2005zr,Heintzman2009ys}.
 \label{fig:enhancers-pattern}
 \efig
 %\end{figure}
+
+Les \textit{enhancers} peuvent se situer à des distances variables du gène
+qu'ils régulent~\cite{Maniatis1987fk}, pouvant parfois aller jusqu'à $1$ Mb
+comme dans le cas de \textit{Shh} chez la souris~\cite{Lettice2003uq} (voir
+fig. \ref{fig:visel-shh-CRM-medical}). Les enhancers contiennent de multiples
+sites de fixations de TFs. Cette multiplicité est requise pour l'activité
+enhancer, comme cela l'a été montré pour le premier enhancer découvert : celui
+du virus simien 40 (SV40)~\cite{Schirm1987kx,Ondek1988vn}. Un gène peut par
+ailleurs posséder plusieurs enhancers distincts conduisant à des expressions
+spécifiques à différents tissus, comme cela l'a été montré dans le cas du gène
+\textit{eve} chez la \textit{Drosophile}~\cite{Wilson2009p3225} ou dans le cas
+du cluster de gènes de détermination myogénique \textit{Myf5} et \textit{Mrf4}
+chez les mammifères~\cite{Carvajal2008p395} (fig.~\ref{fig:enhancers-pattern}).
+Ainsi, les différents enhancers d'un même gène peuvent être vus comme autant de
+points d'entrée d'un réseau de régulation génétique, représentant diverses
+fonctions logiques et intégrant différentes information spatio-temporelles pour
+produire en sortie une expression génétique finement
+contrôlée~\cite{Bolouri2002uq,Buchler2003fu}.
+
+Enfin, comme décrit en fig.~\ref{fig:hardison-enhancer-states}, les enhancers
+sont associés à de hauts niveaux de marque épigénétique
+H3K4me$1$~\cite{Heintzman2009ys} et sont souvent fixés par le co-activateur
+p$300$~\cite{Wang2005zr,Heintzman2009ys}.
+
 
 \subsubsection{Insulateurs}
 \label{ssub:insulateurs}
@@ -1358,6 +1380,7 @@ différents TFs.
 
 
 \subsection{Évolution des enhancers}
+\label{sub:evolution-des-enhancer}
 
 La fonction centrale que jouent les enhancers dans la régulation de
 l'expression génétique laisse à penser que ceux-ci seraient sous sélection et
@@ -1376,7 +1399,7 @@ séquence.
 
 
 \bfig
-\includegraphics[width=\textwidth]{figures/liberman-crm-conservation-flexibility.pdf}
+\includegraphics[width=0.95\textwidth]{figures/liberman-crm-conservation-flexibility.pdf}
 \captionbf{Flexibilité du code de cis-régulation au cours de l'évolution chez les \textit{Drosophiles}}{
 
     Figure tirée de \cite{liberman2009p3886}, montrant l'expression du gène
@@ -1391,22 +1414,6 @@ séquence.
 \label{fig:liberman-crm-flexibility}
 \efig
 
-\bfig
-\includegraphics[width=\textwidth]{figures/wilson-CRMs-evolution.pdf}
-\captionbf{Conservation et divergence de la fixation de HNF$4\alpha$ chez les mammifères}{
-    
-    Figure tirée de \cite{Wilson2009p3225}, représentant la fixation par
-    \chipseq (pics de couleur) du facteur de transcription humain HNF$4\alpha$
-    (ou son homologue murin HNF4a) chez l'homme, le macaque, le chien, ainsi
-    qu'une souris transgénique contenant le chromosome 21 humain. Les zones
-    grisées indiquent : (i) une fixation de HNF$4\alpha$ chez l'homme retrouvée
-    sur le chromosome 21 humain de la souris mais pas chez le macaque malgré la
-    conservation de séquence, (ii) une fixation de HNF4a spécifique à la
-    souris, et (iii) une fixation spécifique aux primates qui a lieu sur des
-    éléments transposables. 
-
-} 
-\efig
 
 Contrastant avec cette vision d'enhancers très contraints, plusieurs études
 pointent vers une plus grande flexibilité, voire divergence des séquences
@@ -1422,20 +1429,76 @@ grammaires conduisent à une même régulation est confortée par les résultats
 de~\cite{Zinzen2009p760} où des enhancers ayant des \og entrées \fg différentes
 (i.e étant fixés par des TFs différents pendant des durées variables)
 produisent des \og sorties \fg similaires, dans ce cas une expression
-spécifique à un tissu donné.  \\
+spécifique à un tissu donné.  
 
-Par ailleurs, en plus d'évoluer de manière interne, un 
-\cite{Feschotte2008dq}
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/wilson-CRMs-evolution.pdf}
+\captionbf{Conservation et divergence de la fixation de HNF$4\alpha$ chez les mammifères}{
+    
+    Figure tirée de \cite{Wilson2009p3225}, représentant la fixation par
+    \chipseq (pics de couleur) du facteur de transcription humain HNF$4\alpha$
+    (ou son homologue murin HNF4a) chez l'homme, le macaque, le chien, ainsi
+    qu'une souris transgénique contenant le chromosome 21 humain. Les zones
+    grisées indiquent : (i) une fixation de HNF$4\alpha$ chez l'homme retrouvée
+    sur le chromosome 21 humain de la souris mais pas chez le macaque malgré la
+    conservation de séquence, (ii) une fixation de HNF4a spécifique à la
+    souris, et (iii) une fixation spécifique aux primates qui a lieu sur des
+    éléments transposables. 
+
+} 
+\label{fig:wilson-CRMs-evolution}
+\efig
+
+
+Supportant l'idée d'une flexibilité de la régulation, plusieurs études ont
+exhibé l'évolution rapide des sites de liaison de TFs dans le
+génome~\cite{Wilson2009p3225}. Une étude de la fixation génomique des \tfs
+CEBP$\alpha$ et HNF4$\alpha$ dans les cellules du foie de $5$ espèces de
+vertébrés (l'homme, deux espèces de souris, le chien et le poulet) a notamment
+montré que les événements de fixation conservés chez les $5$ espèces sont très
+rares ($\sim0.3\%$ des pics humains) et correspondent à des régions
+ultraconservées proches de gènes importants dans la spécification du
+foie~\cite{Schmidt2010p3228}. Par ailleurs, lors de la perte de fixation dans
+l'une des espèce, un gain de fixation proche ($\pm10$kb) est observé dans la
+moitié des cas. Étonnamment, ces changements rapides du câblage du réseau
+affectent peu l'expression génétique globale~\cite{Tirosh2008qf,Odom2007bh}.
+
+Cette évolution est en grande partie due à une évolution de séquence de
+fixation. Ainsi, une étude récente a utilisé une souris portant le chromosome
+$21$ de l'homme pour comparer la fixation du facteur HNF4$\alpha$ dans un
+contexte murin par rapport au contexte original~\cite{Wilson2008dq}. Le paysage
+de fixation sur le chromosome $21$ exogène a très précisément récapitulé celui
+observé chez l'homme (fig.~\ref{fig:wilson-CRMs-evolution}). Par ailleurs, des
+modifications épigénétiques ainsi que l'expression des ARNm ont pu être
+récapitulées.
+
+Reste la question du mécanisme permettant cette évolution rapide. Une étude
+portant sur $7$ \tfs chez les mammifères a montré qu'une proportion
+substantielle ($\sim20\%$) des régions de fixation de ces TFs se situent au
+sein de différentes familles de transposons~\cite{Bourque2008p3218}
+(fig.~\ref{fig:wilson-CRMs-evolution}). Ces transposons, ou éléments
+transposables, sont des anciens rétrovirus intégrés dans les génomes mammifères
+ayant la capacité de se dupliquer pour s'intégrer dans une autre région du
+génome et jouant un rôle fondamental dans l'évolution des
+génomes~\cite{Cordaux2009p1515}. Leur accumulation dans le génome
+a vraisemblablement permis d'obtenir un matériau de base permettant de produire
+par mutations ponctuelles des éléments de régulation \textit{de
+novo}~\cite{Feschotte2008dq}. Par ailleurs, les transposons peuvent permettre
+de diffuser par \og copier-coller \fg des éléments de régulation existant.
+Ainsi, des vagues d'expansion de transposons spécifiques à différentes espèces
+de mammifères sont à l'origine de la variabilité des régions de fixation
+observée dans le cas du facteur CTCF~\cite{Schmidt2012p3262}.
 
 \subsection{Les \og shadow enhancers \fg}
 
-L'évolution des éléments de cis-régulation est un mécanisme majeur permettant
-la diversité animale. Néanmoins, de tels changements pourraient compromettre
-certaines activités génétiques essentielles. Récemment, des expériences de
-\chipchip ont suggéré que plusieurs gènes de développement actifs lors du
-développement précoce de l'embryon de Drosophile possèdent des CRMs
-secondaires, qui conduisent à des motifs d'expression génétique comparables
-à ceux produits par des CRMs \og primaires \fg plus
+
+Nous l'avons vu, l'évolution des éléments de cis-régulation est un mécanisme
+majeur permettant la diversité animale. Néanmoins, de tels changements
+pourraient compromettre certaines activités génétiques essentielles. Récemment,
+des expériences de \chipchip ont suggéré que plusieurs gènes de développement
+actifs lors du développement précoce de l'embryon de Drosophile possèdent des
+CRMs secondaires, qui conduisent à des motifs d'expression génétique
+comparables à ceux produits par des CRMs \og primaires \fg plus
 proximaux~\cite{Zeitlinger2007ly}. L'expression de \og shadow enhancer \fg
 a été proposée par Michael Levine en 2008 pour décrire ces CRMs redondants et
 souvent distaux de plusieurs dizaines de kb du gène régulé~\cite{Hong2008zr}.
@@ -1461,14 +1524,6 @@ dispensables dans des conditions de température usuelles, mais requis lorsque
 les embryons se développent dans des conditions de température
 extrêmes~\cite{Frankel2010p463}.
 
-Par ailleurs, il a été montré que les gènes de segmentation (ou gènes
-\textit{gap}) de la Drosophile possèdent tous des \se
-(fig.~\ref{fig:perry-shadow-enhancer}). Leur rôle semble être d'assurer une
-plus grande précision spatiale du motif d'expression du gène
-régulé : la perte de l'un des CRMs, proximal aussi bien que
-\og shadow \fg, conduit à une expression trop restreinte ou trop répandue
-spatialement selon le cas~\cite{Perry2011ve}.
-
 \bfig
 \includegraphics[width=1.0\textwidth]{figures/perry-shadow-enhancer.pdf}
 \captionbf{\og Shadow enhancer \fg du gène de segmentation \textit{Hunchback}}{
@@ -1484,7 +1539,16 @@ spatialement selon le cas~\cite{Perry2011ve}.
 \efig
 
 
-\subsection{Les super enhancers}
+Par ailleurs, il a été montré que les gènes de segmentation (ou gènes
+\textit{gap}) de la Drosophile possèdent tous des \se
+(fig.~\ref{fig:perry-shadow-enhancer}). Leur rôle semble être d'assurer une
+plus grande précision spatiale du motif d'expression du gène
+régulé : la perte de l'un des CRMs, proximal aussi bien que
+\og shadow \fg, conduit à une expression trop restreinte ou trop répandue
+spatialement selon le cas~\cite{Perry2011ve}.
+
+
+\subsection{Par delà les enhancers: les \og super-enhancers \fg}
 \label{sub:les_super_enhancers}
 
 
@@ -1521,6 +1585,259 @@ traces de fixation pour différents TFs à quelques centaines de super-enhancers
 contrôlant les gènes clés de l'identité cellulaire.
 
 % subsection les_super_enhancers (end)
+
+
+%\bfig
+%\includegraphics[width=\textwidth]{figures/graf-differentiation-landscape.pdf}
+%\captionbf{Les antagonismes entre \tfs sculptent le paysage des destins
+%cellulaires}{
+%   Figure tirée de \cite{Graf2009p2592}. Vision géométrique de la
+%   différenciation cellulaire inspirée de Waddington (voir
+%   fig.\ref{fig:furusawa-epigenetic-landscape}).
+%} 
+%\efig
+%
+
+\newpage
+\newpage
+\section{Prédiction et validation des CRMs}
+
+\bfig
+\includegraphics[width=\textwidth]{figures/hardison-CRM-prediction.pdf}
+\captionbf{Différentes approches pour la prédiction des CRMs}{
+
+    Figure tirée de \cite{Hartwell1999p560}, résumant les différentes approches
+    de prédiction des CRMs. (a) Prédiction de sites sites de fixations (TFBS)
+    pour différents facteurs de transcription. Le regroupement ou
+    \textit{cluster} de TFBS définit un CRM putatif. (b) Le CRM, possédant des
+    contraintes fonctionnelles, est conservé chez plusieurs espèces proches. La
+    séquence d'ADN correspondant au CRM (un enhancer connu de la
+    $\beta$-globine) est montrée chez les différentes espèces. Les nucléotides
+    qui diffèrent par rapport à la séquence de référence (la souris) sont
+    indiqués en bleu, et les sites de fixation de TFs connus ou prédit sont
+    indiqués en orange. Ceux-ci correspondent à des séquences complètement
+    conservées : on parle d'empreinte phylogénétique ou \textit{phylogenetic
+    footprints}. (c) Une expérience de \chipseq spécifique au TF A produit un
+    pic au niveau du CRM. Il est à noter que des pics peuvent exister même si
+    aucun site de fixation n'est prédit, dû par exemple à une interaction
+    protéine-protéine entre le TF A et un autre TF fixé.
+
+} 
+\label{fig:hardison-CRM-prediction}
+\efig
+
+\subsection{Méthodes utilisant la concentration en sites de fixation}
+\label{sub:m_thodes_utilisant_la_concentration_en_sites_de_fixation}
+
+Nous l'avons vu, une propriété des CRMs est leur grande concentration en TFBS.
+Ceci a motivé des approches de prédiction de promoteurs et d'enhancers basées
+sur leur contenu ou \textit{clustering} en motif
+(fig.~\ref{fig:hardison-CRM-prediction}a). L'avantage de telles approches est
+qu'elles peuvent être réalisées avec seulement la séquence d'ADN génomique et
+des modèles de TFs ou motifs (par exemple des PWMs, voir fig.
+\ref{fig:wasserman-PWM}) représentant les \tfs impliqués dans le processus
+étudié. Cependant, les clusters de motifs sont très répandus dans les grands
+génomes, et sans l'ajout d'informations supplémentaires comme les marques
+épigénétiques ou l'expression des gènes voisins, ces approches produisent un
+grand nombre de faux positifs (éléments prédits comme positifs mais étant en
+réalité négatifs). Par ailleurs, les TFs impliqués ne sont pas toujours connus,
+et il faut alors apprendre des motifs putatifs à partir de séquences
+fonctionnelles.
+
+\subsubsection{Approches utilisant des motifs connus}
+\label{ssub:approches_utilisant_des_motifs_connus}
+
+L'une des premières investigations basée sur le regroupement de TFBS utilisait
+$5$ motifs connus de la détermination musculaire pour prédire par régression
+linéaire des CRMs actifs dans le muscle~\cite{Wasserman1998p3779}. Le taux de
+validation était relativement bas, autour de $20\%$. De même, chez \dmel,
+plusieurs études ont utilisé le clustering de motifs pour prédire des CRMs de
+différents processus développementaux (par ex \cite{Berman2002oq}). Ces études
+ont pu trouver de nouveaux enhancers validés expérimentalement (bonne
+sensibilité) mais avaient aussi des taux de prédiction relativement bas, entre
+$15$ et $30\%$.  L'algorithme \textit{Ahab}~\cite{Rajewsky2002kl}, utilisant un
+modèle thermodynamique de fixation des TFs sur les CRMs, a quant à lui réussi
+à prédire un nombre bien plus important de régions fonctionnelles : $\sim80\%$
+des modules prédits à proximité de $29$ gènes de segmentation chez la
+drosophile ont effectivement récapitulé le motif d'expression du gène
+associé~\cite{Schroeder2004tg}. Ce succès semble notamment être dû au fait que
+ce modèle thermodynamique, basé sur une prise en compte exhaustive de toutes
+les segmentations possibles des CRMs en motifs et en ADN \og background \fg,
+permet de donner plus de poids au cas où plusieurs sites de faibles affinité
+pour un TF se trouvent au sein d'un même module, alors que les autres méthodes
+utilisent généralement un seuil de probabilité relativement élevé (afin
+d'éviter les faux positifs) à partir duquel une séquence est considérée comme
+fixée par un TF. Par ailleurs, cette étude s'est restreinte à un ensemble de
+gènes connus pour lesquels les régions riches en TFBS à proximité ont \apriori
+plus de chances d'être fonctionnelles. De manière générale, plus ce domaine de
+recherche est étendu (par exemple, le génome entier), plus le nombre de faux
+positifs augmente.
+
+
+% subsubsection approches_utilisant_des_motifs_connus (end)
+
+\subsubsection{Approches \denovo où les motifs ne sont pas connus}
+\label{ssub:approches_denovo_o_les_motifs_ne_sont_pas_connus}
+
+Lorsque les motifs (PWMs) ne sont pas connus à l'avance, il faut les générer
+\denovo à partir de leur surreprésentation dans des CRMs connus. Par exemple,
+l'algorithme CisModule permet de générer des motifs et des modules
+simultanément~\cite{Zhou2004hc}. Lorsqu'il est appliqué aux CRMs musculaires
+introduits précédemment, il permet de retrouver certains motifs connus et
+permet de retrouver $\sim70-80\%$ des séquences connues lorsqu'elle sont
+mélangées avec un nombre similaire de séquences aléatoires. Par ailleurs,
+l'apprentissage de modèles permettant de discriminer différentes classes de
+CRMs entre elles plutôt qu'une classe de CRMs par rapport à des séquences
+aléatoires ou intergéniques peut s'avérer plus fructueux. Ainsi,
+\cite{Smith2006ij} ont utilisé des motifs connus ainsi que des motifs appris
+\textit{de novo} avec le programme DME~\cite{Smith2005bs} pour leur capacité
+à discriminer des séquences appartenant à différents jeux de données de régions
+promotrices pour bâtir un modèle de régression logistique permettant de prédire
+l'activité tissue spécifique dans $45$ des $56$ tissus humains et murins
+considérés. Il existe aussi plusieurs méthodes qui n'utilisent pas de motifs du
+type PWM, mais de purs modèles probabilistes tels que des chaînes de Markov
+d'ordre $5$ ou des regroupements de \og mots \fg de $k$ nucléotides ou $k$-mers
+selon des critères de distance de Hamming et surreprésentés dans les séquences
+d'intérêt, par exemple~\cite{Cao2010p1805}. Ces méthodes sont passées en revue
+dans \cite{Kantorovitz2009p2937}, et elles peuvent atteindre des sensibilités
+de $\sim60\%$ pour la prédiction de CRMs mammifères. L'intérêt est que ces
+études ne présument pas d'un modèle de fixation des TFs à l'ADN. C'est aussi un
+désavantage, puisqu'elles sont moins informatives quant au réseau génétique
+sous-jacent et aux mécanismes de régulation impliqués.
+
+% subsubsection approches_denovo_o_les_motifs_ne_sont_pas_connus (end)
+
+
+% subsection m_thodes_utilisant_la_concentration_en_sites_de_fixation (end)
+
+\subsection{Méthodes utilisant la phylogénie}
+\label{sub:m_thodes_utilisant_la_phylog_nie}
+
+Les approches utilisant la comparaison des génomes de différentes espèces pour
+prédire des CRMs sont basées sur l'idée que les séquences de régulation sont
+plus fortement conservées que l'ADN non fonctionnel les entourant. Nous l'avons
+vu, une proportion substantielle de CRMs ne satisfont pas à cette
+règle~\ref{sub:evolution-des-enhancer}. Cette approche ne permet donc d'étudier
+que le sous-ensemble de CRMs qui a subi une forte pression de sélection depuis
+le dernier ancêtre commun aux espèces considérées et ne donne pas accès aux
+CRMs apparus récemment au sein d'une espèce.
+
+\subsubsection{Prédictions à partir de la contrainte évolutive seule}
+\label{ssub:pr_dictions_partir_de_la_contrainte_volutive_seule}
+
+L'alignement de séquences non-codantes orthologues fait apparaître des parties
+très conservées, avec peu de variations dans les séquences sous-jacentes,
+entourées de séquences accumulant les variations
+(fig.~\ref{fig:hardison-CRM-prediction}b). De telles séquences conservées sont
+alors interprétées comme ayant été sous sélection, les substitutions délétères
+ayant été rejetées au cours de l'évolution~\cite{Dermitzakis2005kl}. Au niveau
+de courtes séquences très conservées ($\sim10$bp), on parle d'empreinte
+phylogénétique, traces de la fixation putative d'un facteur de transcription.
+Ces empreintes s'avèrent être un indicateur fiable de
+fonctionnalité~\cite{Kheradpour2007mi} et, parce qu'elles ne reposent pas sur
+des modèles \apriori de fixation, elles permettent de plus de trouver des
+motifs de régulation non connus~\cite{Xie2005pi}. Au niveau de séquences plus
+longues ($\sim100$bp), la contrainte évolutive permet de détecter des CRMs
+entiers. Ainsi, comme nous l'avons vu en \ref{sub:evolution-des-enhancer},
+l'utilisation de la conservation extrême permet d'atteindre $50\%$ de taux
+validation~\cite{Pennacchio2006vn}. Néanmoins, lorsque ces contraintes de
+conservation extrême (par exemple homme-\textit{Fugu}) sont relâchées, le taux
+de validation tombe drastiquement, atteignant $\sim5\%$~\cite{Attanasio2008ff},
+montrant la nécessité d'allier le critère de conservation à d'autres données
+(expression, ChIP\ldots) pour améliorer la prédiction des CRMs.
+
+
+% subsubsection pr_dictions_partir_de_la_contrainte_volutive_seule (end)
+
+\subsubsection{Prédictions utilisant la phylogénie et des motifs connus}
+\label{ssub:pr_dictions_utilisant_la_phylog_nie_et_des_motifs_connus}
+
+Une approche pour améliorer les prédictions est de combiner les approches
+précédentes en utilisant à la fois le \textit{clustering} en TFBS et la
+contrainte évolutive. À l'échelle du génome entier, cette approche permet de
+filtrer les résultats pour améliorer le signal de détection chez la
+Drosophile~\cite{Sinha2004lh}.  Du côté des mammifères, en utilisant les motifs
+de la base de données TRANSFAC et la conservation entre l'homme et la souris,
+\cite{Blanchette2006fu} ont créé une base de données de modules, PReMods, qui
+retrouve $\sim17\%$ de CRMs connus et recoupe $40\%$ des fragments occupés par
+le co-activateur et marqueur de l'activité enhancer \textit{p300}. D'autres
+méthodes se sont concentrées sur des types cellulaires bien définis. Par
+exemple, la recherche de sites conservés pour des motifs de TF des cellules
+sanguines connus ~\cite{Donaldson2005ye} a permis de définir des CRMs dont $2$
+ont été testés et validés. De même, l'utilisation de motifs connus ainsi que
+des motifs appris sur des enhancers du c{\oe}ur sur des séquences non codantes
+conservées a défini $42,000$ prédictions, dont $16/26$ ont été validées par
+transgenèse chez le  poisson.
+
+Certains efforts ont par ailleurs été menés pour sortir du cadre d'une
+conservation de séquence stricte en modélisant l'évolution d'un CRM fixé par un certain
+nombre de motifs connus. Par exemple, le modèle MorphMS~\cite{Sinha2007tw}
+cherche au sein d'un alignement de deux séquences orthologues des régions
+prédites par un modèle d'évolution dérivé d'un ensemble de motifs choisis par
+l'utilisateur. Une extension de cette approche incorpore le gain et la perte de
+sites de fixation, mais n'a cependant pas encore été appliquée à l'échelle du
+génome~\cite{Majoros2010il}.
+
+% subsubsection pr_dictions_utilisant_la_phylog_nie_et_des_motifs_connus (end)
+
+\subsubsection{Approches utilisant la phylogénie pour générer des motifs \denovo}
+\label{ssub:approches_utilisant_la_phylog_nie_pour_g_n_rer_des_motifs_denovo}
+
+De même que précédemment, tous les motifs ne sont pas connus et il peut être
+utile d'avoir recours à de l'apprentissage direct à partir de séquences
+fonctionnelles connues pour aider à la prédiction. Par exemple, l'algorithme
+ESPER cherche des patterns (TFBS, \%GC, etc) surreprésentés dans des
+alignements multi-espèces de CRMs connus par rapport à des alignements d'ADN
+\apriori non fonctionnel~\cite{Taylor2006zt}. Cette méthode n'est pas
+restreinte à l'analyse de séquences conservées puisqu'elle peut potentiellement
+capturer des signatures de changements systématiques. La prédiction de régions
+de haut potentiel de régulation recouvre presque entièrement les prédictions de
+PReMods, et le test par transfection de ces régions à proximité de gènes
+exprimés dans les cellules érythroïdes et possédant un site pour un TF
+spécifique de l'érythroïde mène à un taux de validation de $50\%$. Une autre
+méthode consiste à chercher des mots surreprésentés dans un ensemble
+d'apprentissage de CRMs connus puis à restreindre les prédictions aux régions
+conservées~\cite{Kantorovitz2009p2937}. Les prédictions réalisées ont toutes
+été validées chez la Drosophile comme chez la souris.
+
+% subsubsection approches_utilisant_la_phylog_nie_pour_g_n_rer_des_motifs_denovo (end)
+
+
+\subsection{Méthodes utilisant les marques épigénétiques}
+\label{sub:m_thodes_utilisant_les_marques_pig_n_tiques}
+
+\subsubsection{Prédiction des promoteurs}
+\label{ssub:pr_diction_des_promoteurs}
+
+La méthode la plus fiable de prédiction d'un promoteur tient au fait qu'il est
+toujours localisé au niveau d'un TSS, dont la position peut facilement être
+obtenue en alignant les séquences des ARNs sur le
+génome~\cite{Trinklein2003jl}. Le taux de validation avec cette seule
+contrainte est très élevé : $91\%$ ont une activité dans au moins un type
+cellulaire. Par ailleurs, la marque épigénétique de triméthylation de l'histone
+H3 (H3K4me3) est aussi un indicateur des promoteurs actifs dans le type
+cellulaire étudié \cite{Heintzman2007gb}
+(fig.~\ref{fig:hardison-enhancer-states}).
+
+% subsubsection pr_diction_des_promoteurs (end)
+
+\subsection{Prédiction des enhancers}
+\label{sub:pr_diction_des_enhancers}
+
+La prédiction des enhancers à partir des marques épigénétiques, comme
+l'acétylation des histones~\cite{Roh2005mb}, la méthylation H3K4me1
+\cite{Heintzman2009ys}, ou encore la présence du co-activateur
+\textit{p300}~\cite{Visel2009p3750}, est très efficace, avec une expression
+tissue-spécifique dans $\sim80\%$ des cas~\cite{Hardison2012p3778}. Ces
+différentes marques dans différents tissues peuvent être utilisées comme autant
+d'entrées d'un modèle de Markov caché pour produire des prédictions fiables de
+CRMs tissue-spécifiques~\cite{Ernst2011cq}. 
+
+% subsection pr_diction_des_enhancers (end)
+
+% subsection m_thodes_utilisant_les_marques_pig_n_tiques (end)
+
+% subsection m_thodes_utilisant_la_phylog_nie (end)
 
 \subsection{Validation expérimentale}
 \label{sub:validation_experimentale}
@@ -1570,27 +1887,59 @@ régulation au sein du génome que ce dernier est \textit{nécessaire}
 \label{fig:hardison-CRM-test}
 \efig
 
-
-%\bfig
-%\includegraphics[width=\textwidth]{figures/graf-differentiation-landscape.pdf}
-%\captionbf{Les antagonismes entre \tfs sculptent le paysage des destins
-%cellulaires}{
-%   Figure tirée de \cite{Graf2009p2592}. Vision géométrique de la
-%   différenciation cellulaire inspirée de Waddington (voir
-%   fig.\ref{fig:furusawa-epigenetic-landscape}).
-%} 
-%\efig
-%
-
-\subsection{Prédiction des CRMs}
+\newpage
+\newpage
+\section{Implication des CRMs dans les maladies humaines} 
+\label{sec:implication_des_crms_dans_les_maladies_humaines}
 
 \bfig
-\includegraphics[width=\textwidth]{figures/hardison-CRM-prediction.pdf}
-\captionbf{Approches pour la prédiction des CRMs}{
-    Figure tirée de \cite{Hartwell1999p560}.
-} 
+\includegraphics[width=1.0\textwidth]{figures/visel-shh-CRM-medical.pdf}
+\captionbf{Impact physiologique de la délétion et de la mutation d'un enhancer}{
+
+Figure tirée de~\cite{Visel2009kx}. (a) L'enhancer \og membre \fg de
+\textit{Sonic hedgehog} (\textit{Shh}) est situé à $\sim1$ Mb de son gène
+cible, au sein d'un intron d'un gène voisin. Par transgenèse il conduit
+l'expression d'un rapporteur dans la partie postérieure du bourgeon de membre
+chez l'embryon de souris~\cite{Lettice2003uq}. (b) Les souris possédant une
+délétion ciblée de cet enhancer possèdent des membres tronqués, montrant son
+importance fonctionnelle au cours du développement~\cite{Sagai2005cr}. (c-e)
+Différentes mutations ponctuelles dans la séquence enhancer orthologue chez
+l'homme résultent en une polydactilie pré axiale (présence de doigts ou orteils
+supplémentaires), montrant l'impact potentiel de variations dans des régions
+non-codantes~\cite{Lettice2003uq}.
+
+}
+\label{fig:visel-shh-CRM-medical}
 \efig
 
+Au cours des dernières décennies, de nombreuses mutations dans les régions
+codantes des gènes, impliquant des défauts structurelles des protéines
+associées, ont pu être associées à des maladies génétiques. À l'inverse, le
+rôle des mutations affectant des régions non codantes n'a été que peu exploré,
+essentiellement du fait de la difficulté d'annoter ces régions correctement
+afin de définir celles qui pourraient avoir une fonction d'intérêt. Plusieurs
+études ont cependant pu montrer que des variations affectant des enhancers
+distaux pouvaient conduire à des pathologies~\cite{Visel2009kx}.
+
+L'une de ces études concerne l'enhancer spécifique du membre de \textit{Shh}
+(fig.~\ref{fig:visel-shh-CRM-medical}). Cet enhancer, initialement décrit chez
+la souris, se situe à environ $1$ Mb de distance de \textit{Shh}, au sein de
+l'intron d'un gène voisin. Le séquençage de cet enhancer chez plusieurs
+individus humains a permis d'associer une douzaine de variations
+mono-nucléotidiques à la polydactilis pré axiale, \cad la présence de doigts ou
+d'orteils supplémentaires~\cite{Lettice2003uq}.  Des études supplémentaires
+chez la souris ont montré que les variations de séquences observées dans cet
+enhancer conduisent à une expression ectopique dans la partie antérieure du
+membre au cours du développement, ce qui est consistent avec la présence de
+doigts supplémentaires~\cite{Masuya2007nx}. Par ailleurs, la délétion de
+l'enhancer orthologue de la souris entraîne la troncation des
+membres~\cite{Sagai2005cr}. Ainsi, ces résultats montrent l'importance de
+l'identification des enhancers pour permettre à des études de génétique humaine
+d'explorer le rôle potentiellement pathologique de mutations dans des régions
+non codantes fonctionnelles.
+
+
+% section implication_des_crms_dans_les_maladies_humaines (end)
 \section{Banques de données}
 
 \subsection{Séquences génomiques et alignements}
@@ -1598,7 +1947,9 @@ régulation au sein du génome que ce dernier est \textit{nécessaire}
 \bfig
 \includegraphics[width=0.8\textwidth]{figures/sboner-cost-sequencing.jpg}
 \captionbf{Évolution du coût de séquençage}{
+
 Figure tirée de~\cite{Sboner2011fk}.
+
 }
 \label{fig:sboner-cost-sequencing.jpg}
 \efig

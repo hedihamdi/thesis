@@ -17,6 +17,14 @@ Alon, U. (2007b).
 \newblock Network motifs: theory and experimental approaches.
 \newblock {\em Nat Rev Genet}, 8(6):450--461.
 
+\bibitem[Attanasio et~al., 2008]{Attanasio2008ff}
+Attanasio, C., Reymond, A., Humbert, R., Lyle, R., Kuehn, M.~S., Neph, S.,
+  Sabo, P.~J., Goldy, J., Weaver, M., Haydock, A., Lee, K., Dorschner, M.,
+  Dermitzakis, E.~T., Antonarakis, S.~E., and Stamatoyannopoulos, J.~A. (2008).
+\newblock Assaying the regulatory potential of mammalian conserved non-coding
+  sequences in human cells.
+\newblock {\em Genome Biol}, 9(12):R168.
+
 \bibitem[Bartel, 2009]{Bartel2009cr}
 Bartel, D.~P. (2009).
 \newblock Micrornas: target recognition and regulatory functions.
@@ -52,6 +60,14 @@ Berger, M.~F., Philippakis, A.~A., Qureshi, A.~M., He, F.~S., Estep, 3rd,
   transcription-factor binding site specificities.
 \newblock {\em Nat Biotechnol}, 24(11):1429--35.
 
+\bibitem[Berman et~al., 2002]{Berman2002oq}
+Berman, B.~P., Nibu, Y., Pfeiffer, B.~D., Tomancak, P., Celniker, S.~E.,
+  Levine, M., Rubin, G.~M., and Eisen, M.~B. (2002).
+\newblock Exploiting transcription factor binding site clustering to identify
+  cis-regulatory modules involved in pattern formation in the drosophila
+  genome.
+\newblock {\em Proc Natl Acad Sci U S A}, 99(2):757--62.
+
 \bibitem[Bird, 2002]{Bird2002oq}
 Bird, A. (2002).
 \newblock Dna methylation patterns and epigenetic memory.
@@ -62,6 +78,14 @@ Blackwell, T.~K. and Weintraub, H. (1990).
 \newblock Differences and similarities in dna-binding preferences of myod and
   e2a protein complexes revealed by binding site selection.
 \newblock {\em Science}, 250(4984):1104--10.
+
+\bibitem[Blanchette et~al., 2006]{Blanchette2006fu}
+Blanchette, M., Bataille, A.~R., Chen, X., Poitras, C., Lagani{\`e}re, J.,
+  Lef{\`e}bvre, C., Deblois, G., Gigu{\`e}re, V., Ferretti, V., Bergeron, D.,
+  Coulombe, B., and Robert, F. (2006).
+\newblock Genome-wide computational prediction of transcriptional regulatory
+  modules reveals new insights into human gene expression.
+\newblock {\em Genome Res}, 16(5):656--68.
 
 \bibitem[Blau et~al., 1985]{Blau1985vn}
 Blau, H.~M., Pavlath, G.~K., Hardeman, E.~C., Chiu, C.~P., Silberstein, L.,
@@ -74,17 +98,37 @@ Bolouri, H. and Davidson, E.~H. (2002).
 \newblock Modeling dna sequence-based cis-regulatory gene networks.
 \newblock {\em Dev Biol}, 246(1):2--13.
 
+\bibitem[Bourque et~al., 2008]{Bourque2008p3218}
+Bourque, G., Leong, B., Vega, V.~B., Chen, X., Lee, Y.~L., Srinivasan, K.~G.,
+  Chew, J.-L., Ruan, Y., Wei, C.-L., Ng, H.~H., and Liu, E.~T. (2008).
+\newblock Evolution of the mammalian transcription factor binding repertoire
+  via transposable elements.
+\newblock {\em Genome Res}, 18(11):1752--1762.
+
 \bibitem[Brazma et~al., 2001]{EMBL2001}
 Brazma, A., Parkinson, H., Schlitt, T., and Shojatalab, M. (2001).
 \newblock A quick introduction to elements of biology - cells, molecules,
   genes, functional genomics, microarrays.
 \newblock \url{http://www.ebi.ac.uk/microarray/biology_intro.html}.
 
+\bibitem[Buchler et~al., 2003]{Buchler2003fu}
+Buchler, N.~E., Gerland, U., and Hwa, T. (2003).
+\newblock On schemes of combinatorial transcription logic.
+\newblock {\em Proc Natl Acad Sci U S A}, 100(9):5136--41.
+
 \bibitem[Campbell and Kim, 2007]{Campbell2007ly}
 Campbell, C.~T. and Kim, G. (2007).
 \newblock Spr microscopy and its applications to high-throughput analyses of
   biomolecular binding events and their kinetics.
 \newblock {\em Biomaterials}, 28(15):2380--92.
+
+\bibitem[Cao et~al., 2010]{Cao2010p1805}
+Cao, Y., Yao, Z., Sarkar, D., Lawrence, M., Sanchez, G.~J., Parker, M.~H.,
+  Macquarrie, K.~L., Davison, J., Morgan, M.~T., Ruzzo, W.~L., Gentleman,
+  R.~C., and Tapscott, S.~J. (2010).
+\newblock Genome-wide myod binding in skeletal muscle cells: a potential for
+  broad cellular reprogramming.
+\newblock {\em Developmental Cell}, 18(4):662--74.
 
 \bibitem[Carlson et~al., 2010]{Carlson2010dq}
 Carlson, C.~D., Warren, C.~L., Hauschild, K.~E., Ozers, M.~S., Qadir, N.,
@@ -132,6 +176,11 @@ Consortium, E.~P. (2011).
 \newblock A user's guide to the encyclopedia of dna elements (encode).
 \newblock {\em Plos Biol}, 9(4):e1001046.
 
+\bibitem[Cordaux and Batzer, 2009]{Cordaux2009p1515}
+Cordaux, R. and Batzer, M.~A. (2009).
+\newblock The impact of retrotransposons on human genome evolution.
+\newblock {\em Nature Reviews Genetics}, 10(10):691--703.
+
 \bibitem[Davis et~al., 1987]{davis1987expression}
 Davis, R.~L., Weintraub, H., and Lassar, A.~B. (1987).
 \newblock Expression of a single transfected cdna converts fibroblasts to
@@ -144,11 +193,32 @@ Dermitzakis, E.~T. and Clark, A.~G. (2002).
   regulatory regions: conservation and turnover.
 \newblock {\em Mol Biol Evol}, 19(7):1114--21.
 
+\bibitem[Dermitzakis et~al., 2005]{Dermitzakis2005kl}
+Dermitzakis, E.~T., Reymond, A., and Antonarakis, S.~E. (2005).
+\newblock Conserved non-genic sequences - an unexpected feature of mammalian
+  genomes.
+\newblock {\em Nat Rev Genet}, 6(2):151--7.
+
 \bibitem[Djordjevic et~al., 2003]{Djordjevic2003p2932}
 Djordjevic, M., Sengupta, A.~M., and Shraiman, B.~I. (2003).
 \newblock A biophysical approach to transcription factor binding site
   discovery.
 \newblock {\em Genome Res}, 13(11):2381--90.
+
+\bibitem[Donaldson et~al., 2005]{Donaldson2005ye}
+Donaldson, I.~J., Chapman, M., Kinston, S., Landry, J.~R., Knezevic, K., Piltz,
+  S., Buckley, N., Green, A.~R., and G{\"o}ttgens, B. (2005).
+\newblock Genome-wide identification of cis-regulatory sequences controlling
+  blood and endothelial development.
+\newblock {\em Hum Mol Genet}, 14(5):595--601.
+
+\bibitem[Ernst et~al., 2011]{Ernst2011cq}
+Ernst, J., Kheradpour, P., Mikkelsen, T.~S., Shoresh, N., Ward, L.~D., Epstein,
+  C.~B., Zhang, X., Wang, L., Issner, R., Coyne, M., Ku, M., Durham, T.,
+  Kellis, M., and Bernstein, B.~E. (2011).
+\newblock Mapping and analysis of chromatin state dynamics in nine human cell
+  types.
+\newblock {\em Nature}, 473(7345):43--9.
 
 \bibitem[Feschotte, 2008]{Feschotte2008dq}
 Feschotte, C. (2008).
@@ -230,6 +300,14 @@ Heintzman, N.~D., Hon, G.~C., Hawkins, R.~D., Kheradpour, P., Stark, A., Harp,
   cell-type-specific gene expression.
 \newblock {\em Nature}, 459(7243):108--12.
 
+\bibitem[Heintzman et~al., 2007]{Heintzman2007gb}
+Heintzman, N.~D., Stuart, R.~K., Hon, G., Fu, Y., Ching, C.~W., Hawkins, R.~D.,
+  Barrera, L.~O., Van~Calcar, S., Qu, C., Ching, K.~A., Wang, W., Weng, Z.,
+  Green, R.~D., Crawford, G.~E., and Ren, B. (2007).
+\newblock Distinct and predictive chromatin signatures of transcriptional
+  promoters and enhancers in the human genome.
+\newblock {\em Nat Genet}, 39(3):311--8.
+
 \bibitem[Hesselberth et~al., 2009]{Hesselberth2009vn}
 Hesselberth, J.~R., Chen, X., Zhang, Z., Sabo, P.~J., Sandstrom, R., Reynolds,
   A.~P., Thurman, R.~E., Neph, S., Kuehn, M.~S., Noble, W.~S., Fields, S., and
@@ -273,6 +351,13 @@ Kagey, M.~H., Newman, J.~J., Bilodeau, S., Zhan, Y., Orlando, D.~A., van
   architecture.
 \newblock {\em Nature}, 467(7314):430--435.
 
+\bibitem[Kantorovitz et~al., 2009]{Kantorovitz2009p2937}
+Kantorovitz, M.~R., Kazemian, M., Kinston, S., Miranda-Saavedra, D., Zhu, Q.,
+  Robinson, G.~E., G{\"o}ttgens, B., Halfon, M.~S., and Sinha, S. (2009).
+\newblock Motif-blind, genome-wide discovery of cis-regulatory modules in
+  drosophila and mouse.
+\newblock {\em Developmental Cell}, 17(4):568--79.
+
 \bibitem[Kaufmann, 1993]{kaufmann1993origins}
 Kaufmann, S. (1993).
 \newblock The origins of order.
@@ -282,6 +367,11 @@ Keim, C.~N., Martins, J.~L., Abreu, F., Rosado, A.~S., de~Barros, H.~L.,
   Borojevic, R., Lins, U., and Farina, M. (2004).
 \newblock Multicellular life cycle of magnetotactic prokaryotes.
 \newblock {\em FEMS Microbiol Lett}, 240(2):203--8.
+
+\bibitem[Kheradpour et~al., 2007]{Kheradpour2007mi}
+Kheradpour, P., Stark, A., Roy, S., and Kellis, M. (2007).
+\newblock Reliable prediction of regulator targets using 12 drosophila genomes.
+\newblock {\em Genome Res}, 17(12):1919--31.
 
 \bibitem[Kinney et~al., 2007]{Kinney2007p3977}
 Kinney, J.~B., Tkacik, G., and Callan, C.~G. (2007).
@@ -350,10 +440,26 @@ Maerkl, S. and Quake, S. (2007).
   transcription factors.
 \newblock {\em Science}, 315(5809):233.
 
+\bibitem[Majoros and Ohler, 2010]{Majoros2010il}
+Majoros, W.~H. and Ohler, U. (2010).
+\newblock Modeling the evolution of regulatory elements by simultaneous
+  detection and alignment with phylogenetic pair hmms.
+\newblock {\em PLoS Comput Biol}, 6(12):e1001037.
+
 \bibitem[Maniatis et~al., 1987]{Maniatis1987fk}
 Maniatis, T., Goodbourn, S., and Fischer, J.~A. (1987).
 \newblock Regulation of inducible and tissue-specific gene expression.
 \newblock {\em Science}, 236(4806):1237--45.
+
+\bibitem[Masuya et~al., 2007]{Masuya2007nx}
+Masuya, H., Sezutsu, H., Sakuraba, Y., Sagai, T., Hosoya, M., Kaneda, H.,
+  Miura, I., Kobayashi, K., Sumiyama, K., Shimizu, A., Nagano, J., Yokoyama,
+  H., Kaneko, S., Sakurai, N., Okagaki, Y., Noda, T., Wakana, S., Gondo, Y.,
+  and Shiroishi, T. (2007).
+\newblock A series of enu-induced single-base substitutions in a long-range
+  cis-element altering sonic hedgehog expression in the developing mouse limb
+  bud.
+\newblock {\em Genomics}, 89(2):207--14.
 
 \bibitem[McGregor et~al., 2007]{McGregor2007p400}
 McGregor, A., Orgogozo, V., Delon, I., Zanet, J., Srinivasan, D., Payre, F.,
@@ -385,6 +491,14 @@ Nagaraj, V.~H., O'flanagan, R.~A., and Sengupta, A.~M. (2008).
 Nurse, P. and Hayles, J. (2011).
 \newblock The cell in an era of systems biology.
 \newblock {\em Cell}.
+
+\bibitem[Odom et~al., 2007]{Odom2007bh}
+Odom, D.~T., Dowell, R.~D., Jacobsen, E.~S., Gordon, W., Danford, T.~W.,
+  MacIsaac, K.~D., Rolfe, P.~A., Conboy, C.~M., Gifford, D.~K., and Fraenkel,
+  E. (2007).
+\newblock Tissue-specific transcriptional regulation has diverged significantly
+  between human and mouse.
+\newblock {\em Nat Genet}, 39(6):730--2.
 
 \bibitem[Odom et~al., 2004]{Odom2004hc}
 Odom, D.~T., Zizlsperger, N., Gordon, D.~B., Bell, G.~W., Rinaldi, N.~J.,
@@ -442,6 +556,12 @@ Prabhakar, S., Poulin, F., Shoukry, M., Afzal, V., Rubin, E.~M., Couronne, O.,
   cis-regulatory elements.
 \newblock {\em Genome Res}, 16(7):855--63.
 
+\bibitem[Rajewsky et~al., 2002]{Rajewsky2002kl}
+Rajewsky, N., Vergassola, M., Gaul, U., and Siggia, E.~D. (2002).
+\newblock Computational detection of genomic cis-regulatory modules applied to
+  body patterning in the early drosophila embryo.
+\newblock {\em BMC Bioinformatics}, 3:30.
+
 \bibitem[Recillas-Targa et~al., 2002]{Recillas-Targa2002dq}
 Recillas-Targa, F., Pikaart, M.~J., Burgess-Beusse, B., Bell, A.~C., Litt,
   M.~D., West, A.~G., Gaszner, M., and Felsenfeld, G. (2002).
@@ -449,12 +569,24 @@ Recillas-Targa, F., Pikaart, M.~J., Burgess-Beusse, B., Bell, A.~C., Litt,
   beta-globin insulator are separable activities.
 \newblock {\em Proc Natl Acad Sci U S A}, 99(10):6883--8.
 
+\bibitem[Roh et~al., 2005]{Roh2005mb}
+Roh, T.-Y., Cuddapah, S., and Zhao, K. (2005).
+\newblock Active chromatin domains are defined by acetylation islands revealed
+  by genome-wide mapping.
+\newblock {\em Genes Dev}, 19(5):542--52.
+
 \bibitem[Roulet et~al., 2002]{Roulet2002rt}
 Roulet, E., Busso, S., Camargo, A.~A., Simpson, A. J.~G., Mermod, N., and
   Bucher, P. (2002).
 \newblock High-throughput selex sage method for quantitative modeling of
   transcription-factor binding sites.
 \newblock {\em Nat Biotechnol}, 20(8):831--5.
+
+\bibitem[Sagai et~al., 2005]{Sagai2005cr}
+Sagai, T., Hosoya, M., Mizushina, Y., Tamura, M., and Shiroishi, T. (2005).
+\newblock Elimination of a long-range cis-regulatory module causes complete
+  loss of limb-specific shh expression and truncation of the mouse limb.
+\newblock {\em Development}, 132(4):797--803.
 
 \bibitem[Sboner et~al., 2011]{Sboner2011fk}
 Sboner, A., Mu, X.~J., Greenbaum, D., Auerbach, R.~K., and Gerstein, M.~B.
@@ -468,6 +600,22 @@ Schirm, S., Jiricny, J., and Schaffner, W. (1987).
   a different cell type specificity.
 \newblock {\em Genes Dev}, 1(1):65--74.
 
+\bibitem[Schmidt et~al., 2012]{Schmidt2012p3262}
+Schmidt, D., Schwalie, P.~C., Wilson, M.~D., Ballester, B., Gon{\c c}alves,
+  {\^A}., Kutter, C., Brown, G.~D., Marshall, A., Flicek, P., and Odom, D.~T.
+  (2012).
+\newblock Waves of retrotransposon expansion remodel genome organization and
+  ctcf binding in multiple mammalian lineages.
+\newblock {\em Cell}, 148(1-2):335--348.
+
+\bibitem[Schmidt et~al., 2010]{Schmidt2010p3228}
+Schmidt, D., Wilson, M.~D., Ballester, B., Schwalie, P.~C., Brown, G.~D.,
+  Marshall, A., Kutter, C., Watt, S., Martinez-Jimenez, C.~P., Mackay, S.,
+  Talianidis, I., Flicek, P., and Odom, D.~T. (2010).
+\newblock Five-vertebrate chip-seq reveals the evolutionary dynamics of
+  transcription factor binding si.
+\newblock {\em Science}, 328(5981):1036--40.
+
 \bibitem[Schoborg and Labrador, 2010]{Schoborg2010bh}
 Schoborg, T.~A. and Labrador, M. (2010).
 \newblock The phylogenetic distribution of non-ctcf insulator proteins is
@@ -478,6 +626,13 @@ Schoborg, T.~A. and Labrador, M. (2010).
 Schones, D.~E. and Zhao, K. (2008).
 \newblock Genome-wide approaches to studying chromatin modifications.
 \newblock {\em Nat Rev Genet}, 9(3):179--91.
+
+\bibitem[Schroeder et~al., 2004]{Schroeder2004tg}
+Schroeder, M.~D., Pearce, M., Fak, J., Fan, H., Unnerstall, U., Emberly, E.,
+  Rajewsky, N., Siggia, E.~D., and Gaul, U. (2004).
+\newblock Transcriptional control in the segmentation gene network of
+  drosophila.
+\newblock {\em PLoS Biol}, 2(9):E271.
 
 \bibitem[Shannon, 1948]{Shannon1948p699}
 Shannon, C. (1948).
@@ -503,6 +658,19 @@ Sigal, A., Milo, R., Cohen, A., Geva-Zatorsky, N., Klein, Y., Liron, Y.,
 \newblock Variability and memory of protein levels in human cells.
 \newblock {\em Nature}, 444(7119):643--646.
 
+\bibitem[Sinha and He, 2007]{Sinha2007tw}
+Sinha, S. and He, X. (2007).
+\newblock Morph: probabilistic alignment combined with hidden markov models of
+  cis-regulatory modules.
+\newblock {\em PLoS Comput Biol}, 3(11):e216.
+
+\bibitem[Sinha et~al., 2004]{Sinha2004lh}
+Sinha, S., Schroeder, M.~D., Unnerstall, U., Gaul, U., and Siggia, E.~D.
+  (2004).
+\newblock Cross-species comparison significantly improves genome-wide
+  prediction of cis-regulatory modules in drosophila.
+\newblock {\em BMC Bioinformatics}, 5:129.
+
 \bibitem[Slutsky and Mirny, 2004]{Slutsky2004vn}
 Slutsky, M. and Mirny, L.~A. (2004).
 \newblock Kinetics of protein-dna interaction: facilitated target location in
@@ -513,6 +681,18 @@ Slutsky, M. and Mirny, L.~A. (2004).
 Smit, A. F.~A., Hubley, R., and Green, P. (1996-2010).
 \newblock Repeatmasker open-3.0.
 \newblock \url{http://www.repeatmasker.org}.
+
+\bibitem[Smith et~al., 2006]{Smith2006ij}
+Smith, A.~D., Sumazin, P., Xuan, Z., and Zhang, M.~Q. (2006).
+\newblock Dna motifs in human and mouse proximal promoters predict
+  tissue-specific expression.
+\newblock {\em Proc Natl Acad Sci U S A}, 103(16):6275--80.
+
+\bibitem[Smith et~al., 2005]{Smith2005bs}
+Smith, A.~D., Sumazin, P., and Zhang, M.~Q. (2005).
+\newblock Identifying tissue-selective transcription factor binding sites in
+  vertebrate promoters.
+\newblock {\em Proc Natl Acad Sci U S A}, 102(5):1560--5.
 
 \bibitem[Stormo and Fields, 1998]{Stormo1998p471}
 Stormo, G. and Fields, D. (1998).
@@ -536,6 +716,13 @@ Takahashi, K. and Yamanaka, S. (2006).
   fibroblast cultures by defined factors.
 \newblock {\em Cell}, 126(4):663--76.
 
+\bibitem[Taylor et~al., 2006]{Taylor2006zt}
+Taylor, J., Tyekucheva, S., King, D.~C., Hardison, R.~C., Miller, W., and
+  Chiaromonte, F. (2006).
+\newblock Esperr: learning strong and weak signals in genomic sequence
+  alignments to identify functional elements.
+\newblock {\em Genome Res}, 16(12):1596--604.
+
 \bibitem[Thurman et~al., 2012]{Thurman2012ys}
 Thurman, R.~E., Rynes, E., Humbert, R., Vierstra, J., Maurano, M.~T., Haugen,
   E., Sheffield, N.~C., Stergachis, A.~B., Wang, H., Vernot, B., Garg, K.,
@@ -551,6 +738,18 @@ Thurman, R.~E., Rynes, E., Humbert, R., Vierstra, J., Maurano, M.~T., Haugen,
   (2012).
 \newblock The accessible chromatin landscape of the human genome.
 \newblock {\em Nature}, 489(7414):75--82.
+
+\bibitem[Tirosh et~al., 2008]{Tirosh2008qf}
+Tirosh, I., Weinberger, A., Bezalel, D., Kaganovich, M., and Barkai, N. (2008).
+\newblock On the relation between promoter divergence and gene expression
+  evolution.
+\newblock {\em Mol Syst Biol}, 4:159.
+
+\bibitem[Trinklein et~al., 2003]{Trinklein2003jl}
+Trinklein, N.~D., Aldred, S. J.~F., Saldanha, A.~J., and Myers, R.~M. (2003).
+\newblock Identification and functional analysis of human transcriptional
+  promoters.
+\newblock {\em Genome Res}, 13(2):308--12.
 
 \bibitem[Tuerk and Gold, 1990]{Tuerk1990qe}
 Tuerk, C. and Gold, L. (1990).
@@ -572,8 +771,15 @@ Vaquerizas, J.~M., Kummerfeld, S.~K., Teichmann, S.~A., and Luscombe, N.~M.
   evolution.
 \newblock {\em Nat Rev Genet}, 10(4):252--63.
 
-\bibitem[Visel et~al., 2009]{Visel2009kx}
-Visel, A., Rubin, E.~M., and Pennacchio, L.~A. (2009).
+\bibitem[Visel et~al., 2009a]{Visel2009p3750}
+Visel, A., Blow, M.~J., Li, Z., Zhang, T., Akiyama, J.~A., Holt, A.,
+  Plajzer-Frick, I., Shoukry, M., Wright, C., Chen, F., Afzal, V., Ren, B.,
+  Rubin, E.~M., and Pennacchio, L.~A. (2009a).
+\newblock Chip-seq accurately predicts tissue-specific activity of enhancers.
+\newblock {\em Nature}, 457(7231):854--8.
+
+\bibitem[Visel et~al., 2009b]{Visel2009kx}
+Visel, A., Rubin, E.~M., and Pennacchio, L.~A. (2009b).
 \newblock Genomic views of distant-acting enhancers.
 \newblock {\em Nature}, 461(7261):199--205.
 
@@ -601,6 +807,12 @@ Warren, C.~L., Kratochvil, N. C.~S., Hauschild, K.~E., Foister, S., Brezinski,
 \newblock Defining the sequence-recognition profile of dna-binding molecules.
 \newblock {\em Proc Natl Acad Sci U S A}, 103(4):867--72.
 
+\bibitem[Wasserman and Fickett, 1998]{Wasserman1998p3779}
+Wasserman, W. and Fickett, J. (1998).
+\newblock Identification of regulatory regions which confer muscle-specific
+  gene expression1.
+\newblock {\em Journal of molecular biology}, 278(1):167--181.
+
 \bibitem[Wasserman and Sandelin, 2004]{Wasserman2004p624}
 Wasserman, W.~W. and Sandelin, A. (2004).
 \newblock Applied bioinformatics for the identification of regulatory elements.
@@ -625,6 +837,13 @@ Wilczynski, B. and Furlong, E. E.~M. (2010).
 \newblock Challenges for modeling global gene regulatory networks during
   development: Insights from drosophila.
 \newblock {\em Developmental Biology}, 340(2):161--169.
+
+\bibitem[Wilson et~al., 2008]{Wilson2008dq}
+Wilson, M.~D., Barbosa-Morais, N.~L., Schmidt, D., Conboy, C.~M., Vanes, L.,
+  Tybulewicz, V. L.~J., Fisher, E. M.~C., Tavar{\'e}, S., and Odom, D.~T.
+  (2008).
+\newblock Species-specific transcription in mice carrying human chromosome 21.
+\newblock {\em Science}, 322(5900):434--8.
 
 \bibitem[Wilson and Odom, 2009]{Wilson2009p3225}
 Wilson, M.~D. and Odom, D.~T. (2009).
@@ -651,6 +870,13 @@ Wright, W.~E., Binder, M., and Funk, W. (1991).
   myogenin consensus binding site.
 \newblock {\em Mol Cell Biol}, 11(8):4104--10.
 
+\bibitem[Xie et~al., 2005]{Xie2005pi}
+Xie, X., Lu, J., Kulbokas, E.~J., Golub, T.~R., Mootha, V., Lindblad-Toh, K.,
+  Lander, E.~S., and Kellis, M. (2005).
+\newblock Systematic discovery of regulatory motifs in human promoters and 3'
+  utrs by comparison of several mammals.
+\newblock {\em Nature}, 434(7031):338--45.
+
 \bibitem[Zeitlinger et~al., 2007]{Zeitlinger2007ly}
 Zeitlinger, J., Zinzen, R.~P., Stark, A., Kellis, M., Zhang, H., Young, R.~A.,
   and Levine, M. (2007).
@@ -668,6 +894,12 @@ Zhang, Y., Liu, T., Meyer, C.~A., Eeckhoute, J., Johnson, D.~S., Bernstein,
 Zhao, Y., Granas, D., and Stormo, G.~D. (2009).
 \newblock Inferring binding energies from selected binding sites.
 \newblock {\em PLoS Comput Biol}, 5(12):e1000590.
+
+\bibitem[Zhou and Wong, 2004]{Zhou2004hc}
+Zhou, Q. and Wong, W.~H. (2004).
+\newblock Cismodule: de novo discovery of cis-regulatory modules by
+  hierarchical mixture modeling.
+\newblock {\em Proc Natl Acad Sci U S A}, 101(33):12114--9.
 
 \bibitem[Zinzen et~al., 2009]{Zinzen2009p760}
 Zinzen, R., Girardot, C., Gagneur, J., Braun, M., and Furlong, E. (2009).

@@ -5,25 +5,27 @@
 \BOOKMARK [0][]{division.2}{Chapitre 1 - Introduction g\351n\351rale.}{}% 5
 \BOOKMARK [1][]{section.2.1}{1.1 Le ph\351notype cellulaire}{division.2}% 6
 \BOOKMARK [1][]{section.2.2}{1.2 Les r\351seaux de r\351gulation g\351n\351tique}{division.2}% 7
-\BOOKMARK [1][]{section.2.3}{1.3 Mod\350les math\351matiques des interactions prot\351ine-ADN}{division.2}% 8
-\BOOKMARK [1][]{section.2.4}{1.4 Mesures exp\351rimentales des interactions prot\351ine-ADN}{division.2}% 9
-\BOOKMARK [1][]{section.2.5}{1.5 Les modules de cis-r\351gulation}{division.2}% 10
-\BOOKMARK [1][]{section.2.6}{1.6 Banques de donn\351es}{division.2}% 11
-\BOOKMARK [0][]{division.3}{Chapitre 2 - Mod\350les de fixation des Facteurs de Transcription \340 l'ADN.}{}% 12
-\BOOKMARK [1][]{section.3.1}{2.1 Les mod\350les de fixation}{division.3}% 13
-\BOOKMARK [1][]{section.3.2}{2.2 Description des donn\351es biologiques}{division.3}% 14
-\BOOKMARK [1][]{section.3.3}{2.3 Pr\351sentation de l'algorithme}{division.3}% 15
-\BOOKMARK [1][]{section.3.4}{2.4 Performance des mod\350les}{division.3}% 16
-\BOOKMARK [1][]{section.3.5}{2.5 Analyse des corr\351lations}{division.3}% 17
-\BOOKMARK [1][]{section.3.6}{2.6 Comparaison avec des donn\351es in vitro}{division.3}% 18
-\BOOKMARK [0][]{division.4}{Chapitre 3 - Imogene: un algorithme d'identification de motifs et de modules de r\351gulation transcriptionnelle}{}% 19
-\BOOKMARK [1][]{section.4.1}{3.1 }{division.4}% 20
-\BOOKMARK [0][]{division.5}{Chapitre 4 - \311tude de la diff\351renciation \351pidermale chez la drosophile}{}% 21
-\BOOKMARK [1][]{section.5.1}{4.1 }{division.5}% 22
-\BOOKMARK [0][]{division.6}{Chapitre 5 - \311tude de la diff\351renciation musculaire chez la souris}{}% 23
-\BOOKMARK [1][]{section.6.1}{5.1 }{division.6}% 24
-\BOOKMARK [0][]{section*.32}{Conclusion}{}% 25
-\BOOKMARK [0][]{abstract.7.0}{R\351sum\351}{}% 26
-\BOOKMARK [0][]{division.7}{R\351sum\351}{}% 27
-\BOOKMARK [0][]{abstract.8.0}{Abstract}{}% 28
-\BOOKMARK [0][]{division.8}{Abstract}{}% 29
+\BOOKMARK [1][]{section.2.3}{1.3 Les interactions prot\351ine-ADN : mod\350les math\351matiques}{division.2}% 8
+\BOOKMARK [1][]{section.2.4}{1.4 Les interactions prot\351ine-ADN : mesures exp\351rimentales}{division.2}% 9
+\BOOKMARK [1][]{section.2.5}{1.5 Les modules de cis-r\351gulation \(CRMs\)}{division.2}% 10
+\BOOKMARK [1][]{section.2.6}{1.6 Pr\351diction et validation des CRMs}{division.2}% 11
+\BOOKMARK [1][]{section.2.7}{1.7 Implication des CRMs dans les maladies humaines}{division.2}% 12
+\BOOKMARK [1][]{section.2.8}{1.8 Banques de donn\351es}{division.2}% 13
+\BOOKMARK [0][]{division.3}{Chapitre 2 - Mod\350les de fixation des Facteurs de Transcription \340 l'ADN.}{}% 14
+\BOOKMARK [1][]{section.3.1}{2.1 Les mod\350les de fixation}{division.3}% 15
+\BOOKMARK [1][]{section.3.2}{2.2 Description des donn\351es biologiques}{division.3}% 16
+\BOOKMARK [1][]{section.3.3}{2.3 Pr\351sentation de l'algorithme}{division.3}% 17
+\BOOKMARK [1][]{section.3.4}{2.4 Performance des mod\350les}{division.3}% 18
+\BOOKMARK [1][]{section.3.5}{2.5 Analyse des corr\351lations}{division.3}% 19
+\BOOKMARK [1][]{section.3.6}{2.6 Comparaison avec des donn\351es in vitro}{division.3}% 20
+\BOOKMARK [0][]{division.4}{Chapitre 3 - Imogene: un algorithme d'identification de motifs et de modules de r\351gulation transcriptionnelle}{}% 21
+\BOOKMARK [1][]{section.4.1}{3.1 }{division.4}% 22
+\BOOKMARK [0][]{division.5}{Chapitre 4 - \311tude de la diff\351renciation \351pidermale chez la drosophile}{}% 23
+\BOOKMARK [1][]{section.5.1}{4.1 }{division.5}% 24
+\BOOKMARK [0][]{division.6}{Chapitre 5 - \311tude de la diff\351renciation musculaire chez la souris}{}% 25
+\BOOKMARK [1][]{section.6.1}{5.1 }{division.6}% 26
+\BOOKMARK [0][]{section*.33}{Conclusion}{}% 27
+\BOOKMARK [0][]{abstract.7.0}{R\351sum\351}{}% 28
+\BOOKMARK [0][]{division.7}{R\351sum\351}{}% 29
+\BOOKMARK [0][]{abstract.8.0}{Abstract}{}% 30
+\BOOKMARK [0][]{division.8}{Abstract}{}% 31

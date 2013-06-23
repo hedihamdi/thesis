@@ -726,7 +726,6 @@ INPUT these.toc
 INPUT these.toc
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplbi9d.tfm
-OUTPUT these.toc
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
@@ -738,6 +737,7 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplbi9d.vf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplbi8r.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/mathpazo/fplmbi.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplbij8r.tfm
+OUTPUT these.toc
 INPUT these.lof
 INPUT these.lof
 OUTPUT these.lof
@@ -928,12 +928,15 @@ INPUT ./figures/perry-shadow-enhancer.pdf
 INPUT figures/whyte-super-enhancer-cluster.pdf
 INPUT ./figures/whyte-super-enhancer-cluster.pdf
 INPUT ./figures/whyte-super-enhancer-cluster.pdf
-INPUT figures/hardison-CRM-test.pdf
-INPUT ./figures/hardison-CRM-test.pdf
-INPUT ./figures/hardison-CRM-test.pdf
 INPUT figures/hardison-CRM-prediction.pdf
 INPUT ./figures/hardison-CRM-prediction.pdf
 INPUT ./figures/hardison-CRM-prediction.pdf
+INPUT figures/hardison-CRM-test.pdf
+INPUT ./figures/hardison-CRM-test.pdf
+INPUT ./figures/hardison-CRM-test.pdf
+INPUT figures/visel-shh-CRM-medical.pdf
+INPUT ./figures/visel-shh-CRM-medical.pdf
+INPUT ./figures/visel-shh-CRM-medical.pdf
 INPUT figures/sboner-cost-sequencing.jpg
 INPUT ./figures/sboner-cost-sequencing.jpg
 INPUT ./figures/sboner-cost-sequencing.jpg

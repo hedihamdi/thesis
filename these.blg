@@ -7,46 +7,44 @@ A level-1 auxiliary file: packaging/Conclusion_Generale.aux
 The style file: apalike.bst
 A level-1 auxiliary file: packaging/abstract.aux
 Database file #1: biblio/papers.bib
-Warning--I didn't find a database entry for ""
-You've used 110 entries,
+You've used 144 entries,
             1935 wiz_defined-function locations,
-            1198 strings with 28250 characters,
-and the built_in function-call counts, 53105 in all, are:
-= -- 4849
-> -- 3280
-< -- 46
-+ -- 1229
-- -- 1186
-* -- 5233
-:= -- 9461
-add.period$ -- 328
-call.type$ -- 110
-change.case$ -- 1142
-chr.to.int$ -- 109
-cite$ -- 110
-duplicate$ -- 1531
-empty$ -- 3104
-format.name$ -- 1353
-if$ -- 10000
-int.to.chr$ -- 2
+            1388 strings with 37536 characters,
+and the built_in function-call counts, 71847 in all, are:
+= -- 6499
+> -- 4662
+< -- 51
++ -- 1746
+- -- 1698
+* -- 7168
+:= -- 12835
+add.period$ -- 430
+call.type$ -- 144
+change.case$ -- 1568
+chr.to.int$ -- 142
+cite$ -- 144
+duplicate$ -- 2007
+empty$ -- 4081
+format.name$ -- 1909
+if$ -- 13471
+int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 105
-newline$ -- 551
-num.names$ -- 330
-pop$ -- 888
+missing$ -- 139
+newline$ -- 721
+num.names$ -- 432
+pop$ -- 1241
 preamble$ -- 1
-purify$ -- 1142
+purify$ -- 1568
 quote$ -- 0
-skip$ -- 1148
+skip$ -- 1492
 stack$ -- 0
-substring$ -- 3312
-swap$ -- 117
+substring$ -- 4350
+swap$ -- 151
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 660
+type$ -- 864
 warning$ -- 0
-while$ -- 354
+while$ -- 464
 width$ -- 0
-write$ -- 1422
-(There was 1 warning)
+write$ -- 1864

@@ -12,12 +12,12 @@
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}R\'egulation post-traductionnelle}{\reset@font\mtcSSSfont 11}{subsubsection.2.2.2.4}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.3}C\^ablage du r\'eseau et fonction}{\reset@font\mtcSSfont 11}{subsection.2.2.3}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.2.4}\'Evolution des r\'eseaux g\'en\'etiques}{\reset@font\mtcSSfont 13}{subsection.2.2.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.3}Mod\`eles math\'ematiques des interactions prot\'eine-ADN}{\reset@font\mtcSfont 14}{section.2.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.3}Les interactions prot\'eine-ADN : mod\`eles math\'ematiques}{\reset@font\mtcSfont 14}{section.2.3}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.3.1}Modes de recherche du site de fixation par le TF}{\reset@font\mtcSSfont 15}{subsection.2.3.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.3.2}Mod\`ele PWM}{\reset@font\mtcSSfont 16}{subsection.2.3.2}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.3.3}Mod\`ele biophysique}{\reset@font\mtcSSfont 17}{subsection.2.3.3}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.3.4}Mod\`ele thermodynamique}{\reset@font\mtcSSfont 18}{subsection.2.3.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.4}Mesures exp\'erimentales des interactions prot\'eine-ADN}{\reset@font\mtcSfont 20}{section.2.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.4}Les interactions prot\'eine-ADN : mesures exp\'erimentales}{\reset@font\mtcSfont 20}{section.2.4}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.1}Approches \textit {in vitro}\xspace : MITOMI, SPR, PBM, CSI, SELEX, et HT-SELEX}{\reset@font\mtcSSfont 20}{subsection.2.4.1}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Approche microfluidique : MITOMI}{\reset@font\mtcSSSfont 20}{subsubsection.2.4.1.1}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Approche physique : la microscopie SPR}{\reset@font\mtcSSSfont 21}{subsubsection.2.4.1.2}}
@@ -26,23 +26,34 @@
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.2}Approche clonale : la technique de simple hybride}{\reset@font\mtcSSfont 22}{subsection.2.4.2}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.4.3}Approches \textit {in vivo}\xspace : ChIP-on-chip\xspace , ChIP-seq\xspace , DNAse I}{\reset@font\mtcSSfont 23}{subsection.2.4.3}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Immunopr\'ecipitation de la chromatine : ChIP-on-chip\xspace et ChIP-seq\xspace }{\reset@font\mtcSSSfont 23}{subsubsection.2.4.3.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Empreinte \`a la DNase I (\textit {DNase I footprinting})}{\reset@font\mtcSSSfont 25}{subsubsection.2.4.3.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.5}Les modules de cis-r\'egulation}{\reset@font\mtcSfont 27}{section.2.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Empreinte \`a la DNase I (\textit {DNase I footprinting})}{\reset@font\mtcSSSfont 26}{subsubsection.2.4.3.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.5}Les modules de cis-r\'egulation (CRMs)}{\reset@font\mtcSfont 27}{section.2.5}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.1}Les diff\'erents types de CRMs}{\reset@font\mtcSSfont 27}{subsection.2.5.1}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Promoteurs}{\reset@font\mtcSSSfont 27}{subsubsection.2.5.1.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}\textit {Enhancers} et \textit {silencers}}{\reset@font\mtcSSSfont 27}{subsubsection.2.5.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}\textit {Enhancers} et \textit {silencers}}{\reset@font\mtcSSSfont 28}{subsubsection.2.5.1.2}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Insulateurs}{\reset@font\mtcSSSfont 30}{subsubsection.2.5.1.3}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.2}Grammaire des enhancers : enhanceosome vs billboard}{\reset@font\mtcSSfont 30}{subsection.2.5.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Le mod\`ele ``enhanceosome''}{\reset@font\mtcSSSfont 30}{subsubsection.2.5.2.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Le mod\`ele ``billboard''}{\reset@font\mtcSSSfont 31}{subsubsection.2.5.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Le mod\`ele ``enhanceosome''}{\reset@font\mtcSSSfont 31}{subsubsection.2.5.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Le mod\`ele ``billboard''}{\reset@font\mtcSSSfont 32}{subsubsection.2.5.2.2}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.3}\'Evolution des enhancers}{\reset@font\mtcSSfont 32}{subsection.2.5.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.4}Les \FB@og shadow enhancers \FB@fg }{\reset@font\mtcSSfont 32}{subsection.2.5.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.5}Les super enhancers}{\reset@font\mtcSSfont 34}{subsection.2.5.5}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.6}Validation exp\'erimentale}{\reset@font\mtcSSfont 35}{subsection.2.5.6}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.7}Pr\'ediction des CRMs}{\reset@font\mtcSSfont 37}{subsection.2.5.7}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.6}Banques de donn\'ees}{\reset@font\mtcSfont 37}{section.2.6}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.1}S\'equences g\'enomiques et alignements}{\reset@font\mtcSSfont 37}{subsection.2.6.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.2}Annotations (TSSs, repeats\ldots )}{\reset@font\mtcSSfont 37}{subsection.2.6.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.3}Jaspar et Transfac}{\reset@font\mtcSSfont 37}{subsection.2.6.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.4}Visualisation sur UCSC}{\reset@font\mtcSSfont 37}{subsection.2.6.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.5}Le projet ENCODE}{\reset@font\mtcSSfont 37}{subsection.2.6.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.4}Les \FB@og shadow enhancers \FB@fg }{\reset@font\mtcSSfont 34}{subsection.2.5.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.5}Par del\`a les enhancers: les \FB@og super-enhancers \FB@fg }{\reset@font\mtcSSfont 35}{subsection.2.5.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.6}Pr\'ediction et validation des CRMs}{\reset@font\mtcSfont 36}{section.2.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.1}M\'ethodes utilisant la concentration en sites de fixation}{\reset@font\mtcSSfont 36}{subsection.2.6.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Approches utilisant des motifs connus}{\reset@font\mtcSSSfont 36}{subsubsection.2.6.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Approches \textit {de novo}\xspace o\`u les motifs ne sont pas connus}{\reset@font\mtcSSSfont 38}{subsubsection.2.6.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.2}M\'ethodes utilisant la phylog\'enie}{\reset@font\mtcSSfont 38}{subsection.2.6.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Pr\'edictions \`a partir de la contrainte \'evolutive seule}{\reset@font\mtcSSSfont 38}{subsubsection.2.6.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Pr\'edictions utilisant la phylog\'enie et des motifs connus}{\reset@font\mtcSSSfont 39}{subsubsection.2.6.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Approches utilisant la phylog\'enie pour g\'en\'erer des motifs \textit {de novo}\xspace }{\reset@font\mtcSSSfont 39}{subsubsection.2.6.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.3}M\'ethodes utilisant les marques \'epig\'en\'etiques}{\reset@font\mtcSSfont 39}{subsection.2.6.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Pr\'ediction des promoteurs}{\reset@font\mtcSSSfont 39}{subsubsection.2.6.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.4}Pr\'ediction des enhancers}{\reset@font\mtcSSfont 40}{subsection.2.6.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.5}Validation exp\'erimentale}{\reset@font\mtcSSfont 40}{subsection.2.6.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.7}Implication des CRMs dans les maladies humaines}{\reset@font\mtcSfont 41}{section.2.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.8}Banques de donn\'ees}{\reset@font\mtcSfont 42}{section.2.8}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.8.1}S\'equences g\'enomiques et alignements}{\reset@font\mtcSSfont 42}{subsection.2.8.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.8.2}Annotations (TSSs, repeats\ldots )}{\reset@font\mtcSSfont 43}{subsection.2.8.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.8.3}Jaspar et Transfac}{\reset@font\mtcSSfont 43}{subsection.2.8.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.8.4}Visualisation sur UCSC}{\reset@font\mtcSSfont 43}{subsection.2.8.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.8.5}Le projet ENCODE}{\reset@font\mtcSSfont 43}{subsection.2.8.5}}
