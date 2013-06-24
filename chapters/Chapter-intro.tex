@@ -1803,7 +1803,7 @@ conservées~\cite{Kantorovitz2009p2937}. Les prédictions réalisées ont toutes
 % subsubsection approches_utilisant_la_phylog_nie_pour_g_n_rer_des_motifs_denovo (end)
 
 
-\subsection{Méthodes utilisant les marques épigénétiques}
+\subsection{Méthodes utilisant les marques épigénétiques et de \chipseq pour des TFs}
 \label{sub:m_thodes_utilisant_les_marques_pig_n_tiques}
 
 \subsubsection{Prédiction des promoteurs}
@@ -1821,19 +1821,41 @@ cellulaire étudié \cite{Heintzman2007gb}
 
 % subsubsection pr_diction_des_promoteurs (end)
 
-\subsection{Prédiction des enhancers}
-\label{sub:pr_diction_des_enhancers}
+\subsubsection{Prédiction des enhancers}
+\label{ssub:pr_diction_des_enhancers}
 
 La prédiction des enhancers à partir des marques épigénétiques, comme
 l'acétylation des histones~\cite{Roh2005mb}, la méthylation H3K4me1
 \cite{Heintzman2009ys}, ou encore la présence du co-activateur
-\textit{p300}~\cite{Visel2009p3750}, est très efficace, avec une expression
-tissue-spécifique dans $\sim80\%$ des cas~\cite{Hardison2012p3778}. Ces
-différentes marques dans différents tissues peuvent être utilisées comme autant
-d'entrées d'un modèle de Markov caché pour produire des prédictions fiables de
-CRMs tissue-spécifiques~\cite{Ernst2011cq}. 
+p$300$~\cite{Visel2009p3750}, est très efficace, avec une expression
+tissue-spécifique dans $\sim80\%$ des cas~\cite{Hardison2012p3778}. Pr exemple,
+ces différentes marques, présentes dans différents tissus, peuvent être
+utilisées comme autant d'entrées d'un modèle de Markov caché pour produire des
+prédictions fiables de CRMs tissue-spécifiques chez l'homme~\cite{Ernst2011cq}. 
 
-% subsection pr_diction_des_enhancers (end)
+En fait, les prédictions d'activité enhancer à partir de ces marques
+épigénétiques est plus fiable qu'en utilisant la fixation de \fts
+tissu-spécifique. Par exemple, sur $63$ séquences ADN fixées \invivo par le
+facteur spécifique des cellules sanguines GATA1 chez la souris, seulement la
+moitié fonctionnent comme enhancer après transfection dans des cultures
+cellulaires~\cite{Cheng2008fk}. Ces enhancers fonctionnels sont par ailleurs
+plus particulièrement associés à un site de fixation \textit{conservé} pour
+GATA1, montrant à nouveau la nécessité de combiner les approches pour améliorer
+la détection. Un taux de validation similaire a été observé pour le facteur de
+différenciation myogénique MyoD, avec $40\%$ de régions fixées ayant une
+activité enhancer après transfection en cellules.
+
+L'utilisation de données de fixation pour plusieurs TFs à la fois semble
+cependant améliorer les pouvoir de prédiction des données. Ainsi, dans le cas
+de GATA1, \cite{Tijssen2011kx} ont étudié sa co-fixation avec $4$ autres TFs
+hématopoïétiques dans des mégacaryocytes. En s'intéressant aux gènes
+à proximité de ces régions, ils ont découvert plusieurs gènes qui n'étaient pas
+précédemment connus comme étant important dans l'hématopoïèse. Leur fonction
+a été testée par knock-down, avec dans $8$ cas sur les $9$ testés une réduction
+de la production de globules rouges. 
+
+
+% subsubsection pr_diction_des_enhancers (end)
 
 % subsection m_thodes_utilisant_les_marques_pig_n_tiques (end)
 
@@ -1889,8 +1911,8 @@ régulation au sein du génome que ce dernier est \textit{nécessaire}
 
 \newpage
 \newpage
-\section{Implication des CRMs dans les maladies humaines} 
-\label{sec:implication_des_crms_dans_les_maladies_humaines}
+\subsection{Implication des CRMs dans les maladies humaines} 
+\label{sub:implication_des_crms_dans_les_maladies_humaines}
 
 \bfig
 \includegraphics[width=1.0\textwidth]{figures/visel-shh-CRM-medical.pdf}
@@ -1940,23 +1962,160 @@ non codantes fonctionnelles.
 
 
 % section implication_des_crms_dans_les_maladies_humaines (end)
-\section{Banques de données}
+\section{Bases de données}
 
-\subsection{Séquences génomiques et alignements}
+La biologie moderne est caractérisée par l'accumulation de données biologiques
+qu'il s'agit d'intégrer puis d'interpréter : on parle de biologie integrative.
+En particulier, depuis le séquençage du génome humain il y a maintenant plus de
+dix ans~\cite{Lander2001p1633}, le nombre de génome séquencés n'a cessé
+d'augmenter, tandis que dans le même temps le prix du séquençage diminuait
+drastiquement (fig.~\ref{fig:sboner-cost-sequencing.jpg}). Afin de permettre la
+gestion et l'utilisation de ces données, de nombreux outils et bases de données
+ont été mis à disposition~\cite{Wasserman2004p624}. Nous évoquons ici ceux qui
+nous paraissent essentiels.
 
 \bfig
-\includegraphics[width=0.8\textwidth]{figures/sboner-cost-sequencing.jpg}
+\includegraphics[width=0.8\textwidth]{figures/sboner-cost-sequencing.pdf}
 \captionbf{Évolution du coût de séquençage}{
 
-Figure tirée de~\cite{Sboner2011fk}.
+Figure adaptée de~\cite{Sboner2011fk}, montrant l'évolution du coût du
+séquençage d'$1$ Mb d'ADN au cours de la dernière décennie, comparé à une
+évolution de type \og Loi de Moore \fg où le prix serait diminué de moitié tous
+les $18$ mois.
 
 }
 \label{fig:sboner-cost-sequencing.jpg}
 \efig
 
-statistiques du genome (lognormal)
-\subsection{Annotations (TSSs, repeats\ldots)}
-\subsection{Jaspar et Transfac}
+
+\subsection{Obtention de données génomiques}
+
+Tout d'abord, les différents génomes séquencés sont à disposition sur des bases
+de données publiques d'où ils peuvent être téléchargés puis analysés en aval.
+Parmi les plus généralistes, nous avons la base de donnée de UCSC
+(UCSC Genome Browser, \url{http://genome.ucsc.edu}) et celle de l'EMBL (Ensembl,
+\url{http://www.ensembl.org}) \footnote{Les données sont accessibles sur les
+    pages de téléchargement, respectivement
+    \url{http://hgdownload.cse.ucsc.edu/downloads.html} pour UCSC et
+    \url{http://www.ensembl.org/info/data/ftp/index.html} pour Ensembl 
+}. 
+
+Sont à disposition les génomes des différentes espèces séquencées pour les
+différents assemblages réalisés, des alignements des génomes de différentes
+espèces deux par deux (\textit{pairwise alignments}) ou par groupes d'espèces
+(\textit{multiple alignments}), ainsi qu'un certain nombre d'annotations
+essentielles à l'analyse de ces génomes : coordonnées des gènes (TSSs, exons,
+introns avec potentiellement différents transcrits alternatifs), miRNA ou
+lincRNA, ontologies associées, coordonnées des séquences répétitives (les
+\textit{repeats}, en partie liés aux éléments transposables abordés en
+\ref{sub:evolution-des-enhancer}, et qui sont abondants dans les génomes
+vertébrés), différentes données \chipseq, indices de conservation
+\footnote{Pour le cas de l'assemblage mm9 pour la souris, ces annotations sont
+    accessibles à l'adresse suivante
+    : \url{http://hgdownload.cse.ucsc.edu/goldenPath/mm9/database/} 
+}\ldots 
+
+Au final, ces différentes données constituent une base de travail fiable et
+(très) régulièrement mise à jour. Afin de faciliter leur obtention, il est
+possible d'utiliser le navigateur de tables de
+UCSC
+\footnote{
+    \url{http://genome.ucsc.edu/cgi-bin/hgTables}
+} 
+ou la section BioMart d'Ensembl
+\footnote{
+    \url{http://www.ensembl.org/biomart/martview} 
+}
+.
+
+Encore plus en amont, le projet Galaxy (\url{http://galaxyproject.org}) permet
+à l'utilisateur de récupérer des données sur les différentes banques
+existantes, puis de leur faire subir divers traitements et analyses par divers
+outils de bioinformatiques. Cet outil, qui peut être utilisé sur internet dans
+le nuage ou bien localement, a l'avantage de permettre la sauvegarde de plans
+de travail ou \textit{workflows}, \cad la succession des commandes utilisées
+pour traiter une entrée donnée par différents outils stéréotypés et obtenir la
+sortie finale, favorisant une approche conviviale orientée utilisateur.
+
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/intergenic-intronic.pdf}
+    \captionbf{Distribution des tailles intergéniques et introniques chez différentes espèces}{
+
+        
+        Distributions log-log de la taille des régions intergéniques (A) et
+        introniques (B) chez différentes espèces. Les histogrammes sont
+        réalisés avec un bin de $0.05$ puis lissés avec l'estimateur local
+        LOESS de paramètre $span = 0.3$.
+        
+        (A)  Les régions intergéniques sont définies comme les
+        régions complémentaires aux régions transcrites (données UCSC),
+        celles-ci étant préalablement fusionnées pour éviter les redondances
+        liées aux multiples transcrits d'un même gène. De la bactérie
+        à l'homme, on observe une inflation de la quantité de génome non
+        codant.  
+        
+        (B) Les régions introniques sont définies par le fait qu'elles sont
+        entourée par deux exons d'un même gène. Pour pouvoir être épissés lors
+        de la maturation des preARNm, les introns doivent posséder des sites
+        d'épissage, imposant une borne inférieure à leur taille pour que l'ARNm
+        final soit fonctionnel.
+
+    }
+    \label{fig:intergenic-intronic}
+\end{figure}
+
+En guise d'exemple, nous montrons en figure \ref{fig:intergenic-intronic} des
+statistiques obtenues aisément à partir d'annotations génétiques présentes sur UCSC et
+traitées rapidement avec un workflow galaxy. Ces statistiques sont les
+distribution de tailles des régions intergéniques et introniques chez plusieurs
+espèces : la bactérie \ecoli, la levure \textit{Saccharomyces cerevisiae}, le ver
+\celegans, la mouche \dmel, la souris, le poulet et l'homme.
+
+
+\subsection{Obtention de données sur les TFs}
+
+Nous l'avons vu, les données de fixation des TFs (\chipseq, \chipchip) peuvent
+être obtenues à partir du site UCSC Genome Browser. Ces données sont aussi
+généralement accessibles sur le site du NCBI (Gene Expression Omnibus,
+\url{http://www.ncbi.nlm.nih.gov/geo/}) \textit{via} un numéro d'accession
+donné lors de la publication des données. 
+
+De nombreux modèles de TFs ont déjà été bâtis préalablement à l'avènement des
+données haut-débit de type \chipseq, par exemple avec des données SELEX, et il
+existe des bases de données stockant les PWMs correspondantes : JAPSAR, base de
+donnée publique \footnote{\url{http://jaspar.cgb.ki.se}}, et TRANSFAC, qui
+marche par
+abonnement\footnote{\url{http://www.gene-regulation.com/pub/databases.html}}.
+
+\bfig
+\includegraphics[width=1\textwidth]{figures/ucsc-chrng-view.pdf}
+\captionbf{Visualisation de données \chipseq \textit{via} le site UCSC}{
+
+La visualisation de différentes données \chipseq et bioinformatiques (bandes
+noires) permet de mettre en perspective le cas de la régulation de
+\textit{Chrng} (en bleu au bas de l'image) lors de la différenciation
+musculaire. Les données \chipseq sont issues de la littérature et les données
+bioinformatiques (MEF3 evolh6 pwm) sont issues du présent travail. Les barres
+noires correspondent aux pics obtenus après avoir appliqué un seuil de filtrage
+du bruit. Les données de fixation de PolII ainsi que les données de méthylation
+et d'acétylation des histones (H3K4me$3$ et H3K9Ac, marques de l'activité
+transcriptionnelle, voir fig.~\ref{fig:hardison-enhancer-states}), tirées de
+\cite{Asp2011p2370}, montrent que le locus est transcrit lors de la formation
+de myotubes. Le TF MyoD est fixé au niveau du promoteur de \textit{Chrng} au
+cours de la prolifération des myoblastes (MB50, $50\%$ de confluence, et MB95,
+$95\%$ de confluence) et au cours de la différenciation MT~\cite{Cao2010p425}.
+Le TF Six est co-fixé avec MyoD lors de la différenciation : à T$24$, $24$h après
+différenciation, et à MT~\cite{Liu2010p703}. De plus, des analyses
+bioinformatiques montre l'existence dans cette région d'un site de fixation
+MEF3 pour la protéine Six conservé, corroborant une liaison directe de l'ADN
+par Six. Prises ensemble, ces données suggèrent une régulation par Six et MyoD
+de \textit{Chrng}.
+
+}
+\label{fig:ucsc-chrng-view}
+\efig
+
 \subsection{Visualisation sur UCSC}
 \subsection{Le projet ENCODE}
 

@@ -17,6 +17,13 @@ Alon, U. (2007b).
 \newblock Network motifs: theory and experimental approaches.
 \newblock {\em Nat Rev Genet}, 8(6):450--461.
 
+\bibitem[Asp et~al., 2011]{Asp2011p2370}
+Asp, P., Blum, R., Vethantham, V., Parisi, F., Micsinai, M., Cheng, J., Bowman,
+  C., Kluger, Y., and Dynlacht, B.~D. (2011).
+\newblock Pnas plus: Genome-wide remodeling of the epigenetic landscape during
+  myogenic differentiation.
+\newblock {\em Proceedings of the National Academy of Sciences}, pages 1--11.
+
 \bibitem[Attanasio et~al., 2008]{Attanasio2008ff}
 Attanasio, C., Reymond, A., Humbert, R., Lyle, R., Kuehn, M.~S., Neph, S.,
   Sabo, P.~J., Goldy, J., Weaver, M., Haydock, A., Lee, K., Dorschner, M.,
@@ -122,10 +129,18 @@ Campbell, C.~T. and Kim, G. (2007).
   biomolecular binding events and their kinetics.
 \newblock {\em Biomaterials}, 28(15):2380--92.
 
-\bibitem[Cao et~al., 2010]{Cao2010p1805}
+\bibitem[Cao et~al., 2010a]{Cao2010p1805}
 Cao, Y., Yao, Z., Sarkar, D., Lawrence, M., Sanchez, G.~J., Parker, M.~H.,
   Macquarrie, K.~L., Davison, J., Morgan, M.~T., Ruzzo, W.~L., Gentleman,
-  R.~C., and Tapscott, S.~J. (2010).
+  R.~C., and Tapscott, S.~J. (2010a).
+\newblock Genome-wide myod binding in skeletal muscle cells: a potential for
+  broad cellular reprogramming.
+\newblock {\em Developmental Cell}, 18(4):662--74.
+
+\bibitem[Cao et~al., 2010b]{Cao2010p425}
+Cao, Y., Yao, Z., Sarkar, D., Lawrence, M., Sanchez, G.~J., Parker, M.~H.,
+  Macquarrie, K.~L., Davison, J., Morgan, M.~T., Ruzzo, W.~L., Gentleman,
+  R.~C., and Tapscott, S.~J. (2010b).
 \newblock Genome-wide myod binding in skeletal muscle cells: a potential for
   broad cellular reprogramming.
 \newblock {\em Developmental Cell}, 18(4):662--74.
@@ -164,6 +179,14 @@ Chen, X., Xu, H., Yuan, P., Fang, F., Huss, M., Vega, V.~B., Wong, E., Orlov,
 \newblock Integration of external signaling pathways with the core
   transcriptional network in embryonic stem cells.
 \newblock {\em Cell}, 133(6):1106--17.
+
+\bibitem[Cheng et~al., 2008]{Cheng2008fk}
+Cheng, Y., King, D.~C., Dore, L.~C., Zhang, X., Zhou, Y., Zhang, Y., Dorman,
+  C., Abebe, D., Kumar, S.~A., Chiaromonte, F., Miller, W., Green, R.~D.,
+  Weiss, M.~J., and Hardison, R.~C. (2008).
+\newblock Transcriptional enhancement by gata1-occupied dna segments is
+  strongly associated with evolutionary constraint on the binding site motif.
+\newblock {\em Genome Res}, 18(12):1896--905.
 
 \bibitem[Chung et~al., 1993]{Chung1993ve}
 Chung, J.~H., Whiteley, M., and Felsenfeld, G. (1993).
@@ -397,6 +420,57 @@ Kulkarni, M.~M. and Arnosti, D.~N. (2003).
 \newblock Information display by transcriptional enhancers.
 \newblock {\em Development}, 130(26):6569--75.
 
+\bibitem[Lander et~al., 2001]{Lander2001p1633}
+Lander, E.~S., Linton, L.~M., Birren, B., Nusbaum, C., Zody, M.~C., Baldwin,
+  J., Devon, K., Dewar, K., Doyle, M., FitzHugh, W., Funke, R., Gage, D.,
+  Harris, K., Heaford, A., Howland, J., Kann, L., Lehoczky, J., LeVine, R.,
+  McEwan, P., McKernan, K., Meldrim, J., Mesirov, J.~P., Miranda, C., Morris,
+  W., Naylor, J., Raymond, C., Rosetti, M., Santos, R., Sheridan, A., Sougnez,
+  C., Stange-Thomann, N., Stojanovic, N., Subramanian, A., Wyman, D., Rogers,
+  J., Sulston, J., Ainscough, R., Beck, S., Bentley, D., Burton, J., Clee, C.,
+  Carter, N., Coulson, A., Deadman, R., Deloukas, P., Dunham, A., Dunham, I.,
+  Durbin, R., French, L., Grafham, D., Gregory, S., Hubbard, T., Humphray, S.,
+  Hunt, A., Jones, M., Lloyd, C., McMurray, A., Matthews, L., Mercer, S.,
+  Milne, S., Mullikin, J.~C., Mungall, A., Plumb, R., Ross, M., Shownkeen, R.,
+  Sims, S., Waterston, R.~H., Wilson, R.~K., Hillier, L.~W., McPherson, J.~D.,
+  Marra, M.~A., Mardis, E.~R., Fulton, L.~A., Chinwalla, A.~T., Pepin, K.~H.,
+  Gish, W.~R., Chissoe, S.~L., Wendl, M.~C., Delehaunty, K.~D., Miner, T.~L.,
+  Delehaunty, A., Kramer, J.~B., Cook, L.~L., Fulton, R.~S., Johnson, D.~L.,
+  Minx, P.~J., Clifton, S.~W., Hawkins, T., Branscomb, E., Predki, P.,
+  Richardson, P., Wenning, S., Slezak, T., Doggett, N., Cheng, J.~F., Olsen,
+  A., Lucas, S., Elkin, C., Uberbacher, E., Frazier, M., Gibbs, R.~A., Muzny,
+  D.~M., Scherer, S.~E., Bouck, J.~B., Sodergren, E.~J., Worley, K.~C., Rives,
+  C.~M., Gorrell, J.~H., Metzker, M.~L., Naylor, S.~L., Kucherlapati, R.~S.,
+  Nelson, D.~L., Weinstock, G.~M., Sakaki, Y., Fujiyama, A., Hattori, M., Yada,
+  T., Toyoda, A., Itoh, T., Kawagoe, C., Watanabe, H., Totoki, Y., Taylor, T.,
+  Weissenbach, J., Heilig, R., Saurin, W., Artiguenave, F., Brottier, P.,
+  Bruls, T., Pelletier, E., Robert, C., Wincker, P., Smith, D.~R.,
+  Doucette-Stamm, L., Rubenfield, M., Weinstock, K., Lee, H.~M., Dubois, J.,
+  Rosenthal, A., Platzer, M., Nyakatura, G., Taudien, S., Rump, A., Yang, H.,
+  Yu, J., Wang, J., Huang, G., Gu, J., Hood, L., Rowen, L., Madan, A., Qin, S.,
+  Davis, R.~W., Federspiel, N.~A., Abola, A.~P., Proctor, M.~J., Myers, R.~M.,
+  Schmutz, J., Dickson, M., Grimwood, J., Cox, D.~R., Olson, M.~V., Kaul, R.,
+  Raymond, C., Shimizu, N., Kawasaki, K., Minoshima, S., Evans, G.~A.,
+  Athanasiou, M., Schultz, R., Roe, B.~A., Chen, F., Pan, H., Ramser, J.,
+  Lehrach, H., Reinhardt, R., McCombie, W.~R., de~la Bastide, M., Dedhia, N.,
+  Bl{\"o}cker, H., Hornischer, K., Nordsiek, G., Agarwala, R., Aravind, L.,
+  Bailey, J.~A., Bateman, A., Batzoglou, S., Birney, E., Bork, P., Brown,
+  D.~G., Burge, C.~B., Cerutti, L., Chen, H.~C., Church, D., Clamp, M., Copley,
+  R.~R., Doerks, T., Eddy, S.~R., Eichler, E.~E., Furey, T.~S., Galagan, J.,
+  Gilbert, J.~G., Harmon, C., Hayashizaki, Y., Haussler, D., Hermjakob, H.,
+  Hokamp, K., Jang, W., Johnson, L.~S., Jones, T.~A., Kasif, S., Kaspryzk, A.,
+  Kennedy, S., Kent, W.~J., Kitts, P., Koonin, E.~V., Korf, I., Kulp, D.,
+  Lancet, D., Lowe, T.~M., McLysaght, A., Mikkelsen, T., Moran, J.~V., Mulder,
+  N., Pollara, V.~J., Ponting, C.~P., Schuler, G., Schultz, J., Slater, G.,
+  Smit, A.~F., Stupka, E., Szustakowski, J., Thierry-Mieg, D., Thierry-Mieg,
+  J., Wagner, L., Wallis, J., Wheeler, R., Williams, A., Wolf, Y.~I., Wolfe,
+  K.~H., Yang, S.~P., Yeh, R.~F., Collins, F., Guyer, M.~S., Peterson, J.,
+  Felsenfeld, A., Wetterstrand, K.~A., Patrinos, A., Morgan, M.~J., de~Jong,
+  P., Catanese, J.~J., Osoegawa, K., Shizuya, H., Choi, S., Chen, Y.~J.,
+  Szustakowki, J., and Consortium, I. H. G.~S. (2001).
+\newblock Initial sequencing and analysis of the human genome.
+\newblock {\em Nature}, 409(6822):860--921.
+
 \bibitem[L{\"a}ssig, 2007]{Lassig2007p539}
 L{\"a}ssig, M. (2007).
 \newblock From biophysics to evolutionary genetics: statistical aspects of gene
@@ -421,6 +495,12 @@ Liberman, L.~M. and Stathopoulos, A. (2009).
 \newblock Design flexibility in cis-regulatory control of gene expression:
   Synthetic and comparative evidence.
 \newblock {\em Developmental Biology}, 327(2):578--589.
+
+\bibitem[Liu et~al., 2010]{Liu2010p703}
+Liu, Y., Chu, A., Chakroun, I., Islam, U., and Blais, A. (2010).
+\newblock Cooperation between myogenic regulatory factors and six family
+  transcription factors is important for myoblast differentiation (si).
+\newblock {\em Nucleic acids research}.
 
 \bibitem[Liu et~al., 2009]{Liu2009p556}
 Liu, Y.-H., Jakobsen, J.~S., Valentin, G., Amarantos, I., Gilmour, D.~T., and
@@ -738,6 +818,15 @@ Thurman, R.~E., Rynes, E., Humbert, R., Vierstra, J., Maurano, M.~T., Haugen,
   (2012).
 \newblock The accessible chromatin landscape of the human genome.
 \newblock {\em Nature}, 489(7414):75--82.
+
+\bibitem[Tijssen et~al., 2011]{Tijssen2011kx}
+Tijssen, M.~R., Cvejic, A., Joshi, A., Hannah, R.~L., Ferreira, R., Forrai, A.,
+  Bellissimo, D.~C., Oram, S.~H., Smethurst, P.~A., Wilson, N.~K., Wang, X.,
+  Ottersbach, K., Stemple, D.~L., Green, A.~R., Ouwehand, W.~H., and
+  G{\"o}ttgens, B. (2011).
+\newblock Genome-wide analysis of simultaneous gata1/2, runx1, fli1, and scl
+  binding in megakaryocytes identifies hematopoietic regulators.
+\newblock {\em Dev Cell}, 20(5):597--609.
 
 \bibitem[Tirosh et~al., 2008]{Tirosh2008qf}
 Tirosh, I., Weinberger, A., Bezalel, D., Kaganovich, M., and Barkai, N. (2008).
