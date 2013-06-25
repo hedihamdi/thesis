@@ -63,7 +63,7 @@
 \contentsline {section}{\numberline {1.7}Bases de donn\'ees}{42}{section.2.7}
 \contentsline {subsection}{\numberline {1.7.1}Obtention de donn\'ees g\'enomiques}{43}{subsection.2.7.1}
 \contentsline {subsection}{\numberline {1.7.2}Obtention de donn\'ees sur les TFs}{44}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {1.7.3}Visualisation sur UCSC}{45}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {1.7.3}Outils de visualisation}{45}{subsection.2.7.3}
 \contentsline {subsection}{\numberline {1.7.4}Le projet ENCODE}{45}{subsection.2.7.4}
 \contentsline {chapter}{\numberline {Chapitre\ 2~-}Mod\`eles de fixation des Facteurs de Transcription\xspace \`a l'ADN.}{47}{division.3}
 \contentsline {section}{\numberline {2.1}Les mod\`eles de fixation}{49}{section.3.1}

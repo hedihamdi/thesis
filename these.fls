@@ -951,6 +951,7 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam1
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/wasy/wasy5.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
 INPUT figures/intergenic-intronic.pdf
 INPUT ./figures/intergenic-intronic.pdf
 INPUT ./figures/intergenic-intronic.pdf

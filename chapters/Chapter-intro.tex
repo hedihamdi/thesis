@@ -2010,7 +2010,7 @@ lincRNA, ontologies associées, coordonnées des séquences répétitives (les
 \textit{repeats}, en partie liés aux éléments transposables abordés en
 \ref{sub:evolution-des-enhancer}, et qui sont abondants dans les génomes
 vertébrés), différentes données \chipseq, indices de conservation
-\footnote{Pour le cas de l'assemblage mm9 pour la souris, ces annotations sont
+\footnote{Pour le cas de l'assemblage mm$9$ de la souris, ces annotations sont
     accessibles à l'adresse suivante
     : \url{http://hgdownload.cse.ucsc.edu/goldenPath/mm9/database/} 
 }\ldots 
@@ -2087,6 +2087,41 @@ existe des bases de données stockant les PWMs correspondantes : JAPSAR, base de
 donnée publique \footnote{\url{http://jaspar.cgb.ki.se}}, et TRANSFAC, qui
 marche par
 abonnement\footnote{\url{http://www.gene-regulation.com/pub/databases.html}}.
+Il est à noter que ces PWMs ayant souvent été construites à partir d'un faible
+nombre de sites de fixations et de données \invitro, elles peuvent être
+relativement inadaptées à l'analyse de données \invivo.
+
+\subsection{Outils de visualisation}
+
+Afin d'avoir une idée plus claire des événements de régulation qui se déroulent
+à un locus donné, il existe plusieurs outils de visualisation des annotations
+génomiques et épigénétiques, que ce soit sur le site du NCBI
+(\url{http://www.ncbi.nlm.nih.gov/gene}), sur Ensembl ou sur UCSC Genome
+Browser. Ce dernier possède notamment l'avantage qu'il est possible d'importer
+des données personnelles sous un grand nombre de formats, obtenues à partir de
+la littérature ou à partir de ses propres travaux. Ainsi, nous présentons en
+figure \ref{fig:ucsc-chrng-view} quelques données de \chipseq pour des TFs
+musculaires et pour des marques épigénétiques, ainsi que des prédictions
+bioinformatiques de sites de fixation conservés pour les homéoprotéines Six
+réalisée par nos soins. La visualisation sur UCSC Genome Browser permet de
+rapidement déterminer le mode de régulation putatif du gène \textit{Chrng}
+: fixation de Six et MyoD au niveau du promoteur et apparition de marques
+épigénétiques H3K4me$1$ et H3Ac sur les histones au cours de la différenciation
+de progéniteurs musculaires.
+
+
+Par ailleurs, il existe un outil de visualisation complémentaire de ceux cités
+: le visualisateur de régions conservées au cours de l'évolution ECR Browser
+(\url{http://ecrbrowser.dcode.org}), intégrant de nombreux outils
+bioinformatiques~\cite{Loots2005ys}. Ce navigateur permet de visualiser la
+conservation génomique d'un locus donné chez plusieurs espèces plus ou moins
+lointaines (par exemple souris, homme, vache, grenouille et poisson zèbre) afin
+de cibler l'étude de la régulation sur des régions extrêmement conservées. Il
+est ensuite possible d'analyser les séquences ultraconservées sélectionnées en
+utilisant les motifs de la base de donnée TRANSFAC \textit{via} l'outil
+rVISTA~\cite{Loots2004vn}. Un exemple d'utilisation de cet outil est donné par
+la découverte de plusieurs régions de régulation fonctionnelles de
+l'homéoprotéine Six1 possédant une extrême conservation~\cite{Sato2012zr}.
 
 \bfig
 \includegraphics[width=1\textwidth]{figures/ucsc-chrng-view.pdf}
@@ -2116,7 +2151,8 @@ de \textit{Chrng}.
 \label{fig:ucsc-chrng-view}
 \efig
 
-\subsection{Visualisation sur UCSC}
+
+
 \subsection{Le projet ENCODE}
 
 
