@@ -2,49 +2,47 @@ This is BibTeX, Version 0.99d (TeX Live 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: these.aux
 A level-1 auxiliary file: packaging/Avant_Propos.aux
-A level-1 auxiliary file: chapters/Chapter-imogene.aux
 A level-1 auxiliary file: packaging/Conclusion_Generale.aux
 The style file: custom.bst
-A level-1 auxiliary file: packaging/abstract.aux
 Database file #1: biblio/papers.bib
-You've used 155 entries,
+You've used 149 entries,
             2710 wiz_defined-function locations,
-            1545 strings with 56396 characters,
-and the built_in function-call counts, 108479 in all, are:
-= -- 8447
-> -- 5634
-< -- 54
-+ -- 4290
-- -- 1569
-* -- 7655
-:= -- 14467
-add.period$ -- 463
-call.type$ -- 155
-change.case$ -- 1404
-chr.to.int$ -- 156
-cite$ -- 155
-duplicate$ -- 7498
-empty$ -- 7137
-format.name$ -- 1934
-if$ -- 21418
+            1505 strings with 55035 characters,
+and the built_in function-call counts, 105106 in all, are:
+= -- 8176
+> -- 5505
+< -- 51
++ -- 4196
+- -- 1533
+* -- 7429
+:= -- 13982
+add.period$ -- 445
+call.type$ -- 149
+change.case$ -- 1362
+chr.to.int$ -- 150
+cite$ -- 149
+duplicate$ -- 7248
+empty$ -- 6886
+format.name$ -- 1889
+if$ -- 20757
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 1992
-newline$ -- 777
-num.names$ -- 465
-pop$ -- 4749
+missing$ -- 1931
+newline$ -- 747
+num.names$ -- 447
+pop$ -- 4626
 preamble$ -- 1
-purify$ -- 1404
+purify$ -- 1362
 quote$ -- 0
-skip$ -- 3955
+skip$ -- 3841
 stack$ -- 0
-substring$ -- 4521
-swap$ -- 4734
+substring$ -- 4343
+swap$ -- 4589
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 930
+type$ -- 894
 warning$ -- 0
-while$ -- 500
+while$ -- 480
 width$ -- 0
-write$ -- 2007
+write$ -- 1930

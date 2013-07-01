@@ -1,4 +1,4 @@
-\begin{thebibliography}{155}
+\begin{thebibliography}{149}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[Aerts, 2012]{Aerts2012p3868}
@@ -171,12 +171,6 @@ Carvajal, J.~J., Keith, A., and Rigby, P. W.~J. (2008).
   muscle determination genes Mrf4 and Myf5.
 \newblock \emph{Genes {\&} development}, 22(2):265--76.
 
-\bibitem[Chen et~al., 2008]{Chen2008p3738}
-Chen, X., et~al. (2008).
-\newblock Integration of external signaling pathways with the core
-  transcriptional network in embryonic stem cells.
-\newblock \emph{Cell}, 133(6):1106--17.
-
 \bibitem[Cheng et~al., 2008]{Cheng2008fk}
 Cheng, Y., King, D.~C., Dore, L.~C., Zhang, X., Zhou, Y., Zhang, Y., Dorman,
   C., Abebe, D., Kumar, S.~A., Chiaromonte, F., Miller, W., Green, R.~D.,
@@ -226,11 +220,6 @@ Donaldson, I.~J., Chapman, M., Kinston, S., Landry, J.~R., Knezevic, K., Piltz,
 \newblock Genome-wide identification of cis-regulatory sequences controlling
   blood and endothelial development.
 \newblock \emph{Hum Mol Genet}, 14(5):595--601.
-
-\bibitem[{ENCODE Project Consortium}, 2011]{ENCODEProjectConsortium2011p3726}
-{ENCODE Project Consortium} (2011).
-\newblock A user's guide to the encyclopedia of DNA elements (ENCODE).
-\newblock \emph{Plos Biol}, 9(4):e1001046.
 
 \bibitem[{ENCODE Project Consortium} et~al.,
   2012]{ENCODE-Project-Consortium2012ly}
@@ -342,11 +331,6 @@ Hesselberth, J.~R., Chen, X., Zhang, Z., Sabo, P.~J., Sandstrom, R., Reynolds,
 Hong, J.-W., Hendrix, D.~A., and Levine, M.~S. (2008).
 \newblock Shadow enhancers as a source of evolutionary novelty.
 \newblock \emph{Science}, 321(5894):1314.
-
-\bibitem[Jaynes, 1957]{Jaynes1957p3771}
-Jaynes, E. (1957).
-\newblock Information theory and statistical mechanics. II.
-\newblock \emph{Physical review}, 108(2):171.
 
 \bibitem[Jolma et~al., 2010]{Jolma2010ul}
 Jolma, A., Kivioja, T., Toivonen, J., Cheng, L., Wei, G., Enge, M., Taipale,
@@ -684,11 +668,6 @@ Schroeder, M.~D., Pearce, M., Fak, J., Fan, H., Unnerstall, U., Emberly, E.,
   Drosophila.
 \newblock \emph{PLoS Biol}, 2(9):E271.
 
-\bibitem[Shannon, 1948]{Shannon1948p699}
-Shannon, C. (1948).
-\newblock A Mathematical Theory of Communication.
-\newblock \emph{Bell Syst Tech J}, 27(4):623--656.
-
 \bibitem[Shen-Orr et~al., 2002]{ShenOrr2002p648}
 Shen-Orr, S., Milo, R., Mangan, S., and Alon, U. (2002).
 \newblock Network motifs in the transcriptional regulation network of
@@ -701,12 +680,6 @@ Shumaker-Parry, J.~S., Aebersold, R., and Campbell, C.~T. (2004).
   120-element double-stranded DNA array in real time using surface plasmon
   resonance microscopy.
 \newblock \emph{Anal Chem}, 76(7):2071--82.
-
-\bibitem[Sigal et~al., 2006]{Sigal2006p3278}
-Sigal, A., Milo, R., Cohen, A., Geva-Zatorsky, N., Klein, Y., Liron, Y.,
-  Rosenfeld, N., Danon, T., Perzov, N., and Alon, U. (2006).
-\newblock Variability and memory of protein levels in human cells.
-\newblock \emph{Nature}, 444(7119):643--646.
 
 \bibitem[Sinha and He, 2007]{Sinha2007tw}
 Sinha, S. and He, X. (2007).
@@ -726,11 +699,6 @@ Slutsky, M. and Mirny, L.~A. (2004).
 \newblock Kinetics of protein-DNA interaction: facilitated target location in
   sequence-dependent potential.
 \newblock \emph{Biophys J}, 87(6):4021--35.
-
-\bibitem[Smit et~al., 1996-2010]{Smit2010}
-Smit, A. F.~A., Hubley, R., and Green, P. (1996-2010).
-\newblock RepeatMasker Open-3.0.
-\newblock \url{http://www.repeatmasker.org}.
 
 \bibitem[Smith et~al., 2006]{Smith2006ij}
 Smith, A.~D., Sumazin, P., Xuan, Z., and Zhang, M.~Q. (2006).

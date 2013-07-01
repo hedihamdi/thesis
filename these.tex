@@ -70,21 +70,21 @@
 \label{ch:maxent}
 \ifthenelse{\FaitMinitocs > 0}{\adjustmtc\minitoc}{Minitoc}
 \newpage
-\input{chapters/Chapter-maxent}
+%\input{chapters/Chapter-maxent}
 %\includepdf[pages=-]{articles/maxent-arxiv}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{\ChImogene} 
 \ifthenelse{\FaitMinitocs > 0}{\adjustmtc \minitoc}{Minitoc}
 \newpage
-\include{chapters/Chapter-imogene}
+%\include{chapters/Chapter-imogene}
 %\includepdf[pages=-]{articles/imogene-genomebiol.pdf}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{\ChTrichomes}
 \ifthenelse{\FaitMinitocs > 0}{\adjustmtc \minitoc}{Minitoc}
 \newpage
-\input{chapters/Chapter-trichomes}
+%\input{chapters/Chapter-trichomes}
 %\includepdf[pages=-]{articles/trichomes-plosbiol-merged.pdf}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,7 +92,7 @@
 \label{chap:muscle}
 \ifthenelse{\FaitMinitocs > 0}{\adjustmtc \minitoc}{Minitoc}
 \newpage
-\input{chapters/Chapter-muscle}
+%\input{chapters/Chapter-muscle}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\chapter{\ChTest}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
@@ -107,7 +107,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \EmptyNewPage 
-\appendix 
+%\appendix 
 \renewcommand{\leftmark}{Bibliographie}
 \renewcommand{\rightmark}{Bibliographie} 
 \bibliographystyle{custom}%biblio/paolostyle}
@@ -115,11 +115,12 @@
    Dans la version pdf, les numéros de page sont
    des liens qui renvoient à l'occurence de la citation dans le texte.
 }
+\addcontentsline{toc}{chapter}{\bibname}
 \bibliography{biblio/papers}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ifthenelse{\IncludeAbstract > 0}{ \include{packaging/abstract}}{}
+%\include{packaging/abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
