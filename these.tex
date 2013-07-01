@@ -16,6 +16,9 @@
 
 \newcommand{\IncludeAnnexes}{0} \newcommand{\IncludeAbstract}{1}
 
+%\renewcommand{\baselinestretch}{1.5}
+
+
 \input{mep/mep_avant}
 
 \begin{document}
@@ -24,8 +27,11 @@
 
 \input{mep/mep_apres}
 
+%{\renewcommand{\baselinestretch}{1}
 \input{packaging/titre}
+%}
 
+\linespread{1.5}
 \input{packaging/merci} 
 
 
@@ -104,7 +110,7 @@
 \appendix 
 \renewcommand{\leftmark}{Bibliographie}
 \renewcommand{\rightmark}{Bibliographie} 
-\bibliographystyle{apalike}%biblio/paolostyle}
+\bibliographystyle{custom}%biblio/paolostyle}
 \BeginBibWith{\vskip7mm\noindent 
    Dans la version pdf, les numéros de page sont
    des liens qui renvoient à l'occurence de la citation dans le texte.

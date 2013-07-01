@@ -4,47 +4,47 @@ The top-level auxiliary file: these.aux
 A level-1 auxiliary file: packaging/Avant_Propos.aux
 A level-1 auxiliary file: chapters/Chapter-imogene.aux
 A level-1 auxiliary file: packaging/Conclusion_Generale.aux
-The style file: apalike.bst
+The style file: custom.bst
 A level-1 auxiliary file: packaging/abstract.aux
 Database file #1: biblio/papers.bib
-You've used 153 entries,
-            1935 wiz_defined-function locations,
-            1436 strings with 43227 characters,
-and the built_in function-call counts, 84759 in all, are:
-= -- 7454
-> -- 6304
+You've used 155 entries,
+            2710 wiz_defined-function locations,
+            1545 strings with 56396 characters,
+and the built_in function-call counts, 108479 in all, are:
+= -- 8447
+> -- 5634
 < -- 54
-+ -- 2393
-- -- 2344
-* -- 8694
-:= -- 15261
-add.period$ -- 457
-call.type$ -- 153
-change.case$ -- 1936
-chr.to.int$ -- 150
-cite$ -- 153
-duplicate$ -- 2137
-empty$ -- 4339
-format.name$ -- 2568
-if$ -- 15680
++ -- 4290
+- -- 1569
+* -- 7655
+:= -- 14467
+add.period$ -- 463
+call.type$ -- 155
+change.case$ -- 1404
+chr.to.int$ -- 156
+cite$ -- 155
+duplicate$ -- 7498
+empty$ -- 7137
+format.name$ -- 1934
+if$ -- 21418
 int.to.chr$ -- 4
-int.to.str$ -- 0
-missing$ -- 148
-newline$ -- 766
-num.names$ -- 459
-pop$ -- 1593
+int.to.str$ -- 1
+missing$ -- 1992
+newline$ -- 777
+num.names$ -- 465
+pop$ -- 4749
 preamble$ -- 1
-purify$ -- 1936
+purify$ -- 1404
 quote$ -- 0
-skip$ -- 1589
+skip$ -- 3955
 stack$ -- 0
-substring$ -- 4626
-swap$ -- 165
+substring$ -- 4521
+swap$ -- 4734
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 918
+type$ -- 930
 warning$ -- 0
-while$ -- 494
+while$ -- 500
 width$ -- 0
-write$ -- 1980
+write$ -- 2007
