@@ -9,22 +9,22 @@
 \contentsline {chapter}{\numberline {Chapitre\ 1~-}Introduction g\'en\'erale.}{3}{division.2}
 \contentsline {section}{\numberline {1.1}Le ph\'enotype cellulaire}{5}{section.2.1}
 \contentsline {subsection}{\numberline {1.1.1}Qu'est-ce que le ph\'enotype d'une cellule?}{5}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {1.1.2}La diff\'erenciation cellulaire}{7}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {1.1.2}La diff\'erenciation cellulaire}{6}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {1.1.3}La cellule dans l'organisme : une sp\'ecification spatio-temporelle}{8}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {1.1.4}La reprogrammation cellulaire}{9}{subsection.2.1.4}
 \contentsline {section}{\numberline {1.2}Les r\'eseaux de r\'egulation g\'en\'etique}{10}{section.2.2}
 \contentsline {subsection}{\numberline {1.2.1}Vision cybern\'etique de la cellule}{10}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Divers modes de r\'egulation}{12}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {1.2.2}Divers modes de r\'egulation}{10}{subsection.2.2.2}
 \contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation g\'en\'etique}{12}{subsubsection.2.2.2.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation \'epig\'en\'etique}{13}{subsubsection.2.2.2.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation post-transcriptionnelle}{15}{subsubsection.2.2.2.3}
-\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation post-traductionnelle}{15}{subsubsection.2.2.2.4}
-\contentsline {subsection}{\numberline {1.2.3}C\^ablage du r\'eseau et fonction}{15}{subsection.2.2.3}
+\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation \'epig\'en\'etique}{12}{subsubsection.2.2.2.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation post-transcriptionnelle}{14}{subsubsection.2.2.2.3}
+\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation post-traductionnelle}{14}{subsubsection.2.2.2.4}
+\contentsline {subsection}{\numberline {1.2.3}C\^ablage du r\'eseau et fonction}{17}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {1.2.4}\'Evolution des r\'eseaux g\'en\'etiques}{17}{subsection.2.2.4}
 \contentsline {section}{\numberline {1.3}Les interactions prot\'eine-ADN : mod\`eles math\'ematiques}{20}{section.2.3}
-\contentsline {subsection}{\numberline {1.3.1}Modes de recherche du site de fixation par le TF}{20}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Mod\`ele PWM}{22}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Mod\`ele biophysique}{23}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {1.3.1}Modes de recherche du site de fixation par le TF}{21}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Mod\`ele PWM}{21}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Mod\`ele biophysique}{24}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {1.3.4}Mod\`ele thermodynamique}{25}{subsection.2.3.4}
 \contentsline {section}{\numberline {1.4}Les interactions prot\'eine-ADN : mesures exp\'erimentales}{27}{section.2.4}
 \contentsline {subsection}{\numberline {1.4.1}Approches \textit {in vitro}\xspace : MITOMI, SPR, PBM, CSI, SELEX, et HT-SELEX}{28}{subsection.2.4.1}
@@ -34,37 +34,37 @@
 \contentsline {subsubsection}{\numberline {$\bullet $}Approche par purification des s\'equences fix\'ees : SELEX et HT-SELEX}{30}{subsubsection.2.4.1.4}
 \contentsline {subsection}{\numberline {1.4.2}Approche clonale : la technique de simple hybride}{31}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {1.4.3}Approches \textit {in vivo}\xspace : ChIP-on-chip\xspace , ChIP-seq\xspace , DNAse I}{32}{subsection.2.4.3}
-\contentsline {subsubsection}{\numberline {$\bullet $}Immunopr\'ecipitation de la chromatine : ChIP-on-chip\xspace et ChIP-seq\xspace }{34}{subsubsection.2.4.3.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Empreinte \`a la DNase I (\textit {DNase I footprinting})}{36}{subsubsection.2.4.3.2}
-\contentsline {section}{\numberline {1.5}Les modules de cis-r\'egulation (CRMs)}{38}{section.2.5}
-\contentsline {subsection}{\numberline {1.5.1}Les diff\'erents types de CRMs}{38}{subsection.2.5.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Promoteurs}{38}{subsubsection.2.5.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}\textit {Enhancers} et \textit {silencers}}{40}{subsubsection.2.5.1.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Immunopr\'ecipitation de la chromatine : ChIP-on-chip\xspace et ChIP-seq\xspace }{32}{subsubsection.2.4.3.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Empreinte \`a la DNase I (\textit {DNase I footprinting})}{35}{subsubsection.2.4.3.2}
+\contentsline {section}{\numberline {1.5}Les modules de cis-r\'egulation (CRMs)}{37}{section.2.5}
+\contentsline {subsection}{\numberline {1.5.1}Les diff\'erents types de CRMs}{37}{subsection.2.5.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Promoteurs}{39}{subsubsection.2.5.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}\textit {Enhancers} et \textit {silencers}}{39}{subsubsection.2.5.1.2}
 \contentsline {subsubsection}{\numberline {$\bullet $}Insulateurs}{41}{subsubsection.2.5.1.3}
-\contentsline {subsection}{\numberline {1.5.2}Grammaire des enhancers : enhanceosome vs billboard}{42}{subsection.2.5.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}Le mod\`ele ``enhanceosome''}{42}{subsubsection.2.5.2.1}
+\contentsline {subsection}{\numberline {1.5.2}Grammaire des enhancers : enhanceosome vs billboard}{41}{subsection.2.5.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Le mod\`ele ``enhanceosome''}{41}{subsubsection.2.5.2.1}
 \contentsline {subsubsection}{\numberline {$\bullet $}Le mod\`ele ``billboard''}{43}{subsubsection.2.5.2.2}
-\contentsline {subsection}{\numberline {1.5.3}\'Evolution des enhancers}{44}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {1.5.3}\'Evolution des enhancers}{43}{subsection.2.5.3}
 \contentsline {subsection}{\numberline {1.5.4}Les \FB@og shadow enhancers \FB@fg }{47}{subsection.2.5.4}
 \contentsline {subsection}{\numberline {1.5.5}Par del\`a les enhancers: les \FB@og super-enhancers \FB@fg }{48}{subsection.2.5.5}
-\contentsline {section}{\numberline {1.6}Pr\'ediction et validation des CRMs}{51}{section.2.6}
-\contentsline {subsection}{\numberline {1.6.1}M\'ethodes utilisant la concentration en sites de fixation}{51}{subsection.2.6.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Approches utilisant des motifs connus}{52}{subsubsection.2.6.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Approches \textit {de novo}\xspace o\`u les motifs ne sont pas connus}{53}{subsubsection.2.6.1.2}
-\contentsline {subsection}{\numberline {1.6.2}M\'ethodes utilisant la phylog\'enie}{53}{subsection.2.6.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'edictions \`a partir de la contrainte \'evolutive seule}{54}{subsubsection.2.6.2.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'edictions utilisant la phylog\'enie et des motifs connus}{54}{subsubsection.2.6.2.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}Approches utilisant la phylog\'enie pour g\'en\'erer des motifs \textit {de novo}\xspace }{55}{subsubsection.2.6.2.3}
-\contentsline {subsection}{\numberline {1.6.3}M\'ethodes utilisant les marques \'epig\'en\'etiques et de ChIP-seq\xspace pour des TFs}{55}{subsection.2.6.3}
-\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'ediction des promoteurs}{55}{subsubsection.2.6.3.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'ediction des enhancers}{56}{subsubsection.2.6.3.2}
-\contentsline {subsection}{\numberline {1.6.4}Validation exp\'erimentale}{56}{subsection.2.6.4}
+\contentsline {section}{\numberline {1.6}Pr\'ediction et validation des CRMs}{50}{section.2.6}
+\contentsline {subsection}{\numberline {1.6.1}M\'ethodes utilisant la concentration en sites de fixation}{50}{subsection.2.6.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Approches utilisant des motifs connus}{50}{subsubsection.2.6.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Approches \textit {de novo}\xspace o\`u les motifs ne sont pas connus}{52}{subsubsection.2.6.1.2}
+\contentsline {subsection}{\numberline {1.6.2}M\'ethodes utilisant la phylog\'enie}{52}{subsection.2.6.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'edictions \`a partir de la contrainte \'evolutive seule}{53}{subsubsection.2.6.2.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'edictions utilisant la phylog\'enie et des motifs connus}{53}{subsubsection.2.6.2.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Approches utilisant la phylog\'enie pour g\'en\'erer des motifs \textit {de novo}\xspace }{54}{subsubsection.2.6.2.3}
+\contentsline {subsection}{\numberline {1.6.3}M\'ethodes utilisant les marques \'epig\'en\'etiques et de ChIP-seq\xspace pour des TFs}{54}{subsection.2.6.3}
+\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'ediction des promoteurs}{54}{subsubsection.2.6.3.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'ediction des enhancers}{55}{subsubsection.2.6.3.2}
+\contentsline {subsection}{\numberline {1.6.4}Validation exp\'erimentale}{55}{subsection.2.6.4}
 \contentsline {subsection}{\numberline {1.6.5}Implication des CRMs dans les maladies humaines}{57}{subsection.2.6.5}
-\contentsline {section}{\numberline {1.7}Bases de donn\'ees}{60}{section.2.7}
-\contentsline {subsection}{\numberline {1.7.1}Obtention de donn\'ees g\'enomiques}{60}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {1.7.2}Obtention de donn\'ees sur les TFs}{62}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {1.7.3}Outils de visualisation}{63}{subsection.2.7.3}
-\contentsline {subsection}{\numberline {1.7.4}Le projet ENCODE}{65}{subsection.2.7.4}
+\contentsline {section}{\numberline {1.7}Bases de donn\'ees}{59}{section.2.7}
+\contentsline {subsection}{\numberline {1.7.1}Obtention de donn\'ees g\'enomiques}{59}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {1.7.2}Obtention de donn\'ees sur les TFs}{61}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {1.7.3}Outils de visualisation}{62}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {1.7.4}Le projet ENCODE}{62}{subsection.2.7.4}
 \contentsline {chapter}{\numberline {Chapitre\ 2~-}Mod\`eles de fixation des Facteurs de Transcription\xspace \`a l'ADN.}{67}{division.3}
 \contentsline {section}{\numberline {2.1}Les mod\`eles de fixation}{69}{section.3.1}
 \contentsline {subsection}{\numberline {2.1.1}Mod\`eles de maximum d'entropie}{69}{subsection.3.1.1}
