@@ -5,44 +5,46 @@ A level-1 auxiliary file: packaging/Avant_Propos.aux
 A level-1 auxiliary file: packaging/Conclusion_Generale.aux
 The style file: custom.bst
 Database file #1: biblio/papers.bib
-You've used 149 entries,
+Warning--empty journal in Jaynes1978p795
+You've used 162 entries,
             2710 wiz_defined-function locations,
-            1505 strings with 55035 characters,
-and the built_in function-call counts, 105106 in all, are:
-= -- 8176
-> -- 5505
-< -- 51
-+ -- 4196
-- -- 1533
-* -- 7429
-:= -- 13982
-add.period$ -- 445
-call.type$ -- 149
-change.case$ -- 1362
-chr.to.int$ -- 150
-cite$ -- 149
-duplicate$ -- 7248
-empty$ -- 6886
-format.name$ -- 1889
-if$ -- 20757
+            1585 strings with 57426 characters,
+and the built_in function-call counts, 113314 in all, are:
+= -- 8847
+> -- 5829
+< -- 62
++ -- 4427
+- -- 1623
+* -- 7980
+:= -- 15100
+add.period$ -- 490
+call.type$ -- 162
+change.case$ -- 1463
+chr.to.int$ -- 163
+cite$ -- 163
+duplicate$ -- 7855
+empty$ -- 7497
+format.name$ -- 2007
+if$ -- 22415
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 1931
-newline$ -- 747
-num.names$ -- 447
-pop$ -- 4626
+missing$ -- 2079
+newline$ -- 815
+num.names$ -- 486
+pop$ -- 4959
 preamble$ -- 1
-purify$ -- 1362
+purify$ -- 1459
 quote$ -- 0
-skip$ -- 3841
+skip$ -- 4138
 stack$ -- 0
-substring$ -- 4343
-swap$ -- 4589
-text.length$ -- 3
+substring$ -- 4737
+swap$ -- 4942
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 894
-warning$ -- 0
-while$ -- 480
+type$ -- 968
+warning$ -- 1
+while$ -- 527
 width$ -- 0
-write$ -- 1930
+write$ -- 2107
+(There was 1 warning)

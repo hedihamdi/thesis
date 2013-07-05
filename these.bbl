@@ -1,4 +1,4 @@
-\begin{thebibliography}{149}
+\begin{thebibliography}{162}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[Aerts, 2012]{Aerts2012p3868}
@@ -39,10 +39,32 @@ Aurell, E., d'H{\'e}rou{\"e}l, A., Malmn{\"a}s, C., and Vergassola, M. (2007).
   the yeast S. cerevisiae.
 \newblock \emph{Physical biology}, 4:134.
 
+\bibitem[Badis et~al., 2009]{Badis2009p3911}
+Badis, G., Berger, M.~F., Philippakis, A.~A., Talukder, S., Gehrke, A.~R.,
+  Jaeger, S.~A., Chan, E.~T., Metzler, G., Vedenko, A., Chen, X., Kuznetsov,
+  H., Wang, C.-F., Coburn, D., Newburger, D.~E., Morris, Q., Hughes, T.~R., and
+  Bulyk, M.~L. (2009).
+\newblock Diversity and Complexity in DNA Recognition by Transcription Factors.
+\newblock \emph{Science}, 324(5935):1720--1723.
+
+\bibitem[Barash et~al., 2003]{Barash2003MDP}
+Barash, Y., Elidan, G., Friedman, N., and Kaplan, T. (2003).
+\newblock Modeling dependencies in protein-DNA binding sites.
+\newblock In \emph{Proceedings of the seventh annual international conference
+  on Research in computational molecular biology}, RECOMB '03, pages 28--37.
+  ACM, New York, NY, USA.
+\newblock ISBN 1-58113-635-8.
+
 \bibitem[Bartel, 2009]{Bartel2009cr}
 Bartel, D.~P. (2009).
 \newblock MicroRNAs: target recognition and regulatory functions.
 \newblock \emph{Cell}, 136(2):215--33.
+
+\bibitem[Baxter, 2007]{baxter2007exactly}
+Baxter, R. (2007).
+\newblock \emph{Exactly Solved Models in Statistical Mechanics}.
+\newblock Dover Books on Physics Series. DOVER PUBN Incorporated.
+\newblock ISBN 9780486462714.
 
 \bibitem[Baylies et~al., 1998]{Baylies1998bs}
 Baylies, M.~K., Bate, M., and Ruiz~Gomez, M. (1998).
@@ -54,6 +76,12 @@ Bell, A.~C., West, A.~G., and Felsenfeld, G. (1999).
 \newblock The protein CTCF is required for the enhancer blocking activity of
   vertebrate insulators.
 \newblock \emph{Cell}, 98(3):387--96.
+
+\bibitem[Benos et~al., 2002]{Benos2002p3912}
+Benos, P.~V., Bulyk, M.~L., and Stormo, G.~D. (2002).
+\newblock Additivity in protein-DNA interactions: how good an approximation is
+  it?
+\newblock \emph{Nucleic Acids Res}, 30(20):4442--51.
 
 \bibitem[Berg and von Hippel, 1987]{Berg1987p3746}
 Berg, O. and von Hippel, P. (1987).
@@ -129,6 +157,12 @@ Brazma, A., Parkinson, H., Schlitt, T., and Shojatalab, M. (2001).
 Buchler, N.~E., Gerland, U., and Hwa, T. (2003).
 \newblock On schemes of combinatorial transcription logic.
 \newblock \emph{Proc Natl Acad Sci U S A}, 100(9):5136--41.
+
+\bibitem[Bulyk et~al., 2002]{Bulyk2002uq}
+Bulyk, M.~L., Johnson, P. L.~F., and Church, G.~M. (2002).
+\newblock Nucleotides of transcription factor binding sites exert
+  interdependent effects on the binding affinities of transcription factors.
+\newblock \emph{Nucleic Acids Res}, 30(5):1255--61.
 
 \bibitem[Campbell and Kim, 2007]{Campbell2007ly}
 Campbell, C.~T. and Kim, G. (2007).
@@ -252,6 +286,11 @@ Frankel, N., Davis, G.~K., Vargas, D., Wang, S., Payre, F., and Stern, D.~L.
   transcriptional enhancers.
 \newblock \emph{Nature}, pages 1--5.
 
+\bibitem[Friedman et~al., 1997]{friedman1997bayesian}
+Friedman, N., Geiger, D., and Goldszmidt, M. (1997).
+\newblock Bayesian network classifiers.
+\newblock \emph{Machine learning}, 29(2-3):131--163.
+
 \bibitem[Furusawa and Kaneko, 2012]{Furusawa2012p3898}
 Furusawa, C. and Kaneko, K. (2012).
 \newblock A Dynamical-Systems View of Stem Cell Biology.
@@ -279,6 +318,12 @@ Greer, E.~L. and Shi, Y. (2012).
 \newblock Histone methylation: a dynamic mark in health, disease and
   inheritance.
 \newblock \emph{Nat Rev Genet}, 13(5):343--57.
+
+\bibitem[Grendar~Jr and Grendar, 2001]{grendar2001minimax}
+Grendar~Jr, M. and Grendar, M. (2001).
+\newblock MiniMax Entropy and Maximum Likelihood: complementarity of tasks,
+  identity of solutions.
+\newblock In \emph{AIP Conference Proceedings}, volume 568, page~49.
 
 \bibitem[Gurdon and Melton, 2008]{Gurdon2008zr}
 Gurdon, J.~B. and Melton, D.~A. (2008).
@@ -331,6 +376,22 @@ Hesselberth, J.~R., Chen, X., Zhang, Z., Sabo, P.~J., Sandstrom, R., Reynolds,
 Hong, J.-W., Hendrix, D.~A., and Levine, M.~S. (2008).
 \newblock Shadow enhancers as a source of evolutionary novelty.
 \newblock \emph{Science}, 321(5894):1314.
+
+\bibitem[Hu et~al., 2010]{hu2010detection}
+Hu, M., Yu, J., Taylor, J.~M., Chinnaiyan, A.~M., and Qin, Z.~S. (2010).
+\newblock On the detection and refinement of transcription factor binding sites
+  using ChIP-Seq data.
+\newblock \emph{Nucleic acids research}, 38(7):2154--2167.
+
+\bibitem[Jaynes, 1978]{Jaynes1978p795}
+Jaynes, E. (1978).
+\newblock Where do we stand on maximum entropy?
+\newblock pages 1--105.
+
+\bibitem[Jaynes, 1982]{jaynes1982rationale}
+Jaynes, E.~T. (1982).
+\newblock On the rationale of maximum-entropy methods.
+\newblock \emph{Proceedings of the IEEE}, 70(9):939--952.
 
 \bibitem[Jolma et~al., 2010]{Jolma2010ul}
 Jolma, A., Kivioja, T., Toivonen, J., Cheng, L., Wei, G., Enge, M., Taipale,
@@ -473,6 +534,12 @@ Majoros, W.~H. and Ohler, U. (2010).
 \newblock Modeling the evolution of regulatory elements by simultaneous
   detection and alignment with phylogenetic pair HMMs.
 \newblock \emph{PLoS Comput Biol}, 6(12):e1001037.
+
+\bibitem[Man and Stormo, 2001]{Man2001fk}
+Man, T.~K. and Stormo, G.~D. (2001).
+\newblock Non-independence of Mnt repressor-operator interaction determined by
+  a new quantitative multiple fluorescence relative affinity (QuMFRA) assay.
+\newblock \emph{Nucleic Acids Res}, 29(12):2471--8.
 
 \bibitem[Maniatis et~al., 1987]{Maniatis1987fk}
 Maniatis, T., Goodbourn, S., and Fischer, J.~A. (1987).
@@ -667,6 +734,13 @@ Schroeder, M.~D., Pearce, M., Fak, J., Fan, H., Unnerstall, U., Emberly, E.,
 \newblock Transcriptional control in the segmentation gene network of
   Drosophila.
 \newblock \emph{PLoS Biol}, 2(9):E271.
+
+\bibitem[Sethna, 2006]{sethna2006statistical}
+Sethna, J. (2006).
+\newblock \emph{Statistical Mechanics: Entropy, Order Parameters and
+  Complexity}.
+\newblock Oxford Master Series in Physics. OUP Oxford.
+\newblock ISBN 9780198566779.
 
 \bibitem[Shen-Orr et~al., 2002]{ShenOrr2002p648}
 Shen-Orr, S., Milo, R., Mangan, S., and Alon, U. (2002).
@@ -910,6 +984,12 @@ Zhang, Y., Liu, T., Meyer, C.~A., Eeckhoute, J., Johnson, D.~S., Bernstein,
 Zhao, Y., Granas, D., and Stormo, G.~D. (2009).
 \newblock Inferring binding energies from selected binding sites.
 \newblock \emph{PLoS Comput Biol}, 5(12):e1000590.
+
+\bibitem[Zhou and Liu, 2004]{zhou2004modeling}
+Zhou, Q. and Liu, J.~S. (2004).
+\newblock Modeling within-motif dependence for transcription factor binding
+  site predictions.
+\newblock \emph{Bioinformatics}, 20(6):909--916.
 
 \bibitem[Zhou and Wong, 2004]{Zhou2004hc}
 Zhou, Q. and Wong, W.~H. (2004).

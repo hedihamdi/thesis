@@ -1,0 +1,645 @@
+\section*{Introduction du chapitre \thechapter}
+
+Dans cette partie, nous nous intéressons à la description de l'interaction
+entre les \fts et leurs sites de reconnaissance sur l'ADN, interaction qui est
+au c{\oe}ur des réseaux génétiques.  Pendant longtemps, la qualité de cette
+description a été limitée par la quantité de données disponibles. Ainsi, les
+expériences de type SELEX (voir \ref{sub:approches_invitro}), où des
+expériences de \chip au cas par cas permettaient de récupérer de l'ordre de
+quelques dizaines de sites de fixation pour un TF d'intérêt. Or, le modèle PWM,
+qui est le modèle le plus simple (en terme de nombre de paramètres) que l'on
+puisse bâtir pour décrire l'interaction possède déjà plusieurs dizaines de
+paramètres -- les fréquences des nucléotides à chaque position --. 
+
+Ces données ne permettaient donc pas d'explorer plus en avant des modèles plus
+complexes de fixation, où par exemple on inclurait des termes d'interaction
+entre nucléotides au sein des sites de fixation. Cependant, les avancées
+récentes en séquençage à haut débit ont permis l'obtention de données très
+grande échelle, que ce soit \invivo par \chipseq ou \invitro par HT-SELEX (voir
+\ref{sec:mesures_exp}). Le nombre de sites de fixation obtenus est de l'ordre
+de quelques milliers, ce qui permet de contraindre des modèles de fixation plus
+complexe que le modèle PWM.
+
+En utilisant des données \chipseq pour un grand nombre de \fts de la Drosophile
+et des vertébrés, nous avons construit différents modèles de fixation incluant
+implicitement ou explicitement des interactions entre nucléotides afin de juger
+de leur importance dans la description de l'interaction TF-ADN \invivo. Nous
+présentons préalablement un survol des observations et modèles existant au
+sujet des corrélations dans les sites de fixations de \fts.
+
+\section{Observations de corrélations au sein des TFBS}
+\label{sec:corr_lations_au_sein_des_sites_de_fixation_de_tfs}
+
+Différents travaux ont mis en exergue l'existence de corrélations entre
+nucléotides au sein des sites de fixation de TFs. Parce que limitées par la
+quantité de données alors possible d'obtenir, les premières études de ce genre
+ont centré leur attention sur les corrélations importantes pour quelques cas
+particuliers. Ainsi, \citet{Man2001fk} ont observé que la protéine Mnt induit
+des corrélations entre les positions $16$ et $17$ de ses sites de
+reconnaissance \invitro. Ils ont mesuré expérimentalement la spécificité aux
+sites de liaisons contenant tous les variants possibles à ces deux positions.
+Ils ont ainsi observé que la mutation de la base consensus C en position 17
+induisait un changement de préférence en position 16 de la base A vers la base
+C. Par ailleurs, \citet{Bulyk2002uq} ont montré que la protéine EGR1 induisait
+des corrélations au sein d'un triplet de nucléotides central de leur site de
+reconnaissance. La prise en compte de ces corrélations dans l'énergie de
+fixation permettait alors d'améliorer la description des données par rapport au
+modèle additif PWM.
+
+À une plus grande échelle, \citet{Badis2009p3911} ont utilisé des puces à ADN
+(technique PBM, cf \ref{sub:approches_invitro}) pour étudier la fixation
+\invitro de $104$ TFs de la souris sur toutes les séquences d'ADN de $10$ bp
+possibles. Pour chaque facteur, plusieurs centaines de séquences de fixation
+ont ainsi été obtenues. L'étude a révélé l'existence d'une multiplicité de
+motifs (PWMs) pour la plupart des TFs (seulement $15$ étant mieux décrit par un
+motif unique). Certains motifs reconnaissent notamment des séquences
+à espacement variable pour lesquelles deux régions spécifiques du site sont
+séparées par un nombre variable de nucléotides. Enfin, les auteurs ont noté la
+présence de corrélations fortes dans $19$ cas, celles-ci n'étant pas forcément
+limitées à des dinucléotides mais pouvant impliquer des trinucléotides. Plus
+récemment, \citet{Jolma2013p3971} ont analysé par HT-SELEX plusieurs centaines
+de domaines de fixations à l'ADN de TFs humains et de la souris, révélant aussi
+l'importance d'espacements variables et surtout des corrélations
+dinucléotidiques entre plus proches voisins.
+
+
+\section{Modèles existants permettant de décrire la statistique des TFBS}
+\label{sec:mod_les_pour_d_crire_les_corr_lations}
+
+Différents modèles ont été proposés pour décrire ces corrélations
+(fig.~\ref{fig:modeles-correlations}). La méthode la plus directe consiste
+à partir du modèle PWM (fig.~\ref{fig:modeles-correlations}a) et à ajouter des
+corrélations mutuellement exclusives aux positions les plus corrélées
+(fig.~\ref{fig:modeles-correlations}b). D'autres méthodes utilisent des
+structures probabilistes de dépendances sous forme de chaînes de Markov
+(fig.~\ref{fig:modeles-correlations}c) ou plus généralement de réseau bayésien
+ou (fig.~\ref{fig:modeles-correlations}d-e), rendant alors l'interprétation
+moins évidente. Enfin, il est possible de réaliser des mélanges de modèles afin
+de capturer des ensembles distincts de corrélations
+(fig.~\ref{fig:modeles-correlations}f-g). Nous recensons ici ces différents
+modèles.
+
+\bfig
+\includegraphics[width=1\textwidth]{figures/modeles-correlations.pdf}
+\captionbf{Différents modèles pour décrire les corrélations entre nucléotides dans les sites de fixation de \fts}{
+
+    Exemples illustrant différents modèles de fixation sur un site de longueur
+    $5$. Pour chaque modèle, la structure du réseau de dépendances sous-jacent
+    est représentée, ainsi que la distribution de probabilité
+    $P(X_1,X_2,X_3,X_4,X_5)$ correspondante, où $X_i$ correspond au nucléotide
+    (A, C, G ou T) à la position $i$. Les modèles représentés sont les suivants
+    :
+    (a) PWM (pas de corrélations), 
+    (b) GWM (corrélations mutuellement exclusives), 
+    (c) chaîne de Markov d'ordre $1$ (corrélations entre plus proches voisins), 
+    (d) réseau bayésien en arbre (au plus un parent par n{\oe}ud) ou 
+    (e) pas en arbre (le n{\oe}ud $2$ a deux parents), 
+    (f) mélange de PWMs et 
+    (e) mélange d'arbres à dépendances fixées.
+
+}
+\label{fig:modeles-correlations}
+\efig
+
+\subsection{Modèle de référence sans corrélations : la PWM}
+\label{sub:mod_le_de_r_f_rence_sans_corr_lations_la_pwm}
+
+Nous l'avons vu, le modèle le plus simple (en termes de nombre de paramètres)
+décrivant l'interaction entre un TF et son site de reconnaissance sur l'ADN
+consiste à faire l'hypothèse que les nucléotides contribuent indépendamment
+à l'énergie de fixation. Cette hypothèse conduit au modèle PWM (section
+\ref{sub:modele_pwm} et fig.\ref{fig:modeles-correlations}a), qui s'écrit
+\footnote{ 
+    Comme nous l'avons signalé en \ref{sub:modele_pwm}, le terme PWM
+    (\textit{Position Weight Matrix}) réfère en fait à la matrice des poids
+    $\log(P(X_i)/\pi_{X_i})$ où $\pi_{X_i}$ est une distribution neutre
+    indépendante de la position (dite distribution \textit{background}), par exemple calculée
+    sur des régions intergéniques.  
+} :
+
+\begin{equation}
+    P(X_1,\cdots,X_k) = \prod_{i=1}^{K} P(X_i)
+\end{equation}
+
+où $P(X_i)$ est la probabilité marginale d'observer le nucléotide $X \in
+\{A,C,G,T\}$ à la position $i$. Un tel modèle possède $3K$ paramètres, \cad $3$
+paramètres $P(X_i)$ par position, la normalisation des probabilités permettant
+de fixer le paramètre restant. Pour une longueur typique $K=10$, le modèle PWM
+contient donc $30$ paramètres à contraindre, sachant qu'un \og modèle \fg
+complet paramétrant la distribution jointe sans faire d'hypothèse comporterait
+$4^{10}-1 \sim 10^6$ paramètres.
+
+% subsection mod_le_de_r_f_rence_sans_corr_lations_la_pwm (end)
+
+\subsection{Une PWM généralisée : le modèle GWM}
+\label{sub:mod_lisation_de_corr_lations_mutuellement_exclusives_le_mod_le_gwm}
+
+ Une première méthode permettant de compléter le modèle PWM consiste à intégrer
+ explicitement des groupes mutuellement exclusif de nucléotides corrélés au
+ sein du modèle (fig.~\ref{fig:modeles-correlations}b). Une telle méthode fut
+ d'abord employée par \citet{Benos2002p3912} pour prendre en compte des
+ corrélations préalablement définies entre nucléotides plus proches voisins. De
+ manière plus générale, \citet{zhou2004modeling} ont développé un modèle de
+ matrice de poids généralisée (GWM pour \textit{Generalized Weight Matrix}) qui
+ prend en compte de manière systématique les corrélations permettant
+ d'améliorer le modèle indépendant selon une méthode de Monte-Carlo par chaîne
+ de Markov (MCMC) : les corrélations sont ajoutées ou enlevées au hasard et
+ acceptées selon la règle de Metropolis-Hastings. Cette acceptation est
+ dépendante du facteur de Bayes, une quantité qui permet de comparer des
+ modèles possédant des nombres de paramètres différents. Ce facteur est défini
+ par le rapport entre la probabilité de générer les données $D$ (les séquences
+ de fixation) avec un modèle $M_1$ de paramètres $\theta_1$ plutôt qu'avec un
+ autre modèle $M_2$ de paramètres $\theta_2$ :
+
+\begin{equation}
+    BF = \frac{P(D|M_1)}{P(D|M_2)} = \frac{\int P(D | \theta_1, M_1) P(\theta_1|M_1) d\theta_1}{\int P(D | \theta_2, M_2) P(\theta_2|M_2) d\theta_2}
+\end{equation}
+
+Le modèle final consiste en un ensemble de paramètres décrivant des positions
+indépendantes et des positions corrélées, ces dernières étant mutuellement
+exclusives -- par exemple les corrélations entre positions (i,j) et (j,k) ne
+peuvent être admises au sein du même modèle --.  En analysant les données
+TRANSFAC, les auteurs ont noté que dans $25\%$ des cas ($22/95$) le modèle GWM
+était significativement meilleur que le modèle PWM (facteur de Bayes supérieur
+à $6$). 
+
+
+Cette méthode a par la suite été utilisée sur des données \chipseq pour $4$ TFs
+mammifères -- NRSF, STAT$1$, CTCF et ER --~\cite{hu2010detection}. En utilisant
+les $10\%$ des pics les plus importants comme ensemble d'apprentissage et en se
+restreignant aux $200$bp centrés autour du sommet du pic \chip, les auteurs ont
+réalisé un échantillonnage de Gibbs pour obtenir les sites de fixation suivant
+les hypothèses que (1) chaque pic contient un seul ou aucun site de fixation
+(modèle ZOOPS pour \textit{Zero or One Occurrences Per Sequence}), (2) la
+probabilité \apriori d'avoir un site à une certaine position sur la séquence
+est plus forte autour du sommet du pic, et (3) les sites sont décrits par un
+modèle GWM.  L'étude a révélé l'existence de corrélations fortes limitées aux
+nucléotides plus proches voisins dans tous les cas étudiés, et anti corrélées
+avec le contenu en information des positions dans la PWM. Ces corrélations
+pouvaient par ailleurs se retrouver sur des triplets de nucléotides voisins.
+
+% subsection mod_lisation_de_corr_lations_mutuellement_exclusives_le_mod_le_gwm (end)
+
+
+\subsection{Réseaux bayésiens}
+\label{sub:r_seaux_bay_siens}
+
+Une généralisation du modèle GWM consiste à dépasser la condition
+d'exclusion mutuelle des paires de nucléotides corrélés en décrivant le réseau
+de dépendance entre positions. Une telle description est possible en utilisant
+le langage des réseaux bayésiens. Dans ce cadre, les dépendances sont
+représentées par un graphe orienté acyclique $G$, dont les n{\oe}uds sont les
+variables $X_i$ et les liens sont les conditionnements d'une variable
+avec les variables parentes (fig.~\ref{fig:modeles-correlations}e). La
+probabilité jointe s'écrit :
+
+\begin{equation}
+    P(X_1,\cdots,X_k) = \prod_{i=1}^{K} P(X_i | P_i^G)
+\end{equation}
+
+où $P_i^G$ est l'ensemble (pouvant être vide) des parents de $X_i$ dans $G$. Le
+nombre de paramètres peut rapidement devenir grand. Si l'on note $N_i$ le
+nombre de parents de $X_i$, alors le nombre de paramètres du modèle est $3
+\sum_{i=1}^K 4^{N_i}$.
+
+Lorsque les différents n{\oe}uds possèdent au plus un parent, on parle d'arbre
+bayésien, et $G$ est alors une forêt (fig.~\ref{fig:modeles-correlations}d). Ce
+type d'arbre généralise notamment le cas des chaînes de Markov d'ordre $1$, où
+chaque n{\oe}ud dépend du n{\oe}ud précédent
+(fig.~\ref{fig:modeles-correlations}c). Le nombre de paramètres est alors
+restreint, puisqu'il est au plus de $3\cdot4K$.
+\\
+
+L'avantage des arbres bayésiens est qu'il existe des algorithmes permettant de
+trouver la meilleure structure d'arbre~\cite{friedman1997bayesian}. De tels
+modèles d'arbres ont été utilisés pour décrire les données de $95$ TFs de
+Transfac~\cite{Barash2003MDP}. Dans $\sim25\%$ des cas ($22/95$), le modèle
+d'arbre bayésien s'avère significativement meilleur qu'un modèle PWM, ce qui
+est du même ordre de grandeur que pour le modèle
+GWM~\ref{sub:mod_lisation_de_corr_lations_mutuellement_exclusives_le_mod_le_gwm}.
+
+
+% subsection r_seaux_bay_siens (end)
+
+\subsection{Modèles de mélange}
+\label{sub:mod_les_de_m_lange}
+
+Dans les cas précédents, nous avons présenté des modèles capturant des
+dépendances \og locales \fg entre quelques nucléotides. Néanmoins, il peut
+exister des dépendances plus largement réparties entre les positions, comme
+cela a déjà été observé empiriquement~\cite{Badis2009p3911,Jolma2013p3971}. De
+telles corrélations à plus grande échelle peuvent être modélisées en supposant
+que le \tf possède plusieurs \og modes \fg de fixation. Ceux-ci peuvent par
+exemple correspondre à différentes conformations de la protéine sur son site de
+fixation, chaque configuration possédant ses propres préférences de fixation.
+Ces modes sont décrits par une variable aléatoire $T$ (le \textit{type} de
+fixation) de probabilité $P(T)$. Il est ensuite possible de décrire la fixation
+dans chaque mode par l'un des modèles précédents.
+
+\subsubsection{Mélange de PWMs}
+\label{ssub:m_lange_de_pwms}
+
+Le cas le plus naturel consiste à utiliser le modèle PWM, \cad que dans chaque
+mode de fixation il y a indépendance entre les positions. La probabilité
+d'observer un site est alors donnée par la somme sur les différents modes de
+fixation conditionnés par la probabilité d'être dans ce mode :
+
+\begin{equation}
+    P(X_1,\cdots,X_K) = \sum_{T=1}^C P(T) \prod_{i=1}^K P(X_i|T)
+\end{equation}
+
+où $C$ est le nombre de modes de fixation. Ce modèle a plusieurs avantages.
+D'abord, le nombre de paramètres reste linéaire en $K$ : pour décrire $P(T)$ et
+les $C$ PWMs il faut $C - 1 + 3KC$. Ce nombre reste dont raisonnablement faible
+devant le nombre de paramètres requis pour complètement décrire les
+interactions à deux nucléotides, qui croît comme $K^2$. Ensuite, le modèle
+a une interprétation claire qui peut permettre de mettre en exergue un
+mécanisme biologique sous-jacent.
+\\
+
+Ce type de modèle permet de dépasser le modèle PWM dans un nombre substantiel
+de cas. Ainsi, \citet{Barash2003MDP} ont montré que $\sim40\%$ des TFs de
+Transfac ($36/95$) sont significativement mieux représentés par un mélange de
+$2$ PWMs que par une seule PWM.
+
+
+% subsubsection m_lange_de_pwms (end)
+
+
+\subsubsection{Mélange d'abres}
+\label{ssub:m_lange_d_abres}
+
+De la même manière que les PWMs, il est possible d'étendre les modèles
+d'arbres, pour lesquels il existe des algorithmes d'apprentissage efficaces, en
+réalisant un mélange d'arbres. Intuitivement, ceci permet de capturer des
+dépendances additionnelles en gardant un nombre de paramètres linéaire en
+fonction de la taille du motif. Un tel modèle semble posséder des performances
+comparables au mélanges de PWM, et améliore la description des TFs de Transfac
+dans $\sim40\%$ des cas ($35/95$)~\cite{Barash2003MDP}.
+
+
+% subsubsection m_lange_d_abres (end)
+
+
+% subsection mod_les_de_m_lange (end)
+
+\section{Modèles de maximum d'entropie}
+\label{sec:modeles-maxent}
+
+\bfig
+\includegraphics[width=1.0\textwidth]{figures/entropie.pdf}
+\captionbf{Illustration d'un système dont on veut maximiser l'entropie}{
+
+    Le système explore $K$ états $\{s_1,\cdots,s_K\}$ au cours du temps. Au
+    bout de $N$ observations, un état $s_i$ a été observé $n_i$ fois. À chaque
+    état correspond un certain nombre de quantités $\mathcal{O}_\alpha(s_i)$,
+    appelées observables, dont seule la valeur moyenne empirique $\left\langle
+    \mathcal{O}_\alpha(s)\right\rangle_r$ est connue de l'observateur.
+
+}
+\label{fig:entropie}
+\efig
+
+
+\subsection{Pourquoi maximiser l'entropie?}
+\label{sub:pourquoi_maximiser_l_entropie_}
+
+Le concept d'entropie remonte aux prémisses de la physique
+statistique~\cite{Jaynes1978p795}. Dans l'essence, il peut être compris de la
+manière suivante. Supposons qu'un système comporte $K$ états distincts
+$\{s_1,\cdots,s_K\}$. Au cours du temps, le système explore les différents
+états (fig.~\ref{fig:entropie}). Au bout de $N$ observations, chaque état a été
+observé un nombre $n_i$ de fois. La question sous-jacente au calcul de
+l'entropie est la suivante : sans connaissance \apriori sur le système, que
+puis-je dire de ces $n_i$? Prenons l'exemple de la figure \ref{fig:entropie}.
+On a certaines valeurs pour les $n_i$ ($n_1=3$, $n_2=1$, etc.), et on aimerait
+savoir de combien de manières il est possible de réaliser un tel ensemble de
+valeurs. Notons ce nombre $\mathcal{N}(n_1,\cdots,n_K)$. Il est donné par la
+formule suivante :
+
+\begin{align}
+    \begin{split}
+    \mathcal{N}(n_1,\cdots,n_K) & = \binom{N}{n_1}\binom{N-n_1}{n_2}\cdots\binom{N-\sum_{i=1}^{K-1} n_i}{n_K} \\
+    & = \frac{N!}{(N-n_1)!n_1!} \times \frac{(N-n_1)!}{(N-n_1-n_2)!n_2!} \times \cdots \times \frac{(N-\sum_{i=1}^{K-1}n_i)!}{0!n_K!}
+    \end{split}
+\end{align}
+
+soit en utilisant $0!=1$ :
+
+\begin{equation}
+   \mathcal{N}(n_1,\cdots,n_K) = \frac{N!}{n_1!n_2!\cdots n_K!} 
+\end{equation}    
+
+Il convient alors de s'intéresser au logarithme de cette quantité. En effet, dans le cas où les nombres d'observation sont grands, ceux-ci se formulent simplement grâce à la formule de Stirling :
+
+\begin{equation}
+    \log(n!) \xrightarrow[n\to\infty]{} n\log(n)-n
+\end{equation}
+
+On peut alors écrire
+
+\begin{align}
+    \begin{split}
+   \log\mathcal{N}(n_1,\cdots,n_K) & = N\log(N) - N - \sum_{i=1}^K \left(n_i\log(n_i) -n_i\right) \\ 
+   & = \sum_{i=1}^K n_i\log(\frac{N}{n_i}) \\ 
+   & = -N \sum_{i=1}^K \frac{n_i}{N}\log(\frac{n_i}{N})
+   \end{split}
+\end{align}
+
+On note l'apparition des probabilités empiriques $f(s_i)=\frac{n_i}{N}$ d'observer
+l'état $s_i$, qui tendent asymptotiquement (dans la limite \og thermodynamique \fg
+$n \to \infty$) vers les \og vraies \fg probabilités $P(s_i)$. L'entropie est définie dans cette limite comme étant égale à $1/N\log\mathcal{N}(n_1,\cdots,n_K)$, soit
+
+\begin{equation}
+   \label{eq-entropy}
+   \boxed{
+   S[P] = - \sum_{\left\{ s \right\}}P(s) \log P(s)
+   }
+\end{equation}
+
+où $\{s\} = \{s_1,\cdots,s_K\}$. L'idée est alors la suivante : nous souhaitons
+savoir quels états le système a le plus probablement visité au cours de ses $N$
+transitions. Sans connaissance \apriori sur le système, il est plus probable
+que les nombres $(n_1,\cdots,n_K)$ obtenus soit ceux qui sont réalisés le plus
+souvent, \cad ceux qui maximisent la quantité $\mathcal{N}(n_1,\cdots,n_K)$, et
+donc au final l'entropie. Par ailleurs, les fluctuations relatives des
+quantités $n_i$ sont de l'ordre de $1/\sqrt{n_i}$~\cite{sethna2006statistical}.
+Ainsi, la solution de maximum d'entropie domine largement les autres solutions
+possibles dans la limite thermodynamique.
+
+% subsection pourquoi_maximiser_l_entropie_ (end)
+
+\subsection{Maximisation de l'entropie sous contraintes}
+\label{sub:maximisation_de_l_entropie_sous_contraintes}
+
+Notons $\mathcal{O}_\al(s)$ une quantité attachée à $s$
+(fig.~\ref{fig:entropie}). En thermodynamique, une telle quantité correspond
+par exemple à l'énergie d'un état. L'observateur n'a accès qu'aux valeurs
+moyennes de telles quantités sous-jacentes. Les valeurs moyennes empiriques
+calculées avec les fréquences $f(s)$ doivent donc être compatibles avec les
+valeurs moyennes calculées avec la distribution de probabilité $P(s)$ :
+
+\begin{equation}
+   \label{eq:constraints}
+   \sum_{\{s\}} P(s) \mathcal{O}_\al(s) = \sum_{\{s\}}f(s) \mathcal{O}_\al(s)
+\end{equation}
+
+Nous souhaiterions maintenant connaître la distribution $P(s)$ la moins biaisée
+(i.e de maximum d'entropie) sachant les contraintes de l'éq.
+\ref{eq:constraints} imposées par l'observation des données. Ce problème
+revient à maximiser le Lagrangien suivant :
+
+\begin{equation}
+   \mathcal{L}  =  - \sum_{\{ s \}} P(s) \log P(s) + \lambda \left(\sum_{\{ s \}}
+   P(s) -1\right)  +  \sum_\al \beta_\al \sum_{\{s\}} \left( P(s) - f(s) \right) \mathcal{O}_\al(s) 
+\end{equation}
+
+où les paramètres $\lambda$ et $\beta_\al$ sont les multiplicateurs de Lagrange
+correspondant respectivement à la contrainte de normalisation de la
+distribution de probabilité et aux correspondances des valeurs moyennes de
+l'éq. \ref{eq:constraints}.  La maximisation de ce Lagrangien est obtenue en
+annulant la dérivée fonctionnelle par rapport à la distribution de probabilité
+$P(s)$ :
+
+\begin{equation}
+   \frac{\delta \mathcal{L}}{\delta  P(s)}   =  0  
+   = - \ln P(s) - 1  + \lambda  
+   +  \sum_{\al} \beta_\al \mathcal{O}_\al(s)
+\end{equation}
+
+En utilisant la normalisation des probabilités, il est possible de trouver
+$\lambda$, et la solution se met finalement sous la forme 
+
+\begin{equation}
+    \label{eq:boltzmann}
+    \boxed{
+        P(s) = \frac{1}{\mathcal{Z}} e^{-\mathcal{H}(s)}
+    }
+\end{equation}
+
+où $\mathcal{H}$ est l'Hamiltonien du système :
+
+\begin{equation}
+   \mathcal{H} = \sum_\al \beta_\al\mathcal{O}_\al(s)
+\end{equation}
+
+et $\mathcal{Z}$ est la fonction de partition permettant la normalisation de la
+distribution $P$ :
+
+\begin{equation}
+   \mathcal{Z}=\sum_{\{s\}} \exp[- \mathcal{H}(s)].
+\end{equation}
+
+
+\Remarque{
+
+    \footnotesize{
+        Il est possible de montrer que la maximisation de l'entropie, partant des
+        contraintes sur les valeurs moyennes pour en arriver à une forme exponentielle
+        de la distribution de probabilité, est le contrepoint d'une maximisation de la
+        vraisemblance partant d'une forme exponentielle pour en arriver aux mêmes
+        conditions sur les valeurs
+        moyennes~\cite{grendar2001minimax,jaynes1982rationale}.
+    }
+
+}
+
+% subsection maximisation_de_l_entropie_sous_contraintes (end)
+
+\subsection{Application aux sites de fixation}
+\label{sub:application_aux_sites_de_fixation}
+
+\subsubsection{Corrélation à un point : le modèle PWM}
+\label{ssub:corr_lation_un_point_le_mod_le_pwm}
+
+Dans notre cas, un état $s$ correspond à une séquence d'ADN appartenant
+à l'ensemble $\left\{ s \right\}$ des sites de fixation d'un \tf. Considérons
+maintenant l'observable quantifiant la présence du nucléotide $a$ à la position
+$i$ d'un site :
+
+\begin{equation}
+    \mathcal{O}_{i,a}(s) = \delta(s_i,a)
+\end{equation}
+
+
+où $\delta$ est la fonction de Kronecker qui vaut $1$ lorsque le nucléotide
+à la position $i$ du site $s_i$ est $a$ et $0$ sinon. De cette définition il suit que la valeur moyenne sur les fréquences empiriques
+
+
+\begin{equation}
+    \label{eq:onepoint}
+    \sum_{\{s\}} f(s) \mathcal{O}_{i,a}(s) = f_{i,a}
+\end{equation}
+
+se réduit à la fréquence du nucléotide $a$ à la position $i$. Notons $h_i(a)$
+le multiplicateur de Lagrange correspondant et $\mathcal{A} = \{A,C,G,T\}$. On trouve alors
+
+\begin{align}
+    \begin{split}
+    \mathcal{H}(s) & = \sum_{i=1}^L \sum_{a \in \mathcal{A}} h_i(a) \delta(s_i,a)\\
+     & = \sum_{i=1}^L h_{i}(s_i)
+    \end{split}
+\end{align}
+
+Les différentes positions étant indépendantes, la fonction de partition
+$\mathcal{Z}$ peut par ailleurs se scinder en fonctions de partitions par
+position $\mathcal{Z}=\prod_{i=1}^L\mathcal{Z}_i$. On obtient au final
+
+\begin{equation}
+    P(s) = \frac{1}{\mathcal{Z}} e^{-\sum\limits_{i=1}^L h_i(s_i)} = \prod_{i=1}^L \frac{e^{-h_i(s_i)}}{\mathcal{Z}_i}
+\end{equation}
+
+On retrouve le modèle PWM introduit dans l'éq.~\ref{eq:boltzmann}.
+
+
+
+% subsubsection corr_lation_un_point_le_mod_le_pwm (end)
+
+\subsubsection{Corrélations à deux points : le modèle de Potts}
+\label{ssub:corr_lations_deux_points_le_mod_le_de_potts}
+
+
+Il est maintenant relativement direct de complexifier le modèle en ajoutant
+l'observation des couples d'interaction au sein des sites de fixation :
+
+\begin{equation}
+    \mathcal{O}_{i,a,j,b}(s) = \delta(s_i,a)\delta(s_j,b)
+\end{equation}
+
+La corrélation à deux points entre le nucléotide $a$ en position $i$ et $b$ en
+position $j$ s'écrit donc 
+
+\begin{equation}
+    \label{eq:twopoints}
+    \sum_{\{s\}} f(s) \mathcal{O}_{i,a,j,b}(s) = f_{i,a,j,b}
+\end{equation}
+
+où $f_{i,a,j,b}$ est la fréquence empirique d'observation de la paire de
+nucléotide $(a,b)$ aux positions $(i,j)$. Notons $J_{i,j}(a,b)$ le
+multiplicateur de Lagrange correspondant. L'Hamiltonien sous les contraintes
+imposées par les équations \ref{eq:onepoint} et \ref{eq:twopoints} s'écrit :
+
+
+\begin{align}
+    \begin{split}
+    \mathcal{H}(s) & = \sum_{i=1}^L \sum_{a \in \mathcal{A}} h_i(a) \delta(s_i,a) + \sum_{i=1}^{L-1} \sum_{j>i} \sum_{a \in \mathcal{A}} \sum_{b \in \mathcal{A}} J_{i,j}(a,b) \delta(s_i,a)\delta(s_j,b)\\
+    & = \sum_{i=1}^L h_{i}(s_i) + \sum_{i=1}^{L-1}\sum_{j>i} J_{i,j}(s_i,s_j)
+\end{split}
+\end{align}
+
+Le modèle de maximum d'entropie est finalement
+
+\begin{equation}
+    \boxed{
+    P(s) = \frac{1}{\mathcal{Z}} e^{-\sum\limits_{i=1}^L h_i(s_i)-\sum\limits_{i=1}^{L-1} \sum\limits_{j>i} J_{i,j}(s_i,s_j)} 
+}
+\end{equation}
+
+On reconnaît le modèle de Potts inhomogène de champs magnétiques locaux $h_i$
+et de termes d'interaction $J_{i,j}$~\cite{baxter2007exactly}.
+
+
+% subsubsection corr_lations_deux_points_le_mod_le_de_potts (end)
+
+% subsection application_aux_sites_de_fixation (end)
+
+
+\section{Article} 
+\label{sec:article}
+
+Cet article décrit l'analyse de données de fixation \invivo à grande échelle
+pour plusieurs TFs drosophiles et mammifères. Différents modèles sont comparés,
+incluant ou non des dépendances : un modèle PWM, un modèle de mélange de PWMs,
+et un modèle de Potts.
+
+
+\includepdf[pages=-]{articles/maxent-arxiv}
+
+% section article (end)
+
+
+\section{Chaleur spécifique} 
+\label{sec:chaleur_sp_cifique}
+
+En plus des résultats présentés dans l'article, nous nous sommes intéressés
+à une quantité classique de la thermodynamique : la chaleur spécifique ou
+capacité calorifique. Cette quantité est définie de la manière suivante. Soit
+un modèle décrit par la statistique de Boltzmann à la température inverse
+$\beta=1/kT$:
+
+\begin{equation}
+    P(s) = \frac{1}{\mathcal{Z} e^{-\beta \mathcal{H}(s)}}
+\end{equation}
+
+Le cas de l'équation \ref{eq:
+
+\bfig
+\includegraphics[width=.8\textwidth]{figures/maxent/specific_heat.pdf}
+\captionbf{Chaleur spécifique pour différents TFs}{
+
+    La chaleur spécifique (l'équivalent de la capacité calorifique en
+    thermodynamique) $C=d<E>/dT$ est tracée en fonction de la
+    température $kT$ (échelle logarithmique) pour les différents TFs
+    considérés. Le modèle indépendant (bleu) et le modèle de Potts avec
+    interactions (rouge) sont comparables dans la plupart des cas.
+
+}
+\label{fig:maxent/specific_heat}
+\efig
+
+\bfig
+\includegraphics[width=1.\textwidth]{figures/maxent/histogrammes_champs.pdf}
+\captionbf{Histogrammes des valeurs des champs $h$ et couplages $J$}{
+
+    Histogrammes réalisés à partir des valeurs obtenues pour l'ensemble des
+    TFs, avec un bin de $0.05$. La représentation étant logarithmique, les
+    champs et les couplages sont montrés en valeur absolue, et les valeurs
+    nulles ne sont pas représentées. (A) Champs $h_{inde}$ dans le modèle
+    indépendant. (B) Champs $h_{pw}$ et couplages $J$ dans le modèle de Potts.
+
+}
+\label{fig:histogrammes_champs}
+\efig
+
+Dans le modèle indépendant, les champs sont simplement le logarithme de la
+probabilité d'observer un nucléotide à une position donnée. En valeur absolue,
+les champs $h$ proches de $0$ correspondent aux nucléotides très conservés
+(toujours observés), les valeurs autour de $1$ correspondent à des nucléotides
+également observés ($|\log(1/4)| \sim 1.4$) et les valeurs autour de $10$
+correspondent aux nucléotides qui ne sont jamais observés, au pseudocount près
+(pour un pseudocount de $1$ et $10^4$ séquences, $|\log(10^{-4})| \sim 9.2$).
+
+\FloatBarrier
+
+% section chaleur_sp_cifique (end)
+\section{Conclusion et perspectives}
+
+
+Nous avons analysé les dépendances au sein des sites de fixation liés \invivo
+pour plusieurs \tfs Drosophiles et mammifères. Nous avons comparé les
+performances d'un modèle PWM, d'un modèle de mélange de PWMs, et d'un modèle de
+Potts, en utilisant un critère bayésien (BIC) pénalisant les modèles à grand
+nombre de paramètres. Nous avons exhibé l'existence de corrélations faibles
+dont la prise en compte permet de significativement améliorer la description
+des données, le modèle de Potts étant significativement supérieur aux deux
+autres modèles dans la plupart des cas ($22/28$). Les interactions ont été
+étudiées systématiquement, montrant notamment une prépondérance des
+interactions entre plus proches voisins. Nous avons établi une correspondance
+entre les PWMs du modèle de mélange et les PWMs décrivant les sites des états
+métastables du paysage énergétique généré par le modèle de Potts. Enfin, nous
+avons montré que les corrélations pouvaient être groupées en patterns de
+Hopfield ou \og mémoires \fg, et qu'un petit nombre était suffisant
+à reconstruire le paysage d'interactions.
+\\
+
+Une perspective intéressante de ce travail serait de conduire la même analyse
+sur des données grande échelle obtenues \invitro par la méthode
+HT-SELEX~\cite{Jolma2013p3971}. Notamment, certains des facteurs que nous avons
+étudiés \invivo sont représentés dans ces données, et il serait intéressant de
+voir les différences entre les deux modèles de Potts et modèles de mélanges
+obtenus. Notamment, retrouve-t-on les mêmes corrélations? Peut-on exhiber des
+spécificités à la fixation \invivo, où l'on s'attend à avoir des effets
+provenant de diverses sources (fixation de nucléosomes, superposition de sites
+de fixations, \ldots)? Ces questions feront l'objet d'un prochain travail.
+
+

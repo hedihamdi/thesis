@@ -60,7 +60,8 @@
 %\part{Première partie}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{\ChIntro}
-\ifthenelse{\FaitMinitocs > 0}{\adjustmtc\minitoc}{Minitoc}
+\minitoc
+\adjustmtc
 \newpage
 \input{chapters/Chapter-intro}
 \newpage 
@@ -68,23 +69,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{\ChMaxent} 
 \label{ch:maxent}
-\ifthenelse{\FaitMinitocs > 0}{\adjustmtc\minitoc}{Minitoc}
+\minitoc
 \newpage
-%\input{chapters/Chapter-maxent}
-%\includepdf[pages=-]{articles/maxent-arxiv}
+\input{chapters/Chapter-maxent}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{\ChImogene} 
 \ifthenelse{\FaitMinitocs > 0}{\adjustmtc \minitoc}{Minitoc}
 \newpage
-%\include{chapters/Chapter-imogene}
+\input{chapters/Chapter-imogene}
 %\includepdf[pages=-]{articles/imogene-genomebiol.pdf}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{\ChTrichomes}
 \ifthenelse{\FaitMinitocs > 0}{\adjustmtc \minitoc}{Minitoc}
 \newpage
-%\input{chapters/Chapter-trichomes}
+\input{chapters/Chapter-trichomes}
 %\includepdf[pages=-]{articles/trichomes-plosbiol-merged.pdf}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,14 +92,16 @@
 \label{chap:muscle}
 \ifthenelse{\FaitMinitocs > 0}{\adjustmtc \minitoc}{Minitoc}
 \newpage
-%\input{chapters/Chapter-muscle}
+\input{chapters/Chapter-muscle}
 \newpage
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\chapter{\ChTest}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
 %\newpage
 %\input{chapters/Chapter-test}
 %\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \include{packaging/Conclusion_Generale}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
