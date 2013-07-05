@@ -1,31 +1,31 @@
 \section*{Introduction du chapitre \thechapter}
 
 Dans cette partie, nous nous intéressons à la description de l'interaction
-entre les \fts et leurs sites de reconnaissance sur l'ADN, interaction qui est
-au c{\oe}ur des réseaux génétiques.  Pendant longtemps, la qualité de cette
-description a été limitée par la quantité de données disponibles. Ainsi, les
-expériences de type SELEX (voir \ref{sub:approches_invitro}), où des
-expériences de \chip au cas par cas permettaient de récupérer de l'ordre de
-quelques dizaines de sites de fixation pour un TF d'intérêt. Or, le modèle PWM,
-qui est le modèle le plus simple (en terme de nombre de paramètres) que l'on
-puisse bâtir pour décrire l'interaction possède déjà plusieurs dizaines de
-paramètres -- les fréquences des nucléotides à chaque position --. 
+entre les \fts et leurs sites de reconnaissance sur l'ADN.  Pendant longtemps,
+la qualité de cette description a été limitée par la quantité de données
+disponibles. Ainsi, les expériences de type SELEX (voir
+\ref{sub:approches_invitro}), où des expériences de \chip au cas par cas
+permettaient de récupérer de l'ordre de quelques dizaines de sites de fixation
+pour un TF d'intérêt. Or, le modèle PWM, qui est le modèle le plus simple (en
+terme de nombre de paramètres) que l'on puisse bâtir pour décrire l'interaction
+possède déjà plusieurs dizaines de paramètres -- les fréquences des nucléotides
+à chaque position --. 
 
 Ces données ne permettaient donc pas d'explorer plus en avant des modèles plus
-complexes de fixation, où par exemple on inclurait des termes d'interaction
-entre nucléotides au sein des sites de fixation. Cependant, les avancées
-récentes en séquençage à haut débit ont permis l'obtention de données très
-grande échelle, que ce soit \invivo par \chipseq ou \invitro par HT-SELEX (voir
+complexes de fixation incluant par exemple des termes d'interaction entre
+nucléotides au sein des sites de fixation. Cependant, les avancées récentes en
+séquençage à haut débit ont permis l'obtention de données très grande échelle,
+que ce soit \invivo par \chipseq ou \invitro par HT-SELEX (voir
 \ref{sec:mesures_exp}). Le nombre de sites de fixation obtenus est de l'ordre
 de quelques milliers, ce qui permet de contraindre des modèles de fixation plus
 complexe que le modèle PWM.
 
 En utilisant des données \chipseq pour un grand nombre de \fts de la Drosophile
-et des vertébrés, nous avons construit différents modèles de fixation incluant
-implicitement ou explicitement des interactions entre nucléotides afin de juger
-de leur importance dans la description de l'interaction TF-ADN \invivo. Nous
-présentons préalablement un survol des observations et modèles existant au
-sujet des corrélations dans les sites de fixations de \fts.
+et des vertébrés, nous avons contraint différents modèles de fixation incluant
+implicitement ou explicitement des interactions entre nucléotides. Nous les
+avons comparés sur leur capacité à décrire les statistiques de fixation TF-ADN
+observées \invivo. Nous présentons préalablement un survol des observations et
+modèles existant au sujet des corrélations dans les sites de fixations de \fts.
 
 \section{Observations de corrélations au sein des TFBS}
 \label{sec:corr_lations_au_sein_des_sites_de_fixation_de_tfs}
@@ -33,14 +33,14 @@ sujet des corrélations dans les sites de fixations de \fts.
 Différents travaux ont mis en exergue l'existence de corrélations entre
 nucléotides au sein des sites de fixation de TFs. Parce que limitées par la
 quantité de données alors possible d'obtenir, les premières études de ce genre
-ont centré leur attention sur les corrélations importantes pour quelques cas
+ont centré leur attention sur quelques corrélations importantes pour des cas
 particuliers. Ainsi, \citet{Man2001fk} ont observé que la protéine Mnt induit
 des corrélations entre les positions $16$ et $17$ de ses sites de
 reconnaissance \invitro. Ils ont mesuré expérimentalement la spécificité aux
 sites de liaisons contenant tous les variants possibles à ces deux positions.
 Ils ont ainsi observé que la mutation de la base consensus C en position 17
 induisait un changement de préférence en position 16 de la base A vers la base
-C. Par ailleurs, \citet{Bulyk2002uq} ont montré que la protéine EGR1 induisait
+C. Par ailleurs, \citet{Bulyk2002uq} ont montré que la protéine EGR$1$ induisait
 des corrélations au sein d'un triplet de nucléotides central de leur site de
 reconnaissance. La prise en compte de ces corrélations dans l'énergie de
 fixation permettait alors d'améliorer la description des données par rapport au
@@ -73,11 +73,9 @@ corrélations mutuellement exclusives aux positions les plus corrélées
 (fig.~\ref{fig:modeles-correlations}b). D'autres méthodes utilisent des
 structures probabilistes de dépendances sous forme de chaînes de Markov
 (fig.~\ref{fig:modeles-correlations}c) ou plus généralement de réseau bayésien
-ou (fig.~\ref{fig:modeles-correlations}d-e), rendant alors l'interprétation
-moins évidente. Enfin, il est possible de réaliser des mélanges de modèles afin
-de capturer des ensembles distincts de corrélations
-(fig.~\ref{fig:modeles-correlations}f-g). Nous recensons ici ces différents
-modèles.
+ou (fig.~\ref{fig:modeles-correlations}d-e). Enfin, une dernière méthode
+consiste à réaliser des mélanges de modèles afin de capturer des ensembles
+distincts de corrélations (fig.~\ref{fig:modeles-correlations}f-g).
 
 \bfig
 \includegraphics[width=1\textwidth]{figures/modeles-correlations.pdf}
@@ -86,16 +84,14 @@ modèles.
     Exemples illustrant différents modèles de fixation sur un site de longueur
     $5$. Pour chaque modèle, la structure du réseau de dépendances sous-jacent
     est représentée, ainsi que la distribution de probabilité
-    $P(X_1,X_2,X_3,X_4,X_5)$ correspondante, où $X_i$ correspond au nucléotide
-    (A, C, G ou T) à la position $i$. Les modèles représentés sont les suivants
-    :
-    (a) PWM (pas de corrélations), 
-    (b) GWM (corrélations mutuellement exclusives), 
-    (c) chaîne de Markov d'ordre $1$ (corrélations entre plus proches voisins), 
-    (d) réseau bayésien en arbre (au plus un parent par n{\oe}ud) ou 
-    (e) pas en arbre (le n{\oe}ud $2$ a deux parents), 
-    (f) mélange de PWMs et 
-    (e) mélange d'arbres à dépendances fixées.
+    $P(X_1,X_2,X_3,X_4,X_5)$ correspondante, où $X_i$ est une variable
+    aléatoire prenant la valeur (A, C, G ou T) du nucléotide à la position $i$.
+    Les modèles représentés sont les suivants : (a) PWM (pas de corrélations),
+    (b) GWM (corrélations mutuellement exclusives), (c) chaîne de Markov
+    d'ordre $1$ (corrélations entre plus proches voisins), (d) réseau bayésien
+    en arbre (au plus un parent par n{\oe}ud) ou (e) pas en arbre (le n{\oe}ud
+    $2$ a deux parents), (f) mélange de PWMs et (e) mélange d'arbres
+    à dépendances fixées.
 
 }
 \label{fig:modeles-correlations}
@@ -122,10 +118,10 @@ consiste à faire l'hypothèse que les nucléotides contribuent indépendamment
 \end{equation}
 
 où $P(X_i)$ est la probabilité marginale d'observer le nucléotide $X \in
-\{A,C,G,T\}$ à la position $i$. Un tel modèle possède $3K$ paramètres, \cad $3$
+\{A,C,G,T\}$ à la position $i$. Un tel modèle possède $3K$ paramètres -- $3$
 paramètres $P(X_i)$ par position, la normalisation des probabilités permettant
-de fixer le paramètre restant. Pour une longueur typique $K=10$, le modèle PWM
-contient donc $30$ paramètres à contraindre, sachant qu'un \og modèle \fg
+de fixer le paramètre restant --. Pour une longueur de site typique $K=10$, le modèle
+PWM contient $30$ paramètres à contraindre, sachant qu'un \og modèle \fg
 complet paramétrant la distribution jointe sans faire d'hypothèse comporterait
 $4^{10}-1 \sim 10^6$ paramètres.
 
@@ -134,49 +130,60 @@ $4^{10}-1 \sim 10^6$ paramètres.
 \subsection{Une PWM généralisée : le modèle GWM}
 \label{sub:mod_lisation_de_corr_lations_mutuellement_exclusives_le_mod_le_gwm}
 
- Une première méthode permettant de compléter le modèle PWM consiste à intégrer
- explicitement des groupes mutuellement exclusif de nucléotides corrélés au
- sein du modèle (fig.~\ref{fig:modeles-correlations}b). Une telle méthode fut
- d'abord employée par \citet{Benos2002p3912} pour prendre en compte des
- corrélations préalablement définies entre nucléotides plus proches voisins. De
- manière plus générale, \citet{zhou2004modeling} ont développé un modèle de
- matrice de poids généralisée (GWM pour \textit{Generalized Weight Matrix}) qui
- prend en compte de manière systématique les corrélations permettant
- d'améliorer le modèle indépendant selon une méthode de Monte-Carlo par chaîne
- de Markov (MCMC) : les corrélations sont ajoutées ou enlevées au hasard et
- acceptées selon la règle de Metropolis-Hastings. Cette acceptation est
- dépendante du facteur de Bayes, une quantité qui permet de comparer des
- modèles possédant des nombres de paramètres différents. Ce facteur est défini
- par le rapport entre la probabilité de générer les données $D$ (les séquences
- de fixation) avec un modèle $M_1$ de paramètres $\theta_1$ plutôt qu'avec un
- autre modèle $M_2$ de paramètres $\theta_2$ :
+ Une première méthode permettant de complexifier le modèle PWM consiste
+ à intégrer explicitement des groupes mutuellement exclusif 
+ \footnote{
+ Les corrélations entre des couples de positions (i,j) et (j,k) ne peuvent être
+ admises au sein du même modèle.
+ }
+ de nucléotides corrélés au sein du modèle
+ (fig.~\ref{fig:modeles-correlations}b). Une telle méthode fut d'abord employée
+ par \citet{Benos2002p3912} pour prendre en compte des corrélations
+ préalablement définies entre nucléotides plus proches voisins. De manière plus
+ générale, \citet{zhou2004modeling} ont développé un modèle de matrice de poids
+ généralisée (GWM pour \textit{Generalized Weight Matrix}) qui prend en compte
+ de manière systématique les corrélations permettant d'améliorer le modèle
+ indépendant. Pour ce faire, les auteurs utilisent une méthode de Monte-Carlo
+ par chaîne de Markov (MCMC) : des corrélations sont ajoutées ou enlevées au
+ hasard au modèle et acceptées selon la règle de
+ Metropolis-Hastings~\cite{krauth2006statistical}. Cette acceptation est
+ proportionnelle au facteur de Bayes, une quantité qui permet de comparer des
+ modèles possédant des nombres de paramètres différent 
+ \footnote{ 
+     Sous certaines approximation, ce facteur peut se rapporter à une
+     différence de valeurs du BIC, introduit dans l'article en
+     \ref{sec:article}. 
+ } 
+ .  
+ Ce facteur est défini par le rapport entre la probabilité de générer les
+ données $D$ (les séquences de fixation) avec un modèle $M_1$ de paramètres
+ $\theta_1$ plutôt qu'avec un autre modèle $M_2$ de paramètres $\theta_2$ :
 
 \begin{equation}
     BF = \frac{P(D|M_1)}{P(D|M_2)} = \frac{\int P(D | \theta_1, M_1) P(\theta_1|M_1) d\theta_1}{\int P(D | \theta_2, M_2) P(\theta_2|M_2) d\theta_2}
 \end{equation}
 
 Le modèle final consiste en un ensemble de paramètres décrivant des positions
-indépendantes et des positions corrélées, ces dernières étant mutuellement
-exclusives -- par exemple les corrélations entre positions (i,j) et (j,k) ne
-peuvent être admises au sein du même modèle --.  En analysant les données
-TRANSFAC, les auteurs ont noté que dans $25\%$ des cas ($22/95$) le modèle GWM
-était significativement meilleur que le modèle PWM (facteur de Bayes supérieur
-à $6$). 
+indépendantes et des positions corrélées mutuellement exclusives .  En analysant les données TRANSFAC, les auteurs ont noté que
+dans $25\%$ des cas ($22/95$) le modèle GWM était significativement meilleur
+que le modèle PWM (facteur de Bayes supérieur à $6$). 
 
 
 Cette méthode a par la suite été utilisée sur des données \chipseq pour $4$ TFs
 mammifères -- NRSF, STAT$1$, CTCF et ER --~\cite{hu2010detection}. En utilisant
 les $10\%$ des pics les plus importants comme ensemble d'apprentissage et en se
-restreignant aux $200$bp centrés autour du sommet du pic \chip, les auteurs ont
-réalisé un échantillonnage de Gibbs pour obtenir les sites de fixation suivant
-les hypothèses que (1) chaque pic contient un seul ou aucun site de fixation
-(modèle ZOOPS pour \textit{Zero or One Occurrences Per Sequence}), (2) la
-probabilité \apriori d'avoir un site à une certaine position sur la séquence
-est plus forte autour du sommet du pic, et (3) les sites sont décrits par un
-modèle GWM.  L'étude a révélé l'existence de corrélations fortes limitées aux
-nucléotides plus proches voisins dans tous les cas étudiés, et anti corrélées
-avec le contenu en information des positions dans la PWM. Ces corrélations
-pouvaient par ailleurs se retrouver sur des triplets de nucléotides voisins.
+restreignant aux régions de $200$bp centrées autour du sommet du pic \chip, les
+auteurs ont réalisé un échantillonnage de Gibbs~\cite{casella1992explaining}
+pour obtenir les sites de fixation suivant les hypothèses que (1) chaque pic
+contient au plus un seul site de fixation (modèle ZOOPS pour \textit{Zero or
+One Occurrences Per Sequence}), (2) la probabilité \apriori d'avoir un site
+à une certaine position sur la séquence est plus forte autour du sommet du pic,
+et (3) les sites sont décrits par un modèle GWM.  L'étude a révélé l'existence
+de corrélations fortes limitées aux nucléotides plus proches voisins dans les
+quatre cas étudiés. Les nucléotides participant aux corrélations se situaient
+à des positions ayant un faible contenu en information dans le modèle PWM.
+Enfin, les auteurs ont noté la présence de plusieurs triplets de nucléotides
+voisins corrélés.
 
 % subsection mod_lisation_de_corr_lations_mutuellement_exclusives_le_mod_le_gwm (end)
 
@@ -184,39 +191,41 @@ pouvaient par ailleurs se retrouver sur des triplets de nucléotides voisins.
 \subsection{Réseaux bayésiens}
 \label{sub:r_seaux_bay_siens}
 
-Une généralisation du modèle GWM consiste à dépasser la condition
-d'exclusion mutuelle des paires de nucléotides corrélés en décrivant le réseau
-de dépendance entre positions. Une telle description est possible en utilisant
-le langage des réseaux bayésiens. Dans ce cadre, les dépendances sont
-représentées par un graphe orienté acyclique $G$, dont les n{\oe}uds sont les
-variables $X_i$ et les liens sont les conditionnements d'une variable
-avec les variables parentes (fig.~\ref{fig:modeles-correlations}e). La
-probabilité jointe s'écrit :
+Une généralisation du modèle GWM consiste à supprimer la condition d'exclusion
+mutuelle des paires de nucléotides corrélés en décrivant de manière plus
+générale le réseau de dépendance entre positions. Une telle description est
+possible en utilisant le langage des réseaux bayésiens. Les dépendances y sont
+représentées par un graphe orienté acyclique \footnote{ Un graphe orienté
+    acyclique est un réseau dont les liens sont orientés et au sein duquel il
+    n'est pas possible de revenir à son point de départ en suivant les flèches
+} $G$, dont les n{\oe}uds sont les variables $X_i$ et les liens représentent
+les conditionnements d'une variable avec des variables parentes
+(fig.~\ref{fig:modeles-correlations}e). La probabilité jointe s'écrit :
 
 \begin{equation}
     P(X_1,\cdots,X_k) = \prod_{i=1}^{K} P(X_i | P_i^G)
 \end{equation}
 
 où $P_i^G$ est l'ensemble (pouvant être vide) des parents de $X_i$ dans $G$. Le
-nombre de paramètres peut rapidement devenir grand. Si l'on note $N_i$ le
+nombre de paramètres peut rapidement devenir grand : si l'on note $N_i$ le
 nombre de parents de $X_i$, alors le nombre de paramètres du modèle est $3
 \sum_{i=1}^K 4^{N_i}$.
 
 Lorsque les différents n{\oe}uds possèdent au plus un parent, on parle d'arbre
-bayésien, et $G$ est alors une forêt (fig.~\ref{fig:modeles-correlations}d). Ce
-type d'arbre généralise notamment le cas des chaînes de Markov d'ordre $1$, où
-chaque n{\oe}ud dépend du n{\oe}ud précédent
-(fig.~\ref{fig:modeles-correlations}c). Le nombre de paramètres est alors
-restreint, puisqu'il est au plus de $3\cdot4K$.
-\\
+bayésien (fig.~\ref{fig:modeles-correlations}d). Ce type de réseau bayésien
+généralise notamment le cas des chaînes de Markov d'ordre $1$, où chaque
+n{\oe}ud dépend du n{\oe}ud précédent (fig.~\ref{fig:modeles-correlations}c).
+Le nombre de paramètres est alors restreint, puisqu'il est au plus de
+$3\cdot4K$.  \\
 
-L'avantage des arbres bayésiens est qu'il existe des algorithmes permettant de
-trouver la meilleure structure d'arbre~\cite{friedman1997bayesian}. De tels
-modèles d'arbres ont été utilisés pour décrire les données de $95$ TFs de
-Transfac~\cite{Barash2003MDP}. Dans $\sim25\%$ des cas ($22/95$), le modèle
-d'arbre bayésien s'avère significativement meilleur qu'un modèle PWM, ce qui
-est du même ordre de grandeur que pour le modèle
-GWM~\ref{sub:mod_lisation_de_corr_lations_mutuellement_exclusives_le_mod_le_gwm}.
+L'avantage des arbres bayésiens est qu'il existe des algorithmes efficaces
+permettant de trouver la meilleure structure
+d'arbre~\cite{friedman1997bayesian}. De tels modèles d'arbres ont été utilisés
+pour décrire les données de $95$ TFs de Transfac~\cite{Barash2003MDP}. Dans
+$\sim25\%$ des cas ($22/95$), le modèle d'arbre bayésien s'avère
+significativement meilleur qu'un modèle PWM, ce qui est du même ordre de
+grandeur que pour le modèle GWM vu
+en~\ref{sub:mod_lisation_de_corr_lations_mutuellement_exclusives_le_mod_le_gwm}.
 
 
 % subsection r_seaux_bay_siens (end)
@@ -225,7 +234,7 @@ GWM~\ref{sub:mod_lisation_de_corr_lations_mutuellement_exclusives_le_mod_le_gwm}
 \label{sub:mod_les_de_m_lange}
 
 Dans les cas précédents, nous avons présenté des modèles capturant des
-dépendances \og locales \fg entre quelques nucléotides. Néanmoins, il peut
+dépendances \og locales \fg entre paires de nucléotides. Néanmoins, il peut
 exister des dépendances plus largement réparties entre les positions, comme
 cela a déjà été observé empiriquement~\cite{Badis2009p3911,Jolma2013p3971}. De
 telles corrélations à plus grande échelle peuvent être modélisées en supposant
@@ -234,33 +243,37 @@ exemple correspondre à différentes conformations de la protéine sur son site de
 fixation, chaque configuration possédant ses propres préférences de fixation.
 Ces modes sont décrits par une variable aléatoire $T$ (le \textit{type} de
 fixation) de probabilité $P(T)$. Il est ensuite possible de décrire la fixation
-dans chaque mode par l'un des modèles précédents.
+au sein de chaque mode par l'un des modèles précédents.
 
 \subsubsection{Mélange de PWMs}
 \label{ssub:m_lange_de_pwms}
 
-Le cas le plus naturel consiste à utiliser le modèle PWM, \cad que dans chaque
-mode de fixation il y a indépendance entre les positions. La probabilité
-d'observer un site est alors donnée par la somme sur les différents modes de
-fixation conditionnés par la probabilité d'être dans ce mode :
+Le cas le plus naturel consiste à utiliser comme modèle de fixation le modèle
+PWM, \cad que dans chaque mode il y a indépendance entre les positions. La
+probabilité d'observer un site est alors donnée par la somme sur les différents
+modes de fixation de la probabilité de fixer un site, conditionnée par la
+probabilité d'être dans ce mode :
 
 \begin{equation}
-    P(X_1,\cdots,X_K) = \sum_{T=1}^C P(T) \prod_{i=1}^K P(X_i|T)
+    P(X_1,\cdots,X_K) = \sum_{T=1}^N P(T) \prod_{i=1}^K P(X_i|T)
 \end{equation}
 
-où $C$ est le nombre de modes de fixation. Ce modèle a plusieurs avantages.
+où $N$ est le nombre de modes de fixation. Ce modèle a plusieurs avantages.
 D'abord, le nombre de paramètres reste linéaire en $K$ : pour décrire $P(T)$ et
-les $C$ PWMs il faut $C - 1 + 3KC$. Ce nombre reste dont raisonnablement faible
-devant le nombre de paramètres requis pour complètement décrire les
-interactions à deux nucléotides, qui croît comme $K^2$. Ensuite, le modèle
-a une interprétation claire qui peut permettre de mettre en exergue un
-mécanisme biologique sous-jacent.
-\\
+les $N$ PWMs il faut $N - 1 + 3KN$ paramètres. Ce nombre reste dont
+raisonnablement faible devant le nombre de paramètres requis pour complètement
+décrire les interactions à deux nucléotides, qui croît comme $K^2$. Ensuite, le
+modèle a une interprétation claire qui peut permettre de mettre en exergue un
+mécanisme biologique sous-jacent.  \\
 
 Ce type de modèle permet de dépasser le modèle PWM dans un nombre substantiel
 de cas. Ainsi, \citet{Barash2003MDP} ont montré que $\sim40\%$ des TFs de
 Transfac ($36/95$) sont significativement mieux représentés par un mélange de
-$2$ PWMs que par une seule PWM.
+$2$ PWMs que par une seule PWM. En utilisant des données \invitro plus précises
+pour $104$ TFs de la souris, \citet{Badis2009p3911} ont montré que $\sim 85\%$
+($89/104$) étaient mieux représenté par une combinaison de PWMs que par une PWM
+seule, plaidant pour un portée générale de l'existence de \og motifs
+secondaires \fg.
 
 
 % subsubsection m_lange_de_pwms (end)
@@ -269,12 +282,11 @@ $2$ PWMs que par une seule PWM.
 \subsubsection{Mélange d'abres}
 \label{ssub:m_lange_d_abres}
 
-De la même manière que les PWMs, il est possible d'étendre les modèles
-d'arbres, pour lesquels il existe des algorithmes d'apprentissage efficaces, en
-réalisant un mélange d'arbres. Intuitivement, ceci permet de capturer des
+De la même manière que les PWMs, il est possible d'étendre les modèles d'arbres
+en réalisant un mélange d'arbres. Intuitivement, ceci permet de capturer des
 dépendances additionnelles en gardant un nombre de paramètres linéaire en
 fonction de la taille du motif. Un tel modèle semble posséder des performances
-comparables au mélanges de PWM, et améliore la description des TFs de Transfac
+comparables au mélange de PWM, et améliore la description des TFs de Transfac
 dans $\sim40\%$ des cas ($35/95$)~\cite{Barash2003MDP}.
 
 
@@ -292,9 +304,10 @@ dans $\sim40\%$ des cas ($35/95$)~\cite{Barash2003MDP}.
 
     Le système explore $K$ états $\{s_1,\cdots,s_K\}$ au cours du temps. Au
     bout de $N$ observations, un état $s_i$ a été observé $n_i$ fois. À chaque
-    état correspond un certain nombre de quantités $\mathcal{O}_\alpha(s_i)$,
-    appelées observables, dont seule la valeur moyenne empirique $\left\langle
-    \mathcal{O}_\alpha(s)\right\rangle_r$ est connue de l'observateur.
+    état correspond un certain nombre de quantités $\mathcal{O}_\alpha(s_i)$
+    dont seule la valeur moyenne empirique $\left\langle
+    \mathcal{O}_\alpha(s)\right\rangle_r$ est connue de l'observateur (on parle
+    d'\og observable \fg).
 
 }
 \label{fig:entropie}
@@ -324,13 +337,13 @@ formule suivante :
     \end{split}
 \end{align}
 
-soit en utilisant $0!=1$ :
+soit
 
 \begin{equation}
    \mathcal{N}(n_1,\cdots,n_K) = \frac{N!}{n_1!n_2!\cdots n_K!} 
 \end{equation}    
 
-Il convient alors de s'intéresser au logarithme de cette quantité. En effet, dans le cas où les nombres d'observation sont grands, ceux-ci se formulent simplement grâce à la formule de Stirling :
+Il convient alors de s'intéresser au logarithme de cette quantité. En effet, dans le cas où les nombres d'observation sont grands $n_i \gg 1$, ceux-ci s'expriment simplement grâce à la formule de Stirling :
 
 \begin{equation}
     \log(n!) \xrightarrow[n\to\infty]{} n\log(n)-n
@@ -346,9 +359,9 @@ On peut alors écrire
    \end{split}
 \end{align}
 
-On note l'apparition des probabilités empiriques $f(s_i)=\frac{n_i}{N}$ d'observer
+On note l'apparition des probabilités empiriques $f(s_i)=n_i/N$ d'observer
 l'état $s_i$, qui tendent asymptotiquement (dans la limite \og thermodynamique \fg
-$n \to \infty$) vers les \og vraies \fg probabilités $P(s_i)$. L'entropie est définie dans cette limite comme étant égale à $1/N\log\mathcal{N}(n_1,\cdots,n_K)$, soit
+$N \to \infty$) vers les \og vraies \fg probabilités $P(s_i)$. L'entropie est définie dans cette limite comme étant égale à $1/N\log\mathcal{N}(n_1,\cdots,n_K)$, soit
 
 \begin{equation}
    \label{eq-entropy}
@@ -357,15 +370,16 @@ $n \to \infty$) vers les \og vraies \fg probabilités $P(s_i)$. L'entropie est dé
    }
 \end{equation}
 
-où $\{s\} = \{s_1,\cdots,s_K\}$. L'idée est alors la suivante : nous souhaitons
-savoir quels états le système a le plus probablement visité au cours de ses $N$
-transitions. Sans connaissance \apriori sur le système, il est plus probable
-que les nombres $(n_1,\cdots,n_K)$ obtenus soit ceux qui sont réalisés le plus
-souvent, \cad ceux qui maximisent la quantité $\mathcal{N}(n_1,\cdots,n_K)$, et
-donc au final l'entropie. Par ailleurs, les fluctuations relatives des
-quantités $n_i$ sont de l'ordre de $1/\sqrt{n_i}$~\cite{sethna2006statistical}.
-Ainsi, la solution de maximum d'entropie domine largement les autres solutions
-possibles dans la limite thermodynamique.
+où $\{s\} = \{s_1,\cdots,s_K\}$ dénote l'ensemble des états accessibles. L'idée
+est alors la suivante : nous souhaitons savoir quels états le système a le plus
+probablement visité au cours des $N$ transitions. Sans connaissance \apriori
+sur le système, il est plus probable que les nombres $(n_1,\cdots,n_K)$ obtenus
+soient ceux qui sont réalisés le plus souvent, \cad ceux qui maximisent la
+quantité $\mathcal{N}(n_1,\cdots,n_K)$ et donc au final l'entropie. Par
+ailleurs, les fluctuations relatives des quantités $n_i$ sont de l'ordre de
+$1/\sqrt{n_i}$~\cite{sethna2006statistical}.  Ainsi, la solution de maximum
+d'entropie domine largement les autres solutions possibles dans la limite
+thermodynamique.
 
 % subsection pourquoi_maximiser_l_entropie_ (end)
 
@@ -374,10 +388,13 @@ possibles dans la limite thermodynamique.
 
 Notons $\mathcal{O}_\al(s)$ une quantité attachée à $s$
 (fig.~\ref{fig:entropie}). En thermodynamique, une telle quantité correspond
-par exemple à l'énergie d'un état. L'observateur n'a accès qu'aux valeurs
-moyennes de telles quantités sous-jacentes. Les valeurs moyennes empiriques
-calculées avec les fréquences $f(s)$ doivent donc être compatibles avec les
-valeurs moyennes calculées avec la distribution de probabilité $P(s)$ :
+par exemple à l'énergie d'un état. L'observateur n'a lui accès qu'aux valeurs
+moyennes de telles quantités sous-jacentes. À l'état d'équilibre
+thermodynamique, l'échantillonnage des états est réalisé au sein de la
+distribution de probabilité de maximum d'entropie $P(s)$, et les valeurs
+moyennes calculées avec les fréquences empiriques $f(s)$ doivent donc être
+compatibles avec les valeurs moyennes calculées avec la distribution de
+probabilité $P(s)$ :
 
 \begin{equation}
    \label{eq:constraints}
@@ -385,9 +402,9 @@ valeurs moyennes calculées avec la distribution de probabilité $P(s)$ :
 \end{equation}
 
 Nous souhaiterions maintenant connaître la distribution $P(s)$ la moins biaisée
-(i.e de maximum d'entropie) sachant les contraintes de l'éq.
-\ref{eq:constraints} imposées par l'observation des données. Ce problème
-revient à maximiser le Lagrangien suivant :
+(i.e de maximum d'entropie) qui satisfait les contraintes de l'éq.
+\ref{eq:constraints} imposées par l'observation des données (l'information que
+possède l'observateur). Ce problème revient à maximiser le Lagrangien suivant :
 
 \begin{equation}
    \mathcal{L}  =  - \sum_{\{ s \}} P(s) \log P(s) + \lambda \left(\sum_{\{ s \}}
@@ -396,10 +413,10 @@ revient à maximiser le Lagrangien suivant :
 
 où les paramètres $\lambda$ et $\beta_\al$ sont les multiplicateurs de Lagrange
 correspondant respectivement à la contrainte de normalisation de la
-distribution de probabilité et aux correspondances des valeurs moyennes de
-l'éq. \ref{eq:constraints}.  La maximisation de ce Lagrangien est obtenue en
-annulant la dérivée fonctionnelle par rapport à la distribution de probabilité
-$P(s)$ :
+distribution de probabilité et aux informations qu'a l'observateur sur
+certaines valeurs moyennes du système (éq. \ref{eq:constraints}).  La
+maximisation de ce Lagrangien est obtenue en annulant la dérivée fonctionnelle
+par rapport à la distribution de probabilité $P(s)$ :
 
 \begin{equation}
    \frac{\delta \mathcal{L}}{\delta  P(s)}   =  0  
@@ -424,7 +441,7 @@ où $\mathcal{H}$ est l'Hamiltonien du système :
 \end{equation}
 
 et $\mathcal{Z}$ est la fonction de partition permettant la normalisation de la
-distribution $P$ :
+distribution $P(s)$ :
 
 \begin{equation}
    \mathcal{Z}=\sum_{\{s\}} \exp[- \mathcal{H}(s)].
@@ -433,14 +450,13 @@ distribution $P$ :
 
 \Remarque{
 
-    \footnotesize{
-        Il est possible de montrer que la maximisation de l'entropie, partant des
-        contraintes sur les valeurs moyennes pour en arriver à une forme exponentielle
-        de la distribution de probabilité, est le contrepoint d'une maximisation de la
-        vraisemblance partant d'une forme exponentielle pour en arriver aux mêmes
-        conditions sur les valeurs
-        moyennes~\cite{grendar2001minimax,jaynes1982rationale}.
-    }
+    \footnotesize{ Il est possible de montrer que la maximisation de
+        l'entropie, partant des contraintes de l'éq. \ref{eq:constraints} sur
+        les valeurs moyennes pour en arriver à une forme exponentielle de la
+        distribution de probabilité, est le contrepoint d'une maximisation de
+        la vraisemblance partant d'une forme exponentielle pour en arriver aux
+        mêmes contraintes sur les valeurs
+        moyennes~\cite{grendar2001minimax,jaynes1982rationale}.  }
 
 }
 
@@ -449,13 +465,13 @@ distribution $P$ :
 \subsection{Application aux sites de fixation}
 \label{sub:application_aux_sites_de_fixation}
 
-\subsubsection{Corrélation à un point : le modèle PWM}
+\subsubsection{Corrélations à un point : le modèle PWM}
 \label{ssub:corr_lation_un_point_le_mod_le_pwm}
 
-Dans notre cas, un état $s$ correspond à une séquence d'ADN appartenant
-à l'ensemble $\left\{ s \right\}$ des sites de fixation d'un \tf. Considérons
-maintenant l'observable quantifiant la présence du nucléotide $a$ à la position
-$i$ d'un site :
+Dans le cas qui nous intéresse, un état $s$ correspond à une séquence d'ADN
+appartenant à l'ensemble $\left\{ s \right\}$ des sites de fixation d'un \tf.
+Considérons maintenant l'observable quantifiant la présence du nucléotide $a$
+à la position $i$ d'un site :
 
 \begin{equation}
     \mathcal{O}_{i,a}(s) = \delta(s_i,a)
@@ -463,7 +479,7 @@ $i$ d'un site :
 
 
 où $\delta$ est la fonction de Kronecker qui vaut $1$ lorsque le nucléotide
-à la position $i$ du site $s_i$ est $a$ et $0$ sinon. De cette définition il suit que la valeur moyenne sur les fréquences empiriques
+à la position $i$ du site $s_i$ vaut $a$ et $0$ sinon. De cette définition il suit que la valeur moyenne sur les fréquences empiriques
 
 
 \begin{equation}
@@ -482,8 +498,8 @@ le multiplicateur de Lagrange correspondant et $\mathcal{A} = \{A,C,G,T\}$. On t
 \end{align}
 
 Les différentes positions étant indépendantes, la fonction de partition
-$\mathcal{Z}$ peut par ailleurs se scinder en fonctions de partitions par
-position $\mathcal{Z}=\prod_{i=1}^L\mathcal{Z}_i$. On obtient au final
+$\mathcal{Z}$ peut par ailleurs se scinder en différentes fonctions de partition par
+position : $\mathcal{Z}=\prod_{i=1}^L\mathcal{Z}_i$. On obtient au final
 
 \begin{equation}
     P(s) = \frac{1}{\mathcal{Z}} e^{-\sum\limits_{i=1}^L h_i(s_i)} = \prod_{i=1}^L \frac{e^{-h_i(s_i)}}{\mathcal{Z}_i}
@@ -530,13 +546,15 @@ imposées par les équations \ref{eq:onepoint} et \ref{eq:twopoints} s'écrit :
 Le modèle de maximum d'entropie est finalement
 
 \begin{equation}
+    \label{eq:potts}
     \boxed{
     P(s) = \frac{1}{\mathcal{Z}} e^{-\sum\limits_{i=1}^L h_i(s_i)-\sum\limits_{i=1}^{L-1} \sum\limits_{j>i} J_{i,j}(s_i,s_j)} 
 }
 \end{equation}
 
 On reconnaît le modèle de Potts inhomogène de champs magnétiques locaux $h_i$
-et de termes d'interaction $J_{i,j}$~\cite{baxter2007exactly}.
+et de termes d'interaction $J_{i,j}$ couramment utilisé dans la description des
+verres de spins~\cite{baxter2007exactly}.
 
 
 % subsubsection corr_lations_deux_points_le_mod_le_de_potts (end)
@@ -547,7 +565,7 @@ et de termes d'interaction $J_{i,j}$~\cite{baxter2007exactly}.
 \section{Article} 
 \label{sec:article}
 
-Cet article décrit l'analyse de données de fixation \invivo à grande échelle
+L'article qui suit décrit l'analyse de données de fixation \invivo à grande échelle
 pour plusieurs TFs drosophiles et mammifères. Différents modèles sont comparés,
 incluant ou non des dépendances : un modèle PWM, un modèle de mélange de PWMs,
 et un modèle de Potts.
@@ -558,10 +576,8 @@ et un modèle de Potts.
 % section article (end)
 
 
-\section{Analyse thermodynamique des modèles indépendant et avec couplages} 
+\section{Analyse thermodynamique des modèles} 
 \label{sec:analyse_thermodynamique_des_mod_les_ind_pendant_et_avec_couplages}
-
-
 \subsection{Chaleur spécifique}
 \label{sub:chaleur_sp_cifique}
 
@@ -577,62 +593,66 @@ Boltzmann $k$ en l'intégrant à l'énergie):
     P(s) = \frac{1}{\mathcal{Z}} e^{-\beta E(s)}
 \end{equation}
 
-Le cas de l'équation \ref{eq:boltzmann} correspond au cas particulier $\beta=1$
-(\cad que le paramètre $\beta$ est incorporé dans les différents
-$\beta_\alpha$). Nous voulons voir comment l'amplification ou la diminution
-globale de l'écart entre les énergies affecte la possibilité du système
-d'explorer les différents états $s$ possibles. À température nulle ($T\to0 $ ou
-$\beta \to \infty$), le système reste dans le niveau fondamental de minimum
-d'énergie, alors qu'à des températures non nulles le système à l'énergie $E_0$
-transite vers un état d'énergie supérieure $E_1$ avec une probabilité
-$\exp\left(-\beta (E_1-E_0)\right)$. Lorsqu'un paysage énergétique est composé
-de plusieurs puits d'énergie avec des barrières importantes, on s'attend
-à avoir une (ou plusieurs) températures critiques pour lesquelles de fortes
-différences d'énergie deviennent franchissables. L'énergie moyenne peut alors
-être significativement affectée, sautant soudainement à une nouvelle valeur du
-fait des poids des nouveaux états explorés. 
+Le cas de l'équation \ref{eq:potts} correspond au cas particulier $\beta=1$.
+Nous voulons voir comment l'amplification ou la diminution globale de l'écart
+entre les énergies affecte la possibilité du système d'explorer les différents
+états possibles. À température nulle ($T\to0 $ ou $\beta \to \infty$), le
+système reste dans le niveau fondamental de minimum d'énergie et de probabilité
+$1$, alors qu'à des températures non nulles le système à l'énergie $E_0$
+transite vers un état d'énergie supérieure $E_1$ avec une probabilité $\propto
+\exp\left(-\beta (E_1-E_0)\right)$. Lorsqu'un paysage énergétique est composé
+de plusieurs puits d'énergie séparés par des barrières énergétiques
+importantes, on s'attend à avoir une (ou plusieurs) températures critiques
+à partir desquelles de fortes différences d'énergie deviennent franchissables.
+L'énergie moyenne peut alors être significativement affectée, sautant
+soudainement à une nouvelle valeur du fait du poids des nouveaux états
+explorés. 
 
 La chaleur spécifique permet de caractériser ces sauts soudains d'énergie
-moyenne lors de la variation de la température, caractérisant des transitions
-de phase. Elle mesure simplement la variation d'énergie moyenne résultant d'une variation de température :
+moyenne lors de la variation de la température, caractéristiques des
+transitions de phase. Elle mesure simplement la variation de l'énergie moyenne
+lors d'une variation de température :
 
 \begin{equation}
     C(T) = \frac{d\langle E \rangle}{dT}
 \end{equation}
 
-or en utilisant 
+où 
 
 \begin{equation}
     \langle E \rangle = \sum_{\{s\}} E(s) \frac{e^{-\beta E(s)}}{\mathcal{Z}}
 \end{equation}
 
-on trouve que
+Cette chaleur spécifique peut par ailleurs s'écrire sous une forme plus utile : 
 
 \begin{align}
+    \label{eq:fluctuation-dissipation}
     \begin{split}
         \frac{d\langle E \rangle}{dT} & = - \beta^2 \frac{d\langle E \rangle}{d\beta} \\
-        & = \beta^2 \left[\sum_{\{s\}} E(s) \left( -E(s) e^{-\beta E(s)} \right)\frac{1}{\mathcal{Z}} + \sum_{\{s\}} E(s) e^{-\beta(E(s))} \left(-\frac{d\mathcal{Z}}{d\beta} \frac{1}{\mathcal{Z}^2}\right)\right] \\
+        & = - \beta^2 \left[\sum_{\{s\}} E(s) \left( -E(s) e^{-\beta E(s)} \right)\frac{1}{\mathcal{Z}} + \sum_{\{s\}} E(s) e^{-\beta(E(s))} \left(-\frac{d\mathcal{Z}}{d\beta} \frac{1}{\mathcal{Z}^2}\right)\right] \\
     & = \beta^2 \left[ \langle {E}^2 \rangle - {\langle E \rangle}^2 \right]
     \end{split}
 \end{align}
 
 Ainsi, la chaleur spécifique $C(T)$ est directement accessible en regardant les
-corrélations de l'énergie sur l'ensemble des états du système. Nous avons
-calculé sa variation en fonction de la température pour les modèles indépendant
-et avec dépendances obtenus pour les différents TFs étudiés. L'introduction de
-la température se faire de manière fictive en multipliant les énergies par
-$\beta$, afin de se placer dans le cadre de l'équation
+corrélations de l'énergie sur l'ensemble des états du système, ce qui peut se
+calculer simplement à partir des modèles de fixation.  Nous avons calculé la
+variation de $C(T)$ en fonction de la température pour les modèles indépendant
+et avec dépendances obtenus en \ref{sec:article} pour les différents TFs
+étudiés. Une température fictive est introduite dans les modèles en multipliant
+les énergies par $\beta$, afin de se placer dans le cadre de l'équation
 \ref{eq:boltzmann_with_beta}. Les résultats sont montrés en
 figure~\ref{fig:maxent/specific_heat} (modèle indépendant en bleu, modèle de
 Potts en rouge). On observe pour la plupart des facteurs l'existence de deux
-pics de chaleur spécifique pour des températures de l'ordre de $\sim10^{-1}$ et
-$\sim 5$ (par exemple, $0.4$ et $2.8$ pour le modèle indépendant de Twist). Il
-y a de légères variations entre les deux modèles : notamment, le premier pic
-semble renforcé dans plusieurs cas. Néanmoins, le nombre de transitions de
-phase (ou de pics) reste le même.
+pics de chaleur spécifique pour des températures de l'ordre de $T\sim10^{-1}$
+et $T\sim 5$ (par exemple, $T=0.4$ et $T=2.8$ dans le cas du modèle indépendant
+de Twist). Il y a de légères variations entre les deux modèles : notamment, le
+premier pic semble renforcé par le modèle de Potts dans plusieurs cas (par
+exemple, E$2$f$4$, NRSF, TCF$3$ ou Twist). Néanmoins, le nombre de pics (ou de
+transitions de phases) reste le même.
 
 \bfig
-\includegraphics[width=.8\textwidth]{figures/maxent/specific_heat.pdf}
+\includegraphics[width=0.8\textwidth]{figures/maxent/specific_heat.pdf}
 \captionbf{Chaleur spécifique pour différents TFs}{
 
     La chaleur spécifique (l'équivalent de la capacité calorifique en
@@ -651,32 +671,36 @@ phase (ou de pics) reste le même.
 \label{sub:lien_avec_les_valeurs_des_champs_et_des_couplages}
 
 Afin de comprendre l'existence des pics de chaleur spécifique et les énergies
-(températures) associées, il faut revenir aux modèles d'énergie. Dans le modèle
+(températures) associées, il faut revenir aux modèles d'énergie. Lorsque l'on
+regarde l'histogramme des valeurs absolues de $h_i$ obtenues dans les modèles
+indépendant des différents TFs étudiés, on trouve plusieurs valeurs typiques
+autour de $10^{-4}$, $1$ et $10$ (fig.~\ref{fig:histogrammes_champs}A).
+Celles-ci peuvent s'expliquer de la manière suivante. Dans le modèle
 indépendant, les champs sont simplement le logarithme naturel de la probabilité
-d'observer un nucléotide à une position donnée $h_i(a) = -\log P_i(a)$ (la
-jauge est choisie telle que $\mathcal{Z}=1$). En valeur absolue, les champs $h$
-proches de $0$ correspondent aux nucléotides très conservés (toujours
-observés), les valeurs autour de $1$ correspondent à des nucléotides également
-observés ($|\log(1/4)| \sim 1.4$) et les valeurs autour de $10$ correspondent
-aux nucléotides qui ne sont jamais observés, au pseudocount près (pour un
-pseudocount de $1$ et $10^4$ séquences, $|\log(10^{-4})| \sim 9.2$). On
-retrouve ces valeurs typiques lorsque l'on regarde l'histogramme des valeurs
-absolues de $h$ obtenues dans les modèles indépendant des différents TFs
-étudiés (fig.~\ref{fig:histogrammes_champs}A).  On peut maintenant mieux
-comprendre les pics de chaleur spécifique. Lorsque la température se rapproche
-de $1$ (par le bas), les nucléotides dégénérés d'énergie $h_i\sim1$ deviennent
-accessibles, augmentant significativement la valeur de l'énergie moyenne. Puis,
-lorsque la température se rapproche de $10$, les nucléotides non observés
-d'énergie $h_i\sim10$ deviennent à leur tour accessibles, augmentant à nouveau
-l'énergie moyenne.
+d'observer un nucléotide $a$ à une position $i$ donnée $h_i(a) = -\log P_i(a)$
+(la jauge est choisie telle que $\mathcal{Z_i}=1$). En valeur absolue, les
+champs $h_i$ proches de $0$ ($h_i\sim10^{-4}-10^{-3}$) correspondent aux
+nucléotides très conservés (toujours observés), les valeurs autour de $1$
+correspondent à des nucléotides dégénérés (i.e également observés
+: $|\log(1/4)| \sim 1.4$) et les valeurs autour de $10$ correspondent aux
+nucléotides qui ne sont jamais observés, au pseudocount près (pour un
+pseudocount de $1$ et $10^4$ séquences, $|\log(10^{-4})| \sim 9.2$).  On peut
+maintenant mieux comprendre les pics de chaleur spécifique. À température
+nulle, seuls les sites consensus sont accessibles. Lorsque la température se
+rapproche de $1$, les nucléotides dégénérés d'énergie $h_i\sim1$ deviennent
+accessibles, augmentant significativement la valeur de l'énergie moyenne
+(premier pic). Puis, lorsque la température se rapproche de $10$, les
+nucléotides non observés d'énergie $h_i\sim10$ deviennent à leur tour
+accessibles, augmentant à nouveau l'énergie moyenne (deuxième pic).
 
-Dans le cas du modèle de Potts (fig.~\ref{fig:histogrammes_champs}B), on
-observe des interactions réparties autour d'un mode centré autour de $J_{i,j}
-\sim 0.5$. Ceci explique sans doute le renforcement du premier pic de chaleur
-spécifique observé pour plusieurs TFs de la figure
-\ref{fig:maxent/specific_heat} (par exemple, E$2$f$4$, NRSF, TCF$3$ ou Twist).
-
-
+Dans le cas du modèle de Potts (fig.~\ref{fig:histogrammes_champs}B), les
+champs $h_i$ prennent des valeurs proches de celles obtenues avec le modèle
+indépendant. Par ailleurs, les interactions $J_{i,j}$ sont réparties autour
+d'un mode centré autour de $J_{i,j} \sim 0.5$, ce qui correspond l'échelle
+d'énergie du premier pic. Ainsi, le renforcement du premier pic de chaleur
+spécifique par rapport au cas indépendant observé pour plusieurs TFs de la
+figure \ref{fig:maxent/specific_heat} peut s'expliquer par l'effet des termes
+d'interaction $J_{i,j}$.
 
 
 \bfig
@@ -694,17 +718,14 @@ spécifique observé pour plusieurs TFs de la figure
 \efig
 
 
-
-
 % subsection lien_avec_les_valeurs_des_champs_et_des_couplages (end)
-\FloatBarrier
 
 % section analyse_thermodynamique_des_mod_les_ind_pendant_et_avec_couplages (end)
 \section{Conclusion et perspectives}
 
 
 Nous avons analysé les dépendances au sein des sites de fixation liés \invivo
-pour plusieurs \tfs Drosophiles et mammifères. Nous avons comparé les
+pour différents \tfs Drosophiles et mammifères. Nous avons comparé les
 performances d'un modèle PWM, d'un modèle de mélange de PWMs, et d'un modèle de
 Potts, en utilisant un critère bayésien (BIC) pénalisant les modèles à grand
 nombre de paramètres. Nous avons exhibé l'existence de corrélations faibles
@@ -713,21 +734,20 @@ des données, le modèle de Potts étant significativement supérieur aux deux
 autres modèles dans la plupart des cas ($22/28$). Les interactions ont été
 étudiées systématiquement, montrant notamment une prépondérance des
 interactions entre plus proches voisins. Nous avons établi une correspondance
-entre les PWMs du modèle de mélange et les PWMs décrivant les sites des états
+entre les PWMs du modèle de mélange et les PWMs décrivant les états
 métastables du paysage énergétique généré par le modèle de Potts. Enfin, nous
 avons montré que les corrélations pouvaient être groupées en patterns de
 Hopfield ou \og mémoires \fg, et qu'un petit nombre était suffisant
-à reconstruire le paysage d'interactions.
-\\
+à reconstruire le paysage d'interactions.  \\
 
 Une perspective intéressante de ce travail serait de conduire la même analyse
 sur des données grande échelle obtenues \invitro par la méthode
 HT-SELEX~\cite{Jolma2013p3971}. Notamment, certains des facteurs que nous avons
 étudiés \invivo sont représentés dans ces données, et il serait intéressant de
-voir les différences entre les deux modèles de Potts et modèles de mélanges
-obtenus. Notamment, retrouve-t-on les mêmes corrélations? Peut-on exhiber des
-spécificités à la fixation \invivo, où l'on s'attend à avoir des effets
-provenant de diverses sources (fixation de nucléosomes, superposition de sites
-de fixations, \ldots)? Ces questions feront l'objet d'un prochain travail.
+voir les différences entre les modèles obtenus. Notamment, retrouve-t-on les
+mêmes corrélations? Peut-on exhiber des spécificités de la fixation \invivo, où
+l'on s'attend à avoir des effets provenant de diverses sources (fixation de
+nucléosomes, superposition de sites de fixations, \ldots)? Ces questions feront
+certainement l'objet d'un prochain travail.
 
 

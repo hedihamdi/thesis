@@ -74,56 +74,56 @@
 \input{chapters/Chapter-maxent}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{\ChImogene} 
-\ifthenelse{\FaitMinitocs > 0}{\adjustmtc \minitoc}{Minitoc}
-\newpage
-\input{chapters/Chapter-imogene}
-%\includepdf[pages=-]{articles/imogene-genomebiol.pdf}
-\newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{\ChTrichomes}
-\ifthenelse{\FaitMinitocs > 0}{\adjustmtc \minitoc}{Minitoc}
-\newpage
-\input{chapters/Chapter-trichomes}
-%\includepdf[pages=-]{articles/trichomes-plosbiol-merged.pdf}
-\newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{\ChMuscle}
-\label{chap:muscle}
-\ifthenelse{\FaitMinitocs > 0}{\adjustmtc \minitoc}{Minitoc}
-\newpage
-\input{chapters/Chapter-muscle}
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\chapter{\ChTest}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+%\chapter{\ChImogene} 
+%\ifthenelse{\FaitMinitocs > 0}{\adjustmtc \minitoc}{Minitoc}
 %\newpage
-%\input{chapters/Chapter-test}
+%\input{chapters/Chapter-imogene}
+%%\includepdf[pages=-]{articles/imogene-genomebiol.pdf}
 %\newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{\ChTrichomes}
+%\ifthenelse{\FaitMinitocs > 0}{\adjustmtc \minitoc}{Minitoc}
+%\newpage
+%\input{chapters/Chapter-trichomes}
+%%\includepdf[pages=-]{articles/trichomes-plosbiol-merged.pdf}
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{\ChMuscle}
+%\label{chap:muscle}
+%\ifthenelse{\FaitMinitocs > 0}{\adjustmtc \minitoc}{Minitoc}
+%\newpage
+%\input{chapters/Chapter-muscle}
+%\newpage
 
-\include{packaging/Conclusion_Generale}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ifthenelse{\IncludeAnnexes > 0}{ \include{annexes/annexes} }{}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\chapter{\ChTest}\ifthenelse{\FaitMinitocs > 0}{\minitoc}{Minitoc}
+%%\newpage
+%%\input{chapters/Chapter-test}
+%%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\EmptyNewPage 
-%\appendix 
-\renewcommand{\leftmark}{Bibliographie}
-\renewcommand{\rightmark}{Bibliographie} 
-\bibliographystyle{custom}%biblio/paolostyle}
-\BeginBibWith{\vskip7mm\noindent 
-   Dans la version pdf, les numéros de page sont
-   des liens qui renvoient à l'occurence de la citation dans le texte.
-}
-\addcontentsline{toc}{chapter}{\bibname}
-\bibliography{biblio/papers}
+%\include{packaging/Conclusion_Generale}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\ifthenelse{\IncludeAnnexes > 0}{ \include{annexes/annexes} }{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\include{packaging/abstract}
+%\EmptyNewPage 
+%%\appendix 
+%\renewcommand{\leftmark}{Bibliographie}
+%\renewcommand{\rightmark}{Bibliographie} 
+%\bibliographystyle{custom}%biblio/paolostyle}
+%\BeginBibWith{\vskip7mm\noindent 
+   %Dans la version pdf, les numéros de page sont
+   %des liens qui renvoient à l'occurence de la citation dans le texte.
+%}
+%\addcontentsline{toc}{chapter}{\bibname}
+%\bibliography{biblio/papers}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\include{packaging/abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

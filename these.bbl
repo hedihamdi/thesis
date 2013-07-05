@@ -1,4 +1,4 @@
-\begin{thebibliography}{162}
+\begin{thebibliography}{164}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[Aerts, 2012]{Aerts2012p3868}
@@ -204,6 +204,11 @@ Carvajal, J.~J., Keith, A., and Rigby, P. W.~J. (2008).
 \newblock Global transcriptional regulation of the locus encoding the skeletal
   muscle determination genes Mrf4 and Myf5.
 \newblock \emph{Genes {\&} development}, 22(2):265--76.
+
+\bibitem[Casella and George, 1992]{casella1992explaining}
+Casella, G. and George, E.~I. (1992).
+\newblock Explaining the Gibbs sampler.
+\newblock \emph{The American Statistician}, 46(3):167--174.
 
 \bibitem[Cheng et~al., 2008]{Cheng2008fk}
 Cheng, Y., King, D.~C., Dore, L.~C., Zhang, X., Zhou, Y., Zhang, Y., Dorman,
@@ -452,6 +457,11 @@ Kondo, T., Plaza, S., Zanet, J., Benrabah, E., Valenti, P., Hashimoto, Y.,
 \newblock Small peptides switch the transcriptional activity of Shavenbaby
   during Drosophila embryogenesis.
 \newblock \emph{Science}, 329(5989):336--9.
+
+\bibitem[Krauth, 2006]{krauth2006statistical}
+Krauth, W. (2006).
+\newblock \emph{Statistical mechanics: algorithms and computations}, volume~13.
+\newblock Oxford University Press.
 
 \bibitem[Kulessa et~al., 1995]{Kulessa1995ys}
 Kulessa, H., Frampton, J., and Graf, T. (1995).
