@@ -1,15 +1,123 @@
 \section*{Introduction du chapitre \thechapter}
-\begin{malistebullet}{15}
 
-\item  Trouver des motifs d'ADN sans \apriori. \\
+Dans le chapitre \ref{ch:maxent}, nous avons vu comment décrire l'interaction
+TF-ADN lorsque des sites de fixation sont connus. Dans ce chapitre, nous
+adoptons une démarche plus générale. Nous connaissons l'activité de régulation
+d'un certain nombre de CRMs, et nous souhaitons savoir quels TFs s'y fixent
+(recherche de motifs), et si le génome contient d'autres CRMs avec la même
+activité (recherche de modules). Un algorithme permettant précisément de
+réaliser ces étapes a été développé précédemment par Hervé Rouault et appliqué
+au cas de la différenciation des organes sensoriels de la
+Drosophile~\cite{Rouault2010p327}. Nous présentons ici l'extension de cet
+algorithme au cas des mammifères, ainsi que son utilisation comme outil de
+classification de CRMs associés à différentes régulations.
 
-\item  Grammaire des enhancers : rigidité ou flexibilité. \\
 
-\end{malistebullet}
+\section{Recherche de motifs dans des CRMs} 
+\label{sec:recherche_de_motifs_dans_des_crms}
+
+Avant de rentrer dans le détail d'Imogene, nous présentons les méthodes
+existantes de recherche de motifs dans des CRMs. Le problème général est le
+suivant : étant données des CRMs conduisant à une même régulation, peut-on
+construire des modèles de sites de fixation qui \og expliquent \fg cette
+co-régulation, \cad dont qui prédisent l'existence de sites sur les CRMs mais
+pas sur des séquences ne participant pas à la corégulation? L'une des
+difficultés majeures ici est que la position des sites dans les séquences n'est
+pas connue.
+
+\subsection{Algorithmes de type espérance-maximisation}
+\label{sub:algorithmes_de_type_esp_rance_maximisation}
+
+L'une des premières approches de ce problème a été celle de
+MEME~\cite{Bailey1994fk}, un algorithme basé sur la méthode
+d'espérance-maximisation ou EM (\textit{expectation maximization}) utilisée
+précédemment dans ce cadre par \citet{Lawrence1990uq}. Cet algorithme se base
+sur une approche générative pour décrire les processus probabilistes qui ont
+permis la génération des séquences CRMs (fig.~\ref{fig:d_haeseleer-MEME}). 
+
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/d_haeseleer-MEME.pdf}
+\captionbf{Illustration de l'approche espérance-maximisation}{
+
+Figure tirée de \cite{Dhaeseleer2006kx} décrivant l'approche EM. Un premier
+modèle de motif est construit à partir d'un site initial. Ce modèle permet de
+trouver l'ensemble de sites fixés sur les séquences (étape E). Ces sites
+permettent à leur tour de construire un modèle de vraisemblance maximale (étape
+M). Cet exemple illustre la méthode originale de \citet{Lawrence1990uq} faisant
+l'hypothèse qu'il y a exactement un site de fixation par séquence, condition
+qui sera relâchée par MEME. 
+
+}
+\label{fig:d_haeseleer-MEME}
+\efig
+
+Notons $S=\{S_1,\cdots,S_L\}$ une séquence de taille $L$
+\footnote{
+On suppose que l'on concatène les deux brins d'ADN dans cette séquence. On
+suppose en effet qu'ils participent équiprobablement à la fixation. Ainsi la séquence génomique
+double brins est de longueur $L/2$.
+}
+. Supposons qu'il
+y a exactement un site de régulation par CRM. C'est l'approche de
+\citet{Lawrence1990uq}, et cette condition est relâchée par MEME, qui autorise
+l'utilisateur à préciser un nombre moyen de sites par séquence. La probabilité
+que la séquence possède un site de taille $K$ à la position $i$ étant donné le
+modèle $\mathcal{M}$ s'écrit 
+
+\begin{equation}
+    \label{eq:prob-sequence-oops}
+    P(S|i,\mathcal{M}) = P_0(S_{1,i-1})\times P(S_{i,i+K-1} | \mathcal{M})\times P_0(S_{K,L})
+\end{equation}
+
+où $S_{i,j}$ dénote la séquence entre les positions $i$ et $j$ incluses, et
+$P_0(s)$ est la probabilité nulle ou \textit{background} de générer la séquence
+$s$. Cette distribution est généralement prise comme étant une chaîne de Markov
+$\mathcal{P}_k$ d'ordre $k$ petit ($0$ ou $1$) :
+
+\begin{equation}
+    P_0(S_{i,j}) = \prod_{l=i}^{j} \mathcal{P}_k(S_l | S_{l-k,l-1})
+\end{equation}
+
+Ainsi, l'équation \ref{eq:prob-sequence-oops} décrit la probabilité de générer
+la séquence $S$ avec le modèle \textit{background}, sauf à la position $i$ où
+un site est généré avec le modèle de fixation $\mathcal{M}$. La probabilité de générer la séquence s'obtient finalement en sommant sur les positions pondérées par la probabilité \apriori $P(i)$ que le site soit à la position $i$ :
+
+\begin{equation}
+    P(S|\mathcal{M}) = \sum_{i=1}^{L-K+1} P(i) P(S|i,\mathcal{M})
+\end{equation}
+
+Cette probabilité est généralement prise uniforme, mais on peut y incorporer
+certaines informations \apriori, comme le nombre de \textit{reads} d'une
+expérience de \chipseq par exemple.
+\\
+
+Maintenant que nous savons exprimer la vraisemblance d'une séquence régulée par
+le motif $\mathcal{M}$, nous pouvons apprendre le meilleur modèle possible
+l'ayant générée : c'est la maximisation de la vraisemblance. Soit un jeu de
+données $\mathcal{D}$ contenant $M$ séquences co-régulées $S[1],\cdots,S[M]$.
+Ces séquences étant supposées indépendantes, la vraisemblance que ces données
+soient générées par un modèle $\mathcal{M}$ est le produit sur les séquences de
+la quantité $P(S[m]|\mathcal{M})$. Il est plus utile dans ce cas de regarder la
+log-vraisemblance, s'écrivant alors comme une somme :
+
+\begin{equation}
+    l(\mathcal{D} : \mathcal{M}) = \sum_{m=1}^M \log P(S[m] | \mathcal{M})
+\end{equation}
 
 
-%\includepdf[pages=-]{articles/imogene-genomebiol.pdf}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-\newpage
-\section{}
+
+
+% subsection algorithmes_de_type_esp_rance_maximisation (end)
+
+% section recherche_de_motifs_dans_des_crms (end)
+
+\section{Article} 
+\label{sec:article}
+
+\includepdf[pages=-]{articles/imogene-genomebiol.pdf}
+
+
+% section article (end)
+
+
+

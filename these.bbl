@@ -1,4 +1,4 @@
-\begin{thebibliography}{164}
+\begin{thebibliography}{168}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[Aerts, 2012]{Aerts2012p3868}
@@ -46,6 +46,12 @@ Badis, G., Berger, M.~F., Philippakis, A.~A., Talukder, S., Gehrke, A.~R.,
   Bulyk, M.~L. (2009).
 \newblock Diversity and Complexity in DNA Recognition by Transcription Factors.
 \newblock \emph{Science}, 324(5935):1720--1723.
+
+\bibitem[Bailey and Elkan, 1994]{Bailey1994fk}
+Bailey, T.~L. and Elkan, C. (1994).
+\newblock Fitting a mixture model by expectation maximization to discover
+  motifs in biopolymers.
+\newblock \emph{Proc Int Conf Intell Syst Mol Biol}, 2:28--36.
 
 \bibitem[Barash et~al., 2003]{Barash2003MDP}
 Barash, Y., Elidan, G., Friedman, N., and Kaplan, T. (2003).
@@ -247,6 +253,11 @@ Dermitzakis, E.~T., Reymond, A., and Antonarakis, S.~E. (2005).
   genomes.
 \newblock \emph{Nat Rev Genet}, 6(2):151--7.
 
+\bibitem[D'haeseleer, 2006]{Dhaeseleer2006kx}
+D'haeseleer, P. (2006).
+\newblock How does DNA sequence motif discovery work?
+\newblock \emph{Nat Biotechnol}, 24(8):959--61.
+
 \bibitem[Djordjevic et~al., 2003]{Djordjevic2003p2932}
 Djordjevic, M., Sengupta, A.~M., and Shraiman, B.~I. (2003).
 \newblock A biophysical approach to transcription factor binding site
@@ -389,7 +400,7 @@ Hu, M., Yu, J., Taylor, J.~M., Chinnaiyan, A.~M., and Qin, Z.~S. (2010).
 \newblock \emph{Nucleic acids research}, 38(7):2154--2167.
 
 \bibitem[Jaynes, 1978]{Jaynes1978p795}
-Jaynes, E. (1978).
+Jaynes, E.~T. (1978).
 \newblock Where do we stand on maximum entropy?
 \newblock pages 1--105.
 
@@ -484,6 +495,12 @@ L{\"a}ssig, M. (2007).
 \newblock From biophysics to evolutionary genetics: statistical aspects of gene
   regulation.
 \newblock \emph{BMC Bioinformatics}, 8(Suppl 6):S7.
+
+\bibitem[Lawrence and Reilly, 1990]{Lawrence1990uq}
+Lawrence, C.~E. and Reilly, A.~A. (1990).
+\newblock An expectation maximization (EM) algorithm for the identification and
+  characterization of common sites in unaligned biopolymer sequences.
+\newblock \emph{Proteins}, 7(1):41--51.
 
 \bibitem[Lee et~al., 2002]{Lee2002p537}
 Lee, T., Rinaldi, N., Robert, F., Odom, D., Bar-Joseph, Z., Gerber, G.,
@@ -679,6 +696,13 @@ Roh, T.-Y., Cuddapah, S., and Zhao, K. (2005).
 \newblock Active chromatin domains are defined by acetylation islands revealed
   by genome-wide mapping.
 \newblock \emph{Genes Dev}, 19(5):542--52.
+
+\bibitem[Rouault et~al., 2010]{Rouault2010p327}
+Rouault, H., Mazouni, K., Couturier, L., Hakim, V., and Schweisguth, F. (2010).
+\newblock Genome-wide identification of cis-regulatory motifs and modules
+  underlying gene coregulation using statistics and phylogeny.
+\newblock \emph{Proceedings of the National Academy of Sciences},
+  107(33):14615.
 
 \bibitem[Roulet et~al., 2002]{Roulet2002rt}
 Roulet, E., Busso, S., Camargo, A.~A., Simpson, A. J.~G., Mermod, N., and
