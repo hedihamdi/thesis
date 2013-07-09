@@ -15,7 +15,7 @@
 	\normalsize
 
 \begin{tabular}{lp{11.5cm}r}
-	Annexe A & \hyperref[annexe-article]{Titre}  \dotfill& \textbf{\pageref{annexe-article}}\\
+	Annexe A & \hyperref[ann:statistiques_genomiques]{Statistiques génomiques}  \dotfill& \textbf{\pageref{ann:statistiques_genomiques}}\\
 \end{tabular}
 
   \EmptyNewPage
@@ -23,9 +23,42 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-\AnnexTitreCed{A}{Titre}{annexe-article}
+\AnnexTitreCed{A}{Statistiques génomique}{ann:statistiques_genomiques}
 {
-   %\includepdf[pages=-]{annexes/maxent-PNAS}  %% pour inclure un article directement en pdf!
+
+%\begin{figure}[t!]
+    %\centering
+    %\includegraphics[width=1.0\textwidth]{figures/intergenic-intronic.pdf}
+    %\captionbf{Distribution des tailles intergéniques et introniques chez différentes espèces}{
+
+        
+        %Distributions log-log de la taille des régions intergéniques (A) et
+        %introniques (B) chez différentes espèces. Les histogrammes sont
+        %réalisés avec un intervalle de $0.05$ puis lissés avec l'estimateur local
+        %LOESS de paramètre $span = 0.3$ (logiciel R).
+        %(A)  Les régions intergéniques sont définies comme les
+        %régions complémentaires aux régions transcrites (données UCSC),
+        %celles-ci étant préalablement fusionnées pour éviter les redondances
+        %liées aux multiples transcrits d'un même gène. De la bactérie
+        %à l'homme, on observe une inflation de la quantité de génome non
+        %codant.  
+        %(B) Les régions introniques sont définies par le fait qu'elles sont
+        %entourées par deux exons d'un même gène. Pour pouvoir être épissés lors
+        %de la maturation des preARNm, les introns doivent posséder des sites
+        %d'épissage, imposant une borne inférieure à leur taille pour que l'ARNm
+        %final soit fonctionnel.
+
+    %}
+    %\label{fig:intergenic-intronic}
+%\end{figure}
+
+%En guise d'exemple, nous montrons en figure \ref{fig:intergenic-intronic} des
+%statistiques obtenues aisément à partir d'annotations génétiques présentes sur
+%UCSC et traitées avec Galaxy. Ces statistiques sont les distribution de tailles
+%des régions intergéniques et introniques chez plusieurs espèces : la bactérie
+%\ecoli, la levure \textit{Saccharomyces cerevisiae}, le ver \celegans, la
+%mouche \dmel, la souris, le poulet et l'homme.
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	

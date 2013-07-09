@@ -1,3 +1,9 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Recherche de motifs dans des CRMs}{\reset@font\mtcSfont 118}{section.4.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.1}Algorithmes de type esp\'erance-maximisation}{\reset@font\mtcSSfont 118}{subsection.4.1.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Article}{\reset@font\mtcSfont 120}{section.4.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Recherche de motifs dans des CRMs}{\reset@font\mtcSfont 116}{section.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.1}Apprentissage par esp\'erance-maximisation}{\reset@font\mtcSSfont 116}{subsection.4.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Vraisemblance d'une s\'equence}{\reset@font\mtcSSSfont 116}{subsubsection.4.1.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Apprentissage du mod\`ele}{\reset@font\mtcSSSfont 118}{subsubsection.4.1.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.2}Incorporation de l'information phylog\'en\'etique}{\reset@font\mtcSSfont 119}{subsection.4.1.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Article}{\reset@font\mtcSfont 119}{section.4.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Calcul de la moyenne de la post\'erieure par une m\'ethode MCMC}{\reset@font\mtcSfont 148}{section.4.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.1}Principe de l'algorithme de Metropolis-Hastings}{\reset@font\mtcSSfont 148}{subsection.4.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.2}Application au calcul de la post\'erieure}{\reset@font\mtcSSfont 149}{subsection.4.3.2}}

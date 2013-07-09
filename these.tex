@@ -109,11 +109,20 @@
 %\include{packaging/Conclusion_Generale}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ifthenelse{\IncludeAnnexes > 0}{ \include{annexes/annexes} }{}
+%\ifthenelse{\IncludeAnnexes > 0}{ 
+%\include{annexes/annexes} 
+%\Annexes
+%\Annex{Statistiques génomique}
+\begin{appendices}
+\chapter{Statistiques génomique}
+\label{ann:statistiques}
+\input{annexes/annexes-stat} 
+\end{appendices}
+%}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \EmptyNewPage 
-%\appendix 
+\appendix 
 \renewcommand{\leftmark}{Bibliographie}
 \renewcommand{\rightmark}{Bibliographie} 
 \bibliographystyle{custom}%biblio/paolostyle}

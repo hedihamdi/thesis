@@ -1,4 +1,4 @@
-\begin{thebibliography}{168}
+\begin{thebibliography}{169}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[Aerts, 2012]{Aerts2012p3868}
@@ -240,6 +240,12 @@ Davis, R.~L., Weintraub, H., and Lassar, A.~B. (1987).
 \newblock Expression of a single transfected cDNA converts fibroblasts to
   myoblasts.
 \newblock \emph{Cell}, 51(6):987--1000.
+
+\bibitem[Dempster et~al., 1977]{dempster1977maximum}
+Dempster, A.~P., Laird, N.~M., and Rubin, D.~B. (1977).
+\newblock Maximum likelihood from incomplete data via the EM algorithm.
+\newblock \emph{Journal of the Royal Statistical Society. Series B
+  (Methodological)}, pages 1--38.
 
 \bibitem[Dermitzakis and Clark, 2002]{Dermitzakis2002ly}
 Dermitzakis, E.~T. and Clark, A.~G. (2002).

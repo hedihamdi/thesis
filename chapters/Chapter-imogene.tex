@@ -20,12 +20,12 @@ Avant de rentrer dans le détail d'Imogene, nous présentons les méthodes
 existantes de recherche de motifs dans des CRMs. Le problème général est le
 suivant : étant données des CRMs conduisant à une même régulation, peut-on
 construire des modèles de sites de fixation qui \og expliquent \fg cette
-co-régulation, \cad dont qui prédisent l'existence de sites sur les CRMs mais
+co-régulation, \cad qui prédisent l'existence de sites sur les CRMs mais
 pas sur des séquences ne participant pas à la corégulation? L'une des
 difficultés majeures ici est que la position des sites dans les séquences n'est
 pas connue.
 
-\subsection{Algorithmes de type espérance-maximisation}
+\subsection{Apprentissage par espérance-maximisation}
 \label{sub:algorithmes_de_type_esp_rance_maximisation}
 
 L'une des premières approches de ce problème a été celle de
@@ -41,37 +41,41 @@ permis la génération des séquences CRMs (fig.~\ref{fig:d_haeseleer-MEME}).
 
 Figure tirée de \cite{Dhaeseleer2006kx} décrivant l'approche EM. Un premier
 modèle de motif est construit à partir d'un site initial. Ce modèle permet de
-trouver l'ensemble de sites fixés sur les séquences (étape E). Ces sites
-permettent à leur tour de construire un modèle de vraisemblance maximale (étape
-M). Cet exemple illustre la méthode originale de \citet{Lawrence1990uq} faisant
-l'hypothèse qu'il y a exactement un site de fixation par séquence, condition
-qui sera relâchée par MEME. 
+pondérer l'ensemble de sites sur les séquences (étape E). En rouge sont montrés
+les meilleurs sites pour chaque séquence. En utilisant ces poids, il est
+possible de construire un modèle de vraisemblance maximale (étape M). La
+méthode originale de \citet{Lawrence1990uq} fait l'hypothèse qu'il
+y a exactement un site de fixation par séquence, condition qui est relâchée par
+MEME. 
 
-}
-\label{fig:d_haeseleer-MEME}
-\efig
+} \label{fig:d_haeseleer-MEME} \efig
 
-Notons $S=\{S_1,\cdots,S_L\}$ une séquence de taille $L$
-\footnote{
-On suppose que l'on concatène les deux brins d'ADN dans cette séquence. On
-suppose en effet qu'ils participent équiprobablement à la fixation. Ainsi la séquence génomique
-double brins est de longueur $L/2$.
-}
-. Supposons qu'il
-y a exactement un site de régulation par CRM. C'est l'approche de
-\citet{Lawrence1990uq}, et cette condition est relâchée par MEME, qui autorise
-l'utilisateur à préciser un nombre moyen de sites par séquence. La probabilité
-que la séquence possède un site de taille $K$ à la position $i$ étant donné le
-modèle $\mathcal{M}$ s'écrit 
+
+\subsubsection{Vraisemblance d'une séquence}
+\label{ssub:vraisemblance_d_une_s_quence}
+
+
+Notons $S=\{S_1,\cdots,S_L\}$ une séquence de taille $L$\footnote{On concatène
+les deux brins d'ADN dans cette séquence. On suppose en effet qu'ils
+participent équiprobablement à la fixation. Ainsi la séquence génomique double
+brins est de longueur $L/2$.}. Supposons qu'il y a exactement un site de
+régulation par CRM. C'est l'approche de \citet{Lawrence1990uq}, et cette
+condition est relâchée par MEME, qui autorise l'utilisateur à préciser un
+nombre moyen de sites par séquence. La probabilité que la séquence possède un
+site de taille $K$ à la position $i$ étant donné le modèle $\mathcal{M}$
+s'écrit 
 
 \begin{equation}
     \label{eq:prob-sequence-oops}
     P(S|i,\mathcal{M}) = P_0(S_{1,i-1})\times P(S_{i,i+K-1} | \mathcal{M})\times P_0(S_{K,L})
 \end{equation}
 
-où $S_{i,j}$ dénote la séquence entre les positions $i$ et $j$ incluses, et
-$P_0(s)$ est la probabilité nulle ou \textit{background} de générer la séquence
-$s$. Cette distribution est généralement prise comme étant une chaîne de Markov
+où $S_{i,j}$ dénote la séquence entre les positions $i$ et $j$ incluses,
+$P(S_{i,i+K-1}|\mathcal{M})$ est la probabilité de générer la séquence de
+taille $K$ débutant à la position $i$ avec le modèle $\mathcal{M}$ (voir
+section \ref{sec:mod_les_pour_d_crire_les_corr_lations}), et $P_0(s)$ est la
+probabilité neutre ou \textit{background} de générer la séquence $s$. Cette
+dernière est généralement prise comme étant une chaîne de Markov
 $\mathcal{P}_k$ d'ordre $k$ petit ($0$ ou $1$) :
 
 \begin{equation}
@@ -89,28 +93,109 @@ un site est généré avec le modèle de fixation $\mathcal{M}$. La probabilité de g
 Cette probabilité est généralement prise uniforme, mais on peut y incorporer
 certaines informations \apriori, comme le nombre de \textit{reads} d'une
 expérience de \chipseq par exemple.
-\\
+
+% subsubsection vraisemblance_d_une_s_quence (end)
+
+\subsubsection{Apprentissage du modèle}
+\label{ssub:apprentissage_du_mod_le}
+
 
 Maintenant que nous savons exprimer la vraisemblance d'une séquence régulée par
 le motif $\mathcal{M}$, nous pouvons apprendre le meilleur modèle possible
-l'ayant générée : c'est la maximisation de la vraisemblance. Soit un jeu de
-données $\mathcal{D}$ contenant $M$ séquences co-régulées $S[1],\cdots,S[M]$.
-Ces séquences étant supposées indépendantes, la vraisemblance que ces données
-soient générées par un modèle $\mathcal{M}$ est le produit sur les séquences de
-la quantité $P(S[m]|\mathcal{M})$. Il est plus utile dans ce cas de regarder la
-log-vraisemblance, s'écrivant alors comme une somme :
+l'ayant générée : c'est la maximisation de la vraisemblance. Soit un ensemble
+de séquences $\mathcal{S}$ constitué de $M$ séquences co-régulées
+$S[1],\cdots,S[M]$.  Ces séquences étant supposées indépendantes, la
+vraisemblance que ces données soient générées par un modèle $\mathcal{M}$ est
+le produit sur les séquences de la quantité $P(S[m]|\mathcal{M})$. Il est plus
+utile dans ce cas de regarder la log-vraisemblance, s'écrivant alors comme une
+somme :
 
 \begin{equation}
-    l(\mathcal{D} : \mathcal{M}) = \sum_{m=1}^M \log P(S[m] | \mathcal{M})
+    l(\mathcal{S} | \mathcal{M}) = \sum_{m=1}^M \log P(S[m] | \mathcal{M})
+\end{equation}
+
+Nous désirons obtenir le modèle $\mathcal{M}$ maximisant cette quantité
+\footnote{ La distribution \textit{background} est supposée fixée (par exemple
+la chaîne de Markov peut être apprise sur un grand nombre de séquences
+intergéniques non codantes).  }.  Cependant, nous ne connaissons pas les
+positions exactes des sites, qui sont des \og variables cachées \fg et il
+n'existe pas de méthode d'estimation simple permettant de résoudre ce problème.
+C'est à ce stade qu'intervient la méthode Espérance-Maximisation
+(EM)~\cite{dempster1977maximum}. L'algorithme EM est une méthode itérative qui
+part d'un modèle initial $\mathcal{M}^0$, permettant de calculer les poids des
+positions dans les séquences (étape E d'espérance), puis estime le meilleur
+modèle $\mathcal{M}^1$ étant données ces poids (étape M de maximisation).
+L'itération a lieu jusqu'à convergence vers un maximum local. 
+
+
+Notons $\mathcal{M}^t$ le modèle à l'itération $t$. La probabilité qu'un site
+à la position $i$ dans la séquence $S[i]$ soit un site de fixation s'écrit $P(i
+| S[m], \mathcal{M}^t)$. On définit la log-vraisemblance moyenne d'un modèle
+$\mathcal{M}$ à l'itération $t$ par :
+
+\begin{equation}
+    \label{eq:loglikeli-full}
+    Q(\mathcal{M}|\mathcal{M}_t,\mathcal{S}) = \sum_m \sum_i P(i | S[m],
+    \mathcal{M}^t) \log P(\mathcal{S},i|\mathcal{M})
+\end{equation}
+
+Le modèle suivant $\mathcal{M}^{t+1}$ est celui qui maximise cette quantité :
+
+\begin{equation}
+    \mathcal{M}^{t+1} = \underset{\mathcal{M}}{\text{argmax}} Q(\mathcal{M}|\mathcal{M}_t,\mathcal{S})
 \end{equation}
 
 
+L'équation \ref{eq:loglikeli-full} se scinde en une partie dépend de
+$\mathcal{M}$ et une partie \textit{background} qui n'en dépend pas (eq.
+\ref{eq:prob-sequence-oops}), que l'on peut dont ignorer pour ce qui est de la
+maximisation. Ainsi, le modèle $\mathcal{M}$ maximise la quantité suivante :
+
+\begin{equation}
+    Q(\mathcal{M}|\mathcal{M}_t,\mathcal{S}) = \sum_m \sum_i P(i | S[m],
+    \mathcal{M}^t) \log P(S_{i,i+K-1}|\mathcal{M})
+\end{equation}
+
+Chaque $K$-mer des séquences de $\mathcal{S}$ est donc pris en compte dans
+l'apprentissage en proportion de la croyance courante $P(i | S[m],
+\mathcal{M}^t)$ que c'est un site de fixation. 
+
+Pour résumer on a deux étapes:
+
+\begin{itemize}
+        
+
+    \item[$\bullet$] étape E : utiliser $\mathcal{M}^t$ pour attribuer un poids à chaque
+        $K$-mer des séquences
+
+    \item[$\bullet$] étape M : apprendre $\mathcal{M}^{t+1}$ qui a la plus grande
+        vraisemblance de générer les données pondérées par $\mathcal{M}^t$.
+
+\end{itemize}
+
+Reste le problème de choisir un modèle initial adéquat pour ne pas converger
+vers un maximum de vraisemblance local. MEME adopte pour cela une approche
+semi-exhaustive. Les différents $K$-mers possibles des séquences
+d'apprentissage sont successivement utilisés pour générer un modèle initial.
+L'algorithme EM est itéré une fois, et le modèle de plus grande probabilité est
+finalement gardé come motif initial pour une itération complète.
+
+
+
+% subsubsection apprentissage_du_mod_le (end)
 
 
 % subsection algorithmes_de_type_esp_rance_maximisation (end)
 
 % section recherche_de_motifs_dans_des_crms (end)
 
+
+\subsection{Incorporation de l'information phylogénétique}
+\label{sub:incorporation_de_l_information_phylog_n_tique}
+
+
+
+% subsection incorporation_de_l_information_phylog_n_tique (end)
 \section{Article} 
 \label{sec:article}
 
@@ -121,3 +206,78 @@ log-vraisemblance, s'écrivant alors comme une somme :
 
 
 
+
+\section{Calcul de la moyenne de la postérieure par une méthode MCMC} 
+\label{sec:calcul_de_la_moyenne_de_la_post_rieure_par_une_m_thode_mcmc}
+
+Nous avons voulu savoir si l'approximation réalisée par Imogene lors du calcul
+du maximum de l'estimateur de la postérieure modifiée donnait un résultat
+effectivement proche du calcul de la moyenne de l'estimateur de la postérieure
+non modifiée $\mathcal{P}(w_i|\{\mathcal{A}\})$, où $w_i$ est le vecteur de
+poids de la PWM à la position $i$ et $\{\mathcal{A}\}$ est l'ensemble des
+alignements de nucléotides observés à cette position dans les sites de
+fixation. Néanmoins, l'estimation de la moyenne de cette distribution est
+difficile, puisque nous n'avons pas de moyen simple de l'échantillonner. Afin
+de contourner ce problème, nous avons eu recours à une méthode de Monte-Carlo
+par chaînes de Markov ou MCMC basée sur l'algorithme de
+Metropolis-Hastings~\cite{krauth2006statistical}. 
+
+
+\subsection{Principe de l'algorithme de Metropolis-Hastings}
+\label{sub:principe_de_l_algorithme_de_metropolis_hastings}
+
+L'algorithme de Metropolis-Hastings permet d'échantillonner la distribution de
+la distribution postérieure en utilisant le parcours d'une chaîne de Markov
+ayant cette distribution pour loi stationnaire. Une tel processus de Markov est
+défini par des probabilités de transition $P(w \to w')$ entre deux états $w$ et
+$w'$. Il converge vers une distribution stationnaire $\pi(w)$ unique sous deux
+conditions : (1) les transitions sont réversibles et le processus satisfait le
+bilan détaillé $\pi(w)P(w\to w') = \pi(w')P(w'\to w)$, (2) le processus est
+ergodique, \cad que tout état est accessible et qu'il n'y a pas de cycles.
+L'algorithme de Metropolis-Hastings repose sur la construction d'une chaîne de
+Markov ayant ces propriétés et dont la distribution d'équilibre $\pi(w)$ est la
+probabilité que l'on cherche à échantillonner $P(w)$. Pour cela, on part de
+l'équation du bilan détaillé, que l'on peut écrire 
+
+\begin{equation}
+    \label{eq:bilan-detaille}
+    \frac{P(w \to w')}{P(w' \to w)} = \frac{P(w')}{P(w)}
+\end{equation}
+
+La transition $P(w \to w')$ est ensuite décomposée en deux sous-étapes, la
+proposition (\textit{proposal}) et l'acceptation (\textit{acceptance}) : 
+
+\begin{equation}
+    P(w \to w') = \underbrace{g(w \to w')}_{\text{proposition}} \cdot \underbrace{A(w\to w')}_{\text{acceptation}}
+\end{equation}
+
+En insérant dans l'éq. \ref{eq:bilan-detaille} on obtient
+
+\begin{equation}
+    \frac{A(w \to w')}{A(w' \to w)} = \frac{P(w')}{g(w \to w')} \frac{g(w' \to w)}{P(w)}
+\end{equation}
+% subsection principe_de_l_algorithme_de_metropolis_hastings (end)
+
+\subsection{Application au calcul de la postérieure}
+\label{sub:application_au_calcul_de_la_post_rieure}
+
+ Pour ce faire, le vecteur $w_i$ est
+initialisé à la valeur qu'il prendrait si toutes les séquences orthologues
+étaient des observations indépendantes (équation (11) de l'article). Un vecteur
+$w_i$ est ensuite tiré selon une loi de Dirichlet $\text{Dir}(\al)$ de
+paramètres $\al=\{\al_A,\al_C,\al_G,\al_T\}$ et de densité de probabilité
+
+\begin{equation}
+    f(w) = \frac{1}{B(\alpha)} \prod_{b\in \{A,C,G,T\}} w_{b(i)}^{\al_b - 1}
+\end{equation}
+
+où $B(\al)$ est la fonction bêta multinomiale permettant la normalisation.
+Cette distribution a l'avantage d'être centrée sur $w_i$ et de garder le
+nouveau vecteur tiré dans le simplexe de dimension $3$ défini par $w_A, w_C,
+w_G >0$ et $w_A+w_C+w_G <1$, le dernier poids étant défini par la normalisation
+des probabilités $w_T=1-w_A-w_C-w_G$.
+
+
+% subsection application_au_calcul_de_la_post_rieure (end)
+
+% section calcul_de_la_moyenne_de_la_post_rieure_par_une_m_thode_mcmc (end)

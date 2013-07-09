@@ -1,20 +1,20 @@
 \backcite {EMBL2001}{{5}{1.1.1}{subsection.2.1.1}}
+\backcite {Keim2004uq}{{5}{1}{Hfootnote.1}}
 \backcite {Furusawa2012p3898}{{6}{1.1}{figure.caption.2}}
 \backcite {waddington1957strategy}{{6}{1.1}{figure.caption.2}}
-\backcite {Keim2004uq}{{6}{1}{Hfootnote.1}}
 \backcite {waddington1957strategy}{{7}{1.1.2}{figure.caption.2}}
-\backcite {kaufmann1993origins}{{8}{1.1.2}{figure.caption.2}}
+\backcite {kaufmann1993origins}{{7}{1.1.2}{figure.caption.2}}
+\backcite {Blau1985vn}{{8}{1.1.4}{figure.caption.4}}
 \backcite {Graf2009p2592}{{9}{1.3}{figure.caption.4}}
-\backcite {Blau1985vn}{{9}{1.1.4}{figure.caption.4}}
 \backcite {davis1987expression}{{9}{1.1.4}{figure.caption.4}}
 \backcite {Kulessa1995ys}{{9}{1.1.4}{figure.caption.4}}
-\backcite {Gurdon2008zr}{{10}{1.1.4}{figure.caption.4}}
+\backcite {Gurdon2008zr}{{9}{1.1.4}{figure.caption.4}}
 \backcite {Takahashi2006kx}{{10}{1.1.4}{figure.caption.4}}
 \backcite {Nurse2011p2308}{{10}{1.2.1}{subsection.2.2.1}}
 \backcite {USDE}{{11}{1.4}{figure.caption.5}}
-\backcite {Vaquerizas2009ys}{{12}{$\bullet $}{subsubsection.2.2.2.1}}
-\backcite {Bird2002oq}{{12}{$\bullet $}{subsubsection.2.2.2.2}}
-\backcite {USDE}{{13}{1.5}{figure.caption.6}}
+\backcite {USDE}{{12}{1.5}{figure.caption.6}}
+\backcite {Vaquerizas2009ys}{{13}{$\bullet $}{subsubsection.2.2.2.1}}
+\backcite {Bird2002oq}{{13}{$\bullet $}{subsubsection.2.2.2.2}}
 \backcite {Greer2012ve}{{14}{$\bullet $}{subsubsection.2.2.2.2}}
 \backcite {Bartel2009cr}{{14}{$\bullet $}{subsubsection.2.2.2.3}}
 \backcite {Hammond2001bh}{{14}{$\bullet $}{subsubsection.2.2.2.3}}
@@ -168,45 +168,47 @@
 \backcite {Lettice2003uq}{{57}{1.24}{figure.caption.25}}
 \backcite {Sagai2005cr}{{57}{1.24}{figure.caption.25}}
 \backcite {Lettice2003uq}{{57}{1.24}{figure.caption.25}}
-\backcite {Visel2009kx}{{58}{1.6.5}{figure.caption.25}}
+\backcite {Visel2009kx}{{57}{1.6.5}{figure.caption.25}}
 \backcite {Lettice2003uq}{{58}{1.6.5}{figure.caption.25}}
 \backcite {Masuya2007nx}{{58}{1.6.5}{figure.caption.25}}
 \backcite {Sagai2005cr}{{58}{1.6.5}{figure.caption.25}}
 \backcite {Lander2001p1633}{{59}{1.7}{section.2.7}}
 \backcite {Wasserman2004p624}{{59}{1.7}{section.2.7}}
 \backcite {Sboner2011fk}{{59}{1.25}{figure.caption.26}}
-\backcite {Loots2005ys}{{62}{1.7.3}{subsection.2.7.3}}
-\backcite {Loots2004vn}{{62}{1.7.3}{subsection.2.7.3}}
-\backcite {Sato2012zr}{{62}{1.7.3}{subsection.2.7.3}}
-\backcite {Asp2011p2370}{{63}{1.27}{figure.caption.28}}
-\backcite {Cao2010p425}{{63}{1.27}{figure.caption.28}}
-\backcite {Liu2010p703}{{63}{1.27}{figure.caption.28}}
-\backcite {ENCODE-Project-Consortium2012ly}{{65}{1.7.4}{figure.caption.29}}
-\backcite {Man2001fk}{{68}{2.1}{section.3.1}}
-\backcite {Bulyk2002uq}{{69}{2.1}{section.3.1}}
-\backcite {Badis2009p3911}{{69}{2.1}{section.3.1}}
-\backcite {Jolma2013p3971}{{69}{2.1}{section.3.1}}
-\backcite {Benos2002p3912}{{71}{2.2.2}{subsection.3.2.2}}
-\backcite {zhou2004modeling}{{71}{2.2.2}{subsection.3.2.2}}
-\backcite {krauth2006statistical}{{71}{2.2.2}{subsection.3.2.2}}
-\backcite {hu2010detection}{{71}{2.2.2}{equation.3.2.2}}
-\backcite {casella1992explaining}{{71}{2.2.2}{equation.3.2.2}}
-\backcite {friedman1997bayesian}{{72}{2.2.3}{equation.3.2.3}}
-\backcite {Barash2003MDP}{{72}{2.2.3}{equation.3.2.3}}
-\backcite {Badis2009p3911}{{73}{2.2.4}{subsection.3.2.4}}
-\backcite {Jolma2013p3971}{{73}{2.2.4}{subsection.3.2.4}}
-\backcite {Barash2003MDP}{{73}{$\bullet $}{equation.3.2.4}}
-\backcite {Badis2009p3911}{{73}{$\bullet $}{equation.3.2.4}}
-\backcite {Barash2003MDP}{{74}{$\bullet $}{subsubsection.3.2.4.2}}
-\backcite {Jaynes1978p795}{{74}{2.3.1}{subsection.3.3.1}}
-\backcite {sethna2006statistical}{{76}{2.3.1}{equation.3.3.9}}
-\backcite {grendar2001minimax}{{77}{2.3.2}{equation.3.3.15}}
-\backcite {jaynes1982rationale}{{77}{2.3.2}{equation.3.3.15}}
-\backcite {baxter2007exactly}{{79}{$\bullet $}{equation.3.3.23}}
-\backcite {Jolma2013p3971}{{114}{2.6}{section.3.6}}
-\backcite {Rouault2010p327}{{118}{3}{section*.35}}
-\backcite {Bailey1994fk}{{118}{3.1.1}{subsection.4.1.1}}
-\backcite {Lawrence1990uq}{{118}{3.1.1}{subsection.4.1.1}}
-\backcite {Lawrence1990uq}{{118}{3.1.1}{figure.caption.36}}
-\backcite {Dhaeseleer2006kx}{{119}{3.1}{figure.caption.36}}
-\backcite {Lawrence1990uq}{{119}{3.1}{figure.caption.36}}
+\backcite {Loots2005ys}{{61}{1.7.3}{subsection.2.7.3}}
+\backcite {Asp2011p2370}{{62}{1.26}{figure.caption.27}}
+\backcite {Cao2010p425}{{62}{1.26}{figure.caption.27}}
+\backcite {Liu2010p703}{{62}{1.26}{figure.caption.27}}
+\backcite {Loots2004vn}{{63}{1.7.3}{subsection.2.7.3}}
+\backcite {Sato2012zr}{{63}{1.7.3}{subsection.2.7.3}}
+\backcite {ENCODE-Project-Consortium2012ly}{{64}{1.7.4}{figure.caption.28}}
+\backcite {Man2001fk}{{66}{2.1}{section.3.1}}
+\backcite {Bulyk2002uq}{{67}{2.1}{section.3.1}}
+\backcite {Badis2009p3911}{{67}{2.1}{section.3.1}}
+\backcite {Jolma2013p3971}{{67}{2.1}{section.3.1}}
+\backcite {Benos2002p3912}{{69}{2.2.2}{subsection.3.2.2}}
+\backcite {zhou2004modeling}{{69}{2.2.2}{subsection.3.2.2}}
+\backcite {krauth2006statistical}{{69}{2.2.2}{subsection.3.2.2}}
+\backcite {hu2010detection}{{69}{2.2.2}{equation.3.2.2}}
+\backcite {casella1992explaining}{{69}{2.2.2}{equation.3.2.2}}
+\backcite {friedman1997bayesian}{{70}{2.2.3}{equation.3.2.3}}
+\backcite {Barash2003MDP}{{70}{2.2.3}{equation.3.2.3}}
+\backcite {Badis2009p3911}{{71}{2.2.4}{subsection.3.2.4}}
+\backcite {Jolma2013p3971}{{71}{2.2.4}{subsection.3.2.4}}
+\backcite {Barash2003MDP}{{71}{$\bullet $}{equation.3.2.4}}
+\backcite {Badis2009p3911}{{71}{$\bullet $}{equation.3.2.4}}
+\backcite {Barash2003MDP}{{72}{$\bullet $}{subsubsection.3.2.4.2}}
+\backcite {Jaynes1978p795}{{72}{2.3.1}{subsection.3.3.1}}
+\backcite {sethna2006statistical}{{74}{2.3.1}{equation.3.3.9}}
+\backcite {grendar2001minimax}{{75}{2.3.2}{equation.3.3.15}}
+\backcite {jaynes1982rationale}{{75}{2.3.2}{equation.3.3.15}}
+\backcite {baxter2007exactly}{{77}{$\bullet $}{equation.3.3.23}}
+\backcite {Jolma2013p3971}{{112}{2.6}{section.3.6}}
+\backcite {Rouault2010p327}{{116}{3}{section*.34}}
+\backcite {Bailey1994fk}{{116}{3.1.1}{subsection.4.1.1}}
+\backcite {Lawrence1990uq}{{116}{3.1.1}{subsection.4.1.1}}
+\backcite {Lawrence1990uq}{{116}{$\bullet $}{subsubsection.4.1.1.1}}
+\backcite {Dhaeseleer2006kx}{{117}{3.1}{figure.caption.35}}
+\backcite {Lawrence1990uq}{{117}{3.1}{figure.caption.35}}
+\backcite {dempster1977maximum}{{118}{$\bullet $}{equation.4.1.4}}
+\backcite {krauth2006statistical}{{148}{3.3}{section.4.3}}

@@ -108,6 +108,8 @@ INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/placeins/placeins.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/placeins/placeins.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/fancybox/fancybox.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/fancybox/fancybox.sty
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/appendix/appendix.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/minitoc/minitoc.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/minitoc/minitoc.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/minitoc/mtcmess.sty
@@ -627,6 +629,7 @@ OUTPUT these.mtc3
 OUTPUT these.mtc4
 OUTPUT these.mtc5
 OUTPUT these.mtc6
+OUTPUT these.mtc7
 INPUT packaging/titre.tex
 INPUT packaging/titre.tex
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplb9d.tfm
@@ -817,12 +820,12 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplrc8r.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplrc9d.vf
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplr9d.vf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplrc8r.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplrc9d.vf
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT figures/embrys-myog-e9_5.jpg
 INPUT ./figures/embrys-myog-e9_5.jpg
 INPUT ./figures/embrys-myog-e9_5.jpg
@@ -844,11 +847,11 @@ INPUT figures/us-grn.pdf
 INPUT ./figures/us-grn.pdf
 INPUT ./figures/us-grn.pdf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT figures/schones-epigenome.pdf
 INPUT ./figures/schones-epigenome.pdf
 INPUT ./figures/schones-epigenome.pdf
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT figures/lee-network-motifs-yeast.pdf
 INPUT ./figures/lee-network-motifs-yeast.pdf
 INPUT ./figures/lee-network-motifs-yeast.pdf
@@ -952,12 +955,7 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam1
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/wasy/wasy5.tfm
-INPUT figures/intergenic-intronic.pdf
-INPUT ./figures/intergenic-intronic.pdf
-INPUT ./figures/intergenic-intronic.pdf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/public/mathpazo/zplmr7t.vf
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT figures/ucsc-chrng-view.pdf
 INPUT ./figures/ucsc-chrng-view.pdf
 INPUT ./figures/ucsc-chrng-view.pdf
@@ -977,6 +975,8 @@ INPUT chapters/Chapter-maxent.tex
 INPUT figures/modeles-correlations.pdf
 INPUT ./figures/modeles-correlations.pdf
 INPUT ./figures/modeles-correlations.pdf
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/public/mathpazo/zplmr7t.vf
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf
@@ -1461,6 +1461,11 @@ INPUT articles/imogene-genomebiol.pdf
 INPUT ./articles/imogene-genomebiol.pdf
 INPUT articles/imogene-genomebiol.pdf
 INPUT ./articles/imogene-genomebiol.pdf
+INPUT annexes/annexes-stat.tex
+INPUT annexes/annexes-stat.tex
+INPUT figures/intergenic-intronic.pdf
+INPUT ./figures/intergenic-intronic.pdf
+INPUT ./figures/intergenic-intronic.pdf
 INPUT these.bbl
 INPUT these.bbl
 INPUT these.brf
@@ -1472,6 +1477,7 @@ OUTPUT these.flg
 OUTPUT these.maf
 INPUT these.mtc
 INPUT these.mtc0
+INPUT these.mtc6
 INPUT these.mtc5
 INPUT these.mtc4
 INPUT these.mtc3
