@@ -293,7 +293,7 @@ itérations réalisées :
 \end{equation}
 
 Quant au critère de convergence, une possibilité est d'utiliser le Théorème
-Central Limite (TCL). Celui-ci stipule que la moyenne de $n$ variables
+Centrale Limite (TCL). Celui-ci stipule que la moyenne de $n$ variables
 aléatoires indépendantes et identiquement distribuées selon une loi de moyenne
 $\mu$ et d'écart-type $\sigma$ de valeurs finies suit, pour $n$ grand, une loi
 normale de moyenne $\mu$ et d'écart-type $\sigma/\sqrt{n}$. Dans notre cas, les
@@ -306,7 +306,8 @@ itérations lorsqu'une certaine précision désirée est atteinte, par exemple
 lorsque $\sigma / \sqrt{n} < 1.96$, critère qui assure que l'on connaît la
 vraie valeur moyenne à $95\%$ de confiance.  L'écart-type $\sigma$ étant lui
 même estimé à partir des échantillons de l'algorithme, il faut aussi s'assurer
-qu'il a convergé.
+qu'il a convergé. Il est aussi possible, comme nous le verrons par la suite,
+d'utiliser une borne inférieure connue à cet écart-type.
 
 
 
@@ -363,6 +364,7 @@ pour la \textit{proposal} :
 
 
 \begin{equation}
+    \label{eq:proposal}
     g(w \to w') = \frac{1}{B(\alpha)} \prod_{b\in \{A,C,G,T\}} (w_{i,b}')^{\al_{p,b} + N_{\text{eff}}\cdot w_{i,b}  - 1}
 \end{equation}
 
@@ -370,29 +372,157 @@ Le vecteur $w_i$ est initialisé à la valeur qu'il prendrait si toutes les
 séquences orthologues étaient des observations indépendantes  (cf article) :
 
 \begin{equation}
-    w_i(0) = \frac{N_i + \al_b}{N_{\text{tot}} + \sum_b \al_b}
+    w_{i,b}(0) = w_{i,b}^\text{inde} = \frac{N_{i,b} + \al_b}{N_{\text{tot}} + \sum_b \al_b}
 \end{equation}
 
 
 Le poids $w_i(1)$ suivant est ensuite tiré selon la probabilité de transition
 $g(w_i(0) \to w_i(1))$. Les différentes quantités de l'équation
 \ref{eq:acceptance} sont ensuite calculées et la transition est acceptée avec
-probabilité $A(w_i(0) \to w_i(1))$. 
+probabilité $A\left(w_i(0) \to w_i(1)\right)$. 
 \\
 
-Reste le problème de la convergence. 
+Reste le problème de la convergence. Nous avons vu dans la section précédente
+que l'on pouvait utiliser le théorème centrale limite pour décider de la
+convergence. Dans notre cas, nous possédons une borne inférieure de
+l'écart-type $\sigma$ de la postérieure :  celui-ci est donné par l'écart-type
+$\sigma_{\text{inde}}$ du cas limite où les séquences sont des observations
+indépendantes. En effet, dans ce cas limite le nombre d'observations est plus
+grand qu'avec un modèle d'évolution, et la déviation standard est donc plus
+petite. Notant $\al_{i,b}^\text{inde}=N_{i,b}+\al_b$ et
+$\al_0=\sum_b\al_{i,b}^{\text{inde}}$, celle-ci s'écrit
 
+\begin{equation}
+    \sigma_{\text{inde}} = \sqrt{\frac{\al_{i,b}^\text{inde}(\al_0-\al_{i,b}^\text{inde}}{\al_0^2(\al_0+1)}} 
+\end{equation}
+
+Le TCL peut alors être appliqué en utilisant des échantillons indépendants de
+$w_i$ (voir paragraphe suivant
+\ref{sub:illustration_de_la_m_thode_mcmc_sur_un_exemple}). Notre critère de
+convergence est que l'écart absolu maximum obtenu entre l'estimation de la
+moyenne à l'itération courante et les $10$ précédentes estimations doit être
+plus petit que $\sigma_{\text{inde}}/\sqrt{n}$, où $n$ est le nombre
+d'échantillons indépendants.
+
+% subsection application_au_calcul_de_la_post_rieure (end)
+
+
+\subsection{Illustration sur un exemple}
+\label{sub:illustration_de_la_m_thode_mcmc_sur_un_exemple}
+
+Étudions maintenant un exemple concret. Nous présentons la méthode sur le cas
+présenté en fig.~\ref{fig:MCMC/TFBS}, et les résultats ont été obtenus pour le
+modèle d'évolution \textit{Felsenstein}. Nous montrons les résultats pour la
+position $2$ des sites où les bases $G$ et $C$ sont dégénérées. Le vecteur de
+poids $w_i$ est initialisé au cas indépendant $w_i^\text{inde}$. La
+distribution de proposition de l'éq.~\ref{eq:proposal}, $g(w_i^\text{inde} \to
+w)$, est montrée en fig.~\ref{fig:MCMC/plotDirichlet}. On voit notamment
+comment cette distribution de Dirichlet permet de rester dans le simplexe. La
+valeur finale de l'estimation de la moyenne de la postérieure est aussi montrée
+: elle est relativement proche, indiquant que le choix de la valeur initiale
+est effectivement judicieux.
+\\
+
+La chaîne MCMC est ensuite lancée. Le taux d'acceptation est calculé comme
+valant $62\%$. Les $500$ premiers échantillons $w_i$ sont montrés en figure
+\ref{fig:MCMC/plotSampling}. On note dans cette figure que certains points
+semblent corrélés : diminutions ou augmentations successives de la valeur
+courante $w_i(t)$ sur plusieurs itérations. Pour quantifier cet effet, nous
+avons mesuré la corrélation temporelle des échantillons. Celle-ci est estimée
+par
+
+\begin{equation}
+    C_b(\tau) = \frac{1}{N} \sum_{t=1}^{N-\tau} w_{i,b}(t) w_{i,b}(t+\tau) - \left(\frac{1}{N}\sum_{t=1}^N w_{i,b}(t)\right)^2
+\end{equation}
+
+Le logarithme de cette quantité est montrée en figure
+\ref{fig:MCMC/plotAutocorr}. L'intérêt du logarithme est de mettre en exergue
+le caractère exponentiel de la décorrélation :
+
+\begin{equation}
+    C_b(\tau) \propto e^{-\tau/T_b}
+\end{equation}
+
+Les temps de décorrelation $T_b \sim 10$ sont estimés en fittant une droite
+sur les $20$ premiers points de la courbe. 
+\\
+
+Les valeurs des estimateurs de la postérieure obtenues avec la méthode de
+descente de gradient (Maximum A Posteriori sur la postérieure modifiée, voir
+article) et l'approche MCMC (Moyenne A Posteriori) sont comparées en figure
+\ref{fig:MCMC/plotConvergence} en fonction du nombre d'itérations. L'approche
+MCMC, bien que convergeant vers un état proche de celui donné par la descente
+de gradient, met beaucoup plus de temps à converger : plus de $10,000$
+itérations, alors que la descente de gradient n'en requiert que $100$. Au vu de
+la faible différence entre les deux résultats, nous avons constamment utilisé
+l'approche décrite dans l'article de maximisation de la postérieure modifiée,
+ce qui permet un gain de temps considérable pour l'algorithme.
 
 \bfig
-\includegraphics[width=0.8\textwidth]{figures/MCMC/TFBS.pdf}
+\includegraphics[width=0.2\textwidth]{figures/MCMC/TFBS.pdf}
 \captionbf{Sites utilisés pour le MCMC}{
 
-Main caption
+    La position étudiée est celle encadrée, contenant au total $10$ G, $8$ C et
+    $1$ A.
 
 }
 \label{fig:MCMC/TFBS}
 \efig
 
-% subsection application_au_calcul_de_la_post_rieure (end)
+\bfig
+\includegraphics[width=0.5\textwidth]{figures/MCMC/plotDirichlet.pdf}
+\captionbf{Distribution de la fonction de proposition $g(w_i^\text{inde} \to w)$}{
+
+    La distribution de Dirichlet est réalisée pour $50,000$ tirages aléatoires,
+    avec un bin de $0.02$. Les lignes verticales en pointillés indiquent
+    l'estimation de la moyenne obtenue après convergence (voir
+    fig.~\ref{fig:MCMC/plotConvergence}).
+
+}
+\label{fig:MCMC/plotDirichlet}
+\efig
+
+
+\bfig
+\includegraphics[width=0.5\textwidth]{figures/MCMC/plotSampling.pdf}
+\captionbf{Extrait de l'échantillonnage de $w_i$}{
+
+Les $500$ premiers échantillons $w_i$ de la chaîne MCMC sont montrés.
+
+}
+\label{fig:MCMC/plotSampling}
+\efig
+
+\bfig
+\includegraphics[width=0.5\textwidth]{figures/MCMC/plotAutocorr.pdf}
+\captionbf{Fonction d'auto-corrélation de la chaîne MCMC}{
+
+Corrélation entre des échantillons séparés de $t-1$ itérations. Une droite est
+fittée sur les $20$ premièrs points, permettant de recueillir
+la pente $-T_b$ donnant le temps de décorrélation.
+
+}
+\label{fig:MCMC/plotAutocorr}
+\efig
+
+\bfig
+\includegraphics[width=0.5\textwidth]{figures/MCMC/plotConvergence.pdf}
+\captionbf{Comparaison des approches MCMC et par descente de gradient}{
+
+L'approche de maximisation de (l'opposé de) la postérieure par descente de
+gradient (rouge) est comparée à l'approche de calcul de la moyenne de la
+postérieure par MCMC (noir). Les deux méthodes sont initialisées au même
+$w_i^{\text{inde}}$ (ligne pointillée mauve) Alors que la descente de
+gradient converge rapidement ($\sim100$ itérations), l'approche MCMC converge
+plus lentement, dans ce cas plus de $10,000$ itérations. Au final les deux
+approches convergent vers des quantités proches (lignes pointillées rouges et
+noires). 
+
+}
+\label{fig:MCMC/plotConvergence}
+\efig
+
+% subsection illustration_de_la_m_thode_mcmc_sur_un_exemple (end)
+
 
 % section calcul_de_la_moyenne_de_la_post_rieure_par_une_m_thode_mcmc (end)

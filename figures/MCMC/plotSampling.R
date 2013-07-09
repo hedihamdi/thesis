@@ -12,7 +12,6 @@ wblog <- c(expression(log[10](C[A](t))),
            expression(log[10](C[G](t))), 
            expression(log[10](C[T](t))))
 
-bases <- c("A","C","T","G")
 
 # INFO
 resfile<-"sampling-info.dat"
@@ -40,31 +39,6 @@ for (i in 1:4){
 pch<-19
 cex<-0.6
 
-pdf("plotDirichlet.pdf",family = "Palatino")
-par(mfrow=c(2,2), mar = c(5.1,5.1,4.1,2.1))
-
-
-# DIRICHLET
-resfile<-"sampling-dirichlet.dat"
-t<-read.table(resfile)
-W<-as.matrix(t[,1:4])
-for (i in 1:4){
-   hist(W[,i],
-        xlab=wb[i],
-        ylab="Nombre d'éléments",
-        main="",#paste("Distribution de Dirichlet pour",parse(text=wb[i]),"\n winit=",winit[i]),
-        breaks=seq(0,1,0.02),
-        xlim=c(0,1),
-        cex.main = cexmain,
-        cex.lab = cexlab,
-        cex.axis = cexaxis
-        )
-   abline(v=winit[i],col="red",lwd=3)
-}
-#par(mfrow=c(1,1), oma = c(0,2,2,0))
-#mtext(paste("Ndir=",Ndir,",",consInst,"conserved instances"), 3, outer = TRUE,font = 2)
-#mtext("Distribution de Dirichlet", 3, outer = TRUE,font = 2, cex= cexmain)
-
 # SAMPLE POINTS
 resfile<-"sampling-w.dat"
 t<-read.table(resfile)
@@ -90,32 +64,32 @@ for (i in 1:4){
         cex.axis = cexaxis
         )
 }
-#par(mfrow=c(1,1), oma = c(0,2,2,0))
-#mtext(paste("Acceptation rate=",acceptRate), 3, outer = TRUE,font = 2)
-#mtext("Echantillonnage", 3, outer = TRUE,font = 2, cex = cexmain)
+dev.off()
 
-## LogLIKELIHOOD
-#resfile<-"sampling-loglikelihood-w-dirichlet.dat"
-#t<-na.omit(read.table(resfile))
-#fmean<-t$V1
-#fmax<-t$V2
-#par(mfrow=c(2,2), oma = c(0,0,3,0))
-#for (i in 1:4){
-   #name<-colnames(W)[i]
-   #norm<-log(sum(exp(min(fmean[1:1000])-fmean[1:1000])))-min(fmean[1:1000])
-   #plot(W[1:1000,i],fmean[1:1000]-norm,xlab=name,ylab=paste("Loglikelihood"),main=paste("Loglikelihood values sampled"),xlim=c(0,1),pch=pch,cex=cex)
-   #norm<-log(sum(exp(min(fmax[1:1000])-fmax[1:1000])))-min(fmax[1:1000])
-   #points(W[1:1000,i],fmax[1:1000]-norm,pch=pch,cex=cex,col="green")
-   #abline(v=winit[i],col="red",lwd=3)
-   #abline(v=Wmean[Ntot,i],col="black",lwd=3)
-   #abline(v=wopti[i],col="green",lwd=3)
-   #abline(v=wmeaninde[i],col="yellow",lwd=3)
-   #if (Wmean[Ntot,i]>0.5) pos <- "topleft"
-   #else pos <- "topright"
-   #legend(pos,c("Likelihood for mean","Likelihood for max","w init","w mean","w max (SD)","w mean inde"),col=c("black","green","red","black","green","yellow"),pch=c(pch,pch,-1,-1,-1,-1),lwd=c(-1,-1,3,3,3,3),lty=c(-1,-1,1,1,1,1))
-#}
-#par(mfrow=c(1,1), oma = c(0,0,2,0))
-#mtext(paste("Acceptation rate=",acceptRate), 3, outer = TRUE,font = 2)
+
+# DIRICHLET
+pdf("plotDirichlet.pdf",family = "Palatino")
+par(mfrow=c(2,2), mar = c(5.1,5.1,4.1,2.1))
+
+resfile<-"sampling-dirichlet.dat"
+t<-read.table(resfile)
+Wdir<-as.matrix(t[,1:4])
+for (i in 1:4){
+   hist(Wdir[,i],
+        xlab=wb[i],
+        ylab="Nombre d'éléments",
+        main="",#paste("Distribution de Dirichlet pour",parse(text=wb[i]),"\n winit=",winit[i]),
+        breaks=seq(0,1,0.02),
+        xlim=c(0,1),
+        cex.main = cexmain,
+        cex.lab = cexlab,
+        cex.axis = cexaxis
+        )
+   #abline(v=winit[i],col="blue",lwd=3)
+   #abline(v=wmeaninde[i],col="purple",lwd=3)
+   abline(v=Wmean[Ntot,i],col="black",lwd=3, lty =2)
+}
+dev.off()
 
 # Step correlation
 Corr<-NULL
@@ -171,26 +145,7 @@ for (i in 1:4){
   # legend("topright",paste("T ~",1/100*floor(100*tau/5)), cex = 2)
 }
 mtext("Corrélation entre échantillons", 3, outer = TRUE,font = 2, cex = cexmain)
-
-## WINDOW
-#icW<-NULL
-#for (d in seq(1,200,5)){
-   #ws<-NULL
-   #xs<-1:((Ntot-d)/d)
-   #for (i in xs){
-      #beg<-i*d
-      #sto<-(i+1)*d
-      #ws<-rbind(ws,colMeans(W[beg:sto,]))
-   #}
-   #icW<-rbind(icW,1.96*sqrt(apply(ws,2,var)/length(xs)))
-#}
-#par(mfrow=c(2,2), oma = c(0,0,3,0))
-#for(i in 1:4){
-   #name<-colnames(W)[i]
-   #plot(seq(1,200,5),icW[,i],main=paste("Variance of",name,"averaged over windows of size d"),xlab="d",ylab="IC(d) ~ sqrt(var(w)/d)",pch=pch,cex=cex)
-#}
-#par(mfrow=c(1,1), oma = c(0,0,2,0))
-#mtext("Another way to do the same thing: check independance of drawings using Central Limit Theorem", 3, outer = TRUE,font = 2)
+dev.off()
 
 nsample<-floor(max(taus))
 nsample<-30
@@ -201,38 +156,7 @@ if (nsample>100){
    nsample <- 100
 }
 
-## DKL
-#par(mfrow=c(1,1), oma = c(0,0,3,0))
 Niter<-length(iter)
-#dkl<-rowSums(Wmean[iter[2:Niter],]*log2(Wmean[iter[2:Niter],]/Wmean[iter[1:(Niter-1)],]))
-#dkl[ dkl<=0 ] <- min(dkl[dkl>0])
-#plot(log10(nsample*(1:(Niter-1))),log10(dkl),xlab="Number of iteration (log10 scale)",ylab="dkl (bits, log10 scale)",pch=pch,cex=cex,main="Kullback-Leibler Divergence to previous mean")
-#g<-glm(log10(dkl)~log10(nsample*(1:(Niter-1))))
-#abline(g$coeff)
-
-## CUTOFF
-#xs<-nsample*(1:(Niter-1))
-#dklcut <- 1e-5
-#cutoff <- min(xs[which(dkl<dklcut)])
-#abline(v=log10(cutoff),col="blue",lwd=3)
-
-#legend("topright",c(paste("Dkl ~ 1/N^",-1/10*floor(10*g$coeff[2])),paste("cutoff DKL=",dklcut,"N=",cutoff)),col=c("black","blue"),lwd=c(1,3))
-#par(mfrow=c(1,1), oma = c(0,0,2,0))
-#mtext(paste("Sample step = 5*tau ~",nsample), 3, outer = TRUE,font = 2)
-
-## Euclidean distance
-#par(mfrow=c(1,1), oma = c(0,0,3,0))
-#Niter<-length(iter)
-#dist<-rowSums((Wmean[iter[2:Niter],]-Wmean[iter[1:(Niter-1)],])^2)
-#dist[ dist==0 ] <- min(dist[dist>0])
-#plot(log10(nsample*(1:(Niter-1))),log10(dist),xlab="Number of iteration (log10 scale)",ylab="Euclidean distance (log10 scale)",pch=pch,cex=cex,main="Euclidean distance to previous mean")
-#estim <- rowSums(Wvar[nsample*(1:(Niter-1)),])*(nsample/(nsample+nsample*(1:(Niter-1))))^2
-#lines(log10(nsample*(1:(Niter-1))),log10(estim),col="red")
-#g<-glm(log10(dist)~log10(nsample*(1:(Niter-1))))
-#abline(g$coeff)
-#legend("topright",c(paste("Dist ~ 1/N^",-1/10*floor(10*g$coeff[2])),"estimation sum(Var(w))*(n/(n+N))^2"),col=c("black","red"),lty=1)
-#par(mfrow=c(1,1), oma = c(0,0,2,0))
-#mtext(paste("Sample step = 5*tau ~",nsample), 3, outer = TRUE,font = 2)
 
 pdf("plotCVmeanvar.pdf",family = "Palatino")
 # MEAN
@@ -264,47 +188,10 @@ for (i in 1:4){
    lines(iter,samplemean[Niter]+1.96*sqrt(wvarinde[i]/(iter/nsample)),lty='dashed',lwd=3,col="red")
    lines(iter,samplemean[Niter]-1.96*sqrt(wvarinde[i]/(iter/nsample)),lty='dashed',lwd=3,col="red")
 
-   #ncv <- 10
-   #itercv <- 0
-   #for (j in (ncv+1):Niter){
-      ##if ( sum(abs(Wmean[iter[(j-ncv):(j-1)],i]-Wmean[iter[j],i])<1.96*sqrt(wvarinde[i]/((j-ncv):(j-1)))) == ncv ){
-      #if ( sum(abs(samplemean[(j-ncv):(j-1)]-samplemean[j])<1.96*sqrt(wvarinde[i]/((j-ncv):(j-1)))) == ncv ){
-         #itercv <- j
-         #break
-      #}
-   #}
-  #abline(v=iter[itercv],col="yellow",lwd=3)
-   #Ncv<-max(Ncv,iter[itercv])
-
-   #if (Wmean[Ntot,i]>0.5) pos <- "bottomright"
-   #else pos <- "topright"
-   #abline(v=cutoff,col="blue",lwd=3)
-   #legend(pos,c("95% confindence with inde variance",paste("cutoff DKL=",dklcut,"N=",cutoff),"cutoff with var inde"),col=c("red","blue","yellow"),lty=c(2,1,1),lwd=c(3,3,3))
 }
 par(mfrow=c(1,1), oma = c(0,2,2,0))
 #mtext(paste("Sample step = 5*tau ~",nsample), 3, outer = TRUE,font = 2)
 mtext("Convergence de la moyenne", 3, outer = TRUE,font = 2,cex=1.5)
-
-## LogLIKELIHOOD
-#resfile<-"sampling-loglikelihood-w-dirichlet.dat"
-#t<-na.omit(read.table(resfile))
-#f<-t$V1
-#par(mfrow=c(2,2), oma = c(0,0,3,0))
-#for (i in 1:4){
-   #name<-colnames(W)[i]
-   #plot(W[1:1000,i],f[1:1000],xlab=name,ylab=paste("Loglikelihood"),main=paste("Loglikelihood values sampled"),xlim=c(0,1),pch=pch,cex=cex)
-   #abline(v=winit[i],col="red",lwd=3)
-   #abline(v=Wmean[Ntot,i],col="black",lwd=3)
-   #abline(v=Wmean[cutoff,i],col="blue",lwd=3)
-   #abline(v=Wmean[Ncv,i],col="yellow",lwd=3)
-   #if (Wmean[Ntot,i]>0.5) pos <- "topleft"
-   #else pos <- "topright"
-   #legend(pos,c("w init","w mean",paste("w mean at dkl cutoff=",dklcut),"w mean at 95% CI"),col=c("red","black","blue","yellow"),lwd=3)
-#}
-#par(mfrow=c(1,1), oma = c(0,0,2,0))
-#mtext(paste("Acceptation rate=",acceptRate), 3, outer = TRUE,font = 2)
-
-
 
 
 # VAR

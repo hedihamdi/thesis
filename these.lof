@@ -38,9 +38,13 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{{\em Imogene}: un algorithme d'identification de motifs et de modules de r\'egulation transcriptionnelle}{115}{division.4}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Illustration de l'approche esp\'erance-maximisation}}{117}{figure.caption.35}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Sites utilis\'es pour le MCMC}}{152}{figure.caption.36}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Sites utilis\'es pour le MCMC}}{153}{figure.caption.36}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Distribution de la fonction de proposition $g(w_i^\text {inde} \to w)$}}{153}{figure.caption.37}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Extrait de l'\'echantillonnage de $w_i$}}{154}{figure.caption.38}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Fonction d'auto-corr\'elation de la cha\IeC {\^\i }ne MCMC}}{154}{figure.caption.39}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Comparaison des approches MCMC et par descente de gradient}}{155}{figure.caption.40}
 \addvspace {10\p@ }
-\contentsline {xchapter}{\'Etude de la diff\'erenciation \'epidermale chez la drosophile}{153}{division.5}
+\contentsline {xchapter}{\'Etude de la diff\'erenciation \'epidermale chez la drosophile}{157}{division.5}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Statistiques g\'enomique}{223}{division.6}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Distribution des tailles interg\'eniques et introniques chez diff\'erentes esp\`eces}}{224}{figure.caption.39}
+\contentsline {xchapter}{Statistiques g\'enomique}{161}{division.6}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Distribution des tailles interg\'eniques et introniques chez diff\'erentes esp\`eces}}{162}{figure.caption.43}

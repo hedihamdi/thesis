@@ -95,7 +95,8 @@
 \contentsline {section}{\numberline {3.3}Calcul de la moyenne de la post\'erieure par une m\'ethode MCMC}{148}{section.4.3}
 \contentsline {subsection}{\numberline {3.3.1}Principe de l'algorithme de Metropolis-Hastings}{148}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Application au calcul de la post\'erieure}{150}{subsection.4.3.2}
-\contentsline {chapter}{\numberline {Chapitre\ 4~-}\'Etude de la diff\'erenciation \'epidermale chez la drosophile}{153}{division.5}
-\contentsline {section}{\numberline {4.1}}{155}{section.5.1}
-\contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomique}{223}{division.6}
-\contentsline {chapter}{Bibliographie}{226}{figure.caption.39}
+\contentsline {subsection}{\numberline {3.3.3}Illustration sur un exemple}{151}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {Chapitre\ 4~-}\'Etude de la diff\'erenciation \'epidermale chez la drosophile}{157}{division.5}
+\contentsline {section}{\numberline {4.1}}{159}{section.5.1}
+\contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomique}{161}{division.6}
+\contentsline {chapter}{Bibliographie}{164}{figure.caption.43}

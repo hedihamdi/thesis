@@ -1,4 +1,9 @@
 #!/usr/bin/Rscript
+cexmain <- 1.5
+cexlab <- 1.5
+cexaxis <- 1.5
+
+wb <- c(expression(w[A]), expression(w[C]), expression(w[G]), expression(w[T]))
 
 # INFO
 resfile<-"sampling-info.dat"
@@ -22,9 +27,10 @@ for (i in 1:4){
 
 #PLOTS
 pch<-19
-cex<-0.5
+cex<-0.7
 lwd <- 2
-pdf("plotConvergence.pdf",width=10,height=10)
+pdf("plotConvergence.pdf",family="Palatino")
+par(mfrow=c(2,2), mar = c(5.1,5.1,2.1,2.1))
 
 
 # SAMPLE POINTS
@@ -41,26 +47,46 @@ Wopti<-as.matrix(t[,1:4])
 colnames(Wopti)<-c("wa opti","wc opti","wg opti","wt opti")
 
 # MEAN
-par(mfrow=c(2,2), oma = c(0,2,0,0))
 Ncv<-0
-iter <- seq(1, 1500, 10)
+#iter <- seq(1, 1500, 10)
 iter <- floor(10^(seq(0, log10(nrow(Wmean)), length.out=100)))
 names <- c('wa','wc','wg','wt')
 for (i in 1:4){
-   name<-colnames(Wmean)[i]
-   plot(iter,Wmean[iter,i],xlab="Number of iterations",ylab=names[i],cex.lab=1.5,cex.axis=1.5,pch=pch,cex=cex,ylim=c(0,1),log="x")
+   name<-wb[i]
+   plot(
+        iter,
+        Wmean[iter,i],
+        xlab="Itérations",
+        ylab=name,
+        cex.main = cexmain,
+        cex.lab = cexlab,
+        cex.axis = cexaxis,
+        pch=pch,
+        cex=cex,
+        ylim=c(0,1),
+        log="x"
+        )
    points(Wopti[,i], pch = pch, cex = cex, col = "red")
    abline(h=Wmean[nrow(Wmean),i], col = "black", lty = 2, lwd = lwd)
    abline(h=Wopti[nrow(Wopti),i], col = "red", lty = 2, lwd = lwd)
    abline(h=wmeaninde[i], col = "purple", lty = 2, lwd = lwd)
-   legend("topright",leg = c('Mean','Max','Inde'), lty = 2,col = c('black','red', 'purple'), lwd = lwd, cex = 1.5)
+   legend("topright",leg = c('MCMC','Gradient','Inde'), pch=c(pch,pch,-1),lty=c(-1,-1,2),col = c('black','red', 'purple'), cex = 1.2,pt.cex=cex,lwd=c(-1,-1,lwd))
 }
-par(mfrow=c(2,2), oma = c(0,2,0,0))
-Ncv<-0
-names <- c('wa','wc','wg','wt')
 for (i in 1:4){
-   name<-colnames(Wmean)[i]
-   plot(iter,Wmean[iter,i],xlab="Number of iterations",ylab=names[i],cex.lab=1.5,cex.axis=1.5,pch=pch,cex=cex,ylim=c(min(Wmean[,i],Wopti[,i],wmeaninde[i]),max(Wmean[,i],Wopti[,i],wmeaninde[i])),log="x")
+   name<-wb[i]
+   plot(
+        iter,
+        Wmean[iter,i],
+        xlab="Itérations",
+        ylab=name,
+        cex.main = cexmain,
+        cex.lab = cexlab,
+        cex.axis = cexaxis,
+        pch=pch,
+        cex=cex,
+        ylim=c(min(Wmean[,i],Wopti[,i],wmeaninde[i]),max(Wmean[,i],Wopti[,i],wmeaninde[i])),
+        log="x"
+        )
    points(Wopti[,i], pch = pch, cex = cex, col = "red")
    abline(h=Wmean[nrow(Wmean),i], col = "black", lty = 2, lwd = lwd)
    abline(h=Wopti[nrow(Wopti),i], col = "red", lty = 2, lwd = lwd)
