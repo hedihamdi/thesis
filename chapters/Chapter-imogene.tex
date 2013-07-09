@@ -226,18 +226,20 @@ Metropolis-Hastings~\cite{krauth2006statistical}.
 \subsection{Principe de l'algorithme de Metropolis-Hastings}
 \label{sub:principe_de_l_algorithme_de_metropolis_hastings}
 
-L'algorithme de Metropolis-Hastings permet d'échantillonner la distribution de
-la distribution postérieure en utilisant le parcours d'une chaîne de Markov
-ayant cette distribution pour loi stationnaire. Une tel processus de Markov est
-défini par des probabilités de transition $P(w \to w')$ entre deux états $w$ et
-$w'$. Il converge vers une distribution stationnaire $\pi(w)$ unique sous deux
-conditions : (1) les transitions sont réversibles et le processus satisfait le
-bilan détaillé $\pi(w)P(w\to w') = \pi(w')P(w'\to w)$, (2) le processus est
-ergodique, \cad que tout état est accessible et qu'il n'y a pas de cycles.
-L'algorithme de Metropolis-Hastings repose sur la construction d'une chaîne de
-Markov ayant ces propriétés et dont la distribution d'équilibre $\pi(w)$ est la
-probabilité que l'on cherche à échantillonner $P(w)$. Pour cela, on part de
-l'équation du bilan détaillé, que l'on peut écrire 
+L'algorithme de Metropolis-Hastings
+\cite{metropolis1953equation,hastings1970monte} permet d'échantillonner la
+distribution de la distribution postérieure en utilisant le parcours d'une
+chaîne de Markov ayant cette distribution pour loi stationnaire. Une tel
+processus de Markov est défini par des probabilités de transition $P(w \to w')$
+entre deux états $w$ et $w'$. Il converge vers une distribution stationnaire
+$\pi(w)$ unique sous deux conditions : (1) les transitions sont réversibles et
+le processus satisfait le bilan détaillé $\pi(w)P(w\to w') = \pi(w')P(w'\to
+w)$, (2) le processus est ergodique, \cad que tout état est accessible et qu'il
+n'y a pas de cycles.  L'algorithme de Metropolis-Hastings repose sur la
+construction d'une chaîne de Markov ayant ces propriétés et dont la
+distribution d'équilibre $\pi(w)$ est la probabilité que l'on cherche
+à échantillonner $P(w)$. Pour cela, on part de l'équation du bilan détaillé,
+que l'on peut écrire 
 
 \begin{equation}
     \label{eq:bilan-detaille}
@@ -256,27 +258,140 @@ En insérant dans l'éq. \ref{eq:bilan-detaille} on obtient
 \begin{equation}
     \frac{A(w \to w')}{A(w' \to w)} = \frac{P(w')}{g(w \to w')} \frac{g(w' \to w)}{P(w)}
 \end{equation}
+
+Plusieurs choix de la fonction d'acceptation sont possibles pour satisfaire
+cette équation \cite{hastings1970monte}. Un choix courant, dit choix de
+Metropolis,  est :
+
+\begin{equation}
+    \label{eq:acceptance}
+    A(w \to w') = \min\left(1, \frac{P(w')}{g(w \to w')} \frac{g(w' \to w)}{P(w)}\right)
+\end{equation}
+
+Un aspect très pratique de cette quantité est qu'elle est invariante sous
+multiplication de la distribution $P(w)$ par un facteur non nul. Autrement dit,
+la distribution n'a pas besoin d'être normalisée. Dans un cadre bayésien, cela
+veut dire que l'on peut remplacer la postérieure par le produit de la
+vraisemblance et du \textit{prior}.\\
+
+La méthode de Metropolis-Hastings se
+résume donc ainsi :
+
+\begin{enumerate}
+\item Initialiser $w$ à une valeur prise au hasard.
+\item Choisir un nouvel état $w'$ tiré selon $g(w \to w')$
+\item Accepter l'état avec une probabilité donnée par $A(w \to w')$. Si le nouvel état n'est pas accepté, alors $w'=w$.
+\item Itérer jusqu'à convergence
+\end{enumerate}
+
+Au final, $w$ étant tiré selon la distribution $P(w)$, sa moyenne est
+directement accessible en sommant les poids $w_i(t)$ obtenus au cours des $N$
+itérations réalisées :
+
+\begin{equation}
+    \langle w \rangle \simeq \frac{1}{N} \sum_{t=1}^N w_i(t)
+\end{equation}
+
+Quant au critère de convergence, une possibilité est d'utiliser le Théorème
+Central Limite (TCL). Celui-ci stipule que la moyenne de $n$ variables
+aléatoires indépendantes et identiquement distribuées selon une loi de moyenne
+$\mu$ et d'écart-type $\sigma$ de valeurs finies suit, pour $n$ grand, une loi
+normale de moyenne $\mu$ et d'écart-type $\sigma/\sqrt{n}$. Dans notre cas, les
+échantillons successifs $w_i$ ne sont pas indépendants à cause du fait qu'on
+les tire selon la loi $g(w\to w')$. Il faut donc calculer le temps de
+décorrélation $T$ pour lequel $\langle w_i(t) w_i(t+T) \rangle \simeq 0$, puis
+utiliser les échantillons $w_i(t)$ obtenus toutes les $T$ itérations comme
+variables indépendantes.  L'application du TCL permet alors d'arrêter les
+itérations lorsqu'une certaine précision désirée est atteinte, par exemple
+lorsque $\sigma / \sqrt{n} < 1.96$, critère qui assure que l'on connaît la
+vraie valeur moyenne à $95\%$ de confiance.  L'écart-type $\sigma$ étant lui
+même estimé à partir des échantillons de l'algorithme, il faut aussi s'assurer
+qu'il a convergé.
+
+
+
 % subsection principe_de_l_algorithme_de_metropolis_hastings (end)
 
 \subsection{Application au calcul de la postérieure}
 \label{sub:application_au_calcul_de_la_post_rieure}
 
- Pour ce faire, le vecteur $w_i$ est
-initialisé à la valeur qu'il prendrait si toutes les séquences orthologues
-étaient des observations indépendantes (équation (11) de l'article). Un vecteur
-$w_i$ est ensuite tiré selon une loi de Dirichlet $\text{Dir}(\al)$ de
-paramètres $\al=\{\al_A,\al_C,\al_G,\al_T\}$ et de densité de probabilité
+Dans notre cas, nous souhaitons utiliser l'algorithme de Metropolis-Hastings
+pour calculer la valeur moyenne du vecteur de poids $w_i$ en
+position $i$ de la PWM selon la distribution postérieure
+$\mathcal{P}(w_i|\{\mathcal{A}\})$:
 
 \begin{equation}
-    f(w) = \frac{1}{B(\alpha)} \prod_{b\in \{A,C,G,T\}} w_{b(i)}^{\al_b - 1}
+    \langle w_i \rangle = \int w_i \mathcal{P}(w_i|\{\mathcal{A}\}) \text{d}w  %\simeq \sum_{t=1}^N w_i(t)
+\end{equation}
+
+Il nous faut pour cela définir une loi de proposition $g(w_i \to w_i')$
+pertinente. Dans notre cas, les poids $w_i$ doivent rester dans le simplexe de
+dimension $3$ défini par $w_A, w_C, w_G >0$ et $w_A+w_C+w_G <1$, le poids $w_T$
+étant entièrement déterminé par la normalisation des probabilités
+$w_T=1-w_A-w_C-w_G$.  La distribution naturelle possédant cette propriété est
+la loi de Dirichlet $\text{Dir}(\al)$, de paramètres
+$\al=\{\al_A,\al_C,\al_G,\al_T\}$ et de densité de probabilité
+
+\begin{equation}
+    f(w) = \frac{1}{B(\alpha)} \prod_{b\in \{A,C,G,T\}} w_{i,b}^{\al_b - 1}
 \end{equation}
 
 où $B(\al)$ est la fonction bêta multinomiale permettant la normalisation.
-Cette distribution a l'avantage d'être centrée sur $w_i$ et de garder le
-nouveau vecteur tiré dans le simplexe de dimension $3$ défini par $w_A, w_C,
-w_G >0$ et $w_A+w_C+w_G <1$, le dernier poids étant défini par la normalisation
-des probabilités $w_T=1-w_A-w_C-w_G$.
+Cette distribution est la même que celle obtenue dans le cas d'observations
+indépendantes (cf article). Afin d'accélérer l'échantillonnage MCMC, nous avons
+cherché à régler les paramètres $\al$ de manière à être au plus proche de la
+distribution $\mathcal{P}(w_i|\{\mathcal{A}\})$. Dans le cas de $N$ sites
+indépendants, celle-ci suit une loi de Dirichlet de paramètres $\al_p + N_i$,
+où $\al_p$ est le vecteur de pseudo-counts et $N_i$ le vecteur donnant les
+nombres d'observations des nucléotides à la position $i$ au sein des
+différentes séquences. Dans le cas réel, le nombre effectif d'observation est
+moins grand que le nombre total de séquences du fait du modèle d'évolution.
+Nous avons donc défini les paramètres de notre \textit{proposal} comme étant
 
+\begin{equation}
+    \al_b = \al_p + N_{\text{eff}}\cdot w_i
+\end{equation}
+
+où $N_{\text{eff}}=N_{\text{sites}}\cdot N_{\text{spe}} /2$ avec
+$N_{\text{sites}}$ le nombre d'alignements observés et $N_{\text{spe}}$ le
+nombre total d'espèces dans l'alignement. Grossièrement, cela revient à dire
+que le modèle d'évolution réduit d'un facteur $2$ le nombre de séquences
+indépendantes. Nous avons calculé que le taux d'acceptation pour ce paramètre
+était de l'ordre de $50\%$, une valeur généralement considérée comme
+raisonnable~\cite{krauth2006statistical}. Nous obtenons finalement l'expression
+pour la \textit{proposal} :
+
+
+\begin{equation}
+    g(w \to w') = \frac{1}{B(\alpha)} \prod_{b\in \{A,C,G,T\}} (w_{i,b}')^{\al_{p,b} + N_{\text{eff}}\cdot w_{i,b}  - 1}
+\end{equation}
+
+Le vecteur $w_i$ est initialisé à la valeur qu'il prendrait si toutes les
+séquences orthologues étaient des observations indépendantes  (cf article) :
+
+\begin{equation}
+    w_i(0) = \frac{N_i + \al_b}{N_{\text{tot}} + \sum_b \al_b}
+\end{equation}
+
+
+Le poids $w_i(1)$ suivant est ensuite tiré selon la probabilité de transition
+$g(w_i(0) \to w_i(1))$. Les différentes quantités de l'équation
+\ref{eq:acceptance} sont ensuite calculées et la transition est acceptée avec
+probabilité $A(w_i(0) \to w_i(1))$. 
+\\
+
+Reste le problème de la convergence. 
+
+
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/MCMC/TFBS.pdf}
+\captionbf{Sites utilisés pour le MCMC}{
+
+Main caption
+
+}
+\label{fig:MCMC/TFBS}
+\efig
 
 % subsection application_au_calcul_de_la_post_rieure (end)
 

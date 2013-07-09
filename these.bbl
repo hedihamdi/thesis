@@ -1,4 +1,4 @@
-\begin{thebibliography}{169}
+\begin{thebibliography}{171}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[Aerts, 2012]{Aerts2012p3868}
@@ -372,6 +372,12 @@ Hartwell, L., Hopfield, J., Leibler, S., and Murray, A. (1999).
 \newblock From molecular to modular cell biology.
 \newblock \emph{Nature}, 402(6761):47.
 
+\bibitem[Hastings, 1970]{hastings1970monte}
+Hastings, W.~K. (1970).
+\newblock Monte Carlo sampling methods using Markov chains and their
+  applications.
+\newblock \emph{Biometrika}, 57(1):97--109.
+
 \bibitem[Heintzman et~al., 2007]{Heintzman2007gb}
 Heintzman, N.~D., Stuart, R.~K., Hon, G., Fu, Y., Ching, C.~W., Hawkins, R.~D.,
   Barrera, L.~O., Van~Calcar, S., Qu, C., Ching, K.~A., Wang, W., Weng, Z.,
@@ -595,6 +601,12 @@ McGregor, A., Orgogozo, V., Delon, I., Zanet, J., Srinivasan, D., Payre, F.,
 \newblock Morphological evolution through multiple cis-regulatory mutations at
   a single gene.
 \newblock \emph{Nature}, 448(7153):587--590.
+
+\bibitem[Metropolis et~al., 1953]{metropolis1953equation}
+Metropolis, N., Rosenbluth, A.~W., Rosenbluth, M.~N., Teller, A.~H., and
+  Teller, E. (1953).
+\newblock Equation of state calculations by fast computing machines.
+\newblock \emph{The journal of chemical physics}, 21:1087.
 
 \bibitem[Milo et~al., 2002]{Milo2002tg}
 Milo, R., Shen-Orr, S., Itzkovitz, S., Kashtan, N., Chklovskii, D., and Alon,
