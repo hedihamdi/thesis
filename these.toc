@@ -90,16 +90,19 @@
 \contentsline {subsection}{\numberline {3.1.1}MEME : une approche de type Esp\'erance-Maximisation}{116}{subsection.4.1.1}
 \contentsline {subsubsection}{\numberline {$\bullet $}Vraisemblance d'une s\'equence}{117}{subsubsection.4.1.1.1}
 \contentsline {subsubsection}{\numberline {$\bullet $}Apprentissage du mod\`ele}{118}{subsubsection.4.1.1.2}
-\contentsline {subsection}{\numberline {3.1.2}STUBB : une m\'ethode utilisant des corr\'elations entre motifs et la phylog\'enie}{119}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {3.1.3}M\'ethodes utilisant des collections d'oligonucl\'eotides}{120}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Approches sans motifs ou \textit {motif-blind}}{121}{subsection.4.1.4}
-\contentsline {subsubsection}{\numberline {$\bullet $}Mod\`eles bas\'es sur des cha\IeC {\^\i }nes de Markov}{121}{subsubsection.4.1.4.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Mod\`eles bas\'es sur des enrichissements en $k$-mers}{122}{subsubsection.4.1.4.2}
-\contentsline {subsection}{\numberline {3.1.5}MONKEY : incorporation de l'information phylog\'en\'etique}{123}{subsection.4.1.5}
-\contentsline {section}{\numberline {3.2}Article}{123}{section.4.2}
-\contentsline {section}{\numberline {3.3}Calcul de la moyenne de la post\'erieure par une m\'ethode MCMC}{152}{section.4.3}
-\contentsline {subsection}{\numberline {3.3.1}Principe de l'algorithme de Metropolis-Hastings}{152}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Application au calcul de la post\'erieure}{154}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Illustration sur un exemple}{155}{subsection.4.3.3}
-\contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomique}{161}{division.5}
-\contentsline {chapter}{Bibliographie}{164}{figure.caption.40}
+\contentsline {subsection}{\numberline {3.1.2}STUBB : une m\'ethode utilisant des motifs connus, les corr\'elations entre sites de fixations, et la phylog\'enie}{119}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Description du mod\`ele HMM}{120}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Ajout des corr\'elations entre motifs}{120}{subsubsection.4.1.2.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Incorporation de l'information phylog\'en\'etique}{121}{subsubsection.4.1.2.3}
+\contentsline {subsection}{\numberline {3.1.3}MONKEY : vers des mod\`eles phylog\'en\'etiques plus complexes}{122}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {3.1.4}M\'ethodes utilisant des collections d'oligonucl\'eotides}{125}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Approches sans motifs ou \textit {motif-blind}}{125}{subsection.4.1.5}
+\contentsline {subsubsection}{\numberline {$\bullet $}Mod\`eles bas\'es sur des cha\IeC {\^\i }nes de Markov}{125}{subsubsection.4.1.5.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Mod\`eles bas\'es sur des enrichissements en $k$-mers}{126}{subsubsection.4.1.5.2}
+\contentsline {section}{\numberline {3.2}Article}{127}{section.4.2}
+\contentsline {section}{\numberline {3.3}Calcul de la moyenne de la post\'erieure par une m\'ethode MCMC}{156}{section.4.3}
+\contentsline {subsection}{\numberline {3.3.1}Principe de l'algorithme de Metropolis-Hastings}{156}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Application au calcul de la post\'erieure}{158}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Illustration sur un exemple}{159}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomique}{165}{division.5}
+\contentsline {chapter}{Bibliographie}{168}{figure.caption.40}

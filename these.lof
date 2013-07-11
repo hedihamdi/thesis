@@ -38,10 +38,10 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{{\em Imogene}: un algorithme d'identification de motifs et de modules de r\'egulation transcriptionnelle}{115}{division.4}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Illustration de l'approche esp\'erance-maximisation}}{117}{figure.caption.35}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Conditions initiales}}{156}{figure.caption.36}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Corr\'elations entre les \'echantillons}}{157}{figure.caption.37}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Estimation de la convergence}}{159}{figure.caption.38}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Comparaison des approches par MCMC et par descente de gradient}}{160}{figure.caption.39}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Conditions initiales}}{160}{figure.caption.36}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Corr\'elations entre les \'echantillons}}{161}{figure.caption.37}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Estimation de la convergence}}{163}{figure.caption.38}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Comparaison des approches par MCMC et par descente de gradient}}{164}{figure.caption.39}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Statistiques g\'enomique}{161}{division.5}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Distribution des tailles interg\'eniques et introniques chez diff\'erentes esp\`eces}}{162}{figure.caption.40}
+\contentsline {xchapter}{Statistiques g\'enomique}{165}{division.5}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Distribution des tailles interg\'eniques et introniques chez diff\'erentes esp\`eces}}{166}{figure.caption.40}

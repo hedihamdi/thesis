@@ -193,24 +193,38 @@ finalement gardé come motif initial pour une itération complète.
 
 % subsection algorithmes_de_type_esp_rance_maximisation (end)
 
-\subsection{STUBB : une méthode utilisant des corrélations entre motifs et la phylogénie}
+\subsection{STUBB : une méthode utilisant des motifs connus, les corrélations entre sites de fixations, et la phylogénie}
 \label{sub:stubb_une_m_thode_utilisant_des_motifs_connus}
 
 L'algorithme STUBB \cite{Sinha2003p608} décrit les séquence par un processus
-génératif décrit par un modèle de Markov caché (HMM pour \textit{Hidden Markov
-Model}). Il possède des similarité avec MEME, mais permet d'ajouter certaines
-information, comme les corrélations entre motifs ou la phylogénie. L'algorithme
-utilise la connaissance préalable des PWMs de motifs connus pour être impliqués
-dans la co-régulation étudiée.  Notons $W$ l'ensemble des motifs initiaux. Un
-modèle HMM d'ordre $0$ (HMM0) décrit la génération d'une séquence $S$ de la
-manière suivante : à chaque pas, le processus choisit un motif $w_i\in W$ avec
-une probabilité $p_i$ ou le motif \textit{background} $w_b$ avec une
-probabilité $1-\sum_ip_i$. Une fois le motif $w$ choisi, une séquence est
-échantillonnée à partir de la PWM de $w$ et est ajoutée à la séquence $S$. Le
-processus est itéré jusqu'à ce que la séquence générée atteigne une taille $L$.
-La séquence de motifs choisis au cours de la procédure définit une segmentation
-$T$. La probabilité que la séquence observée soit générée par ce processus de
-paramètres $\theta = \{w_i,p_i\}$ est 
+génératif de type modèle de Markov caché (HMM pour \textit{Hidden Markov
+Model}). Il est basé sur l'algorithme Ahab~\cite{Rajewsky2002kl} -- lui-même
+basé sur l'algorithme MobyDick~\cite{Bussemaker2000ve} --, qui peut être vu
+comme une extension de MEME au cas où les séquences contiennent plusieurs sites
+de fixations pour différents motifs. Notamment, ces méthodes ont l'intérêt tout
+comme MEME de ne pas avoir de seuil arbitraire pour définir un site car elles
+moyennent sur toutes les segmentations possibles de la séquence. On parle
+notamment de modèle thermodynamique (voir
+\ref{sub:m_thodes_utilisant_la_concentration_en_sites_de_fixation}). La
+différence entre STUBB et Ahab est qu'il introduit deux informations
+supplémentaires : les corrélations entre motifs et la phylogénie.  Enfin,
+l'algorithme utilise comme condition initiale des PWMs de motifs connus pour
+être impliqués dans la co-régulation étudiée. 
+
+\subsubsection{Description du modèle HMM}
+\label{ssub:description_du_mod_le_hmm}
+
+Nous décrivons d'abord l'algorithme Ahab~\cite{Rajewsky2002kl}. Notons $W$
+l'ensemble des motifs initiaux. Le modèle HMM à l'ordre $0$ (HMM$0$) utilisé
+décrit la génération d'une séquence $S$ de la manière suivante : à chaque pas,
+le processus choisit un motif $w_i\in W$ avec une probabilité $p_i$ ou le motif
+\textit{background} $w_b$ avec une probabilité $1-\sum_ip_i$.  Une fois le
+motif $w$ choisi, une séquence est échantillonnée à partir de la PWM de $w$ et
+est ajoutée à la séquence $S$. Le processus est itéré jusqu'à ce que la
+séquence générée atteigne une taille $L$.  La séquence de motifs choisis au
+cours de la procédure définit une segmentation $T$. La probabilité que la
+séquence observée soit générée par ce processus de paramètres $\theta
+= \{w_i,p_i\}$ est 
 
 \begin{equation}
     P(S|\theta) = \sum_T P(S,T|\theta)
@@ -221,23 +235,230 @@ en comparant cette probabilité et la probabilité $P(S|\theta_b)$ que la
 séquence soit générée uniquement par le modèle \textit{background} :
 
 \begin{equation}
-    F(S) = \underset{\theta}{\text{argmax}} \log \frac{P(S|\theta)}{P(S,\theta_b)}
+    F(S) = \underset{\theta}{\text{argmax}} \log \left(\frac{P(S|\theta)}{P(S,\theta_b)}\right)
 \end{equation}
 
-La maximisation du paramètre $\theta$ est réalisée grâce à un algorithme de
-type EM.
-\\
+Le paramètre $\theta$ (\cad les $p_i$) qui maximise le membre de droite est obtenu grâce à un algorithme de type EM~\cite{Sinha2003p608}.
+% subsubsection description_du_mod_le_hmm (end)
 
-Dans STUBB, différentes informations sont ajoutées au modèle HMM0. Tout
-d'abord, des informations sur les corrélations entre motifs sont introduites
+\subsubsection{Ajout des corrélations entre motifs}
+\label{ssub:ajout_des_corr_lations_entre_motifs}
+
+
+Des informations sur les corrélations entre motifs sont introduites
 dans $\theta$ sous la forme de probabilités de transition $p_{ij}$ que le motif
 choisi soit $j$ lorsque le premier motif précédent non-\textit{background} est
 $i$. Parce que le nombre de paramètres devient grand, seules les corrélations
-importantes sont ajoutées. Ensuite, STUBB utilise des informations provenant de
-la comparaison phylogénétique avec des séquences provenant d'autres espèces. Après alignement de séquences homologues, 
+importantes sont ajoutées. 
+
+% subsubsection ajout_des_corr_lations_entre_motifs (end)
+
+
+\subsubsection{Incorporation de l'information phylogénétique}
+\label{ssub:incorporation_de_l_information_phylog_n_tique}
+
+Enfin, STUBB utilise des informations provenant de la comparaison
+phylogénétique avec des séquences provenant d'autres espèces. Les séquences des
+différentes espèces sont d'abord alignées, puis la probabilité de générer
+l'alignement est calculée à l'aide d'un modèle phylogénétique. Ce modèle permet
+de prendre en compte le fait que les séquences homologues sont corrélées du
+fait qu'elles dérivent d'un ancêtre commun. Dans le cas de Stubb, les espèces
+sont supposées liées par un topologie étoilée, \cad que les espèces partagent
+un seul ancêtre commun. Le modèle d'évolution suppose que les différentes bases
+de la séquence évoluent indépendamment, à la même fréquence, et que la
+probabilité de fixation d'une mutation $b \to b'$ à la position $i$ est
+proportionnelle au poids de la PWM du nucléotide $b$ à cette position. Ce
+modèle est identique au modèle que nous introduisons dans l'article (voir
+section \ref{sec:article_imogene}), et qui est inspiré du modèle de
+Felsenstein~\cite{Felsenstein1981p3782}. La probabilité $P(\sigma|w)$ de
+générer l'alignement $\sigma$ de séquences $s$ avec le motif $w$ de taille
+$L_w$ s'écrit alors :
+
+\begin{equation}
+    \label{eq:stubb-felsen}
+    P(\sigma|w) = \prod_{i=1}^{L_w} \left[ \sum_b w_{i,b} \prod_{s \in \sigma} (q_s \delta_{b,s_i} + (1-q_s) w_{i,s_i}) \right]
+\end{equation}
+
+où $w_{i,s_i}$ est la probabilité de générer le nucléotide $s_i$ à la position
+$i$ pour le motif $w$, $\delta_{x,y}=1$ si $x=y$ et $0$ sinon, et
+$q_s=e^{-\lambda t_s}$ est la probabilité de conserver un nucléotide au cours
+de l'évolution, qui est une fonction du taux de mutation neutre $\lambda$ et du
+temps d'évolution $t_s$ entre l'ancêtre commun et l'espèce $s$. En résumé, pour
+chaque position $i$, un nucléotide $b$ est généré chez l'ancêtre commun avec
+une probabilité $w_{i,b}$, puis ce nucléotide est soit conservé chez l'espèce
+$s$ avec une probabilité $q_s$  ou bien il mute avec une probabilité $1-q_s$,
+et une nouvelle base est sélectionnée selon les poids définis par $w_i$. Pour
+des espèces proches, $q\sim1$ et le fait d'observer des bases différentes à des
+positions homologues diminue fortement $P(\sigma|w)$, même si leur fréquence
+\apriori donnée par $w$ est identique : l'information phylogénétique permet
+dans ce cas de rejeter un \og mauvais \fg modèle qui ne le serait pas si les
+séquences orthologues étaient considérées comme indépendantes. Pour des espèces
+lointaines, $q\sim0$ et tout se passe comme si les séquences de $\sigma$
+étaient indépendantes.
+
+
+% subsubsection incorporation_de_l_information_phylog_n_tique (end)
 
 
 % subsubsection stubb_une_m_thode_utilisant_des_motifs_connus (end)
+
+
+
+\subsection{MONKEY : vers des modèles phylogénétiques plus complexes}
+\label{sub:monkey_vers_des_mod_les_phylog_n_tiques_plus_complexes}
+
+
+Dans la section précédente, nous avons vu qu'utiliser l'information
+phylogénétique permettait de mieux attribuer un site à un motif (cf cas où les
+espèces sont proches). Néanmoins, le modèle phylogénétique sous-jacent était
+relativement simple. L'algorithme MONKEY~\cite{Moses2004p656} propose
+d'utiliser des modèles d'évolution plus complexes pour détecter les sites
+conservés à partir de motifs connus.
+\\
+
+Les motifs $w$ sont décrits par le modèle PWM et le \textit{background} par les
+fréquences des nucléotides $\pi_b$. Le score d'un site est défini par la
+fraction des probabilités de générer la séquence $s$ par l'un ou l'autre des
+modèles (\textit{log-likelihood ratio} ou LLR):
+
+\begin{equation}
+    \mathcal{S}(s) = \log \frac{P(s|w)}{P(s|\pi)} = \sum_i  \log \frac{w_{i,b(i)}}{\pi_b}
+\end{equation}
+
+Le but est de généraliser ce score au cas de l'alignement $\sigma$ de séquences
+$s$, en réalisant cette fois le calcul sur l'ancêtre commun $A$ des séquences.
+L'ancêtre commun, ainsi que tous les ancêtre communs intermédiaires pour une
+topologie d'arbre $T$ quelconque, ne sont pas observés et il faut donc sommer
+sur tous leurs états (séquences) possibles étant donnés l'alignement observé
+$\sigma$, l'arbre $T$ et le modèle d'évolution. La solution générale de ce
+problème a été donnée par \citet{Felsenstein1981p3782}. Notamment, nous pouvons
+nous concentrer sur le cas à deux espèces, le cas général procédant par
+récurrence à partir de ce cas simple. Nous pouvons aussi nous concentrer sur
+une position $i$ donnée, puisque les positions sont indépendantes.
+
+
+Considérons un alignement de deux nucléotides $s_1$ et $s_2$. On définit un
+nouveau score comme étant le LLR comparant l'hypothèse que $s_1$ et $s_2$
+représentent un site conservé pour un motif $w$ et l'hypothèse que les
+bases ont été tirées dans le \textit{background}:
+
+\begin{equation}
+    \mathcal{S}_{\text{cons}}(s_1,s_2) = \log \frac{P(s_1,s_2 | w,T,R_w)}{P(s_1,s_2 | w,T,R_{\text{back}})}
+\end{equation}
+
+où $R_w$ et $R_{\text{back}}$ sont des matrices de taux de transition décrivant
+le processus de substitution au cours de l'évolution pour le cas d'un site de
+fixation du motif $w$ et pour le \textit{background}. Ainsi la transition de la
+base $b$ à la base $b'$ s'écrit
+
+\begin{equation}
+    p_{b\to b'} = \left(e^{Rd}\right)_{b,b'}
+\end{equation}
+
+où $R$ est la matrice de taux de transition et $d$ le temps évolutif. Dans le cas
+simple à deux espèces, l'arbre $T$ est en étoile, avec des distances $d_1$ et
+$d_2$ de l'ancêtre commun pour les espèces contenant les bases $s_1$ et $s_2$.
+Par ailleurs, les espèces évoluent indépendamment depuis leur séparation.
+Notant $b$ la base sur l'ancêtre commun et $M$ le modèle (motif ou
+\textit{background}) considéré, on a finalement :
+
+\begin{align}
+    \begin{split}
+    P(s_1,s_2|M,T,R_M) & = \sum_b P(s_1|b,d_1,R_M) P(s_2 |b,d_2,R_M) P(b|M) \\
+    & = \sum_b  \left(e^{R_Md_1}\right)_{b,s_1}\left(e^{R_Md_2}\right)_{b,s_2} P(b|M)
+    \end{split}
+\end{align}
+
+Le calcul sur un nombre quelconque d'espèces se fait finalement
+récursivement~\cite{Felsenstein1981p3782}, jusqu'à la racine de l'arbre où
+$P(b|M)$ vaut $w_{i,b}$ pour le motif et $\pi_b$ pour le \textit{background}.
+\\
+
+Plusieurs modèles peuvent être choisis pour les matrices de transition. Pour ce
+qui est du \textit{background}, il peut être décrit par des modèles neutres.
+Par exemple le modèle de Felsenstein \cite{Felsenstein1981p3782} est le modèle
+le plus simple dont la distribution d'équilibre redonne les fréquences du
+\textit{background}. Le modèle HKY~\cite{Hasegawa1985qf} est une variante qui
+inclut le fait que les mutations entre bases de même nature chimique (purine ou
+pyrimidine), appelées transitions, sont $2$ fois plus fréquentes que les autres
+mutations, appelées transversions. Ce modèle est utilisé dans MONKEY pour
+décrire le \textit{background}. Pour ce qui est du motif, les taux de
+transition dépendent de la position au sein du site : par exemple les bases
+dégénérées mutent plus vite que les bases très conservées~\cite{Moses2003bh}.
+Pour prendre cette variation en compte, une possibilité est de modifier un
+modèle neutre pour utilisant à la place des fréquences \textit{background} les
+fréquences données par la PWM : c'est ce qui est fait dans Stubb avec le modèle
+Felsenstein dans l'éq.\ref{eq:stubb-felsen}. Dans MONKEY, les auteurs utilisent
+un modèle plus complexe, appelé modèle HB, préalablement introduit par Halpern
+et Bruno pour étudier l'évolution des régions codantes~\cite{Halpern1998p548}.
+Dans ce modèle, le taux de substitution $r^i_{a,b}$ de la base $a$ vers la base
+$b$ en position $i$ est à une constante près le produit de la probabilité de
+mutation neutre (indépendante de la position) de $a$ vers $b$ par une
+probabilité de fixation $f^i_{a,b}$ :
+
+\begin{equation}
+    r^i_{a,b} \propto Q_{a,b} f^i_{a,b}
+\end{equation}
+
+où $Q=R_{\text{back}}$ est la matrice de transition du modèle
+\textit{background}. La probabilité de fixation peut être obtenue en utilisant un résultat classique de génétique des populations
+\cite{Kimura1962p456} :
+
+\begin{align}
+    \label{eq:hb_fab}
+    f^i_{a,b} &\simeq \frac{2s}{1-e^{-2Ns}}\\
+    f^i_{b,a} &\simeq \frac{-2s}{1-e^{2Ns}}
+\end{align}
+
+où $N$ est la taille effective de la population (le facteur $2$ vient du fait
+que la population est diploïde), $s$ la valeur adaptative relative de la base
+$b$ par rapport à la base $a$ en position $i$, et l'évolution est quasi-neutre
+($2Ns\ll1$). On a donc :
+    
+\begin{equation}
+    \label{eq:hb_fitness}
+    \frac{f^i_{a,b}}{f^i_{b,a}} \simeq e^{2Ns}    
+\end{equation}
+
+Par ailleurs, en supposant que les substitutions vérifient le bilan détaillé
+à l'équilibre, on peut écrire
+
+\begin{equation}
+    \label{eq:hb_bilan_detaille}
+    \frac{w_{i,b}Q_{b,a}}{w_{i,a}Q_{a,b}} = \frac{f^i_{a,b}}{f^i_{b,a}}
+\end{equation}
+
+Finalement, en combinant les équations \ref{eq:hb_fab}, \ref{eq:hb_fitness} et
+\ref{eq:hb_bilan_detaille}, on obtient la matrice de transition du modèle HB en
+position $i$ sous la forme :
+
+\begin{equation}
+    \label{eq:rate_HB}
+    \boxed{
+    R(i)_{a,b} = Q_{a,b} \frac{x \log x }{x-1}
+}
+\end{equation}
+
+où 
+
+\begin{equation}
+    x = \frac{w_{i,b} Q_{b,a}}{w_{i,a}Q_{a,b}} \simeq e^{2Ns}
+\end{equation}
+
+traduit l'effet de la sélection. En développant autour de $x=1$ et en restant
+au premier ordre, on a
+
+\begin{equation}
+    \frac{x \log x }{x-1} \simeq \frac{1}{2}(1+x)
+\end{equation}
+
+Ainsi, dans le cas neutre où $x=1$, la matrice de transition se réduit à la
+matrice \textit{background} : $R(i)_{a,b}=Q_{a,b}$. Cependant, lorsque la base
+$b$ est très conservée par rapport à la base $a$ ($x>1$), les substitutions de
+$a$ vers $b$ sont plus fréquentes que sous le modèle neutre : $R(i)_{a,b}
+> Q_{a,b}$.
+
+% subsection monkey_vers_des_mod_les_phylog_n_tiques_plus_complexes (end)
 
 \subsection{Méthodes utilisant des collections d'oligonucléotides}
 \label{sub:m_thodes_utilisant_des_collections_d_oligonucl_otides}
@@ -380,14 +601,9 @@ HexYMF, \citet{Kantorovitz2009p2937}).
 
 
 
-\subsection{MONKEY : incorporation de l'information phylogénétique}
-\label{sub:monkey_incorporation_de_l_information_phylog_n_tique}
-
-
-
 % subsection incorporation_de_l_information_phylog_n_tique (end)
 \section{Article} 
-\label{sec:article}
+\label{sec:article_imogene}
 
 \includepdf[pages=-]{articles/imogene-genomebiol.pdf}
 
