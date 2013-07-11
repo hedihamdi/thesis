@@ -2,12 +2,90 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for Marc Santolini at 2013-07-09 09:54:50 +0200 
+%% Created for Marc Santolini at 2013-07-11 11:06:35 +0200 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@article{Chan2005ly,
+	Abstract = {BACKGROUND: Cis-regulatory modules (CRMs) are short stretches of DNA that help regulate gene expression in higher eukaryotes. They have been found up to 1 megabase away from the genes they regulate and can be located upstream, downstream, and even within their target genes. Due to the difficulty of finding CRMs using biological and computational techniques, even well-studied regulatory systems may contain CRMs that have not yet been discovered.
+RESULTS: We present a simple, efficient method (HexDiff) based only on hexamer frequencies of known CRMs and non-CRM sequence to predict novel CRMs in regulatory systems. On a data set of 16 gap and pair-rule genes containing 52 known CRMs, predictions made by HexDiff had a higher correlation with the known CRMs than several existing CRM prediction algorithms: Ahab, Cluster Buster, MSCAN, MCAST, and LWF. After combining the results of the different algorithms, 10 putative CRMs were identified and are strong candidates for future study. The hexamers used by HexDiff to distinguish between CRMs and non-CRM sequence were also analyzed and were shown to be enriched in regulatory elements.
+CONCLUSION: HexDiff provides an efficient and effective means for finding new CRMs based on known CRMs, rather than known binding sites.},
+	Author = {Chan, Bob Y and Kibler, Dennis},
+	Date-Added = {2013-07-11 09:06:33 +0000},
+	Date-Modified = {2013-07-11 09:06:33 +0000},
+	Doi = {10.1186/1471-2105-6-262},
+	Journal = {BMC Bioinformatics},
+	Journal-Full = {BMC bioinformatics},
+	Mesh = {Algorithms; Amino Acid Motifs; Animals; Drosophila; Gene Expression Regulation; Sequence Analysis, DNA},
+	Pages = {262},
+	Pmc = {PMC1291357},
+	Pmid = {16253142},
+	Pst = {epublish},
+	Title = {Using hexamers to predict cis-regulatory motifs in Drosophila},
+	Volume = {6},
+	Year = {2005},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1186/1471-2105-6-262}}
+
+@article{Sinha2000zr,
+	Abstract = {Understanding the mechanisms that determine the regulation of gene expression is an important and challenging problem. A fundamental subproblem is to identify DNA-binding sites for unknown regulatory factors, given a collection of genes believed to be coregulated, and given the noncoding DNA sequences near those genes. We present an enumerative statistical method for identifying good candidates for such transcription factor binding sites. Unlike local search techniques such as Expectation Maximization and Gibbs samplers that may not reach a global optimum, the method proposed here is guaranteed to produce the motifs with greatest z-scores. We discuss the results of experiments in which this algorithm was used to locate candidate binding sites in several well studied pathways of S. cerevisiae, as well as gene clusters from some of the hybridization microarray experiments.},
+	Author = {Sinha, S and Tompa, M},
+	Date-Added = {2013-07-11 08:41:17 +0000},
+	Date-Modified = {2013-07-11 08:41:17 +0000},
+	Journal = {Proc Int Conf Intell Syst Mol Biol},
+	Journal-Full = {Proceedings / ... International Conference on Intelligent Systems for Molecular Biology ; ISMB. International Conference on Intelligent Systems for Molecular Biology},
+	Mesh = {Algorithms; Animals; Binding Sites; DNA-Binding Proteins; Humans; Protein Binding; Sequence Analysis, DNA; Statistics as Topic; Transcription Factors},
+	Pages = {344-54},
+	Pmid = {10977095},
+	Pst = {ppublish},
+	Title = {A statistical method for finding transcription factor binding sites},
+	Volume = {8},
+	Year = {2000}}
+
+@article{Kantorovitz2007ys,
+	Abstract = {MOTIVATION: The similarity of two biological sequences has traditionally been assessed within the well-established framework of alignment. Here we focus on the task of identifying functional relationships between cis-regulatory sequences that are non-orthologous or greatly diverged. 'Alignment-free' measures of sequence similarity are required in this regime.
+RESULTS: We investigate the use of a new score for alignment-free sequence comparison, called the score. It is based on comparing the frequencies of all fixed-length words in the two sequences. An important, novel feature of the score is that it is comparable across sequence pairs drawn from arbitrary background distributions. We present a method that gives quadratic improvement in the time complexity of calculating the score, over the na{\"\i}ve method. We then evaluate the score on several tissue-specific families of cis-regulatory modules (in Drosophila and human). The new score is highly successful in discriminating functionally related regulatory sequences from unrelated sequence pairs. The performance of the score is compared to five other alignment-free similarity measures, and shown to be consistently superior to all of these measures.
+AVAILABILITY: Our implementation of the score will be made freely available as source code, upon publication of this article, at: http://veda.cs.uiuc.edu/d2z/.
+SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics online.},
+	Author = {Kantorovitz, Miriam R and Robinson, Gene E and Sinha, Saurabh},
+	Date-Added = {2013-07-11 08:13:01 +0000},
+	Date-Modified = {2013-07-11 08:13:01 +0000},
+	Doi = {10.1093/bioinformatics/btm211},
+	Journal = {Bioinformatics},
+	Journal-Full = {Bioinformatics (Oxford, England)},
+	Mesh = {Algorithms; Computer Simulation; Data Interpretation, Statistical; Models, Genetic; Models, Statistical; Regulatory Sequences, Nucleic Acid; Sequence Alignment; Sequence Analysis, DNA; Sequence Homology, Nucleic Acid},
+	Month = {Jul},
+	Number = {13},
+	Pages = {i249-55},
+	Pmid = {17646303},
+	Pst = {ppublish},
+	Title = {A statistical method for alignment-free comparison of regulatory sequences},
+	Volume = {23},
+	Year = {2007},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/btm211}}
+
+@article{Grad2004vn,
+	Abstract = {MOTIVATION: To date, computational searches for cis-regulatory modules (CRMs) have relied on two methods. The first, phylogenetic footprinting, has been used to find CRMs in non-coding sequence, but does not directly link DNA sequence with spatio-temporal patterns of expression. The second, based on searches for combinations of transcription factor (TF) binding motifs, has been employed in genome-wide discovery of similarly acting enhancers, but requires prior knowledge of the set of TFs acting at the CRM and the TFs' binding motifs.
+RESULTS: We propose a method for CRM discovery that combines aspects of both approaches in an effort to overcome their individual limitations. By treating phylogenetically footprinted non-coding regions (PFRs) as proxies for CRMs, we endeavor to find PFRs near co-regulated genes that are comprised of similar short, conserved sequences. Using Markov chains as a convenient formulation to assess similarity, we develop a sampling algorithm to search a large group of PFRs for the most similar subset. When starting with a set of genes involved in Drosophila early blastoderm development and using phylogenetic comparisons of Drosophila melanogaster and D.pseudoobscura genomes, we show here that our algorithm successfully detects known CRMs. Further, we use our similarity metric, based on Markov chain discrimination, in a genome-wide search, and uncover additional known and many candidate early blastoderm CRMs.
+AVAILABILITY: Software is available via http://arep.med.harvard.edu/enhancer},
+	Author = {Grad, Yonatan H and Roth, Frederick P and Halfon, Marc S and Church, George M},
+	Date-Added = {2013-07-10 16:20:05 +0000},
+	Date-Modified = {2013-07-10 16:20:05 +0000},
+	Doi = {10.1093/bioinformatics/bth320},
+	Journal = {Bioinformatics},
+	Journal-Full = {Bioinformatics (Oxford, England)},
+	Mesh = {Algorithms; Animals; Chromosome Mapping; Consensus Sequence; DNA Footprinting; Drosophila; Gene Expression Profiling; Gene Expression Regulation, Developmental; Genes, Regulator; Phylogeny; Regulatory Sequences, Nucleic Acid; Sequence Alignment; Sequence Analysis, DNA; Sequence Homology, Nucleic Acid; Software; Species Specificity},
+	Month = {Nov},
+	Number = {16},
+	Pages = {2738-50},
+	Pmid = {15145800},
+	Pst = {ppublish},
+	Title = {Prediction of similarly acting cis-regulatory modules by subsequence profiling and comparative genomics in Drosophila melanogaster and D.pseudoobscura},
+	Volume = {20},
+	Year = {2004},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/bth320}}
 
 @article{hastings1970monte,
 	Author = {Hastings, W Keith},

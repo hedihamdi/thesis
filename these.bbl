@@ -1,4 +1,4 @@
-\begin{thebibliography}{171}
+\begin{thebibliography}{179}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[Aerts, 2012]{Aerts2012p3868}
@@ -216,6 +216,11 @@ Casella, G. and George, E.~I. (1992).
 \newblock Explaining the Gibbs sampler.
 \newblock \emph{The American Statistician}, 46(3):167--174.
 
+\bibitem[Chan and Kibler, 2005]{Chan2005ly}
+Chan, B.~Y. and Kibler, D. (2005).
+\newblock Using hexamers to predict cis-regulatory motifs in Drosophila.
+\newblock \emph{BMC Bioinformatics}, 6:262.
+
 \bibitem[Cheng et~al., 2008]{Cheng2008fk}
 Cheng, Y., King, D.~C., Dore, L.~C., Zhang, X., Zhou, Y., Zhang, Y., Dorman,
   C., Abebe, D., Kumar, S.~A., Chiaromonte, F., Miller, W., Green, R.~D.,
@@ -330,6 +335,13 @@ Giocomo, L.~M., Moser, M.-B., and Moser, E.~I. (2011).
 \newblock Computational models of grid cells.
 \newblock \emph{Neuron}, 71(4):589--603.
 
+\bibitem[Grad et~al., 2004]{Grad2004vn}
+Grad, Y.~H., Roth, F.~P., Halfon, M.~S., and Church, G.~M. (2004).
+\newblock Prediction of similarly acting cis-regulatory modules by subsequence
+  profiling and comparative genomics in Drosophila melanogaster and
+  D.pseudoobscura.
+\newblock \emph{Bioinformatics}, 20(16):2738--50.
+
 \bibitem[Graf and Enver, 2009]{Graf2009p2592}
 Graf, T. and Enver, T. (2009).
 \newblock Forcing cells to change lineages.
@@ -392,6 +404,13 @@ Heintzman, N.~D., et~al. (2009).
   cell-type-specific gene expression.
 \newblock \emph{Nature}, 459(7243):108--12.
 
+\bibitem[Heinz et~al., 2010]{Heinz2010p3822}
+Heinz, S., Benner, C., Spann, N., Bertolino, E., Lin, Y.~C., Laslo, P., Cheng,
+  J.~X., Murre, C., Singh, H., and Glass, C.~K. (2010).
+\newblock Simple combinations of lineage-determining transcription factors
+  prime cis-regulatory elements required for macrophage and B cell identities.
+\newblock \emph{Mol Cell}, 38(4):576--89.
+
 \bibitem[Hesselberth et~al., 2009]{Hesselberth2009vn}
 Hesselberth, J.~R., Chen, X., Zhang, Z., Sabo, P.~J., Sandstrom, R., Reynolds,
   A.~P., Thurman, R.~E., Neph, S., Kuehn, M.~S., Noble, W.~S., Fields, S., and
@@ -410,6 +429,12 @@ Hu, M., Yu, J., Taylor, J.~M., Chinnaiyan, A.~M., and Qin, Z.~S. (2010).
 \newblock On the detection and refinement of transcription factor binding sites
   using ChIP-Seq data.
 \newblock \emph{Nucleic acids research}, 38(7):2154--2167.
+
+\bibitem[Ivan et~al., 2008]{Ivan2008dz}
+Ivan, A., Halfon, M.~S., and Sinha, S. (2008).
+\newblock Computational discovery of cis-regulatory modules in Drosophila
+  without prior knowledge of motifs.
+\newblock \emph{Genome Biol}, 9(1):R22.
 
 \bibitem[Jaynes, 1978]{Jaynes1978p795}
 Jaynes, E.~T. (1978).
@@ -453,9 +478,21 @@ Kantorovitz, M.~R., Kazemian, M., Kinston, S., Miranda-Saavedra, D., Zhu, Q.,
   Drosophila and mouse.
 \newblock \emph{Developmental Cell}, 17(4):568--79.
 
+\bibitem[Kantorovitz et~al., 2007]{Kantorovitz2007ys}
+Kantorovitz, M.~R., Robinson, G.~E., and Sinha, S. (2007).
+\newblock A statistical method for alignment-free comparison of regulatory
+  sequences.
+\newblock \emph{Bioinformatics}, 23(13):i249--55.
+
 \bibitem[Kaufmann, 1993]{kaufmann1993origins}
 Kaufmann, S. (1993).
 \newblock The origins of order.
+
+\bibitem[Kazemian et~al., 2011]{Kazemian2011fv}
+Kazemian, M., Zhu, Q., Halfon, M.~S., and Sinha, S. (2011).
+\newblock Improved accuracy of supervised CRM discovery with interpolated
+  Markov models and cross-species comparison.
+\newblock \emph{Nucleic Acids Res}, 39(22):9463--72.
 
 \bibitem[Keim et~al., 2004]{Keim2004uq}
 Keim, C.~N., Martins, J.~L., Abreu, F., Rosado, A.~S., de~Barros, H.~L.,
@@ -813,12 +850,22 @@ Sinha, S. and He, X. (2007).
   cis-regulatory modules.
 \newblock \emph{PLoS Comput Biol}, 3(11):e216.
 
+\bibitem[Sinha et~al., 2003]{Sinha2003p608}
+Sinha, S., Nimwegen, E.~V., and Siggia, E. (2003).
+\newblock A probabilistic method to detect regulatory modules.
+\newblock \emph{Bioinformatics}, 19(Suppl 1):i292.
+
 \bibitem[Sinha et~al., 2004]{Sinha2004lh}
 Sinha, S., Schroeder, M.~D., Unnerstall, U., Gaul, U., and Siggia, E.~D.
   (2004).
 \newblock Cross-species comparison significantly improves genome-wide
   prediction of cis-regulatory modules in Drosophila.
 \newblock \emph{BMC Bioinformatics}, 5:129.
+
+\bibitem[Sinha and Tompa, 2000]{Sinha2000zr}
+Sinha, S. and Tompa, M. (2000).
+\newblock A statistical method for finding transcription factor binding sites.
+\newblock \emph{Proc Int Conf Intell Syst Mol Biol}, 8:344--54.
 
 \bibitem[Slutsky and Mirny, 2004]{Slutsky2004vn}
 Slutsky, M. and Mirny, L.~A. (2004).

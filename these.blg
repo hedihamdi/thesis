@@ -5,45 +5,45 @@ A level-1 auxiliary file: packaging/Avant_Propos.aux
 The style file: custom.bst
 Database file #1: biblio/papers.bib
 Warning--empty journal in Jaynes1978p795
-You've used 171 entries,
+You've used 179 entries,
             2710 wiz_defined-function locations,
-            1639 strings with 58936 characters,
-and the built_in function-call counts, 118213 in all, are:
-= -- 9237
-> -- 5989
-< -- 70
-+ -- 4534
-- -- 1667
-* -- 8309
-:= -- 15792
-add.period$ -- 517
-call.type$ -- 171
-change.case$ -- 1521
-chr.to.int$ -- 172
-cite$ -- 172
-duplicate$ -- 8241
-empty$ -- 7883
-format.name$ -- 2072
-if$ -- 23394
+            1680 strings with 60459 characters,
+and the built_in function-call counts, 123262 in all, are:
+= -- 9630
+> -- 6214
+< -- 72
++ -- 4702
+- -- 1729
+* -- 8667
+:= -- 16478
+add.period$ -- 541
+call.type$ -- 179
+change.case$ -- 1584
+chr.to.int$ -- 180
+cite$ -- 180
+duplicate$ -- 8611
+empty$ -- 8241
+format.name$ -- 2154
+if$ -- 24391
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 2172
-newline$ -- 860
-num.names$ -- 513
-pop$ -- 5147
+missing$ -- 2267
+newline$ -- 900
+num.names$ -- 537
+pop$ -- 5359
 preamble$ -- 1
-purify$ -- 1517
+purify$ -- 1580
 quote$ -- 0
-skip$ -- 4308
+skip$ -- 4483
 stack$ -- 0
-substring$ -- 4979
-swap$ -- 5159
+substring$ -- 5206
+swap$ -- 5383
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1020
+type$ -- 1068
 warning$ -- 1
-while$ -- 557
+while$ -- 582
 width$ -- 0
-write$ -- 2224
+write$ -- 2328
 (There was 1 warning)

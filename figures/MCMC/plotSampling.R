@@ -66,31 +66,6 @@ for (i in 1:4){
 }
 dev.off()
 
-
-# DIRICHLET
-pdf("plotDirichlet.pdf",family = "Palatino")
-par(mfrow=c(2,2), mar = c(5.1,5.1,4.1,2.1))
-
-resfile<-"sampling-dirichlet.dat"
-t<-read.table(resfile)
-Wdir<-as.matrix(t[,1:4])
-for (i in 1:4){
-   hist(Wdir[,i],
-        xlab=wb[i],
-        ylab="Nombre d'éléments",
-        main="",#paste("Distribution de Dirichlet pour",parse(text=wb[i]),"\n winit=",winit[i]),
-        breaks=seq(0,1,0.02),
-        xlim=c(0,1),
-        cex.main = cexmain,
-        cex.lab = cexlab,
-        cex.axis = cexaxis
-        )
-   #abline(v=winit[i],col="blue",lwd=3)
-   #abline(v=wmeaninde[i],col="purple",lwd=3)
-   abline(v=Wmean[Ntot,i],col="black",lwd=3, lty =2)
-}
-dev.off()
-
 # Step correlation
 Corr<-NULL
 nmax<-200
@@ -158,10 +133,11 @@ if (nsample>100){
 
 Niter<-length(iter)
 
-pdf("plotCVmeanvar.pdf",family = "Palatino")
+pdf("plotCVmean.pdf",family = "Palatino")
 # MEAN
 #par(mfrow=c(2,2), oma = c(0,0,3,0))
-par(mfrow=c(2,2), oma = c(0,2,3,0))
+#par(mfrow=c(2,2), oma = c(0,2,3,0))
+par(mfrow=c(2,2), mar = c(5.1,5.1,4.1,2.1))
 Ncv<-0
 for (i in 1:4){
    name<-colnames(Wmean)[i]
@@ -172,10 +148,10 @@ for (i in 1:4){
    #plot(iter,Wmean[iter,i],xlab="Number of iteration",ylab=name,main=paste(name),pch=pch,cex=cex,ylim=c(0,1))
    #lines(iter,Wmean[Ntot,i]+1.96*sqrt(wvarinde[i]/(iter/nsample)),lty='dashed',lwd=3,col="red")
    #lines(iter,Wmean[Ntot,i]-1.96*sqrt(wvarinde[i]/(iter/nsample)),lty='dashed',lwd=3,col="red")
-   plot(iter,
+   plot(1:Niter,
         samplemean,
         log="x",
-        xlab="Itération",
+        xlab="n",
         ylab=wb[i],
         main="",
         pch=pch,
@@ -189,35 +165,40 @@ for (i in 1:4){
    lines(iter,samplemean[Niter]-1.96*sqrt(wvarinde[i]/(iter/nsample)),lty='dashed',lwd=3,col="red")
 
 }
-par(mfrow=c(1,1), oma = c(0,2,2,0))
+#par(mfrow=c(1,1), oma = c(0,2,2,0))
 #mtext(paste("Sample step = 5*tau ~",nsample), 3, outer = TRUE,font = 2)
-mtext("Convergence de la moyenne", 3, outer = TRUE,font = 2,cex=1.5)
+#mtext("Convergence de la moyenne", 3, outer = TRUE,font = 2,cex=1.5)
+dev.off()
 
-
+pdf("plotCVvar.pdf",family = "Palatino")
+#par(mfrow=c(2,2), oma = c(0,0,3,0))
+par(mfrow=c(2,2), mar = c(5.1,5.1,4.1,2.1))
 # VAR
-par(mfrow=c(2,2), oma = c(0,0,3,0))
+sb <- c(expression(sigma[A]), expression(sigma[C]), expression(sigma[G]), expression(sigma[T]))
 for (i in 1:4){
    # i use max value = uniform distribution
    ymax <- max(1/3-1/2^2,wvarinde[i],Wvar[,i])
    name<-colnames(Wvar)[i]
-   plot(iter,
+   plot(1:Niter,
         log="x",
         Wvar[iter,i],
-        xlab="Itération",
-        ylab=wb[i],
+        xlab="n",
+        ylab=sb[i],
         main="",
         pch=pch,
         cex=cex,
         ylim=c(0,ymax),
+         xaxt="n",
         cex.main = cexmain,
         cex.lab = cexlab,
         cex.axis = cexaxis
         )
+    axis(1, at =c(1,10,100,1000), cex.axis=cexaxis)
    #abline(v=cutoff,col="blue",lwd=3)
    #abline(v=Ncv,col="yellow",lwd=3)
    #legend(pos,c(paste("cutoff DKL=",dklcut,"N=",cutoff),"cutoff 95% CI with var inde"),col=c("blue","yellow"),lty=c(1,1),lwd=c(3,3))
 }
-par(mfrow=c(1,1), oma = c(0,0,2,0))
+#par(mfrow=c(1,1), oma = c(0,0,2,0))
 #mtext(paste("Sample step = 5*tau ~",nsample), 3, outer = TRUE,font = 2)
-mtext("Convergence de la variance", 3, outer = TRUE,font = 2,cex=1.5)
+#mtext("Convergence de la variance", 3, outer = TRUE,font = 2,cex=1.5)
 
