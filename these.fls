@@ -1470,12 +1470,12 @@ INPUT ./figures/MCMC/sampling-autocorr.pdf
 INPUT ./figures/MCMC/sampling-autocorr.pdf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplr9d.vf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplrc8r.tfm
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplr9d.vf
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplrc8r.tfm
 INPUT figures/MCMC/var-cv.pdf
 INPUT ./figures/MCMC/var-cv.pdf
 INPUT ./figures/MCMC/var-cv.pdf
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplr9d.vf
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplrc8r.tfm
 INPUT figures/MCMC/plotConvergenceCompare.pdf
 INPUT ./figures/MCMC/plotConvergenceCompare.pdf
 INPUT ./figures/MCMC/plotConvergenceCompare.pdf

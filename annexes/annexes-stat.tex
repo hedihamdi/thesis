@@ -7,17 +7,16 @@
         
         Distributions log-log de la taille des régions intergéniques (A) et
         introniques (B) chez différentes espèces. Les histogrammes sont
-        réalisés avec un intervalle de $0.05$ puis lissés avec l'estimateur local
-        LOESS de paramètre $span = 0.3$ (logiciel R).
-        (A)  Les régions intergéniques sont définies comme les
-        régions complémentaires aux régions transcrites (données UCSC),
-        celles-ci étant préalablement fusionnées pour éviter les redondances
-        liées aux multiples transcrits d'un même gène. De la bactérie
-        à l'homme, on observe une inflation de la quantité de génome non
-        codant.  
-        (B) Les régions introniques sont définies par le fait qu'elles sont
-        entourées par deux exons d'un même gène. Pour pouvoir être épissés lors
-        de la maturation des preARNm, les introns doivent posséder des sites
+        réalisés avec un intervalle de $0.05$ (en $\log10$) puis lissés avec
+        l'estimateur local LOESS de paramètre $span = 0.3$ (logiciel R).  (A)
+        Les régions intergéniques sont définies comme les régions
+        complémentaires aux régions transcrites (données UCSC), celles-ci étant
+        préalablement fusionnées pour éviter les redondances liées aux
+        multiples transcrits d'un même gène. De la bactérie à l'homme, on
+        observe une inflation de la quantité de génome non codant.  (B) Les
+        régions introniques sont définies par le fait qu'elles sont entourées
+        par deux exons d'un même gène. Pour pouvoir être épissés lors de la
+        maturation des preARNm, les introns doivent posséder des sites
         d'épissage, imposant une borne inférieure à leur taille pour que l'ARNm
         final soit fonctionnel.
 
@@ -25,9 +24,68 @@
     \label{fig:intergenic-intronic}
 \end{figure}
 
-En guise d'exemple, nous montrons en figure \ref{fig:intergenic-intronic} des
-statistiques obtenues aisément à partir d'annotations génétiques présentes sur
-UCSC et traitées avec Galaxy. Ces statistiques sont les distribution de tailles
-des régions intergéniques et introniques chez plusieurs espèces : la bactérie
-\ecoli, la levure \textit{Saccharomyces cerevisiae}, le ver \celegans, la
-mouche \dmel, la souris, le poulet et l'homme.
+Nous nous intéressons ici à quelques statistiques des génomes de différentes
+espèces : les distributions de tailles intergéniques et introniques, et aux
+questions qu'elles soulèvent.\\
+
+Nous l'avons vu en introduction (section
+\ref{sub:obtention_donnees_genomiques}), l'interface Galaxy permet d'obtenir un
+certain nombre d'annotations génomiques à partir de différentes bases de
+données, comme UCSC. Les annotations génétiques consistent généralement en des
+coordonées sur le génome de TSSs et de leurs exons et introns. Ceux-ci sont
+associés à un gène, qui peut avoir plusieurs TSSs différents et dont le
+transcrit peut avoir plusieurs épissages alternatifs.
+\\
+
+Nous avons utilisé Galaxy pour récupérer les annotations génomiques de
+différentes espèces, allant de l'unicellulaire à l'homme : la bactérie \ecoli,
+la levure \textit{Saccharomyces cerevisiae}, le ver \textit{Caenorhabditis
+elegans}, la mouche \dromel, la souris \textit{Mus Musculus}, le poulet
+\textit{Gallus gallus} et l'homme \textit{Homo Sapiens}. 
+\\
+
+Les données intergéniques ont été obtenues comme étant les coordonnées
+complémentaires à l'ensemble fusionné des transcrits annotés. Dit autrement,
+chaque gène a été défini par les coordonnées les plus extrêmes de ses
+transcrits alternatifs, et les régions entre deux gènes définissent les régions
+intergéniques. La distribution de la taille de l'intergénique pour ces
+différentes espèces est montrée en figure~\ref{fig:intergenic-intronic}A. On
+observe une loi proche d'une log-normale et qui semble, à une remise
+à l'échelle près, être relativement conservée. Les distributions sont
+unimodales, mais on note l'apparition d'un deuxième pic à $\sim100$bp chez la
+souris et l'humain, peut-être dû à l'annotation récente de nombreuses région
+transcrites non codantes proches des gènes. On note par ailleurs l'inflation
+importante de la taille des régions intergéniques entre la bactérie ($180$ bp
+en moyenne, médiane à $100$bp) et l'homme ($80$kb de moyenne, médiane
+à $15$kb).  \\
+
+Les données introniques montrent quant à elles un comportement très stéréotypé.
+Toutes les distributions présentent un pic fort autour de $80$bp, que l'on peut
+interpréter comme une taille minimale pour que l'épissage puisse avoir lieu. On
+observe par ailleurs que la présence d'introns longs semble corrélée à la
+taille des génomes.
+\\
+
+Les présence de distributions stéréotypées au sein d'organismes aussi divers
+que la bactérie, le ver ou l'homme laisse à penser qu'il existe des mécanismes
+universels régissant la croissance des régions non codantes du génome. Il
+serait donc intéressant de comprendre quels mécanismes d'insertions-délétions
+(indels) permettent de modéliser ce phénomène. De manière générale, l'équation
+maîtresse caractérisant l'évolution de la distribution $P(L,t)$ des longueurs
+intergéniques $L$ au cours du temps $t$ s'écrit
+
+
+\newcommand{\dt}{\text{d}t}
+\newcommand{\dL}{\text{d}L}
+\begin{equation}
+    P(L,t+\text{d}t) = P(L,t) + \int_0^\infty \dL' \Big[ P(L',t) \tau(L' \to L) - P(L,t)  \tau(L \to L')\Big]\dt
+\end{equation}
+
+où $\tau(L\to L')$ est le taux de transition de la taille $L'$ vers la taille
+$L$, qui dépend des insertions-délétions. On imagine un mécanisme similaire
+pour les introns, avec une longueur minimale $L_{\text{min}}$ à intégrer.  De
+nombreuses données sur les statistiques des indels ont récemment été rendues
+accessibles chez l'homme dans le cadre du projet $1000$
+genomes~\cite{Mills2011dq} ainsi que chez la souris~\cite{Yalcin2011cr}. Ces
+données pourraient servir à décrire ces transitions et voir si l'on peut
+reproduire les lois observées.

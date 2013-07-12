@@ -1,4 +1,4 @@
-\begin{thebibliography}{186}
+\begin{thebibliography}{188}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[Aerts, 2012]{Aerts2012p3868}
@@ -673,6 +673,11 @@ Metropolis, N., Rosenbluth, A.~W., Rosenbluth, M.~N., Teller, A.~H., and
 \newblock Equation of state calculations by fast computing machines.
 \newblock \emph{The journal of chemical physics}, 21:1087.
 
+\bibitem[Mills et~al., 2011]{Mills2011dq}
+Mills, R.~E., et~al. (2011).
+\newblock Mapping copy number variation by population-scale genome sequencing.
+\newblock \emph{Nature}, 470(7332):59--65.
+
 \bibitem[Milo et~al., 2002]{Milo2002tg}
 Milo, R., Shen-Orr, S., Itzkovitz, S., Kashtan, N., Chklovskii, D., and Alon,
   U. (2002).
@@ -1106,6 +1111,15 @@ Xie, X., Lu, J., Kulbokas, E.~J., Golub, T.~R., Mootha, V., Lindblad-Toh, K.,
 \newblock Systematic discovery of regulatory motifs in human promoters and 3'
   UTRs by comparison of several mammals.
 \newblock \emph{Nature}, 434(7031):338--45.
+
+\bibitem[Yalcin et~al., 2011]{Yalcin2011cr}
+Yalcin, B., Wong, K., Agam, A., Goodson, M., Keane, T.~M., Gan, X.,
+  Nell{\aa}ker, C., Goodstadt, L., Nicod, J., Bhomra, A., Hernandez-Pliego, P.,
+  Whitley, H., Cleak, J., Dutton, R., Janowitz, D., Mott, R., Adams, D.~J., and
+  Flint, J. (2011).
+\newblock Sequence-based characterization of structural variation in the mouse
+  genome.
+\newblock \emph{Nature}, 477(7364):326--9.
 
 \bibitem[Zeitlinger et~al., 2007]{Zeitlinger2007ly}
 Zeitlinger, J., Zinzen, R.~P., Stark, A., Kellis, M., Zhang, H., Young, R.~A.,
