@@ -105,5 +105,9 @@
 \contentsline {subsection}{\numberline {3.3.2}Application au calcul de la post\'erieure}{159}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Illustration sur un exemple}{160}{subsection.4.3.3}
 \contentsline {section}{\numberline {3.4}Conclusion et perspectives}{166}{section.4.4}
-\contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomique}{167}{division.5}
-\contentsline {chapter}{Bibliographie}{171}{equation.5.0.1}
+\contentsline {chapter}{\numberline {Chapitre\ 4~-}\'Etude de la diff\'erenciation \'epidermale chez la drosophile}{167}{division.5}
+\contentsline {section}{\numberline {4.1}Article}{169}{section.5.1}
+\contentsline {chapter}{\numberline {Chapitre\ 5~-}\'Etude de la diff\'erenciation musculaire chez la souris}{241}{division.6}
+\contentsline {section}{\numberline {5.1}Article}{243}{section.6.1}
+\contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomiques}{279}{division.7}
+\contentsline {chapter}{Bibliographie}{283}{equation.7.0.1}

@@ -1,11 +1,43 @@
 \section*{Introduction du chapitre \thechapter}
 
-%\includepdf[pages=-]{articles/trichomes-plosbiol-merged.pdf}
+Nous présentons maintenant une application de Imogene au cas de la
+différenciation des trichomes, ou poils, chez la Drosophile. Plusieurs motifs
+ont été générés à partir de $14$ CRMs connus pour réguler le processus de
+différenciation des trichomes. Parmi les motifs générés, deux d'entre eux ont
+montré une meilleure capacité à distinguer les CRMs positifs de l'ensemble
+d'apprentissage de CRMs négatifs. Le critère de distinction est basé sur
+l'optimisation de Pareto, caractérisant la satisfaction de plusieurs
+contraintes à la fois. Dans notre cas, les contraintes sont de maximiser le
+nombre de CRMs positifs trouvés par les motifs (maximisation de la sensibilité)
+tout en minimisant le nombre de faux positifs (maximisation de la spécificité).
+Ces critères définissent une frontière de Pareto de motifs optimum. En variant
+les différents paramètres de Imogene, nous avons trouvé deux motifs sur la
+frontière de Pareto. Parmi les deux motifs, l'un d'eux (\og svbf7 \fg)
+correspond au régulateur maître du processus de différenciation des trichomes,
+et l'autre (\og blue motif\fg) est un motif nouveau. L'importance des deux
+motifs pour la régulation est montrée par mutagenèse. Par ailleurs, ces motifs
+permettent de distinguer des \chipseq pour \textit{svb} liés à une régulation
+(dont le gène le plus proche subit une perte d'expression lors du KO de
+\textit{svb}) des \chipseq ne l'étant pas. Ce travail montre donc un exemple de
+la possibilité d'utiliser Imogene sur sun un petit ensemble (ici $14$ CRMs) de
+données biologiques fonctionnelles pour détecter des motifs nouveaux et
+fonctionnels.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \newpage
-\section{}
 
+
+\section{Article} 
+\label{sec:article}
+
+\includepdf[pages=-]{articles/trichomes-genomebiol/Menoret_et_al_GenBiol_revised.pdf}
+\includepdf[pages=-]{articles/trichomes-genomebiol/Figures_rev_S.pdf}
+\includepdf[pages=-]{articles/trichomes-genomebiol/Menoret_SupInfos_revised.pdf}
+\includepdf[pages=-]{articles/trichomes-genomebiol/Menoret_et_al_FigSupLegend_revised.pdf}
+\includepdf[pages=-]{articles/trichomes-genomebiol/FigSup_rev_S.pdf}
+% section article (end)
 			
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \newpage	
