@@ -1077,6 +1077,12 @@ INPUT these.mtc7
 INPUT these.mtc7
 INPUT chapters/Chapter-muscle.tex
 INPUT chapters/Chapter-muscle.tex
+INPUT figures/buckingham-myogenesis.pdf
+INPUT ./figures/buckingham-myogenesis.pdf
+INPUT ./figures/buckingham-myogenesis.pdf
+INPUT figures/muscle/myogenese_six.pdf
+INPUT ./figures/muscle/myogenese_six.pdf
+INPUT ./figures/muscle/myogenese_six.pdf
 INPUT figures/muscle/MEF3-roc-on-posnotlearned/roc.pdf
 INPUT ./figures/muscle/MEF3-roc-on-posnotlearned/roc.pdf
 INPUT ./figures/muscle/MEF3-roc-on-posnotlearned/roc.pdf

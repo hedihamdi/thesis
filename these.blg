@@ -3,47 +3,50 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: these.aux
 A level-1 auxiliary file: packaging/Avant_Propos.aux
 The style file: custom.bst
+Reallocated field_info (elt_size=4) to 10382 items from 5000.
 Database file #1: biblio/papers.bib
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--I didn't find a database entry for "Le-Grand2012qf"
 Warning--empty journal in Jaynes1978p795
-You've used 189 entries,
+You've used 206 entries,
             2710 wiz_defined-function locations,
-            1738 strings with 63541 characters,
-and the built_in function-call counts, 129644 in all, are:
-= -- 10119
-> -- 6516
-< -- 76
-+ -- 4924
-- -- 1813
-* -- 9109
-:= -- 17351
-add.period$ -- 571
-call.type$ -- 189
-change.case$ -- 1666
-chr.to.int$ -- 190
-cite$ -- 190
-duplicate$ -- 9081
-empty$ -- 8686
-format.name$ -- 2260
-if$ -- 25651
+            1837 strings with 67749 characters,
+and the built_in function-call counts, 142681 in all, are:
+= -- 11118
+> -- 7268
+< -- 78
++ -- 5511
+- -- 2023
+* -- 10039
+:= -- 19050
+add.period$ -- 622
+call.type$ -- 206
+change.case$ -- 1839
+chr.to.int$ -- 207
+cite$ -- 207
+duplicate$ -- 9954
+empty$ -- 9499
+format.name$ -- 2508
+if$ -- 28212
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 2389
-newline$ -- 950
-num.names$ -- 567
-pop$ -- 5629
+missing$ -- 2630
+newline$ -- 1035
+num.names$ -- 618
+pop$ -- 6234
 preamble$ -- 1
-purify$ -- 1662
+purify$ -- 1835
 quote$ -- 0
-skip$ -- 4713
+skip$ -- 5200
 stack$ -- 0
-substring$ -- 5455
-swap$ -- 5672
+substring$ -- 5954
+swap$ -- 6241
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1128
+type$ -- 1230
 warning$ -- 1
-while$ -- 613
+while$ -- 668
 width$ -- 0
-write$ -- 2458
-(There was 1 warning)
+write$ -- 2679
+(There were 2 warnings)

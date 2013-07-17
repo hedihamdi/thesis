@@ -39,6 +39,193 @@ prédire des corégulateurs et avons testé l'importance des sites par mutagenèse.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \newpage
 
+\section{Introduction à la myogenèse squelettique} 
+\label{sec:introduction_la_myogen_se}
+
+\subsection{Les différentes étapes de la myogenèse}
+\label{sub:les_diff_rentes_tapes}
+
+La myogenèse correspond à la formation des tissus musculaires, ceux-ci étant
+regroupé en trois types majeurs : les muscles cardiaques, les muscle lisses et
+les muscles squelettiques. C'est la formation de ces derniers qui nous
+intéresse ici. Les muscles squelettiques sont composés de fibres musculaires
+provenant de la fusion de progéniteurs musculaires appelés myoblastes. Ils sont
+sous le contrôle du système nerveux central, et composent l'un des organe
+majeur des vertébrés, puisqu'ils concentrent $\sim40\%$  du poids corporel. La
+myogenèse squelettique débute relativement tôt dans l'embryogenèse : à $8.5$
+jours\footnote{La mi-journée correspondant au fait que la fécondation a lieu la
+nuit.} après fécondation (ou E$8.5$ pour \textit{Embryonic day} $8.5$) chez
+l'embryon de souris sur un total de $18$ jours embryonnaires. Elle a lieu au
+niveau des somites, structures périodiques situées au niveau des futures
+vertèbres (fig.~\ref{fig:buckingham-myogenesis}a). Les étapes de fusion des
+myoblastes et de maturation des fibres s'étalent ensuite sur toute
+l'embryogenèse (fig.~\ref{fig:buckingham-myogenesis}b), ainsi que dans le
+muscle adulte lors de la régénération musculaire \cite{Parker2003p761}.
+
+\bfigp
+\includegraphics[width=.9\textwidth]{figures/buckingham-myogenesis.pdf}
+\captionbf{Formation du muscle squelettique chez l'embryon de souris}{
+
+    Figure tirée de \citet{Buckingham2007p776} illustrant les différentes
+    étapes de la myogenèse. (a) Le dermomyotome épithélial d'un somite (vert)
+    ainsi que le muscle squelettique du myotome (beige) sont d'abord formés par
+    la délamination des cellules provenant des extrêmités du dermomyotome
+    (flèches bleues) : c'est la première vague de la myogenèse. Ensuite, lors
+    d'une deuxième vague, le dermomyotome central perd sa structure épithéliale
+    et des des cellules musculaires progénitrices s'intègrent au myotome
+    (flèches rouges). Les TFs précurseurs de ces événements sont indiqués en
+    rouge. (b) Schéma montrant les étapes de différenciation des progéniteurs
+    musculaires, ainsi que les temps de développement associés (E : jour
+    embryonnaire).
+
+}
+\label{fig:buckingham-myogenesis}
+\efigp
+
+
+% subsection les_diff_rentes_tapes (end)
+
+\subsection{Les Facteurs de Régulation Myogénique et leurs cofacteurs}
+\label{sub:la_r_gulation_g_n_tique_les_facteurs_de_r_gulation_myog_nique_ou_mrfs}
+
+D'un point de vue génétique, la myogenèse des vertébrés est coordonnée en
+partie par l'action de $4$ Facteurs de Régulation Myogéniques (MRF pour
+\textit{Myogenic Regulatory Factors}) : MyoD, Myf5, Mrf4 et Myog. Ces MRFs sont
+induits successivement à travers une cascade de régulation génétique et se
+régulent les uns les autres. Par exemple, Myf5, MRF4 et MyoD peuvent activer
+MyoD ; Myf5, MyoD et Mrf4 régulent l'expression de Myog ; et Myog peut activer
+l'expression de Mrf4 \cite{Naidu1995uq}. En outre, MyoD et Myog peuvent
+s'auto-activer \cite{Thayer1989kx}. Enfin, un certain degré de redondance a été
+observé entre Myf5, Mrf4 et MyoD au cours du développement embryonnaire de la
+souris, et l'analyse des embryons KO pour ces gènes a conduit à la conclusion
+qu'ils ont tous la capacité d'activer la myogenèse à partir de cellules
+embryonnaires pluripotentes et d'agir comme des gènes de détermination
+\cite{KassarDuchossoy2004p823}. Ces MRFs sont les clés de voûte de la
+différenciation myogénique. Cependant, la régulation précise du réseau de gènes
+activés par les MRFs nécessite leur coopération avec d'autres facteurs de
+transcription. En particulier, la liaison de MyoD à l'ADN n'est pas prédictive
+d'une activité enhancer \cite{Cao2010p1805}. Ainsi, \citet{Molkentin1996p646}
+ont montré que l'activation transcriptionnelle par les MRFs est renforcée par
+la fonction des TFs à boîte MADS MEF2. Leur importance a ultérieurement été
+confirmée par les travaux de \citet{Blais2005p809} : en utilisant un grand
+nombre de gènes cibles des MRFs, les auteurs ont cherché dans les régions
+promotrices des sites de liaison sur-représentés pour les TFs connus de
+Transfac, et ont constaté que l'élément riche en A/T reconnu par MEF2 était
+parmi eux. Ils ont finalement confirmé le recrutement de MEF2 à plusieurs de
+ces sites. Par ailleurs, un autre motif d'ADN trouvé comme spécifiquement
+enrichi parmi les promoteurs cibles des MRFs était l'élément \mef (consensus
+GAAACCTGA), le site de liaison des homéoprotéines Six. Cette séquence MEF3
+était particulièrement abondante au sein des promoteurs des gènes dont
+l'expression était induite de manière significative au cours de la
+différenciation.
+% subsection la_r_gulation_g_n_tique_les_facteurs_de_r_gulation_myog_nique_ou_mrfs (end)
+
+
+
+\subsection{Les homéoprotéines Six}
+\label{sub:les_hom_oprot_ines_six}
+
+
+Les homéoprotéines Six associées aux sites MEF$3$ possèdent un rôle étendu au
+cours de la myogenèse (fig.~\ref{fig:muscle/myogenese_six}), et nous en
+présentons maintenant les détails.  Parmi les 6 gènes appartenant à la famille
+des homéoprotéines Six, \textit{Six$1$} et \textit{Six$4$} ont reçu une
+attention particulière dans le contexte de la myogenèse squelettique. Ces deux
+gènes se trouvent à proximité l'un de l'autre sur le chromosome $12$ de la
+souris et sont séparés par $100$kb de séquence intergénique. L'équipe de Pascal
+Maire, avec qui nous avons travaillé sur ce projet, a déjà identifié plusieurs
+fonctions clés de \textit{Six$1$} dans le lignage musculaire au cours de
+l'embryogenèse, par l'analyse de modèles de souris dépourvues de
+\textit{Six$1$} (Six$1$KO) et de Six$1$ et Six$4$ (\sixdko), et par des
+expériences de \chip.  L'analyse des embryons \sixdko \cite{Grifone2005vn}
+à E$10$ \cite{Niro2010p3444} et E$18$ \cite{Richard2011ys} a permis
+d'identifier des cibles génétiques directes et indirectes de Six$1,4$, et
+a dévoilé plusieurs fonctions des homéoprotéines Six pendant le développement
+musculaire et la spécialisation des fibres musculaires.  
+
+
+\bfig
+\includegraphics[width=1\textwidth]{figures/muscle/myogenese_six.pdf}
+\captionbf{Rôle des protéines Six au cours de la myogenèse}{
+
+La myogenèse embryonnaire consiste en plusieurs étapes de différenciation
+musculaire : la genèse des progéniteurs myogéniques ou myoblastes, exprimant
+\textit{Pax3}, l'induction des gènes de détermination myogénique comme
+\textit{Myf5} et \textit{Myod1}, la différenciation des myoblastes et leur
+fusion en myotubes avec l'expression de \textit{Myog}. Les myotubes se
+spécialisent plus tardivement en fibres de type lentes (oxydatives) ou rapides
+(glycolytiques). Les homéoprotéines Six interviennent dans la régulation de ces
+différentes étapes en régulant les TFs indiqués. Des corégulateurs peuvent
+intervenir dans la régulation (disque jaune).
+
+}
+\label{fig:muscle/myogenese_six}
+\efig
+
+Les principaux points sont les suivants: Six$1$ et Six$4$ sont requis pour la
+genèse des progéniteurs myogéniques hypaxiaux (\cad ventraux).  En l'absence de
+Six$1$ et Six$4$, les cellules ventrales pluripotentes du dermomyotome
+somitique ne parviennent pas à adopter un destin de progéniteur myogénique et
+elles n'expriment ni \textit{Pax3} ni les MRFs. Six$1$ et Six$4$ contrôlent
+directement l'expression de \textit{Pax$3$} \cite{Grifone2007p728}, et donc
+l'engagement des cellules pluripotentes dermomyotomales dans un destin de
+progéniteur myogénique.  Plus tardivement, l'expression de \textit{Myf$5$} dans
+le membre est contrôlée par un enhancer \og membre \fg lié par les protéines
+Six$1$ et Six$4$, et cette liaison est nécessaire pour permettre l'expression
+de Myf$5$ \cite{Giordani2007p473}. Par ailleurs, deux enhancers contrôlent
+spécifiquement l'expression de MyoD au cours de l'embryogenèse et au cours de
+la régénération du muscle adulte: le \textit{Distal Regulatory Region} ou DRR
+\cite{Asakura1995ly} et le \textit{Core Enhancer} ou CE
+\cite{Kucharczuk1999zr}. La liaison de ces éléments par Six$1$ et Six$4$ a été
+confirmée par \chip au cours de l'embryogenèse \cite{Relaix2013ve} ainsi que
+dans des cultures de cellules satellites, les progéniteurs du muscle adultes
+activés lors de la régénération musculaire \cite{Le-Grand2012qf}. L'expression
+de Mrf$4$ n'est pas détectée chez les embryons \sixdko à E$10$
+\cite{Grifone2007p728}. Myog est aussi sous le contrôle direct des protéines
+Six \cite{Spitz1998p3285}. Enfin, les protéines Six régulent des gènes
+spécifiques des fibres glycolytiques de type rapide. Par exemple, la mutation
+du site MEF$3$ au sein du promoteur de \textit{Aldoa}, gène codant pour une
+enzyme impliquée dans la glycolyse, entraîne l'abolition de l'expression d'un
+transgène rapporteur dans des myofibres adultes \cite{Spitz1997p455}.
+
+Ainsi, Six$1$ et Six$4$ contrôlent directement Pax$3$ et tous les MRF, mais ce
+contrôle est spatialement (axe dorso-ventral et axe antéro-postérieur)
+hétérogène dans l'embryon.
+
+
+
+
+%Par analyse
+%bioinformatique, j'ai trouvé deux MEF3 sites dans le noyau activateur et un
+%MEF3 site du RRC.  Mutation de ces trois MEF3 des sites aboli par plus de 95%
+%l'expression d'un journaliste du transgène MyoD dans une souris transgénique
+%essai transitoire à E11.5 dans toutes les lignées myogéniques (tronc, membres,
+%tête) (Relaix
+%2012). 
+
+
+%Mutations introduites dans le site MEF3 présente dans le
+%promoteur myogénine abolies expression d'une ß-galactosidase transgène
+%rapporteur myogénine cours de l'embryogenèse (Spitz,1998), et les mutations
+%introduites dans le site MEF3 présente dans le promoteur AldolaseA abolis
+%l'expression d'un transgène rapporteur dans myofibres adultes (Spitz, 1997).
+%Par conséquent, six protéines apparaissent comme de bons candidats pour MFR de
+%modulation de la régulation transcriptionnelle.  Néanmoins, la coopération des
+%centres de tri et TFS associés est loin d'être entièrement comprise, et la
+%coopération des centres de tri avec non pas un, mais une variété de facteurs de
+%transcription, par exemple à différents moments au cours de l'embryogenèse,
+%afficher une croissance musculaire natale et pendant la régénération du muscle
+%adulte est susceptible de se produire sur différents activateurs de gènes
+
+
+
+% subsection les_hom_oprot_ines_six (end)
+cibles.
+
+
+
+\FloatBarrier
+% section introduction_la_myogen_se (end)
 
 \section{Obtention d'une PWM pour MEF3} 
 \label{sec:obtention_d_une_pwm_pour_mef3}

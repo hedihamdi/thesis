@@ -1,4 +1,4 @@
-\begin{thebibliography}{189}
+\begin{thebibliography}{206}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[Aerts, 2012]{Aerts2012p3868}
@@ -17,6 +17,12 @@ Alon, U. (2007{\natexlab{a}}).
 Alon, U. (2007{\natexlab{b}}).
 \newblock Network motifs: theory and experimental approaches.
 \newblock \emph{Nat Rev Genet}, 8(6):450--461.
+
+\bibitem[Asakura et~al., 1995]{Asakura1995ly}
+Asakura, A., Lyons, G.~E., and Tapscott, S.~J. (1995).
+\newblock The regulation of MyoD gene expression: conserved elements mediate
+  expression in embryonic axial muscle.
+\newblock \emph{Dev Biol}, 171(2):386--98.
 
 \bibitem[Asp et~al., 2011]{Asp2011p2370}
 Asp, P., Blum, R., Vethantham, V., Parisi, F., Micsinai, M., Cheng, J., Bowman,
@@ -127,6 +133,12 @@ Blackwell, T.~K. and Weintraub, H. (1990).
   E2A protein complexes revealed by binding site selection.
 \newblock \emph{Science}, 250(4984):1104--10.
 
+\bibitem[Blais et~al., 2005]{Blais2005p809}
+Blais, A., Tsikitis, M., Acosta-Alvear, D., Sharan, R., Kluger, Y., and
+  Dynlacht, B. (2005).
+\newblock An initial blueprint for myogenic differentiation.
+\newblock \emph{Genes {\&} development}, 19(5):553.
+
 \bibitem[Blanchette et~al., 2006]{Blanchette2006fu}
 Blanchette, M., Bataille, A.~R., Chen, X., Poitras, C., Lagani{\`e}re, J.,
   Lef{\`e}bvre, C., Deblois, G., Gigu{\`e}re, V., Ferretti, V., Bergeron, D.,
@@ -163,6 +175,12 @@ Brazma, A., Parkinson, H., Schlitt, T., and Shojatalab, M. (2001).
 Buchler, N.~E., Gerland, U., and Hwa, T. (2003).
 \newblock On schemes of combinatorial transcription logic.
 \newblock \emph{Proc Natl Acad Sci U S A}, 100(9):5136--41.
+
+\bibitem[Buckingham and Relaix, 2007]{Buckingham2007p776}
+Buckingham, M. and Relaix, F. (2007).
+\newblock The role of Pax genes in the development of tissues and organs: Pax3
+  and Pax7 regulate muscle progenitor cell functions.
+\newblock \emph{Annual review of cell and developmental biology}, 23(1):645.
 
 \bibitem[Bulyk et~al., 2002]{Bulyk2002uq}
 Bulyk, M.~L., Johnson, P. L.~F., and Church, G.~M. (2002).
@@ -352,6 +370,14 @@ Giocomo, L.~M., Moser, M.-B., and Moser, E.~I. (2011).
 \newblock Computational models of grid cells.
 \newblock \emph{Neuron}, 71(4):589--603.
 
+\bibitem[Giordani et~al., 2007]{Giordani2007p473}
+Giordani, J., Bajard, L., Demignon, J., Daubas, P., Buckingham, M., and Maire,
+  P. (2007).
+\newblock Six proteins regulate the activation of Myf5 expression in embryonic
+  mouse limbs.
+\newblock \emph{Proceedings of the National Academy of Sciences},
+  104(27):11310.
+
 \bibitem[Grad et~al., 2004]{Grad2004vn}
 Grad, Y.~H., Roth, F.~P., Halfon, M.~S., and Church, G.~M. (2004).
 \newblock Prediction of similarly acting cis-regulatory modules by subsequence
@@ -375,6 +401,19 @@ Grendar~Jr, M. and Grendar, M. (2001).
 \newblock MiniMax Entropy and Maximum Likelihood: complementarity of tasks,
   identity of solutions.
 \newblock In \emph{AIP Conference Proceedings}, volume 568, page~49.
+
+\bibitem[Grifone et~al., 2007]{Grifone2007p728}
+Grifone, R., Demignon, J., Giordani, J., Niro, C., and Souil, E. (2007).
+\newblock Eya1 and Eya2 proteins are required for hypaxial somitic myogenesis
+  in the mouse embryo.
+\newblock \emph{Developmental Biology}, 302(2):602--616.
+
+\bibitem[Grifone et~al., 2005]{Grifone2005vn}
+Grifone, R., Demignon, J., Houbron, C., Souil, E., Niro, C., Seller, M.~J.,
+  Hamard, G., and Maire, P. (2005).
+\newblock Six1 and Six4 homeoproteins are required for Pax3 and Mrf expression
+  during myogenesis in the mouse embryo.
+\newblock \emph{Development}, 132(9):2235--49.
 
 \bibitem[Gurdon and Melton, 2008]{Gurdon2008zr}
 Gurdon, J.~B. and Melton, D.~A. (2008).
@@ -513,6 +552,13 @@ Kantorovitz, M.~R., Robinson, G.~E., and Sinha, S. (2007).
   sequences.
 \newblock \emph{Bioinformatics}, 23(13):i249--55.
 
+\bibitem[Kassar-Duchossoy et~al., 2004]{KassarDuchossoy2004p823}
+Kassar-Duchossoy, L., Gayraud-Morel, B., Gom{\`e}s, D., Rocancourt, D.,
+  Buckingham, M., Shinin, V., and Tajbakhsh, S. (2004).
+\newblock Mrf4 determines skeletal muscle identity in Myf5:Myod double-mutant
+  mice.
+\newblock \emph{Nature}, 431(7007):466--71.
+
 \bibitem[Kaufmann, 1993]{kaufmann1993origins}
 Kaufmann, S. (1993).
 \newblock The origins of order.
@@ -556,6 +602,13 @@ Kondo, T., Plaza, S., Zanet, J., Benrabah, E., Valenti, P., Hashimoto, Y.,
 Krauth, W. (2006).
 \newblock \emph{Statistical mechanics: algorithms and computations}, volume~13.
 \newblock Oxford University Press.
+
+\bibitem[Kucharczuk et~al., 1999]{Kucharczuk1999zr}
+Kucharczuk, K.~L., Love, C.~M., Dougherty, N.~M., and Goldhamer, D.~J. (1999).
+\newblock Fine-scale transgenic mapping of the MyoD core enhancer: MyoD is
+  regulated by distinct but overlapping mechanisms in myotomal and non-myotomal
+  muscle lineages.
+\newblock \emph{Development}, 126(9):1957--65.
 
 \bibitem[Kulessa et~al., 1995]{Kulessa1995ys}
 Kulessa, H., Frampton, J., and Graf, T. (1995).
@@ -690,6 +743,13 @@ Milo, R., Shen-Orr, S., Itzkovitz, S., Kashtan, N., Chklovskii, D., and Alon,
 \newblock Network motifs: simple building blocks of complex networks.
 \newblock \emph{Science}, 298(5594):824--7.
 
+\bibitem[Molkentin and Olson, 1996]{Molkentin1996p646}
+Molkentin, J. and Olson, E. (1996).
+\newblock Combinatorial control of muscle development by basic helix-loop-helix
+  and MADS-box transcription factors.
+\newblock \emph{Proceedings of the National Academy of Sciences of the United
+  States of America}, 93(18):9366.
+
 \bibitem[Moses et~al., 2004]{Moses2004p656}
 Moses, A., Chiang, D., Pollard, D., Iyer, V., and Eisen, M. (2004).
 \newblock MONKEY: identifying conserved transcription-factor binding sites in
@@ -715,6 +775,20 @@ Nagaraj, V.~H., O'flanagan, R.~A., and Sengupta, A.~M. (2008).
 \newblock Better estimation of protein-DNA interaction parameters improve
   prediction of functional sites.
 \newblock \emph{BMC Biotechnol}, 8(1):94.
+
+\bibitem[Naidu et~al., 1995]{Naidu1995uq}
+Naidu, P.~S., Ludolph, D.~C., To, R.~Q., Hinterberger, T.~J., and Konieczny,
+  S.~F. (1995).
+\newblock Myogenin and MEF2 function synergistically to activate the MRF4
+  promoter during myogenesis.
+\newblock \emph{Mol Cell Biol}, 15(5):2707--18.
+
+\bibitem[Niro et~al., 2010]{Niro2010p3444}
+Niro, C., Demignon, J., Vincent, S., Liu, Y., Giordani, J., Sgarioto, N.,
+  Favier, M., Guillet-Deniau, I., Blais, A., and Maire, P. (2010).
+\newblock Six1 and Six4 gene expression is necessary to activate the fast-type
+  muscle gene program in the mouse primary myotome.
+\newblock \emph{Developmental Biology}, 338(2):168--182.
 
 \bibitem[Nurse and Hayles, 2011]{Nurse2011p2308}
 Nurse, P. and Hayles, J. (2011).
@@ -759,6 +833,12 @@ Park, P.~J. (2009).
 \newblock ChIP-seq: advantages and challenges of a maturing technology.
 \newblock \emph{Nat Rev Genet}, 10(10):669--80.
 
+\bibitem[Parker et~al., 2003]{Parker2003p761}
+Parker, M., Seale, P., and Rudnicki, M. (2003).
+\newblock Looking back to the embryo: defining transcriptional networks in
+  adult myogenesis.
+\newblock \emph{Nature Reviews Genetics}, 4(7):497--507.
+
 \bibitem[Pennacchio et~al., 2006]{Pennacchio2006vn}
 Pennacchio, L.~A., Ahituv, N., Moses, A.~M., Prabhakar, S., Nobrega, M.~A.,
   Shoukry, M., Minovitsky, S., Dubchak, I., Holt, A., Lewis, K.~D.,
@@ -797,6 +877,21 @@ Recillas-Targa, F., Pikaart, M.~J., Burgess-Beusse, B., Bell, A.~C., Litt,
 \newblock Position-effect protection and enhancer blocking by the chicken
   beta-globin insulator are separable activities.
 \newblock \emph{Proc Natl Acad Sci U S A}, 99(10):6883--8.
+
+\bibitem[Relaix et~al., 2013]{Relaix2013ve}
+Relaix, F., Demignon, J., Laclef, C., Pujol, J., Santolini, M., Niro, C.,
+  Lagha, M., Rocancourt, D., Buckingham, M., and Maire, P. (2013).
+\newblock Six homeoproteins directly activate Myod expression in the gene
+  regulatory networks that control early myogenesis.
+\newblock \emph{PLoS Genet}, 9(4):e1003425.
+
+\bibitem[Richard et~al., 2011]{Richard2011ys}
+Richard, A.-F., Demignon, J., Sakakibara, I., Pujol, J., Favier, M., Strochlic,
+  L., Le~Grand, F., Sgarioto, N., Guernec, A., Schmitt, A., Cagnard, N., Huang,
+  R., Legay, C., Guillet-Deniau, I., and Maire, P. (2011).
+\newblock Genesis of muscle fiber-type diversity during mouse embryogenesis
+  relies on Six1 and Six4 gene expression.
+\newblock \emph{Dev Biol}, 359(2):303--20.
 
 \bibitem[Roh et~al., 2005]{Roh2005mb}
 Roh, T.-Y., Cuddapah, S., and Zhao, K. (2005).
@@ -937,6 +1032,20 @@ Smith, A.~D., Sumazin, P., and Zhang, M.~Q. (2005).
   vertebrate promoters.
 \newblock \emph{Proc Natl Acad Sci U S A}, 102(5):1560--5.
 
+\bibitem[Spitz et~al., 1998]{Spitz1998p3285}
+Spitz, F., Demignon, J., Porteu, A., Kahn, A., Concordet, J., Daegelen, D., and
+  Maire, P. (1998).
+\newblock Expression of myogenin during embryogenesis is controlled by Six/sine
+  oculis homeoproteins through a conserved MEF3 binding site.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 95(24):14220.
+
+\bibitem[Spitz et~al., 1997]{Spitz1997p455}
+Spitz, F., Salminen, M., Demignon, J., Kahn, A., Daegelen, D., and Maire, P.
+  (1997).
+\newblock A combination of MEF3 and NFI proteins activates transcription in a
+  subset of fast-twitch muscles.
+\newblock \emph{Molecular and cellular biology}, 17(2):656.
+
 \bibitem[Stormo and Fields, 1998]{Stormo1998p471}
 Stormo, G. and Fields, D. (1998).
 \newblock Specificity, free energy and information content in protein-DNA
@@ -965,6 +1074,12 @@ Taylor, J., Tyekucheva, S., King, D.~C., Hardison, R.~C., Miller, W., and
 \newblock ESPERR: learning strong and weak signals in genomic sequence
   alignments to identify functional elements.
 \newblock \emph{Genome Res}, 16(12):1596--604.
+
+\bibitem[Thayer et~al., 1989]{Thayer1989kx}
+Thayer, M.~J., Tapscott, S.~J., Davis, R.~L., Wright, W.~E., Lassar, A.~B., and
+  Weintraub, H. (1989).
+\newblock Positive autoregulation of the myogenic determination gene MyoD1.
+\newblock \emph{Cell}, 58(2):241--8.
 
 \bibitem[Thurman et~al., 2012]{Thurman2012ys}
 Thurman, R.~E., et~al. (2012).

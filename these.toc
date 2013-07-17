@@ -110,7 +110,11 @@
 \contentsline {section}{\numberline {4.2}Article}{111}{section.5.2}
 \contentsline {section}{\numberline {4.3}Conclusion et perspectives}{112}{section.5.3}
 \contentsline {chapter}{\numberline {Chapitre\ 5~-}\'Etude de la diff\'erenciation musculaire chez la souris}{113}{division.6}
-\contentsline {section}{\numberline {5.1}Obtention d'une PWM pour MEF3}{115}{section.6.1}
-\contentsline {section}{\numberline {5.2}Article}{118}{section.6.2}
-\contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomiques}{121}{division.7}
-\contentsline {chapter}{Bibliographie}{125}{equation.7.0.1}
+\contentsline {section}{\numberline {5.1}Introduction \`a la myogen\`ese squelettique}{115}{section.6.1}
+\contentsline {subsection}{\numberline {5.1.1}Les diff\'erentes \'etapes de la myogen\`ese}{115}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Les Facteurs de R\'egulation Myog\'enique et leurs cofacteurs}{115}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Les hom\'eoprot\'eines Six}{117}{subsection.6.1.3}
+\contentsline {section}{\numberline {5.2}Obtention d'une PWM pour MEF3}{119}{section.6.2}
+\contentsline {section}{\numberline {5.3}Article}{121}{section.6.3}
+\contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomiques}{123}{division.7}
+\contentsline {chapter}{Bibliographie}{127}{equation.7.0.1}
