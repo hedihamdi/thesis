@@ -625,7 +625,7 @@ de motifs \denovo utilisant la phylogénie basé sur l'algorithme de
 sont réalisés, montrant sa capacité à prédire des CRMs tissu-spécifiques ou
 encore à classer différents CRMs selon leur motif d'expression.
 
-\includepdf[pages=-]{articles/imogene-genomebiol.pdf}
+%\includepdf[pages=-]{articles/imogene-genomebiol.pdf}
 
 
 % section article (end)
@@ -634,16 +634,33 @@ encore à classer différents CRMs selon leur motif d'expression.
 \label{sec:calcul_de_la_moyenne_de_la_post_rieure_par_une_m_thode_mcmc}
 
 Nous avons voulu savoir si l'approximation réalisée par Imogene lors du calcul
-du maximum de l'estimateur de la postérieure modifiée donnait un résultat
-effectivement proche du calcul de la moyenne de l'estimateur de la postérieure
-non modifiée $\mathcal{P}(w_i|\{\mathcal{A}\})$, où $w_i$ est le vecteur de
-poids de la PWM à la position $i$ et $\{\mathcal{A}\}$ est l'ensemble des
-alignements de nucléotides observés à cette position dans les sites de
-fixation. L'estimation directe de la moyenne de cette distribution est
-difficile, puisque nous n'avons pas de moyen simple de l'échantillonner. Afin
-de contourner ce problème, nous avons eu recours à une méthode de Monte-Carlo
-par chaînes de Markov ou MCMC basée sur l'algorithme de
-Metropolis-Hastings~\cite{krauth2006statistical}. 
+du maximum de l'estimateur de la postérieure modifiée (obtenue avec un prior de
+Dirichlet de paramètres $\alpha_b+1$) donnait un résultat effectivement proche
+du calcul de la moyenne de l'estimateur de la postérieure non modifiée (avec un
+prior de Dirichlet de paramètres $\alpha_b$) :
+
+\begin{equation}
+    \underset{w_i}{\text{argmax}}\, \mathcal{L}(\{\mathcal{A}\}|w_i)\text{Dir}(w_i,\alpha_b+1) \simeq \int w_i\mathcal{L}(\{\mathcal{A}\}|w_i)\text{Dir}(w_i,\alpha_b) \text{d}w_i
+\end{equation}
+
+où $w_i$ est le vecteur de poids de la PWM à la position $i$, $\{\mathcal{A}\}$
+est l'ensemble des alignements de nucléotides observés à cette position dans
+les sites de fixation, $\mathcal{L}(\{\mathcal{A}\}|w_i)$ dénote la
+vraisemblance de l'alignement connaissant le vecteur de poids $w_i$ et
+$\text{Dir}(w_i,\alpha_b)$ est le prior de Dirichlet de paramètres $\alpha_b$.
+Pour des distances phylogénétiques nulles ou infinies, cette approximation est
+valide, et pour des distances intermédiaires, elle semble fonctionner dans le
+cas simplifié de l'arbre en étoile de la figure S$5$ de l'article. Qu'en
+est-t-il dans le cas réèl avec un arbre à la topologie plus complexe?
+L'estimation directe de la moyenne de cette distribution est difficile, puisque
+nous n'avons pas de moyen simple de l'échantillonner. Afin de contourner ce
+problème, nous avons eu recours à une méthode de Monte-Carlo par chaînes de
+Markov ou MCMC basée sur l'algorithme de
+Metropolis-Hastings~\cite{krauth2006statistical}. Nous présentons la
+comparaison de la moyenne de la postérieure obtenue par l'approche MCMC et du
+maximum de la postérieure modifiée par descente de gradient sur un cas réel
+simple en utilisant l'arbre des vertébrés (figure $2$ de l'article) et le
+modèle d'évolution \textit{Felsenstein}.
 
 
 \subsection{Principe de l'algorithme de Metropolis-Hastings}

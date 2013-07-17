@@ -33,7 +33,7 @@ yf<-FP
 plot(xf,yf,
      xlab="Faux Negatifs",
      ylab="Faux Positifs",
-     main="Pareto Plot",
+     main="Front de Pareto",
      pch=pchc,
      xlim=c(0,x0),
      ylim=c(0,y0),
@@ -49,6 +49,7 @@ auc=round(auc*100)/100
 #text(FN,FP,pos=3,labels=auc,cex=sizepts,offset=0.15)
 abline(y0,-y0/x0,lty="dashed")
 
+abline(14,-y0/x0,lty=3,col='brown',lwd=4)
 
 #skip=1 to begin reading after line 1
 ig=read.table("TTATGGAA/roc-enhancers-info.dat")
@@ -115,14 +116,37 @@ abline(y0,-y0/x0,lty="dashed")
 cexc2=2
 cexnc2=2
 
+#name<-ig[,1]
+#yf<-jitter(ig[,7][name=="combi"],factor=jitfact)
+#xf<-jitter(ig[,8][name=="combi"],factor=jitfact)
+#points(xf,yf,col="purple",cex=cexc2,pch=pchnc)
+
+#skip=1 to begin reading after line 1
+ig=read.table("roc-enhancers-info-genmot-120319.dat",skip=1)
+#legend(2/3*x0,2/3*y0,c("Felsen","Halpern"),fill=c("blue","red"))
+
 name<-ig[,1]
-yf<-jitter(ig[,7][name=="combi"],factor=jitfact)
-xf<-jitter(ig[,8][name=="combi"],factor=jitfact)
-points(xf,yf,col="purple",cex=cexc2,pch=pchnc)
+tmot<-ig[,2]
+rank<-ig[,4]
+inds <- which(name == "felsen" & tmot == 10 & rank > 2 & rank < 6) 
+FP<-jitter(ig[,7][inds],factor=jitfact)
+FN<-jitter(ig[,8][inds],factor=jitfact)
+xf<-FN
+yf<-FP
+points(xf,yf,pch=pchc,xlim=c(0,x0),ylim=c(0,y0),col="grey")
+name<-"c"
+auc=round(auc*100)/100
+#text(FN,FP,pos=1,labels=paste(name,":",tmot,",t",tdet,",",nmot,"x",moti,sep=""),cex=sizepts,offset=0.15)
+#text(FN,FP,pos=3,labels=auc,cex=sizepts,offset=0.15)
+
 
 legend("topright",
-   leg = c("OvoQ6","svbF7","blue motif","combi svbF7+blue","yellow motif"),
+   #leg = c("OvoQ6","svbF7","blue motif","combi svbF7+blue","yellow motif"),
+   #leg = c("OvoQ6","svbF7","blue motif","yellow motif"),
+   leg = c("OvoQ6","svbF7","motif bleu","motif jaune","autres motifs"),
    cex = 1.5,
    pch =pchc,
    #pt.cex = c(cexc,cexnc,cexc,cexnc,cexc,cexnc,cexc2,cexnc2,cexc2,cexnc2),
-   col = c("green3","red","blue","purple","yellow"))
+   #col = c("green3","red","blue","purple","yellow"))
+   #col = c("green3","red","blue","yellow"))
+   col = c("green3","red","blue","yellow","grey"))

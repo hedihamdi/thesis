@@ -1,0 +1,122 @@
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt,a4paper]{article}
+%\usepackage[left=0.cm , right=0.cm, top=0.2cm, bottom=0.cm,paperwidth=29cm, paperheight=29cm]{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\usepackage[left=0.cm , right=0.cm, top=0.2cm, bottom=0.cm,paperwidth=17cm, paperheight=29cm]{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+
+%\geometry{a4paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}%,adjustbox}
+\usepackage{amssymb}
+
+\usepackage{array,multirow}
+
+
+\newcommand{\raiseintabgraphics}[1]{\raisebox{-.5\height}{\includegraphics[scale=0.5]{#1}}}
+
+
+%%%
+% One bp spacing is 1.9mm
+\newlength{\bp}
+\setlength{\bp}{3.8mm}
+%%%
+
+\begin{document}
+
+
+
+
+
+%\begin{adjustbox}{width=\columnwidth}{
+
+\begin{tabular}{|>{\centering}p{4.7cm}l|>{\centering}p{4cm}l|}
+
+\hline
+
+\multicolumn{2}{|c|}{\bf NEURAL} &
+\multicolumn{2}{|c|}{\bf LIMB} \\
+
+\hline
+\hline
+
+\raiseintabgraphics{../neural/genh10-all/Motif1.pdf} & Motif 1  &
+\raiseintabgraphics{../limb/genh10-all/Motif1.pdf} & Motif 1  \\
+
+\hspace{0\bp}\raiseintabgraphics {../neural/genh10-all/mot2db/Mot_1/Imogene/1-V$CHX10_01-rc.pdf} & \verb|V$CHX10_01|  &
+\hspace{0.5\bp}\raiseintabgraphics {../limb/genh10-all/mot2db/Mot_1/Imogene/1-V$TCF3_01.pdf} & \verb|V$TCF3_01|  \\
+
+\hline
+\raiseintabgraphics{../neural/genh10-all/Motif2.pdf} & Motif 2  &
+\raiseintabgraphics{../limb/genh10-all/Motif2.pdf} & Motif 2  \\
+
+\hspace{-1\bp}\raiseintabgraphics {../neural/genh10-all/mot2db/Mot_2/Imogene/1-V$LHX3_01.pdf} & \verb|V$LHX3_01|  &
+\hspace{1\bp}\raiseintabgraphics {../limb/genh10-all/mot2db/Mot_2/Imogene/1-V$LHX3_01.pdf} & \verb|V$LHX3_01|  \\
+
+\hline
+\raiseintabgraphics{../neural/genh10-all/Motif3.pdf} & Motif 3  &
+\raiseintabgraphics{../limb/genh10-all/Motif3.pdf} & Motif 3   \\
+
+\hspace{-1\bp}\raiseintabgraphics {../neural/genh10-all/mot2db/Mot_3/Imogene/1-V$OCT2_01-rc.pdf} & \verb|V$OCT2_01|  &
+\hspace{0\bp}\raiseintabgraphics {../limb/genh10-all/mot2db/Mot_3/Imogene/1-V$MYOGENIN_Q6-rc.pdf} & \verb|V$MYOGENIN_Q6|    \\
+
+\hline
+\raiseintabgraphics{../neural/genh10-all/Motif4.pdf} & Motif 4  &
+\raiseintabgraphics{../limb/genh10-all/Motif4.pdf} & Motif 4  \\
+
+\hspace{0\bp}\raiseintabgraphics {../neural/genh10-all/mot2db/Mot_4/Imogene/1-V$HEB_Q6-rc.pdf} & \verb|V$HEB_Q6|  &
+\hspace{1\bp}\raiseintabgraphics {../limb/genh10-all/mot2db/Mot_4/Imogene/1-V$CBF1_QX.pdf} & \verb|V$CBF1_QX|   \\
+
+\hline
+\raiseintabgraphics{../neural/genh10-all/Motif5.pdf} & Motif 5  &
+\raiseintabgraphics{../limb/genh10-all/Motif5.pdf} & Motif 5    \\
+
+\hspace{2\bp}\raiseintabgraphics {../neural/genh10-all/mot2db/Mot_5/Imogene/1-V$NEUROD_02-rc.pdf} & \verb|V$NEUROD_02|  &
+\hspace{2\bp}\raiseintabgraphics {../limb/genh10-all/mot2db/Mot_5/Imogene/1-V$NEUROD_02.pdf} & \verb|V$NEUROD_02|  \\
+
+\hline
+\raiseintabgraphics{../neural/genh10-all/Motif6.pdf} & Motif 6  &
+\raiseintabgraphics{../limb/genh10-all/Motif6.pdf} & Motif 6    \\
+
+\hspace{1.5\bp}\raiseintabgraphics {../neural/genh10-all/mot2db/Mot_6/Imogene/1-V$RHOX11_01-rc.pdf} & \verb|V$RHOX11_01|  &
+\hspace{1\bp}\raiseintabgraphics {../limb/genh10-all/mot2db/Mot_6/Imogene/1-V$POU1F1_Q6.pdf} & \verb|V$POU1F1_Q6|   \\
+
+\hline
+\raiseintabgraphics{../neural/genh10-all/Motif7.pdf} & Motif 7  &
+\raiseintabgraphics{../limb/genh10-all/Motif7.pdf} & Motif 7   \\
+
+\hspace{-2\bp}\raiseintabgraphics {../neural/genh10-all/mot2db/Mot_7/Imogene/1-V$CBF1_QX.pdf} & \verb|V$CBF1_QX|  &
+\hspace{1\bp}\raiseintabgraphics {../limb/genh10-all/mot2db/Mot_7/Imogene/1-V$TATA_C.pdf} & \verb|V$TATA_C|   \\
+
+\hline
+\raiseintabgraphics{../neural/genh10-all/Motif8.pdf} & Motif 8  &
+\raiseintabgraphics{../limb/genh10-all/Motif8.pdf} & Motif 8   \\
+
+\hspace{-1.5\bp}\raiseintabgraphics {../neural/genh10-all/mot2db/Mot_8/Imogene/1-V$NKX61_01-rc.pdf} & \verb|V$NKX61_01|  &
+\hspace{-2\bp}\raiseintabgraphics {../limb/genh10-all/mot2db/Mot_8/Imogene/1-V$LEF1_Q2-rc.pdf} & \verb|V$LEF1_Q2|   \\
+
+\hline
+\raiseintabgraphics{../neural/genh10-all/Motif9.pdf} & Motif 9  &
+\raiseintabgraphics{../limb/genh10-all/Motif9.pdf} & Motif 9    \\
+
+\hspace{-2\bp}\raiseintabgraphics {../neural/genh10-all/mot2db/Mot_9/Imogene/1-V$OCT1_B-rc.pdf} & \verb|V$OCT1_B|  &
+\hspace{-.5\bp}\raiseintabgraphics {../limb/genh10-all/mot2db/Mot_9/Imogene/1-V$ETS2_Q6.pdf} & \verb|V$ETS2_Q6|    \\
+
+\hline
+\raiseintabgraphics{../neural/genh10-all/Motif10.pdf} & Motif 10  &
+\raiseintabgraphics{../limb/genh10-all/Motif10.pdf} & Motif 10  \\
+
+\hspace{-1.5\bp}\raiseintabgraphics {../neural/genh10-all/mot2db/Mot_10/Imogene/1-V$PBX1_04.pdf} & \verb|V$PBX1_04|  &
+\hspace{-3.5\bp}\raiseintabgraphics {../limb/genh10-all/mot2db/Mot_10/Imogene/1-V$SMAD_Q6_01.pdf} & \verb|V$SMAD_Q6_01|    \\
+
+\hline
+
+
+\end{tabular}
+
+%\end{adjustbox}
+
+%\bibliographystyle{unsrt}
+%\bibliography{mots}
+
+\end{document}  

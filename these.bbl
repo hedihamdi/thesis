@@ -1,4 +1,4 @@
-\begin{thebibliography}{188}
+\begin{thebibliography}{189}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[Aerts, 2012]{Aerts2012p3868}
@@ -287,6 +287,12 @@ Donaldson, I.~J., Chapman, M., Kinston, S., Landry, J.~R., Knezevic, K., Piltz,
 \newblock Genome-wide identification of cis-regulatory sequences controlling
   blood and endothelial development.
 \newblock \emph{Hum Mol Genet}, 14(5):595--601.
+
+\bibitem[Elemento and Tavazoie, 2005]{Elemento2005fk}
+Elemento, O. and Tavazoie, S. (2005).
+\newblock Fast and systematic genome-wide discovery of conserved regulatory
+  elements using a non-alignment based approach.
+\newblock \emph{Genome Biol}, 6(2):R18.
 
 \bibitem[{ENCODE Project Consortium} et~al.,
   2012]{ENCODE-Project-Consortium2012ly}

@@ -1,19 +1,19 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Quelques approches existantes pour la recherche de motifs et de modules de r\'egulation}{\reset@font\mtcSfont 116}{section.4.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.1}MEME : une approche \textit {de novo}\xspace par Esp\'erance-Maximisation}{\reset@font\mtcSSfont 117}{subsection.4.1.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Vraisemblance d'une s\'equence}{\reset@font\mtcSSSfont 118}{subsubsection.4.1.1.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Apprentissage du mod\`ele}{\reset@font\mtcSSSfont 118}{subsubsection.4.1.1.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.2}STUBB : une m\'ethode utilisant les corr\'elations entre sites de fixation et la phylog\'enie}{\reset@font\mtcSSfont 120}{subsection.4.1.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Description du mod\`ele HMM}{\reset@font\mtcSSSfont 120}{subsubsection.4.1.2.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Ajout des corr\'elations entre motifs}{\reset@font\mtcSSSfont 121}{subsubsection.4.1.2.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Incorporation de l'information phylog\'en\'etique}{\reset@font\mtcSSSfont 121}{subsubsection.4.1.2.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.3}MONKEY : vers des mod\`eles phylog\'en\'etiques plus complexes}{\reset@font\mtcSSfont 122}{subsection.4.1.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.4}Approches sans motifs ou \textit {motif-blind}}{\reset@font\mtcSSfont 125}{subsection.4.1.4}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Mod\`eles bas\'es sur des cha\IeC {\^\i }nes de Markov}{\reset@font\mtcSSSfont 125}{subsubsection.4.1.4.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Mod\`eles bas\'es sur des enrichissements en $k$-mers}{\reset@font\mtcSSSfont 126}{subsubsection.4.1.4.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.5}Autres m\'ethodes utilisant des collections d'oligonucl\'eotides}{\reset@font\mtcSSfont 127}{subsection.4.1.5}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Article}{\reset@font\mtcSfont 128}{section.4.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Calcul de la moyenne de la post\'erieure par une m\'ethode MCMC}{\reset@font\mtcSfont 157}{section.4.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.1}Principe de l'algorithme de Metropolis-Hastings}{\reset@font\mtcSSfont 157}{subsection.4.3.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.2}Application au calcul de la post\'erieure}{\reset@font\mtcSSfont 159}{subsection.4.3.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.3}Illustration sur un exemple}{\reset@font\mtcSSfont 160}{subsection.4.3.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.4}Conclusion et perspectives}{\reset@font\mtcSfont 166}{section.4.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Quelques approches existantes pour la recherche de motifs et de modules de r\'egulation}{\reset@font\mtcSfont 84}{section.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.1}MEME : une approche \textit {de novo}\xspace par Esp\'erance-Maximisation}{\reset@font\mtcSSfont 85}{subsection.4.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Vraisemblance d'une s\'equence}{\reset@font\mtcSSSfont 86}{subsubsection.4.1.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Apprentissage du mod\`ele}{\reset@font\mtcSSSfont 86}{subsubsection.4.1.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.2}STUBB : une m\'ethode utilisant les corr\'elations entre sites de fixation et la phylog\'enie}{\reset@font\mtcSSfont 88}{subsection.4.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Description du mod\`ele HMM}{\reset@font\mtcSSSfont 88}{subsubsection.4.1.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Ajout des corr\'elations entre motifs}{\reset@font\mtcSSSfont 89}{subsubsection.4.1.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Incorporation de l'information phylog\'en\'etique}{\reset@font\mtcSSSfont 89}{subsubsection.4.1.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.3}MONKEY : vers des mod\`eles phylog\'en\'etiques plus complexes}{\reset@font\mtcSSfont 90}{subsection.4.1.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.4}Approches sans motifs ou \textit {motif-blind}}{\reset@font\mtcSSfont 93}{subsection.4.1.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Mod\`eles bas\'es sur des cha\IeC {\^\i }nes de Markov}{\reset@font\mtcSSSfont 93}{subsubsection.4.1.4.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Mod\`eles bas\'es sur des enrichissements en $k$-mers}{\reset@font\mtcSSSfont 94}{subsubsection.4.1.4.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.1.5}Autres m\'ethodes utilisant des collections d'oligonucl\'eotides}{\reset@font\mtcSSfont 95}{subsection.4.1.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Article}{\reset@font\mtcSfont 96}{section.4.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Calcul de la moyenne de la post\'erieure par une m\'ethode MCMC}{\reset@font\mtcSfont 96}{section.4.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.1}Principe de l'algorithme de Metropolis-Hastings}{\reset@font\mtcSSfont 97}{subsection.4.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.2}Application au calcul de la post\'erieure}{\reset@font\mtcSSfont 98}{subsection.4.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.3}Illustration sur un exemple}{\reset@font\mtcSSfont 100}{subsection.4.3.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.4}Conclusion et perspectives}{\reset@font\mtcSfont 106}{section.4.4}}

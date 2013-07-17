@@ -1,24 +1,214 @@
 \section*{Introduction du chapitre \thechapter}
 
+Cette dernière partie est consacrée à l'étude de la différenciation musculaire.
+Ce travail a été effectué en collaboration avec l'équipe de Pascal Maire
+à l'Institut Cochin, qui m'a accueilli et m'a permis de réaliser une partie des
+expériences présentées, avec l'aide de Iori Sakakibara. Nous nous intéressons
+ici particulièrement aux homéoprotéines Six$1$ et Six$4$ (référées dans la
+suite par \sixd) qui sont des \tfs impliqués dans la régulation des stades
+successifs de la myogenèse. Ils activent en effet les TFs nécessaires
+à l'engagement de cellules pluripotentes dans la voie myogénique et à leur
+différentiation : Pax3 ainsi que les Facteurs de Régulation Myogénique Myf5,
+Mrf4, Myod et Myog. Cette régulation passe notamment par la fixation des
+protéines Six sur un site \mef d'environ $10$bp sur les séquences régulatrices
+du gène dont l'expression sera augmentée. 
+
+Nous nous sommes d'abord intéressé aux cibles transcriptionnelles de \sixd
+à l'échelle du génome, ainsi qu'à leurs corégulateurs. Pour cela, nous avons
+d'abord réalisé un modèle PWM des sites \mef, que nous avons utilisé pour la
+prédiction de sites. Nous avons par ailleurs regroupé sur UCSC de nombreuses
+données relatives à la différenciation musculaire : \chipseq de TFs et des
+marques épigénétiques des histones, données d'expression de type RNAseq, sites
+de fixation conservés que nous avons obtenus par analyse bioinformatique, etc.
+Cet ensemble de données permet à lui seul d'envisager le contexte de régulation
+de certains gènes d'intérêt, et nous présentons plusieurs validations de
+prédictions obtenues par ces analyses bioinformatiques.
+
+Par ailleurs, nous nous sommes intéressé à l'action concertée ou
+\textit{synergie} entre \sixd et MyoD au cours de la différenciation
+musculaire. Nous avons trouvé un certain nombre de CRMs fixés par MyoD et
+possédant un site \mef conservé chez les mammifères, et dont le gène le plus
+proche n'est activé qu'en présence de MyoD et de \sixd. Parmi les gènes en
+question figurent \myog, TF requis pour la différenciation terminale, et des
+gènes structuraux comme \textit{Tnnc1} ou \textit{Ttn}. Nous avons testé
+l'activité des CRMs prédits et en avons trouvé $72\%$ qui récapitulent
+l'expression du gène le plus proche lorsqu'ils sont testés par transfection
+avec un rapporteur Luciférase. Nous avons par ailleurs utilisé Imogene pour
+prédire des corégulateurs et avons testé l'importance des sites par mutagenèse.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \newpage
+
+
+\section{Obtention d'une PWM pour MEF3} 
+\label{sec:obtention_d_une_pwm_pour_mef3}
+
+La première étape de notre collaboration avec l'équipe de P. Maire a été de
+construire un motif pour les sites de fixation \mef associés aux protéines
+\sixd chez la souris. Pour ce faire, nous avons utilisé le fait qu'un certain
+nombre de sites de fixation avaient déjà été testés par retard sur gel (EMSA ou
+\textit{Electrophoretic Mobility Shift Assay}), que ce soit dans la littérature
+ou au sein du laboratoire de P. Maire. Ces expériences ont permis de définir
+$32$ sites positifs (table \ref{tab:mef3_pos}) et $14$ sites négatifs (table
+\ref{tab:mef3_neg}). 
+
+\begin{table}[!ht]
+\centering
+%\resizebox{8cm}{!} {
+\begin{tabular}{|l|l|}
+\hline
+myog-spitz-pascal & \texttt{GAAACCTGA} \\
+pax3-pascal & \texttt{GAAATCTAA} \\
+myf5-pascal & \texttt{GTAACTGGA} \\
+myod-DRR-lhonore-pascal & \texttt{GAAACCGGA} \\
+Mlc-hox-pascal & \texttt{GTAATTTAA} \\
+atp2a1-1-niro-pascal & \texttt{GTAACTGGA} \\
+atp2a1-2-niro & \texttt{GTAACCTGA} \\
+tnnc2-niro & \texttt{GAAATTTAA} \\
+Nrk-pascal & \texttt{GCAAGGCGA} \\
+sarcalumenin-pascal & \texttt{GGAACTTGA} \\
+myl1-2-niro & \texttt{GAAATTGAA} \\
+ifitm3-niro & \texttt{GTAATTTGA} \\
+mybph-2-niro & \texttt{GAAATCTGA} \\
+myeov2-niro & \texttt{GAAACTTGA} \\
+\hline
+\end{tabular}
+\begin{tabular}{|l|l|}
+\hline
+aldo-spitz-pascal & \texttt{GAAACCTGA} \\
+ato-pascal & \texttt{GTCATTTGA} \\
+kcne1l-niro & \texttt{GATAACGGA} \\
+myf5-personal-josiane & \texttt{GAAATTTAA} \\
+pax3-1-personal-josiane & \texttt{GAAATGTAA} \\
+pax3-2-personal-josiane & \texttt{GTTACTGGA} \\
+pvalb-personal-iori & \texttt{GTAACCTGA} \\
+Utrophine-pascal & \texttt{GTCACCTGA} \\
+Na-K-ATPase-pascal & \texttt{GCAACCTGA} \\
+myf5-2-pascal & \texttt{GCAACCTGA} \\
+myf5-sat-pascal & \texttt{GAAATCTGA} \\
+lbx1-pascal & \texttt{GCCACCTGA} \\
+MCK-pascal & \texttt{GACACCCGA} \\
+IgfBp5-pascal & \texttt{GCAATTTGA} \\
+troponine-C-low-pascal & \texttt{GTAACCTGA} \\
+sarcalumenin-pascal & \texttt{GGAACTTGA} \\
+Nrk-pascal & \texttt{GCAAGGCGA} \\
+Tp4-pascal & \texttt{GCAAGCAGA} \\
+\hline
+\end{tabular}
+%}
+\captionbf{Sites MEF3 positifs}{ 
+    
+    Le tableau de gauche correspond aux $14$ sites utilisés pour
+    l'apprentissage (avec conservation chez mammifères), et la partie de droite
+    aux sites utilisés pour la courbe ROC de la figure
+    \ref{fig:muscle/roc-mef3}.
+
+}
+\label{tab:mef3_pos}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+%\resizebox{8cm}{!} {
+\begin{tabular}{|l|l|}
+\hline
+myf5-1-personal & \texttt{GACAGTGGA} \\
+myf5-2-personal & \texttt{GTAACCTCA} \\
+myf5-mut & \texttt{GTAACTGGG} \\
+pax3-1-pascal & \texttt{GGAACTTGA} \\
+pax3-2-pascal & \texttt{GTATTAATA} \\
+pax3-3-pascal & \texttt{GGATAAAGA} \\
+pax3-4-pascal & \texttt{GCTAATTGA} \\
+pax3-5-pascal & \texttt{GAAAGATTA} \\
+pax3-6-pascal & \texttt{GCTCTCTGA} \\
+pax3-7-pascal & \texttt{GAGCCCTGA} \\
+pvalb-1-personal & \texttt{GCACAATGA} \\
+pvalb-2-personal & \texttt{GCAGGCTGA} \\
+unknown-1 & \texttt{GCAATCTGA} \\
+unknown-2 & \texttt{GAGTCCTGA} \\
+\hline
+\end{tabular}
+%}
+\captionbf{Sites MEF3 négatifs}{ 
+    
+    Sites négatifs utilisés pour la courbe ROC de la figure
+    \ref{fig:muscle/roc-mef3}.
+
+}
+\label{tab:mef3_neg}
+\end{table}
+
+Il est à noter qu'ici les sites négatifs n'ont pas été
+choisis au hasard mais en utilisant leur resemblance avec le site consensus de
+\mef sur le promoteur de \textit{Myog}. Les sites positifs ont été partagés en
+un ensemble d'apprentissage composé de $14$ séquences pour lesquelles les
+séquences orthologues chez les autres mammifères étaient disponibles, et en un
+ensemble test de $18$ sites.
+\\
+
+ Nous avons alors cherché la PWM apprise sur l'ensemble d'apprentissage qui
+ distinguait le mieux les sites positifs de l'ensemble test des sites négatifs.
+ Nous avons pour cela généré deux types de PWM : des PWMs \og référence \fg
+ apprises sur les $14$ séquences d'apprentissage, et des PWMs \og avec
+ évolution \fg apprises avec Imogene à partir des alignements des séquences
+ d'apprentissage avec leurs orthologues. Le seuil de génération a été varié
+ entre $7$ et $12$ bits, et les deux modèles d'évolution (\textit{Felsenstein}
+ et \textit{Halpern-Bruno}) ont été utilisés. Pour chaque PWM, une courbe ROC
+ (pour \textit{Receiver Operating Characteristic}) peut être construite
+ indiquant pour différents seuils de détection $S_s$ la proportion de séquences
+ positives détectées dans l'ensemble test (Vrais Positifs) et la proportion de
+ séquences négatives détectées (Faux Positifs). Nous montrons en figure
+ \ref{fig:muscle/roc-mef3} les meilleures courbes ROC obtenues pour le cas
+ référence et le cas avec évolution. Les deux courbes sont relativement
+ similaires et permettent de détecter $\sim 45\%$ des sites positifs sans
+ détecter aucun négatif pour un seuil de l'ordre de $S_g$. La PWM avec
+ évolution, nommée MEF3evolh$6$, montre une légère amélioration du signal
+ à haut seuil (petits Faux Positifs) par rapport à la PWM référence, et nous
+ avons donc utilisé celle-ci dans la suite de notre travail. 
+
+
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/muscle/MEF3-roc-on-posnotlearned/roc.pdf}
+\captionbf{Courbe ROC de MEF3}{
+
+Nous comparons la capacité de classification de sites MEF3 positifs ou négatifs
+(par EMSA) pour différentes PWMs : chaque point représente le taux de Vrais
+Positifs et de Faux Positifs prédits au-dessus d'un seuil de détection donné.
+Les PWMs ont été obtenues à partir de $14$ sites positifs différents des sites
+utilisés dans la classification, soit en utilisant les sites orthologues chez
+d'autres mammifères et un modèle d'évolution (courbe rouge) ou en utilisant
+juste les sites de l'espèce de référence (courbe noire). Dans chaque cas, les
+paramètres (seuil de génération fixant la valeur du pseudo-count, modèle
+d'évolution) ont été variés et seule la meilleure courbe ROC est montrée. Le
+cas avec évolution est meilleur à haut seuil (inflexion initiale pour
+$S_s>6.5$bits) que le modèle sans évolution. Les paramètres associés sont
+: $S_g=8.7$ bits et modèle Halpern-Bruno pour le cas avec évolution, $S_g=12$
+bits pour le cas référence.
+
+}
+\label{fig:muscle/roc-mef3}
+\efig
+
+
+% section obtention_d_une_pwm_pour_mef3 (end)
+
 \section{Article} 
 \label{sec:article}
 
 
-\includepdf[pages=-]{articles/muscle-lincMYH/manuscript.pdf}
-\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_figure_1.pdf}
-\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_figure_2.pdf}
-\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_figure_3.pdf}
-\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_figure_4.pdf}
-\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_figure_5.pdf}
-\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_supplemental_figure_1.pdf}
-\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_supplemental_figure_2.pdf}
-\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_supplemental_figure_3.pdf}
-\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_supplemental_figure_4.pdf}
-\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_supplemental_figure_5.pdf}
-\includepdf[pages=-]{articles/muscle-lincMYH/Table_S3.pdf}
-\includepdf[pages=-]{articles/muscle-lincMYH/Table_S4.pdf}
+%\includepdf[pages=-]{articles/muscle-lincMYH/manuscript.pdf}
+%\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_figure_1.pdf}
+%\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_figure_2.pdf}
+%\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_figure_3.pdf}
+%\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_figure_4.pdf}
+%\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_figure_5.pdf}
+%\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_supplemental_figure_1.pdf}
+%\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_supplemental_figure_2.pdf}
+%\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_supplemental_figure_3.pdf}
+%\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_supplemental_figure_4.pdf}
+%\includepdf[pages=-]{articles/muscle-lincMYH/Sakakibara_supplemental_figure_5.pdf}
+%\includepdf[pages=-]{articles/muscle-lincMYH/Table_S3.pdf}
+%\includepdf[pages=-]{articles/muscle-lincMYH/Table_S4.pdf}
 
 % section article (end)
 			
