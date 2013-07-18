@@ -1,4 +1,4 @@
-\begin{thebibliography}{206}
+\begin{thebibliography}{214}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[Aerts, 2012]{Aerts2012p3868}
@@ -18,15 +18,28 @@ Alon, U. (2007{\natexlab{b}}).
 \newblock Network motifs: theory and experimental approaches.
 \newblock \emph{Nat Rev Genet}, 8(6):450--461.
 
+\bibitem[An et~al., 2011]{An2011p2926}
+An, C.-I., Dong, Y., and Hagiwara, N. (2011).
+\newblock Genome-wide mapping of Sox6 binding sites in skeletal muscle reveals
+  both direct and indirect regulation of muscle terminal differentiation by
+  Sox6.
+\newblock \emph{BMC Dev Biol}, 11(1):59.
+
 \bibitem[Asakura et~al., 1995]{Asakura1995ly}
 Asakura, A., Lyons, G.~E., and Tapscott, S.~J. (1995).
 \newblock The regulation of MyoD gene expression: conserved elements mediate
   expression in embryonic axial muscle.
 \newblock \emph{Dev Biol}, 171(2):386--98.
 
-\bibitem[Asp et~al., 2011]{Asp2011p2370}
+\bibitem[Asp et~al., 2011{\natexlab{a}}]{Asp2011p2369}
+Asp, P., Blum, R., and Vethantham{\ldots}, V. (2011{\natexlab{a}}).
+\newblock Genome-wide remodeling of the epigenetic landscape during myogenic
+  differentiation.
+\newblock \emph{Proceedings of the {\ldots}}.
+
+\bibitem[Asp et~al., 2011{\natexlab{b}}]{Asp2011p2370}
 Asp, P., Blum, R., Vethantham, V., Parisi, F., Micsinai, M., Cheng, J., Bowman,
-  C., Kluger, Y., and Dynlacht, B.~D. (2011).
+  C., Kluger, Y., and Dynlacht, B.~D. (2011{\natexlab{b}}).
 \newblock PNAS Plus: Genome-wide remodeling of the epigenetic landscape during
   myogenic differentiation.
 \newblock \emph{Proceedings of the National Academy of Sciences}, pages 1--11.
@@ -200,18 +213,10 @@ Campbell, C.~T. and Kim, G. (2007).
   biomolecular binding events and their kinetics.
 \newblock \emph{Biomaterials}, 28(15):2380--92.
 
-\bibitem[Cao et~al., 2010{\natexlab{a}}]{Cao2010p1805}
+\bibitem[Cao et~al., 2010]{Cao2010p1805}
 Cao, Y., Yao, Z., Sarkar, D., Lawrence, M., Sanchez, G.~J., Parker, M.~H.,
   Macquarrie, K.~L., Davison, J., Morgan, M.~T., Ruzzo, W.~L., Gentleman,
-  R.~C., and Tapscott, S.~J. (2010{\natexlab{a}}).
-\newblock Genome-wide MyoD binding in skeletal muscle cells: a potential for
-  broad cellular reprogramming.
-\newblock \emph{Developmental Cell}, 18(4):662--74.
-
-\bibitem[Cao et~al., 2010{\natexlab{b}}]{Cao2010p425}
-Cao, Y., Yao, Z., Sarkar, D., Lawrence, M., Sanchez, G.~J., Parker, M.~H.,
-  Macquarrie, K.~L., Davison, J., Morgan, M.~T., Ruzzo, W.~L., Gentleman,
-  R.~C., and Tapscott, S.~J. (2010{\natexlab{b}}).
+  R.~C., and Tapscott, S.~J. (2010).
 \newblock Genome-wide MyoD binding in skeletal muscle cells: a potential for
   broad cellular reprogramming.
 \newblock \emph{Developmental Cell}, 18(4):662--74.
@@ -563,6 +568,12 @@ Kassar-Duchossoy, L., Gayraud-Morel, B., Gom{\`e}s, D., Rocancourt, D.,
 Kaufmann, S. (1993).
 \newblock The origins of order.
 
+\bibitem[Kawakami et~al., 2000]{Kawakami2000bh}
+Kawakami, K., Sato, S., Ozaki, H., and Ikeda, K. (2000).
+\newblock Six family genes--structure and function as transcription factors and
+  their roles in development.
+\newblock \emph{Bioessays}, 22(7):616--26.
+
 \bibitem[Kazemian et~al., 2011]{Kazemian2011fv}
 Kazemian, M., Zhu, Q., Halfon, M.~S., and Sinha, S. (2011).
 \newblock Improved accuracy of supervised CRM discovery with interpolated
@@ -638,6 +649,14 @@ Lawrence, C.~E. and Reilly, A.~A. (1990).
   characterization of common sites in unaligned biopolymer sequences.
 \newblock \emph{Proteins}, 7(1):41--51.
 
+\bibitem[Le~Grand et~al., 2012]{Le-Grand2012qf}
+Le~Grand, F., Grifone, R., Mourikis, P., Houbron, C., Gigaud, C., Pujol, J.,
+  Maillet, M., Pag{\`e}s, G., Rudnicki, M., Tajbakhsh, S., and Maire, P.
+  (2012).
+\newblock Six1 regulates stem cell repair potential and self-renewal during
+  skeletal muscle regeneration.
+\newblock \emph{J Cell Biol}, 198(5):815--32.
+
 \bibitem[Lee et~al., 2002]{Lee2002p537}
 Lee, T., Rinaldi, N., Robert, F., Odom, D., Bar-Joseph, Z., Gerber, G.,
   Hannett, N., Harbison, C., Thompson, C., and Simon, I. (2002).
@@ -657,8 +676,14 @@ Liberman, L.~M. and Stathopoulos, A. (2009).
   Synthetic and comparative evidence.
 \newblock \emph{Developmental Biology}, 327(2):578--589.
 
-\bibitem[Liu et~al., 2010]{Liu2010p703}
-Liu, Y., Chu, A., Chakroun, I., Islam, U., and Blais, A. (2010).
+\bibitem[Liu et~al., 2010{\natexlab{a}}]{Liu2010p588}
+Liu, Y., Chu, A., Chakroun, I., Islam, U., and Blais, A. (2010{\natexlab{a}}).
+\newblock Cooperation between myogenic regulatory factors and SIX family
+  transcription factors is important for myoblast differentiation.
+\newblock \emph{Nucleic acids research}.
+
+\bibitem[Liu et~al., 2010{\natexlab{b}}]{Liu2010p703}
+Liu, Y., Chu, A., Chakroun, I., Islam, U., and Blais, A. (2010{\natexlab{b}}).
 \newblock Cooperation between myogenic regulatory factors and SIX family
   transcription factors is important for myoblast differentiation (SI).
 \newblock \emph{Nucleic acids research}.
@@ -769,6 +794,14 @@ Moses, A.~M., Pollard, D.~A., Nix, D.~A., Iyer, V.~N., Li, X.-Y., Biggin,
 \newblock Large-scale turnover of functional transcription factor binding sites
   in Drosophila.
 \newblock \emph{PLoS Comput Biol}, 2(10):e130.
+
+\bibitem[Mullen et~al., 2011]{Mullen2011p3259}
+Mullen, A.~C., Orlando, D.~A., Newman, J.~J., Lov{\'e}n, J., Kumar, R.~M.,
+  Bilodeau, S., Reddy, J., Guenther, M.~G., Dekoter, R.~P., and Young, R.~A.
+  (2011).
+\newblock Master Transcription Factors Determine Cell-Type-Specific Responses
+  to TGF-{\&}beta; Signaling.
+\newblock \emph{Cell}, 147(3):565--576.
 
 \bibitem[Nagaraj et~al., 2008]{Nagaraj2008p3749}
 Nagaraj, V.~H., O'flanagan, R.~A., and Sengupta, A.~M. (2008).
@@ -1032,6 +1065,15 @@ Smith, A.~D., Sumazin, P., and Zhang, M.~Q. (2005).
   vertebrate promoters.
 \newblock \emph{Proc Natl Acad Sci U S A}, 102(5):1560--5.
 
+\bibitem[Soleimani et~al., 2012]{Soleimani2012p3753}
+Soleimani, V.~D., Punch, V.~G., ichi Kawabe, Y., Jones, A.~E., Palidwor, G.~A.,
+  Porter, C.~J., Cross, J.~W., Carvajal, J.~J., Kockx, C. E.~M., Ijcken, W. F.
+  J.~V., Perkins, T.~J., Rigby, P. W.~J., Grosveld, F., and Rudnicki, M.~A.
+  (2012).
+\newblock Transcriptional Dominance of Pax7 in Adult Myogenesis Is Due to
+  High-Affinity Recognition of Homeodomain Motifs.
+\newblock \emph{Developmental Cell}, pages 1--13.
+
 \bibitem[Spitz et~al., 1998]{Spitz1998p3285}
 Spitz, F., Demignon, J., Porteu, A., Kahn, A., Concordet, J., Daegelen, D., and
   Maire, P. (1998).
@@ -1139,6 +1181,12 @@ Visel, A., Rubin, E.~M., and Pennacchio, L.~A. (2009{\natexlab{b}}).
 \newblock Genomic views of distant-acting enhancers.
 \newblock \emph{Nature}, 461(7261):199--205.
 
+\bibitem[Vokes et~al., 2008]{Vokes2008p1808}
+Vokes, S., Ji, H., Wong, W., and McMahon, A. (2008).
+\newblock A genome-scale analysis of the cis-regulatory circuitry underlying
+  sonic hedgehog-mediated patterning of the mammalian limb SI.
+\newblock \emph{Genes {\&} development}, 22(19):2651.
+
 \bibitem[Waddington et~al., 1957]{waddington1957strategy}
 Waddington, C.~H. et~al. (1957).
 \newblock The strategy of the genes. A discussion of some aspects of
@@ -1150,6 +1198,13 @@ Waddington, C.~H. et~al. (1957).
 Wallace, J.~A. and Felsenfeld, G. (2007).
 \newblock We gather together: insulators and genome organization.
 \newblock \emph{Curr Opin Genet Dev}, 17(5):400--7.
+
+\bibitem[Wang et~al., 2011]{Wang2011p2929}
+Wang, J., Kumar, R.~M., Biggs, V.~J., Lee, H., Chen, Y., Kagey, M.~H., Young,
+  R.~A., and Abate-Shen, C. (2011).
+\newblock The Msx1 Homeoprotein Recruits Polycomb to the Nuclear Periphery
+  during Development.
+\newblock \emph{Dev Cell}, pages 1--14.
 
 \bibitem[Wang et~al., 2005]{Wang2005zr}
 Wang, Q., Carroll, J.~S., and Brown, M. (2005).

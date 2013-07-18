@@ -125,12 +125,13 @@ différenciation.
 \subsection{Les homéoprotéines Six}
 \label{sub:les_hom_oprot_ines_six}
 
-
 Les homéoprotéines Six associées aux sites MEF$3$ possèdent un rôle étendu au
 cours de la myogenèse (fig.~\ref{fig:muscle/myogenese_six}), et nous en
 présentons maintenant les détails.  Parmi les 6 gènes appartenant à la famille
 des homéoprotéines Six, \textit{Six$1$} et \textit{Six$4$} ont reçu une
-attention particulière dans le contexte de la myogenèse squelettique. Ces deux
+attention particulière dans le contexte de la myogenèse squelettique, bien que
+d'autres membres comme \textit{Six$2$} ou \textit{Six$5$} semblent être en
+mesure de compenser partiellement leur perte \cite{Relaix2013ve}. Ces deux
 gènes se trouvent à proximité l'un de l'autre sur le chromosome $12$ de la
 souris et sont séparés par $100$kb de séquence intergénique. L'équipe de Pascal
 Maire, avec qui nous avons travaillé sur ce projet, a déjà identifié plusieurs
@@ -143,24 +144,19 @@ d'identifier des cibles génétiques directes et indirectes de Six$1,4$, et
 a dévoilé plusieurs fonctions des homéoprotéines Six pendant le développement
 musculaire et la spécialisation des fibres musculaires.  
 
-
 \bfig
-\includegraphics[width=1\textwidth]{figures/muscle/myogenese_six.pdf}
-\captionbf{Rôle des protéines Six au cours de la myogenèse}{
+\includegraphics[width=1\textwidth]{figures/kawakami-six-expression.pdf}
+\captionbf{Motifs d'expression et localisation génomique des gènes de la famille Six}{
 
-La myogenèse embryonnaire consiste en plusieurs étapes de différenciation
-musculaire : la genèse des progéniteurs myogéniques ou myoblastes, exprimant
-\textit{Pax3}, l'induction des gènes de détermination myogénique comme
-\textit{Myf5} et \textit{Myod1}, la différenciation des myoblastes et leur
-fusion en myotubes avec l'expression de \textit{Myog}. Les myotubes se
-spécialisent plus tardivement en fibres de type lentes (oxydatives) ou rapides
-(glycolytiques). Les homéoprotéines Six interviennent dans la régulation de ces
-différentes étapes en régulant les TFs indiqués. Des corégulateurs peuvent
-intervenir dans la régulation (disque jaune).
+    Figure tirée de \cite{Kawakami2000bh}, montrant les motifs d'expression des
+    gènes de la famille Six chez l'embryon (A) et dans l'oeil (B) à E$13.5$.
+    Les couleurs similaires reflètent des motifs d'expression similaires. La
+    localisation chromosomique des gènes est aussi montrée en (C). 
 
 }
-\label{fig:muscle/myogenese_six}
+\label{fig:kawakami-six-expression}
 \efig
+
 
 Les principaux points sont les suivants: Six$1$ et Six$4$ sont requis pour la
 genèse des progéniteurs myogéniques hypaxiaux (\cad ventraux).  En l'absence de
@@ -187,6 +183,24 @@ spécifiques des fibres glycolytiques de type rapide. Par exemple, la mutation
 du site MEF$3$ au sein du promoteur de \textit{Aldoa}, gène codant pour une
 enzyme impliquée dans la glycolyse, entraîne l'abolition de l'expression d'un
 transgène rapporteur dans des myofibres adultes \cite{Spitz1997p455}.
+
+\bfig
+\includegraphics[width=1\textwidth]{figures/muscle/myogenese_six.pdf}
+\captionbf{Rôle des protéines Six au cours de la myogenèse}{
+
+La myogenèse embryonnaire consiste en plusieurs étapes de différenciation
+musculaire : la genèse des progéniteurs myogéniques ou myoblastes, exprimant
+\textit{Pax3}, l'induction des gènes de détermination myogénique comme
+\textit{Myf5} et \textit{Myod1}, la différenciation des myoblastes et leur
+fusion en myotubes avec l'expression de \textit{Myog}. Les myotubes se
+spécialisent plus tardivement en fibres de type lentes (oxydatives) ou rapides
+(glycolytiques). Les homéoprotéines Six interviennent dans la régulation de ces
+différentes étapes en régulant les TFs indiqués. Des corégulateurs peuvent
+intervenir dans la régulation (disque jaune).
+
+}
+\label{fig:muscle/myogenese_six}
+\efig
 
 Ainsi, Six$1$ et Six$4$ contrôlent directement Pax$3$ et tous les MRF, mais ce
 contrôle est spatialement (axe dorso-ventral et axe antéro-postérieur)
@@ -216,30 +230,39 @@ hétérogène dans l'embryon.
 %transcription, par exemple à différents moments au cours de l'embryogenèse,
 %afficher une croissance musculaire natale et pendant la régénération du muscle
 %adulte est susceptible de se produire sur différents activateurs de gènes
+%cibles.
 
 
 
 % subsection les_hom_oprot_ines_six (end)
-cibles.
 
 
 
 \FloatBarrier
 % section introduction_la_myogen_se (end)
 
-\section{Obtention d'une PWM pour MEF3} 
-\label{sec:obtention_d_une_pwm_pour_mef3}
+\section{Récupération de données bioinformatiques et expérimentales sur le muscle} 
+\label{sec:r_cup_ration_de_donn_es_bioinformatiques_et_exp_rimentales_sur_le_muscle}
 
 La première étape de notre collaboration avec l'équipe de P. Maire a été de
-construire un motif pour les sites de fixation \mef associés aux protéines
-\sixd chez la souris. Pour ce faire, nous avons utilisé le fait qu'un certain
-nombre de sites de fixation avaient déjà été testés par retard sur gel (EMSA ou
-\textit{Electrophoretic Mobility Shift Assay}), que ce soit dans la littérature
-ou au sein du laboratoire de P. Maire. Ces expériences ont permis de définir
-$32$ sites positifs (table \ref{tab:mef3_pos}) et $14$ sites négatifs (table
-\ref{tab:mef3_neg}). 
+construire un modèle de motif pour les sites de fixation \mef associés aux
+protéines \sixd chez la souris. Un tel motif, qui n'existait jusqu'alors pas,
+permet de réaliser des prédictions précises, et nous discuterons après de leur
+vérification.  Par ailleurs, nous avons récupéré les nombreuses données
+existantes dans la littérature sur la différenciation musculaire (\chipseq,
+RNAseq, données épigénétiques\ldots) et les avons intégrées au système de
+visualisation de UCSC (voir section \ref{sub:outils_visualisation}).
+L'intégration de ces multiples données permet d'appréhender facilement et
+rapidement les phénomènes de régulation ayant lieu lors de la différenciation
+musculaire à l'échelle locale de gènes d'intérêt comme à l'échelle globale
+génomique en croisant les données. Nous présentons ici l'obtention de ces
+données.
 
-\begin{table}[!ht]
+
+\subsection{Obtention d'une PWM optimale pour MEF3}
+\label{sub:obtention_d_une_pwm_optimale_pour_mef3}
+
+\begin{table}[!t]
 \centering
 %\resizebox{8cm}{!} {
 \begin{tabular}{|l|l|}
@@ -287,14 +310,14 @@ Tp4-pascal & \texttt{GCAAGCAGA} \\
     
     Le tableau de gauche correspond aux $14$ sites utilisés pour
     l'apprentissage (avec conservation chez mammifères), et la partie de droite
-    aux sites utilisés pour la courbe ROC de la figure
+    aux sites utilisés comme Vrais Positifs dans la courbe ROC de la figure
     \ref{fig:muscle/roc-mef3}.
 
 }
 \label{tab:mef3_pos}
 \end{table}
 
-\begin{table}[!ht]
+\begin{table}[!t]
 \centering
 %\resizebox{8cm}{!} {
 \begin{tabular}{|l|l|}
@@ -318,41 +341,28 @@ unknown-2 & \texttt{GAGTCCTGA} \\
 %}
 \captionbf{Sites MEF3 négatifs}{ 
     
-    Sites négatifs utilisés pour la courbe ROC de la figure
+    Sites négatifs utilisés comme Faux Positifs dans la courbe ROC de la figure
     \ref{fig:muscle/roc-mef3}.
 
 }
 \label{tab:mef3_neg}
 \end{table}
 
-Il est à noter qu'ici les sites négatifs n'ont pas été
+Avant notre arrivée au laboratoire de P. Maire, il n'existait pas de PWM pour
+\mef, et les prédictions étaient faites sur la base de la proximité au
+consensus GAAACCTGA du promoteur de Myog. Nous avons donc décidé de construire
+un motif pour les sites de fixation \mef associés aux protéines \sixd. Pour ce
+faire, nous avons utilisé le fait qu'un certain nombre de sites de fixation
+avaient déjà été testés par retard sur gel (EMSA ou \textit{Electrophoretic
+Mobility Shift Assay}), que ce soit dans la littérature ou au sein du
+laboratoire de P.  Maire. Ces expériences ont permis de définir $32$ sites
+positifs (table \ref{tab:mef3_pos}) et $14$ sites négatifs (table
+\ref{tab:mef3_neg}). Il est à noter qu'ici les sites négatifs n'ont pas été
 choisis au hasard mais en utilisant leur resemblance avec le site consensus de
 \mef sur le promoteur de \textit{Myog}. Les sites positifs ont été partagés en
 un ensemble d'apprentissage composé de $14$ séquences pour lesquelles les
 séquences orthologues chez les autres mammifères étaient disponibles, et en un
 ensemble test de $18$ sites.
-\\
-
- Nous avons alors cherché la PWM apprise sur l'ensemble d'apprentissage qui
- distinguait le mieux les sites positifs de l'ensemble test des sites négatifs.
- Nous avons pour cela généré deux types de PWM : des PWMs \og référence \fg
- apprises sur les $14$ séquences d'apprentissage, et des PWMs \og avec
- évolution \fg apprises avec Imogene à partir des alignements des séquences
- d'apprentissage avec leurs orthologues. Le seuil de génération a été varié
- entre $7$ et $12$ bits, et les deux modèles d'évolution (\textit{Felsenstein}
- et \textit{Halpern-Bruno}) ont été utilisés. Pour chaque PWM, une courbe ROC
- (pour \textit{Receiver Operating Characteristic}) peut être construite
- indiquant pour différents seuils de détection $S_s$ la proportion de séquences
- positives détectées dans l'ensemble test (Vrais Positifs) et la proportion de
- séquences négatives détectées (Faux Positifs). Nous montrons en figure
- \ref{fig:muscle/roc-mef3} les meilleures courbes ROC obtenues pour le cas
- référence et le cas avec évolution. Les deux courbes sont relativement
- similaires et permettent de détecter $\sim 45\%$ des sites positifs sans
- détecter aucun négatif pour un seuil de l'ordre de $S_g$. La PWM avec
- évolution, nommée MEF3evolh$6$, montre une légère amélioration du signal
- à haut seuil (petits Faux Positifs) par rapport à la PWM référence, et nous
- avons donc utilisé celle-ci dans la suite de notre travail. 
-
 
 \bfig
 \includegraphics[width=0.8\textwidth]{figures/muscle/MEF3-roc-on-posnotlearned/roc.pdf}
@@ -377,7 +387,150 @@ bits pour le cas référence.
 \efig
 
 
-% section obtention_d_une_pwm_pour_mef3 (end)
+ Nous avons alors cherché la PWM apprise sur l'ensemble d'apprentissage qui
+ distinguait le mieux les sites positifs de l'ensemble test des sites négatifs.
+ Nous avons pour cela généré deux types de PWMs : une PWM \og référence \fg
+ apprise sur les $14$ séquences d'apprentissage, et une PWM \og avec
+ évolution \fg apprise avec Imogene à partir des alignements des séquences
+ d'apprentissage avec leurs orthologues. Le seuil de génération des PWMs a été varié
+ entre $7$ et $12$ bits, et les deux modèles d'évolution (\textit{Felsenstein}
+ et \textit{Halpern-Bruno}) ont été utilisés. Pour chaque PWM, une courbe ROC
+ (pour \textit{Receiver Operating Characteristic}) peut être construite
+ indiquant pour différents seuils de détection $S_s$ la proportion de séquences
+ positives détectées dans l'ensemble test (Vrais Positifs ou TPs pour \textit{True Positives}) et la proportion de
+ séquences négatives détectées (Faux Positifs ou FPs). Nous montrons en figure
+ \ref{fig:muscle/roc-mef3} les meilleures courbes ROC obtenues pour les cas
+ référence et avec évolution. Les deux courbes sont relativement
+ similaires et permettent de détecter $45\%$ des sites positifs sans
+ détecter aucun négatif pour un seuil de l'ordre de $S_g$. La PWM avec
+ évolution%, nommée MEF3evolh$6$, 
+ montre une légère amélioration du signal
+ à haut seuil (petits FPs) par rapport à la PWM référence, et nous
+ avons donc utilisé celle-ci dans la suite de notre travail. 
+
+
+
+% subsection obtention_d_une_pwm_optimale_pour_mef3 (end)
+
+
+\subsection{Obtention de données à partir de la littérature et intégration au navigateur de UCSC}
+\label{sub:obtention_de_donn_es_partir_de_la_litt_rature_et_int_gration_ucsc}
+
+La littérature regorge de données publiées obtenues dans des modèles
+musculaires, que ce soit dans des cultures de \cd, le modèle cellulaire le plus
+courant de la différenciation musculaire, ou dans tissus issus de la dissection
+de muscles squelettiques chez l'embryon ou chez l'adulte. Néanmoins, il
+n'existe pas d'outil centralisant ces données, et nous avons donc dû récupérer
+ces données (afin de les traiter, les croiser entre elles) et les avons
+intégrées sur l'outil de visualisation Genome Browser de UCSC afin de faciliter
+l'analyse des événements de régulation au cours de la différenciation
+musculaire (fig.~\ref{fig:muscle/UCSC_myod1}).
+
+
+\bfigp
+\includegraphics[width=1\textwidth]{figures/muscle/UCSC_myod1.pdf}
+\captionbf{Illustration de l'intégration de données musculaires sur UCSC}{
+
+    Capture d'écran du navigateur de UCSC (UCSC Genome Browser,
+    \url{http://genome.ucsc.edu}) montrant le locus de \textit{Myod1} (gène
+    codant pour MyoD) et incluant un certain nombre des données que nous avons
+    recueillies. L'intégration des données permet de conduire rapidement
+    plusieurs analyses (voir texte principal). Les cadres colorés indiquent des
+    régions de régulation potentiels (pourpres avec Pax$3$ et Pax$7$, vers avec
+    Smad3, ainsi que le \textit{Core Enhancer} CE (cadre rouge de gauche) et le
+    \textit{Distal Regulatory Region} DRR (cadre rouge de droite). L'ensemble
+    de ces enhancers constituent en fait un \textit{super enhancer} (voir
+    \ref{sub:les_super_enhancers} et \citet{Whyte2013tg}).
+
+}
+\label{fig:muscle/UCSC_myod1}
+\efigp
+
+
+Parmi ces données figurent d'abord des expériences issues du projet ENCODE
+(voir \ref{sub:projet_encode}). Celles-ci sont de plusieurs types et ont été
+obtenues par des laboratoires différents. Il y a notamment des donnés RNAseq
+quantifiant précisément la production d'ARN dans différentes conditions (\cd
+à Caltech, muscle squelettique à University of Washington ou UW), des données
+d'hypersensibilité à la digestion par DNAseI (voir \ref{sub:chip_DNAseI}) en
+muscle adulte (UW) ainsi que diverses données de \chipseq en \cd (Caltech).
+Parallèlement, nous avons obtenu plusieurs données de la littérature. Par
+exemple, nous avons recueilli les données \chipseq de \citet{Asp2011p2369} pour
+$10$ marques épigénétiques sur les histones de cellules \cd cultivées en milieu
+de prolifération (MB pour myoblastes) et en milieu de différenciation (MT pour
+myotubes). Nous avons aussi recueilli des données \chipseq pour divers TFs
+impliqués dans la différenciation musculaire : le TF maître MyoD en \cd MB et
+MT \cite{Cao2010p1805}, les TFs Pax$3$ et Pax$7$ marquant respectivement les
+progéniteurs embryonnaires et les cellules satellites, ou progéniteurs adultes,
+obtenus dans des myoblastes primaires \cite{Soleimani2012p3753}, le TF Smad$3$
+associé à la voie TGF-$\beta$ en MT \cite{Mullen2011p3259}, le TF Msx$1$
+permettant le recrutement du groupe Polycomb associé aux marques répressives
+H$3$K$27$me$3$ en \cd MB \cite{Wang2011p2929}, ou encore le TF Sox$6$ impliqué
+dans l'inhibition des gènes spécifiques des fibres lentes lors de la
+différenciation terminale en myoblastes primaires issus d'embryons à E$18$
+\cite{An2011p2926}. Par ailleurs, certains TFs ne possèdent pour le moment que
+des données \chipchip à la résolution et l'étendue limitée, parmi lesquels le
+TF Gli associé à la voie de signalisation Shh dont les données ont été obtenues
+dans le bourgeon de membre d'embryons à E$11.5$ \cite{Vokes2008p1808}, ou
+encore le TF Six$1$ en \cd MB et MT \cite{Liu2010p588}. Dans ce dernier cas,
+les données ne couvrent que $17\%$ du génome et possèdent une faible résolution
+($\sim 1$kb) : elles sont donc complémentaires aux prédictions obtenues en
+utilisant la PWM MEF$3$ avec évolution (appelée MEF$3$evolh$6$) introduite
+précédemment, car elles confirment la fixation de Six$1$ sur certains des sites
+prédits (mais n'infirme pas l'absence de fixation des protéines de la famille
+Six sur les autres sites).\\
+
+Nous présentons en figure \ref{fig:muscle/UCSC_myod1} un exemple montrant la
+visualisation d'une partie des données recueillies dans le cas du locus de
+\textit{Myod1}, le gène associé à MyoD. Des informations sur la position
+génomique et les transcrits présents au sein du locus sont d'abord données dans
+la partie supérieure. Puis les pistes suivantes indiquent diverses expériences,
+avec la nomenclature suivante : MB pour myoblaste (avec potentiellement le
+pourcentage de confluence des cellules en culture), MT pour myotube (avec
+potentiellement le temps passé en milieu de différenciation), SkMuscle $8$w
+pour muscle squelettique adulte à $8$ semaines post-natales, GM pour
+\textit{Growth Medium}.  Les premières pistes de données (en brun) sont issues
+du projet ENCODE, les pistes suivantes (en noir) indiquent les coordonnées des
+pics \chipseq des marques épigénétiques des histones ainsi que de divers TFs.
+Les pistes bleues pour Pax$3$ et Pax$7$ indiquent les données brutes du nombre
+de séquences de \chipseq par nucléotide, les segments pourpres indiquant les
+pics. On montre aussi le contrôle de cette expérience (input) auquel les
+données sont comparées pour définir les pics. Ainsi, le pic des données brutes
+de Pax$3$ dans la partie droite de la piste n'est pas détecté comme un pic
+authentique car les données contrôles y possèdent aussi un pic.
+
+Ces données permettent d'appréhender la régulation du gène \textit{Myod1} au
+cours de la différenciation musculaire. D'abord, \textit{Myod1} est transcrit
+au cours de la différenciation en \cd (détection d'ARN par RNAseq, traces de
+PolII marquant la transcription) mais son expression est faible en muscle
+adulte, \cad longtemps après la différenciation. Le gène est dans une région de
+chromatine ouverte (DNAseI HS), ainsi que plusieurs régions alentour. Les pics
+de DNAseI HS sont notamment corrélés aux pics de PolII ainsi qu'à d'autres TFs
+comme MyoD, Six$1$, Msx$1$, Pax$3$ ou encore Pax$7$, et à des marques
+epigénétiques \og activatrices \fg comme les méthylation d'histone
+H$3$K$4$me$1$, H$3$K$4$me$2$ et H$3$K$4$me$3$ ou l'acétylation H$3$K$9$Ac qui
+sont renforcées au cours de la différenciation (entre MB et MT). Le fait que
+l'on observe des pics de PolII hors des régions transcrites est dû
+à l'interaction entre des régions de régulation contenant plusieurs TFs et le
+promoteur du gène régulé (ici \textit{Myod1}) fixant la polymérase. Ces données
+pointent vers l'existence de multiples régions de régulation à la chromatine
+ouverte et interagissant avec le promoteur de \textit{Myod1}. Plus précisément,
+on trouve de gauche à droite : une région fixant Pax$3$, Pax$7$, Msx$1$ et MyoD
+en différenciation tardive (cadre pourpre : implication en cellule satellite?),
+plusieurs régions fixant Smad$3$ et MyoD (cadres verts : intégration des
+signaux TGF-$\beta$?), ainsi que deux régions régulatrices connues (cadres
+rouges), l'une \cite{Kucharczuk1999zr} fixant MyoD, Six$1$ et Msx$1$ tout au
+long de la différenciation et possédant un site MEF$3$ conservé (le CE de MyoD,
+impliqué dans la différenciation des progéniteurs embryonnaires), et l'autre
+\cite{Asakura1995ly} fixant Six1 et MyoD en MT (le DRR, impliqué chez l'embryon
+ainsi que dans le muscle adulte). Ces enhancers semblent donc avoir différents
+rôles dans l'activation de \textit{Myod$1$} et la mise en place de la
+myogenèse. Pris ensembles, ils forment une région de régulation à forte densité
+de \chipseq pour le TF maître MyoD associée à des marques épigénétiques
+extensives, qui a été définie comme un \textit{super-enhancer} par
+\citet{Whyte2013tg} (cf section \ref{sub:les_super_enhancers}).
+
+% subsection obtention_de_donn_es_partir_de_la_litt_rature_et_int_gration_ucsc (end)
 
 \section{Article} 
 \label{sec:article}
