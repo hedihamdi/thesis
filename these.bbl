@@ -1,4 +1,4 @@
-\begin{thebibliography}{214}
+\begin{thebibliography}{216}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[Aerts, 2012]{Aerts2012p3868}
@@ -31,15 +31,9 @@ Asakura, A., Lyons, G.~E., and Tapscott, S.~J. (1995).
   expression in embryonic axial muscle.
 \newblock \emph{Dev Biol}, 171(2):386--98.
 
-\bibitem[Asp et~al., 2011{\natexlab{a}}]{Asp2011p2369}
-Asp, P., Blum, R., and Vethantham{\ldots}, V. (2011{\natexlab{a}}).
-\newblock Genome-wide remodeling of the epigenetic landscape during myogenic
-  differentiation.
-\newblock \emph{Proceedings of the {\ldots}}.
-
-\bibitem[Asp et~al., 2011{\natexlab{b}}]{Asp2011p2370}
+\bibitem[Asp et~al., 2011]{Asp2011p2370}
 Asp, P., Blum, R., Vethantham, V., Parisi, F., Micsinai, M., Cheng, J., Bowman,
-  C., Kluger, Y., and Dynlacht, B.~D. (2011{\natexlab{b}}).
+  C., Kluger, Y., and Dynlacht, B.~D. (2011).
 \newblock PNAS Plus: Genome-wide remodeling of the epigenetic landscape during
   myogenic differentiation.
 \newblock \emph{Proceedings of the National Academy of Sciences}, pages 1--11.
@@ -670,6 +664,12 @@ Lettice, L.~A., Heaney, S. J.~H., Purdie, L.~A., Li, L., de~Beer, P., Oostra,
   and fin and is associated with preaxial polydactyly.
 \newblock \emph{Hum Mol Genet}, 12(14):1725--35.
 
+\bibitem[L'honor{\'e} et~al., 2010]{Lhonore2010p3969}
+L'honor{\'e}, A., Ouimette, J.-F., Lavertu-Jolin, M., and Drouin, J. (2010).
+\newblock Pitx2 defines alternate pathways acting through MyoD during limb and
+  somitic myogenesis.
+\newblock \emph{Development}, 137(22):3847--56.
+
 \bibitem[Liberman and Stathopoulos, 2009]{liberman2009p3886}
 Liberman, L.~M. and Stathopoulos, A. (2009).
 \newblock Design flexibility in cis-regulatory control of gene expression:
@@ -856,6 +856,11 @@ Ondek, B., Gloss, L., and Herr, W. (1988).
 \newblock The SV40 enhancer contains two distinct levels of organization.
 \newblock \emph{Nature}, 333(6168):40--5.
 
+\bibitem[Palstra et~al., 2008]{Palstra2008dq}
+Palstra, R.-J., de~Laat, W., and Grosveld, F. (2008).
+\newblock Beta-globin regulation and long-range interactions.
+\newblock \emph{Adv Genet}, 61:107--42.
+
 \bibitem[Panne, 2008]{Panne2008kl}
 Panne, D. (2008).
 \newblock The enhanceosome.
@@ -925,6 +930,11 @@ Richard, A.-F., Demignon, J., Sakakibara, I., Pujol, J., Favier, M., Strochlic,
 \newblock Genesis of muscle fiber-type diversity during mouse embryogenesis
   relies on Six1 and Six4 gene expression.
 \newblock \emph{Dev Biol}, 359(2):303--20.
+
+\bibitem[Rinn and Chang, 2012]{Rinn2012cr}
+Rinn, J.~L. and Chang, H.~Y. (2012).
+\newblock Genome regulation by long noncoding RNAs.
+\newblock \emph{Annu Rev Biochem}, 81:145--66.
 
 \bibitem[Roh et~al., 2005]{Roh2005mb}
 Roh, T.-Y., Cuddapah, S., and Zhao, K. (2005).

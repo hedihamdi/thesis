@@ -51,7 +51,11 @@
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Motifs d'expression et localisation g\'enomique des g\`enes de la famille Six}}{118}{figure.caption.44}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces R\^ole des prot\'eines Six au cours de la myogen\`ese}}{119}{figure.caption.45}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Courbe ROC de MEF3}}{122}{figure.caption.48}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Illustration de l'int\'egration de donn\'ees musculaires sur UCSC}}{124}{figure.caption.49}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces PWM MEF$3$\xspace obtenue avec le mod\`ele d'\'evolution}}{123}{figure.caption.49}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Visualisation de donn\'ees musculaires sur UCSC}}{124}{figure.caption.50}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Pr\'ediction de sites MEF$3$\xspace sur les s\'equences r\'egulatrices CE et DRR de \textit {Myod1}}}{128}{figure.caption.51}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Validation des sites MEF$3$\xspace pr\'edits dans les \'el\'ements r\'egulateurs de \textit {Myod1}}}{129}{figure.caption.52}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Visualisation du locus des myosines sur UCSC}}{131}{figure.caption.53}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Statistiques g\'enomiques}{129}{division.7}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Distribution des tailles interg\'eniques et introniques chez diff\'erentes esp\`eces}}{130}{figure.caption.51}
+\contentsline {xchapter}{Statistiques g\'enomiques}{135}{division.7}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Distribution des tailles interg\'eniques et introniques chez diff\'erentes esp\`eces}}{136}{figure.caption.55}
