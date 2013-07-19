@@ -1,4 +1,4 @@
-\begin{thebibliography}{216}
+\begin{thebibliography}{224}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[Aerts, 2012]{Aerts2012p3868}
@@ -51,6 +51,12 @@ Aurell, E., d'H{\'e}rou{\"e}l, A., Malmn{\"a}s, C., and Vergassola, M. (2007).
 \newblock Transcription factor concentrations versus binding site affinities in
   the yeast S. cerevisiae.
 \newblock \emph{Physical biology}, 4:134.
+
+\bibitem[Aziz et~al., 2010]{Aziz2010p3254}
+Aziz, A., Liu, Q.-C., and Dilworth, F.~J. (2010).
+\newblock Regulating a master regulator: Establishing tissue-specific gene
+  expression in skeletal muscle.
+\newblock \emph{epigenetics}, 5(8):691--695.
 
 \bibitem[Badis et~al., 2009]{Badis2009p3911}
 Badis, G., Berger, M.~F., Philippakis, A.~A., Talukder, S., Gehrke, A.~R.,
@@ -120,6 +126,13 @@ Berger, M.~F., Philippakis, A.~A., Qureshi, A.~M., He, F.~S., Estep, P.~W.,
 \newblock Compact, universal DNA microarrays to comprehensively determine
   transcription-factor binding site specificities.
 \newblock \emph{Nat Biotechnol}, 24(11):1429--35.
+
+\bibitem[Bergstrom et~al., 2002]{Bergstrom2002p376}
+Bergstrom, D., Penn, B., Strand, A., Perry, R., Rudnicki, M., and Tapscott, S.
+  (2002).
+\newblock Promoter-specific regulation of MyoD binding and signal transduction
+  cooperate to pattern gene expression.
+\newblock \emph{Molecular cell}, 9(3):587--600.
 
 \bibitem[Berman et~al., 2002]{Berman2002oq}
 Berman, B.~P., Nibu, Y., Pfeiffer, B.~D., Tomancak, P., Celniker, S.~E.,
@@ -244,6 +257,12 @@ Chan, B.~Y. and Kibler, D. (2005).
 \newblock Using hexamers to predict cis-regulatory motifs in Drosophila.
 \newblock \emph{BMC Bioinformatics}, 6:262.
 
+\bibitem[Cheng et~al., 1993]{Cheng1993nx}
+Cheng, T.~C., Wallace, M.~C., Merlie, J.~P., and Olson, E.~N. (1993).
+\newblock Separable regulatory elements governing myogenin transcription in
+  mouse embryogenesis.
+\newblock \emph{Science}, 261(5118):215--8.
+
 \bibitem[Cheng et~al., 2008]{Cheng2008fk}
 Cheng, Y., King, D.~C., Dore, L.~C., Zhang, X., Zhou, Y., Zhang, Y., Dorman,
   C., Abebe, D., Kumar, S.~A., Chiaromonte, F., Miller, W., Green, R.~D.,
@@ -268,6 +287,11 @@ Davis, R.~L., Weintraub, H., and Lassar, A.~B. (1987).
 \newblock Expression of a single transfected cDNA converts fibroblasts to
   myoblasts.
 \newblock \emph{Cell}, 51(6):987--1000.
+
+\bibitem[Deato and Tjian, 2007]{Deato2007tg}
+Deato, M. D.~E. and Tjian, R. (2007).
+\newblock Switching of the core transcription machinery during myogenesis.
+\newblock \emph{Genes Dev}, 21(17):2137--49.
 
 \bibitem[Dempster et~al., 1977]{dempster1977maximum}
 Dempster, A.~P., Laird, N.~M., and Rubin, D.~B. (1977).
@@ -351,6 +375,12 @@ Frankel, N., Davis, G.~K., Vargas, D., Wang, S., Payre, F., and Stern, D.~L.
 Friedman, N., Geiger, D., and Goldszmidt, M. (1997).
 \newblock Bayesian network classifiers.
 \newblock \emph{Machine learning}, 29(2-3):131--163.
+
+\bibitem[Fuda et~al., 2009]{Fuda2009oq}
+Fuda, N.~J., Ardehali, M.~B., and Lis, J.~T. (2009).
+\newblock Defining mechanisms that regulate RNA polymerase II transcription in
+  vivo.
+\newblock \emph{Nature}, 461(7261):186--92.
 
 \bibitem[Furusawa and Kaneko, 2012]{Furusawa2012p3898}
 Furusawa, C. and Kaneko, K. (2012).
@@ -496,6 +526,12 @@ Hu, M., Yu, J., Taylor, J.~M., Chinnaiyan, A.~M., and Qin, Z.~S. (2010).
 \newblock On the detection and refinement of transcription factor binding sites
   using ChIP-Seq data.
 \newblock \emph{Nucleic acids research}, 38(7):2154--2167.
+
+\bibitem[Ikeda et~al., 2002]{Ikeda2002p3784}
+Ikeda, K., Watanabe, Y., Ohto, H., and Kawakami, K. (2002).
+\newblock Molecular interaction and synergistic activation of a promoter by
+  Six, Eya, and Dach proteins mediated through CREB binding protein.
+\newblock \emph{Molecular and Cellular Biology}, 22(19):6759--66.
 
 \bibitem[Ivan et~al., 2008]{Ivan2008dz}
 Ivan, A., Halfon, M.~S., and Sinha, S. (2008).
@@ -856,6 +892,13 @@ Ondek, B., Gloss, L., and Herr, W. (1988).
 \newblock The SV40 enhancer contains two distinct levels of organization.
 \newblock \emph{Nature}, 333(6168):40--5.
 
+\bibitem[Palacios et~al., 2010]{Palacios2010p3280}
+Palacios, D., Summerbell, D., Rigby, P. W.~J., and Boyes, J. (2010).
+\newblock Interplay between DNA Methylation and Transcription Factor
+  Availability: Implications for Developmental Activation of the Mouse Myogenin
+  Gene.
+\newblock \emph{Molecular and Cellular Biology}, 30(15):3805--3815.
+
 \bibitem[Palstra et~al., 2008]{Palstra2008dq}
 Palstra, R.-J., de~Laat, W., and Grosveld, F. (2008).
 \newblock Beta-globin regulation and long-range interactions.
@@ -902,6 +945,14 @@ Prabhakar, S., Poulin, F., Shoukry, M., Afzal, V., Rubin, E.~M., Couronne, O.,
 \newblock Close sequence comparisons are sufficient to identify human
   cis-regulatory elements.
 \newblock \emph{Genome Res}, 16(7):855--63.
+
+\bibitem[Puri et~al., 1997]{Puri1997kl}
+Puri, P.~L., Sartorelli, V., Yang, X.~J., Hamamori, Y., Ogryzko, V.~V., Howard,
+  B.~H., Kedes, L., Wang, J.~Y., Graessmann, A., Nakatani, Y., and Levrero, M.
+  (1997).
+\newblock Differential roles of p300 and PCAF acetyltransferases in muscle
+  differentiation.
+\newblock \emph{Mol Cell}, 1(1):35--45.
 
 \bibitem[Rajewsky et~al., 2002]{Rajewsky2002kl}
 Rajewsky, N., Vergassola, M., Gaul, U., and Siggia, E.~D. (2002).

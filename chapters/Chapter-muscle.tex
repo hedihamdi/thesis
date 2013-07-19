@@ -798,4 +798,82 @@ permettant \textit{in fine} la mise en place du programme rapide.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \newpage	
 			
+
+\section{Synergie entre Six et MyoD au cours de la myogenèse} 
+\label{sec:synergie_entre_six_et_myod_au_cours_de_la_myogen_se}
+
+Dans cette dernière partie, nous présentons un autre projet que nous avons
+réalisé en collaboration avec Iori Sakakibara dans l'équipe de P Maire. La
+question sous-tendant ce projet est la suivante : étant donné que l'expérience
+\chipseq de MyoD prédit plus de $30,000$ pics \cite{Cao2010p1805} alors que le
+nombre de gènes cibles est bien inférieur, peut-être quelques
+centaines~\cite{Bergstrom2002p376}, peut-on prédire les pics fonctionnels
+effectivement liés à la régulation d'un gène cible? Pour ce faire, nous pouvons
+utiliser le fait que les CRMs fonctionnels ont tendance à concentrer des sites
+de fixation pour différents TFs et à être conservés chez des espèces proches
+(voir section \ref{sec:prediction_crms}). Il se trouve que les protéines Six
+constituent un cofacteur important de la myogenèse. Nous avons donc voulu voir
+si la présence de sites \mef conservés au sein des pics \chipseq de MyoD
+permettait de filtrer les données et de récupérer les pics fonctionnels.
+
+\subsection{État de l'art sur la coopération Six/MyoD}
+\label{sub:_tat_de_l_art}
+
+L'idée d'une coopération entre Six et MyoD au cours de la myogenèse n'est pas
+nouvelle. Ainsi, le promoteur de Myog contient un site \mef fixant \sixd et une
+boîte E fixant MyoD. La mutation de \mef abolit totalement l'expression d'un
+transgène \invivo \cite{Spitz1998p3285}, et la mutation de la boîte E plus
+partiellement \cite{Cheng1993nx}. De manière similaire, dans le cas du CE de
+\textit{Myod1}, la mutation de la boîte E abolit l'expression dans les somites
+\cite{Kucharczuk1999zr} et celle des sites \mef l'abolit plus généralement
+(voir section \ref{sub:r_gulation_de_myod1_par_les_prot_ines_six}). On observe
+dans les deux cas un phénomène du type \og tout ou rien \fg dans lequel
+l'expression du gène cible dépend de la présence conjointe de \sixd et MyoD sur
+l'élément régulateur : on parle de synergie. Celle-ci a été récemment étudiée
+\invitro de manière plus quantitative. Ainsi, \citet{Liu2010p588} ont montré
+dans des cellules $293$T (rein) qu'un promoteur synthétique composé de $4$
+boîtes E et de $6$ sites \mef multimérisés est activé $5$ fois plus lorsque
+Six$4$ et MyoD sont dans le milieu que lorsque seulement l'un ou l'autre est
+présent. Dans les mêmes conditions, le promoteur de Myog montre une synergie
+d'un facteur $1.6$, abolie ($1.04$) lors de la mutation du site \mef. Par
+ailleurs, les auteurs ont réalisé une expérience de \chipchip pour Six$1$ sur
+$17\%$ du génome dans des cellules \cd (voir
+\ref{sub:obtention_de_donn_es_partir_de_la_litt_rature_et_int_gration_ucsc}),
+et ont noté que $40\%$ des sites de fixation de Six$1$ empiètent sur un pic
+\chipseq de MyoD obtenu précédemment par \citet{Cao2010p1805}. Ces données
+suggèrent un rôle plus étendu de la synergie \sixd/MyoD sur le génome. \\
+
+Le mécanisme sous-jacent à la synergie Six/MyoD \invivo n'est pas complètement
+clair. Il peut y avoir l'activation par Six et MyoD d'étapes distinctes du
+processus de transcription, ou encore la mise en place d'une structure de
+chromatine permissive au niveau des éléments régulateurs ou du promoteur
+\cite{Fuda2009oq}. Par exemple, MyoD peut recruter des co-activateurs
+transcriptionnels comme l'acétyltransférase PCAF (\textit{P300/CBP-associated
+factor}, \citet{Puri1997kl}) ou la protéine TAF$3$ (\textit{TATA-binding
+protein Associated Factor}, \citet{Deato2007tg}) au niveau des séquences
+régulatrices. Les protéines Six, quant à elles, semblent pouvoir recruter la
+protéine CBP (\textit{CREB-binding Protein}) liée à l'acétyltransférase p$300$
+\textit{via} leurs cofacteurs Eya~\cite{Ikeda2002p3784}. De plus, il a été
+montré que le recrutement par Six$4$ de l'histone déméthylase UTX au niveau des
+promoteurs de \textit{Myog} et de \textit{Ckm} (\textit{Muscle Creatine
+Kinase}) est requis pour permettre l'induction de ces gènes au début de la
+différenciation des myoblastes~\cite{Aziz2010p3254}. Une autre étude a montré
+que le locus de Myog est méthylé au niveau de l'ADN dans des myoblastes non
+différenciés, et que Six$1$ permet la perte de la méthylation CpG et
+l'activation de Myog~\cite{Palacios2010p3280}. Ces études suggèrent la
+possibilité que les facteurs Six recrutent des enzymes rendant la chromatine
+accessible aux MRFs et permettant pour la transcription, ce qui peut expliquer
+la synergie.\\
+
+
+Ainsi, ces différentes études suggèrent une action concertée entre les
+protéines Six et MyoD pour activer des gènes cibles à l'échelle génomique.
+Plusieurs questions restent néanmoins ouvertes : est-ce que la combinaison de
+sites de fixation pour Six et MyoD suffit à prédire les enhancers liés à la
+régulation du destin myogénique? Quels sont les autres corégulateurs, et
+comment modulent-ils l'activité? 
+
+% subsection _tat_de_l_art (end)
+
+% section synergie_entre_six_et_myod_au_cours_de_la_myogen_se (end)
 \section*{Conclusion du chapitre \thechapter}
