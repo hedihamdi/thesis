@@ -2,34 +2,34 @@
 
  \nomgroup{A}
 
-  \item [{ARNm}]\begingroup ARN messager\nomeqref {0}\nompageref{xi}
+  \item [{ARNm}]\begingroup ARN messager\nomeqref {0}\nompageref{ix}
   \item [{bHLH}]\begingroup \textit{basic Helix-Loop-Helix}\nomeqref {0}
-		\nompageref{xi}
-  \item [{bp}]\begingroup Paire de base\nomeqref {0}\nompageref{xi}
+		\nompageref{ix}
+  \item [{bp}]\begingroup Paire de base\nomeqref {0}\nompageref{ix}
   \item [{ChIP}]\begingroup Immunoprécipitation de la chromatine (\textit{Chromatin immunoprecipitation})\nomeqref {0}
-		\nompageref{xi}
+		\nompageref{ix}
   \item [{CRM}]\begingroup Module de cis-régulation (\textit{Cis-Regulatory Module})\nomeqref {0}
-		\nompageref{xi}
+		\nompageref{ix}
   \item [{DHS}]\begingroup Hypersensible à la DNase I (\textit{DNaseI-hypersensistive})\nomeqref {0}
-		\nompageref{xi}
+		\nompageref{ix}
   \item [{ESC}]\begingroup Cellule souche embryonnaire (\textit{Embryonic Stem Cell})\nomeqref {0}
-		\nompageref{xi}
+		\nompageref{ix}
   \item [{ISH}]\begingroup Hybridation \insitu (\textit{In-Situ} Hybridization)\nomeqref {0}
-		\nompageref{xi}
+		\nompageref{ix}
   \item [{kb}]\begingroup kilobases ($1000$bp)\nomeqref {0}
-		\nompageref{xi}
+		\nompageref{ix}
   \item [{MRF}]\begingroup Facteur de régulation myogénique (\textit{Myogenic Regulatory Factor})\nomeqref {0}
-		\nompageref{xi}
-  \item [{nt}]\begingroup Nucléotide\nomeqref {0}\nompageref{xi}
+		\nompageref{ix}
+  \item [{nt}]\begingroup Nucléotide\nomeqref {0}\nompageref{ix}
   \item [{PCR}]\begingroup Réaction en chaîne par polymérase (\textit{Polymerase Chain Reaction})\nomeqref {0}
-		\nompageref{xi}
+		\nompageref{ix}
   \item [{PWM}]\begingroup Matrice de poids (\textit{Position Weight Matrix})\nomeqref {0}
-		\nompageref{xi}
+		\nompageref{ix}
   \item [{TF}]\begingroup Facteur de transcription (\textit{Transcription Factor})\nomeqref {0}
-		\nompageref{xi}
+		\nompageref{ix}
   \item [{TFBS}]\begingroup Site de fixation d'un \tf (\textit{Transcription Factor Binding Site})\nomeqref {0}
-		\nompageref{xi}
+		\nompageref{ix}
   \item [{TSS}]\begingroup Site d'initiation de la transcription (\textit{Transcription Start Site})\nomeqref {0}
-		\nompageref{xi}
+		\nompageref{ix}
 
 \end{thenomenclature}

@@ -1,10 +1,7 @@
 \select@language {french}
 \@frame@switchfalse 
-\@frame@switchtrue 
-\@thisnotframedtrue 
-\contentsline {spsection}{Liste des figures}{vii}{division.1}
-\@frame@switchfalse 
-\contentsline {chapter}{\fontfamily {ppl}\selectfont Principales abbr\'eviations utilis\'ees}{xi}{division.1}
+\contentsline {spsection}{Liste des figures}{v}{division.1}
+\contentsline {chapter}{\fontfamily {ppl}\selectfont Principales abbr\'eviations utilis\'ees}{ix}{division.1}
 \contentsline {starchapter}{Avant-propos}{1}{division.1}
 \contentsline {chapter}{\numberline {Chapitre\ 1~-}Introduction g\'en\'erale.}{3}{division.2}
 \contentsline {section}{\numberline {1.1}Le ph\'enotype cellulaire}{5}{section.2.1}
@@ -124,5 +121,7 @@
 \contentsline {subsubsection}{\numberline {$\bullet $}Article}{132}{subsubsection.6.3.2.2}
 \contentsline {section}{\numberline {5.4}Synergie entre Six et MyoD au cours de la myogen\`ese}{133}{section.6.4}
 \contentsline {subsection}{\numberline {5.4.1}\'Etat de l'art sur la coop\'eration Six/MyoD}{133}{subsection.6.4.1}
-\contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomiques}{135}{division.7}
-\contentsline {chapter}{Bibliographie}{139}{equation.7.0.1}
+\contentsline {subsection}{\numberline {5.4.2}Obtention de donn\'ees d'expression Six+MyoD}{134}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Obtention de r\'egions de r\'egulation Six+MyoD}{134}{subsection.6.4.3}
+\contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomiques}{139}{division.7}
+\contentsline {chapter}{Bibliographie}{143}{equation.7.0.1}

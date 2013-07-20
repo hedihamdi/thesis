@@ -676,8 +676,6 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/wasy/wasy9.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/wasy/wasy7.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/helvetic/phvb8t.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplb9d.tfm
-INPUT packaging/merci.tex
-INPUT packaging/merci.tex
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplb9d.vf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/mathpazo/fplmb.tfm
@@ -716,9 +714,6 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplr9d.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1ppl.fd
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1ppl.fd
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
-INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplr9d.tfm
 INPUT these.flg
 INPUT these.flg
@@ -1107,6 +1102,15 @@ INPUT ./figures/muscle/myod_ce_drr_mutations_relaix.pdf
 INPUT figures/muscle/UCSC_lincMYH.pdf
 INPUT ./figures/muscle/UCSC_lincMYH.pdf
 INPUT ./figures/muscle/UCSC_lincMYH.pdf
+INPUT figures/muscle/synergie/description_experiment.pdf
+INPUT ./figures/muscle/synergie/description_experiment.pdf
+INPUT ./figures/muscle/synergie/description_experiment.pdf
+INPUT figures/muscle/synergie/qpcr_affymetrix.pdf
+INPUT ./figures/muscle/synergie/qpcr_affymetrix.pdf
+INPUT ./figures/muscle/synergie/qpcr_affymetrix.pdf
+INPUT figures/muscle/synergie/correlation_myod_mef3.pdf
+INPUT ./figures/muscle/synergie/correlation_myod_mef3.pdf
+INPUT ./figures/muscle/synergie/correlation_myod_mef3.pdf
 INPUT annexes/annexes-stat.tex
 INPUT annexes/annexes-stat.tex
 INPUT figures/intergenic-intronic.pdf
