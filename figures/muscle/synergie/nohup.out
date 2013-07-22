@@ -1,0 +1,72 @@
+
+Welcome at Sat Jul 20 15:35:28 2013 
+Le chargement a nécessité le package : gtools
+Le chargement a nécessité le package : gdata
+gdata: read.xls support for 'XLS' (Excel 97-2004) files ENABLED.
+
+gdata: read.xls support for 'XLSX' (Excel 2007+) files ENABLED.
+
+Attachement du package : ‘gdata’
+
+The following object(s) are masked from ‘package:stats’:
+
+    nobs
+
+The following object(s) are masked from ‘package:utils’:
+
+    object.size
+
+Le chargement a nécessité le package : caTools
+Le chargement a nécessité le package : grid
+Le chargement a nécessité le package : KernSmooth
+KernSmooth 2.23 loaded
+Copyright M. P. Wand 1997-2009
+Le chargement a nécessité le package : MASS
+
+Attachement du package : ‘gplots’
+
+The following object(s) are masked from ‘package:stats’:
+
+    lowess
+
+[1] "myod+mef3"
+null device 
+          1 
+
+Goodbye at  Sat Jul 20 15:35:43 2013 
+
+Welcome at Sat Jul 20 15:37:21 2013 
+Le chargement a nécessité le package : gtools
+Le chargement a nécessité le package : gdata
+gdata: read.xls support for 'XLS' (Excel 97-2004) files ENABLED.
+
+gdata: read.xls support for 'XLSX' (Excel 2007+) files ENABLED.
+
+Attachement du package : ‘gdata’
+
+The following object(s) are masked from ‘package:stats’:
+
+    nobs
+
+The following object(s) are masked from ‘package:utils’:
+
+    object.size
+
+Le chargement a nécessité le package : caTools
+Le chargement a nécessité le package : grid
+Le chargement a nécessité le package : KernSmooth
+KernSmooth 2.23 loaded
+Copyright M. P. Wand 1997-2009
+Le chargement a nécessité le package : MASS
+
+Attachement du package : ‘gplots’
+
+The following object(s) are masked from ‘package:stats’:
+
+    lowess
+
+[1] "myod+mef3"
+null device 
+          1 
+
+Goodbye at  Sat Jul 20 15:37:35 2013 

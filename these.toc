@@ -111,17 +111,24 @@
 \contentsline {subsection}{\numberline {5.1.1}Les diff\'erentes \'etapes de la myogen\`ese}{115}{subsection.6.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Les Facteurs de R\'egulation Myog\'enique et leurs cofacteurs}{115}{subsection.6.1.2}
 \contentsline {subsection}{\numberline {5.1.3}Les hom\'eoprot\'eines Six}{117}{subsection.6.1.3}
-\contentsline {section}{\numberline {5.2}Int\'egration de donn\'ees bioinformatiques et exp\'erimentales sur le muscle}{119}{section.6.2}
+\contentsline {section}{\numberline {5.2}Int\'egration de donn\'ees bioinformatiques et exp\'erimentales sur le muscle}{120}{section.6.2}
 \contentsline {subsection}{\numberline {5.2.1}Obtention d'une PWM optimale pour MEF3}{120}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Obtention de donn\'ees \`a partir de la litt\'erature et int\'egration au visualisateur de UCSC}{123}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {5.2.2}Obtention de donn\'ees \`a partir de la litt\'erature et int\'egration au visualisateur de UCSC}{122}{subsection.6.2.2}
 \contentsline {section}{\numberline {5.3}Pr\'edictions et validations de la r\'egulation par Six}{127}{section.6.3}
-\contentsline {subsection}{\numberline {5.3.1}R\'egulation de \textit {Myod1} par les prot\'eines Six chez l'embryon de souris}{127}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {5.3.2}R\'egulation d'un lincRNA par Six dans le muscle adulte}{130}{subsection.6.3.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}Contexte g\'en\'eral}{130}{subsubsection.6.3.2.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Article}{132}{subsubsection.6.3.2.2}
-\contentsline {section}{\numberline {5.4}Synergie entre Six et MyoD au cours de la myogen\`ese}{133}{section.6.4}
-\contentsline {subsection}{\numberline {5.4.1}\'Etat de l'art sur la coop\'eration Six/MyoD}{133}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Obtention de donn\'ees d'expression Six+MyoD}{134}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Obtention de r\'egions de r\'egulation Six+MyoD}{134}{subsection.6.4.3}
-\contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomiques}{139}{division.7}
-\contentsline {chapter}{Bibliographie}{143}{equation.7.0.1}
+\contentsline {subsection}{\numberline {5.3.1}R\'egulation de \textit {Myod1} par les prot\'eines Six chez l'embryon de souris}{128}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {5.3.2}R\'egulation d'un lincRNA par Six dans le muscle adulte}{131}{subsection.6.3.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Contexte g\'en\'eral}{131}{subsubsection.6.3.2.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Article}{133}{subsubsection.6.3.2.2}
+\contentsline {section}{\numberline {5.4}Synergie entre Six et MyoD au cours de la myogen\`ese}{134}{section.6.4}
+\contentsline {subsection}{\numberline {5.4.1}\'Etat de l'art sur la coop\'eration Six/MyoD}{134}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Obtention de donn\'ees d'expression Six+MyoD}{135}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Obtention de r\'egions de r\'egulation Six+MyoD}{137}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Croisement des donn\'ees d'expression et des enhancers putatifs}{139}{subsection.6.4.4}
+\contentsline {subsection}{\numberline {5.4.5}Validation des enhancers MyoD+MEF$3$\xspace }{143}{subsection.6.4.5}
+\contentsline {subsection}{\numberline {5.4.6}Recherche de motifs et mutagen\`eses}{146}{subsection.6.4.6}
+\contentsline {subsubsection}{\numberline {$\bullet $}Recherche de motifs}{146}{subsubsection.6.4.6.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Mutagen\`ese syst\'ematique des sites de fixation}{148}{subsubsection.6.4.6.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Interpr\'etation des r\'esultats}{148}{subsubsection.6.4.6.3}
+\contentsline {section}{\numberline {5.5}Conclusion et perspectives}{151}{section.6.5}
+\contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomiques}{155}{division.7}
+\contentsline {chapter}{Bibliographie}{159}{equation.7.0.1}

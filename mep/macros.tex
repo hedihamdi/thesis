@@ -65,6 +65,10 @@
 \newcommand{\mef}{MEF$3$\xspace}
 \newcommand{\cd}{C$2$C$12$\xspace}
 
+\newcommand{\smm}{Six-/MyoD-\xspace}
+\newcommand{\smp}{Six-/MyoD+\xspace}
+\newcommand{\spm}{Six+/MyoD-\xspace}
+\newcommand{\spp}{Six+/MyoD+\xspace}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%% Les maths%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -447,6 +451,22 @@
 \newcommand{\bfigp}{\begin{GaelFigurep}}
 \newcommand{\efigp}{\end{GaelFigurep}}
 
+% Les figures : here ***************************************
+\newenvironment{GaelFigureh}[1][\MinipageWidth]{%
+\begin{figure}[!h]
+\centering
+\begin{fminipage}{#1}
+\centering
+\vspace{\CaptionMargin}
+\pgfmathqparse{#1-\CaptionMargin-\CaptionMargin}
+\begin{minipage}{\pgfmathresult pt}
+\centering
+}{%
+\end{minipage}
+\end{fminipage}
+\end{figure}}
+\newcommand{\bfigh}{\begin{GaelFigureh}}
+\newcommand{\efigh}{\end{GaelFigureh}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%% Les tableaux%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,4 +1,4 @@
-\begin{thebibliography}{224}
+\begin{thebibliography}{227}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[Aerts, 2012]{Aerts2012p3868}
@@ -107,6 +107,11 @@ Benos, P.~V., Bulyk, M.~L., and Stormo, G.~D. (2002).
 \newblock Additivity in protein-DNA interactions: how good an approximation is
   it?
 \newblock \emph{Nucleic Acids Res}, 30(20):4442--51.
+
+\bibitem[Bentzinger et~al., 2012]{Bentzinger2012ij}
+Bentzinger, C.~F., Wang, Y.~X., and Rudnicki, M.~A. (2012).
+\newblock Building muscle: molecular regulation of myogenesis.
+\newblock \emph{Cold Spring Harb Perspect Biol}, 4(2).
 
 \bibitem[Berg and von Hippel, 1987]{Berg1987p3746}
 Berg, O. and von Hippel, P. (1987).
@@ -354,6 +359,14 @@ Felsenstein, J. (1981).
 \newblock Evolutionary trees from DNA sequences: a maximum likelihood approach.
 \newblock \emph{J Mol Evol}, 17(6):368--76.
 
+\bibitem[Ferrari et~al., 1997]{Ferrari1997hc}
+Ferrari, S., Molinari, S., Melchionna, R., Cusella-De~Angelis, M.~G., Battini,
+  R., De~Angelis, L., Kelly, R., and Cossu, G. (1997).
+\newblock Absence of MEF2 binding to the A/T-rich element in the muscle
+  creatine kinase (MCK) enhancer correlates with lack of early expression of
+  the MCK gene in embryonic mammalian muscle.
+\newblock \emph{Cell Growth Differ}, 8(1):23--34.
+
 \bibitem[Feschotte, 2008]{Feschotte2008dq}
 Feschotte, C. (2008).
 \newblock Transposable elements and the evolution of regulatory networks.
@@ -418,6 +431,12 @@ Grad, Y.~H., Roth, F.~P., Halfon, M.~S., and Church, G.~M. (2004).
 Graf, T. and Enver, T. (2009).
 \newblock Forcing cells to change lineages.
 \newblock \emph{Nature}, 462(7273):587--94.
+
+\bibitem[Green and Vetter, 2011]{Green2011p2925}
+Green, Y.~S. and Vetter, M.~L. (2011).
+\newblock EBF proteins participate in transcriptional regulation of Xenopus
+  muscle development.
+\newblock \emph{Developmental Biology}, 358(1):240--250.
 
 \bibitem[Greer and Shi, 2012]{Greer2012ve}
 Greer, E.~L. and Shi, Y. (2012).
@@ -712,16 +731,10 @@ Liberman, L.~M. and Stathopoulos, A. (2009).
   Synthetic and comparative evidence.
 \newblock \emph{Developmental Biology}, 327(2):578--589.
 
-\bibitem[Liu et~al., 2010{\natexlab{a}}]{Liu2010p588}
-Liu, Y., Chu, A., Chakroun, I., Islam, U., and Blais, A. (2010{\natexlab{a}}).
+\bibitem[Liu et~al., 2010]{Liu2010p588}
+Liu, Y., Chu, A., Chakroun, I., Islam, U., and Blais, A. (2010).
 \newblock Cooperation between myogenic regulatory factors and SIX family
   transcription factors is important for myoblast differentiation.
-\newblock \emph{Nucleic acids research}.
-
-\bibitem[Liu et~al., 2010{\natexlab{b}}]{Liu2010p703}
-Liu, Y., Chu, A., Chakroun, I., Islam, U., and Blais, A. (2010{\natexlab{b}}).
-\newblock Cooperation between myogenic regulatory factors and SIX family
-  transcription factors is important for myoblast differentiation (SI).
 \newblock \emph{Nucleic acids research}.
 
 \bibitem[Liu et~al., 2009]{Liu2009p556}
@@ -1357,6 +1370,12 @@ Yalcin, B., Wong, K., Agam, A., Goodson, M., Keane, T.~M., Gan, X.,
 \newblock Sequence-based characterization of structural variation in the mouse
   genome.
 \newblock \emph{Nature}, 477(7364):326--9.
+
+\bibitem[Yokoyama et~al., 2009]{Yokoyama2009p435}
+Yokoyama, S., et~al. (2009).
+\newblock A Systems Approach Reveals that the Myogenesis Genome Network Is
+  Regulated by the Transcriptional Repressor RP58.
+\newblock \emph{Developmental Cell}, 17(6):836--848.
 
 \bibitem[Zeitlinger et~al., 2007]{Zeitlinger2007ly}
 Zeitlinger, J., Zinzen, R.~P., Stark, A., Kellis, M., Zhang, H., Young, R.~A.,

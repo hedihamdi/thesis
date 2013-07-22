@@ -1,0 +1,2295 @@
+\vskip7mm
+
+\section{Le phénotype cellulaire} \label{sec:phenotype}
+
+\subsection{Qu'est-ce que le phénotype d'une cellule?}
+\label{sub:phenotype}
+
+
+Les organismes vivants sont constitués de cellules de l'ordre de quelques
+microns, facilement observables à l'aide d'un simple microscope optique. Chaque
+cellule contient un certain nombre de constituants (gènes, protéines,
+métabolites\ldots) enclos par une membrane. Il existe des organismes
+unicellulaires (bactérie, levure) et multicellulaires (mouche, souris, homme).
+Ce sont ces derniers auxquels nous nous intéressons dans cette thèse. Les
+cellules qui les constituent sont majoritairement eucaryotes, \cad qu'elles possèdent un noyau
+renfermant le matériel génétique.
+\footnote{Il existe cependant quelques cas
+    connus d'organismes multicellulaires procaryotes, dont les cellules ne possédent pas de noyau, par exemple chez les
+    bactéries magnétotactiques~\cite{Keim2004uq}.  
+}
+
+Bien que possédant toutes le même matériel génétique (à quelques variations
+près), les cellules d'un organisme apparaissent d'emblée comme hétérogènes, que
+ce soit dans leur forme ou dans leurs constituants. Par exemple, chez l'homme,
+les neurones sont composés d'un corps d'une dizaine de microns de diamètre
+contenant le noyau, de milliers de prolongements dont certains peuvent
+atteindre une taille de plus de $1.5$ mètre, et sont riches en ions sodium
+et potassium, tandis que les fibres musculaires squelettiques sont de forme
+longue et tubulaire, possèdent plusieurs dizaines de noyaux et expriment
+actine et myosine. 
+
+Cette diversité semble néanmoins limitée. Aussi, parmi les $\sim6\ 10^{13}$
+cellules du corps humain, on peut distinguer $\sim 320$ différents types
+cellulaires~\cite{EMBL2001}. Bien entendu, ce nombre dépend du seuil de
+similarité choisi : deux cellules d'un même type n'expriment pas
+\textit{exactement} le même nombre de molécules.  Classiquement, la
+classification d'un type cellulaire se base sur des propriétés morphologiques
+observables au microscope ou encore sur l'analyse de molécules présentes à la
+surface des cellules. Par ailleurs, différents types cellulaires sont associés
+à différentes fonctions : dans notre exemple la fixation et le transport de
+l'oxygène dans le cas des globules rouges, la contraction dans le cas des
+fibres musculaires. 
+
+Ces différentes propriétés observables caractérisent le \textit{phénotype}
+cellulaire (étymologiquement \og exhiber un type \fg en grec). Nous allons le
+voir, ce phénotype est le résultat de la modulation par des facteurs
+environnementaux de l'expression génétique qui conditionne le contenu en
+protéines de la cellule. 
+
+\subsection{La différenciation cellulaire}
+
+\bfig
+\includegraphics[width=0.5\textwidth]{figures/furusawa-epigenetic-landscape.pdf}
+\captionbf{Le paysage de la différenciation cellulaire}{ 
+    
+    Figure tirée de \cite{Furusawa2012p3898}.  \textbf{A.} Paysage épigénétique
+    tel qu'imaginé par Waddington \cite{waddington1957strategy} en résonance
+    avec la notion de paysage énergétique en physique. Le développement
+    cellulaire est représenté par une bille dévalant un paysage composé de
+    différentes vallées séparées par des barrières difficilement
+    franchissables, représentant les différents types cellulaires et leur
+    robustesse face aux fluctuations.  \textbf{B.} Représentation dynamique de
+    l'évolution des états cellulaires.  Le phénotype est ici caractérisé par
+    l'expression de trois protéines A, B et C, dont l'évolution dans le temps
+    peut être représentée par une trajectoire dans un espace tridimensionnel.
+    Les états souche et différenciés sont caractérisés par des bassins
+    d'attraction correspondant à différents types cellulaires.  
+
+} 
+\label{fig:furusawa-epigenetic-landscape} 
+\efig
+
+L'acquisition d'un phénotype cellulaire particulier au sein d'un organisme est
+le sujet de la biologie du développement. Cette acquisition passe par
+différentes étapes de différenciation cellulaire. Schématiquement, au cours du
+développement d'un organisme, des cellules non différenciées ou souches
+empruntent un chemin unidirectionnel de différenciation qui restreint peu à peu
+le nombre de types cellulaires qu'elles peuvent potentiellement devenir,
+passant de l'état souche totipotent à des états pluripotents successifs avant
+la différenciation finale. Ainsi, la formation des cellules somatiques, qui
+sont les cellules d'un organisme n'étant ni souches ni germinales (les cellules
+qui donnent naissance aux gamètes ou cellules sexuelles), est le résultat d'un
+processus de différenciation initial lors du développement embryonnaire au
+cours duquel les cellules issues de l'{\oe}uf donnent naissance à trois
+couches de tissus distinctes : l'endoderme (feuillet interne), l'ectoderme
+(feuillet externe) et le mésoderme (feuillet intermédiaire). Des
+différenciations successives ont ensuite lieu au sein de ces couches pour
+former divers organes tels que le tube digestif (endoderme), les muscles et les
+os (mésoderme), ou encore la peau et le système nerveux (ectoderme).
+
+Dans un écrit aujourd'hui célèbre datant de 1957 \cite{waddington1957strategy},
+Waddington proposa une représentation de ces différentes étapes sous la forme
+d'un paysage épigénénétique semblable aux paysages énergétiques dont sont
+coutumiers les physiciens (fig~\ref{fig:furusawa-epigenetic-landscape}A).  Dans
+cette représentation, le processus de différenciation cellulaire est comparé
+à une bille dévalant une pente et dont la trajectoire suit les multiples
+embranchements de vallées escarpées, chacune représentant un état de
+développement différent.  Les vallées sont séparées par des pics dont la
+hauteur reflète la difficulté de passer d'un état à un autre, et les
+destinations finales possibles de la bille correspondent aux différents types
+cellulaires.
+
+La notion de trajectoire de différenciation peut être rendue plus parlante en
+adoptant une représentation de système dynamique. Comme nous l'avons vu en
+\ref{sub:phenotype}, la cellule contient de nombreux composants : gènes,
+protéines ou autres métabolites, qui pris dans leur ensemble déterminent à un
+instant donné l'état cellulaire. Il est ainsi possible de représenter l'état
+cellulaire à un temps donné comme un point dans un espace de grande dimension
+dans lequel chaque axe représente l'abondance d'un certain composant
+(fig~\ref{fig:furusawa-epigenetic-landscape}B). De par leur rôle primordial
+dans la définition de l'état cellulaire, l'expression des protéines (et donc
+des gènes qui les produisent) domine généralement ces composants, et on parle
+de \og niveau d'expression génétique \fg pour décrire leur abondance. Les
+changements d'expression génétique, au cours desquels certains gènes vont être
+activés et d'autres réprimés, induisent un changement de l'état cellulaire, ce
+qui se traduit par une trajectoire dans l'espace des états.  Ces changements
+d'expression restreignent finalement l'état cellulaire à une certaine région,
+définie comme un \og attracteur \fg de la dynamique. Une fois au sein d'un
+attracteur, l'état cellulaire est robuste aux perturbations du niveau
+d'expression génétique des différentes composantes. Les attracteurs peuvent
+alors être vu comme des types cellulaires distincts correspondant aux
+différentes vallées de la représentation de Waddington
+\cite{kaufmann1993origins}.
+
+
+\subsection{La cellule dans l'organisme : une spécification spatio-temporelle}
+
+\bfig
+\includegraphics[width=.32\textwidth]{figures/embrys-myog-e9_5.jpg}
+\includegraphics[width=.32\textwidth]{figures/embrys-myog-e10_5.jpg}
+\includegraphics[width=.32\textwidth]{figures/embrys-myog-e11_5.jpg}
+\captionbf{Spécification spatio-temporelle du type cellulaire}{ 
+    
+    Hybridation \insitu de l'ARN du gène \myog, marqueur de la différenciation
+    des progéniteurs du muscle squelettique, chez des embryons de souris âgés
+    de $9.5$, $10.5$ et $11.5$ jours (de gauche à droite), observés sous un
+    même grossissement de $10$. Le motif (\textit{pattern}) de spécification du
+    muscle squelettique est clairement visible au niveau des somites, lieu des
+    futures vertèbres. Images tirées de la base de donnée Embrys
+    (\url{http://embrys.jp}).
+
+} 
+\label{fig:embrys-myog}
+\efig
+
+Au sein de l'organisme, la différenciation cellulaire opère à un rythme précis
+et dans un contexte cellulaire bien défini. Aussi, les trajectoires dans
+l'espace d'expression génétique que nous avons présentées précédemment sont
+fonction de l'espace -- la position de la cellule dans l'organisme, qui
+détermine en particulier la concentration des signaux qu'elle reçoit de son
+environnement -- et du temps -- le stade de développement de l'organisme --.
+Il est ainsi possible d'observer chez l'embryon certains motifs ou
+\textit{patterns} spatio-temporels d'expression génétique correspondant à des
+organes en formation et révélés par par hybridation \insitu de l'ARN de
+certains gènes spécifiques d'un type cellulaire. Par exemple, dans le cas de la
+formation des muscles squelettiques, le gène de différenciation terminale \myog
+est exprimé chez la souris dès $8$ jours embryonnaires au niveau des somites,
+segments correspondant aux futures vertèbres de la souris adulte, puis commence
+à être exprimé au niveau des bourgeons de membres à $11.5$ jours (voir
+fig~\ref{fig:embrys-myog}).
+
+ 
+\subsection{La reprogrammation cellulaire} 
+%Fibroblastes, IPS : seulement un ou quelques facteurs suffisent à changer le
+%phénotype d'une cellule.
+
+\bfig
+\includegraphics[width=\textwidth]{figures/graf-cells-lineages.pdf}
+\captionbf{Différents exemples de reprogrammation cellulaire}{
+
+    Figure tirée de \cite{Graf2009p2592}, montrant plusieurs exemples
+    d'expériences de sur-expression ou d'ablation de \fts aboutissant à des
+    changements de types cellulaires.  
+
+} 
+\label{fig:graf-cells-lineages} 
+\efig 
+
+Depuis plusieurs décennies, différentes expériences ont exhibé la plasticité
+des états différenciés, élargissant ainsi considérablement la vision classique
+selon laquelle des cellules souches totipotentes se différencient de manière
+irréversible en des cellules de moins en moins plastiques, jusqu'à atteindre un
+état différencié stable. Par exemple, \cite{Blau1985vn} ont montré en $1985$
+que des programmes d'expression génétique dormants peuvent être exprimés de
+manière dominante dans des cellules différenciées par la fusion de différents
+types cellulaires : ainsi, la fusion de cellules musculaires avec des cellules
+non musculaires permettait l'activation des gènes de type musculaire dans le
+type cellulaire non musculaire. Puis différents travaux ont montré qu'il était
+possible de convertir des lignées de cellules différenciées en un autre type
+cellulaire en introduisant certaines protéines régulatrices de la
+transcription, ou \FTs (TFs) \cite{davis1987expression,Kulessa1995ys} : on
+parle alors de transdifférenciation, dont l'un des exemples canoniques est la
+différenciation de cellules de la peau ou fibroblastes en cellules musculaires
+par l'introduction du facteur de différenciation myogénique MyoD (voir fig
+\ref{fig:graf-cells-lineages}).  Parallèlement, des expériences réalisées chez
+plusieurs espèces de mammifères ont montré que le transfert de noyaux de
+cellules différenciées embryonnaires ou adultes dans un oeuf énucléé peut mener
+à la formation d'un organisme complet, montrant de manière univoque que
+l'identité des cellules différenciées peut être complètement
+renversée~\cite{Gurdon2008zr}. Enfin, l'avancée la plus récente dans ce domaine
+a été la démonstration que des cellules somatiques différenciées peuvent être
+reprogrammées en cellules souches puripotentes par simple introduction d'un \og
+cocktail \fg de 4 \tfs: Oct4, Sox2, c-Myc et Klf4 \cite{Takahashi2006kx} (fig
+\ref{fig:graf-cells-lineages}C).
+
+
+
+\section{Les réseaux de régulation génétique}
+
+Afin de pouvoir mieux comprendre les mécanismes de différenciation et de
+reprogrammation exposés en~\ref{sec:phenotype}, il convient de se plonger dans
+les mécanismes internes de la cellule qui régissent ses changements d'états.
+
+\bfigp
+\includegraphics[width=\textwidth]{figures/us-cybernetics.pdf}
+\captionbf{Vision cybernétique du traitement de l'information par la cellule}
+{
+ 
+    Figure tirée du programme `Genomes to life' du Département de l'Énergie
+    des États-Unis datant de 2001 \cite{USDE} schématisant un réseau de
+    régulation cellulaire comme un système de traitement entrée/sortie,
+    possédant trois composantes fondamentales : (1) un système de réception et
+    de transduction des signaux d'entrées qui peuvent être intra- ou
+    extra-cellulaires (plusieurs signaux pouvant affecter un même gène cible),
+    (2) un \og composant central \fg (\textit{core component}) composé du réseau de
+    régulation génétique traitant les signaux, et (3) d'un signal de sortie
+    consistant en l'expression moléculaire des ARNs et protéines des gènes
+    cibles. Le processus résulte en la modification du phénotype de la cellule.
+    Des boucles de régulation (\textit{feedback}) assurent le contrôle et la
+    stabilité des différentes étapes.
+
+} 
+\label{fig:us-cybernetics} 
+\efigp
+
+
+\subsection{Vision cybernétique de la cellule}
+
+Le paradigme qui règne sur la biologie moléculaire depuis plus d'un demi siècle
+est celui des réseaux génétiques. L'expression des gènes est en effet régulée
+par des protéines, les \fts, qui sont eux-mêmes issus de l'expression d'autres
+gènes, créant ainsi un réseau d'interactions entre gènes. Certaines protéines
+peuvent par ailleurs directement réguler l'activité d'autres protéines, et
+certains ARNs issus de la transcription de gènes non codants jouent aussi un
+rôle fondamental dans la régulation de l'activité génétique, le tout formant un
+réseau complexe d'interactions à différents niveaux. La compréhension de ce
+réseau et des fonctions qui en résultent forme le socle de la biologie des
+systèmes. Dans ce cadre, la cellule est vue comme une unité de traitement
+d'information qui interprète différents signaux reçus en entrée, les traite par
+un réseau interne de régulation, et réagit en sortie en modifiant son état ou
+son comportement (fig~\ref{fig:us-cybernetics}). L'intérêt d'une telle
+description mécanistique est qu'elle permet d'opérer quantifications
+mathématiques et prédictions, ce qui l'a rendue extrêmement fertile au cours
+des dernières décennies \cite{Nurse2011p2308}.
+
+\subsection{Divers modes de régulation}
+\label{sub:divers_modes_de_regulation}
+
+Les modes de régulation qui permettent à la cellule d'interpréter des signaux
+afin de changer d'état sont nombreux. Nous allons nous concentrer ici sur ceux
+affectant la production d'ARNs ou de protéines (fig.~\ref{fig:us-grn}).
+
+\bfigp
+\includegraphics[width=1.0\textwidth]{figures/us-grn.pdf} 
+\captionbf{Un réseau de régulation génétique type}{ 
+    
+    Dans cette représentation schématique tirée du rapport du \citet{USDE},
+    deux voies de signalisation A et B transmettent des signaux d'entrée (qui
+    peuvent être intra ou extra cellulaires) en rendant des \fts actifs.  Une
+    fois activés, ces derniers interagissent avec des séquences d'ADN proches
+    d'un gène cible en se fixant sur des sites de petite taille ($\sim10$bp).
+    Les différents \tfs interagissent entre eux pour former des complexes
+    occupant des régions de $\sim1000$bp appelées \crms ou CRMs (voir section
+    \ref{sec:CRMs}).  Lorsque les \tfs sont fixés sur le CRM de leur gène
+    cible, il peuvent activer ou inhiber la transcription d'ARN et donc la
+    production de la protéine correspondante.
+
+}    
+\label{fig:us-grn} 
+\efigp
+
+\subsubsection{Régulation génétique}
+
+Tout d'abord, un réseau d'expression génétique est caractérisé par un jeu
+d'interactions entre différents gènes. Ici, nous centrons notre attention sur
+les gènes codant pour des protéines, mais on pourrait inclure les gènes codant
+pour des ARNs non traduits, ceux-ci pouvant être impliqués dans la régulation.
+Dans ce réseau, les interactions se font par l'intermédiaire de protéines
+régulatrices appelées \fts ou TFs, qui sont au nombre de $\sim1400$ chez
+l'homme \cite{Vaquerizas2009ys}, soit $6\%$ des protéines encodées. Les gènes
+qui les expriment représentent donc $\sim3$\% de l'ensemble des $30,000$ gènes
+connus à ce jour. Pour réguler (activer ou inhiber) la transcription d'un gène
+cible, les TFs se fixent sur des sites de reconnaissance spécifiques sur l'ADN
+de $\sim10$bp et interagissent avec la machinerie transcriptionnelle au niveau
+du promoteur du gène cible. Les TFs peuvent se fixer sur le promoteur même,
+comme c'est souvent le cas chez la bactérie, ou dans des régions distales
+allant jusqu'à plusieurs centaines de kb, comme on trouve plus couramment chez
+les organismes complexes. Par ailleurs, différents TFs peuvent se combiner sur
+certaines régions de régulation contenant de multiples sites de fixation pour
+former des complexes protéiques.  Ces régions, appelées \crms (CRMs) ou plus
+communément \textit{enhancers}, sont d'une taille typique de $\sim1000$bp et
+ont la particularité de conduire à une expression spatio-temporelle très
+spécifique du gène cible. Ces différents points seront amplement développés en
+section~\ref{sec:CRMs}.
+
+\bfig
+\includegraphics[width=0.7\textwidth]{figures/schones-epigenome.pdf}
+\captionbf{Caractéristiques de l'épigénome}{ 
+    
+    Figure tirée de~\cite{Schones2008nx}. Les chromosomes sont partagés entre
+    régions accessibles d'euchromatine et régions difficilement accessibles
+    d'hétérochromatine. Les régions hétérochromatiques sont marquées par la di-
+    et triméthylation de la lysine 9 de l'histone H3 (H3K9me2 et H3K9me3).  La
+    méthylation de l'ADN est répandue à travers tout le génome, mais est
+    absente de certaines régions comme les îlots CpG, les promoteurs et les CRMs.
+    La modification H3K27me3 couvre de larges régions englobant des gènes
+    inactifs.  Les marques H3K4me3, H3K4me2, H3K4me1 et l'acétylation des
+    histones marquent les TSSs des gènes actifs. Les marques H3K4, H3K9, H3K27,
+    H4K20 et H2BK5 marquent les régions transcrites activement à proximité de
+    la région 5' des gènes (en amont), alors que la marque H3K36 marque les
+    gènes transcrits dans leur région 3' (en aval). 
+
+} 
+\label{fig:schones-epigenome} 
+\efig
+
+
+\subsubsection{Régulation épigénétique} 
+
+
+Outre la régulation génétique, due à l'action de protéines issues de séquences
+codantes et se fixant sur des séquences d'ADN -- régulation qui est donc
+entièrement encodée dans le génome et transmise à la descendance --, il existe
+un autre mode de régulation de la transcription des gènes qui permet notamment
+d'acquérir une modification d'expression génétique transmise à la descendance
+sans qu'il y ait modification du code génétique : c'est la régulation
+épigénétique. Cette régulation passe notamment par la modification des
+propriétés chimiques de l'ADN et des histones sur lequel il s'enroule pour
+former la chromatine (fig.~\ref{fig:schones-epigenome})\footnote{Il est à noter
+    que certains emploient le terme épigénétique pour qualifier la fixation des
+TFs sur l'ADN. Ici, le terme épigénétique réfère seulement aux modifications
+chimiques affectant les histones et l'ADN, et donc l'accessibilité du génome}.
+Ainsi, la méthylation des dimères CpG de l'ADN\footnote{Les dimères C-G sont
+appelés CpG, où p caractérise le phosphore liant les deux bases, pour les
+différencier du CG utilisé pour parler de la statistique en C et G de l'ADN} au
+niveau des régions riches en CG, ou îlots CpG, situées près de nombreux
+promoteurs et habituellement dépourvues de ces marques conduit à une
+inactivation du gène cible~\cite{Bird2002oq}.  Par ailleurs, la méthylation des
+histones au niveau des résidus lysines entraîne la fermeture de la chromatine,
+empêchant l'expression du ou des gène(s) situés à leur niveau, alors que
+l'acétylation des mêmes lysines entraîne au contraire une ouverture de la
+chromatine, favorisant ainsi la transcription génétique~\cite{Greer2012ve}.  Ce
+mode de régulation sera développé plus en détail en
+section~\ref{sub:les_diff_rents_types_de_crms}.
+
+% lincRNAs? \cite{Rinn2012p3940}
+
+\subsubsection{Régulation post-transcriptionnelle} 
+
+Les modifications post-transcriptionnelles affectent les ARNs issus de la
+transcription des gènes. Ces modifications peuvent être causées par des
+microARNs ou miRNAs qui sont des ARNs de $\sim23$ nts issus d'ARNs se repliant
+en structure double brin de type \og épingles à cheveux \fg ou
+\textit{hairpins}. Les miRNAs s'associent à la protéine \textit{Argonaute} du
+complexe RISC (\textit{RNA-induced silencing complex}) pour entraîner la
+dégradation spécifique d'ARNms~\cite{Bartel2009cr}. De manière similaire,
+certains \textit{hairpins} de taille plus importante sont clivés par la
+protéine Dicer pour former plusieurs petits ARNs de taille similaire aux
+miRNAs: ce sont les siRNAs (\textit{small interfering RNAs)}). Ceux-ci
+recrutent aussi le complexe protéique RISC et ciblent spécifiquement des
+ARNm~\cite{Hammond2001bh,Hannon2002qf}. Ce phénomène est connu sous le nom
+d'interférence ARN (RNAi) et a donné lieu à une méthode aujourd'hui couramment
+utilisée pour inhiber l'expression d'un gène.
+
+
+\subsubsection{Régulation post-traductionnelle}
+
+Les modifications post-traductionnelles affectent les protéines issues de la
+traduction des ARNs. Elles passent par une modification chimique
+des protéines, typiquement la phosphorylation, ou comme nous l'avons vu pour la
+régulation épigénétique, la méthylation ou l'acétylation. Ces modifications
+peuvent avoir pour effet de changer l'activité de la protéine, que ce soit en
+modifiant son activité enzymatique ou en déclenchant sa relocalisation
+nucléaire. Il existe aussi des modifications de structure de la
+protéine, comme c'est le cas du \tf \textit{Shavenbaby} chez la Drosophile:
+dans sa forme native, cette protéine inhibe la transcription de ses gènes cible
+; cependant ses résidus terminaux peuvent être clivés par des petits peptides
+de 11 à 32 acides aminés encodés par le gène \textit{Pri}, rendant la protéine
+transcriptionnellement active \cite{Kondo2010ly}.
+
+
+\bfig
+\includegraphics[width=0.7\textwidth]{figures/lee-network-motifs-yeast.pdf}
+\includegraphics[width=0.9\textwidth]{figures/odom-network-motifs-human.pdf}
+\captionbf{Exemples de motifs dans les réseaux de régulation génétique}{
+    
+    Ces exemples sont issus d'analyses d'interactions entre \tfs (cercles
+    bleus) et promoteurs (rectangles rouges) (A) chez la
+    levure~\cite{Lee2002p537} et (B) chez l'homme~\cite{Odom2004hc}.  Les
+    flèches solides indiquent la fixation d'un \tf à un promoteur, et les
+    flèches en pointillé indiquent l'expression d'un \tf à partir de son gène.
+
+}
+\label{fig:lee-odom-networks}
+\efig
+
+\FloatBarrier
+\subsection{Câblage du réseau et fonction}
+
+Maintenant que nous avons vu la nature des interactions au sein des réseaux
+génétiques, nous pouvons nous pencher sur leur structure. Notamment, plusieurs
+études réalisées chez divers organismes de la bactérie à l'homme ont révélé que
+les réseaux de transcription contiennent un petit ensemble de motifs de
+régulation récurrents, appelés motifs de
+réseaux~\cite{alon2007introduction,ShenOrr2002p648,Milo2002tg}
+(fig.~\ref{fig:lee-odom-networks}).  
+%Ces motifs peuvent être vus comme les pièces élémentaires servant à la
+%construction de réseaux fonctionnels. 
+De tels motifs furent d'abord détectés de manière systématique chez la bactérie
+\ecoli en remarquant qu'ils apparaissaient dans le réseau de transcription bien
+plus souvent qu'on ne l'attendrait dans un réseau
+aléatoire~\cite{ShenOrr2002p648}.  Les mêmes motifs ont ensuite été trouvés
+chez la levure~\cite{Milo2002tg,Lee2002p537} et chez l'homme~\cite{Odom2004hc}.
+Une explication possible de la récurrence de ces motifs est liée aux fonctions
+qu'ils remplissent. Par exemple, la boucle d'autorégulation négative, qui est
+trouvée chez la moitié des répresseurs d'\ecoli, possède deux fonctions : l'une
+est de parvenir rapidement à un état d'équilibre en utilisant un promoteur
+fort, l'autre est de servir de tampon au bruit
+d'expression~\cite{Alon2007p2353}. Un autre motif récurrent est la boucle
+feedforward. Celle-ci consiste en 3 gènes : un régulateur X, qui régule Y, tous
+deux régulant Z. Dans le cas où des interactions sont des activations et que
+X et Y sont requis pour activer Z, cette boucle peut servir de tampon au bruit
+d'expression de X, évitant que des fluctuations de son niveau d'expression
+n'entraîne par erreur l'activation de Z.
+
+
+\FloatBarrier
+\subsection{Évolution des réseaux génétiques}
+
+\bfig
+\includegraphics[width=\textwidth]{figures/furlong-network-evolution.pdf}
+\captionbf{Évolution du réseau transcriptionnel : l'exemple de la régulation
+myogénique.}{ Figure tirée de \cite{Liu2009p556}. Les lignes pleines indiquent
+une régulation transcriptionnelle directe, les tirets indiquent des
+interactions génétiques dont le caractère direct n'a pas été montré, et les
+lignes pointillés indiquent que l'interaction est suggérée par des donnés
+d'expression. \myod est l'analogue structurel de \textit{Nautilus} mais est
+l'analogue fonctionnel de \textit{Twist} chez la Drosophile et de
+\textit{HLH-1} chez \celeg. Les couleurs indiquent respectivement des voies
+de signalisation externes au mésoderme (bleu), les régulateurs myogéniques de
+la famille bHLH (vert), les protéines Six/Eya (orange), les protéines de la
+famille \textit{paired-box} Pax (violet), les TFs des familles MADS/SRF
+(rouge), et les régulateurs d'autres familles de protéines (noir).}
+\label{fig:furlong-network-evolution}\efig
+
+L'importance des motifs est rendue plus claire lorsque l'on
+s'intéresse à l'évolution des réseaux. En effet, au cours de l'évolution, les
+réseaux de régulation génétique changent : modification des constituants,
+recâblage du réseau, duplication d'éléments\ldots Néanmoins, certaines
+modifications sont plus défavorisées du point de vue évolutif que des autres.
+Ainsi, les motifs tels que les boucles d'autorégulation ou les boucles
+feedforward, de par leur importance fonctionnelle, auront tendance à être
+conservés.  Pour ce qui est des éléments du réseau, la modification d'un
+régulateur, par exemple la mutation d'un acide aminé au sein d'un \tf, aura des
+conséquences sur l'ensemble des éléments régulés par ce \tf et pourra donc être
+fortement délétère. Par contre, la modification d'un site de reconnaissance de
+ce \tf sur l'ADN n'aura qu'une portée locale sur la régulation du gène associé.
+\\ 
+
+À titre d'exemple, prenons le cas du réseau de différenciation du muscle
+squelettique présenté en figure~\ref{fig:furlong-network-evolution}, que nous
+étudierons plus en détail dans le chapitre \ref{chap:muscle} de ce manuscrit.
+Au coeur de ce réseau génétique se trouvent les facteurs de régulation
+myogéniques ou MRFs, des \fts de type bHLH qui ont la capacité de convertir des
+cellules non mesodermales, \cad n'étant pas destinées à devenir des
+progéniteurs musculaires, en cellules ayant des propriétés
+musculaires~\cite{Weintraub1989ij}. Ces facteurs sont dits \og régulateurs
+maîtres \fg de la différenciation musculaire. Chez les vertébrés il y a quatre
+MRFs: \myf, \mrf, \myod, qui ont des roles redondant dans la spécification des
+progéniteurs musculaires, et \myog, qui conduit à la différenciation terminale.
+Chez la \droso c'est le TF  \twi qui semble être le principal MRF, mais
+contrairement aux MRFs des vertébrés, son rôle ne s'arrête pas au contrôle de
+la différenciation musculaire mais est plus général dans le développement du
+mésoderme~\cite{Baylies1998bs}. C'est cependant le gène \textit{Nautilus} qui
+possède la séquence d'acides aminés la plus proche de celle des MRFs vertébrés.
+Ce dernier permet la spécification des progéniteurs myogéniques, et son
+expression est restreinte au développement musculaire.  Néanmoins, les mutants
+\textit{nautilus} sont viables et son rôle semble mineur comparé aux MRFs
+vertébrés. Enfin, chez le ver \celegans, c'est l'orthologue de \myod,
+\textit{hlh-1}, qui tient rôle de MRF.\\ 
+
+Malgré ces différences (nombre
+de MRFs, membre de la famille bHLH tenant ce rôle), on retrouve dans les trois
+cas une boucle feedforward conservée au niveau de la régulation des cibles des
+MRFs (fig.~\ref{fig:furlong-network-evolution}).  Ainsi, MyoD régule
+l'expression de Mef2 et l'activité de MAPK p38 en même temps que l'expression
+de plusieurs cibles initiales, et par la suite MyoD et phospho-Mef2 co-régulent
+des gènes plus tardifs. Ce mécanisme permet ainsi de réguler l'aspect temporel
+de l'expression génétique.  Chez la Drosophile, le même motif est observé avec
+Twist et Mef2 et chez \celeg avec HLH-1 et le TF UNC-129, de la même
+famille que Mef2.  \\ 
+
+Le coeur du réseau est donc conservé dans la forme
+(topologie), même s'il y a des divergences dans le fond (membres de la famille
+de TFs impliqués). Néanmoins, les éléments régulateurs en amont, ainsi que les
+membres périphériques du réseau ont rapidement évolué. Par exemple, chez les
+vertébrés le TF Pax3 est très en amont dans la hiérarchie génétique et permet
+l'activation des MRFs et la spécification myogénique, alors que chez la
+Drosophile son homologue \textit{poxm} est en aval des MRFs et sa perte de
+fonction n'a que des effets mineurs sur la myogenèse. Par ailleurs, le complexe
+composé de protéine Six et de leur cofacteur Eya, initialement découvert comme
+régulateur majeur de la différenciation oculaire chez la \droso, est chez les
+vertébrés un régulateur essentiel situés en amont des MRFs. Chez la Drosophile,
+il possède aussi un rôle dans la spécification myogénique, mais bien plus en
+aval que chez les vertébrés. Enfin, chez \celeg ce complexe est aussi en
+aval des MRFs mais il participe en plus à la détermination de cellules non
+myogéniques.  \\
+
+Nous voyons donc que l'évolution d'un réseau génétique possède de multiples
+facettes : conservation de motifs de réseau fonctionnellement importants (dans
+notre exemple, la boucle feedforward au coeur du réseau régissant l'aspect
+temporel de l'expression des cibles), recâblage des interactions pour traiter
+différents signaux d'entrée\ldots Par ailleurs, il apparaît que plus qu'à des
+TFs particuliers, c'est à des familles de TFs que nous avons affaire. Aussi un
+même rôle au sein du réseau peut-il être rempli par différents membres d'une
+même famille, comme c'est le cas pour \myod et \twi. Ceci s'explique par le
+fait que les membres d'une même famille partagent des propriétés d'interaction
+avec l'ADN semblables. Ces interactions sont à la source du fonctionnement du
+réseau, et nous allons maintenant présenter plus en avant leurs propriétés.
+
+
+
+
+\FloatBarrier
+\section{Les interactions protéine-ADN : modèles mathématiques}
+
+Nous l'avons vu, les interactions entre \tfs et ADN sont une composante
+essentielle des réseaux génétiques. Les TFs se fixent sur des sites spécifiques
+de $\sim10$ bp dans le voisinage des gènes qu'ils régulent. Trouver ces sites
+est donc un premier pas vers la reconstruction des réseaux de régulation
+sous-jacents. Dans cette section nous présentons les modèles d'interactions
+protéine-ADN qui ont été proposés, et leur application concrète à la recherche
+de sites de fixation. 
+
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/lassig-TF-search.pdf}
+\captionbf{Différents états du \tf}{
+Figure tirée de \cite{Lassig2007p539}. Lors de sa recherche de site de
+fixation, le TF peut se trouver dans trois états distincts : (1) un état libre
+de diffusion tridimensionnelle, (2) un état de diffusion unidimensionnelle sur
+l'ADN par fixation non spécifique, et (3) un état de fixation spécifique.
+L'énergie de fixation dépend du site de fixation, de taille $l$ et de
+coordonnée $r$.
+}
+\label{fig:lassig-TF-search}
+\efig
+
+
+\subsection{Modes de recherche du site de fixation par le TF}
+\label{sub:modes_de_recherche_du_site_de_fixation_par_le_tf}
+
+Un \ft peut être dans plusieurs états : en diffusion tridimensionnelle, auquel
+cas il est dit \og libre \fg, ou bien fixé sur l'ADN. Dans ce dernier cas, il
+interagit avec l'ADN selon deux modes : une attraction non spécifique d'énergie
+$E_{ns}$ indépendante de la position sur l'ADN, et une interaction spécifique
+$E_s(r)$ qui dépend de la séquence de taille $l\sim10$ à la position $r$ sur
+l'ADN.  L'interaction non spécifique est due à l'interaction électrostatique
+entre la protéine chargée positivement et l'ADN chargé négativement, alors que
+l'interaction spécifique implique des liaisons hydrogènes entre le domaine de
+fixation de la protéine et les nucléotides du site de fixation. 
+%La protéine
+%passe d'un mode à l'autre en changeant de conformation. 
+Le \tf peut ainsi se
+trouver dans trois états thermodynamiques représentés en figure
+\ref{fig:lassig-TF-search} : en diffusion tridimensionnelle libre, fixé non
+spécifiquement (diffusion unidimensionnelle le long de la structure d'ADN), et
+fixé spécifiquement sur l'ADN. Ces trois modes contribuent à la cinétique de la
+recherche d'un site fonctionnel \cite{Berg1981kx,Winter1981fk,Winter1981uq}.
+Ainsi, l'attraction non spécifique conduit la protéine à passer à peu près
+autant de temps fixé sur l'ADN qu'en diffusion libre. La recherche de site de
+reconnaissance est donc un processus mixte de diffusion unidimensionnelle sur
+l'ADN et de diffusion tridimensionnelle dans le milieu. Lorsqu'il est fixé sur
+l'ADN, le facteur diffuse dans un paysage d'énergie $E_{ns}$ plat lorsqu'il est
+dans sa conformation de fixation non spécifique, ou dans un paysage d'énergie
+$E_s(r)$ dans sa conformation de fixation spécifique. Cela permet au facteur
+d'échantillonner les sites de faible énergie $E_s(r)$ tout en évitant d'être
+bloqué par les barrières de haute énergie en passant en mode de recherche non
+spécifique. Ce processus s'avère au final très efficace : les temps de
+recherche sont typiquement inférieurs à une minute, ce qui est petit devant les
+processus de régulation de la cellule qui se déroulent au mieux sur quelques
+minutes~\cite{Gerland2002p397,Slutsky2004vn}. Il est donc pertinent de décrire
+l'effet d'un site de fixation sur la régulation d'un gène cible par la
+probabilité qu'il a de fixer un \tf à l'équilibre thermodynamique.
+
+
+% subsection modes_de_recherche_du_site_de_fixation_par_le_tf (end)
+
+\subsection{Modèle PWM} 
+\label{sub:modele_pwm}
+Présenté en 1987 par Berg et von Hippel~\cite{Berg1987p3746}, le modèle PWM est
+le modèle le plus simple décrivant l'énergie de fixation spécifique entre un \tf et un
+site de fixation sur l'ADN.  Ce modèle repose sur plusieurs hypothèses. Tout
+d'abord, il y a l'hypothèse importante que les sites de fixation des TFs sur
+l'ADN ont été sélectionnés au cours de l'évolution pour leur propriété de sites
+de reconnaissance, quelle que soit la concentration du TF dans la cellule. En
+d'autres termes, le processus de sélection discrimine les sites de fixation sur
+la seule base de leur énergie de fixation à un TF donné : les sites ayant une
+énergie de fixation dans une certaine gamme sont retenus, les autres rejetés.  Par
+ailleurs, au sein de cette gamme d'énérgie \og utile \fg, toutes les séquences
+sont équiprobables. Enfin, la dernière hypothèse est que chaque nucléotide d'un
+site de fixation contribue de manière indépendante, \cad additive à l'énergie
+totale du site.  Cette hypothèse permet de simplifier le problème en gardant le
+nombre de paramètres petit. 
+
+\bfigp
+\includegraphics[width=.7\textwidth]{figures/wasserman-PWM.pdf}
+\captionbf{Construction et utilisation du modèle PWM}{
+    Figure tirée de \cite{Wasserman2004p624}. (a) Supposons connus un certain nombre
+    de sites de fixation d'un \tf (dans ce cas MEF2). (b) Séquence consensus
+    correspondante utilisant les symboles IUPAC. (c) Une matrice de fréquence
+    est construite, indiquant pour chaque nucléotide sa multiplicité à une
+    position donnée dans le site. (d) La PWM est simplement construite en
+    prenant le logarithme relatif des fréquences PWMs par rapport aux fréquences
+    \apriori des nucléotides. (e) Le score (ou énergie) d'une séquence d'ADN
+    donnée est calculé en additionnant les poids PWM correspondants. (f) La PWM
+    peut être représentée sous forme de logo \cite{Giocomo2011p3442}. Dans cette
+    représentation, la hauteur d'une colonne représente le contenu en
+    information ou information relative moyenne d'une position, et la taille des
+    bases reflète leur fréquence.
+
+} 
+\label{fig:wasserman-PWM}
+\efigp
+
+
+L'argument de Berg et von Hippel est que ce problème est analogue à celui de
+physique statistique consistant à déduire les taux d'occupation des niveaux
+d'énergie de particules indépendantes sachant que l'énergie totale doit avoir
+une certaine valeur moyenne $E$. La solution de ce problème est donnée par la
+formule de Boltzmann reliant énergie et taux d'occupation :
+
+\begin{equation} 
+    f_{i,b} = \exp(-\lambda E_{i,b}) / \Z_i
+    \label{eq:boltzmann}
+\end{equation}
+
+où $f_{i,b}$ est la probabilité d'observer la base $b$ à la position $i$ du
+site de fixation, $E_{i,b}$ est l'énergie associée (en $k_BT$), $\Z_i$ est la
+fonction partition qui permet de normaliser la distribution à la position $i$,
+et $\lambda$ est un facteur sans dimension, analogue du $\beta$ de la
+thermodynamique, et lié au processus de sélection. Dans la suite, nous
+intégrerons ce facteur à l'énergie.  \\ La connaissance des fréquences des
+bases permet de définir une autre quantité utile caractérisant la variabilité
+des séquences de fixation, l'information relative des sites par rapport à une
+séquence d'ADN aléatoire~\cite{Stormo1998p471}:
+
+\begin{equation} 
+    \mathcal{I} = \sum_{i=1}^{L}\sum_{b = A,C,G,T}^{}f_{i,b}\ln\left(\frac{f_{i,b}}{\pi_b}\right) 
+\end{equation}
+
+où $L$ est la taille du site de fixation et $\pi_b$ correspond à la probabilité
+\apriori d'observer la base $b$ dans le génome. 
+%Parce que l'énergie est définie
+%à une constante près, 
+Il est usuel de définir l'énergie relativement au fond génomique
+: 
+
+\begin{equation} 
+    \tilde{E}_{i,b} = \ln\left(\frac{f_{i,b}}{\pi_b}\right) 
+\end{equation}
+
+L'énergie totale d'un site $S_i$ est alors
+
+\begin{equation}
+    \begin{aligned}
+        E &= \sum_{i=1}^{L}\tilde{E}_{i,b} \\
+        &= \sum_{i=1}^{L}\ln\left(\frac{f_{b(i)}}{\pi_b}\right)\\
+        &=\ln\left(\frac{\prod_{i=1}^{L}f_{b(i)}}{\prod_{i=1}^{L}\pi_b}\right)\\
+        &=\ln\left(\frac{P(S_i|\text{TF})}{P(S_i|\text{fond génomique})}\right)
+    \end{aligned}
+\end{equation} 
+
+où $b(i)$ est la base située à la position $i$ du site de fixation. Cette
+énergie quantifie simplement à quel point la séquence $S_i$ est plus ($E>0$) ou
+moins ($E<0$) probablement un site de fixation (de probabilité
+$P(S_i|\text{TF})$) qu'un site tiré au hasard dans le génome (de probabilité
+$P(S_i|\text{fond génomique})$). On parle aussi de \textit{score} de la
+séquence. L'information relative $\mathcal{I}$, qui est le score moyen des séquences
+fixées par le TF,  peut alors être vue comme quantifiant à quel point
+l'ensemble des sites de fixation se distingue d'un ensemble de même taille de
+sites tirés au hasard.
+
+Avec ces outils en main, il devient alors simple de bâtir un modèle PWM et de
+l'utiliser pour prédire des séquences fixées (fig.~\ref{fig:wasserman-PWM}).
+Étant donnés des sites de fixation connus, il suffit d'évaluer la fréquence
+d'occurrence de chaque base à chaque position. La comparaison avec les
+probabilités génomiques \apriori d'occurrence permet alors de bâtir une matrice
+de score, la PWM. Cette matrice peut alors être utilisée pour attribuer un
+score à une séquence d'ADN en additionnant les scores à chaque position.
+Finalement, les séquences ayant un score dépassant un certain seuil sont
+considérées comme des séquences de fixation.
+
+\FloatBarrier
+\subsection{Modèle biophysique}
+\label{sub:modele-biophys}
+
+Le modèle PWM est basé sur une hypothèse forte, celle que les sites de fixation
+ont été sélectionnés sur la base de leur seule affinité ou énergie envers un
+TF. Néanmoins, à aucun moment n'intervient la concentration du TF dans la
+cellule, dont dépend pourtant la probabilité de fixation. C'est ce que tente de
+capturer le modèle
+biophysique~\cite{Gerland2002p397,Djordjevic2003p2932,Zhao2009p3948}.  \\
+
+Considérons l'interaction entre un TF et une séquence d'ADN $S_i$ :
+
+\begin{equation}
+    TF+S_i \rightleftharpoons TF:S_i
+\end{equation}
+
+où $TF:S_i$ dénote le complexe entre le TF et le site $S_i$. La constante d'équilibre de cette réaction s'écrit selon la loi d'action de masse :
+
+\begin{equation}
+    \label{eq:TF-equilibrium}
+    K_i = \frac{[TF:S_i]}{[TF][S_i]}
+\end{equation}
+
+Le site peut être dans deux états : occupé par le TF où libre. Aussi, la probabilité que le TF soit fixé au site s'écrit simplement
+
+\begin{equation}
+    P(\text{fixation}|S_i) = \frac{[TF:S_i]}{[TF:S_i]+[S_i]}
+    = \frac{1}{1+\frac{1}{K_i [TF]}} = \frac{1}{1+e^{\beta(E_i-\mu)}}
+    \label{eq:modele-biophys}
+\end{equation}
+
+où $E_i=-kT\ln(K_i)$ est l'énergie libre standard de fixation (souvent notée
+$\Delta G$), $\mu=kT\ln[TF]$ est le potentiel chimique, $k$ est la
+constante de Boltzmann, $T$ la température et $\beta=1/kT$.  Ici nous avons
+considéré qu'il n'y avait qu'un seul site de fixation. De manière générale, le
+site est en compétition avec le fond génomique, ce qui ajoute une contribution
+à $\mu$ (voir section \ref{sub:modele_thermodynamique}).  À l'instar du modèle PWM,
+l'énergie $E_i$ est généralement prise comme étant une fonction additive des
+énergies individuelles des différentes bases du site. Ainsi, lorsque le TF est
+à faible concentration ($\mu \to -\infty$), le modèle biophysique écrit en
+équation~\ref{eq:modele-biophys} se réduit au modèle PWM.
+
+
+\subsection{Modèle thermodynamique} \label{sub:modele_thermodynamique} La
+description biophysique peut être réécrite en termes thermodynamiques en
+utilisant des raisonnements simples sur le nombre d'états possibles et leur
+énergie (et donc poids de Boltzmann) associée. Nous adoptons ici l'approche
+de~\cite{Gerland2002p397}. On pourra par ailleurs se référer à l'excellente
+revue~\cite{Lassig2007p539}.  Considérons le cas simple d'un seul \ft
+interagissant avec un génome de taille $L \gg 1$ ne contenant qu'un seul site
+fonctionnel, le reste de la séquence étant aléatoire. Nous l'avons vu,
+l'expérience montre que la protéine se fixe à l'ADN avec une probabilité $1/2$.
+Lorsqu'elle est fixée, elle est à l'équilibre entre le mode spécifique et le
+mode non spécifique. Nous désirons savoir avec quelle probabilité elle est
+fixée de manière spécifique. La fonction de partition, énumérant tous les poids
+de Boltzmann associés aux différents états accessibles au TF fixé s'écrit :
+
+\begin{equation}
+    \Z = \sum\limits_{r=1}^{L} e^{-\beta E_s(r)} + L e^{-\beta E_{ns}}
+\end{equation}
+
+Notons $i$ la position du site fonctionnel. On peut écrire :
+
+\begin{equation}
+    \begin{aligned}
+        \Z & = e^{-\beta E_s(i)} + e^{-\beta E_{ns}} + \sum\limits_{r \neq i} e^{-\beta E_s(r)} + (L - 1) e^{-\beta E_{ns}}\\
+    & \simeq e^{-\beta E_i} + \Z_0
+\end{aligned}
+\end{equation}
+
+où $Z_0$ est la fonction de partition d'une séquence aléatoire, et nous avons introduit l'énergie $E_i$ définie par
+
+\begin{equation}
+    e^{-\beta E_i} = e^{-\beta E_s(i)} + e^{-\beta E_{ns}}
+    \label{eq:Ei}
+\end{equation}
+
+Dans le cas d'un site de reconnaissance, $E_{ns} \gg E_s(i)$ de sorte que $E_i
+\simeq E_s(i)$~\cite{Gerland2002p397}. La probabilité que le
+facteur soit fixé sur le site fonctionnel s'écrit finalement :
+
+\begin{equation}
+    P(\text{fixation spécifique}|E_i) = \frac{e^{-\beta E_i}}{\Z} = \frac{1}{1+e^{\beta (E_i-F_0)}}
+    \label{eq:fixation-un-tf}
+\end{equation}
+
+où $F_0 = - kT \log \Z_0$ est l'énergie libre d'une séquence génomique aléatoire.
+On reconnait une fonction de Fermi, avec un seuil d'énergie à $F_0$ : pour $E_i
+< F_0$, la protéine est essentiellement fixée de manière spécifique à son site
+de reconnaissance, alors que pour $E_i > F_0$, elle ne distingue plus le site
+du fond génomique et y est faiblement fixée.\\
+
+Généralisons à présent au cas de plusieurs \fts et sites de reconnaissance.
+Nous négligeons le recouvrement entre \fts fixés sur des sites proches, qui
+poserait des problèmes stériques et corrèlerait les sites de fixation dans un
+certain voisinage (la présence d'un TF empêchant la présence d'un autre), et
+considérons que le nombre de TFs est grand devant le nombre de sites de
+reconnaissance pour éviter les problèmes de saturation : ainsi, le génome est
+composé de $L$ séquences indépendantes, chacune pouvant être soit non occupée,
+soit occupée de manière non spécifique, soit occupée de manière spécifique.
+Notons $\mu$ le potentiel chimique du TF en solution. La fonction de partition
+totale est le produit des fonctions de partition des sites indépendants,
+
+\begin{equation}
+    \Z(\mu) = \prod\limits_{r=1}^{L}\Z(\mu,r)
+\end{equation}
+
+où la fonction de partition d'un site s'écrit :
+
+\begin{equation}
+    \Z(\mu,r) = e^{-\beta \mu} + e^{-\beta E_s(r)} + e^{-\beta E_{ns}}
+\end{equation}
+
+En utilisant à nouveau la définition de $E_i$ en éq.\ref{eq:Ei}, la probabilité
+de fixation d'un site à la position $i$ s'écrit
+
+\begin{equation}
+    P(\text{fixation spécifique}|E_i) = \frac{e^{-\beta E_i}}{\Z(\mu,i)} = \frac{1}{1+e^{\beta (E_i-\mu)}}
+\end{equation}
+
+La valeur de $\mu$ est liée à la fois au nombre de TFs ainsi qu'à la
+possibilité de se fixer dans le fond génomique. Elle est fixée implicitement
+par l'équation :
+
+\begin{equation}
+    n = \sum_{r=1}^{L} \frac{1}{1+e^{\beta (E_r - \mu)}}
+\end{equation}
+
+qui signifie simplement que le nombre de TFs $n$ dans le système est égal à la
+somme sur tous les sites de fixation possibles pondérée par la probabilité que
+le TF y soit fixé. Lorsque $\mu \to -\infty$ et que la fonction de Fermi peut
+être approximée par la loi de Boltzmann, l'équation peut s'inverser et l'on
+trouve~\cite{Aurell2007p3747}
+
+\begin{equation}
+    \mu = F_0 + kT \log n
+\end{equation}
+
+où $F_0$ est l'énergie libre du fond génomique introduite en
+éq.~\ref{eq:fixation-un-tf}. Ainsi, la prise en compte d'une multiplicité de
+TFs ajoute un facteur $kT \log n$ au seuil de la fonction de Fermi par rapport
+au cas d'un seul TF. Par ailleurs, cette approche thermodynamique nous a permis
+de généraliser le modèle biophysique simple introduit en section
+\ref{sub:modele-biophys}.
+
+\FloatBarrier
+\section{Les interactions protéine-ADN : mesures expérimentales}
+\label{sec:mesures_exp}
+
+Ces dernières années, des avancées technologiques considérables ont permis
+d'une part d'établir des modèles de fixation spécifique pour de nombreux TFs,
+d'autre part de localiser leurs sites de fixation dans le génome. Ces avancées
+ont eu lieu autant sur le plan \invitro, utilisant protéines purifiées et
+séquences nucléiques artificielles pour déduire l'affinité protéine-ADN, que
+sur le plan \invivo, mesurant l'interaction de la protéine avec l'ADN
+génomique~\cite{Stormo2010p3947}. 
+
+\subsection{Approches \invitro : MITOMI, SPR, PBM, CSI, SELEX, et HT-SELEX}
+\label{sub:approches_invitro}
+
+\subsubsection{Approche microfluidique : MITOMI}
+
+En 2007, Maerkl et Quake ont mis au point une technique appelée MITOMI
+(Mechanically Induced Trapping Of Molecular Interactions) permettant une mesure
+directe de l'affinité d'un TF à des centaines de séquences d'ADN à la
+fois~\cite{Maerkl2007p840}.  Cette technique repose sur l'utilisation d'un
+système microfluidique composé de chambres dans lesquelles un fluide dont on
+peut facilement modifier la composition circule dans des canaux d'un diamètre
+de l'ordre de $1\mu$m dont le microenvironnement est finement contrôlé.  Le
+fluide contient des gènes synthétiques codant pour le TF ainsi que du matériel
+permettant la synthèse de la protéine directementau sein de la chambre, ce qui
+évite de purifier préalablement le TF. Chaque chambre du système contient des
+anticorps fixés à la surface permettant de capturer le TF et une certaine
+concentration d'une séquence d'ADN spécifique contenant une marque
+fluorescente. Le système contient ainsi des centaines de séquences d'ADN
+différentes, chacune étant présente à différentes concentrations. Lorsque le TF
+est fixé par les anticorps, il recrute des séquences d'ADN selon leur affinité.
+Celles qui ne se fixent pas sont lavées. Au final, les séquences fixées
+produisent un signal de fluorescence. La comparaison des signaux pour
+différentes concentrations d'ADN donne accès au rapport des constantes
+d'équilibre $K_{eq}$ (eq.~\ref{eq:TF-equilibrium}). La comparaison avec une
+séquence référence dont la constante $K_{eq}$ est connue permet alors de
+déterminer le $K_{eq}$ absolu pour chaque séquence de fixation.  \\ 
+
+En utilisant $17$ systèmes de ce type, ils ont ainsi pu mesurer l'affinité de
+$4$ TFs de type bHLH à $464$ séquences d'ADN différentes: les séquences
+consensus et des séquences ayant une, deux, trois ou quatre mutations. À titre
+de comparaison, ils ont construit une PWM à partir des séquences contenant une
+seule mutation, puis ont prédit les énergies attendues des séquences
+à plusieurs mutations. La prédiction de la PWM s'est avérée bonne dans
+seulement $56\%$ des cas pour les séquences à deux mutations, $10\%$ pour les
+séquences à $3$ mutations et $0\%$ des cas pour les séquences à $4$ mutations,
+montrant les limites de ce modèle indépendant confronté à des données
+d'interactions d'ordre supérieur. Un modèle plus raffiné prenant en compte
+l'énergie d'interaction non spécifique et incluant des interactions entre
+nucléotides voisins permet néanmoins de rendre compte des valeurs
+observées~\cite{Stormo2007bh}. Nous reviendrons sur la nécessité de prendre en
+compte les interactions entre paires de nucléotides lors de l'interaction
+spécifique entre TF et ADN dans le chapitre~\ref{ch:maxent}.
+
+\subsubsection{Approche physique : la microscopie SPR}
+
+La méthode de résonance des plasmons de surface (\textit{Surface Plasmon
+Resonance} ou SPR) est habituellement utilisée pour étudier l'interaction d'une
+protéine avec un ligand (qui peut être une autre protéine), mais elle peut
+aussi être utilisée pour mesurer les interactions entre une protéine et
+quelques centaines de séquences d'ADN
+différentes~\cite{Shumaker-Parry2004ve,Campbell2007ly}. Le principe de la
+microscopie SPR est que l'angle de réflection de la lumière sur une fine
+surface d'or, par exemple, dépend de la masse de molécules fixées de l'autre
+côté de sa surface. Si de l'ADN est lié à la surface, la fixation du TF induit
+un changement de masse et donc d'angle de reflection lumineuse mesurable au
+cours du temps. Ainsi, la cinétique de fixation du TF jusqu'à l'atteinte de
+l'équilibre est accessible. On peut de même étudier la dissociation du TF lors
+du lavage de la surface. Ces mesures donnent directement accès aux taux
+d'association $k_{on}$ et de dissociation $k_{off}$ que la simple mesure de la
+constante d'équilibre $K_{eq}=k_{on}/k_{off}$ ne permet habituellement pas de
+déterminer.
+
+\subsubsection{Approches basées sur des puces à ADN : PBM et CSI}
+
+L'analyse de fixation des protéines par puce à ADN (\textit{Protein-Binding
+Microarray} ou PBM) est une technologie haut débit qui a été développée au
+cours des 10 dernières années~\cite{Berger2006qf}. Les puces sont composées de
+$44,000$ puits auxquels sont liés des brins d'ADN. Une puce contient tous les
+sites de fixation de $8$bp possibles ($4^8/2=32,768$ séquences en prenant en
+compte le fait qu'il y a un site sur chacun des deux brins d'ADN) plus deux bases
+flanquantes (une à chaque extrémité) qu'il est possible de faire varier. Un
+TF purifié à partir de cellules ou synthétisé \invitro est ajouté à la puce,
+qui est ensuite lavée pour se débarrasser des fixations non spécifiques. La
+quantité de protéine fixée à un puits donné est déterminée grâce à un anticorps
+fluorescent contre la protéine. L'enrichissement en protéine est calculé
+relativement au bruit de fond (anticorps non spécifique par exemple). Il est
+alors possible d'utiliser ces mesures pour bâtir une PWM du TF (voir par
+exemple~\citet{Kinney2007p3977}).\\
+
+Une autre méthode utilise aussi des puces à ADN : c'est l'identification de
+site apparenté (\textit{Cognate Site Identifier} ou CSI)~\cite{Warren2006cr}.
+Une différence technique avec les PBMs est que l'ADN est d'abord synthétisé en
+simple brin puis se replie en double brin pour former le site de fixation,
+évitant ainsi de devoir générer l'ADN double brin à partir de précurseurs. Par
+ailleurs, le TF est en compétition avec un marqueur fluorescent qui peut se
+fixer à l'ADN: il n'est donc pas nécessaire d'utiliser un marquage spécifique
+sur le TF ou sur un anticorps, ce qui rend la procédure plus généralisable.
+Finalement, la spécificité du TF est représentée par un \og paysage de
+spécificité \fg qui encapsule l'information de fluorescence de l'ensemble des
+variations par rapport à une séquence consensus dans une représentation
+simple~\cite{Carlson2010dq}.
+
+\subsubsection{Approche par purification des séquences fixées : SELEX et HT-SELEX}
+
+Mise au point il y a plus de $20$ ans, la méthode SELEX (\textit{Systematic
+Evolution of Ligands by EXponential enrichment}) repose sur la sélection de
+séquences d'ADN aléatoires par un TF
+\invitro~\cite{Oliphant1989nx,Tuerk1990qe,Blackwell1990ai,Wright1991dp}. Une
+bibliothèque de sites de fixation potentiels est d'abord générée en
+synthétisant des séquences d'ADN aléatoires ou en utilisant des séquences
+génomiques. Les extrémités de ces séquences contiennent des précurseurs permettant
+l'amplification exponentielle par PCR. Le TF purifié est ajouté aux sites et
+les séquences fixées sont séparées des séquences non fixées, par exemple par
+retard sur gel. Après un cycle de sélection, les séquences récupérées sont
+encore enrichies en séquences de basse affinité pour le TF, car celles-ci sont
+simplement initialement bien plus abondantes que les séquences de haute
+affinité. Afin d'augmenter la proportion de séquence de grande affinité, les
+séquences filtrées sont amplifiées puis filtrées à nouveau, ceci sur
+plusieurs cycles. À la fin de ce processus, les séquences sélectionnées sont
+clonées et séquencées, résultant en un nombre typique de moins de $\sim100$
+séquences indépendantes~\cite{Fields1997yq}. Si les séquences initiales sont
+issues d'ADN génomique, il est possible d'utiliser l'hybridation des séquences
+à des puces à ADN. La présence de plusieurs cycles de sélection rend néanmoins
+la détermination des énergies de fixation moins directe qu'avec les techniques
+précédentes. Une variante de la technique appelée SELEX-SAGE utilise des
+multimères de sites à la place de sites uniques et permet de réduire le nombre
+de cycles de sélection et d'augmenter ainsi le nombre de séquences de fixation
+obtenues~\cite{Roulet2002rt}, permettant de réaliser des modèles plus
+précis~\cite{Nagaraj2008p3749}.
+
+Depuis la mise au point de la méthode SELEX, des avancées considérables ont été
+réalisées dans les techniques de séquençage, permettant l'obtention de millions
+de séquences à la fois : on parle de séquence haut-débit
+(\textit{high-throughput}) ou encore séquençage massivement parallèle.
+L'utilisation de ces nouvelles techniques dans l'expérience SELEX a mené à la
+méthode HT-SELEX~\cite{Nagaraj2008p3749}, aussi appelée
+Bind-n-Seq~\cite{Zykovich2009gf}. Il est alors possible d'estimer un modèle
+d'énergie à partir des fréquences d'observation des différentes séquences dès
+le premier cycle~\cite{Nagaraj2008p3749}. Des cycles supplémentaires permettent
+d'obtenir plus d'information sur les séquences les plus spécifiques, notamment
+sur la présence de contributions non indépendantes à l'énergie, ou de compenser
+la faible spécificité d'un TF. L'avantage de cette technique est que la taille
+des sites de fixation n'est pas limitée. Ainsi, avec une nanomole d'ADN
+($\sim10^{15}$ séquences) on peut couvrir l'ensemble des sites de $25$bp
+possibles. Le séquençage haut-débit permet d'en échantillonner $\sim10^8$, ce
+qui est largement suffisant pour contraindre des modèles d'énergie
+indépendants, même pour des TFs ayant des sites de fixations de taille $>15$bp
+comme c'est souvent le cas chez la bactérie. Cette technique a récemment été
+poussée encore plus loin~\cite{Jolma2010ul}. En utilisant des protéines
+marquées, les auteurs ont réalisé un HT-SELEX à partir d'extraits cellulaires,
+et en ajoutant un code barre aux séquences d'ADN de chaque expérience, ils ont
+pu analyser les sites de fixation pour plusieurs TFs en parallèle. Ils ont
+ensuite utilisé cette technique pour obtenir des modèles de spécificité pour
+$411$ TFs humains, la plus grande étude de ce genre réalisée à ce
+jour~\cite{Jolma2013p3971}.
+
+
+
+
+
+
+\subsection{Approche clonale : la technique de simple hybride}
+\label{sub:approche_clonale_la_technique_de_simple_hybride}
+
+Contrairement aux approches précédentes, la technique de simple hybride
+(\textit{Bacterial one-hybrid} ou B1H) n'est pas purement \invitro, au sens où
+l'interaction protéine-ADN est testée au sein d'une bactérie.  Néanmoins, parce
+que l'interaction n'est pas testée dans son contexte cellulaire d'origine, nous
+la considérerons comme telle. Cette approche repose sur l'intégration par une
+bactérie hôte de deux vecteurs d'expression génétique, ou plasmides. Le premier
+exprime le \tf d'intérêt fusionné à une sous-unité de l'ARN polymérase
+(l'appât), c'est la protéine \og hybride \fg. L'autre contient une région de
+séquence aléatoire représentant un site de fixation potentiel (la proie) en
+amont d'un promoteur à faible activité. La fixation de cette région par la
+protéine hybride permet l'activation d'un gène de sélection, généralement
+\textit{HIS3}, un gène de la levure requis pour la biosynthèse de l'histidine
+et dont l'homologue bactérien est absent de la souche d'\ecoli utilisée. La
+croissance des cellules a lieu dans un milieu ne contenant pas l'histidine.
+Dans ces conditions, les bactéries n'exprimant pas \textit{HIS3} ne peuvent
+croître. Ainsi, seules les bactéries au sein desquelles le \tf se fixe à la proie
+expriment \textit{HIS3}, croissent et forment des colonies, d'où la notion de
+gène de sélection. Par ailleurs, la stringence de la sélection peut être
+modulée en ajoutant au milieu différentes concentrations de 3-amino-triazole
+(3-AT), un inhibiteur de \textit{HIS3}. De cette façon l'affinité du site de
+fixation peut être estimée plus finement.  
+\\ 
+
+Dans les études de ce type, les sites de fixation présents au sein des colonies
+sont séquencés individuellement, ce qui permet d'obtenir environ $50$ séquences
+pour une expérience de sélection donnée. Néanmoins, il semble possible
+d'utiliser les nouvelles technologies de séquençage pour récupérer l'ensemble
+des sites de fixation des bactéries présentes sur une
+plaque~\cite{Stormo2010p3947}.  À l'instar de la méthode HT-SELEX, on obtient
+des millions de sites, ceux ayant une plus grande affinité étant présents
+à plusieurs centaines de milliers d'exemplaires, et ceux ayant une faible
+affinité étant présent en un seul voire aucun exemplaire.
+\\
+
+Notons qu'il est aussi possible d'adopter la démarche inverse, \cad de partir
+de quelques sites de fixation présumés fonctionnels mais pour lesquels on ne
+connaît pas le TF associé. En utilisant une bibliothèque de plasmides codant
+pour différents TFs hybrides, il est alors possible de déterminer si l'un
+d'entre eux possède une affinité importante avec les sites testés.
+
+% subsection approche_clonale_la_technique_de_simple_hybride (end)
+\subsection{Approches \invivo : \chipchip, \chipseq, DNAse I}
+\label{sub:chip_DNAseI}
+
+Dans cette section, nous nous intéressons aux techniques permettant
+d'identifier les sites de fixation d'un \tf sur le génome. Ces méthodes se
+basent sur des extraits cellulaires (de $10^4$ à $10^8$ cellules) qui peuvent
+provenir d'un tissu homogène (un seul type de cellule) ou hétérogène (plusieurs
+types de cellules), voire de l'organisme entier si la dissection est impossible
+(embryon de mouche par exemple). L'information obtenue est donc toujours
+conditionnée par ce matériau de départ, et l'on n'obtient que les sites
+\textit{accessibles} étant donnés le type cellulaire et la période de
+développement étudiés.
+
+\bfigp
+\includegraphics[width=0.6\textwidth]{figures/visel-chipseq.pdf}
+\captionbf{Étapes d'une expérience de \chipchip et \chipseq}{
+
+    Figure tirée de~\citet{Visel2009kx}. À partir d'extraits cellulaires issus
+    de cultures \invitro ou prélevés \invivo, plusieurs étapes permettent de
+    récupérer les régions fixées par un TF d'intérêt. D'abord, les protéines,
+    liées de manière non covalente à l'ADN, sont fixées par utilisation d'un
+    agent de réticulation, le formaldéhyde. Puis la chromatine est découpée en
+    fragments de $\sim 500$bp par utilisation d'ultrasons : on parle de
+    sonication. L'utilisation d'un anticorps spécifique au TF d'intérêt permet
+    de précipiter les fragments d'ADN fixés. Les fragments résultants sont
+    alors soit hybridés à une puce à ADN contenant de nombreuses séquences
+    génomiques (\chipchip), soit directement séquencés et alignés à un génome
+    de référence (\chipseq). La comparaison à un échantillon d'ADN non
+    précipité (\og input \fg) permet alors de définir les régions
+    significativement fixées, avec une résolution plus précise dans le cas du
+    \chipseq, où l'ensemble du génome est couvert, par rapport au \chipchip,
+    pour lequel seulement un sous ensemble du génome est analysé.
+
+}
+\label{fig:visel-chip}
+\efigp
+
+\subsubsection{Immunoprécipitation de la chromatine : \chipchip et \chipseq}
+
+
+La technique d'immunoprécipitation de la chromatine (ChIP)
+(fig.~\ref{fig:visel-chip}) consiste dans un premier temps à induire la
+réticulation (\textit{crosslink}) des protéines se liant à l'ADN en
+traitant les cellules avec de la formaldéhyde. Cette étape permet de
+transformer les liaisons faibles protéine-ADN en liaisons covalentes. Une fois
+les protéines fixées, la chromatine est découpée par digestion enzymatique ou
+en la soumettant à des ultrasons (c'est la sonication), résultant en des
+fragments de taille variant entre $200$ et $600$bp. Ces fragments sont ensuite
+immunoprécipités en présence d'un anticorps spécifique d'un \tf ou d'un
+isoforme d'histone (dans le cas d'une étude du paysage épigénétique) d'intérêt,
+permettant ainsi de récupérer tous les sites de fixation dans le génome. Après
+purification des fragments précipités, l'échantillon peut être analysé soit par
+hybridation sur puce (\chipchip) ou par séquençage haut débit (\chipseq).\\
+
+Dans le cas du \chipchip, l'échantillon immunoprécipité et l'ADN de départ
+(\textit{input}) sont marqués avec des colorants fluorescents et hybdridés
+sur une puce à ADN composée de très nombreux puits contenant des
+oligonucléotides (courtes séquences d'ADN) correspondant à différentes régions
+du génome. Dans le meilleur cas, ces oligonucléotides couvrent l'ensemble du
+génome. Les sites de liaison sont identifiés par l'écart d'intensité entre les
+signaux de fluorescence des conditions d'immunoprécipitation et
+d'\textit{input}.
+\\
+
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/park-chip-resolution.pdf}
+\captionbf{Résolution des expériences \chipchip et \chipseq}{
+Figure tirée de \cite{Park2009kx}, montrant les profils de fixation de la
+protéine Chromator générés à partir d'expériences de \chipchip
+(intensité relative par rapport au contrôle, bleu) et de \chipseq (densité de
+séquences, rouge) dans la lignée cellulaire S$2$ de \dmel. On peut noter la plus
+grande résolution de l'expérience \chipseq pour déterminer les sites de
+liaison. L'ADN utilisé en \textit{input} de l'expérience de \chipseq et servant
+de contrôle est montré en gris, et les gènes du locus indiqués en noir.
+}
+\label{fig:park-chip-resolution}
+\efig
+
+Dans le cas du \chipseq, l'échantillon immunoprécipité est analysé par
+séquençage à haut débit, résultant en une librairie de \textit{reads} d'une
+longueur typique variant entre $27$ et $50$bp issus des extrémités des séquences.
+Ces \textit{reads} sont ensuite alignés sur un génome de référence. À chaque
+position du génome correspond ainsi un certain nombre de séquences précipitées
+et d'\textit{input}. En comparant ce nombre au nombre moyen dans le locus et
+à l'\textit{input}, il est possible d'identifier des pics correspondant à la
+fixation du facteur (voir par exemple le programme d'appel de pics \chipseq
+MACS \cite{Zhang2008uq}).  \\
+
+Dans les deux cas, il faut noter que l'on a affaire à la fixation
+\textit{moyenne} du facteur sur l'ADN dans la population de cellules étudiée.
+Ainsi, un petit pic peut représenter aussi bien une fixation forte dans un
+petit sous-ensemble de cellules (par exemple celles qui sont à un certain état
+d'avancement du cycle cellulaire) qu'une fixation moyenne dans l'ensemble de la
+population. L'expérience de \chipseq offre une résolution bien plus précise
+($\leq100$bp) que la méthode \chipchip (fig.~\ref{fig:park-chip-resolution}).
+En effet, dans ce dernier cas la résolution est limitée par le nombre
+d'oligonucléotides utilisés, qui sont dans le meilleur des cas répartis sur le
+génome avec $35-100$ nucléotides d'écart entre deux instances. Pour se comparer
+à la \chipseq, il faudrait que tous les oligonucléotides se superposent à une
+base près, ce qui demanderait un trop grand nombre de puces.
+
+
+\FloatBarrier
+\subsubsection{Empreinte à la DNase I (\textit{DNase I footprinting})}
+
+\bfigp
+\includegraphics[width=\textwidth]{figures/hesselberth-dnase.pdf}
+\captionbf{Expérience d'empreinte à la DNase I chez la levure : vers une résolution au nucléotide près}{
+Figure tirée de \cite{Hesselberth2009vn}. (a) Densité de digestion de la DNase
+I par nucléotide dans une région de $100$kb du génome de la levure contenant
+$\sim50$ gènes (boîtes bleues). On voit clairement certaines régions
+promotrices marquées par la DNase I. (b) Zoom sur deux régions de $2.5$kb. (c)
+Zoom sur des régions de $250$bp. Le nombre d'événements de digestion par
+nucléotide est marqué par des empilements de boîtes noires, révélant des
+régions protégées : ce sont les empreintes à la DNase I. (d) Les empreintes
+sont associées à des motifs de régulation de la levure connus. Les pointillés
+noirs indiquent le nombre moyen de digestion par nucléotide dans le génome
+($\sim2$ digestions par base).
+}
+\label{fig:hesselberth-dnase}
+\efigp
+
+Contrairement aux techniques précédentes, l'empreinte à la DNase I ne repose
+pas sur l'étude d'un \tf précis, mais permet au contraire d'obtenir l'ensemble
+des sites de fixation dans le génome pour un type cellulaire donné, avec une
+précision au nucléotide près. Cette méthode repose sur le fait que la fixation
+stable des \tfs à l'ADN n'est possible que si la région est pauvre en
+nucléosomes, les protéines autour desquelles s'enroule l'ADN : on parle de
+région de chromatine ouverte. Ces régions sont préférentiellement digérées par
+l'endonucléase DNase I. Étant donné que la majorité de l'ADN est enroulé autour
+de nucléosomes, les sites hypersensibles à la digestion par DNase
+I (\textit{DNase I-hypersensitive} ou DHS) correspondent essentiellement à des
+régions de chromatine ouverte ayant des roles de régulation génétique
+: promoteurs, enhancers\ldots 
+\\
+
+En combinant la technique de DHS avec le séquençage à haut débit, l'expérience
+de DNase-seq permet d'identifier tous les types de région de régulation
+à l'échelle du génome~\cite{Thurman2012ys}. Les régions riches en sites de digestion
+identifient alors les sites DHS. Par ailleurs, au sein d'un site DHS, il y a de
+petites régions ($\sim15$bp) qui sont protégées de la digestion par DNase
+I : ce sont les empreintes à la DNase I ou \textit{DNase I footprints}
+(fig.~\ref{fig:hesselberth-dnase}). Ces empreintes sont dues à la présence de
+protéines ou de complexes fixés à l'ADN. Cette technique de détection de sites
+de liaison par empreinte à la DNase I existe depuis $30$ ans mais n'a que
+récemment été porté à l'échelle génomique. En comparant à des données \chipseq
+ou en utilisant des bases de données de motifs de \tfs, il est possible
+d'identifier le facteur correspondant dont les sites de fixation sont alors
+connus au nucléotide près.
+
+
+
+\FloatBarrier
+\section{Les modules de cis-régulation (CRMs)} \label{sec:CRMs} 
+%
+%\begin{malistebullet}{15}
+%\item Régulation transcriptionnelle. Facteurs de transcription. Diffusion, fixation. \\
+%\item   Modèles mathématiques (PWM, biophysiques). \\
+%\item   Coopérativité, fonctions logiques, coefficients de Hill (Uri Alon).\\
+%\item   Données biologiques grande échelle : \chipseq etc\ldots Bioinformatique.\\
+%\item   ENCODE, Taipale, etc.\\
+%\item   Evolution de la régulation Odom, Sinha.\\
+%\end{malistebullet}
+
+Nous l'avons vu en section \ref{sub:divers_modes_de_regulation}, les séquences d'ADN
+régulant l'expression génétique -- CRMs pour \textit{Cis-Regulatory Modules} --
+jouent un rôle prépondérant au cours du développement des organismes. Ces CRMs
+assurent en effet l'orchestration de l'expression de gènes spécifiques aux
+différentes étapes du développement et aux divers types cellulaires. Ils sont
+au coeur de l'évolution des réseaux génétiques, car ils dictent les
+interactions entre gènes. De plus, leur altération peut conduire à de
+nombreuses pathologies, liées pour la plupart à une expression génétique
+aberrante. Notamment, la majeure partie des variants génétiques qui sont
+associés de manière significative à une susceptibilité envers une maladie sont
+situés hors des régions codant pour des protéines, suggérant qu'un certain
+nombre affectent non pas la forme de la protéine engendrée mais l'expression du
+gène la produisant en détruisant une activité CRM. Dans cette partie, nous
+présentons les différents types de CRMs, leur structure, et leur évolution.
+
+\subsection{Les différents types de CRMs}
+\label{sub:les_diff_rents_types_de_crms}
+
+\bfig
+\includegraphics[width=1\textwidth]{figures/hardison-enhancer-states.pdf}
+\captionbf{Les différents types de CRMs et leurs marques épigénétiques} 
+{ 
+    
+    Figure tirée de \cite{Hardison2012p3778}. La notion de CRM renvoie à un
+    regroupement de sites de liaison pour un ou plusieurs \fts. Les CRMs
+    peuvent être regroupés en plusieurs classes : les promoteurs, les
+    \textit{enhancers}/\textit{silencers}, et les insulateurs. Les CRMs des
+    différentes classes partagent les marques d'acétylation H3Ac et H4Ac, les
+    promoteurs actifs sont spécifiquement marqués par H3K4me$3$, et les enhancers
+    et insulateurs par H3K4me$1$. Les enhancers sont par ailleurs souvent
+    fixés par le co-activateur p$300$. Enfin, chez les mammifères les insulateurs
+    recrutent CTCF pour bloquer l'activation par les enhancers.
+
+} 
+\label{fig:hardison-enhancer-states}
+\efig
+
+Selon leur rôle dans la régulation de l'expression génétique, les
+CRMs peuvent être distingués en trois catégories.
+
+\subsubsection{Promoteurs}
+\label{ssub:promoteurs}
+
+Les promoteurs permettent la fixation de l'ARN polymérase pour débuter la
+formation d'un transcrit ARN au site d'initiation de transcription
+(\textit{Transcription Start Site} ou TSS). Dans les promoteurs fixant l'ARN
+polymérase II (la majorité des promoteurs eucaryotes), des \fts généraux se
+fixent à un coeur de $\sim100$bp autour du TSS afin de faciliter la fixation du
+complexe de polymérase. Ces coeurs de promoteurs contiennent pour certains des
+motifs stéréotypés, comme la boîte TATA, et ont un TSS bien déterminé;
+néanmoins la plupart des promoteurs des génomes mammifères sont des régions
+riches en GC et en dinuclétoides CpG (les \og îlots CpG \fg) qui ne possèdent
+pas de boîte TATA et permettent l'initiation de la transcription dans un
+interval d'environ $100$ bases~\cite{Carninci2006qf}. Au niveau épigénétique,
+les promoteurs actifs sont caractérisés par une région pauvre en nucléosomes en
+amont du TSS, flanquée de nucléosomes possédant la marque de méthylation
+H3K4me$3$.
+
+% subsubsection promoteurs (end)
+
+\subsubsection{\textit{Enhancers} et \textit{silencers}}
+\label{ssub:enhancers_et_silencers}
+
+Les \textit{enhancers} et \textit{silencers} sont respectivement définis par
+leur effet positif ou négatif sur l'expression d'un gène cible. Cet effet peut
+notamment être observé par transfert d'un plasmide contenant l'élément
+régulateur en amont d'un gène rapporteur dans un animal transgénique ou dans
+des cultures cellulaires transfectées (voir
+\ref{sub:validation_experimentale}). Leur activité ne dépend généralement pas
+de leur position et de leur orientation sur le plasmide. Selon l'environnement
+cellulaire, une région régulatrice peut être soit \textit{enhancer} soit
+\textit{silencer}, en fonction de la nature de co-activateurs ou de
+co-répresseurs des TFs recrutés. Il y a néanmoins relativement peu de
+\textit{silencers} caractérisés et l'on utilise le terme d'\textit{enhancers}
+pour désigner de manière générale ces régions régulatrices.
+
+%\begin{figure}
+\bfig
+    \centering
+\includegraphics[width=1.0\textwidth]{figures/furlong-carvajal-enhancers-patterns.pdf}
+\captionbf{Différents \textit{enhancers} conduisent à différents patterns d'expression}{
+    
+    (A) Figure tirée de \cite{Wilczynski2010p575}, montrant le réseau de
+    cis-régulation du gène \textit{even-skipped} chez la \textit{Drosophile}.
+    Des enhancers individuels (boîtes colorées) conduisent à des motifs
+    d'expression distincts (indiqués dans les embryons par la même couleur).
+    Les cercles colorés au sein des régulateurs indiquent les couleurs des CRMs
+    régulés.
+
+    (B) Figure tirée de \cite{Carvajal2008p395}, représentant les différents
+    éléments régulateur du locus \textit{Mrf4}/\textit{Myf5}. Chaque boîte
+    colorée représente une régulation de la transcription à un stade de
+    développement particulier ou dans une région anatomique spécifique du
+    muscle embryonnaire ou adulte.
+
+} 
+\label{fig:enhancers-pattern}
+\efig
+%\end{figure}
+
+Les \textit{enhancers} peuvent se situer à des distances variables du gène
+qu'ils régulent~\cite{Maniatis1987fk}, pouvant parfois aller jusqu'à $1$ Mb
+comme dans le cas de \textit{Shh} chez la souris~\cite{Lettice2003uq} (voir
+fig. \ref{fig:visel-shh-CRM-medical}). Les enhancers contiennent de multiples
+sites de fixations de TFs. Cette multiplicité est requise pour l'activité
+enhancer, comme cela l'a été montré pour le premier enhancer découvert : celui
+du virus simien 40 (SV40)~\cite{Schirm1987kx,Ondek1988vn}. Un gène peut par
+ailleurs posséder plusieurs enhancers distincts conduisant à des expressions
+spécifiques dans différents tissus, comme cela l'a été montré dans le cas du gène
+\textit{eve} chez la \textit{Drosophile}~\cite{Wilson2009p3225} ou dans le cas
+du cluster de gènes de détermination myogénique \textit{Myf5} et \textit{Mrf4}
+chez les mammifères~\cite{Carvajal2008p395} (fig.~\ref{fig:enhancers-pattern}).
+Ainsi, les différents enhancers d'un même gène peuvent être vus comme autant de
+points d'entrée d'un réseau de régulation génétique, représentant diverses
+fonctions logiques et intégrant différentes information spatio-temporelles pour
+produire en sortie une expression génétique spatio-temporelle finement
+contrôlée~\cite{Bolouri2002uq,Buchler2003fu}.
+
+Enfin, comme décrit en fig.~\ref{fig:hardison-enhancer-states}, les enhancers
+sont associés à de hauts niveaux de marque épigénétique
+H3K4me$1$~\cite{Heintzman2009ys} et sont souvent fixés par le co-activateur
+p$300$~\cite{Wang2005zr,Heintzman2009ys}.
+
+
+\subsubsection{Insulateurs}
+\label{ssub:insulateurs}
+
+Les insulateurs sont des CRMs qui restreignent l'effet des enhancers sur leur
+gène cible~\cite{Wallace2007ly}. Ainsi, certains insulateurs possèdent une
+activité de blocage d'enhancers. Situés entre un enhancer et un promoteur
+cible, ces insulateurs bloquent l'activité de l'enhancer, conduisant à une
+réduction de l'expression du gène cible~\cite{Chung1993ve}. Chez les
+mammifères, la fixation de la protéine CTCF est nécessaire à cette activité de
+blocage de l'activité enhancer~\cite{Bell1999qf}, alors que chez la
+\textit{Drosophile} et plusieurs autres insectes il existe au moins quatre
+protéines additionnelles qui sont suffisantes à la réalisation de cette
+activité~\cite{Schoborg2010bh}. Par ailleurs, les insulateurs peuvent
+servir de barrière de protection contre des marques d'hétérochromatine
+répressives. De tels insulateurs permettent notamment d'éviter les
+effets de positions -- la modification de l'expression d'un gène selon sa
+position dans le chromosome -- lorsqu'ils entourent un gène rapporteur intégré
+au hasard dans le génome~\cite{Recillas-Targa2002dq}. Cette activité passe
+notamment par le recrutement de \textit{USF}, protéine qui recrute des enzymes
+de modification de la chromatine. Un insulateur peut combiner les activités de barrière de protection et de blocage d'enhancer.
+
+De même que les enhancers, les insulateurs peuvent se situer à des distances
+variables des gènes qu'ils régulent. Il est à noter que la protéine CTCF
+possède d'autres fonctions que celle d'isolation, et tous les sites de CTCF ne
+correspondent pas forcément à des insulateurs~\cite{Phillips2009cr}.
+
+% subsubsection insulateurs (end)
+
+% subsubsection enhancers_et_silencers (end)
+
+% subsection les_diff_rents_types_de_crms (end)
+
+%\subsection{Modules et fonctions logiques}
+
+%\bfig
+%\includegraphics[width=\textwidth]{figures/stathopoulos-CRMs-sites-twist-dorsal-snail.pdf}
+%\captionbf{}{
+    %Figure tirée de \cite{Stathopoulos2005p4051}.
+%} 
+%\efig
+
+\subsection{Grammaire des enhancers : enhanceosome vs billboard}
+\label{sub:enhanceosome_billboard}
+
+\begin{figure}[p!]
+    \centering
+\includegraphics[width=.8\textwidth]{figures/kulkarni-billboard.pdf}
+\captionbf{Deux modèles d'enhancers: enhanceosome et billboard}{
+
+    Figure tirée de~\cite{Kulkarni2003nx}. (A) Dans le modèle enhanceosome,
+    l'enhancer traite l'information des multiples TFs qui le fixent. Un
+    complexe très structuré crée une interface qui recrute la
+    machinerie de transcription basale. L'enhancer peut être vu comme un
+    ordinateur moléculaire qui produit à partir d'entrées multiples un seul
+    signal vers la machinerie de transcription. Le gène cible n'est activé
+    qu'en cas de formation du complexe entier, ce qui fournit un interrupteur
+    binaire on/off seulement activé en cas de stimulus adéquat. La
+    déstabilisation du complexe en changeant par exemple la concentration d'une
+    des protéines permettrait alors d'obtenir une réponse graduelle.  (B,C)
+    Modèle d'enhancer \og billboard \fg. Dans ce cas, l'enhancer ne consiste pas en
+    une seule unité de régulation, mais en des sous-unités pouvant contenir
+    différentes informations (répression ou activation par exemple) que la
+    machinerie basale échantillonne soit itérativement (B), soit simultanément
+    (C).
+
+} 
+\label{fig:kulkarni-billboard}
+\end{figure}
+
+
+Nous l'avons vu, les CRMs contiennent en général de multiples sites de liaisons
+(TFBS) pour un ou plusieurs TFs. On parle de \textit{clustering}
+(regroupement). Lorsque les TFBS correspondent à plusieurs TFs différents, on
+parle de CRM hétérotypique, et dans le cas où ils correspondent à un même TF,
+on parle de CRM homotypique. Cette distinction est surtout utile pour décrire
+les différentes méthodes de prédiction de CRM, car la plupart des CRMs
+identifiés chez les Métazoaires sont hétérotypiques~\cite{Aerts2012p3868}.
+L'organisation de ces sites de liaison relève de deux types d'architecture
+principaux (fig.~\ref{fig:kulkarni-billboard}).
+
+
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/panne-enhanceosome.pdf}
+\captionbf{L'enhanceosome de l'interferon-$\beta$}{
+
+    Figure tirée de~\cite{Panne2008kl} représentant le complexe de TFs
+    assemblés sur l'enhanceosome IFN-$\beta$, formant une surface de
+    reconnaissance agissant comme une seule unité de régulation.
+
+}
+\label{fig:panne-enhanceosome}
+\efig
+
+\subsubsection{Le modèle ``enhanceosome''}
+\label{ssub:le_mod_le_enhanceosome_}
+
+Dans ce modèle, l'architecture des sites de liaison est de première importance. Le
+paradigme en est l'enhancer du gène humain interferon-$\beta$, sur lequel $8$
+TFs se lient pour former une surface de reconnaissance
+continue~\cite{Panne2008kl}. Les TFBS de cet enhancer se recouvrent les uns les
+autres, créant au final un complexe de TFs fixés à l'ADN agissant comme une
+seule unité de régulation (fig.~\ref{fig:panne-enhanceosome}).
+
+
+% subsubsection le_mod_le_enhanceosome_ (end)
+
+
+\subsubsection{Le modèle ``billboard''}
+\label{ssub:le_mod_le_billboard_}
+
+La majorité des CRMs adhèrent à ce type d'organisation. L'architecture y est
+libre : les sites de liaisons n'ont pas de contrainte de nombre, d'ordre, de
+sens, ou d'espacement~\cite{Kulkarni2003nx}. De tels CRMs sont propices à une
+détection informatique basée sur la densité en sites de liaisons pour
+différents TFs.
+
+% subsubsection le_mod_le_billboard_ (end)
+
+
+
+\subsection{Évolution des enhancers}
+\label{sub:evolution-des-enhancer}
+
+La fonction centrale que jouent les enhancers dans la régulation de
+l'expression génétique laisse à penser que ceux-ci seraient sous sélection et
+leur séquence serait donc plus conservée que celle des régions non codantes du
+génome. De fait, la comparaison de séquences non-codantes entre espèces proches
+s'avère être un mode de détection puissant des régions de
+régulation~\cite{Prabhakar2006ys}. Ainsi, l'utilisation de la conservation
+entre des espèces lointaines comme l'homme et le poisson \textit{Fugu} ou de
+l'extrême conservation entre des espèces proches comme l'homme, la souris et le
+rat, permet de détecter des régions ayant une activité enhancer \invivo avec un
+succès proche de $50\%$~\cite{Pennacchio2006vn}. À l'instar de la régulation de
+l'interféron-$\beta$, de telles séquences très contraintes obéissent à une
+logique de type \og enhanceosome \fg où la fonction est intimement liée à la
+séquence.
+
+
+
+\bfigp
+\includegraphics[width=0.95\textwidth]{figures/liberman-crm-conservation-flexibility.pdf}
+\captionbf{Flexibilité du code de cis-régulation au cours de l'évolution chez les \textit{Drosophiles}}{
+
+    Figure tirée de \cite{liberman2009p3886}, montrant l'expression du gène
+    \textit{sog} par ISH chez plusieurs espèces de \textit{Drosophilid\ae}
+    (A,D,G,J), ainsi que l'expression d'un rapporteur \textit{LacZ} sous
+    contrôle de la région de régulation de \textit{sog} chez l'espèce
+    considérée (B,E,H,K), dont une représentation schématique est donnée pour
+    chaque cas (C,F,I,L).  Les sites de fixation pour différents TFs sont
+    indiqués par un rectangle de couleur.
+
+} 
+\label{fig:liberman-crm-flexibility}
+\efigp
+
+
+Contrastant avec cette vision d'enhancers très contraints, plusieurs études
+pointent vers une plus grande flexibilité des séquences
+enhancers~\cite{Ludwig2000zr,Dermitzakis2002ly,Moses2006ve}. Supportant l'idée
+que la plupart des enhancers se comportent selon le modèle \og billboard \fg,
+la grammaire des sites de fixation dans des séquences orthologues apparaît
+comme étant loin d'être figée~\cite{liberman2009p3886}. Ainsi, l'enhancer
+régulant le gène \textit{short gastrulation} (\textit{sog}), bien que
+présentant chez différentes espèces de \textit{Drosophiles} une architecture
+variable des sites de fixation le composant, conduit à un même motif
+d'expression (fig.~\ref{fig:liberman-crm-flexibility}). Cette idée qu'une
+panoplie de grammaires conduisent à une même régulation est confortée par les
+résultats de~\citet{Zinzen2009p760} où des enhancers ayant des \og entrées \fg
+différentes (i.e étant fixés par des TFs différents pendant des durées
+variables) produisent des \og sorties \fg similaires, dans ce cas une
+expression spécifique à un tissu donné.  
+
+
+Supportant l'idée d'une flexibilité de la régulation, plusieurs études ont
+exhibé l'évolution rapide des sites de liaison de TFs dans le
+génome~\cite{Wilson2009p3225}. Une étude de la fixation génomique des \tfs
+CEBP$\alpha$ et HNF4$\alpha$ dans les cellules du foie de $5$ espèces de
+vertébrés (l'homme, deux espèces de souris, le chien et le poulet) a notamment
+montré que les événements de fixation conservés chez les $5$ espèces sont très
+rares ($\sim0.3\%$ des pics humains) et correspondent à des régions
+ultraconservées proches de gènes importants dans la spécification du
+foie~\cite{Schmidt2010p3228}. Par ailleurs, lors de la perte de fixation dans
+l'une des espèce, un gain de fixation proche ($\pm10$kb) est observé dans la
+moitié des cas. Étonnamment, ces changements rapides du câblage du réseau
+affectent peu l'expression génétique globale~\cite{Tirosh2008qf,Odom2007bh}.
+
+Cette évolution est en grande partie due à une évolution de séquence de
+fixation. Ainsi, une étude récente a utilisé une souris portant le chromosome
+$21$ de l'homme pour comparer la fixation du facteur HNF4$\alpha$ dans un
+contexte murin par rapport au contexte original~\cite{Wilson2008dq}. Le paysage
+de fixation sur le chromosome $21$ exogène a très précisément récapitulé celui
+observé chez l'homme (fig.~\ref{fig:wilson-CRMs-evolution}), montrant que le
+contexte cellulaire est sensiblement le même chez les deux espèces. Par
+ailleurs, des modifications épigénétiques ainsi que l'expression des ARNm ont
+pu être récapitulées.
+
+\bfigp
+\includegraphics[width=1\textwidth]{figures/wilson-CRMs-evolution.pdf}
+\captionbf{Évolution de la fixation de HNF$4\alpha$ chez les mammifères}{
+    
+    Figure tirée de \cite{Wilson2009p3225}, représentant la fixation par
+    \chipseq (pics de couleur) du facteur de transcription humain HNF$4\alpha$
+    (ou son homologue murin HNF$4$a) chez l'homme, la souris, le macaque, le
+    chien, ainsi qu'une souris transgénique contenant le chromosome 21 humain.
+    Les zones grisées indiquent : (i) une fixation de HNF$4\alpha$ chez l'homme
+    retrouvée sur le chromosome 21 humain de la souris mais pas chez le macaque
+    malgré la proximité de séquence, (ii) une fixation de HNF$4$a spécifique
+    à la souris, et (iii) une fixation spécifique aux primates qui a lieu sur
+    des éléments transposables. 
+
+} 
+\label{fig:wilson-CRMs-evolution}
+\efigp
+
+
+Reste la question du mécanisme permettant cette évolution rapide. Une étude
+portant sur $7$ \tfs chez les mammifères a montré qu'une proportion
+importante ($\sim20\%$) des régions de fixation de ces TFs se situent au
+sein de différentes familles de transposons~\cite{Bourque2008p3218}
+(fig.~\ref{fig:wilson-CRMs-evolution}). Ces transposons, ou éléments
+transposables, sont des anciens rétrovirus intégrés dans les génomes mammifères
+ayant la capacité de se dupliquer pour s'intégrer dans une autre région du
+génome et jouent un rôle fondamental dans l'évolution des
+génomes~\cite{Cordaux2009p1515}. Leur accumulation dans le génome
+a vraisemblablement permis d'obtenir un matériau de base permettant de produire
+par mutations ponctuelles des éléments de régulation \textit{de
+novo}~\cite{Feschotte2008dq}. Par ailleurs, les transposons peuvent permettre
+de diffuser par \og copier-coller \fg des éléments de régulation existant.
+Ainsi, des vagues d'expansion de transposons spécifiques à différentes espèces
+de mammifères sont à l'origine de la variabilité des régions de fixation
+observée dans le cas du facteur CTCF~\cite{Schmidt2012p3262}.
+
+\subsection{Les \og shadow enhancers \fg}
+\label{sub:shadow_enhancers}
+
+
+L'évolution des éléments de cis-régulation est un mécanisme majeur permettant
+la diversité animale. Néanmoins, de tels changements pourraient compromettre
+certaines activités génétiques essentielles. Des expériences de
+\chipchip ont suggéré que plusieurs gènes de développement actifs lors du
+développement précoce de l'embryon de Drosophile possèdent des CRMs
+secondaires, qui conduisent à des motifs d'expression génétique comparables
+à ceux produits par des CRMs \og primaires \fg plus
+proximaux~\cite{Zeitlinger2007ly}. L'expression de \og shadow enhancer \fg
+a été proposée par Michael Levine en 2008 pour décrire ces CRMs redondants et
+souvent distaux de plusieurs dizaines de kb du gène régulé~\cite{Hong2008zr}.
+Il est probable que de tels CRMs soient apparus au cours de l'évolution par
+duplication du CRM primaire, à l'instar du phénomène de duplication des
+séquences codant pour des protéines.  L'avantage évident que peut conférer la
+redondance d'un élément de régulation est d'offrir de la robustesse face aux
+mutations. Par ailleurs, une telle redondance permet de faciliter la divergence
+et donc la spécialisation des différents CRMs. Ainsi les \se semblent évoluer
+plus rapidement que les CRMs primaires auxquels ils sont
+apparentés~\cite{Hong2008zr} pour fournir de nouveaux sites de fixation et
+conduire à de nouvelles activités de régulation sans bloquer la fonction
+critique de certains gènes de développement.
+
+\bfig
+\includegraphics[width=1.0\textwidth]{figures/perry-shadow-enhancer.pdf}
+\captionbf{\og Shadow enhancer \fg du gène de segmentation \textit{Hunchback}}{
+    
+    Figure tirée de~\cite{Perry2011ve}, montrant des hybdridations \insitu de
+    transgènes contenant le gène rapporteur \textit{LacZ} sous contrôle de
+    l'enhancer proximal (A) ou du \og shadow enhancer \fg plus distal (B) du
+    gène de segmentation \textit{Hb}. (C) Position des enhancers par rapport
+    à \textit{Hb} (bleu : proximal, rouge : distal). 
+
+}
+\label{fig:perry-shadow-enhancer}
+\efig
+
+Un exemple mêlant robustesse et divergence est le
+cas des multiples CRMs régulant le gène \textit{Svb} chez la Drosophile.
+Chaque CRM est lié à la production d'un motif distinct de trichomes
+(excroissances de l'épithélium comparables à des poils) sur la larve : ainsi,
+plusieurs mutations dans ces différents CRMs sont nécessaires pour observer un
+changement morphologique conséquent~\cite{McGregor2007p400}. Dans ce même
+système, il a été montré que deux CRMs supplémentaires, des \se, sont
+dispensables dans des conditions de température usuelles, mais requis lorsque
+les embryons se développent dans des conditions de température
+extrêmes~\cite{Frankel2010p463}.
+
+
+Par ailleurs, il a été montré que les gènes de segmentation (ou gènes
+\textit{gap}) de la Drosophile possèdent tous des \se
+(fig.~\ref{fig:perry-shadow-enhancer}). Leur rôle semble être d'assurer une
+plus grande précision spatiale du motif d'expression du gène
+régulé : la perte de l'un des CRMs, proximal aussi bien que
+\og shadow \fg, conduisant à une expression trop restreinte ou trop répandue
+spatialement selon le cas~\cite{Perry2011ve}.
+
+
+\subsection{Par delà les enhancers: les \og super-enhancers \fg}
+\label{sub:les_super_enhancers}
+
+
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/whyte-super-enhancer-cluster.pdf}
+\captionbf{De l'enhancer au super-enhancer}{
+
+    Figure tirée de~\cite{Whyte2013tg}, montrant les profils de \chipseq des
+    TFs maîtres Oct4, Sox2, Nanog, Klf4 et Esrrb aux loci de \textit{Gck} et
+    \textit{miR-290-295} dans les cellules souches embryonnaires. Le
+    super-enhancer se distingue du simple enhancer par sa taille ($27$kb), sa
+    grande concentration en TFs maîtres, notamment Klf4 et Esrrb, et la
+    fixation de la protéine Med$1$ du complexe Mediator.
+
+}
+\label{fig:whyte-super-enhancer}
+\efig
+
+Récemment, il a été montré que certains groupements d'enhancers peuvent agir
+comme une même unité de régulation : on parle de \textit{super-enhancers}
+\cite{Whyte2013tg}. Ces régions de taille typique $\sim10$kb
+(fig.~\ref{fig:whyte-super-enhancer}), sont fixées par des TFs maîtres et sont
+associées à des gènes encodant des régulateurs clés de l'identité cellulaire.
+Identifiés dans les cellules souches embryonnaires (ESCs), ces ensembles
+d'enhancers sont fixés par le complexe co-activateur Mediator, qui interagit
+avec la cohésine pour former un anneau permettant de connecter la région de
+régulation au promoteur~\cite{Kagey2010p606}. Par ailleurs, les gènes associés
+aux super-enhancers possèdent un niveau particulièrement élevé d'expression et
+leur knock-down est associée à une perte de l'état souche des cellules.
+
+Ainsi, ce second niveau d'organisation de la régulation pourrait simplifier la
+modélisation de la régulation du type cellulaire, en passant de millier de
+traces de fixation pour différents TFs à quelques centaines de super-enhancers
+contrôlant les gènes clés de l'identité cellulaire.
+
+% subsection les_super_enhancers (end)
+
+
+%\bfig
+%\includegraphics[width=\textwidth]{figures/graf-differentiation-landscape.pdf}
+%\captionbf{Les antagonismes entre \tfs sculptent le paysage des destins
+%cellulaires}{
+%   Figure tirée de \cite{Graf2009p2592}. Vision géométrique de la
+%   différenciation cellulaire inspirée de Waddington (voir
+%   fig.\ref{fig:furusawa-epigenetic-landscape}).
+%} 
+%\efig
+%
+
+%\newpage
+\FloatBarrier
+\clearpage
+\newpage
+\section{Prédiction et validation des CRMs}
+\label{sec:prediction_crms}
+
+\bfigp
+\includegraphics[width=\textwidth]{figures/hardison-CRM-prediction.pdf}
+\captionbf{Différentes approches pour la prédiction des CRMs}{
+
+    Figure tirée de \cite{Hartwell1999p560}, résumant les différentes approches
+    de prédiction des CRMs. (a) Prédiction de sites sites de fixations (TFBS)
+    pour différents facteurs de transcription. Le regroupement ou
+    \textit{clustering} de TFBS définit un CRM putatif. (b) Le CRM, possédant des
+    contraintes fonctionnelles, est conservé chez plusieurs espèces proches. La
+    séquence d'ADN correspondant au CRM (un enhancer connu de la
+    $\beta$-globine) est montrée chez les différentes espèces. Les nucléotides
+    qui diffèrent par rapport à la séquence de référence (la souris) sont
+    indiqués en bleu, et les sites de fixation de TFs connus ou prédits sont
+    indiqués en orange. Ceux-ci correspondent à des séquences complètement
+    conservées : on parle d'empreinte phylogénétique ou \textit{phylogenetic
+    footprint}. (c) Une expérience de \chipseq spécifique au TF A produit un
+    pic au niveau du CRM. Il est à noter que des pics peuvent exister même si
+    aucun site de fixation n'est prédit, dû par exemple à une interaction
+    protéine-protéine entre le TF A et un autre TF fixé à l'ADN.
+
+} 
+\label{fig:hardison-CRM-prediction}
+\efigp
+
+\subsection{Méthodes utilisant la concentration en sites de fixation}
+\label{sub:m_thodes_utilisant_la_concentration_en_sites_de_fixation}
+
+Nous l'avons vu, une propriété des CRMs est leur grande concentration en TFBS.
+Ceci a motivé des approches de prédiction de promoteurs et d'enhancers basées
+sur leur contenu ou \textit{clustering} en motif
+(fig.~\ref{fig:hardison-CRM-prediction}a). L'avantage de telles approches est
+qu'elles peuvent être réalisées avec seulement la séquence d'ADN génomique et
+des modèles de TFs ou motifs (par exemple des PWMs, voir fig.
+\ref{fig:wasserman-PWM}) représentant les \tfs impliqués dans le processus
+étudié. Cependant, les clusters de motifs sont très répandus dans les grands
+génomes, et sans l'ajout d'informations supplémentaires comme les marques
+épigénétiques ou l'expression des gènes voisins, ces approches produisent un
+grand nombre de faux positifs (éléments prédits comme positifs mais étant en
+réalité négatifs). Par ailleurs, les TFs impliqués ne sont pas toujours connus,
+et il faut alors apprendre des motifs putatifs à partir de séquences
+fonctionnelles.
+
+\subsubsection{Approches utilisant des motifs connus}
+\label{ssub:approches_utilisant_des_motifs_connus}
+
+L'une des premières investigations basée sur le regroupement de TFBS utilisait
+$5$ motifs connus de la détermination musculaire pour prédire par régression
+linéaire les CRMs actifs dans le muscle~\cite{Wasserman1998p3779}. Le taux de
+validation était relativement bas, autour de $20\%$. De même, chez \dmel,
+plusieurs études ont utilisé le clustering de motifs pour prédire des CRMs de
+différents processus développementaux (par ex \citet{Berman2002oq}). Ces études
+ont trouvé de nouveaux enhancers validés expérimentalement (bonne
+sensibilité) mais avaient des taux de prédiction relativement bas, entre
+$15$ et $30\%$.  L'algorithme \textit{Ahab}~\cite{Rajewsky2002kl}, utilisant un
+modèle thermodynamique de fixation des TFs sur les CRMs, a quant à lui réussi
+à prédire un nombre bien plus important de régions fonctionnelles : $\sim80\%$
+des modules prédits à proximité de $29$ gènes de segmentation chez la
+drosophile ont effectivement récapitulé le motif d'expression du gène
+associé~\cite{Schroeder2004tg}. Ce succès semble notamment être dû au fait que
+ce modèle thermodynamique, basé sur une prise en compte exhaustive de toutes
+les segmentations possibles des CRMs en motifs et en ADN \og background \fg,
+permet de donner plus de poids au cas où plusieurs sites de faibles affinité
+pour un TF se trouvent au sein d'un même module, alors que les autres méthodes
+utilisent généralement un seuil de probabilité relativement élevé (afin
+d'éviter les faux positifs) à partir duquel une séquence est considérée comme
+fixée par un TF. Par ailleurs, cette étude s'est restreinte à un ensemble de
+gènes connus pour lesquels les régions à proximité riches en TFBS ont \apriori
+plus de chances d'être fonctionnelles. De manière générale, plus le domaine de
+recherche est étendu (par exemple, le génome entier), plus le nombre de faux
+positifs augmente.
+
+
+% subsubsection approches_utilisant_des_motifs_connus (end)
+
+\subsubsection{Approches \denovo où les motifs ne sont pas connus}
+\label{ssub:approches_denovo_o_les_motifs_ne_sont_pas_connus}
+
+Lorsque les motifs (PWMs) ne sont pas connus à l'avance, il faut les générer
+\denovo à partir de leur surreprésentation dans des CRMs connus. Par exemple,
+l'algorithme CisModule permet de générer des motifs et des modules
+simultanément en utilisant un modèle de mélange hiérarchique~\cite{Zhou2004hc}.
+Lorsqu'il est appliqué aux CRMs musculaires introduits précédemment, il permet
+de retrouver certains motifs connus et permet de retrouver $\sim70-80\%$ des
+séquences connues lorsqu'elle sont mélangées avec un nombre similaire de
+séquences aléatoires. Par ailleurs, l'apprentissage de modèles permettant de
+discriminer différentes classes de CRMs entre elles plutôt qu'une classe de
+CRMs par rapport à des séquences aléatoires ou intergéniques peut s'avérer plus
+fructueux. Ainsi, \cite{Smith2006ij} ont utilisé des motifs connus ainsi que
+des motifs appris \textit{de novo} avec le programme DME~\cite{Smith2005bs}
+pour leur capacité à discriminer des séquences appartenant à différents jeux de
+données de régions promotrices pour bâtir un modèle de régression logistique
+permettant de prédire l'activité tissu-spécifique dans $45$ des $56$ tissus
+humains et murins considérés. Il existe aussi plusieurs méthodes qui
+n'utilisent pas de motifs du type PWM, mais de purs modèles probabilistes tels
+que des chaînes de Markov d'ordre $5$ ou des regroupements de \og mots \fg de
+$k$ nucléotides ou $k$-mers selon des critères de distance de Hamming et
+surreprésentés dans les séquences d'intérêt, par exemple~\cite{Cao2010p1805}.
+Ces méthodes sont passées en revue dans \cite{Kantorovitz2009p2937}, et elles
+peuvent atteindre des sensibilités de $\sim60\%$ pour la prédiction de CRMs
+mammifères. L'intérêt est que ces études ne présument pas d'un modèle de
+fixation des TFs à l'ADN. C'est aussi un désavantage, puisqu'elles sont moins
+informatives quant au réseau génétique sous-jacent et aux mécanismes de
+régulation impliqués.
+
+% subsubsection approches_denovo_o_les_motifs_ne_sont_pas_connus (end)
+
+
+% subsection m_thodes_utilisant_la_concentration_en_sites_de_fixation (end)
+
+\subsection{Méthodes utilisant la phylogénie}
+\label{sub:m_thodes_utilisant_la_phylog_nie}
+
+Les approches utilisant la comparaison des génomes de différentes espèces pour
+prédire des CRMs sont basées sur l'idée que les séquences de régulation sont
+plus fortement conservées que l'ADN non fonctionnel les entourant. Nous l'avons
+vu en \ref{sub:evolution-des-enhancer}, une proportion importante de CRMs ne
+satisfont pas à cette règle. Cette approche ne permet donc d'étudier que le
+sous-ensemble de CRMs qui a subi une forte pression de sélection depuis le
+dernier ancêtre commun aux espèces considérées et ne donne pas accès aux CRMs
+apparus récemment au sein d'une espèce.
+
+\subsubsection{Prédictions à partir de la contrainte évolutive seule}
+\label{ssub:pr_dictions_partir_de_la_contrainte_volutive_seule}
+
+L'alignement de séquences non-codantes orthologues fait apparaître des parties
+très conservées, avec peu de variations dans les séquences sous-jacentes,
+entourées de séquences accumulant les variations
+(fig.~\ref{fig:hardison-CRM-prediction}b). De telles séquences conservées sont
+alors interprétées comme ayant été sous sélection, les substitutions délétères
+ayant été rejetées au cours de l'évolution~\cite{Dermitzakis2005kl}. Par
+analogie avec les empreintes à la DNAse I, on parle d'empreinte phylogénétique
+pour caractériser ces courtes séquences très conservées ($\sim10$bp), traces de
+la fixation putative d'un facteur de transcription.  Ces empreintes s'avèrent
+être un indicateur fiable de fonctionnalité~\cite{Kheradpour2007mi} et, parce
+qu'elles ne reposent pas sur des modèles \apriori de fixation, elles permettent
+de plus de trouver des motifs de régulation non connus~\cite{Xie2005pi}. Au
+niveau de séquences plus longues ($\sim100$bp), la contrainte évolutive permet
+de détecter des CRMs entiers. Ainsi, comme nous l'avons vu en
+\ref{sub:evolution-des-enhancer}, l'utilisation de la conservation extrême
+permet d'atteindre $50\%$ de taux validation~\cite{Pennacchio2006vn}.
+Néanmoins, lorsque ces contraintes de conservation extrême (par exemple
+homme-\textit{Fugu}) sont relâchées, le taux de validation tombe drastiquement,
+atteignant $\sim5\%$~\cite{Attanasio2008ff}, montrant la nécessité d'allier le
+critère de conservation à d'autres données (expression, ChIP\ldots) pour
+améliorer la prédiction des CRMs.
+
+
+% subsubsection pr_dictions_partir_de_la_contrainte_volutive_seule (end)
+
+\subsubsection{Prédictions utilisant la phylogénie et des motifs connus}
+\label{ssub:pr_dictions_utilisant_la_phylog_nie_et_des_motifs_connus}
+
+Une approche pour améliorer les prédictions est de combiner les approches
+précédentes en utilisant à la fois le \textit{clustering} en TFBS et la
+contrainte évolutive. À l'échelle du génome entier, cette approche permet de
+filtrer les résultats pour améliorer le signal de détection chez la
+Drosophile~\cite{Sinha2004lh}.  Du côté des mammifères, en utilisant les motifs
+de la base de données TRANSFAC et la conservation entre l'homme et la souris,
+\citet{Blanchette2006fu} ont créé une base de données de modules, PReMods, qui
+retrouve $\sim17\%$ de CRMs connus et recoupe $40\%$ des fragments occupés par
+le co-activateur et marqueur de l'activité enhancer p$300$. D'autres
+méthodes se sont concentrées sur des types cellulaires bien définis. Par
+exemple, la recherche de sites conservés pour des motifs de TF des cellules
+sanguines connus ~\cite{Donaldson2005ye} a permis de définir des CRMs dont $2$
+ont été testés et validés. 
+
+Certains efforts ont par ailleurs été menés pour sortir du cadre d'une
+conservation de séquence stricte en modélisant l'évolution d'un CRM fixé par un certain
+nombre de motifs connus. Par exemple, le modèle MorphMS~\cite{Sinha2007tw}
+cherche au sein d'un alignement de deux séquences orthologues des régions
+prédites par un modèle d'évolution dérivé d'un ensemble de motifs choisis par
+l'utilisateur. Une extension de cette approche incorpore le gain et la perte de
+sites de fixation, mais n'a cependant pas encore été appliquée à l'échelle du
+génome~\cite{Majoros2010il}.
+
+% subsubsection pr_dictions_utilisant_la_phylog_nie_et_des_motifs_connus (end)
+
+\subsubsection{Approches utilisant la phylogénie pour générer des motifs \denovo}
+\label{ssub:approches_utilisant_la_phylog_nie_pour_g_n_rer_des_motifs_denovo}
+
+De même que précédemment, tous les motifs ne sont pas connus et il peut être
+utile d'avoir recours à de l'apprentissage direct à partir de séquences
+fonctionnelles connues pour aider à la prédiction. Par exemple, l'algorithme
+ESPER cherche des patterns (TFBS, \%GC, etc) surreprésentés dans des
+alignements multi-espèces de CRMs connus par rapport à des alignements d'ADN
+\apriori non fonctionnel~\cite{Taylor2006zt}. Cette méthode n'est pas
+restreinte à l'analyse de séquences conservées puisqu'elle peut potentiellement
+capturer des signatures de changements systématiques. La prédiction de régions
+de haut potentiel de régulation recouvre presque entièrement les prédictions de
+PReMods, et le test par transfection de ces régions à proximité de gènes
+exprimés dans les cellules érythroïdes et possédant un site pour un TF
+spécifique de l'érythroïde mène à un taux de validation de $50\%$. Une autre
+méthode consiste à chercher des mots surreprésentés dans un ensemble
+d'apprentissage de CRMs connus puis à restreindre les prédictions aux régions
+conservées~\cite{Kantorovitz2009p2937}. Les prédictions réalisées ont toutes
+été validées chez la Drosophile ($5/5$) comme chez la souris ($2/2$).
+
+% subsubsection approches_utilisant_la_phylog_nie_pour_g_n_rer_des_motifs_denovo (end)
+
+
+\subsection{Méthodes utilisant les marques épigénétiques et de \chipseq pour des TFs}
+\label{sub:m_thodes_utilisant_les_marques_pig_n_tiques}
+
+\subsubsection{Prédiction des promoteurs}
+\label{ssub:pr_diction_des_promoteurs}
+
+La méthode la plus fiable de prédiction d'un promoteur utilise le fait qu'il
+est toujours localisé au niveau d'un TSS, dont la position peut facilement être
+obtenue en alignant les séquences de l'ARN du gène correspondant sur le
+génome~\cite{Trinklein2003jl}. Le taux de validation avec cette seule
+contrainte est très élevé : $91\%$ ont une activité dans au moins un type
+cellulaire. Par ailleurs, la marque épigénétique H3K4me$3$ est aussi un
+indicateur des promoteurs actifs dans le type cellulaire étudié
+\cite{Heintzman2007gb} (fig.~\ref{fig:hardison-enhancer-states}).
+
+% subsubsection pr_diction_des_promoteurs (end)
+
+\subsubsection{Prédiction des enhancers}
+\label{ssub:pr_diction_des_enhancers}
+
+La prédiction des enhancers à partir des marques épigénétiques, comme
+l'acétylation des histones~\cite{Roh2005mb}, la méthylation H3K4me$1$
+\cite{Heintzman2009ys}, ou encore la présence du co-activateur
+p$300$~\cite{Visel2009p3750}, est très efficace, avec une expression
+tissue-spécifique dans $\sim80\%$ des cas~\cite{Hardison2012p3778}. Par exemple,
+ces différentes marques, présentes dans différents tissus, peuvent être
+utilisées comme autant d'entrées d'un modèle de Markov caché pour produire des
+prédictions fiables de CRMs tissu-spécifiques chez l'homme~\cite{Ernst2011cq}. 
+
+En fait, les prédictions d'activité enhancer à partir de ces marques
+épigénétiques est plus fiable qu'en utilisant la fixation de \fts
+tissu-spécifiques. Par exemple, sur $63$ séquences ADN fixées \invivo par le
+facteur spécifique des cellules sanguines GATA$1$ chez la souris, seulement la
+moitié conduisent à une activité après transfection dans des cultures
+cellulaires~\cite{Cheng2008fk}. Ces enhancers fonctionnels sont par ailleurs
+plus particulièrement associés à un site de fixation \textit{conservé} pour
+GATA$1$, montrant à nouveau la nécessité de combiner les approches pour
+améliorer la détection. Un taux de validation similaire a été observé pour le
+facteur de différenciation myogénique MyoD, avec $40\%$ de régions fixées ayant
+une activité après transfection en cellules.
+
+L'utilisation de données de fixation pour plusieurs TFs à la fois semble
+cependant améliorer le pouvoir de prédiction. Ainsi, \citet{Tijssen2011kx} ont
+étudié la co-fixation de GATA$1$ avec $4$ autres TFs hématopoïétiques dans des
+mégacaryocytes. En s'intéressant aux gènes à proximité de ces régions, ils en
+ont découvert plusieurs qui n'étaient pas précédemment connus comme étant
+important dans l'hématopoïèse. Leur fonction a été testée par knock-down, avec
+dans $8$ cas sur les $9$ testés une réduction de la production de globules
+rouges. 
+
+
+% subsubsection pr_diction_des_enhancers (end)
+
+% subsection m_thodes_utilisant_les_marques_pig_n_tiques (end)
+
+% subsection m_thodes_utilisant_la_phylog_nie (end)
+
+
+\bfig
+\includegraphics[width=\textwidth]{figures/hardison-CRM-test.pdf}
+\captionbf{Méthodes de validation des CRMs par transfection et transgenèse}{
+    
+    Figure tirée de \cite{Hartwell1999p560} présentant les méthodes \invitro et
+    \invivo de validation des CRMs. La région dont on souhaite tester
+    l'activité est insérée dans un plasmide codant pour un gène rapporteur qui
+    est transféré dans une culture cellulaire (transfection, panel a) ou dans
+    un organisme entier (transgenèse, panel b). Dans le cas du test d'un
+    promoteur, le CRM est placé directement en amont du gène rapporteur (on
+    utilise généralement la luciférase \textit{Luc}), alors que dans le cas
+    d'un enhancer, le CRM est placé en amont d'un promoteur minimal de faible
+    activité. L'activité de la luciférase donne une information quantitative
+    sur l'activité de la région testée (boîtes à moustache, panel a). Dans le
+    cas d'une transgenèse, le gène rapporteur généralement utilisé est
+    \textit{lacZ} qui encode la $\beta$-galactosidase. La révélation par
+    coloration permet de visualiser en bleu les tissus au sein lesquels
+    l'enhancer est actif.
+
+} 
+\label{fig:hardison-CRM-test}
+\efig
+
+\subsection{Validation expérimentale}
+\label{sub:validation_experimentale}
+
+%Il existe plusieurs méthodes pour s'assurer de la fonctionnalité d'un CRM prédit. 
+
+%Tout d'abord, une méthode indirecte donnant du crédit à la prédiction d'un CRM
+%est d'examiner le motif d'expression du gène dont le TSS est le plus proche. Si
+%cette expression reproduit les caractéristiques utilisées pour prédire le CRM
+%(par exemple, s'exprimer dans le muscle pour une prédiction de CRMs utilisant
+%l'abondance de sites de liaison de TFs musculaires), alors cela soutient l'idée
+%(mais ne la démontre pas) que la présence du CRM en est la cause.
+
+Une méthode %plus 
+directe permettant de démontrer qu'un fragment d'ADN régule
+l'expression génétique consiste en une expérience de gain de fonction dans
+laquelle un plasmide contenant le CRM prédit à proximité d'un gène rapporteur
+est introduit par transfection \invitro en cellule, permettant un suivi
+quantitatif de l'activité, ou par transgenèse \invivo dans un organisme, auquel
+cas le suivi est plus qualitatif mais permet d'établir la spécificité
+spatio-temporelle (tissu et stade de développement) de l'élément de régulation
+(fig.~\ref{fig:hardison-CRM-test}). Ce type d'expérience montre que le CRM
+prédit est \textit{suffisant} pour reproduire le motif génétique observé. De
+manière optimale, il faudrait aussi montrer par délétion ciblée de l'élément de
+régulation au sein du génome que ce dernier est \textit{nécessaire}
+à l'expression du gène endogène.
+
+\FloatBarrier
+
+\subsection{Implication des CRMs dans les maladies humaines}
+\label{sub:implication_des_crms_dans_les_maladies_humaines}
+
+\bfig
+\includegraphics[width=1.0\textwidth]{figures/visel-shh-CRM-medical.pdf}
+\captionbf{Impact physiologique de la délétion et de la mutation d'un enhancer}{
+
+Figure tirée de~\cite{Visel2009kx}. (a) L'enhancer \og membre \fg de
+\textit{Sonic hedgehog} (\textit{Shh}) est situé à $\sim1$ Mb de son gène
+cible, au sein d'un intron d'un gène voisin. Par transgenèse il conduit
+l'expression d'un rapporteur dans la partie postérieure du bourgeon de membre
+chez l'embryon de souris~\cite{Lettice2003uq}. (b) Les souris possédant une
+délétion ciblée de cet enhancer possèdent des membres tronqués, montrant son
+importance fonctionnelle au cours du développement~\cite{Sagai2005cr}. (c-e)
+Différentes mutations ponctuelles dans la séquence enhancer orthologue chez
+l'homme résultent en une polydactilie pré axiale (présence de doigts ou orteils
+supplémentaires), montrant l'impact potentiel de variations dans des régions
+non-codantes~\cite{Lettice2003uq}.
+
+}
+\label{fig:visel-shh-CRM-medical}
+\efig
+
+
+Au cours des dernières décennies, de nombreuses mutations dans les régions
+codantes des gènes, impliquant des défauts structurels des protéines
+associées, ont pu être associées à des maladies génétiques. À l'inverse, le
+rôle des mutations affectant des régions non codantes n'a été que peu exploré,
+essentiellement du fait de la difficulté d'annoter ces régions correctement
+afin de définir celles qui pourraient avoir une fonction d'intérêt. Plusieurs
+études ont cependant pu montrer que des variations affectant des enhancers
+distaux pouvaient conduire à des pathologies~\cite{Visel2009kx}.
+
+
+L'une de ces études concerne l'enhancer spécifique du membre de \textit{Shh}
+(fig.~\ref{fig:visel-shh-CRM-medical}). Cet enhancer, initialement décrit chez
+la souris, se situe à environ $1$ Mb de distance de \textit{Shh}, au sein de
+l'intron d'un gène voisin. Le séquençage de cet enhancer chez plusieurs
+individus humains a permis d'associer une douzaine de variations
+mono-nucléotidiques à la polydactilis pré axiale, \cad la présence de doigts ou
+d'orteils supplémentaires~\cite{Lettice2003uq}.  Des études supplémentaires
+chez la souris ont montré que les variations de séquences observées dans cet
+enhancer conduisent à une expression ectopique dans la partie antérieure du
+membre au cours du développement, ce qui est consistent avec la présence de
+doigts supplémentaires~\cite{Masuya2007nx}. Par ailleurs, la délétion de
+l'enhancer orthologue de la souris entraîne la troncation des
+membres~\cite{Sagai2005cr}. 
+
+Ainsi, ces résultats montrent l'importance de l'identification des enhancers
+pour permettre à des études de génétique humaine d'explorer le rôle
+potentiellement pathologique de mutations dans des régions non codantes
+fonctionnelles.
+
+% subsection implication_des_crms_dans_les_maladies_humaines (end)
+\FloatBarrier
+\newpage
+\section{Bases de données}
+
+La biologie moderne est caractérisée par l'accumulation de données biologiques
+qu'il s'agit d'intégrer puis d'interpréter : on parle de biologie integrative.
+En particulier, depuis le séquençage du génome humain il y a maintenant plus de
+dix ans~\cite{Lander2001p1633}, le nombre de génome séquencés n'a cessé
+d'augmenter, tandis que dans le même temps le prix du séquençage diminuait
+drastiquement (fig.~\ref{fig:sboner-cost-sequencing.jpg}). Afin de permettre la
+gestion et l'utilisation de ces données, de nombreux outils et bases de données
+ont été mis à disposition~\cite{Wasserman2004p624}. Nous évoquons ici ceux qui
+nous paraissent essentiels du point de vue de la régulation en \textit{cis}.
+
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/sboner-cost-sequencing.pdf}
+\captionbf{Évolution du coût de séquençage}{
+
+Figure adaptée de~\cite{Sboner2011fk}, montrant l'évolution du coût du
+séquençage d'$1$ Mb d'ADN au cours de la dernière décennie, comparé à une
+évolution de type \og Loi de Moore \fg où le prix serait diminué de moitié tous
+les $18$ mois.
+
+}
+\label{fig:sboner-cost-sequencing.jpg}
+\efig
+
+
+\subsection{Obtention de données génomiques}
+\label{sub:obtention_donnees_genomiques}
+
+Tout d'abord, les différents génomes séquencés sont à disposition sur des bases
+de données publiques d'où ils peuvent être téléchargés puis analysés en aval.
+Parmi les plus généralistes se trouvent la base de donnée de UCSC
+(UCSC Genome Browser, \url{http://genome.ucsc.edu}) et celle de l'EMBL (Ensembl,
+\url{http://www.ensembl.org}) \footnote{Les données sont accessibles sur les
+    pages de téléchargement, respectivement
+    \url{http://hgdownload.cse.ucsc.edu/downloads.html} pour UCSC et
+    \url{http://www.ensembl.org/info/data/ftp/index.html} pour Ensembl 
+}. 
+
+Sont à disposition les génomes des différentes espèces séquencées pour les
+différents assemblages réalisés, des alignements des génomes de différentes
+espèces deux par deux (\textit{pairwise alignments}) ou par groupes d'espèces
+(\textit{multiple alignments}), ainsi qu'un certain nombre d'annotations
+essentielles à l'analyse de ces génomes : coordonnées des gènes (TSSs, exons,
+introns avec potentiellement différents transcrits alternatifs), miRNA ou
+lincRNA, ontologies associées, coordonnées des séquences répétitives (les
+\textit{repeats}, en partie liés aux éléments transposables abordés en
+\ref{sub:evolution-des-enhancer}, et qui sont abondants dans les génomes
+vertébrés), différentes données \chipseq, indices de conservation
+\footnote{Pour le cas de l'assemblage mm$9$ de la souris, ces annotations sont
+    accessibles à l'adresse suivante
+    : \url{http://hgdownload.cse.ucsc.edu/goldenPath/mm9/database/} 
+}\ldots 
+
+Au final, ces différentes données constituent une base de travail fiable et
+régulièrement mise à jour. Afin de faciliter leur obtention, il est possible
+d'utiliser le navigateur de tables de UCSC \footnote{
+    \url{http://genome.ucsc.edu/cgi-bin/hgTables} } ou la section BioMart
+    d'Ensembl \footnote{ \url{http://www.ensembl.org/biomart/martview} } .
+
+Situé plus en amont, le projet Galaxy (\url{http://galaxyproject.org}) permet
+à l'utilisateur de récupérer des données depuis les différentes banques
+existantes, puis de leur faire subir divers traitements et analyses par divers
+outils de bioinformatique. Cet outil, qui peut être utilisé sur internet ou
+bien localement, a l'avantage de permettre la sauvegarde de plans de travail ou
+\textit{workflows}, successions de commandes utilisées pour traiter une entrée
+donnée par différents outils stéréotypés et obtenir directement le résultat
+final, favorisant une approche conviviale orientée utilisateur.
+
+En guise d'exemple, nous montrons en annexe \ref{ann:statistiques} des
+statistiques obtenues aisément à partir d'annotations génétiques présentes sur
+UCSC et traitées avec Galaxy. Ces statistiques sont les distribution de tailles
+des régions intergéniques et introniques chez plusieurs espèces : la bactérie
+\ecoli, la levure \textit{Saccharomyces cerevisiae}, le ver \celegans, la
+mouche \dmel, la souris, le poulet et l'homme
+(fig.~\ref{fig:intergenic-intronic}).
+
+\subsection{Obtention de données sur les TFs}
+\label{sub:obtention_donnees_TFs}
+
+Nous l'avons vu, les données de fixation des TFs (\chipseq, \chipchip) peuvent
+être obtenues à partir du site UCSC Genome Browser. Ces données sont aussi
+généralement accessibles sur le site du NCBI (Gene Expression Omnibus,
+\url{http://www.ncbi.nlm.nih.gov/geo/}) \textit{via} un numéro d'accession
+donné lors de la publication des données. 
+
+De nombreux modèles de TFs ont déjà été bâtis préalablement à l'avènement des
+données haut-débit de type \chipseq, par exemple avec des données SELEX, et il
+existe des bases de données stockant les PWMs correspondantes : JAPSAR, base de
+donnée publique \footnote{\url{http://jaspar.cgb.ki.se}}, et TRANSFAC, qui
+marche par
+abonnement\footnote{\url{http://www.gene-regulation.com/pub/databases.html}}.
+Il est à noter que ces PWMs ayant souvent été construites à partir d'un faible
+nombre de sites de fixations et de données \invitro, elles peuvent être
+relativement inadaptées à l'analyse de données \invivo.
+
+\bfig
+\includegraphics[width=1\textwidth]{figures/ucsc-chrng-view.pdf}
+\captionbf{Visualisation de données \chipseq \textit{via} le site UCSC}{
+
+    La visualisation de différentes données \chipseq et bioinformatiques
+    (bandes noires) permet de mettre en perspective le cas de la régulation de
+    \textit{Chrng} (en bleu au bas de l'image) lors de la différenciation
+    musculaire. Les données \chipseq sont issues de la littérature et les
+    données bioinformatiques (MEF3) ont été obtenues au cours de cette thèse.
+    Les rectangles noirs correspondent aux coordonnées des pics obtenus après
+    avoir appliqué un seuil de filtrage du bruit. Les données de fixation de
+    PolII ainsi que les données de méthylation et d'acétylation des histones
+    (H3K4me$3$ et H3K9Ac, marques de l'activité transcriptionnelle, voir
+    fig.~\ref{fig:hardison-enhancer-states}), tirées de \citet{Asp2011p2370},
+    indiquent que le locus est transcrit lors de la formation de myotubes. Le
+    TF MyoD est fixé au niveau du promoteur de \textit{Chrng} au cours de la
+    prolifération des myoblastes (MB$50$, $50\%$ de confluence, et MB$95$,
+    $95\%$ de confluence) et au cours de la différenciation en myotubes
+    MT~\cite{Cao2010p1805}.  Le TF Six est co-fixé avec MyoD lors de la
+    différenciation : à T$24$, $24$h après différenciation, et
+    à MT~\cite{Liu2010p588}. De plus, des analyses bioinformatiques montre
+    l'existence dans cette région d'un site de fixation MEF$3$ pour la protéine
+    Six conservé chez les vertébrés, corroborant une liaison directe de l'ADN
+    par Six. Prises ensemble, la simple visualisation de ces données suggèrent
+    une régulation par Six et MyoD de \textit{Chrng}.
+
+}
+\label{fig:ucsc-chrng-view}
+\efig
+
+\subsection{Outils de visualisation}
+\label{sub:outils_visualisation}
+
+Afin d'avoir une idée plus claire des événements de régulation qui se déroulent
+à un locus donné, il existe plusieurs outils de visualisation des annotations
+génomiques et épigénétiques, que ce soit sur le site du NCBI
+(\url{http://www.ncbi.nlm.nih.gov/gene}), sur Ensembl ou sur UCSC Genome
+Browser. Ce dernier possède notamment l'avantage qu'il est possible d'importer
+des données personnelles sous un grand nombre de formats, obtenues à partir de
+la littérature ou à partir de ses propres travaux. Ainsi, nous présentons en
+figure \ref{fig:ucsc-chrng-view} quelques données de \chipseq pour des TFs
+musculaires et pour des marques épigénétiques, ainsi que des prédictions
+bioinformatiques de sites de fixation conservés pour les homéoprotéines Six
+réalisée par nos soins. La visualisation sur UCSC Genome Browser permet de
+rapidement déterminer le mode de régulation putatif du gène \textit{Chrng}
+: fixation de Six et MyoD au niveau du promoteur et apparition de marques
+épigénétiques H3K4me$1$ et H3Ac sur les histones au cours de la différenciation
+de progéniteurs musculaires.
+
+
+Par ailleurs, il existe un outil de visualisation complémentaire de ceux cités
+: le visualisateur de régions conservées au cours de l'évolution ECR Browser
+(\url{http://ecrbrowser.dcode.org}), intégrant de nombreux outils
+bioinformatiques~\cite{Loots2005ys}. Ce navigateur permet de visualiser la
+conservation génomique d'un locus donné chez plusieurs espèces plus ou moins
+lointaines (par exemple souris, homme, vache, grenouille et poisson zèbre) afin
+de cibler l'étude de la régulation sur des régions extrêmement conservées. Il
+est ensuite possible d'analyser les séquences ultraconservées sélectionnées en
+utilisant les motifs de la base de donnée TRANSFAC \textit{via} l'outil
+rVISTA~\cite{Loots2004vn}. Un exemple d'utilisation de cet outil est donné par
+la découverte de plusieurs régions de régulation fonctionnelles de
+l'homéoprotéine Six1 possédant une extrême conservation~\cite{Sato2012zr}.
+
+
+
+\subsection{Le projet ENCODE}
+\label{sub:projet_encode}
+
+\bfig
+\includegraphics[width=1\textwidth]{figures/encode-workflow.png}
+\captionbf{Les différentes données obtenues par le projet ENCODE}{
+
+    Figure tirée du site web du projet ENCODE
+    (\url{http://genome.ucsc.edu/ENCODE}). Les équipes associées à ce projet
+    utilisent de multiples expériences et méthodes pour identifier les éléments
+    fonctionnels du génome. L'annotation des gènes se fait principalement par
+    le séquençage de l'ARN provenant de différentes sources (tissu, stade de
+    développement), la génomique comparative, des méthodes bioinformatiques ou
+    encore par annotation manuelle. Les éléments de régulation sont quant à eux
+    étudiés \textit{via} des expériences d'hypersensibilité à la DNAseI,
+    l'étude de la méthylation de l'ADN, ou encore les données \chipseq de
+    divers \tfs et histones spécifiquement méthylées ou acétylées.
+
+}
+\label{fig:encode-workflow.png}
+\efig
+
+Le projet ENCODE (pour \textit{Encyclopedia of DNA Elements}) est un consortium
+de groupes de recherche internationaux financés par le NHGRI (\textit{National
+Human Genome Research Institute}) qui a vu le jour afin de systématiser les
+méthodes permettant l'annotation des génomes et de faciliter l'intégration des
+nombreuses données obtenues. Son but est de construire une liste exhaustive des
+éléments fonctionnels du génome humain, qu'ils agissent au niveau de l'ADN, de
+l'ARN ou des protéines, et des éléments de régulation qui contrôlent l'état
+cellulaire et l'activité des gènes. Les données sont mises à disposition du
+public gratuitement sur internet (\url{http://genome.ucsc.edu/ENCODE/}).
+À noter que des projets équivalents existent pour d'autres organismes, comme la
+souris (\url{http://mouseencode.org}), ou encore le ver \celegans et la mouche
+\dmel (\url{http://www.modencode.org}).
+
+
+Totalisant en septembre $2012$ plus de $1600$ expériences dans plus de $147$
+types cellulaires, les premières conclusions pointent vers une profusion
+d'événements de régulation, loin de l'idée d'ADN poubelle (\textit{junk DNA})
+: ainsi, $80\%$ du génome est associé à un événement biochimique associé à de
+la formation d'ARN ou au remodelage de la chromatine, $\sim400,000$ régions
+possèdent un état chromatinien caractéristique des enhancers et $\sim70,000$
+des promoteurs~\cite{ENCODE-Project-Consortium2012ly}. Depuis mai 2013, les
+données \chipseq de $161$ TFs couvrant $91$ types cellulaires ont été mises
+à disposition sur UCSC Genome
+Browser\footnote{\url{http://genome.ucsc.edu/cgi-bin/hgTrackUi?db=hg19&g=wgEncodeAwgTfbsUniform}}.
+
+
+%\bfig
+%\includegraphics[width=0.8\textwidth]{figures/siggia-fate.pdf}
+%\captionbf{Vision géométrique des transitions entre types cellulaire}{
+%   Figure tirée de \cite{Corson2012p3973} schématisant le processus de
+%   différenciation des cellules de la vulve de \celegans.
+%   \textbf{A.} La cellule est dans un état précurseur représenté par une
+%   bille au fond d'une vallée.
+%   \textbf{B.} La cellule est dans état dit \textit{compétent} où elle peut basculer
+%   vers différents destins cellulaires.
+%   \textbf{C.} Un signal externe représenté par une flèche rouge modifie le
+%   paysage de manière à favoriser l'un des états finaux possibles.
+%} 
+%\efig
+
+%\bfig
+%\includegraphics[width=.8\textwidth]{figures/wasserman-transcriptional-regulation.pdf}
+%\captionbf{Les différentes composantes de la régulation transcriptionnelle}{
+    %Figure tirée de \cite{Wasserman2004p624}. Les \TFs se fixent à des sites
+    %spécifiques de longueur $\sim10$bp qui peuvent être proximaux (promoteur,
+    %premiers introns) ou distaux (plus de $100$kb) d'un \TSS. Différents \TFs
+    %peuvent s'assembler sur des régions d'ADN de taille typique $\sim 1000$bp
+    %appelées \CRMs afin de conduire à une régulation spécifique, par simple
+    %effet de communauté par exemple lorsque la fixation de tous les \tfs est
+    %requise pour que la régulation opère. Les interactions entres les \tfs et
+    %différents cofacteurs stabilisent la machinerie d'initiation de
+    %transcription pour permettre l'expression génétique. La régulation distale
+    %est quant à elle fortement dépendante de la structure tridimensionnelle de
+%la chromatine.  } \efig
+

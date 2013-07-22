@@ -178,7 +178,7 @@
 \backcite {Loots2005ys}{{61}{1.7.3}{subsection.2.7.3}}
 \backcite {Asp2011p2370}{{62}{1.26}{figure.caption.27}}
 \backcite {Cao2010p1805}{{62}{1.26}{figure.caption.27}}
-\backcite {Liu2010p703}{{62}{1.26}{figure.caption.27}}
+\backcite {Liu2010p588}{{62}{1.26}{figure.caption.27}}
 \backcite {Loots2004vn}{{63}{1.7.3}{subsection.2.7.3}}
 \backcite {Sato2012zr}{{63}{1.7.3}{subsection.2.7.3}}
 \backcite {ENCODE-Project-Consortium2012ly}{{64}{1.7.4}{figure.caption.28}}
@@ -271,41 +271,50 @@
 \backcite {Le-Grand2012qf}{{118}{5.1.3}{figure.caption.44}}
 \backcite {Grifone2007p728}{{118}{5.1.3}{figure.caption.44}}
 \backcite {Spitz1998p3285}{{118}{5.1.3}{figure.caption.44}}
-\backcite {Spitz1997p455}{{119}{5.1.3}{figure.caption.44}}
-\backcite {Whyte2013tg}{{124}{5.6}{figure.caption.50}}
-\backcite {Asp2011p2370}{{125}{5.2.2}{figure.caption.50}}
-\backcite {Cao2010p1805}{{125}{5.2.2}{figure.caption.50}}
-\backcite {Soleimani2012p3753}{{125}{5.2.2}{figure.caption.50}}
-\backcite {Mullen2011p3259}{{125}{5.2.2}{figure.caption.50}}
-\backcite {Wang2011p2929}{{125}{5.2.2}{figure.caption.50}}
-\backcite {An2011p2926}{{125}{5.2.2}{figure.caption.50}}
-\backcite {Vokes2008p1808}{{125}{5.2.2}{figure.caption.50}}
-\backcite {Liu2010p588}{{125}{5.2.2}{figure.caption.50}}
-\backcite {Kucharczuk1999zr}{{126}{5.2.2}{figure.caption.50}}
-\backcite {Asakura1995ly}{{126}{5.2.2}{figure.caption.50}}
+\backcite {Spitz1997p455}{{118}{5.1.3}{figure.caption.44}}
+\backcite {Bentzinger2012ij}{{119}{5.3}{figure.caption.45}}
+\backcite {Asp2011p2370}{{124}{5.2.2}{figure.caption.50}}
+\backcite {Cao2010p1805}{{124}{5.2.2}{figure.caption.50}}
+\backcite {Soleimani2012p3753}{{124}{5.2.2}{figure.caption.50}}
+\backcite {Mullen2011p3259}{{124}{5.2.2}{figure.caption.50}}
+\backcite {Wang2011p2929}{{124}{5.2.2}{figure.caption.50}}
+\backcite {An2011p2926}{{124}{5.2.2}{figure.caption.50}}
+\backcite {Whyte2013tg}{{125}{5.6}{figure.caption.50}}
+\backcite {Vokes2008p1808}{{126}{5.2.2}{figure.caption.50}}
+\backcite {Liu2010p588}{{126}{5.2.2}{figure.caption.50}}
 \backcite {Thayer1989kx}{{126}{18}{Hfootnote.18}}
+\backcite {Kucharczuk1999zr}{{127}{5.2.2}{figure.caption.50}}
+\backcite {Asakura1995ly}{{127}{5.2.2}{figure.caption.50}}
 \backcite {Whyte2013tg}{{127}{5.2.2}{figure.caption.50}}
-\backcite {Relaix2013ve}{{127}{5.3.1}{figure.caption.51}}
-\backcite {Kucharczuk1999zr}{{127}{5.3.1}{figure.caption.51}}
 \backcite {Kucharczuk1999zr}{{128}{5.7}{figure.caption.51}}
-\backcite {Lhonore2010p3969}{{128}{5.3.1}{figure.caption.51}}
-\backcite {Kucharczuk1999zr}{{128}{5.3.1}{figure.caption.51}}
-\backcite {Relaix2013ve}{{129}{5.8}{figure.caption.52}}
-\backcite {Niro2010p3444}{{130}{$\bullet $}{figure.caption.53}}
-\backcite {Palstra2008dq}{{132}{$\bullet $}{figure.caption.53}}
-\backcite {Rinn2012cr}{{132}{$\bullet $}{figure.caption.53}}
-\backcite {Cao2010p1805}{{133}{5.4}{section.6.4}}
-\backcite {Bergstrom2002p376}{{133}{5.4}{section.6.4}}
-\backcite {Spitz1998p3285}{{133}{5.4.1}{subsection.6.4.1}}
-\backcite {Cheng1993nx}{{133}{5.4.1}{subsection.6.4.1}}
-\backcite {Kucharczuk1999zr}{{133}{5.4.1}{subsection.6.4.1}}
-\backcite {Liu2010p588}{{133}{5.4.1}{subsection.6.4.1}}
-\backcite {Cao2010p1805}{{133}{5.4.1}{subsection.6.4.1}}
-\backcite {Fuda2009oq}{{134}{5.4.1}{subsection.6.4.1}}
-\backcite {Puri1997kl}{{134}{5.4.1}{subsection.6.4.1}}
-\backcite {Deato2007tg}{{134}{5.4.1}{subsection.6.4.1}}
-\backcite {Ikeda2002p3784}{{134}{5.4.1}{subsection.6.4.1}}
-\backcite {Aziz2010p3254}{{134}{5.4.1}{subsection.6.4.1}}
-\backcite {Palacios2010p3280}{{134}{5.4.1}{subsection.6.4.1}}
-\backcite {Mills2011dq}{{141}{A}{equation.7.0.1}}
-\backcite {Yalcin2011cr}{{141}{A}{equation.7.0.1}}
+\backcite {Relaix2013ve}{{128}{5.3.1}{figure.caption.51}}
+\backcite {Kucharczuk1999zr}{{129}{5.3.1}{figure.caption.51}}
+\backcite {Lhonore2010p3969}{{129}{5.3.1}{figure.caption.51}}
+\backcite {Kucharczuk1999zr}{{129}{5.3.1}{figure.caption.51}}
+\backcite {Relaix2013ve}{{130}{5.8}{figure.caption.52}}
+\backcite {Niro2010p3444}{{131}{$\bullet $}{figure.caption.53}}
+\backcite {Palstra2008dq}{{131}{$\bullet $}{figure.caption.53}}
+\backcite {Rinn2012cr}{{133}{$\bullet $}{figure.caption.53}}
+\backcite {Cao2010p1805}{{134}{5.4}{section.6.4}}
+\backcite {Bergstrom2002p376}{{134}{5.4}{section.6.4}}
+\backcite {Spitz1998p3285}{{134}{5.4.1}{subsection.6.4.1}}
+\backcite {Cheng1993nx}{{134}{5.4.1}{subsection.6.4.1}}
+\backcite {Kucharczuk1999zr}{{134}{5.4.1}{subsection.6.4.1}}
+\backcite {Liu2010p588}{{134}{5.4.1}{subsection.6.4.1}}
+\backcite {Cao2010p1805}{{135}{5.4.1}{subsection.6.4.1}}
+\backcite {Fuda2009oq}{{135}{5.4.1}{subsection.6.4.1}}
+\backcite {Puri1997kl}{{135}{5.4.1}{subsection.6.4.1}}
+\backcite {Deato2007tg}{{135}{5.4.1}{subsection.6.4.1}}
+\backcite {Ikeda2002p3784}{{135}{5.4.1}{subsection.6.4.1}}
+\backcite {Aziz2010p3254}{{135}{5.4.1}{subsection.6.4.1}}
+\backcite {Palacios2010p3280}{{135}{5.4.1}{subsection.6.4.1}}
+\backcite {davis1987expression}{{136}{5.4.2}{figure.caption.54}}
+\backcite {Grifone2005vn}{{136}{5.4.2}{figure.caption.54}}
+\backcite {Liu2010p588}{{137}{5.4.2}{figure.caption.55}}
+\backcite {Cao2010p1805}{{137}{5.4.3}{figure.caption.56}}
+\backcite {Cao2010p1805}{{147}{$\bullet $}{figure.caption.62}}
+\backcite {Green2011p2925}{{147}{$\bullet $}{figure.caption.62}}
+\backcite {Yokoyama2009p435}{{151}{$\bullet $}{figure.caption.65}}
+\backcite {Ferrari1997hc}{{151}{$\bullet $}{figure.caption.65}}
+\backcite {Mills2011dq}{{157}{A}{equation.7.0.1}}
+\backcite {Yalcin2011cr}{{157}{A}{equation.7.0.1}}

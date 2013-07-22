@@ -50,15 +50,24 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Formation du muscle squelettique chez l'embryon de souris}}{116}{figure.caption.43}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Motifs d'expression et localisation g\'enomique des g\`enes de la famille Six}}{118}{figure.caption.44}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces R\^ole des prot\'eines Six au cours de la myogen\`ese}}{119}{figure.caption.45}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Courbe ROC de MEF3}}{122}{figure.caption.48}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces PWM MEF$3$\xspace obtenue avec le mod\`ele d'\'evolution}}{123}{figure.caption.49}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Visualisation de donn\'ees musculaires sur UCSC}}{124}{figure.caption.50}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Courbe ROC de MEF3}}{123}{figure.caption.48}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces PWM MEF$3$\xspace obtenue avec le mod\`ele d'\'evolution}}{124}{figure.caption.49}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Visualisation de donn\'ees musculaires sur UCSC}}{125}{figure.caption.50}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Pr\'ediction de sites MEF$3$\xspace sur les s\'equences r\'egulatrices CE et DRR de \textit {Myod1}}}{128}{figure.caption.51}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Validation des sites MEF$3$\xspace pr\'edits dans les \'el\'ements r\'egulateurs de \textit {Myod1}}}{129}{figure.caption.52}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Visualisation du locus des myosines sur UCSC}}{131}{figure.caption.53}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Description de l'exp\'erience permettant d'\'etudier la synergie Six+MyoD}}{135}{figure.caption.54}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Donn\'ees d'expression : g\`enes contr\^ol\'es par la synergie Six+MyoD}}{136}{figure.caption.55}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces D\'efinition des enhancers putatifs Six+MyoD}}{137}{figure.caption.56}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Validation des sites MEF$3$\xspace pr\'edits dans les \'el\'ements r\'egulateurs de \textit {Myod1}}}{130}{figure.caption.52}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Visualisation du locus des myosines sur UCSC}}{132}{figure.caption.53}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Description de l'exp\'erience permettant d'\'etudier la synergie Six+MyoD}}{136}{figure.caption.54}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Donn\'ees d'expression des g\`enes activ\'es par la synergie Six+MyoD}}{138}{figure.caption.55}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces D\'efinition d'enhancers putatifs MyoD+MEF$3$\xspace }}{139}{figure.caption.56}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces R\^ole des enhancers putatifs MyoD+MEF$3$\xspace dans la synergie Six+MyoD}}{140}{figure.caption.57}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Liste finale de g\`enes synergiques associ\'es \`a un enhancer MyoD+MEF$3$\xspace }}{142}{figure.caption.58}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Illustration de la validation des enhancers par test Luciferase}}{144}{figure.caption.59}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Enhancers MyoD+MEF$3$\xspace \FB@og positifs \FB@fg }}{145}{figure.caption.60}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Enhancers MyoD+MEF$3$\xspace \FB@og n\'egatifs \FB@fg }}{146}{figure.caption.61}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Motifs sur-repr\'esent\'es sur les enhancers synergiques}}{147}{figure.caption.62}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Mutagen\`ese syst\'ematique des sites pr\'edits sur l'enhancer de \textit {Srl}}}{149}{figure.caption.63}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Variation de la quantit\'e de vecteur MyoD \'electropor\'e}}{150}{figure.caption.64}
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Expression Lucif\'erase de multim\`eres synth\'etiques de sites de fixation}}{152}{figure.caption.65}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Statistiques g\'enomiques}{139}{division.7}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Distribution des tailles interg\'eniques et introniques chez diff\'erentes esp\`eces}}{140}{figure.caption.58}
+\contentsline {xchapter}{Statistiques g\'enomiques}{155}{division.7}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Distribution des tailles interg\'eniques et introniques chez diff\'erentes esp\`eces}}{156}{figure.caption.66}
