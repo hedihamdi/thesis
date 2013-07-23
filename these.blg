@@ -3,49 +3,49 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: these.aux
 A level-1 auxiliary file: packaging/Avant_Propos.aux
 The style file: custom.bst
-Reallocated field_info (elt_size=4) to 10902 items from 5000.
+Reallocated field_info (elt_size=4) to 10954 items from 5000.
 Database file #1: biblio/papers.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--empty journal in Jaynes1978p795
-You've used 227 entries,
+You've used 229 entries,
             2710 wiz_defined-function locations,
-            1958 strings with 73175 characters,
-and the built_in function-call counts, 157340 in all, are:
-= -- 12275
-> -- 8008
-< -- 83
-+ -- 6071
-- -- 2229
-* -- 11069
-:= -- 21004
-add.period$ -- 685
-call.type$ -- 227
-change.case$ -- 2026
-chr.to.int$ -- 228
-cite$ -- 228
-duplicate$ -- 10978
-empty$ -- 10471
-format.name$ -- 2762
-if$ -- 31111
+            1968 strings with 73681 characters,
+and the built_in function-call counts, 158997 in all, are:
+= -- 12405
+> -- 8108
+< -- 84
++ -- 6149
+- -- 2257
+* -- 11182
+:= -- 21217
+add.period$ -- 691
+call.type$ -- 229
+change.case$ -- 2048
+chr.to.int$ -- 230
+cite$ -- 230
+duplicate$ -- 11087
+empty$ -- 10568
+format.name$ -- 2794
+if$ -- 31441
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 2898
-newline$ -- 1140
-num.names$ -- 681
-pop$ -- 6879
+missing$ -- 2927
+newline$ -- 1150
+num.names$ -- 687
+pop$ -- 6960
 preamble$ -- 1
-purify$ -- 2022
+purify$ -- 2044
 quote$ -- 0
-skip$ -- 5738
+skip$ -- 5807
 stack$ -- 0
-substring$ -- 6587
-swap$ -- 6874
-text.length$ -- 11
+substring$ -- 6646
+swap$ -- 6943
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1356
+type$ -- 1368
 warning$ -- 1
-while$ -- 741
+while$ -- 749
 width$ -- 0
-write$ -- 2952
+write$ -- 2978
 (There was 1 warning)

@@ -222,7 +222,7 @@ spécialisent plus tardivement en fibres de type lentes (oxydatives) ou rapides
 au cours de ces étapes (et aussi plus tardivement dans les fibres rapides).
 
 (B) Les homéoprotéines Six  interviennent dans la régulation de ces différentes
-étapes en régulant les TFs indiqués selon une cascade de boucles
+étapes \invivo en régulant les TFs indiqués selon une cascade de boucles
 \textit{feed-forward}. 
 
 }
@@ -1234,7 +1234,12 @@ du rapporteur reproduit le motif d'expression du gène endogène obtenu par qPCR
 
     Les enhancers ne récapitulant pas la synergie observée au niveau du gène
     endogène montrent un comportement lié à Six seul (Six-only) ou à MyoD seul
-    (Myod-only).
+    (Myod-only). Contrairement à la figure
+    \ref{fig:muscle/synergie/qpcr_affymetrix} montrant la quantité totale
+    (endogène + transfecté) d'ARN de \textit{Myod$1$} mesurée par qPCR, nous
+    montrons ici seulement la quantité relative au gène endogène, obtenue en
+    utilisant un primer ciblant la région $5'$ UTR de l'ARN endogène qui n'est
+    pas présente dans l'ARN exprimé par le \textit{Myod$1$} transfecté.
     
 }
 \label{fig:muscle/synergie/luci_neg}
@@ -1349,13 +1354,13 @@ Pour chaque site, nous remplaçons les $6$ nucléotides consécutifs les plus
 conservés dans la PWM par le site de restriction GAATTC reconnu par l'enzyme
 EcoRI, sauf dans le cas où le (les) site(s) est (sont) en extrémité de
 séquence, auquel cas nous procédons par délétion, comme par exemple pour le
-premier site \mef et les trois sites EBF de Srl-enh. La substitution par un
-site de restriction permet de rapidement tester que les mutations ont été
-introduites au bon endroit : il suffit de regarder par retard sur gel la taille
-des fragments d'ADN obtenus après digestion par EcoRI. Les résultats Luciferase
-des mutagenèses de Srl-enh sont montrés en figure
-\ref{fig:muscle/synergie/mutageneses}. Ces résultats sont inattendus : on
-observe peu d'effet dans tous les cas, voire un effet d'activation dans
+site \mef en début de séquence et les trois sites EBF en fin de séquence de
+Srl-enh. La substitution par un site de restriction permet de rapidement tester
+que les mutations ont été introduites au bon endroit : il suffit de regarder
+par retard sur gel la taille des fragments d'ADN obtenus après digestion par
+EcoRI. Les résultats Luciferase des mutagenèses de Srl-enh sont montrés en
+figure \ref{fig:muscle/synergie/mutageneses}. Ces résultats sont inattendus
+: on observe peu d'effet dans tous les cas, voire un effet d'activation dans
 certains cas (\texttt{Srl:ebox}, \texttt{Srl:mot5}, \texttt{Srl:mot14}). De
 tels résultats pointent vers une robustesse \invitro de l'élément régulateur de
 Srl aux mutations. Comment l'interpréter?\\
@@ -1467,14 +1472,40 @@ régulation synergiques et avons trouvé plusieurs motifs, dont notamment le
 co-régulateur connu Mef$2$, dont nous montrons qu'il est lui-même activé de
 manière synergique par Six$1$ et MyoD. La mutation de plusieurs sites prédits
 a été réalisée, sans effet sur l'expression du gène rapporteur, montrant une
-robustesse \invitro de la région régulatrice aux mutations. Cette observation
-semble contredire les résultats obtenus par transgenèse \invivo où la simple
-mutation de sites \mef abolit l'expression du rapporteur. Néanmoins, la
-comparaison est biaisée, puisque dans le cas de la transgenèse, le contexte
-chromatinien de l'enhancer introduit dans le génome est important, et
-l'ouverture de la chromatine induite par la fixation sur l'ADN des protéines
+robustesse \invitro de la région régulatrice aux mutations. 
+
+Cette observation semble contredire les résultats obtenus par transgenèse
+\invivo où la simple mutation de sites \mef abolit l'expression du rapporteur.
+Néanmoins, la comparaison est biaisée, puisque dans le cas de la transgenèse,
+le contexte chromatinien de l'enhancer introduit dans le génome est important,
+et l'ouverture de la chromatine induite par la fixation sur l'ADN des protéines
 Six pourrait expliquer la différence de comportement observée entre les cas
-\invivo et \invitro. Plusieurs hypothèses restent finalement à être testées
-pour mieux cerner la synergie observée entre Six$1$ et MyoD au cours de la
-myogenèse. 
+\invivo et \invitro. En effet, il a été montré que Six$1$ interagit directement
+avec la sous-unité Brg$1$ du complexe SWI/SNF de remodelage de la chromatine,
+et que cette interaction permet la différenciation de cellules épithéliales de
+l'oreille interne en cellules neuronales~\cite{Ahmed2012p3734}. Par ailleurs,
+il a plus récemment été montré que Six$1$ contrôle l'accessibilité du
+\textit{Core Enhancer} CE de \textit{Myod1} en \cd : en l'absence de Six$1$,
+les nucléosomes y sont plus abondants et MyoD ne peut plus s'y
+fixer~\cite{Liu2013fk}. Ces résultats laissent à penser que le rôle de Six$1$
+aux différents enhancers putatifs que nous avons étudiés serait d'ouvrir la
+chromatine et de permettre l'induction par un complexe de TFs (MyoD,
+Mef$2$\ldots) montrant des effets de compensation rendant les enhancers
+robustes aux mutations.
+
+Plusieurs hypothèses restent finalement à être testées pour mieux cerner la
+synergie observée entre Six$1$ et MyoD au cours de la myogenèse. D'abord,
+l'idée que Six$1$ pourrait agir comme un élément crucial de l'ouverture de
+chromatine au niveau des enhancers validés peut être testée par quantification
+de l'accessibilité de l'ADN par DNAse$1$, ainsi qu'en quantifiant les niveaux
+de méthylation H$3$K$4$me$1$ des histones par \chip.  Par ailleurs, la fixation
+des TFs sur les sites prédits reste aussi à confirmer, par exemple par retard
+sur gel avec des extraits cellulaires des fibroblastes utilisés. Enfin, des
+doubles et triples mutations des sites \mef, E-box et MEF$2$ permettraient de
+clarifier les effets de compensation au sein des enhancers testés.  La
+validation de ces hypothèses confirmerait alors que la synergie observée entre
+Six$1$ et MyoD passe par un remodelage de la chromatine au niveau des enhancers
+MyoD+\mef induit par Six$1$, puis par la fixation d'un complexe de TFs
+(Six$1$+MyoD+Mef$2$+\ldots) montrant une capacité de compensation rendant les
+enhancers robustes aux mutations.
 

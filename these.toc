@@ -128,7 +128,7 @@
 \contentsline {subsection}{\numberline {5.4.6}Recherche de motifs et mutagen\`eses}{146}{subsection.6.4.6}
 \contentsline {subsubsection}{\numberline {$\bullet $}Recherche de motifs}{146}{subsubsection.6.4.6.1}
 \contentsline {subsubsection}{\numberline {$\bullet $}Mutagen\`ese syst\'ematique des sites de fixation}{148}{subsubsection.6.4.6.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}Interpr\'etation des r\'esultats}{148}{subsubsection.6.4.6.3}
-\contentsline {section}{\numberline {5.5}Conclusion et perspectives}{151}{section.6.5}
+\contentsline {subsubsection}{\numberline {$\bullet $}Interpr\'etation des r\'esultats}{149}{subsubsection.6.4.6.3}
+\contentsline {section}{\numberline {5.5}Conclusion et perspectives}{153}{section.6.5}
 \contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomiques}{155}{division.7}
 \contentsline {chapter}{Bibliographie}{159}{equation.7.0.1}

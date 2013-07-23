@@ -1126,6 +1126,8 @@ INPUT ./figures/muscle/synergie/luci_pos.pdf
 INPUT figures/muscle/synergie/luci_neg.pdf
 INPUT ./figures/muscle/synergie/luci_neg.pdf
 INPUT ./figures/muscle/synergie/luci_neg.pdf
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT figures/muscle/synergie/motifs.pdf
 INPUT ./figures/muscle/synergie/motifs.pdf
 INPUT ./figures/muscle/synergie/motifs.pdf

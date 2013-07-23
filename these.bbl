@@ -1,4 +1,4 @@
-\begin{thebibliography}{227}
+\begin{thebibliography}{229}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[Aerts, 2012]{Aerts2012p3868}
@@ -7,6 +7,13 @@ Aerts, S. (2012).
   Identification of cis-Regulatory Elements and Transcriptional Targets.
 \newblock \emph{Current Topics in Developmental Biology: Transcriptional
   Switches During Development}, 98:121--145.
+
+\bibitem[Ahmed et~al., 2012]{Ahmed2012p3734}
+Ahmed, M., Xu, J., and Xu, P.-X. (2012).
+\newblock EYA1 and SIX1 drive the neuronal developmental program in cooperation
+  with the SWI/SNF chromatin-remodeling complex and SOX2 in the mammalian inner
+  ear.
+\newblock \emph{Development}, pages 1--13.
 
 \bibitem[Alon, 2007{\natexlab{a}}]{alon2007introduction}
 Alon, U. (2007{\natexlab{a}}).
@@ -730,6 +737,12 @@ Liberman, L.~M. and Stathopoulos, A. (2009).
 \newblock Design flexibility in cis-regulatory control of gene expression:
   Synthetic and comparative evidence.
 \newblock \emph{Developmental Biology}, 327(2):578--589.
+
+\bibitem[Liu et~al., 2013]{Liu2013fk}
+Liu, Y., Chakroun, I., Yang, D., Horner, E., Liang, J., Aziz, A., Chu, A.,
+  De~Repentigny, Y., Dilworth, F.~J., Kothary, R., and Blais, A. (2013).
+\newblock Six1 Regulates MyoD Expression in Adult Muscle Progenitor Cells.
+\newblock \emph{PLoS One}, 8(6):e67762.
 
 \bibitem[Liu et~al., 2010]{Liu2010p588}
 Liu, Y., Chu, A., Chakroun, I., Islam, U., and Blais, A. (2010).
