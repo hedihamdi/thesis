@@ -81,7 +81,7 @@
 \contentsline {section}{\numberline {2.5}Analyse thermodynamique des mod\`eles}{77}{section.3.5}
 \contentsline {subsection}{\numberline {2.5.1}Chaleur sp\'ecifique}{77}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {2.5.2}Lien avec les valeurs des champs et des couplages}{80}{subsection.3.5.2}
-\contentsline {section}{\numberline {2.6}Conclusion et perspectives}{80}{section.3.6}
+\contentsline {section}{\numberline {2.6}Conclusion et perspectives du chapitre 2}{80}{section.3.6}
 \contentsline {chapter}{\numberline {Chapitre\ 3~-}{\em Imogene}: un algorithme d'identification de motifs et de modules de r\'egulation transcriptionnelle}{83}{division.4}
 \contentsline {section}{\numberline {3.1}Quelques approches existantes pour la recherche de motifs et de modules de r\'egulation}{84}{section.4.1}
 \contentsline {subsection}{\numberline {3.1.1}MEME : une approche \textit {de novo}\xspace par Esp\'erance-Maximisation}{85}{subsection.4.1.1}
@@ -101,11 +101,11 @@
 \contentsline {subsection}{\numberline {3.3.1}Principe de l'algorithme de Metropolis-Hastings}{97}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Application au calcul de la post\'erieure}{98}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Illustration sur un exemple}{100}{subsection.4.3.3}
-\contentsline {section}{\numberline {3.4}Conclusion et perspectives}{106}{section.4.4}
+\contentsline {section}{\numberline {3.4}Conclusion et perspectives du chapitre 3}{106}{section.4.4}
 \contentsline {chapter}{\numberline {Chapitre\ 4~-}\'Etude de la diff\'erenciation \'epidermale chez la drosophile}{107}{division.5}
 \contentsline {section}{\numberline {4.1}Concept d'optimum de Pareto}{109}{section.5.1}
 \contentsline {section}{\numberline {4.2}Article}{111}{section.5.2}
-\contentsline {section}{\numberline {4.3}Conclusion et perspectives}{112}{section.5.3}
+\contentsline {section}{\numberline {4.3}Conclusion et perspectives du chapitre 4}{112}{section.5.3}
 \contentsline {chapter}{\numberline {Chapitre\ 5~-}\'Etude de la diff\'erenciation musculaire chez la souris}{113}{division.6}
 \contentsline {section}{\numberline {5.1}Introduction \`a la myogen\`ese squelettique}{115}{section.6.1}
 \contentsline {subsection}{\numberline {5.1.1}Les diff\'erentes \'etapes de la myogen\`ese}{115}{subsection.6.1.1}
@@ -129,6 +129,6 @@
 \contentsline {subsubsection}{\numberline {$\bullet $}Recherche de motifs}{146}{subsubsection.6.4.6.1}
 \contentsline {subsubsection}{\numberline {$\bullet $}Mutagen\`ese syst\'ematique des sites de fixation}{148}{subsubsection.6.4.6.2}
 \contentsline {subsubsection}{\numberline {$\bullet $}Interpr\'etation des r\'esultats}{149}{subsubsection.6.4.6.3}
-\contentsline {section}{\numberline {5.5}Conclusion et perspectives}{153}{section.6.5}
+\contentsline {section}{\numberline {5.5}Conclusion et perspectives du chapitre 5}{153}{section.6.5}
 \contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomiques}{155}{division.7}
 \contentsline {chapter}{Bibliographie}{159}{equation.7.0.1}
