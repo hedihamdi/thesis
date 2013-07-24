@@ -1,134 +1,134 @@
 \select@language {french}
 \@frame@switchfalse 
 \contentsline {spsection}{Liste des figures}{v}{division.1}
-\contentsline {chapter}{\fontfamily {ppl}\selectfont Principales abbr\'eviations utilis\'ees}{ix}{division.1}
+\contentsline {chapter}{\fontfamily {ppl}\selectfont Principales abbr\'eviations utilis\'ees}{vii}{division.1}
 \contentsline {starchapter}{Avant-propos}{1}{division.1}
 \contentsline {chapter}{\numberline {Chapitre\ 1~-}Introduction g\'en\'erale.}{3}{division.2}
-\contentsline {section}{\numberline {1.1}Le ph\'enotype cellulaire}{5}{section.2.1}
-\contentsline {subsection}{\numberline {1.1.1}Qu'est-ce que le ph\'enotype d'une cellule?}{5}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {1.1.2}La diff\'erenciation cellulaire}{6}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {1.1.3}La cellule dans l'organisme : une sp\'ecification spatio-temporelle}{8}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {1.1.4}La reprogrammation cellulaire}{8}{subsection.2.1.4}
-\contentsline {section}{\numberline {1.2}Les r\'eseaux de r\'egulation g\'en\'etique}{10}{section.2.2}
-\contentsline {subsection}{\numberline {1.2.1}Vision cybern\'etique de la cellule}{10}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Divers modes de r\'egulation}{10}{subsection.2.2.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation g\'en\'etique}{10}{subsubsection.2.2.2.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation \'epig\'en\'etique}{13}{subsubsection.2.2.2.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation post-transcriptionnelle}{14}{subsubsection.2.2.2.3}
-\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation post-traductionnelle}{14}{subsubsection.2.2.2.4}
-\contentsline {subsection}{\numberline {1.2.3}C\^ablage du r\'eseau et fonction}{17}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {1.2.4}\'Evolution des r\'eseaux g\'en\'etiques}{17}{subsection.2.2.4}
-\contentsline {section}{\numberline {1.3}Les interactions prot\'eine-ADN : mod\`eles math\'ematiques}{20}{section.2.3}
-\contentsline {subsection}{\numberline {1.3.1}Modes de recherche du site de fixation par le TF}{21}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Mod\`ele PWM}{21}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Mod\`ele biophysique}{24}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {1.3.4}Mod\`ele thermodynamique}{25}{subsection.2.3.4}
-\contentsline {section}{\numberline {1.4}Les interactions prot\'eine-ADN : mesures exp\'erimentales}{27}{section.2.4}
-\contentsline {subsection}{\numberline {1.4.1}Approches \textit {in vitro}\xspace : MITOMI, SPR, PBM, CSI, SELEX, et HT-SELEX}{28}{subsection.2.4.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Approche microfluidique : MITOMI}{28}{subsubsection.2.4.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Approche physique : la microscopie SPR}{29}{subsubsection.2.4.1.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}Approches bas\'ees sur des puces \`a ADN : PBM et CSI}{29}{subsubsection.2.4.1.3}
-\contentsline {subsubsection}{\numberline {$\bullet $}Approche par purification des s\'equences fix\'ees : SELEX et HT-SELEX}{30}{subsubsection.2.4.1.4}
-\contentsline {subsection}{\numberline {1.4.2}Approche clonale : la technique de simple hybride}{31}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Approches \textit {in vivo}\xspace : ChIP-on-chip\xspace , ChIP-seq\xspace , DNAse I}{32}{subsection.2.4.3}
-\contentsline {subsubsection}{\numberline {$\bullet $}Immunopr\'ecipitation de la chromatine : ChIP-on-chip\xspace et ChIP-seq\xspace }{32}{subsubsection.2.4.3.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Empreinte \`a la DNase I (\textit {DNase I footprinting})}{35}{subsubsection.2.4.3.2}
-\contentsline {section}{\numberline {1.5}Les modules de cis-r\'egulation (CRMs)}{37}{section.2.5}
-\contentsline {subsection}{\numberline {1.5.1}Les diff\'erents types de CRMs}{37}{subsection.2.5.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Promoteurs}{39}{subsubsection.2.5.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}\textit {Enhancers} et \textit {silencers}}{39}{subsubsection.2.5.1.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}Insulateurs}{41}{subsubsection.2.5.1.3}
-\contentsline {subsection}{\numberline {1.5.2}Grammaire des enhancers : enhanceosome vs billboard}{41}{subsection.2.5.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}Le mod\`ele ``enhanceosome''}{41}{subsubsection.2.5.2.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Le mod\`ele ``billboard''}{43}{subsubsection.2.5.2.2}
-\contentsline {subsection}{\numberline {1.5.3}\'Evolution des enhancers}{43}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {1.5.4}Les \FB@og shadow enhancers \FB@fg }{47}{subsection.2.5.4}
-\contentsline {subsection}{\numberline {1.5.5}Par del\`a les enhancers: les \FB@og super-enhancers \FB@fg }{48}{subsection.2.5.5}
-\contentsline {section}{\numberline {1.6}Pr\'ediction et validation des CRMs}{49}{section.2.6}
-\contentsline {subsection}{\numberline {1.6.1}M\'ethodes utilisant la concentration en sites de fixation}{49}{subsection.2.6.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Approches utilisant des motifs connus}{50}{subsubsection.2.6.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Approches \textit {de novo}\xspace o\`u les motifs ne sont pas connus}{51}{subsubsection.2.6.1.2}
-\contentsline {subsection}{\numberline {1.6.2}M\'ethodes utilisant la phylog\'enie}{52}{subsection.2.6.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'edictions \`a partir de la contrainte \'evolutive seule}{52}{subsubsection.2.6.2.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'edictions utilisant la phylog\'enie et des motifs connus}{53}{subsubsection.2.6.2.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}Approches utilisant la phylog\'enie pour g\'en\'erer des motifs \textit {de novo}\xspace }{53}{subsubsection.2.6.2.3}
-\contentsline {subsection}{\numberline {1.6.3}M\'ethodes utilisant les marques \'epig\'en\'etiques et de ChIP-seq\xspace pour des TFs}{54}{subsection.2.6.3}
-\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'ediction des promoteurs}{54}{subsubsection.2.6.3.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'ediction des enhancers}{54}{subsubsection.2.6.3.2}
-\contentsline {subsection}{\numberline {1.6.4}Validation exp\'erimentale}{56}{subsection.2.6.4}
-\contentsline {subsection}{\numberline {1.6.5}Implication des CRMs dans les maladies humaines}{56}{subsection.2.6.5}
-\contentsline {section}{\numberline {1.7}Bases de donn\'ees}{57}{section.2.7}
-\contentsline {subsection}{\numberline {1.7.1}Obtention de donn\'ees g\'enomiques}{58}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {1.7.2}Obtention de donn\'ees sur les TFs}{59}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {1.7.3}Outils de visualisation}{60}{subsection.2.7.3}
-\contentsline {subsection}{\numberline {1.7.4}Le projet ENCODE}{62}{subsection.2.7.4}
-\contentsline {chapter}{\numberline {Chapitre\ 2~-}Mod\`eles de fixation des Facteurs de Transcription\xspace \`a l'ADN.}{65}{division.3}
-\contentsline {section}{\numberline {2.1}Observations de corr\'elations au sein des TFBS}{66}{section.3.1}
-\contentsline {section}{\numberline {2.2}Mod\`eles existants permettant de d\'ecrire la statistique des TFBS}{67}{section.3.2}
-\contentsline {subsection}{\numberline {2.2.1}Mod\`ele de r\'ef\'erence sans corr\'elations : la PWM}{67}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Une PWM g\'en\'eralis\'ee : le mod\`ele GWM}{69}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {2.2.3}R\'eseaux bay\'esiens}{70}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Mod\`eles de m\'elange}{71}{subsection.3.2.4}
-\contentsline {subsubsection}{\numberline {$\bullet $}M\'elange de PWMs}{71}{subsubsection.3.2.4.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}M\'elange d'arbres}{72}{subsubsection.3.2.4.2}
-\contentsline {section}{\numberline {2.3}Mod\`eles de maximum d'entropie}{72}{section.3.3}
-\contentsline {subsection}{\numberline {2.3.1}Pourquoi maximiser l'entropie?}{72}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Maximisation de l'entropie sous contraintes}{74}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Application aux sites de fixation}{75}{subsection.3.3.3}
-\contentsline {subsubsection}{\numberline {$\bullet $}Corr\'elations \`a un point : le mod\`ele PWM}{75}{subsubsection.3.3.3.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Corr\'elations \`a deux points : le mod\`ele de Potts}{76}{subsubsection.3.3.3.2}
-\contentsline {section}{\numberline {2.4}Article}{77}{section.3.4}
-\contentsline {section}{\numberline {2.5}Analyse thermodynamique des mod\`eles}{109}{section.3.5}
-\contentsline {subsection}{\numberline {2.5.1}Chaleur sp\'ecifique}{109}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Lien avec les valeurs des champs et des couplages}{110}{subsection.3.5.2}
-\contentsline {section}{\numberline {2.6}Conclusion et perspectives du chapitre 2}{112}{section.3.6}
-\contentsline {chapter}{\numberline {Chapitre\ 3~-}{\em Imogene}: un algorithme d'identification de motifs et de modules de r\'egulation transcriptionnelle}{115}{division.4}
-\contentsline {section}{\numberline {3.1}Quelques approches existantes pour la recherche de motifs et de modules de r\'egulation}{116}{section.4.1}
-\contentsline {subsection}{\numberline {3.1.1}MEME : une approche \textit {de novo}\xspace par Esp\'erance-Maximisation}{117}{subsection.4.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Vraisemblance d'une s\'equence}{118}{subsubsection.4.1.1.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Apprentissage du mod\`ele}{118}{subsubsection.4.1.1.2}
-\contentsline {subsection}{\numberline {3.1.2}STUBB : une m\'ethode utilisant les corr\'elations entre sites de fixation et la phylog\'enie}{120}{subsection.4.1.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}Description du mod\`ele HMM}{120}{subsubsection.4.1.2.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Ajout des corr\'elations entre motifs}{121}{subsubsection.4.1.2.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}Incorporation de l'information phylog\'en\'etique}{121}{subsubsection.4.1.2.3}
-\contentsline {subsection}{\numberline {3.1.3}MONKEY : vers des mod\`eles phylog\'en\'etiques plus complexes}{122}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Approches sans motifs ou \textit {motif-blind}}{125}{subsection.4.1.4}
-\contentsline {subsubsection}{\numberline {$\bullet $}Mod\`eles bas\'es sur des cha\IeC {\^\i }nes de Markov}{125}{subsubsection.4.1.4.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Mod\`eles bas\'es sur des enrichissements en $k$-mers}{126}{subsubsection.4.1.4.2}
-\contentsline {subsection}{\numberline {3.1.5}Autres m\'ethodes utilisant des collections d'oligonucl\'eotides}{127}{subsection.4.1.5}
-\contentsline {section}{\numberline {3.2}Article}{128}{section.4.2}
-\contentsline {section}{\numberline {3.3}Calcul de la moyenne de la post\'erieure par une m\'ethode MCMC}{155}{section.4.3}
-\contentsline {subsection}{\numberline {3.3.1}Principe de l'algorithme de Metropolis-Hastings}{155}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Application au calcul de la post\'erieure}{157}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Illustration sur un exemple}{158}{subsection.4.3.3}
-\contentsline {section}{\numberline {3.4}Conclusion et perspectives du chapitre 3}{165}{section.4.4}
-\contentsline {chapter}{\numberline {Chapitre\ 4~-}\'Etude de la diff\'erenciation \'epidermale chez la drosophile}{167}{division.5}
-\contentsline {section}{\numberline {4.1}Concept d'optimum de Pareto}{169}{section.5.1}
-\contentsline {section}{\numberline {4.2}Article}{171}{section.5.2}
-\contentsline {section}{\numberline {4.3}Conclusion et perspectives du chapitre 4}{242}{section.5.3}
-\contentsline {chapter}{\numberline {Chapitre\ 5~-}\'Etude de la diff\'erenciation musculaire chez la souris}{243}{division.6}
-\contentsline {section}{\numberline {5.1}Introduction \`a la myogen\`ese squelettique}{245}{section.6.1}
-\contentsline {subsection}{\numberline {5.1.1}Les diff\'erentes \'etapes de la myogen\`ese}{245}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Les Facteurs de R\'egulation Myog\'enique et leurs cofacteurs}{245}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Les hom\'eoprot\'eines Six}{247}{subsection.6.1.3}
-\contentsline {section}{\numberline {5.2}Int\'egration de donn\'ees bioinformatiques et exp\'erimentales sur le muscle}{250}{section.6.2}
-\contentsline {subsection}{\numberline {5.2.1}Obtention d'une PWM optimale pour MEF3}{250}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Obtention de donn\'ees \`a partir de la litt\'erature et int\'egration au visualisateur de UCSC}{252}{subsection.6.2.2}
-\contentsline {section}{\numberline {5.3}Pr\'edictions et validations de la r\'egulation par Six}{257}{section.6.3}
-\contentsline {subsection}{\numberline {5.3.1}R\'egulation de \textit {Myod1} par les prot\'eines Six chez l'embryon de souris}{258}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {5.3.2}R\'egulation d'un lincRNA par Six dans le muscle adulte}{261}{subsection.6.3.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}Contexte g\'en\'eral}{261}{subsubsection.6.3.2.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Article}{263}{subsubsection.6.3.2.2}
-\contentsline {section}{\numberline {5.4}Synergie entre Six et MyoD au cours de la myogen\`ese}{295}{section.6.4}
-\contentsline {subsection}{\numberline {5.4.1}\'Etat de l'art sur la coop\'eration Six/MyoD}{295}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Obtention de donn\'ees d'expression Six+MyoD}{296}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Obtention de r\'egions de r\'egulation Six+MyoD}{298}{subsection.6.4.3}
-\contentsline {subsection}{\numberline {5.4.4}Croisement des donn\'ees d'expression et des enhancers putatifs}{300}{subsection.6.4.4}
-\contentsline {subsection}{\numberline {5.4.5}Validation des enhancers MyoD+MEF$3$\xspace }{304}{subsection.6.4.5}
-\contentsline {subsection}{\numberline {5.4.6}Recherche de motifs et mutagen\`eses}{307}{subsection.6.4.6}
-\contentsline {subsubsection}{\numberline {$\bullet $}Recherche de motifs}{307}{subsubsection.6.4.6.1}
-\contentsline {subsubsection}{\numberline {$\bullet $}Mutagen\`ese syst\'ematique des sites de fixation}{309}{subsubsection.6.4.6.2}
-\contentsline {subsubsection}{\numberline {$\bullet $}Interpr\'etation des r\'esultats}{310}{subsubsection.6.4.6.3}
-\contentsline {section}{\numberline {5.5}Conclusion et perspectives du chapitre 5}{314}{section.6.5}
-\contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomiques}{317}{division.7}
-\contentsline {chapter}{Bibliographie}{321}{equation.7.0.1}
+\contentsline {section}{\numberline {1.1}Le ph\'enotype cellulaire}{4}{section.2.1}
+\contentsline {subsection}{\numberline {1.1.1}Qu'est-ce que le ph\'enotype d'une cellule?}{4}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {1.1.2}La diff\'erenciation cellulaire}{4}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {1.1.3}La cellule dans l'organisme : une sp\'ecification spatio-temporelle}{6}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {1.1.4}La reprogrammation cellulaire}{6}{subsection.2.1.4}
+\contentsline {section}{\numberline {1.2}Les r\'eseaux de r\'egulation g\'en\'etique}{7}{section.2.2}
+\contentsline {subsection}{\numberline {1.2.1}Vision cybern\'etique de la cellule}{8}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Divers modes de r\'egulation}{8}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation g\'en\'etique}{9}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation \'epig\'en\'etique}{11}{subsubsection.2.2.2.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation post-transcriptionnelle}{11}{subsubsection.2.2.2.3}
+\contentsline {subsubsection}{\numberline {$\bullet $}R\'egulation post-traductionnelle}{11}{subsubsection.2.2.2.4}
+\contentsline {subsection}{\numberline {1.2.3}C\^ablage du r\'eseau et fonction}{13}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {1.2.4}\'Evolution des r\'eseaux g\'en\'etiques}{13}{subsection.2.2.4}
+\contentsline {section}{\numberline {1.3}Les interactions prot\'eine-ADN : mod\`eles math\'ematiques}{15}{section.2.3}
+\contentsline {subsection}{\numberline {1.3.1}Modes de recherche du site de fixation par le TF}{15}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Mod\`ele PWM}{16}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Mod\`ele biophysique}{18}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {1.3.4}Mod\`ele thermodynamique}{19}{subsection.2.3.4}
+\contentsline {section}{\numberline {1.4}Les interactions prot\'eine-ADN : mesures exp\'erimentales}{21}{section.2.4}
+\contentsline {subsection}{\numberline {1.4.1}Approches \textit {in vitro}\xspace : MITOMI, SPR, PBM, CSI, SELEX, et HT-SELEX}{21}{subsection.2.4.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Approche microfluidique : MITOMI}{21}{subsubsection.2.4.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Approche physique : la microscopie SPR}{21}{subsubsection.2.4.1.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Approches bas\'ees sur des puces \`a ADN : PBM et CSI}{22}{subsubsection.2.4.1.3}
+\contentsline {subsubsection}{\numberline {$\bullet $}Approche par purification des s\'equences fix\'ees : SELEX et HT-SELEX}{22}{subsubsection.2.4.1.4}
+\contentsline {subsection}{\numberline {1.4.2}Approche clonale : la technique de simple hybride}{23}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Approches \textit {in vivo}\xspace : ChIP-on-chip\xspace , ChIP-seq\xspace , DNAse I}{24}{subsection.2.4.3}
+\contentsline {subsubsection}{\numberline {$\bullet $}Immunopr\'ecipitation de la chromatine : ChIP-on-chip\xspace et ChIP-seq\xspace }{24}{subsubsection.2.4.3.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Empreinte \`a la DNase I (\textit {DNase I footprinting})}{26}{subsubsection.2.4.3.2}
+\contentsline {section}{\numberline {1.5}Les modules de cis-r\'egulation (CRMs)}{28}{section.2.5}
+\contentsline {subsection}{\numberline {1.5.1}Les diff\'erents types de CRMs}{28}{subsection.2.5.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Promoteurs}{28}{subsubsection.2.5.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}\textit {Enhancers} et \textit {silencers}}{28}{subsubsection.2.5.1.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Insulateurs}{31}{subsubsection.2.5.1.3}
+\contentsline {subsection}{\numberline {1.5.2}Grammaire des enhancers : enhanceosome vs billboard}{31}{subsection.2.5.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Le mod\`ele ``enhanceosome''}{31}{subsubsection.2.5.2.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Le mod\`ele ``billboard''}{31}{subsubsection.2.5.2.2}
+\contentsline {subsection}{\numberline {1.5.3}\'Evolution des enhancers}{33}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {1.5.4}Les \FB@og shadow enhancers \FB@fg }{36}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {1.5.5}Par del\`a les enhancers: les \FB@og super-enhancers \FB@fg }{36}{subsection.2.5.5}
+\contentsline {section}{\numberline {1.6}Pr\'ediction et validation des CRMs}{37}{section.2.6}
+\contentsline {subsection}{\numberline {1.6.1}M\'ethodes utilisant la concentration en sites de fixation}{37}{subsection.2.6.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Approches utilisant des motifs connus}{38}{subsubsection.2.6.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Approches \textit {de novo}\xspace o\`u les motifs ne sont pas connus}{39}{subsubsection.2.6.1.2}
+\contentsline {subsection}{\numberline {1.6.2}M\'ethodes utilisant la phylog\'enie}{39}{subsection.2.6.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'edictions \`a partir de la contrainte \'evolutive seule}{40}{subsubsection.2.6.2.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'edictions utilisant la phylog\'enie et des motifs connus}{40}{subsubsection.2.6.2.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Approches utilisant la phylog\'enie pour g\'en\'erer des motifs \textit {de novo}\xspace }{40}{subsubsection.2.6.2.3}
+\contentsline {subsection}{\numberline {1.6.3}M\'ethodes utilisant les marques \'epig\'en\'etiques et de ChIP-seq\xspace pour des TFs}{41}{subsection.2.6.3}
+\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'ediction des promoteurs}{41}{subsubsection.2.6.3.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Pr\'ediction des enhancers}{41}{subsubsection.2.6.3.2}
+\contentsline {subsection}{\numberline {1.6.4}Validation exp\'erimentale}{41}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {1.6.5}Implication des CRMs dans les maladies humaines}{42}{subsection.2.6.5}
+\contentsline {section}{\numberline {1.7}Bases de donn\'ees}{43}{section.2.7}
+\contentsline {subsection}{\numberline {1.7.1}Obtention de donn\'ees g\'enomiques}{44}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {1.7.2}Obtention de donn\'ees sur les TFs}{45}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {1.7.3}Outils de visualisation}{45}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {1.7.4}Le projet ENCODE}{47}{subsection.2.7.4}
+\contentsline {chapter}{\numberline {Chapitre\ 2~-}Mod\`eles de fixation des Facteurs de Transcription\xspace \`a l'ADN.}{49}{division.3}
+\contentsline {section}{\numberline {2.1}Observations de corr\'elations au sein des TFBS}{50}{section.3.1}
+\contentsline {section}{\numberline {2.2}Mod\`eles existants permettant de d\'ecrire la statistique des TFBS}{51}{section.3.2}
+\contentsline {subsection}{\numberline {2.2.1}Mod\`ele de r\'ef\'erence sans corr\'elations : la PWM}{51}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Une PWM g\'en\'eralis\'ee : le mod\`ele GWM}{52}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {2.2.3}R\'eseaux bay\'esiens}{53}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Mod\`eles de m\'elange}{53}{subsection.3.2.4}
+\contentsline {subsubsection}{\numberline {$\bullet $}M\'elange de PWMs}{53}{subsubsection.3.2.4.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}M\'elange d'arbres}{54}{subsubsection.3.2.4.2}
+\contentsline {section}{\numberline {2.3}Mod\`eles de maximum d'entropie}{54}{section.3.3}
+\contentsline {subsection}{\numberline {2.3.1}Pourquoi maximiser l'entropie?}{54}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Maximisation de l'entropie sous contraintes}{56}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Application aux sites de fixation}{57}{subsection.3.3.3}
+\contentsline {subsubsection}{\numberline {$\bullet $}Corr\'elations \`a un point : le mod\`ele PWM}{57}{subsubsection.3.3.3.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Corr\'elations \`a deux points : le mod\`ele de Potts}{58}{subsubsection.3.3.3.2}
+\contentsline {section}{\numberline {2.4}Article}{58}{section.3.4}
+\contentsline {section}{\numberline {2.5}Analyse thermodynamique des mod\`eles}{90}{section.3.5}
+\contentsline {subsection}{\numberline {2.5.1}Chaleur sp\'ecifique}{90}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Lien avec les valeurs des champs et des couplages}{91}{subsection.3.5.2}
+\contentsline {section}{\numberline {2.6}Conclusion et perspectives du chapitre 2}{91}{section.3.6}
+\contentsline {chapter}{\numberline {Chapitre\ 3~-}{\em Imogene}: un algorithme d'identification de motifs et de modules de r\'egulation transcriptionnelle}{95}{division.4}
+\contentsline {section}{\numberline {3.1}Quelques approches existantes pour la recherche de motifs et de modules de r\'egulation}{96}{section.4.1}
+\contentsline {subsection}{\numberline {3.1.1}MEME : une approche \textit {de novo}\xspace par Esp\'erance-Maximisation}{96}{subsection.4.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Vraisemblance d'une s\'equence}{97}{subsubsection.4.1.1.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Apprentissage du mod\`ele}{98}{subsubsection.4.1.1.2}
+\contentsline {subsection}{\numberline {3.1.2}STUBB : une m\'ethode utilisant les corr\'elations entre sites de fixation et la phylog\'enie}{99}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Description du mod\`ele HMM}{99}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Ajout des corr\'elations entre motifs}{100}{subsubsection.4.1.2.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Incorporation de l'information phylog\'en\'etique}{100}{subsubsection.4.1.2.3}
+\contentsline {subsection}{\numberline {3.1.3}MONKEY : vers des mod\`eles phylog\'en\'etiques plus complexes}{100}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Approches sans motifs ou \textit {motif-blind}}{103}{subsection.4.1.4}
+\contentsline {subsubsection}{\numberline {$\bullet $}Mod\`eles bas\'es sur des cha\IeC {\^\i }nes de Markov}{103}{subsubsection.4.1.4.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Mod\`eles bas\'es sur des enrichissements en $k$-mers}{103}{subsubsection.4.1.4.2}
+\contentsline {subsection}{\numberline {3.1.5}Autres m\'ethodes utilisant des collections d'oligonucl\'eotides}{104}{subsection.4.1.5}
+\contentsline {section}{\numberline {3.2}Article}{105}{section.4.2}
+\contentsline {section}{\numberline {3.3}Calcul de la moyenne de la post\'erieure par une m\'ethode MCMC}{132}{section.4.3}
+\contentsline {subsection}{\numberline {3.3.1}Principe de l'algorithme de Metropolis-Hastings}{132}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Application au calcul de la post\'erieure}{133}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Illustration sur un exemple}{134}{subsection.4.3.3}
+\contentsline {section}{\numberline {3.4}Conclusion et perspectives du chapitre 3}{139}{section.4.4}
+\contentsline {chapter}{\numberline {Chapitre\ 4~-}\'Etude de la diff\'erenciation \'epidermale chez la drosophile}{141}{division.5}
+\contentsline {section}{\numberline {4.1}Concept d'optimum de Pareto}{143}{section.5.1}
+\contentsline {section}{\numberline {4.2}Article}{144}{section.5.2}
+\contentsline {section}{\numberline {4.3}Conclusion et perspectives du chapitre 4}{215}{section.5.3}
+\contentsline {chapter}{\numberline {Chapitre\ 5~-}\'Etude de la diff\'erenciation musculaire chez la souris}{217}{division.6}
+\contentsline {section}{\numberline {5.1}Introduction \`a la myogen\`ese squelettique}{219}{section.6.1}
+\contentsline {subsection}{\numberline {5.1.1}Les diff\'erentes \'etapes de la myogen\`ese}{219}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Les Facteurs de R\'egulation Myog\'enique et leurs cofacteurs}{219}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Les hom\'eoprot\'eines Six}{221}{subsection.6.1.3}
+\contentsline {section}{\numberline {5.2}Int\'egration de donn\'ees bioinformatiques et exp\'erimentales sur le muscle}{223}{section.6.2}
+\contentsline {subsection}{\numberline {5.2.1}Obtention d'une PWM optimale pour MEF3}{223}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Obtention de donn\'ees \`a partir de la litt\'erature et int\'egration au visualisateur de UCSC}{226}{subsection.6.2.2}
+\contentsline {section}{\numberline {5.3}Pr\'edictions et validations de la r\'egulation par Six}{229}{section.6.3}
+\contentsline {subsection}{\numberline {5.3.1}R\'egulation de \textit {Myod1} par les prot\'eines Six chez l'embryon de souris}{229}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {5.3.2}R\'egulation d'un lincRNA par Six dans le muscle adulte}{231}{subsection.6.3.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Contexte g\'en\'eral}{231}{subsubsection.6.3.2.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Article}{233}{subsubsection.6.3.2.2}
+\contentsline {section}{\numberline {5.4}Synergie entre Six et MyoD au cours de la myogen\`ese}{265}{section.6.4}
+\contentsline {subsection}{\numberline {5.4.1}\'Etat de l'art sur la coop\'eration Six/MyoD}{265}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Obtention de donn\'ees d'expression Six+MyoD}{266}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Obtention de r\'egions de r\'egulation Six+MyoD}{268}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Croisement des donn\'ees d'expression et des enhancers putatifs}{269}{subsection.6.4.4}
+\contentsline {subsection}{\numberline {5.4.5}Validation des enhancers MyoD+MEF$3$\xspace }{272}{subsection.6.4.5}
+\contentsline {subsection}{\numberline {5.4.6}Recherche de motifs et mutagen\`eses}{273}{subsection.6.4.6}
+\contentsline {subsubsection}{\numberline {$\bullet $}Recherche de motifs}{273}{subsubsection.6.4.6.1}
+\contentsline {subsubsection}{\numberline {$\bullet $}Mutagen\`ese syst\'ematique des sites de fixation}{275}{subsubsection.6.4.6.2}
+\contentsline {subsubsection}{\numberline {$\bullet $}Interpr\'etation des r\'esultats}{276}{subsubsection.6.4.6.3}
+\contentsline {section}{\numberline {5.5}Conclusion et perspectives du chapitre 5}{280}{section.6.5}
+\contentsline {chapter}{\numberline {Annexe\ A~-}Statistiques g\'enomiques}{283}{division.7}
+\contentsline {chapter}{Bibliographie}{286}{equation.7.0.1}

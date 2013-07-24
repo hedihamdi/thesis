@@ -1,0 +1,160 @@
+\section*{Introduction du chapitre \thechapter}
+
+Nous présentons maintenant une application de Imogene au cas de la
+différenciation des trichomes (poils) chez la Drosophile, réalisée en
+collaboration avec l'équipe de Serge Plaza à l'Université Paul Sabatier.
+Plusieurs motifs ont été générés à partir de $14$ CRMs connus pour réguler le
+processus de différenciation des trichomes. Parmi les motifs générés, deux
+d'entre eux ont montré une meilleure capacité à distinguer les CRMs positifs de
+l'ensemble d'apprentissage de CRMs négatifs. Le critère de distinction est basé
+sur l'optimisation de Pareto, caractérisant la satisfaction de plusieurs
+contraintes à la fois. Dans notre cas, les contraintes sont de maximiser le
+nombre de CRMs positifs trouvés par les motifs (maximisation de la sensibilité)
+tout en minimisant le nombre de faux positifs (maximisation de la spécificité).
+Ces critères définissent une frontière de Pareto de motifs optimum. En variant
+les différents paramètres de Imogene, nous avons trouvé deux motifs sur la
+frontière de Pareto. Parmi les deux motifs, l'un d'eux (\og svbf7 \fg)
+correspond au régulateur maître du processus de différenciation des trichomes,
+et l'autre (\og blue motif\fg) est un motif nouveau. L'importance des deux
+motifs pour la régulation est montrée par mutagenèse. Par ailleurs, ces motifs
+permettent de distinguer des \chipseq pour \textit{svb} liés à une régulation
+(dont le gène le plus proche subit une perte d'expression lors du KO de
+\textit{svb}) des \chipseq ne l'étant pas. Ce travail montre donc un exemple de
+la possibilité d'utiliser Imogene sur sun un petit ensemble (ici $14$ CRMs) de
+données biologiques fonctionnelles pour détecter des motifs nouveaux et
+fonctionnels.
+
+\newpage
+
+\section{Concept d'optimum de Pareto} 
+\label{sec:concept_d_optimum_de_pareto}
+
+Dans l'article qui suit, nous utilisons le principe d'optimum de Pareto, lié
+à la satisfaction simultanée de plusieurs contraintes. Le problème est le
+suivant. Étant donnés $14$ CRMs positifs liés à une même régulation de la
+différenciation des trichomes chez l'embryon de Drosophile, et $25$ CRMs
+négatifs ne conduisant aucune expression au stade de développement considéré,
+quels motifs permettent le mieux de distinguer les deux classes? Le problème
+est similaire à celui de \textit{pattern recognition} introduit dans l'article
+précédent en section \ref{sec:article_imogene}. Néanmoins, nous avons ici
+adopté une démarche légèrement différente. 
+
+Des motifs sont appris sur les CRMs positifs pour différents seuils $S_g$
+(variant entre $7$ et $13$ bits). Ces motifs sont ensuite utilisés pour prédire
+les CRMs positifs parmi les CRMs initiaux. Un CRM est déclaré comme positif
+s'il contient au moins  $n$ sites conservés ($n=1$, $2$, ou $3$) au-dessus d'un
+seuil $S_s$ (variant entre $7$ et $13$ bits). Pour des paramètres $S_g$, $n$ et
+$S_s$ donnés, un motif détectera un nombre FP de Faux Positifs (les CRMs
+négatifs qui sont prédits positifs) et omettra un nombre FN de Faux Négatifs
+(les CRMs positifs qui ne sont pas prédits comme tels). L'optimisation de
+Pareto consiste à trouver les paramètres $S_g$, $n$ et $S_s$ qui minimisent
+à la fois FP et FN. Il est possible de minimiser différentes fonctions de coût
+pour FP et FN, attribuant des poids plus ou moins importants à l'une ou l'autre
+des contraintes. Dans notre cas, nous avons défini l'optimum de Pareto comme
+minimisant la fonction $|\text{FN}+\text{FP}|$.  La droite
+$|\text{FN}+\text{FP}|=cte$ contenant les meilleurs optima de Pareto pour les
+différents motifs est la frontière de Pareto. 
+
+Dans notre cas, deux des motifs générés sont sur la frontière de Pareto : le
+motif svbF7 et le motif bleu (fig.~\ref{fig:plaza/pareto/plot_pareto}), pour
+$S_g=10$ bits, $n=1$, $S_s=8.5$ bits. Ce sont par ailleurs les $2$ premiers
+motifs générés à ce seuil. Les $3$ motifs suivants sont montrés en gris. Le
+motif svbF7 correspond au TF \textit{svb} (\textit{Shavenbaby}), régulateur
+maître de la différenciation des trichomes. Le motif OvoQ6 correspond à la PWM
+de Transfac pour \textit{svb}, et n'apporte pas une aussi bonne classification
+que svbF7. Le motif bleu, quant à lui, n'est pas connu. Nous montrons aussi le
+motif jaune, introduit dans l'article, qui n'est pas prédit par Imogene mais
+correspond à un motif de régulation ultra-conservé dans les de différentes
+espèces de drosophiles~\cite{Elemento2005fk}, et possédant un rôle fonctionnel
+investigué par mutagenèse.
+
+
+\bfig
+\includegraphics[width=1\textwidth]{figures/plaza/pareto/plot_pareto.pdf}
+\captionbf{Frontière d'efficacité de Pareto}{
+
+    Illustration de l'optimisation de Pareto permettant la sélection des
+    paramètres lors de la génération de motifs. Ici, nous voulons à la fois
+    minimiser le nombre de Faux Positifs (FP) et le nombre de Faux négatifs
+    (FN).  Différents motifs sont successivement utilisés pour classer les
+    séquences comme positives ou négatives, une séquence étant déclarée comme
+    positive pour un motif si elle contient au moins $n$ sites conservés
+    au-dessus d'un seuil $S_s$. Les différents points correspondent aux
+    différentes performances. Un léger bruit a été ajouté aux points pour
+    rendre visibles ceux qui sont superposés (fonction \texttt{jitter} de R,
+    paramètre \texttt{factor}$=0.5$). Le motif svbF7 et le motif bleu sont tous
+    deux optimaux pour des paramètres bien définis $S_g=10$ bits, $n=1$,
+    $S_s=8.5$ bits : ils dessinent la frontière de Pareto $|FP+FN|=cte$ en
+    pointillés bruns.
+
+}
+\label{fig:plaza/pareto/plot_pareto}
+\efig
+
+
+
+
+% section concept_d_optimum_de_pareto (end)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+\newpage
+\section{Article} 
+\label{sec:article_plaza}
+
+\includepdf[pages=-]{articles/trichomes-genomebiol/Menoret_et_al_GenBiol_revised.pdf}
+\includepdf[pages=-]{articles/trichomes-genomebiol/Figures_rev_S.pdf}
+\includepdf[pages=-]{articles/trichomes-genomebiol/Menoret_SupInfos_revised.pdf}
+\includepdf[pages=-]{articles/trichomes-genomebiol/Menoret_et_al_FigSupLegend_revised.pdf}
+\includepdf[pages=-]{articles/trichomes-genomebiol/FigSup_rev_S.pdf}
+
+% section article (end)
+			
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\newpage	
+			
+
+\section{Conclusion et perspectives du chapitre \thechapter}
+
+Imogene a été appliqué sur un ensemble d'apprentissage composé de $14$ CRMs
+régulant la différenciation des trichomes chez l'embryon de Drosophile. Les
+différents paramètres (seuils de génération, de détection) ont été optimisés
+par une approche de Pareto visant à maximiser le nombre de CRMs positifs
+prédits par les motifs tout en minimisant le nombre de CRMs négatifs prédits
+parmi un ensemble de $25$ CRMs n'ayant aucune activité au stade de
+développement considéré. Deux motifs ont été trouvé par cette approche : le
+motif svbF7 correspondant à \textit{svb}, le régulateur maître de la
+différenciation des trichomes, et un nouveau motif, le motif bleu, que nous
+n'avons pas pu associer à un motif connu. 
+
+La validité de ces motifs a été montrée par mutagenèse (figures $3$, $4$ et $5$
+de l'article). Par ailleurs, ces motifs sont prédictifs des \chipseq de
+\textit{svb} fonctionnels, \cad ceux qui sont associés à un gène dont
+l'expression diminue chez les mutants \textit{svb} (figure S$5$). Les CRMs
+fonctionnels possèdent une grande variété de grammaire des sites de fixation
+(figures $5$ et $7$ de l'article), un résultat similaire à celui obtenu par
+\citet{Zinzen2009p760} dans le cas de la différenciation de différents tissus
+chez l'embryon de drosophile. Plusieurs entrées (combinaisons de TFs) mènent
+à une sortie (motif d'expression du gène rapporteur) similaire : cette
+flexibilité est réminiscente du modèle \textit{billboard} introduit en section
+\ref{sub:enhanceosome_billboard}.  Néanmoins, bien qu'il soit clair que la
+grammaire des sites soit différente entre différents CRMs, cette grammaire
+semble relativement bien conservée au cours de l'évolution d'un CRM (figures 8,
+S8A, et S8B).  Enfin, dans la plupart des cas on observe l'absence de
+\textit{clustering} de motifs homotypiques sur les CRMs, bien que les motifs
+soient présents en plus grand nombre dans les loci des gènes régulés par
+rapport à des gènes non régulés (figure S$2$). Une explication possible est que
+'abondance de sites dans l'environnement du CRM permet d'augmenter localement
+la concentration du TF pour faciliter son recrutement \invivo au niveau des
+CRMs possédant des sites de forte affinité.
+
+Il serait à présent intéressant de caractériser plus en avant le motif bleu
+généré par l'approche \denovo. Une possibilité serait d'utiliser la technique
+de simple hybride présentée en
+\ref{sub:approche_clonale_la_technique_de_simple_hybride} afin d'identifier la
+protéine associé au motif bleu, en utilisant comme appât les protéines connues
+de la drosophile et comme proie le site consensus du motif bleu.
+
+ 
+

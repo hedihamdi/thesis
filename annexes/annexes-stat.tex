@@ -1,29 +1,4 @@
 
-\begin{figure}
-    \centering
-    \includegraphics[width=1.0\textwidth]{figures/intergenic-intronic.pdf}
-    \captionbf{Distribution des tailles intergéniques et introniques chez différentes espèces}{
-
-        
-        Distributions log-log de la taille des régions intergéniques (A) et
-        introniques (B) chez différentes espèces. Les histogrammes sont
-        réalisés avec un intervalle de $0.05$ (en $\log10$) puis lissés avec
-        l'estimateur local LOESS de paramètre $span = 0.3$ (logiciel R).  (A)
-        Les régions intergéniques sont définies comme les régions
-        complémentaires aux régions transcrites (données UCSC), celles-ci étant
-        préalablement fusionnées pour éviter les redondances liées aux
-        multiples transcrits d'un même gène. De la bactérie à l'homme, on
-        observe une inflation de la quantité de génome non codant.  (B) Les
-        régions introniques sont définies par le fait qu'elles sont entourées
-        par deux exons d'un même gène. Pour pouvoir être épissés lors de la
-        maturation des preARNm, les introns doivent posséder des sites
-        d'épissage, imposant une borne inférieure à leur taille pour que l'ARNm
-        final soit fonctionnel.
-
-    }
-    \label{fig:intergenic-intronic}
-\end{figure}
-
 Nous nous intéressons ici aux distributions de tailles intergéniques et
 introniques dans les génomes de différentes espèces, et aux questions qu'elles
 soulèvent.\\
@@ -58,6 +33,34 @@ de nombreuses régions transcrites non codantes proches des gènes. On note par
 ailleurs l'inflation importante de la taille des régions intergéniques entre la
 bactérie ($180$ bp en moyenne, médiane à $100$bp) et l'homme ($80$kb de
 moyenne, médiane à $15$kb).  \\
+
+\begin{figure}[t]
+\centering
+%\bfig
+\includegraphics[width=1.0\textwidth]{figures/intergenic-intronic.pdf}
+\captionbf{Distribution des tailles intergéniques et introniques chez différentes espèces}{
+
+
+    Distributions log-log de la taille des régions intergéniques (A) et
+    introniques (B) chez différentes espèces. Les histogrammes sont
+    réalisés avec un intervalle de $0.05$ (en $\log10$) puis lissés avec
+    l'estimateur local LOESS de paramètre $span = 0.3$ (logiciel R).  (A)
+    Les régions intergéniques sont définies comme les régions
+    complémentaires aux régions transcrites (données UCSC), celles-ci étant
+    préalablement fusionnées pour éviter les redondances liées aux
+    multiples transcrits d'un même gène. De la bactérie à l'homme, on
+    observe une inflation de la quantité de génome non codant.  (B) Les
+    régions introniques sont définies par le fait qu'elles sont entourées
+    par deux exons d'un même gène. Pour pouvoir être épissés lors de la
+    maturation des preARNm, les introns doivent posséder des sites
+    d'épissage, imposant une borne inférieure à leur taille pour que l'ARNm
+    final soit fonctionnel.
+
+}
+\label{fig:intergenic-intronic}
+%\efig
+\end{figure}
+
 
 Les données introniques montrées en figure~\ref{fig:intergenic-intronic}B
 exhibent quant à elles un comportement très stéréotypé.  Toutes les

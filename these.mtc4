@@ -1,19 +1,19 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}Observations de corr\'elations au sein des TFBS}{\reset@font\mtcSfont 66}{section.3.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Mod\`eles existants permettant de d\'ecrire la statistique des TFBS}{\reset@font\mtcSfont 67}{section.3.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.1}Mod\`ele de r\'ef\'erence sans corr\'elations : la PWM}{\reset@font\mtcSSfont 67}{subsection.3.2.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.2}Une PWM g\'en\'eralis\'ee : le mod\`ele GWM}{\reset@font\mtcSSfont 69}{subsection.3.2.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.3}R\'eseaux bay\'esiens}{\reset@font\mtcSSfont 70}{subsection.3.2.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.4}Mod\`eles de m\'elange}{\reset@font\mtcSSfont 71}{subsection.3.2.4}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}M\'elange de PWMs}{\reset@font\mtcSSSfont 71}{subsubsection.3.2.4.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}M\'elange d'arbres}{\reset@font\mtcSSSfont 72}{subsubsection.3.2.4.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}Mod\`eles de maximum d'entropie}{\reset@font\mtcSfont 72}{section.3.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}Pourquoi maximiser l'entropie?}{\reset@font\mtcSSfont 72}{subsection.3.3.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.2}Maximisation de l'entropie sous contraintes}{\reset@font\mtcSSfont 74}{subsection.3.3.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.3}Application aux sites de fixation}{\reset@font\mtcSSfont 75}{subsection.3.3.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Corr\'elations \`a un point : le mod\`ele PWM}{\reset@font\mtcSSSfont 75}{subsubsection.3.3.3.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Corr\'elations \`a deux points : le mod\`ele de Potts}{\reset@font\mtcSSSfont 76}{subsubsection.3.3.3.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Article}{\reset@font\mtcSfont 77}{section.3.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}Analyse thermodynamique des mod\`eles}{\reset@font\mtcSfont 109}{section.3.5}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.1}Chaleur sp\'ecifique}{\reset@font\mtcSSfont 109}{subsection.3.5.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.2}Lien avec les valeurs des champs et des couplages}{\reset@font\mtcSSfont 110}{subsection.3.5.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.6}Conclusion et perspectives du chapitre 2}{\reset@font\mtcSfont 112}{section.3.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}Observations de corr\'elations au sein des TFBS}{\reset@font\mtcSfont 50}{section.3.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Mod\`eles existants permettant de d\'ecrire la statistique des TFBS}{\reset@font\mtcSfont 51}{section.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.1}Mod\`ele de r\'ef\'erence sans corr\'elations : la PWM}{\reset@font\mtcSSfont 51}{subsection.3.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.2}Une PWM g\'en\'eralis\'ee : le mod\`ele GWM}{\reset@font\mtcSSfont 52}{subsection.3.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.3}R\'eseaux bay\'esiens}{\reset@font\mtcSSfont 53}{subsection.3.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.4}Mod\`eles de m\'elange}{\reset@font\mtcSSfont 53}{subsection.3.2.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}M\'elange de PWMs}{\reset@font\mtcSSSfont 53}{subsubsection.3.2.4.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}M\'elange d'arbres}{\reset@font\mtcSSSfont 54}{subsubsection.3.2.4.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}Mod\`eles de maximum d'entropie}{\reset@font\mtcSfont 54}{section.3.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}Pourquoi maximiser l'entropie?}{\reset@font\mtcSSfont 54}{subsection.3.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.2}Maximisation de l'entropie sous contraintes}{\reset@font\mtcSSfont 56}{subsection.3.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.3}Application aux sites de fixation}{\reset@font\mtcSSfont 57}{subsection.3.3.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Corr\'elations \`a un point : le mod\`ele PWM}{\reset@font\mtcSSSfont 57}{subsubsection.3.3.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Corr\'elations \`a deux points : le mod\`ele de Potts}{\reset@font\mtcSSSfont 58}{subsubsection.3.3.3.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Article}{\reset@font\mtcSfont 58}{section.3.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}Analyse thermodynamique des mod\`eles}{\reset@font\mtcSfont 90}{section.3.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.1}Chaleur sp\'ecifique}{\reset@font\mtcSSfont 90}{subsection.3.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.5.2}Lien avec les valeurs des champs et des couplages}{\reset@font\mtcSSfont 91}{subsection.3.5.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.6}Conclusion et perspectives du chapitre 2}{\reset@font\mtcSfont 91}{section.3.6}}

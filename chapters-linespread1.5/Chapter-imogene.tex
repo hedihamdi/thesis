@@ -1,0 +1,1086 @@
+\section*{Introduction du chapitre \thechapter}
+
+Dans le chapitre \ref{ch:maxent}, nous avons vu comment décrire l'interaction
+TF-ADN lorsque des sites de fixation sont connus. Dans ce chapitre, nous
+adoptons une démarche plus générale. Nous connaissons l'activité de régulation
+d'un certain nombre de CRMs, et nous souhaitons savoir quels TFs s'y fixent
+(recherche de motifs), et si le génome contient d'autres CRMs avec la même
+activité (recherche de modules). Un algorithme permettant précisément de
+réaliser ces étapes a été développé précédemment par Hervé Rouault et appliqué
+au cas de la différenciation des organes sensoriels de la
+Drosophile~\cite{Rouault2010p327}. Cet algorithme se distingue des précédents
+par le fait qu'il n'utilise pas de motifs connus en entrée mais les génère
+purement \denovo, et par son utilisation systématique de l'information
+provenant de la conservation chez d'autres espèces grâce à des modèles
+d'évolution, le rendant notamment adapté au cas où les CRMs connus sont en
+petit nombre. Nous présentons ici Imogene, l'extension de cet algorithme au cas
+des mammifères, ainsi que son utilisation comme outil de classification de CRMs
+associés à différentes régulations.
+
+Avant de rentrer dans le détail d'Imogene, nous présentons les méthodes
+existantes de recherche de motifs dans des CRMs. Le problème général est le
+suivant : étant données des CRMs conduisant à une même régulation (l'ensemble
+d'apprentissage), peut-on construire des modèles de sites de fixation qui \og
+expliquent \fg cette co-régulation, \cad qui prédisent l'existence de sites sur
+les CRMs mais pas sur des séquences ne participant pas à la co-régulation?
+
+
+
+\section{Quelques approches existantes pour la recherche de motifs et de modules de régulation} 
+\label{sec:approches_existantes}
+
+Nous avons déjà introduit différentes méthodes de prédiction de motifs et
+modules en introduction (section \ref{sec:prediction_crms}). Ici nous décrivons
+plus en avant certaines de ces méthodes que nous jugeons utiles à la mise en
+perspective d'Imogene, soit par leur approche de génération \denovo de motifs,
+soit par leur utilisation de la conservation chez d'autres espèces et de
+modèles d'évolution pour la prendre en compte, soit par le fait qu'elles
+développent des statistiques appropriées à l'étude de petits échantillons de
+CRMs. Pour une revue plus exhaustive, le lecteur intéressé pourra se référer
+à \citet{Wasserman2004p624} et \citet{Aerts2012p3868}.
+
+\subsection{MEME : une approche \denovo par Espérance-Maximisation}
+\label{sub:meme_une_approche_de_type_esp_rance_maximisation}
+
+L'une des premières approches pour la prédiction \denovo de motifs à partir de
+séquences a été celle de MEME~\cite{Bailey1994fk}, un algorithme basé sur la
+méthode d'Espérance-Maximisation ou EM (\textit{Expectation Maximization})
+utilisée précédemment dans ce cadre par \citet{Lawrence1990uq}. Cet algorithme
+utilise une approche générative pour décrire les processus probabilistes qui
+ont permis la génération des séquences CRMs, ce qui permet d'écrire la
+probabilité qu'une séquence soit générée par un motif, et inversement de
+trouver le meilleur motif décrivant des séquences données. L'approche est
+illustrée en figure~\ref{fig:d_haeseleer-MEME}. 
+
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/d_haeseleer-MEME.pdf}
+\captionbf{Illustration de l'approche Espérance-Maximisation}{
+
+Figure tirée de \citet{Dhaeseleer2006kx} décrivant l'approche EM. Un premier
+modèle de motif est construit à partir d'un site initial. Ce modèle permet de
+pondérer l'ensemble des sites sur les séquences (étape E). En rouge sont
+montrés les meilleurs sites pour chaque séquence. En utilisant les poids des
+sites, il est possible de construire un modèle de vraisemblance maximale (étape
+M). La méthode originale de \citet{Lawrence1990uq} fait l'hypothèse qu'il
+y a exactement un site de fixation par séquence, condition qui est relâchée par
+MEME. 
+
+} \label{fig:d_haeseleer-MEME} \efig
+
+
+\subsubsection{Vraisemblance d'une séquence}
+\label{ssub:vraisemblance_d_une_s_quence}
+
+
+Notons $S=\{S_1,\cdots,S_L\}$ une séquence\footnote{On concatène les deux brins
+d'ADN dans cette séquence. On suppose en effet qu'ils participent
+équiprobablement à la fixation. La séquence génomique double brins est donc de
+longueur $L/2$.} de taille $L$. Supposons qu'il y a exactement un site de
+régulation par CRM. C'est l'approche de \citet{Lawrence1990uq}, et cette
+condition est relâchée par MEME, qui autorise l'utilisateur à préciser un
+nombre moyen de sites par séquence. La probabilité que la séquence possède un
+site de taille $K$ à la position $i$ étant donné le modèle de motif
+$\mathcal{M}$ s'écrit 
+
+\begin{equation}
+    \label{eq:prob-sequence-oops}
+    P(S|i,\mathcal{M}) = P_0(S_{1,i-1})\times P(S_{i,i+K-1} | \mathcal{M})\times P_0(S_{K,L})
+\end{equation}
+
+où $S_{i,j}$ dénote la séquence entre les positions $i$ et $j$ incluses,
+$P(S_{i,i+K-1}|\mathcal{M})$ est la probabilité de générer la séquence de
+taille $K$ débutant à la position $i$ avec le modèle $\mathcal{M}$ (voir
+section \ref{sec:mod_les_pour_d_crire_les_corr_lations}), et $P_0(s)$ est la
+probabilité dite \textit{background} de générer la séquence $s$ étant donné un
+modèle génératif neutre, généralement pris comme étant une chaîne de Markov
+$\mathcal{P}_k$ d'ordre $k$ petit ($0$ à $2$) :
+
+\begin{equation}
+    P_0(S_{i,j}) = \prod_{l=i}^{j} \mathcal{P}_k(S_l | S_{l-k,l-1})
+\end{equation}
+
+L'équation \ref{eq:prob-sequence-oops} décrit donc la probabilité de générer
+la séquence $S$ avec le modèle \textit{background}, sauf à la position $i$ où
+un site est généré avec le modèle de fixation $\mathcal{M}$. La probabilité de générer la séquence s'obtient finalement en sommant sur les positions pondérées par la probabilité \apriori $P(i)$ que le site soit à la position $i$ :
+
+\begin{equation}
+    \label{eq:likelihood-sequence-model}
+    P(S|\mathcal{M}) = \sum_{i=1}^{L-K+1} P(i) P(S|i,\mathcal{M})
+\end{equation}
+
+Cette probabilité est généralement prise uniforme, mais on peut y incorporer
+certaines informations, comme le nombre de séquences alignées (\textit{reads})
+d'une expérience de \chipseq.
+
+% subsubsection vraisemblance_d_une_s_quence (end)
+
+\subsubsection{Apprentissage du modèle}
+\label{ssub:apprentissage_du_mod_le}
+
+
+Maintenant que nous savons exprimer la vraisemblance d'une séquence régulée par
+le motif $\mathcal{M}$, nous pouvons apprendre le meilleur modèle possible
+l'ayant générée : c'est la maximisation de la vraisemblance. Soit un ensemble
+de séquences $\mathcal{S}$ constitué de $M$ séquences co-régulées
+$S[1],\cdots,S[M]$.  Ces séquences étant supposées indépendantes, la
+vraisemblance que ces données soient générées par un modèle $\mathcal{M}$ est
+le produit sur les séquences de la quantité $P(S[m]|\mathcal{M})$. Il est plus
+utile dans ce cas de regarder la log-vraisemblance, s'écrivant alors comme une
+somme :
+
+\begin{equation}
+    l(\mathcal{S} | \mathcal{M}) = \sum_{m=1}^M \log P(S[m] | \mathcal{M})
+\end{equation}
+
+Nous désirons obtenir le modèle $\mathcal{M}$ maximisant cette quantité
+\footnote{La distribution \textit{background} étant fixée (par exemple la
+chaîne de Markov peut être apprise sur un grand nombre de séquences
+intergéniques non codantes).  }.  Nous ne connaissons pas les positions exactes
+des sites, qui sont des \og variables cachées \fg et il n'existe pas de méthode
+d'estimation simple permettant de résoudre ce problème.  C'est à ce stade
+qu'intervient la méthode Espérance-Maximisation
+(EM)~\cite{dempster1977maximum}. L'algorithme EM est une méthode itérative qui
+part d'un modèle initial $\mathcal{M}^0$ permettant de calculer les poids des
+positions dans les séquences (étape E d'espérance), puis estime le meilleur
+modèle $\mathcal{M}^1$ étant données ces poids (étape M de maximisation).
+L'itération a lieu jusqu'à convergence vers un maximum local. 
+
+
+Notons $\mathcal{M}^t$ le modèle à l'itération $t$. La probabilité qu'un site
+à la position $i$ dans la séquence $S[i]$ soit un site de fixation s'écrit $P(i
+| S[m], \mathcal{M}^t)$. On définit la log-vraisemblance moyenne d'un modèle
+$\mathcal{M}$ à l'itération $t$ par :
+
+\begin{equation}
+    \label{eq:loglikeli-full}
+    Q(\mathcal{M}|\mathcal{M}_t,\mathcal{S}) = \sum_m \sum_i P(i | S[m],
+    \mathcal{M}^t) \log P(\mathcal{S},i|\mathcal{M})
+\end{equation}
+
+Le modèle suivant $\mathcal{M}^{t+1}$ est celui qui maximise cette quantité :
+
+\begin{equation}
+    \mathcal{M}^{t+1} = \underset{\mathcal{M}}{\text{argmax}} Q(\mathcal{M}|\mathcal{M}_t,\mathcal{S})
+\end{equation}
+
+
+L'équation \ref{eq:loglikeli-full} se scinde en une partie qui dépend de
+$\mathcal{M}$ et une partie \textit{background} qui n'en dépend pas (eq.
+\ref{eq:prob-sequence-oops}), que l'on peut dont ignorer pour ce qui est de la
+maximisation. Ainsi, le modèle $\mathcal{M}$ maximise la quantité suivante :
+
+\begin{equation}
+    Q(\mathcal{M}|\mathcal{M}_t,\mathcal{S}) = \sum_m \sum_i P(i | S[m],
+    \mathcal{M}^t) \log P(S_{i,i+K-1}|\mathcal{M})
+\end{equation}
+
+Chaque $K$-mer $S_{i,i+K-1}$ des séquences de $\mathcal{S}$ est donc pris en
+compte dans l'apprentissage en proportion de la croyance courante $P(i | S[m],
+\mathcal{M}^t)$ que c'est un site de fixation. 
+\\
+
+Pour résumer, on a deux étapes:
+
+\begin{itemize}
+        
+
+    \item[$\bullet$] étape E : utiliser $\mathcal{M}^t$ pour attribuer un poids à chaque
+        $K$-mer des séquences
+
+    \item[$\bullet$] étape M : apprendre $\mathcal{M}^{t+1}$ qui a la plus grande
+        vraisemblance de générer les données pondérées par $\mathcal{M}^t$.
+
+\end{itemize}
+
+Reste le problème de choisir un modèle initial adéquat pour être sûrs de
+converger vers un maximum de vraisemblance global et pas juste local. MEME
+adopte pour cela une approche semi-exhaustive. Les différents $K$-mers des
+séquences d'apprentissage sont successivement utilisés pour générer un modèle
+initial.  L'algorithme EM est itéré une fois. Le modèle de plus grande
+(log-)vraisemblance est finalement gardé come motif initial pour une itération
+complète.
+
+
+
+% subsubsection apprentissage_du_mod_le (end)
+
+
+% subsection algorithmes_de_type_esp_rance_maximisation (end)
+
+\subsection{STUBB : une méthode utilisant les corrélations entre sites de fixation et la phylogénie}
+\label{sub:stubb_une_m_thode_utilisant_des_motifs_connus}
+
+L'algorithme STUBB \cite{Sinha2003p608} décrit les séquences par un modèle de
+Markov caché (HMM pour \textit{Hidden Markov Model}) et les motifs par des
+PWMs. Il est basé sur l'algorithme Ahab~\cite{Rajewsky2002kl} -- lui-même basé
+sur l'algorithme MobyDick~\cite{Bussemaker2000ve} --, qui peut être vu comme
+une extension de MEME au cas où les séquences contiennent plusieurs sites de
+fixations pour différents motifs. Notamment, ces méthodes ont l'intérêt tout
+comme MEME de ne pas avoir de seuil arbitraire pour définir un site car elles
+moyennent sur toutes les positions de sites (ou segmentations) possibles de la
+séquence. On parle de modèles thermodynamiques (voir
+\ref{sub:m_thodes_utilisant_la_concentration_en_sites_de_fixation}). La
+différence entre STUBB et Ahab est qu'il introduit deux informations
+supplémentaires : les corrélations entre motifs et la phylogénie.  Enfin,
+contrairement à MEME, l'algorithme utilise comme condition initiale un ensemble
+de motifs connus pour être impliqués dans la co-régulation étudiée. 
+
+\subsubsection{Description du modèle HMM}
+\label{ssub:description_du_mod_le_hmm}
+
+Nous décrivons d'abord l'algorithme Ahab~\cite{Rajewsky2002kl}. Notons $W$
+l'ensemble des motifs initiaux. Le modèle HMM à l'ordre $0$ (HMM$0$) utilisé
+décrit la génération d'une séquence $S$ de la manière suivante. La séquence est
+initialement de taille nulle. Le processus choisit un motif $w_i\in W$ avec une
+probabilité $p_i$ ou le motif \textit{background} $w_b$ (une PWM de longueur
+$1$) avec une probabilité $1-\sum_ip_i$.  Une fois le motif $w$ choisi, une
+séquence est échantillonnée à partir de la PWM de $w$ et est ajoutée à la
+séquence $S$. Le processus est itéré jusqu'à ce que la séquence générée
+atteigne une taille $L$.  La séquence de motifs choisis au cours de la
+procédure définit une segmentation $T$. La probabilité que la séquence observée
+soit générée par ce processus de paramètres $\theta = \{w_i,p_i\}$ est 
+
+\begin{equation}
+    P(S|\theta) = \sum_T P(T|\theta) P(S|T,\theta)
+\end{equation}
+
+et peut être calculée par programmation dynamique (algorithme
+forward-backward). Le score d'une séquence est obtenu en comparant cette
+probabilité et la probabilité $P(S|\theta_b)$ que la séquence soit générée
+uniquement par le modèle \textit{background} :
+
+\begin{equation}
+    F(S) = \underset{\theta}{\text{argmax}} \log \left(\frac{P(S|\theta)}{P(S,\theta_b)}\right)
+\end{equation}
+
+Le paramètre $\theta$ (\cad les $p_i$) qui maximise le membre de droite est obtenu grâce à un algorithme de type EM~\cite{Sinha2003p608}.
+% subsubsection description_du_mod_le_hmm (end)
+
+\subsubsection{Ajout des corrélations entre motifs}
+\label{ssub:ajout_des_corr_lations_entre_motifs}
+
+
+Des informations sur les corrélations entre motifs sont introduites dans
+$\theta$ sous la forme de probabilités de transition $p_{ij}$ que le motif
+choisi lors de la génération de la séquence soit $w_j$ lorsque le premier motif
+précédent non-\textit{background} est $w_i$. Parce que le nombre de paramètres
+devient grand, seules les corrélations importantes (dépassant un seuil fixé)
+sont ajoutées. 
+
+% subsubsection ajout_des_corr_lations_entre_motifs (end)
+
+
+\subsubsection{Incorporation de l'information phylogénétique}
+\label{ssub:incorporation_de_l_information_phylog_n_tique}
+
+Enfin, STUBB utilise l'information provenant de la conservation de la séquence
+chez d'autres espèces. Les séquences des différentes espèces sont d'abord
+alignées, puis la probabilité de générer l'alignement est calculée à l'aide
+d'un modèle phylogénétique. Ce modèle permet de prendre en compte le fait que
+les séquences homologues sont corrélées du fait qu'elles dérivent d'un ancêtre
+commun. Dans le cas de Stubb, les espèces sont supposées liées par un topologie
+en étoile, \cad que les espèces partagent un seul ancêtre commun. Le modèle
+d'évolution suppose que les différentes bases de la séquence évoluent
+indépendamment, mutent à la même fréquence, et que la probabilité de fixation
+d'une mutation $b \to b'$ à la position $i$ est proportionnelle au poids
+$w_{i,b'}$ de la PWM du nucléotide $b'$ à cette position. Ce modèle est
+identique au modèle \textit{Felsenstein} que nous introduisons dans l'article
+(voir section \ref{sec:article_imogene}) et qui est inspiré du modèle neutre de
+\citet{Felsenstein1981p3782} -- les probabilités neutres étant remplacées par les
+fréquences PWM --. La probabilité $P(\sigma|w)$ de générer l'alignement $\sigma$
+de séquences $s$ avec le motif $w$ de taille $L_w$ s'écrit alors :
+
+\begin{equation}
+    \label{eq:stubb-felsen}
+    P(\sigma|w) = \prod_{i=1}^{L_w} \left[ \sum_b w_{i,b} \prod_{s \in \sigma} (q_s \delta_{b,s_i} + (1-q_s) w_{i,s_i}) \right]
+\end{equation}
+
+où $w_{i,s_i}$ est la probabilité de générer le nucléotide $s_i$ à la position
+$i$ pour le motif $w$, $\delta_{x,y}=1$ si $x=y$ et $0$ sinon, et
+$q_s=e^{-\lambda t_s}$ est la probabilité de conserver un nucléotide au cours
+de l'évolution, qui est une fonction du taux de mutation neutre $\lambda$ et du
+temps d'évolution $t_s$ entre l'ancêtre commun et l'espèce $s$. En résumé, pour
+chaque position $i$, un nucléotide $b$ est généré chez l'ancêtre commun avec
+une probabilité $w_{i,b}$, puis ce nucléotide est soit conservé chez l'espèce
+$s$ avec une probabilité $q_s$  ou bien il mute avec une probabilité $1-q_s$,
+et une nouvelle base est sélectionnée selon les poids définis par $w_i$. Pour
+des espèces proches, $q\sim1$ et le fait d'observer des bases différentes à des
+positions homologues diminue fortement $P(\sigma|w)$, même si leur fréquence
+\apriori donnée par $w$ est identique : le modèle donne alors naturellement
+plus de poids aux séquences relativement conservées. Pour des espèces
+lointaines, $q\sim0$ et tout se passe comme si les séquences de $\sigma$
+étaient indépendantes.
+
+
+% subsubsection incorporation_de_l_information_phylog_n_tique (end)
+
+
+% subsubsection stubb_une_m_thode_utilisant_des_motifs_connus (end)
+
+
+
+\subsection{MONKEY : vers des modèles phylogénétiques plus complexes}
+\label{sub:monkey_vers_des_mod_les_phylog_n_tiques_plus_complexes}
+
+
+Dans la section précédente, le modèle phylogénétique utilisé par Stubb est
+relativement simple et la probabilité de fixation n'a pas de base claire.
+L'algorithme MONKEY~\cite{Moses2004p656} propose d'utiliser des modèles
+d'évolution plus complexes pour détecter les sites conservés à partir de motifs
+connus.  \\
+
+Les motifs $w$ sont décrits par le modèle PWM et le \textit{background} par les
+fréquences des nucléotides $\pi_b$. Le score d'un site est défini par la
+fraction des probabilités de générer la séquence $s$ par l'un ou l'autre des
+modèles (\textit{log-likelihood ratio} ou LLR):
+
+\begin{equation}
+    LLR(s) = \log \frac{P(s|w)}{P(s|\pi)} = \sum_i  \log \frac{w_{i,b(i)}}{\pi_b}
+\end{equation}
+
+Le but est de généraliser ce score au cas d'un alignement $\sigma$ de séquences
+$s$, en réalisant son calcul sur l'ancêtre commun des séquences.  Cet ancêtre
+commun, ainsi que tous les ancêtre communs intermédiaires pour une topologie
+d'arbre $T$ quelconque, ne sont pas observés, et il faut donc sommer sur tous
+leurs états (nucléotides) possibles étant donnés l'alignement observé $\sigma$,
+l'arbre $T$ et le modèle d'évolution. La solution générale de ce problème a été
+donnée par \citet{Felsenstein1981p3782}. Notamment, nous pouvons nous
+concentrer sur le cas à deux espèces, le cas général procédant par récurrence
+à partir de ce cas simple. Nous pouvons aussi nous concentrer sur une position
+$i$ donnée, puisque les positions sont indépendantes.
+
+
+Considérons un alignement de deux nucléotides $s_1$ et $s_2$. On définit un
+nouveau score comme étant le LLR comparant l'hypothèse que $s_1$ et $s_2$
+représentent un site conservé pour un motif $w$ et l'hypothèse que les
+bases ont été tirées dans le \textit{background}:
+
+\begin{equation}
+    LLR_{\text{cons}}(s_1,s_2) = \log \frac{P(s_1,s_2 | w,T,R_w)}{P(s_1,s_2 | \pi,T,R_{\text{back}})}
+\end{equation}
+
+où $R_w$ et $R_{\text{back}}$ sont des matrices de taux de transition décrivant
+les processus de substitution au cours de l'évolution pour le cas d'un site de
+fixation du motif $w$ et pour le \textit{background}, et interviennent dans
+l'écriture de la probabilité de transition de la base $b$ à la base $b'$ :
+
+\begin{equation}
+    p_{b\to b'} = \left(e^{R_Md}\right)_{b,b'}
+\end{equation}
+
+où $R_M$ est la matrice de taux de transition du modèle $M$ et $d$ le temps
+évolutif. Dans le cas simple à deux espèces, l'arbre $T$ est en étoile, avec
+des distances $d_1$ et $d_2$ de l'ancêtre commun aux espèces contenant les
+bases $s_1$ et $s_2$.  Par ailleurs, les espèces évoluent indépendamment depuis
+leur séparation.  Notant $b$ la base sur l'ancêtre commun, on a finalement :
+
+\begin{align}
+    \begin{split}
+    P(s_1,s_2|M,T,R_M) & = \sum_b P(s_1|b,d_1,R_M) P(s_2 |b,d_2,R_M) P(b|M) \\
+    & = \sum_b  \left(e^{R_Md_1}\right)_{b,s_1}\left(e^{R_Md_2}\right)_{b,s_2} P(b|M)
+    \end{split}
+\end{align}
+
+Le calcul sur un nombre quelconque d'espèces se fait
+récursivement~\cite{Felsenstein1981p3782}, jusqu'à la racine de l'arbre où
+$P(b|M)$ vaut $w_{i,b}$ pour le motif et $\pi_b$ pour le \textit{background}.
+\\
+
+Plusieurs modèles peuvent être choisis pour les matrices de transition. Dans le
+cas du \textit{background}, il peut être décrit par des modèles neutres.  Par
+exemple le modèle de Felsenstein \cite{Felsenstein1981p3782} est le modèle le
+plus simple dont la distribution d'équilibre redonne les fréquences du
+\textit{background}. Le modèle HKY~\cite{Hasegawa1985qf} est une variante qui
+inclut le fait que les mutations entre bases de même nature chimique (purine ou
+pyrimidine), appelées transitions, sont $2$ fois plus fréquentes que les autres
+mutations, appelées transversions. Ce dernier modèle est utilisé dans MONKEY
+pour décrire le \textit{background}. Pour ce qui est du motif, les taux de
+transition dépendent de la position au sein du site : par exemple les bases
+dégénérées mutent plus vite que les bases très conservées~\cite{Moses2003bh}.
+Pour prendre cette variation en compte, une possibilité est de modifier le
+modèle neutre en utilisant à la place des fréquences \textit{background} les
+fréquences données par la PWM : c'est ce qui est fait dans Stubb avec le modèle
+Felsenstein (éq.\ref{eq:stubb-felsen}). Dans MONKEY, les auteurs utilisent un
+modèle plus complexe, appelé modèle Halpern-Bruno ou HB, préalablement
+introduit pour étudier l'évolution des régions codantes~\cite{Halpern1998p548}.
+Dans ce modèle, le taux de substitution $R(i)_{a,b}$ de la base $a$ vers la base
+$b$ en position $i$ est à une constante près le produit de la probabilité de
+mutation neutre de $a$ vers $b$ (indépendante de la position) par une
+probabilité de fixation $f^i_{a,b}$ (dépendante de la position) :
+
+\begin{equation}
+    R(i)_{a,b} \propto Q_{a,b} f^i_{a,b}
+\end{equation}
+
+où $Q=R_{\text{back}}$ est la matrice de transition du modèle
+\textit{background}. La probabilité de fixation peut être obtenue en utilisant un résultat classique de génétique des populations
+\cite{Kimura1962p456} :
+
+\begin{align}
+    \label{eq:hb_fab}
+    f^i_{a,b} &\simeq \frac{2s}{1-e^{-2Ns}}\\
+    f^i_{b,a} &\simeq \frac{-2s}{1-e^{2Ns}}
+\end{align}
+
+où $N$ est la taille effective de la population (le facteur $2$ vient du fait
+que la population est diploïde), $s$ est la valeur adaptative relative ou
+\textit{fitness} de la base $b$ par rapport à la base $a$ en position $i$, et
+l'évolution est quasi-neutre ($s\ll1$). Cette dernière hypothèse permet d'écrire :
+    
+\begin{equation}
+    \label{eq:hb_fitness}
+    \frac{f^i_{a,b}}{f^i_{b,a}} \simeq e^{2Ns}    
+\end{equation}
+
+Par ailleurs, en supposant que les substitutions vérifient le bilan détaillé
+à l'équilibre, on peut écrire
+
+\begin{equation}
+    \label{eq:hb_bilan_detaille}
+     \frac{f^i_{a,b}}{f^i_{b,a}} =\frac{w_{i,b}Q_{b,a}}{w_{i,a}Q_{a,b}}
+ \end{equation}
+
+Finalement, en combinant les équations \ref{eq:hb_fab}, \ref{eq:hb_fitness} et
+\ref{eq:hb_bilan_detaille}, on obtient la matrice de transition du modèle HB en
+position $i$ sous la forme :
+
+\begin{equation}
+    \label{eq:rate_HB}
+    \boxed{
+    R(i)_{a,b} \propto Q_{a,b} \frac{x \log x }{x-1}
+}
+\end{equation}
+
+où 
+
+\begin{equation}
+    x = \frac{w_{i,b} Q_{b,a}}{w_{i,a}Q_{a,b}} \simeq e^{2Ns}
+\end{equation}
+
+traduit l'effet de la sélection. En développant autour de $x=1$ et en restant
+au premier ordre, on a
+
+\begin{equation}
+    \frac{x \log x }{x-1} \simeq \frac{1}{2}(1+x)
+\end{equation}
+
+Ainsi, dans le cas neutre où $x=1$, la matrice de transition se réduit à la
+matrice \textit{background} : $R(i)_{a,b}=Q_{a,b}$. Cependant, lorsque la base
+$b$ est plus conservée que la base $a$ ($x>1$), les substitutions de $a$ vers
+$b$ sont plus fréquentes que sous le modèle neutre : $R(i)_{a,b} > Q_{a,b}$.
+
+% subsection monkey_vers_des_mod_les_phylog_n_tiques_plus_complexes (end)
+
+\subsection{Approches sans motifs ou \textit{motif-blind}}
+\label{sub:approches_motif-blind}
+
+Les algorithmes précédents utilisent en leur c{\oe}ur un modèle de motif
+$\mathcal{M}$, généralement une PWM, permettant d'attribuer une probabilité
+$P(S|\mathcal{M})$ à une séquence donnée. Néanmoins, il existe certaines
+méthodes cherchant à décrire plus généralement la statistique des mots au sein
+des CRMs sans chercher à associer ces statistiques à des motifs ayant une
+caractérisation biochimique précise. De telles approches sont dites sans motifs
+(\textit{motif-blind}). Nous en recensons ici quelques-unes (voir
+\citet{Kantorovitz2009p2937} pour plus de détails).
+
+
+\subsubsection{Modèles basés sur des chaînes de Markov}
+\label{ssub:mod_les_bas_s_sur_des_cha_nes_de_markov}
+
+Plusieurs modèles basés sur des chaînes de Markov ont été proposés. Par exemple,
+l'algorithme PFRSampler de \citet{Grad2004vn} consiste en un apprentissage de
+modèles de Markov d'ordre $5$ sur des séquences d'intérêt et sur des séquences
+\textit{background}, ces séquences étant préalablement filtrées par la
+conservation phylogénétique. Il est ensuite possible de calculer la
+vraisemblance qu'une séquence donnée soit générée par l'un ou l'autre des
+modèles, de manière similaire à l'éq.\ref{eq:likelihood-sequence-model}. Le
+score d'une séquence $S$ de taille $L$ est défini comme étant la
+différence des log-vraisemblances qu'elle soit générée par le modèle d'intérêt
+$\mathcal{M}_{\text{train}}$ et par le modèle \textit{background}
+$\mathcal{M}_{\text{back}}$ :
+
+\begin{equation}
+    \text{Score}(S) = \log \frac{P(S|\mathcal{M}_{\text{train}})}{P(S|\mathcal{M}_{\text{back}})} = \sum_{i=1}^L \log \frac{T_{\text{train}}(S_i | S_{i-k,i-1})}{T_{\text{back}}(S_i | S_{i-k,i-1})}
+\end{equation}
+
+où $T_{\text{train}}$ et $T_{\text{back}}$ sont les probabilités de transition
+associées aux deux modèles, $S_{i,j}$ est la séquence entre les positions $i$
+et $j$ incluses, et $k$ est l'ordre de la chaîne de Markov (ici $k=5$).  Cette
+méthode détecte donc la \textit{signature} globale d'un CRM plutôt que la
+présence de sites de fixation pour des TFs particuliers. Cette méthode a aussi
+été implémentée par \citet{Ivan2008dz} sous le nom de \textit{Markov Chain
+Discrimination} (MCD), avec la différence notable que les auteurs n'utilisent
+pas la phylogénie.  Une généralisation de cette approche a été proposée par
+\citet{Kazemian2011fv} sous le nom d'\textit{Interpolated Markov Model}. Au
+lieu d'utiliser une chaîne de Markov à un ordre donné, les auteurs réalisent
+une interpolation entre des chaînes de Markov d'ordres $0$ à $5$, en ne gardant
+pour chaque ordre que les transitions sur-représentées dans les séquences
+d'apprentissage. Ceci leur permet de capturer les signatures présentes
+à différentes résolutions.
+
+% subsubsection mod_les_bas_s_sur_des_cha_nes_de_markov (end)
+
+\subsubsection{Modèles basés sur des enrichissements en $k$-mers}
+\label{ssub:mod_les_bas_s_sur_des_enrichissements_en_k_mers}
+
+D'autres modèles sont basés sur la statistique des mots de $k$ nucléotides
+($k$-mers) dans les séquences d'apprentissage. Par exemple,
+\citet{Kantorovitz2007ys} ont introduit une mesure de similarité entre
+séquences basée sur le nombre de $k$-mers qu'elles ont en commun. Les auteurs
+définissent le score $D_2$ par 
+
+\begin{equation}
+    D_2(S_1,S_2) = \sum_{\{w\}} N_1(w) N_2(w)
+\end{equation}
+
+où $S_i$ est la séquence $i$, $\{w\}$ est l'ensemble des $k$-mers, et $N_i(w)$
+est le nombre de $k$-mers $w$ dans la séquence $i$. Ce score est grand si les
+séquences partagent de nombreux $k$-mers, \cad si elles ont une régulation
+commune. Ce score est normalisé pour produire le $z$-score (\cad le nombre
+d'écarts-type par rapport à la moyenne) de mesure de similarité $D2z$ :
+
+\begin{equation}
+    D2z(S_1,S_2) = \frac{D_2(S_1,S_2) - E(D_2)}{\sigma(D_2)}
+\end{equation}
+
+où $E(D_2)$ et $\sigma(D_2)$ sont l'espérance et l'écart-type de la
+distribution de $D_2(S_1,S_2)$, calculés théoriquement sous l'hypothèse que les
+séquences $S_1$ et $S_2$ sont indépendantes et sont générées par un modèle
+\textit{background} de type chaîne de Markov.
+
+D'autres méthodes pour attribuer un score à une séquence par similarité de
+$k$-mers avec des séquences d'apprentissage ont été introduites par
+\citet{Kantorovitz2009p2937}.  Étant données des séquences d'apprentissage, les
+$200$ $k$-mers ($k=6$) les plus représentés par rapport à un modèle
+\textit{background} sont sélectionnés selon leur $z$-score, dans ce cas le nombre
+d'écarts-type séparant le nombre $n(w)$ de fois que le mots apparaît dans le
+training set du nombre de fois moyen $\lambda(W)$ qu'il devrait apparaître sous
+un modèle \textit{background} \cite{Sinha2000zr}. Étant donnés ces mots
+sur-représentés, il est possible de définir un score basé sur la statistique de
+Poisson (modèle PAC pour \textit{Poisson Additive Conditional}) :
+
+\begin{equation}
+    PAC(S) = \frac{1}{200} \sum_{w} F(\lambda(w), n(w) - 1)
+\end{equation}
+
+où $F(\lambda,x)$ est la distribution de Poisson cumulative de paramètre
+$\lambda$, donnant une valeur faible (proche de $0$) si $n(w) \simeq
+\lambda(w)$ et maximale (proche de $1$) si $n(w) \gg \lambda(w)$. D'autres
+scores sont définis par une approche de classification linéaire pondérant les
+comptages de $k$-mers (WSC pour \textit{Weighted Sum of Counts})
+
+\begin{equation}
+    WSC(S) = \sum_w \beta(w) n(w)
+\end{equation}
+
+où $\beta(w)$ est un poids reflétant l'association avec l'ensemble
+d'apprentissage. Ce poids peut être le rapport de la fréquence du mot dans
+l'ensemble d'apprentissage et de sa fréquence dans le \textit{background}
+(modèle HexDiff, \citet{Chan2005ly}), le logarithme de cette quantité
+\cite{Rouault2010p327}, ou encore le $z$ score introduit précédemment mesurant
+la sur-représentation du $k$-mer dans l'ensemble d'apprentissage (méthode
+HexYMF, \citet{Kantorovitz2009p2937}). 
+
+
+
+% subsection approches_utilisant_des_motifs (end)
+
+
+
+% subsection incorporation_de_l_information_phylog_n_tique (end)
+\subsection{Autres méthodes utilisant des collections d'oligonucléotides}
+\label{sub:m_thodes_utilisant_des_collections_d_oligonucl_otides}
+
+% subsection m_thodes_utilisant_des_collections_d_oligonucl_otides (end)
+
+Alors que les méthodes basées sur l'enrichissement en $k$-mers présentées en
+\ref{sub:approches_motif-blind} s'intéressent au contenu général d'un CRM en
+$k$-mers, d'autres méthodes tentent de regrouper les $k$-mers en groupes
+associés à un régulateur putatif. Par exemple, \citet{Cao2010p1805} ont
+introduit un algorithme de recherche de motifs destiné à l'étude de données
+\chipseq. Ici, un motif est simplement défini comme une collection de $k$-mers.
+Le but est de trouver les motifs qui discriminent le mieux un ensemble de
+séquences positives (des pics de \chipseq) d'un ensemble de séquences
+\textit{background}. L'algorithme énumère d'abord tous les $k$-mers, mesure
+leurs fréquences, et ajuste pour chacun un modèle de régression logistique
+mesurant sa capacité à classifier les séquences. Le $k$-mer le plus important
+est choisi comme graine. Puis toutes les variations à distance de Hamming de
+$1$ et $2$ (\cad ayant un ou deux nucléotides différents) de cette graine sont
+énumérées, et sont ajoutées au motif si elles permettent d'améliorer la
+régression. Lorsqu'un motif final est obtenu, toutes ses occurrences sont
+masquées et un nouveau motif est appris. Un algorithme similaire, HOMER, a été
+développé par \citet{Heinz2010p3822}. La différence majeure est que HOMER
+utilise la collection de $k$-mers obtenue pour générer une PWM qui est ensuite
+raffinée sur les séquences.
+
+
+% subsubsection m_thodes_bas_es_sur_des_k_mers (end)
+
+\section{Article} 
+\label{sec:article_imogene}
+
+Dans l'article suivant, nous introduisons Imogene, un algorithme de génération
+de motifs \denovo utilisant la phylogénie basé sur l'algorithme de
+\citet{Rouault2010p327} qu'il généralise au cas des mammifères. Plusieurs tests
+sont réalisés, montrant sa capacité à prédire des CRMs tissu-spécifiques ou
+encore à classer différents CRMs selon leur motif d'expression associé.
+
+%\includepdf[pages=-]{articles/imogene-genomebiol.pdf}
+\includepdf[pages=-]{articles/manuscript-nar/manuscript.pdf}
+
+
+% section article (end)
+
+\section{Calcul de la moyenne de la postérieure par une méthode MCMC} 
+\label{sec:calcul_de_la_moyenne_de_la_post_rieure_par_une_m_thode_mcmc}
+
+Nous avons voulu savoir si l'approximation réalisée par Imogene lors du calcul
+du maximum de l'estimateur de la postérieure modifiée (obtenue avec un prior de
+Dirichlet de paramètres $\alpha_b+1$) donnait un résultat effectivement proche
+du calcul de la moyenne de l'estimateur de la postérieure non modifiée (avec un
+prior de Dirichlet de paramètres $\alpha_b$) :
+
+\begin{equation}
+    \underset{w_i}{\text{argmax}}\, \mathcal{L}(\{\mathcal{A}\}|w_i)\text{Dir}(w_i,\alpha_b+1) \simeq \int w_i\mathcal{L}(\{\mathcal{A}\}|w_i)\text{Dir}(w_i,\alpha_b) \text{d}w_i
+\end{equation}
+
+où $w_i$ est le vecteur de poids de la PWM à la position $i$, $\{\mathcal{A}\}$
+est l'ensemble des alignements de nucléotides observés à cette position dans
+les sites de fixation, $\mathcal{L}(\{\mathcal{A}\}|w_i)$ dénote la
+vraisemblance de l'alignement connaissant le vecteur de poids $w_i$ et
+$\text{Dir}(w_i,\alpha_b)$ est le prior de Dirichlet de paramètres $\alpha_b$.
+Pour des distances phylogénétiques nulles ou infinies, cette approximation est
+valide, et pour des distances intermédiaires, elle semble fonctionner dans le
+cas simplifié de l'arbre en étoile de la figure S$5$ de l'article. Qu'en
+est-t-il dans le cas réèl avec un arbre à la topologie plus complexe?
+L'estimation directe de la moyenne de cette distribution est difficile, puisque
+nous n'avons pas de moyen simple de l'échantillonner. Afin de contourner ce
+problème, nous avons eu recours à une méthode de Monte-Carlo par chaînes de
+Markov ou MCMC basée sur l'algorithme de
+Metropolis-Hastings~\cite{krauth2006statistical}. Nous présentons la
+comparaison de la moyenne de la postérieure obtenue par l'approche MCMC et du
+maximum de la postérieure modifiée par descente de gradient sur un cas réel
+simple en utilisant l'arbre des vertébrés (figure $2$ de l'article) et le
+modèle d'évolution \textit{Felsenstein}.
+
+
+\subsection{Principe de l'algorithme de Metropolis-Hastings}
+\label{sub:principe_de_l_algorithme_de_metropolis_hastings}
+
+L'algorithme de Metropolis-Hastings
+\cite{metropolis1953equation,hastings1970monte} permet d'échantillonner une
+distribution donnée en utilisant le parcours d'une chaîne de Markov ayant cette
+distribution pour loi stationnaire. Un tel processus de Markov est défini par
+des probabilités de transition $P(w \to w')$ entre deux états $w$ et $w'$. Il
+converge vers une distribution stationnaire $\pi(w)$ unique sous deux
+conditions : (1) les transitions sont réversibles et le processus satisfait le
+bilan détaillé $\pi(w)P(w\to w') = \pi(w')P(w'\to w)$, (2) le processus est
+ergodique, \cad que tout état est et reste accessible.  L'algorithme de
+Metropolis-Hastings repose sur la construction d'une chaîne de Markov ayant ces
+propriétés et dont la distribution d'équilibre $\pi(w)$ est la probabilité que
+l'on cherche à échantillonner $P(w)$. Pour cela, on part de l'équation du bilan
+détaillé, que l'on peut écrire 
+
+\begin{equation}
+    \label{eq:bilan-detaille}
+    \frac{P(w \to w')}{P(w' \to w)} = \frac{P(w')}{P(w)}
+\end{equation}
+
+La transition $P(w \to w')$ est ensuite décomposée en deux sous-étapes, la
+proposition (\textit{proposal}) et l'acceptation (\textit{acceptance}) : 
+
+\begin{equation}
+    P(w \to w') = \underbrace{g(w \to w')}_{\text{proposition}} \cdot \underbrace{A(w\to w')}_{\text{acceptation}}
+\end{equation}
+
+En insérant dans l'éq. \ref{eq:bilan-detaille} on obtient
+
+\begin{equation}
+    \frac{A(w \to w')}{A(w' \to w)} = \frac{P(w')}{g(w \to w')} \frac{g(w' \to w)}{P(w)}
+\end{equation}
+
+Plusieurs choix de la fonction d'acceptation sont possibles pour satisfaire
+cette équation \cite{hastings1970monte}. Un choix courant, dit choix de
+Metropolis,  est :
+
+\begin{equation}
+    \label{eq:acceptance}
+    A(w \to w') = \min\left(1, \frac{P(w')}{g(w \to w')} \frac{g(w' \to w)}{P(w)}\right)
+\end{equation}
+
+On remarque que cette quantité est invariante sous multiplication de la
+distribution $P(w)$ par un facteur non nul. Autrement dit, la distribution n'a
+pas besoin d'être normalisée. Dans un cadre bayésien, cela veut dire que l'on
+peut remplacer la postérieure par le produit de la vraisemblance et du
+\textit{prior}.\\
+
+La méthode de Metropolis-Hastings se
+résume donc ainsi :
+
+\begin{enumerate}
+\item Initialiser $w$ à une certaine valeur.
+\item Choisir un nouvel état $w'$ tiré selon $g(w \to w')$
+\item Accepter l'état avec une probabilité donnée par $A(w \to w')$. Si le nouvel état n'est pas accepté, alors $w'=w$.
+\item Itérer jusqu'à convergence
+\end{enumerate}
+
+Au final, $w$ étant tiré selon la distribution $P(w)$, sa moyenne est estimée
+en sommant les poids $w(t)$ obtenus au cours des $N$ itérations réalisées :
+
+\begin{equation}
+    \langle w \rangle \simeq \hat{w}_N = \frac{1}{N} \sum_{t=1}^N w(t)
+\end{equation}
+
+Quant au critère de convergence, une possibilité est d'utiliser le Théorème
+Central Limite (TCL). Celui-ci stipule que la moyenne de $n$ variables
+aléatoires indépendantes et identiquement distribuées selon une loi de moyenne
+$\mu$ et d'écart-type $\sigma$ tous deux de valeurs finies suit, pour $n$
+grand, une loi normale de moyenne $\mu$ et d'écart-type $\sigma/\sqrt{n}$. Dans
+l'approche MCMC, les échantillons successifs $w_i$ ne sont pas indépendants
+à cause du fait qu'on les tire selon la loi $g(w\to w')$. Il faut donc calculer
+le temps de décorrélation $T$ pour lequel $\langle w(t) w_i(t+T) \rangle \simeq
+0$, puis utiliser les échantillons $w(t)$ obtenus toutes les $T$ itérations
+comme variables indépendantes.  L'application du TCL permet alors d'arrêter les
+itérations lorsqu'une certaine précision désirée est atteinte, par exemple
+lorsque $\sigma / \sqrt{n} < 0.05 \cdot \mu$, \cad lorsque les variations de
+l'estimateur de la moyenne sont de l'ordre de $5\%$ de la valeur de la moyenne.
+L'écart-type $\sigma$ étant lui même estimé à partir des échantillons de
+l'algorithme, il faut aussi s'assurer qu'il a convergé vers une valeur
+stable pour appliquer le TCL.
+
+%Il est aussi possible, comme nous le verrons par la suite,
+%d'utiliser une borne inférieure connue à cet écart-type.
+
+
+
+% subsection principe_de_l_algorithme_de_metropolis_hastings (end)
+
+\subsection{Application au calcul de la postérieure}
+\label{sub:application_au_calcul_de_la_post_rieure}
+
+Dans notre cas, nous souhaitons utiliser l'algorithme de Metropolis-Hastings
+pour calculer la valeur moyenne du vecteur de poids $w_i$ en
+position $i$ de la PWM selon la distribution postérieure
+$\mathcal{P}(w_i|\{\mathcal{A}\})$:
+
+\begin{equation}
+    \langle w_i \rangle = \int w_i \mathcal{P}(w_i|\{\mathcal{A}\}) \text{d}w  %\simeq \sum_{t=1}^N w_i(t)
+\end{equation}
+
+Il nous faut pour cela définir une loi de proposition $g(w_i \to w_i')$
+pertinente. Dans notre cas, les poids $w_i$ doivent rester dans le simplexe de
+dimension $3$ défini par $w_A, w_C, w_G >0$ et $w_A+w_C+w_G <1$, le poids $w_T$
+étant entièrement déterminé par $w_T=1-w_A-w_C-w_G$.  La distribution naturelle
+possédant cette propriété est la loi de Dirichlet $\text{Dir}(\al)$, de
+paramètres $\al=\{\al_A,\al_C,\al_G,\al_T\}$ et de densité de probabilité
+
+\begin{equation}
+    f(w) = \frac{1}{B(\alpha)} \prod_{b\in \{A,C,G,T\}} w_{i,b}^{\al_b - 1}
+\end{equation}
+
+où $B(\al)$ est la fonction bêta multinomiale permettant la normalisation.
+Cette distribution est la même que celle obtenue dans le cas d'observations
+indépendantes (cf article). Afin d'accélérer l'échantillonnage MCMC, nous avons
+cherché à régler les paramètres $\al$ de manière à être au plus proche de la
+distribution $\mathcal{P}(w_i|\{\mathcal{A}\})$. Dans le cas de $N$ sites
+indépendants, celle-ci suit une loi de Dirichlet de paramètres $\al_p + N_i$,
+où $\al_p$ est le vecteur de pseudo-counts et $N_i$ le vecteur donnant les
+nombres d'observations des nucléotides en position $i$ au sein des différentes
+séquences. Dans le cas d'un arbre phylogénétique corrélant les séquences, le
+nombre \textit{effectif} d'observation est moins grand que le nombre total de
+séquences.  Nous avons donc défini les paramètres de notre proposition
+comme étant
+
+\begin{equation}
+    \al_b = \al_p + N_{\text{eff}}\cdot w_i
+\end{equation}
+
+où $N_{\text{eff}}=N_{\text{sites}}\cdot N_{\text{spe}} /2$ avec
+$N_{\text{sites}}$ le nombre d'alignements observés et $N_{\text{spe}}$ le
+nombre d'espèces dans l'alignement ($12$ dans les deux cas, \droso et
+mammifères).  Grossièrement, cela revient à dire que le modèle d'évolution
+réduit d'un facteur $2$ le nombre de séquences indépendantes. Nous avons
+calculé que le taux d'acceptation (proportion de mouvements proposés qui sont
+acceptés)  pour ce paramètre était de l'ordre de $50\%$, une valeur
+généralement considérée comme raisonnable~\cite{krauth2006statistical}. Nous
+obtenons finalement l'expression pour la proposition :
+
+
+\begin{equation}
+    \label{eq:proposal}
+    g(w \to w') = \frac{1}{B(\alpha)} \prod_{b\in \{A,C,G,T\}} (w_{i,b}')^{\al_{p,b} + N_{\text{eff}}\cdot w_{i,b}  - 1}
+\end{equation}
+
+Le vecteur $w_i$ est initialisé à la valeur qu'il prendrait si toutes les
+séquences orthologues étaient des observations indépendantes  (cf article) :
+
+\begin{equation}
+    w_{i,b}(0) = w_{i,b}^\text{inde} = \frac{N_{i,b} + \al_b}{N_{\text{tot}} + \sum_b \al_b}
+\end{equation}
+
+
+Le poids $w_i(1)$ suivant est tiré selon la probabilité de transition
+$g(w_i(0) \to w_i(1))$. Les différentes quantités de l'équation
+\ref{eq:acceptance} sont ensuite calculées et la transition est acceptée avec
+probabilité $A\left(w_i(0) \to w_i(1)\right)$. 
+\\
+
+%Reste le problème de la convergence. Nous avons vu dans la section précédente
+%que l'on pouvait utiliser le théorème centrale limite pour décider de la
+%convergence. 
+%Dans notre cas, nous possédons une borne inférieure de
+%l'écart-type $\sigma$ de la postérieure :  celui-ci est donné par l'écart-type
+%$\sigma_{\text{inde}}$ du cas limite où les séquences sont des observations
+%indépendantes. En effet, dans ce cas limite le nombre d'observations est plus
+%grand qu'avec un modèle d'évolution, et la déviation standard est donc plus
+%petite. Notant $\al_{i,b}^\text{inde}=N_{i,b}+\al_b$ et
+%$\al_0=\sum_b\al_{i,b}^{\text{inde}}$, celle-ci s'écrit
+
+%\begin{equation}
+    %\sigma_{\text{inde}} = \sqrt{\frac{\al_{i,b}^\text{inde}(\al_0-\al_{i,b}^\text{inde}}{\al_0^2(\al_0+1)}} 
+%\end{equation}
+%Le TCL peut alors être appliqué en utilisant des échantillons indépendants de
+%$w_i$ (voir paragraphe suivant
+%\ref{sub:illustration_de_la_m_thode_mcmc_sur_un_exemple}). Notre critère de
+%convergence est que l'écart absolu maximum obtenu entre l'estimation de la
+%moyenne à l'itération courante et les $10$ précédentes estimations doit être
+%plus petit que $\sigma_{\text{inde}}/\sqrt{n}$, où $n$ est le nombre
+%d'échantillons indépendants.
+
+
+
+% subsection application_au_calcul_de_la_post_rieure (end)
+
+
+\subsection{Illustration sur un exemple}
+\label{sub:illustration_de_la_m_thode_mcmc_sur_un_exemple}
+
+%\bfig
+%\includegraphics[width=0.2\textwidth]{figures/MCMC/TFBS.pdf}
+%\captionbf{Sites utilisés pour le MCMC}{
+
+    %La position étudiée est celle encadrée, contenant au total $10$ G, $8$ C et
+    %$1$ A.
+
+%}
+%\label{fig:MCMC/TFBS}
+%\efig
+
+%\bfig
+%\includegraphics[width=0.5\textwidth]{figures/MCMC/plotDirichlet.pdf}
+%\captionbf{Distribution de la fonction de proposition $g(w_i^\text{inde} \to w)$}{
+
+    %La distribution de Dirichlet est réalisée pour $50,000$ tirages aléatoires,
+    %avec un bin de $0.02$. Les lignes verticales en pointillés indiquent
+    %l'estimation de la moyenne obtenue après convergence (voir
+    %fig.~\ref{fig:MCMC/plotConvergence}).
+
+%}
+%\label{fig:MCMC/plotDirichlet}
+%\efig
+
+\bfig
+\includegraphics[width=1\textwidth]{figures/MCMC/sites-dirichlet.pdf}
+\captionbf{Conditions initiales}{
+
+    (A) Sites utilisés pour le MCMC. On s'intéresse ici à la $2$ème position,
+    contenant au total $10$ G, $8$ C et $1$ A.
+
+    (B) Distribution de la distribution de Dirichlet correspondant à la
+    proposition $g(w_i^\text{inde} \to w)$. L'échantillonnage consiste en
+    $50,000$ tirages aléatoires, et le bin est de $0.02$. Les lignes verticales
+    en pointillés indiquent l'estimation de la moyenne obtenue après
+    convergence (voir fig.~\ref{fig:MCMC/var_cv}).
+
+}
+\label{fig:MCMC/sites-dirichlet}
+\efig
+
+Étudions maintenant un exemple concret. Nous présentons la méthode sur le cas
+présenté en fig.~\ref{fig:MCMC/sites-dirichlet}A et nous utilisons le modèle
+d'évolution \textit{Felsenstein}. Le vecteur de poids $w_i$ est initialisé au
+cas indépendant $w_i^\text{inde}$. La proposition $g(w_i^\text{inde} \to w)$
+(éq.~\ref{eq:proposal})  est montrée en fig.~\ref{fig:MCMC/sites-dirichlet}B.
+On voit notamment comment la distribution de Dirichlet permet de rester dans le
+simplexe dans les cas $w_A$ et $w_T$ proches de $0$. La valeur finale de
+l'estimation de la moyenne de la postérieure obtenue après convergence de la
+chaîne (voir ci-dessous) est aussi montrée : elle est relativement proche de la
+moyenne de la distribution, indiquant que le choix de la valeur initiale est
+effectivement judicieux.  \\
+
+
+%\bfig
+%\includegraphics[width=0.5\textwidth]{figures/MCMC/plotSampling.pdf}
+%\captionbf{Extrait de l'échantillonnage de $w_i$}{
+
+%Les $500$ premiers échantillons $w_i$ de la chaîne MCMC sont montrés.
+
+%}
+%\label{fig:MCMC/plotSampling}
+%\efig
+
+%\bfig
+%\includegraphics[width=0.5\textwidth]{figures/MCMC/plotAutocorr.pdf}
+%\captionbf{Fonction d'auto-corrélation de la chaîne MCMC}{
+
+%Corrélation entre des échantillons séparés de $t-1$ itérations. Une droite est
+%ajustée sur les $20$ premièrs points, permettant de recueillir
+%la pente $-T_b$ donnant le temps de décorrélation.
+
+%}
+%\label{fig:MCMC/plotAutocorr}
+%\efig
+
+\bfig
+\includegraphics[width=0.6\textwidth]{figures/MCMC/sampling-autocorr.pdf}
+\captionbf{Corrélations entre les échantillons}{
+
+(A) Extrait de l'échantillonnage de $w_i$. Les $500$ premiers échantillons
+$w_i$ de la chaîne MCMC sont montrés.
+
+(B) Fonction d'auto-corrélation de la chaîne MCMC. La corrélation $C_b(t)$ est
+réalisée entre des échantillons séparés de $t-1$ itérations. Une droite est
+ajustée sur les $20$ premièrs points, permettant d'obtenir la pente $-T_b$
+donnant le temps de décorrélation.
+
+}
+\label{fig:MCMC/sampling-autocorr}
+\efig
+
+La chaîne MCMC est ensuite lancée. Le taux d'acceptation est calculé comme
+valant $62\%$. Les $500$ premiers échantillons de $w_i$ sont montrés en figure
+\ref{fig:MCMC/sampling-autocorr}A. On note que certains points sont
+corrélés : diminutions ou augmentations successives de la valeur courante
+$w_i(t)$ sur plusieurs itérations. Pour quantifier cet effet, nous avons mesuré
+la corrélation temporelle des échantillons. Celle-ci est donnée par
+
+\begin{equation}
+    C_b(\tau) = \frac{1}{N} \sum_{t=1}^{N-\tau} w_{i,b}(t) w_{i,b}(t+\tau) - \left(\frac{1}{N}\sum_{t=1}^N w_{i,b}(t)\right)^2
+\end{equation}
+
+avec dans ce cas $N=50,000$. Le logarithme de cette quantité est montrée en
+figure \ref{fig:MCMC/sampling-autocorr}B. L'intérêt du logarithme est de mettre
+en exergue le caractère exponentiel de la décorrélation
+%\footnote{D'après le
+%théorème de Perron-Froebenius, le temps de décorrelation d'une chaîne de Markov
+%est donné par $T=-1/\log(\mu)$, où $\mu$ est la valeur propre de la chaîne de
+%Markov de plus grande valeur absolue} 
+:
+
+\begin{equation}
+    C_b(\tau) \propto e^{-\tau/T_b}
+\end{equation}
+
+Les temps de décorrelation $T_b \sim 10$ sont estimés en ajustant une droite
+sur les $20$ premiers points de la courbe. Maintenant que l'on connait le temps
+de corrélation entre deux échantillons, il est possible d'obtenir des
+échantillons indépendants en les choisissant à des intervalles plus grands que
+$T_b$. Dans notre cas, nous avons choisis un intervalle de $30$ itérations.  \\
+
+\bfig
+%\includegraphics[width=0.5\textwidth]{figures/MCMC/plotCVvar.pdf}
+%\includegraphics[width=0.5\textwidth]{figures/MCMC/plotConvergence.pdf}
+\includegraphics[width=0.55\textwidth]{figures/MCMC/var-cv.pdf}
+\captionbf{Estimation de la convergence}{
+
+   
+    
+    (A) Écart-type $\sigma_b$ de la distribution $w_{i,b}$ estimé à partir de
+    $n$ échantillons indépendants. Ces échantillons sont pris toutes les $30$
+    itérations au sein de la chaîne MCMC, soit environ $3$ fois le temps de
+    décorrélation. On observe qu'au bout de $100$ itérations l'écart-type est
+    stabilisé. Par ailleurs les fluctuations sont relativement faibles, au plus
+    de l'ordre de $\sim 10\%$ de la moyenne.
+
+    (B) La convergence est estimée grâce au Théorème Centrale Limite.
+    L'écart-type de l'estimateur de la moyenne se comporte comme  $\sigma_b
+    / \sqrt{n}$. La précision demandée correspond à un écart-type $\leq 5\%$ de
+    la moyenne pour les $4$ bases, ce qui correspond à l'intersection la plus
+    tardive entre les courbes noire et grise (dans notre cas le cadran du bas
+    à droite).
+
+}
+\label{fig:MCMC/var_cv}
+\efig
+
+Nous souhaitons maintenant étudier la convergence de la chaîne MCMC. Pour cela,
+nous utilisons le Théorème Central Limite (TCL, cf
+\ref{sub:principe_de_l_algorithme_de_metropolis_hastings}).  Pour un  nombre
+$n$ suffisamment grand d'échantillons indépendants, l'écart-type de la
+distribution de l'estimateur empirique de la moyenne $\hat{w}_n$ se comporte
+comme $\sigma_b / \sqrt{n}$, où $\sigma_b$ est l'écart-type de la distribution
+$\mathcal{P}(w_i|\mathcal{A})$. Ce dernier doit lui-même être estimé à partir
+de la chaîne MCMC. Nous présentons en figure \ref{fig:MCMC/var_cv}A la valeur
+de l'estimation $\sigma_b(n)$ obtenue pour $n$ itérations indépendantes. On
+voit que cette valeur atteint rapidement en $\sim100$ itérations une valeur
+stable, et que dans tous les cas les fluctuations sont faibles, de l'ordre de
+$10\%$ de $\hat{w}_n$. Il paraît donc raisonnable d'utiliser cette valeur de
+$\sigma_b$ pour le TCL. Nous traçons en figure \ref{fig:MCMC/var_cv}B la
+quantité $\sigma_b(n)/\sqrt{n}$. La chaîne est considérée comme convergée
+lorsque cette valeur est inférieure ou égale à $5\%$ de la valeur moyenne
+estimée $\hat{w}_n$ (ligne grise) dans les $4$ cas.  Ce seuil est bien entendu
+arbitraire et dépend de la précision voulue par l'utilisateur sur l'estimation.
+Néanmoins, une plus grande précision implique un plus long temps de calcul.  \\
+
+Nous comparons en figure \ref{fig:MCMC/plotConvergenceCompare} la valeur de
+l'estimation du Maximum A Posteriori (MAP) de la postérieure modifiée (voir
+article) obtenue avec la méthode de descente de gradient et celle de la moyenne
+de la postérieure obtenue avec l'approche MCMC, en fonction du nombre total
+d'itérations.  L'approche MCMC  converge vers un état proche de celui donné par
+la descente de gradient, On note que la convergence de l'approche MCMC est
+beaucoup plus lente : plus de $10,000$ itérations, alors que la descente de
+gradient n'en requiert que $100$. Au vu de la faible différence entre les deux
+résultats, nous utilisons dans Imogene l'approche de maximisation de la
+postérieure modifiée, ce qui permet un gain de temps considérable pour
+l'algorithme (au minimum un facteur $10$).
+
+
+\bfig
+\includegraphics[width=1\textwidth]{figures/MCMC/plotConvergenceCompare.pdf}
+\captionbf{Comparaison des approches par MCMC et par descente de gradient}{
+
+L'approche de maximisation de (l'opposé de) la postérieure modifiée par
+descente de gradient (rouge, cf article) est comparée à l'approche de calcul de
+la moyenne de la postérieure par MCMC (noir). Les deux méthodes sont
+initialisées au même $w_i^{\text{inde}}$. Alors que la méthode par descente de
+gradient converge rapidement ($\sim100$ itérations), l'approche MCMC converge
+plus lentement, dans ce cas plus de $10,000$ itérations. Au final les deux
+approches convergent vers des quantités proches (lignes pointillées rouges et
+noires). 
+
+}
+\label{fig:MCMC/plotConvergenceCompare}
+\efig
+
+% subsection illustration_de_la_m_thode_mcmc_sur_un_exemple (end)
+
+
+% section calcul_de_la_moyenne_de_la_post_rieure_par_une_m_thode_mcmc (end)
+
+\FloatBarrier
+\section{Conclusion et perspectives du chapitre \thechapter}
+
+Nous avons présenté Imogene, un algorithme bayésien utilisant la phylogénie de
+recherche de motifs et modules conduisant une régulation commune. Imogene est
+basé sur l'algorithme introduit par \citet{Rouault2010p327} dans le cas des
+Drosophiles, et l'étend au cas des mammifères. Nous avons présenté des tests
+d'Imogene sur des CRMs possédant une expression déterminée chez l'embryon de
+souris (tube neural et bourgeon de membre), et avons montré la capacité
+d'Imogene de prédire des CRMs conduisant à une expression similaire au sein de
+séquences intergéniques.  Parmi les motifs générés par Imogene, certains sont
+associés à des régulateurs connus des étapes du développement considérées.  Par
+ailleurs, nous avons montré que les motifs générés par Imogene pouvaient être
+utilisés pour générer un classifieur linéaire permettant d'associer un CRM
+donné à une classe liée à une expression spécifique. Ce classifieur montre des
+performances similaires à un classificateur basé sur des données biologiques
+spatio-temporelles extensives~\cite{Zinzen2009p760}, mais ne nécessite que la
+connaissance de quelques séquences de chaque classe et fournit en plus la
+connaissance des motifs régulateurs.  \\
+
+Imogene peut être utilisé à partir de l'interface Mobyle de l'Institut
+Pasteur~\url{http://mobyle.pasteur.fr/cgi-bin/portal.py#forms::imogene}. Nous
+espérons ainsi qu'il pourra servir à des biologistes souhaitant mettre à jour
+des régulateurs putatifs dans des CRMs fonctionnels et détecter dans le génome
+des CRMs possédant une activité similaire.
+
+

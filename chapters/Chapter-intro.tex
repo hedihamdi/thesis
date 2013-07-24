@@ -210,7 +210,7 @@ Afin de pouvoir mieux comprendre les mécanismes de différenciation et de
 reprogrammation exposés en~\ref{sec:phenotype}, il convient de se plonger dans
 les mécanismes internes de la cellule qui régissent ses changements d'états.
 
-\bfigp
+\bfig
 \includegraphics[width=\textwidth]{figures/us-cybernetics.pdf}
 \captionbf{Vision cybernétique du traitement de l'information par la cellule}
 {
@@ -230,7 +230,7 @@ les mécanismes internes de la cellule qui régissent ses changements d'états.
 
 } 
 \label{fig:us-cybernetics} 
-\efigp
+\efig
 
 
 \subsection{Vision cybernétique de la cellule}
@@ -259,7 +259,7 @@ Les modes de régulation qui permettent à la cellule d'interpréter des signaux
 afin de changer d'état sont nombreux. Nous allons nous concentrer ici sur ceux
 affectant la production d'ARNs ou de protéines (fig.~\ref{fig:us-grn}).
 
-\bfigp
+\bfig
 \includegraphics[width=1.0\textwidth]{figures/us-grn.pdf} 
 \captionbf{Un réseau de régulation génétique type}{ 
     
@@ -276,7 +276,7 @@ affectant la production d'ARNs ou de protéines (fig.~\ref{fig:us-grn}).
 
 }    
 \label{fig:us-grn} 
-\efigp
+\efig
 
 \subsubsection{Régulation génétique}
 
@@ -302,8 +302,8 @@ ont la particularité de conduire à une expression spatio-temporelle très
 spécifique du gène cible. Ces différents points seront amplement développés en
 section~\ref{sec:CRMs}.
 
-\bfig
-\includegraphics[width=0.7\textwidth]{figures/schones-epigenome.pdf}
+\bfigp
+\includegraphics[width=0.75\textwidth]{figures/schones-epigenome.pdf}
 \captionbf{Caractéristiques de l'épigénome}{ 
     
     Figure tirée de~\cite{Schones2008nx}. Les chromosomes sont partagés entre
@@ -321,7 +321,7 @@ section~\ref{sec:CRMs}.
 
 } 
 \label{fig:schones-epigenome} 
-\efig
+\efigp
 
 
 \subsubsection{Régulation épigénétique} 
@@ -388,7 +388,7 @@ de 11 à 32 acides aminés encodés par le gène \textit{Pri}, rendant la protéine
 transcriptionnellement active \cite{Kondo2010ly}.
 
 
-\bfig
+\bfigp
 \includegraphics[width=1\textwidth]{figures/lee-network-motifs-yeast.pdf}
 \captionbf{Exemples de motifs dans les réseaux de régulation génétique}{
     
@@ -400,9 +400,9 @@ transcriptionnellement active \cite{Kondo2010ly}.
 
 }
 \label{fig:lee-odom-networks}
-\efig
+\efigp
 
-\FloatBarrier
+%\FloatBarrier
 \subsection{Câblage du réseau et fonction}
 
 Maintenant que nous avons vu la nature des interactions au sein des réseaux
@@ -432,24 +432,8 @@ d'expression de X, évitant que des fluctuations de son niveau d'expression
 n'entraîne par erreur l'activation de Z.
 
 
-\FloatBarrier
+%\FloatBarrier
 \subsection{Évolution des réseaux génétiques}
-
-\bfig
-\includegraphics[width=\textwidth]{figures/furlong-network-evolution.pdf}
-\captionbf{Évolution du réseau transcriptionnel : l'exemple de la régulation
-myogénique.}{ Figure tirée de \cite{Liu2009p556}. Les lignes pleines indiquent
-une régulation transcriptionnelle directe, les tirets indiquent des
-interactions génétiques dont le caractère direct n'a pas été montré, et les
-lignes pointillés indiquent que l'interaction est suggérée par des donnés
-d'expression. \myod est l'analogue structurel de \textit{Nautilus} mais est
-l'analogue fonctionnel de \textit{Twist} chez la Drosophile et de
-\textit{HLH-1} chez \celeg. Les couleurs indiquent respectivement des voies
-de signalisation externes au mésoderme (bleu), les régulateurs myogéniques de
-la famille bHLH (vert), les protéines Six/Eya (orange), les protéines de la
-famille \textit{paired-box} Pax (violet), les TFs des familles MADS/SRF
-(rouge), et les régulateurs d'autres familles de protéines (noir).}
-\label{fig:furlong-network-evolution}\efig
 
 L'importance des motifs est rendue plus claire lorsque l'on
 s'intéresse à l'évolution des réseaux. En effet, au cours de l'évolution, les
@@ -464,6 +448,28 @@ conséquences sur l'ensemble des éléments régulés par ce \tf et pourra donc être
 fortement délétère. Par contre, la modification d'un site de reconnaissance de
 ce \tf sur l'ADN n'aura qu'une portée locale sur la régulation du gène associé.
 \\ 
+
+\bfig
+\includegraphics[width=\textwidth]{figures/furlong-network-evolution.pdf}
+\captionbf{Évolution du réseau transcriptionnel : l'exemple de la régulation
+myogénique.}{ 
+    
+    Figure tirée de \cite{Liu2009p556}. Les lignes pleines indiquent une
+    régulation transcriptionnelle directe, les tirets indiquent des
+    interactions génétiques dont le caractère direct n'a pas été montré, et les
+    lignes pointillés indiquent que l'interaction est suggérée par des donnés
+    d'expression. \myod est l'analogue structurel de \textit{Nautilus} mais est
+    l'analogue fonctionnel de \textit{Twist} chez la Drosophile et de
+    \textit{HLH-1} chez \celeg. Les couleurs indiquent respectivement des voies
+    de signalisation externes au mésoderme (bleu), les régulateurs myogéniques
+    de la famille bHLH (vert), les protéines Six/Eya (orange), les protéines de
+    la famille \textit{paired-box} Pax (violet), les TFs des familles MADS/SRF
+    (rouge), et les régulateurs d'autres familles de protéines (noir).
+
+}
+\label{fig:furlong-network-evolution}
+\efig
+
 
 À titre d'exemple, prenons le cas du réseau de différenciation du muscle
 squelettique présenté en figure~\ref{fig:furlong-network-evolution}, que nous
@@ -540,19 +546,6 @@ sous-jacents. Dans cette section nous présentons les modèles d'interactions
 protéine-ADN qui ont été proposés, et leur application concrète à la recherche
 de sites de fixation. 
 
-\bfig
-\includegraphics[width=0.8\textwidth]{figures/lassig-TF-search.pdf}
-\captionbf{Différents états du \tf}{
-Figure tirée de \cite{Lassig2007p539}. Lors de sa recherche de site de
-fixation, le TF peut se trouver dans trois états distincts : (1) un état libre
-de diffusion tridimensionnelle, (2) un état de diffusion unidimensionnelle sur
-l'ADN par fixation non spécifique, et (3) un état de fixation spécifique.
-L'énergie de fixation dépend du site de fixation, de taille $l$ et de
-coordonnée $r$.
-}
-\label{fig:lassig-TF-search}
-\efig
-
 
 \subsection{Modes de recherche du site de fixation par le TF}
 \label{sub:modes_de_recherche_du_site_de_fixation_par_le_tf}
@@ -590,6 +583,20 @@ minutes~\cite{Gerland2002p397,Slutsky2004vn}. Il est donc pertinent de décrire
 l'effet d'un site de fixation sur la régulation d'un gène cible par la
 probabilité qu'il a de fixer un \tf à l'équilibre thermodynamique.
 
+\bfig
+\includegraphics[width=0.8\textwidth]{figures/lassig-TF-search.pdf}
+\captionbf{Différents états du \tf}{
+Figure tirée de \cite{Lassig2007p539}. Lors de sa recherche de site de
+fixation, le TF peut se trouver dans trois états distincts : (1) un état libre
+de diffusion tridimensionnelle, (2) un état de diffusion unidimensionnelle sur
+l'ADN par fixation non spécifique, et (3) un état de fixation spécifique.
+L'énergie de fixation dépend du site de fixation, de taille $l$ et de
+coordonnée $r$.
+}
+\label{fig:lassig-TF-search}
+\efig
+
+
 
 % subsection modes_de_recherche_du_site_de_fixation_par_le_tf (end)
 
@@ -611,20 +618,21 @@ totale du site.  Cette hypothèse permet de simplifier le problème en gardant le
 nombre de paramètres petit. 
 
 \bfigp
-\includegraphics[width=.7\textwidth]{figures/wasserman-PWM.pdf}
+\includegraphics[width=.85\textwidth]{figures/wasserman-PWM.pdf}
 \captionbf{Construction et utilisation du modèle PWM}{
-    Figure tirée de \cite{Wasserman2004p624}. (a) Supposons connus un certain nombre
-    de sites de fixation d'un \tf (dans ce cas MEF2). (b) Séquence consensus
-    correspondante utilisant les symboles IUPAC. (c) Une matrice de fréquence
-    est construite, indiquant pour chaque nucléotide sa multiplicité à une
-    position donnée dans le site. (d) La PWM est simplement construite en
-    prenant le logarithme relatif des fréquences PWMs par rapport aux fréquences
-    \apriori des nucléotides. (e) Le score (ou énergie) d'une séquence d'ADN
-    donnée est calculé en additionnant les poids PWM correspondants. (f) La PWM
-    peut être représentée sous forme de logo \cite{Giocomo2011p3442}. Dans cette
-    représentation, la hauteur d'une colonne représente le contenu en
-    information ou information relative moyenne d'une position, et la taille des
-    bases reflète leur fréquence.
+
+    Figure tirée de \cite{Wasserman2004p624}. (a) Supposons connus un certain
+    nombre de sites de fixation d'un \tf (dans ce cas MEF2). (b) Séquence
+    consensus correspondante utilisant les symboles IUPAC. (c) Une matrice de
+    fréquence est construite, indiquant pour chaque nucléotide sa multiplicité
+    à une position donnée dans le site. (d) La PWM est simplement construite en
+    prenant le logarithme relatif des fréquences PWMs par rapport aux
+    fréquences \apriori des nucléotides. (e) Le score (ou énergie) d'une
+    séquence d'ADN donnée est calculé en additionnant les poids PWM
+    correspondants. (f) La PWM peut être représentée sous forme de logo
+    \cite{Giocomo2011p3442}. Dans cette représentation, la hauteur d'une
+    colonne représente le contenu en information ou information relative
+    moyenne d'une position, et la taille des bases reflète leur fréquence.
 
 } 
 \label{fig:wasserman-PWM}
@@ -1065,7 +1073,7 @@ conditionnée par ce matériau de départ, et l'on n'obtient que les sites
 développement étudiés.
 
 \bfigp
-\includegraphics[width=0.6\textwidth]{figures/visel-chipseq.pdf}
+\includegraphics[width=0.7\textwidth]{figures/visel-chipseq.pdf}
 \captionbf{Étapes d'une expérience de \chipchip et \chipseq}{
 
     Figure tirée de~\citet{Visel2009kx}. À partir d'extraits cellulaires issus
@@ -1156,7 +1164,7 @@ base près, ce qui demanderait un trop grand nombre de puces.
 \FloatBarrier
 \subsubsection{Empreinte à la DNase I (\textit{DNase I footprinting})}
 
-\bfigp
+\bfig
 \includegraphics[width=\textwidth]{figures/hesselberth-dnase.pdf}
 \captionbf{Expérience d'empreinte à la DNase I chez la levure : vers une résolution au nucléotide près}{
 Figure tirée de \cite{Hesselberth2009vn}. (a) Densité de digestion de la DNase
@@ -1171,7 +1179,7 @@ noirs indiquent le nombre moyen de digestion par nucléotide dans le génome
 ($\sim2$ digestions par base).
 }
 \label{fig:hesselberth-dnase}
-\efigp
+\efig
 
 Contrairement aux techniques précédentes, l'empreinte à la DNase I ne repose
 pas sur l'étude d'un \tf précis, mais permet au contraire d'obtenir l'ensemble
@@ -1233,7 +1241,7 @@ présentons les différents types de CRMs, leur structure, et leur évolution.
 \subsection{Les différents types de CRMs}
 \label{sub:les_diff_rents_types_de_crms}
 
-\bfig
+\bfigp
 \includegraphics[width=1\textwidth]{figures/hardison-enhancer-states.pdf}
 \captionbf{Les différents types de CRMs et leurs marques épigénétiques} 
 { 
@@ -1250,7 +1258,7 @@ présentons les différents types de CRMs, leur structure, et leur évolution.
 
 } 
 \label{fig:hardison-enhancer-states}
-\efig
+\efigp
 
 Selon leur rôle dans la régulation de l'expression génétique, les
 CRMs peuvent être distingués en trois catégories.
@@ -1478,8 +1486,8 @@ séquence.
 
 
 
-\bfigp
-\includegraphics[width=0.95\textwidth]{figures/liberman-crm-conservation-flexibility.pdf}
+\bfig
+\includegraphics[width=1\textwidth]{figures/liberman-crm-conservation-flexibility.pdf}
 \captionbf{Flexibilité du code de cis-régulation au cours de l'évolution chez les \textit{Drosophiles}}{
 
     Figure tirée de \cite{liberman2009p3886}, montrant l'expression du gène
@@ -1492,7 +1500,7 @@ séquence.
 
 } 
 \label{fig:liberman-crm-flexibility}
-\efigp
+\efig
 
 
 Contrastant avec cette vision d'enhancers très contraints, plusieurs études
@@ -1535,7 +1543,7 @@ contexte cellulaire est sensiblement le même chez les deux espèces. Par
 ailleurs, des modifications épigénétiques ainsi que l'expression des ARNm ont
 pu être récapitulées.
 
-\bfigp
+\bfig
 \includegraphics[width=1\textwidth]{figures/wilson-CRMs-evolution.pdf}
 \captionbf{Évolution de la fixation de HNF$4\alpha$ chez les mammifères}{
     
@@ -1551,7 +1559,7 @@ pu être récapitulées.
 
 } 
 \label{fig:wilson-CRMs-evolution}
-\efigp
+\efig
 
 
 Reste la question du mécanisme permettant cette évolution rapide. Une étude
@@ -1995,7 +2003,7 @@ manière optimale, il faudrait aussi montrer par délétion ciblée de l'élément de
 régulation au sein du génome que ce dernier est \textit{nécessaire}
 à l'expression du gène endogène.
 
-\FloatBarrier
+%\FloatBarrier
 
 \subsection{Implication des CRMs dans les maladies humaines}
 \label{sub:implication_des_crms_dans_les_maladies_humaines}
