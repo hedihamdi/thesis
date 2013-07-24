@@ -1,0 +1,383 @@
+\begin{thebibliography}{10}
+
+\bibitem{Davidson:2006kx}
+Davidson, E.~H. (2006)
+The regulatory genome: gene regulatory networks in development and evolution,
+Academic, Burlington, MA.
+
+\bibitem{Dorer:2009wd}
+Dorer, D.~E. and Nettelbeck, D.~M. (Jul, 2009)
+Targeting cancer by transcriptional control in cancer gene therapy and viral
+  oncolysis.
+{\em Adv Drug Deliv Rev,} {\bf 61}(7-8), 554--71.
+
+\bibitem{pmid22705667}
+Hardison, R.~C. and Taylor, J. (2012)
+{{G}enomic approaches towards finding cis-regulatory modules in animals}.
+{\em Nat. Rev. Genet.,} {\bf 13}(7), 469--483.
+
+\bibitem{lellimann13arg}
+Lelli, K.~M., Slattery, M., and Mann, R.~S. (2012)
+{{D}isentangling the many layers of eukaryotic transcriptional regulation}.
+{\em Annu. Rev. Genet.,} {\bf 46}, 43--68.
+
+\bibitem{levine10cb}
+Levine, M. (Sep, 2010)
+{{T}ranscriptional enhancers in animal development and evolution}.
+{\em Curr. Biol.,} {\bf 20}(17), R754--763.
+
+\bibitem{Arnosti:2005uq}
+Arnosti, D.~N. and Kulkarni, M.~M. (Apr, 2005)
+Transcriptional enhancers: Intelligent enhanceosomes or flexible billboards?.
+{\em J Cell Biochem,} {\bf 94}(5), 890--8.
+
+\bibitem{Swanson:2010ai}
+Swanson, C.~I., Evans, N.~C., and Barolo, S. (Mar, 2010)
+Structural rules and complex regulatory circuitry constrain expression of a
+  Notch- and EGFR-regulated eye enhancer.
+{\em Dev Cell,} {\bf 18}(3), 359--70.
+
+\bibitem{Johnson:2007fk}
+Johnson, D.~S., Mortazavi, A., Myers, R.~M., and Wold, B. (Jun, 2007)
+Genome-wide mapping of in vivo protein-DNA interactions.
+{\em Science,} {\bf 316}(5830), 1497--502.
+
+\bibitem{Barski:2007uq}
+Barski, A., Cuddapah, S., Cui, K., Roh, T.-Y., Schones, D.~E., Wang, Z., Wei,
+  G., Chepelev, I., and Zhao, K. (May, 2007)
+High-resolution profiling of histone methylations in the human genome.
+{\em Cell,} {\bf 129}(4), 823--37.
+
+\bibitem{Mikkelsen:2007kx}
+Mikkelsen, T.~S., Ku, M., Jaffe, D.~B., Issac, B., Lieberman, E., Giannoukos,
+  G., Alvarez, P., Brockman, W., Kim, T.-K., Koche, R.~P., Lee, W., Mendenhall,
+  E., O'Donovan, A., Presser, A., Russ, C., Xie, X., Meissner, A., Wernig, M.,
+  Jaenisch, R., Nusbaum, C., Lander, E.~S., and Bernstein, B.~E. (Aug, 2007)
+Genome-wide maps of chromatin state in pluripotent and lineage-committed cells.
+{\em Nature,} {\bf 448}(7153), 553--60.
+
+\bibitem{Visel:2009fr}
+Visel, A., Blow, M.~J., Li, Z., Zhang, T., Akiyama, J.~A., Holt, A.,
+  Plajzer-Frick, I., Shoukry, M., Wright, C., Chen, F., Afzal, V., Ren, B.,
+  Rubin, E.~M., and Pennacchio, L.~A. (Feb, 2009)
+ChIP-seq accurately predicts tissue-specific activity of enhancers.
+{\em Nature,} {\bf 457}(7231), 854--8.
+
+\bibitem{arnosti}
+Arnosti, D.~N. and Kulkarni, M.~M. (Apr, 2005)
+{{T}ranscriptional enhancers: {I}ntelligent enhanceosomes or flexible
+  billboards?}.
+{\em J. Cell. Biochem.,} {\bf 94}(5), 890--898.
+
+\bibitem{pmid19097946}
+Amano, T., Sagai, T., Tanabe, H., Mizushina, Y., Nakazawa, H., and Shiroishi,
+  T. (Jan, 2009)
+{{C}hromosomal dynamics at the {S}hh locus: limb bud-specific differential
+  regulation of competence and active transcription}.
+{\em Dev. Cell,} {\bf 16}(1), 47--57.
+
+\bibitem{Rouault:2010fk}
+Rouault, H., Mazouni, K., Couturier, L., Hakim, V., and Schweisguth, F. (Aug,
+  2010)
+Genome-wide identification of cis-regulatory motifs and modules underlying gene
+  coregulation using statistics and phylogeny.
+{\em Proc Natl Acad Sci U S A,} {\bf 107}(33), 14615--20.
+
+\bibitem{clark2007evolution}
+Clark, A., Eisen, M., Smith, D., Bergman, C., Oliver, B., Markow, T., Kaufman,
+  T., Kellis, M., Gelbart, W., Iyer, V., et al. (2007)
+{Evolution of genes and genomes on the Drosophila phylogeny}.
+{\em Nature,} {\bf 450}(7167), 203--218.
+
+\bibitem{Flicek2012fk}
+Flicek, P., Amode, M.~R., Barrell, D., Beal, K., Brent, S., Carvalho-Silva, D.,
+  Clapham, P., Coates, G., Fairley, S., Fitzgerald, S., Gil, L., Gordon, L.,
+  Hendrix, M., Hourlier, T., Johnson, N., K{\"a}h{\"a}ri, A.~K., Keefe, D.,
+  Keenan, S., Kinsella, R., Komorowska, M., Koscielny, G., Kulesha, E.,
+  Larsson, P., Longden, I., McLaren, W., Muffato, M., Overduin, B., Pignatelli,
+  M., Pritchard, B., Riat, H.~S., Ritchie, G. R.~S., Ruffier, M., Schuster, M.,
+  Sobral, D., Tang, Y.~A., Taylor, K., Trevanion, S., Vandrovcova, J., White,
+  S., Wilson, M., Wilder, S.~P., Aken, B.~L., Birney, E., Cunningham, F.,
+  Dunham, I., Durbin, R., Fern{\'a}ndez-Suarez, X.~M., Harrow, J., Herrero, J.,
+  Hubbard, T. J.~P., Parker, A., Proctor, G., Spudich, G., Vogel, J., Yates,
+  A., Zadissa, A., and Searle, S. M.~J. (Jan, 2012)
+Ensembl 2012.
+{\em Nucleic Acids Res,} {\bf 40}, D84--90.
+
+\bibitem{pmid15131651}
+Wasserman, W.~W. and Sandelin, A. (Apr, 2004)
+{{A}pplied bioinformatics for the identification of regulatory elements}.
+{\em Nat. Rev. Genet.,} {\bf 5}(4), 276--287.
+
+\bibitem{stormo1998specificity}
+Stormo, G. and Fields, D. (1998)
+{Specificity, free energy and information content in protein--DNA
+  interactions}.
+{\em Trends in biochemical sciences,} {\bf 23}(3), 109--113.
+
+\bibitem{pmid21152003}
+Su, J., Teichmann, S.~A., and Down, T.~A. (2010)
+{{A}ssessing computational methods of cis-regulatory module prediction}.
+{\em PLoS Comput. Biol.,} {\bf 6}(12), e1001020.
+
+\bibitem{pmid17053094}
+Elnitski, L., Jin, V.~X., Farnham, P.~J., and Jones, S.~J. (Dec, 2006)
+{{L}ocating mammalian transcription factor binding sites: a survey of
+  computational and experimental techniques}.
+{\em Genome Res.,} {\bf 16}(12), 1455--1464.
+
+\bibitem{pmid22305161}
+Aerts, S. (2012)
+{{C}omputational strategies for the genome-wide identification of
+  cis-regulatory elements and transcriptional targets}.
+{\em Curr. Top. Dev. Biol.,} {\bf 98}, 121--145.
+
+\bibitem{kantorovitz2009motif}
+Kantorovitz, M., Kazemian, M., Kinston, S., Miranda-Saavedra, D., Zhu, Q.,
+  Robinson, G., G{\"o}ttgens, B., Halfon, M., and Sinha, S. (2009)
+{Motif-Blind, Genome-Wide Discovery of cis-Regulatory Modules in Drosophila and
+  Mouse}.
+{\em Developmental Cell,} {\bf 17}(4), 568--579.
+
+\bibitem{pmid21486936}
+Machanick, P. and Bailey, T.~L. (Jun, 2011)
+{{M}{E}{M}{E}-{C}h{I}{P}: motif analysis of large {D}{N}{A} datasets}.
+{\em Bioinformatics,} {\bf 27}(12), 1696--1697.
+
+\bibitem{siddharthan2005phylogibbs}
+Siddharthan, R., Siggia, E., and van Nimwegen, E. (2005)
+{PhyloGibbs: a Gibbs sampling motif finder that incorporates phylogeny}.
+{\em PLoS Comput Biol,} {\bf 1}(7), e67.
+
+\bibitem{Moses:2004vn}
+Moses, A.~M., Chiang, D.~Y., Pollard, D.~A., Iyer, V.~N., and Eisen, M.~B.
+  (2004)
+MONKEY: identifying conserved transcription-factor binding sites in multiple
+  alignments using a binding site-specific evolutionary model.
+{\em Genome Biol,} {\bf 5}(12), R98.
+
+\bibitem{Herrmann2012uq}
+Herrmann, C., Van~de Sande, B., Potier, D., and Aerts, S. (Aug, 2012)
+i-cisTarget: an integrative genomics method for the prediction of regulatory
+  features and cis-regulatory modules.
+{\em Nucleic Acids Res,} {\bf 40}(15), e114.
+
+\bibitem{berman2002exploiting}
+Berman, B., Nibu, Y., Pfeiffer, B., Tomancak, P., Celniker, S., Levine, M.,
+  Rubin, G., and Eisen, M. (2002)
+{Exploiting transcription factor binding site clustering to identify
+  cis-regulatory modules involved in pattern formation in the Drosophila
+  genome}.
+{\em Proceedings of the National Academy of Sciences,} {\bf 99}(2), 757.
+
+\bibitem{halfon2002computation}
+Halfon, M., Grad, Y., Church, G., and Michelson, A. (2002)
+{Computation-based discovery of related transcriptional regulatory modules and
+  motifs using an experimentally validated combinatorial model}.
+{\em Genome research,} {\bf 12}(7), 1019.
+
+\bibitem{rebeiz2002score}
+Rebeiz, M., Reeves, N., and Posakony, J. (2002)
+{SCORE: A computational approach to the identification of cis-regulatory
+  modules and target genes in whole-genome sequence data}.
+{\em Proceedings of the National Academy of Sciences,} {\bf 99}(15), 9888.
+
+\bibitem{schroeder2004transcriptional}
+Schroeder, M., Pearce, M., Fak, J., Fan, H., Unnerstall, U., Emberly, E.,
+  Rajewsky, N., Siggia, E., and Gaul, U. (2004)
+{Transcriptional control in the segmentation gene network of Drosophila}.
+{\em PLoS biology,} {\bf 2}, 1396--1410.
+
+\bibitem{hallikas2006genome}
+Hallikas, O., Palin, K., Sinjushina, N., Rautiainen, R., Partanen, J., Ukkonen,
+  E., and Taipale, J. (2006)
+{Genome-wide prediction of mammalian enhancers based on analysis of
+  transcription-factor binding affinity}.
+{\em Cell,} {\bf 124}(1), 47--59.
+
+\bibitem{pierstorff2006identifying}
+Pierstorff, N., Bergman, C., and Wiehe, T. (2006)
+{Identifying cis-regulatory modules by combining comparative and compositional
+  analysis of DNA}.
+{\em Bioinformatics,} {\bf 22}(23), 2858.
+
+\bibitem{nazina2003statistical}
+Nazina, A. and Papatsenko, D. (2003)
+{Statistical extraction of Drosophila cis-regulatory modules using exhaustive
+  assessment of local word frequency}.
+{\em BMC bioinformatics,} {\bf 4}(1), 65.
+
+\bibitem{abnizova2005some}
+Abnizova, I., te~Boekhorst, R., Walter, K., and Gilks, W. (2005)
+{Some statistical properties of regulatory DNA sequences, and their use in
+  predicting regulatory regions in the Drosophila genome: the fluffy-tail
+  test}.
+{\em BMC bioinformatics,} {\bf 6}(1), 109.
+
+\bibitem{chan2005using}
+Chan, B. and Kibler, D. (2005)
+{Using hexamers to predict cis-regulatory motifs in Drosophila}.
+{\em BMC bioinformatics,} {\bf 6}(1), 262.
+
+\bibitem{leung2009identifying}
+Leung, G., Eisen, M., and Provart, N. (2009)
+{Identifying Cis-Regulatory Sequences by Word Profile Similarity}.
+{\em PLoS ONE,} {\bf 4}(9), e6901.
+
+\bibitem{Brody:2012pd}
+Brody, T., Yavatkar, A.~S., Kuzin, A., Kundu, M., Tyson, L.~J., Ross, J., Lin,
+  T.-Y., Lee, C.-H., Awasaki, T., Lee, T., and Odenwald, W.~F. (Jan, 2012)
+Use of a Drosophila genome-wide conserved sequence database to identify
+  functionally related cis-regulatory enhancers.
+{\em Dev Dyn,} {\bf 241}(1), 169--89.
+
+\bibitem{pmid19890324}
+Zinzen, R.~P., Girardot, C., Gagneur, J., Braun, M., and Furlong, E.~E. (Nov,
+  2009)
+{{C}ombinatorial binding predicts spatio-temporal cis-regulatory activity}.
+{\em Nature,} {\bf 462}, 65--70.
+
+\bibitem{pmid18039870}
+Heger, A. and Ponting, C.~P. (Nov, 2007)
+{{V}ariable strength of translational selection among 12 {D}rosophila species}.
+{\em Genetics,} {\bf 177}, 1337--1348.
+
+\bibitem{pmid22138689}
+May, D., Blow, M.~J., Kaplan, T., McCulley, D.~J., Jensen, B.~C., Akiyama,
+  J.~A., Holt, A., Plajzer-Frick, I., Shoukry, M., Wright, C., Afzal, V.,
+  Simpson, P.~C., Rubin, E.~M., Black, B.~L., Bristow, J., Pennacchio, L.~A.,
+  and Visel, A. (2011)
+{{L}arge-scale discovery of enhancers from human heart tissue}.
+{\em Nat. Genet.,} {\bf 44}, 89--93.
+
+\bibitem{Sinha:2003vn}
+Sinha, S., van Nimwegen, E., and Siggia, E.~D. (2003)
+A probabilistic method to detect regulatory modules.
+{\em Bioinformatics,} {\bf 19 Suppl 1}, i292--301.
+
+\bibitem{Felsenstein:1981ve}
+Felsenstein, J. (1981)
+Evolutionary trees from DNA sequences: a maximum likelihood approach.
+{\em J Mol Evol,} {\bf 17}(6), 368--76.
+
+\bibitem{Halpern:1998qf}
+Halpern, A.~L. and Bruno, W.~J. (Jul, 1998)
+Evolutionary distances for protein-coding sequences: modeling site-specific
+  residue frequencies.
+{\em Mol Biol Evol,} {\bf 15}(7), 910--7.
+
+\bibitem{Hasegawa:1985dp}
+Hasegawa, M., Kishino, H., and Yano, T. (1985)
+Dating of the human-ape splitting by a molecular clock of mitochondrial DNA.
+{\em J Mol Evol,} {\bf 22}(2), 160--74.
+
+\bibitem{kappa12paper}
+Seplyarskiy, V.~B., Kharchenko, P., Kondrashov, A.~S., and Bazykin, G.~A. (Aug,
+  2012)
+{{H}eterogeneity of the transition/transversion ratio in {D}rosophila and
+  {H}ominidae genomes}.
+{\em Mol. Biol. Evol.,} {\bf 29}(8), 1943--1955.
+
+\bibitem{bishop}
+Bishop, C. et al. (2006)
+Pattern recognition and machine learning,
+{S}pringer New York, .
+
+\bibitem{bao2002automated}
+Bao, Z. and Eddy, S. (2002)
+{Automated de novo identification of repeat sequence families in sequenced
+  genomes}.
+{\em Genome research,} {\bf 12}(8), 1269--1276.
+
+\bibitem{Matys:2006gf}
+Matys, V., Kel-Margoulis, O.~V., Fricke, E., Liebich, I., Land, S.,
+  Barre-Dirrie, A., Reuter, I., Chekmenev, D., Krull, M., Hornischer, K., Voss,
+  N., Stegmaier, P., Lewicki-Potapov, B., Saxel, H., Kel, A.~E., and Wingender,
+  E. (Jan, 2006)
+TRANSFAC and its module TRANSCompel: transcriptional gene regulation in
+  eukaryotes.
+{\em Nucleic Acids Res,} {\bf 34}(Database issue), D108--10.
+
+\bibitem{Rstat}
+{R Development Core Team}
+R: A Language and Environment for Statistical Computing
+R Foundation for Statistical Computing Vienna, Austria (2011)
+{ISBN} 3-900051-07-0.
+
+\bibitem{KIMURA:1962uq}
+Kimura, M. (Jun, 1962)
+On the probability of fixation of mutant genes in a population.
+{\em Genetics,} {\bf 47}, 713--9.
+
+\bibitem{hastie}
+Hastie, T., Tibshirani, R., Friedman, J., et al. (2001)
+The elements of statistical learning: data mining, inference, and prediction,
+Springer New York, .
+
+\bibitem{Kiyota:2008fk}
+Kiyota, T., Kato, A., Altmann, C.~R., and Kato, Y. (Mar, 2008)
+The POU homeobox protein Oct-1 regulates radial glia formation downstream of
+  Notch signaling.
+{\em Dev Biol,} {\bf 315}(2), 579--92.
+
+\bibitem{pmid19689959}
+Neron, B., Menager, H., Maufrais, C., Joly, N., Maupetit, J., Letort, S.,
+  Carrere, S., Tuffery, P., and Letondal, C. (Nov, 2009)
+{{M}obyle: a new full web bioinformatics framework}.
+{\em Bioinformatics,} {\bf 25}(22), 3005--3011.
+
+\bibitem{xie2005systematic}
+Xie, X., Lu, J., Kulbokas, E., Golub, T., Mootha, V., Lindblad-Toh, K., Lander,
+  E., and Kellis, M. (2005)
+{Systematic discovery of regulatory motifs in human promoters and 3' UTRs by
+  comparison of several mammals}.
+{\em Nature,} {\bf 434}(7031), 338--345.
+
+\bibitem{ettwiller2005discovery}
+Ettwiller, L., Paten, B., Souren, M., Loosli, F., Wittbrodt, J., and Birney, E.
+  (2005)
+{The discovery, positioning and verification of a set of
+  transcription-associated motifs in vertebrates}.
+{\em Genome Biology,} {\bf 6}(12), R104.
+
+\bibitem{stark2007discovery}
+Stark, A., Lin, M., Kheradpour, P., Pedersen, J., Parts, L., Carlson, J.,
+  Crosby, M., Rasmussen, M., Roy, S., Deoras, A., et al. (2007)
+{Discovery of functional elements in 12 Drosophila genomes using evolutionary
+  signatures.}.
+{\em Nature,} {\bf 450}(7167), 219.
+
+\bibitem{wang2003combining}
+Wang, T. and Stormo, G. (2003)
+{Combining phylogenetic data with co-regulated genes to identify regulatory
+  motifs}.
+{\em Bioinformatics,} {\bf 19}(18), 2369.
+
+\bibitem{grad2004prediction}
+Grad, Y., Roth, F., Halfon, M., and Church, G. (2004)
+{Prediction of similarly acting cis-regulatory modules by subsequence profiling
+  and comparative genomics in Drosophila melanogaster and D. pseudoobscura}.
+{\em Bioinformatics,} {\bf 20}(16), 2738.
+
+\bibitem{zhao2007identification}
+Zhao, G., Schriefer, L., and Stormo, G. (2007)
+{Identification of muscle-specific regulatory modules in Caenorhabditis
+  elegans}.
+{\em Genome research,} {\bf 17}(3), 348.
+
+\bibitem{Busser:2012uq}
+Busser, B.~W., Taher, L., Kim, Y., Tansey, T., Bloom, M.~J., Ovcharenko, I.,
+  and Michelson, A.~M. (Mar, 2012)
+A machine learning approach for identifying novel cell type-specific
+  transcriptional regulators of myogenesis.
+{\em PLoS Genet,} {\bf 8}(3), e1002531.
+
+\bibitem{Menoret2012}
+Menoret, D., Santolini, M., Fernandes, I., Spokony, R., Zanet, J., Gonzalez,
+  I., Latapie, Y., Ferrer, P., Rouault., H., White, K., Besse, P., Hakim, V.,
+  Aerts, S., Payre, F., and Plaza, S. (2012)
+{Genome-wide analyses of Shavenbaby target genes reveals distinct features of
+  enhancer organization}.
+{\em (Submitted),}.
+
+\end{thebibliography}

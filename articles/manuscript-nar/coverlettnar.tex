@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+
+\parindent 0.cm
+\begin{document}
+%\topmargin -2cm
+\topmargin-1cm
+
+\setlength{\unitlength}{1cm}
+\begin{picture}(15,0)
+%\put(-8.5,-15.5){\special{psfile="chouettesLPS.ps"}}
+%\put(-11.,-15.5){\special{psfile="chouettesLPS.ps"}}
+%\put(3.,-14.7){\special{psfile="logoENS.vert-sature-trans.ps"}}
+\end{picture}
+
+\vspace{-1cm}
+
+\pagestyle{empty} 
+%\textwidth 6.0in
+%\textheight 12.0in
+%\oddsidemargin -0.5 14615-20cm
+\centerline{\bf  Ecole Normale Sup\'erieure}
+\vskip .1cm
+\centerline{\bf \large LABORATOIRE DE PHYSIQUE  STATISTIQUE}
+\centerline{\bf associ\'e au C.N.R.S et aux Universit\'es Paris 6 et 7}
+
+
+\centerline{24, rue Lhomond, 75231 Paris Cedex 05 }
+
+\vskip 1cm
+\begin{flushleft}
+Vincent HAKIM\\
+Tel: +33 1 44 32 37 68\\
+e-mail : hakim@lps.ens.fr
+\end{flushleft}
+\vskip 1cm
+
+Dear Editor
+\vskip .5cm
+
+we would like to submit the attached manuscript,
+``{\bf Imogene : identification of motifs and cis-regulatory modules underlying
+gene co-regulation}",
+for publication in  Nucleic Acid Research as a {\em Standard paper} pertaining to
+the  {\em Computational Biology} subject category.
+\vskip .5cm
+
+There is a strong interest in
+computationally decoding the cis-regulatory information that directs gene
+expression in a tissue or condition-specific manner. A common situation in practice
+is the availability of a small set of  CRMs active in a condition of interest, provided either
+by different classical small scale studies, or by the test of a set of CRMs identified in a large-scale study.
+From these available CRMs,  one would usually  like both i) to decode the cis-regulatory information
+which gives rise to expression specific to the condition of interest and ii) to obtain other CRMs specifically active in the same condition.
+However, there are few existing algorithms that are able to deal with a small set of (10-20)  characterized CRMs. Moreover, the top-performing ones
+are motif-blind : they address task ii) by giving up addressing task i), 
+as assessed in a previous work (Kantorovitz et al, Dev. Cell 17, 568–579 (2009)), i.e. they globally characterize
+the statistics of the available CRMs without providing information on transcription factor binding sites.
+ 
+ \vskip .5cm
+Our manuscript improves on this current situation. Building on our previous work ( Rouault et al, PNAS 107, 14615–20 (2010)), it
+ describes  and tests {\em Imogene}, a novel algorithm 
+ that is able to address both tasks i) and ii). Namely, it
+determines cis-regulatory information  in multi-cellular organisms and
+particularly in mammals,
+ {\em de novo} from a small set of
+well-characterized CRMs. It then predicts from it novel CRMs with the same specificity.
+{\em Imogene} bypasses the lack of extensive data
+by exploiting in a systematic way the phylogenetic information now available in the sequences
+of multiple related genomes.
+
+\vskip .5cm
+We present tests of the basic capabilities of {\em Imogene}, namely creating
+{\em de novo} cis-binding  motifs specific to a family of CRMs and retrieving
+other CRMs with similar regulatory abilities, using available neural and limb mouse
+CRMs. {\em Imogene} is found to perform on these mammalian CRMs as well as the current best motif-blind methods.
+We also show that different classes of CRMs can be distinguished based on 
+{\em Imogene} generated motifs. Notably, we show that only using genomic sequence information,
+{\em Imogene} performs as well in this classification task as the machine learning based  on extensive ChIP-seq data presented in the noted
+work of  Zinzen et al,  Nature, 462, 65–70 (2009).
+\vskip .5cm
+
+{\em Imogene} computer code is publicly available. Additionally, a web-interface has been developed
+on the Pasteur Institute mobyle web platform, to render the
+developed ensemble of statistical tools easily usable by the biological community.
+\vskip .5cm
+We believe that our results and the described software will be of 
+interest to a large spectrum of readers from pure biologists to
+bio-informaticians and that publication in Nucleic Acid Research is particularly
+suited to reach this broad readership.
+%\vskip .5cm
+
+%We would like to suggest as members of the Editorial Board particularly
+%qualified to handle our manuscript:
+
+%G Church
+
+%D Duboule (?)
+
+%TR Hughes (connais pas mais peut-etre ok?)
+
+%M Levine (peut-être pas de nouveau?)
+
+%\vskip .5cm
+%Qualified referees include:
+
+%M Eisen (UC Berkeley): Computational biology and regulation of gene expression.
+
+%G Stormo (Washington U) : Computational biology,  protein-DNA interaction.
+
+%F Guillemot (NIMR, London, UK): pro-neural target genes in the mouse; computational prediction and functional analysis.
+
+%R Mann (Columbia U, New-York): gene regulation in {\em Drosophila}: computational prediction and functional analysis.
+
+\vskip .5cm
+Yours sincerely,
+\vskip .5cm
+
+F Schweisguth and V Hakim 
+\end{document}
+

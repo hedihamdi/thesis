@@ -38,21 +38,21 @@
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.3}\'Evolution des enhancers}{\reset@font\mtcSSfont 43}{subsection.2.5.3}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.4}Les \FB@og shadow enhancers \FB@fg }{\reset@font\mtcSSfont 47}{subsection.2.5.4}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.5.5}Par del\`a les enhancers: les \FB@og super-enhancers \FB@fg }{\reset@font\mtcSSfont 48}{subsection.2.5.5}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.6}Pr\'ediction et validation des CRMs}{\reset@font\mtcSfont 50}{section.2.6}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.1}M\'ethodes utilisant la concentration en sites de fixation}{\reset@font\mtcSSfont 50}{subsection.2.6.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.6}Pr\'ediction et validation des CRMs}{\reset@font\mtcSfont 49}{section.2.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.1}M\'ethodes utilisant la concentration en sites de fixation}{\reset@font\mtcSSfont 49}{subsection.2.6.1}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Approches utilisant des motifs connus}{\reset@font\mtcSSSfont 50}{subsubsection.2.6.1.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Approches \textit {de novo}\xspace o\`u les motifs ne sont pas connus}{\reset@font\mtcSSSfont 52}{subsubsection.2.6.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Approches \textit {de novo}\xspace o\`u les motifs ne sont pas connus}{\reset@font\mtcSSSfont 51}{subsubsection.2.6.1.2}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.2}M\'ethodes utilisant la phylog\'enie}{\reset@font\mtcSSfont 52}{subsection.2.6.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Pr\'edictions \`a partir de la contrainte \'evolutive seule}{\reset@font\mtcSSSfont 53}{subsubsection.2.6.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Pr\'edictions \`a partir de la contrainte \'evolutive seule}{\reset@font\mtcSSSfont 52}{subsubsection.2.6.2.1}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Pr\'edictions utilisant la phylog\'enie et des motifs connus}{\reset@font\mtcSSSfont 53}{subsubsection.2.6.2.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Approches utilisant la phylog\'enie pour g\'en\'erer des motifs \textit {de novo}\xspace }{\reset@font\mtcSSSfont 54}{subsubsection.2.6.2.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Approches utilisant la phylog\'enie pour g\'en\'erer des motifs \textit {de novo}\xspace }{\reset@font\mtcSSSfont 53}{subsubsection.2.6.2.3}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.3}M\'ethodes utilisant les marques \'epig\'en\'etiques et de ChIP-seq\xspace pour des TFs}{\reset@font\mtcSSfont 54}{subsection.2.6.3}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Pr\'ediction des promoteurs}{\reset@font\mtcSSSfont 54}{subsubsection.2.6.3.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Pr\'ediction des enhancers}{\reset@font\mtcSSSfont 55}{subsubsection.2.6.3.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.4}Validation exp\'erimentale}{\reset@font\mtcSSfont 55}{subsection.2.6.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.5}Implication des CRMs dans les maladies humaines}{\reset@font\mtcSSfont 57}{subsection.2.6.5}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.7}Bases de donn\'ees}{\reset@font\mtcSfont 59}{section.2.7}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.7.1}Obtention de donn\'ees g\'enomiques}{\reset@font\mtcSSfont 59}{subsection.2.7.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.7.2}Obtention de donn\'ees sur les TFs}{\reset@font\mtcSSfont 61}{subsection.2.7.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.7.3}Outils de visualisation}{\reset@font\mtcSSfont 61}{subsection.2.7.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.7.4}Le projet ENCODE}{\reset@font\mtcSSfont 63}{subsection.2.7.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {$\bullet $}Pr\'ediction des enhancers}{\reset@font\mtcSSSfont 54}{subsubsection.2.6.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.4}Validation exp\'erimentale}{\reset@font\mtcSSfont 56}{subsection.2.6.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.6.5}Implication des CRMs dans les maladies humaines}{\reset@font\mtcSSfont 56}{subsection.2.6.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.7}Bases de donn\'ees}{\reset@font\mtcSfont 57}{section.2.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.7.1}Obtention de donn\'ees g\'enomiques}{\reset@font\mtcSSfont 58}{subsection.2.7.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.7.2}Obtention de donn\'ees sur les TFs}{\reset@font\mtcSSfont 59}{subsection.2.7.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.7.3}Outils de visualisation}{\reset@font\mtcSSfont 60}{subsection.2.7.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.7.4}Le projet ENCODE}{\reset@font\mtcSSfont 62}{subsection.2.7.4}}
