@@ -3,13 +3,14 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: these.aux
 A level-1 auxiliary file: packaging/Avant_Propos.aux
 The style file: custom.bst
+A level-1 auxiliary file: packaging/abstract.aux
 Reallocated field_info (elt_size=4) to 10954 items from 5000.
 Database file #1: biblio/papers.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--empty journal in Jaynes1978p795
 You've used 229 entries,
             2710 wiz_defined-function locations,
-            1968 strings with 73681 characters,
+            1969 strings with 73703 characters,
 and the built_in function-call counts, 158997 in all, are:
 = -- 12405
 > -- 8108

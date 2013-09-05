@@ -1,44 +1,52 @@
 \section*{Introduction du chapitre \thechapter}
 
-Cette dernière partie est consacrée à l'étude de la différenciation musculaire.
-Ce travail a été effectué en collaboration avec l'équipe de Pascal Maire
-à l'Institut Cochin, qui m'a accueilli et m'a permis de réaliser une partie des
-expériences présentées, avec l'aide de Iori Sakakibara. Nous nous intéressons
-ici particulièrement aux homéoprotéines Six$1$ et Six$4$ (\textit{Sine Oculis
-Homeobox Homolog} $1$ et $4$, référées dans la suite par \sixd) qui sont des
-\tfs impliqués dans la régulation des stades successifs de la myogenèse. Ils
-activent en effet les TFs nécessaires à l'engagement de cellules pluripotentes
-dans la voie myogénique et à leur différentiation : Pax3 (\textit{Paired Box
-$3$}) ainsi que les Facteurs de Régulation Myogénique Myf5 (\textit{Myogenic
-Factor $5$}), Mrf4 (\textit{Muscle-Specific Regulatory Factor $4$}, aussi
-appelé Myf$6$), Myod (\textit{Myogenic Differentiation}) et Myog
-(\textit{Myogenin}). Cette régulation passe par la fixation des protéines Six
-sur un site \mef d'environ $10$bp. 
+Dans cette dernière partie, nous avons cherché à tester expérimentalement les
+prédictions de l'algorithme Imogene chez les mammifères. Nous nous sommes pour
+cela intéressé à la différenciation musculaire, ou myogenèse, chez la souris.
+Contrairement au cas des trichomes introduit précédemment, nous n'avions
+initialement pas de CRMs tissu-spécifiques sur lesquels directement tester
+Imogene.  Afin d'obtenir de tels CRMs et d'étudier la logique de régulation
+conférant la tissu-spécificité chez les mammifères, nous avons collaboré avec
+l'équipe de Pascal Maire à l'Institut Cochin, qui m'a accueilli et m'a permis
+de réaliser une partie des expériences présentées, avec l'aide de Iori
+Sakakibara. 
 
-Nous nous sommes d'abord intéressé aux cibles transcriptionnelles de \sixd
-à l'échelle du génome, ainsi qu'à leurs corégulateurs. Pour cela, nous avons
-d'abord réalisé un modèle PWM des sites \mef, que nous avons utilisé pour la
-prédiction de sites. Nous avons par ailleurs récupéré de nombreuses données
-relatives à la différenciation musculaire : \chipseq de TFs et des marques
-épigénétiques des histones, données d'expression de type RNAseq, sites de
-fixation conservés que nous avons obtenus par analyse bioinformatique, etc. Ces
-données ont été regroupées sur le visualiseur de UCSC, permettant d'envisager
-facilement le contexte de régulation de certains gènes d'intérêt. Nous
-présentons plusieurs validations de prédictions obtenues par analyse
+Nous avons commencé par bâtir un atlas de la régulation de la myogenèse en
+regroupant diverses données bioinformatiques et expérimentales.  Nous avons
+notamment centré notre attention sur les homéoprotéines Six$1$ et Six$4$
+(\textit{Sine Oculis Homeobox Homolog} $1$ et $4$, référées dans la suite par
+\sixd), des \tfs centraux impliqués dans la régulation des stades successifs de
+la myogenèse. Ils activent en effet les TFs nécessaires à l'engagement de
+cellules pluripotentes dans la voie myogénique et à leur différentiation : Pax3
+(\textit{Paired Box $3$}) ainsi que les Facteurs de Régulation Myogénique Myf5
+(\textit{Myogenic Factor $5$}), Mrf4 (\textit{Muscle-Specific Regulatory Factor
+$4$}, aussi appelé Myf$6$), Myod (\textit{Myogenic Differentiation}) et Myog
+(\textit{Myogenin}). Nous avons d'abord réalisé un modèle PWM des
+sites \mef de fixation des protéines Six, que nous avons ensuite utilisé pour prédire
+des sites à l'échelle du génome. Nous avons par ailleurs récupéré de nombreuses
+données relatives à la différenciation musculaire : \chipseq de TFs et des
+marques épigénétiques des histones, données d'expression de type RNAseq, sites
+de fixation conservés que nous avons obtenus par analyse bioinformatique, etc.
+Ces données ont été regroupées sur le visualiseur de UCSC, permettant
+d'envisager facilement le contexte de régulation de certains gènes d'intérêt.
+Nous présentons plusieurs validations de prédictions obtenues par analyse
 bioinformatique avec ces données.
 
-Par ailleurs, nous nous sommes intéressé à l'action concertée ou
-\textit{synergie} entre \sixd et le TF maître MyoD au cours de la
-différenciation musculaire. Nous avons trouvé un certain nombre de CRMs fixés
-par MyoD et possédant un site \mef conservé chez les mammifères, et dont le
-gène le plus proche n'est activé qu'en présence de MyoD et de \sixd. Parmi les
-gènes en question figurent \myog, TF requis pour la différenciation terminale,
-et des gènes structuraux comme \textit{Tnnc1} (\textit{Troponin C Type $1$}) ou
-\textit{Ttn} (\textit{Titin}). Nous avons testé l'activité des CRMs prédits et
-en avons trouvé $70\%$ qui récapitulent l'expression du gène le plus proche
-lorsqu'ils sont testés par transfection avec un rapporteur Luciférase. Nous
-avons par ailleurs utilisé Imogene pour prédire des corégulateurs et avons
-testé l'importance des sites par mutagenèse.
+Ensuite, nous avons voulu utiliser cet atlas pour générer un ensemble de CRMs
+sur lesquels nous pourrions tester Imogene. Pour cela, nous nous sommes
+intéressé à l'action concertée ou \textit{synergie} entre \sixd et le TF maître
+MyoD au cours de la différenciation musculaire. Nous avons trouvé un certain
+nombre de CRMs fixés par MyoD (données \chipseq), possédant un site \mef
+conservé chez les mammifères, et dont le gène le plus proche n'est activé qu'en
+présence de MyoD et de \sixd.  Parmi les gènes en question figurent \myog, TF
+requis pour la différenciation terminale, et des gènes structuraux comme
+\textit{Tnnc1} (\textit{Troponin C Type $1$}) ou \textit{Ttn} (\textit{Titin}).
+Nous avons testé l'activité de ces CRMs putatifs et en avons trouvé $70\%$ qui
+récapitulent l'expression du gène le plus proche lorsqu'ils sont testés par
+transfection avec un rapporteur Luciférase. Ceux-ci constituent alors un
+ensemble d'apprentissage adéquat pour tester Imogene. Différents corégulateurs
+ont ainsi été prédits, et nous présentons des tests expérimentaux de mutagenèse
+des sites de fixation correspondants.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 \newpage

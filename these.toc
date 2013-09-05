@@ -1,7 +1,10 @@
 \select@language {french}
 \@frame@switchfalse 
-\contentsline {spsection}{Liste des figures}{v}{division.1}
-\contentsline {chapter}{\fontfamily {ppl}\selectfont Principales abbr\'eviations utilis\'ees}{vii}{division.1}
+\@frame@switchtrue 
+\@thisnotframedtrue 
+\contentsline {spsection}{Liste des figures}{ix}{division.1}
+\@frame@switchfalse 
+\contentsline {chapter}{\fontfamily {ppl}\selectfont Principales abbr\'eviations utilis\'ees}{xi}{division.1}
 \contentsline {starchapter}{Avant-propos}{1}{division.1}
 \contentsline {chapter}{\numberline {Chapitre\ 1~-}Introduction g\'en\'erale.}{3}{division.2}
 \contentsline {section}{\numberline {1.1}Le ph\'enotype cellulaire}{4}{section.2.1}

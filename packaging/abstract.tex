@@ -1,13 +1,14 @@
+    %\AbstractsOnEvenPage
 \begin{ThesisAbstract}
 
-	\begin{FrenchAbstract}
-	
-	
-			\KeyWords{Régulation génétique, Facteur de transcription, Modèle de
-         Potts, Phylogénétique, Algorithme bayésien, différenciation musculaire, trichomes.}
-	\end{FrenchAbstract}
-	
-   \begin{EnglishAbstract}
+    %\setlength{\voffset}{-2cm}
+    %\setlength{\hoffset}{0cm}
+    %\setlength{\topmargin}{0cm}
+    %\setlength{\textheight}{30cm}
+    %\setlength{\textwidth}{20cm}
+%\setlength{\footskip}{0cm}
+
+    \begin{EnglishAbstract}
 
 
             Cellular differentiation and tissue specification depend in part on
@@ -15,37 +16,143 @@
             expression.  These programs result from the interpretation of
             genomic regulatory information by sequence-specific transcription
             factors (TFs). Decoding this information in sequenced genomes is
-            a key issue.  First, we present models that describe the
-            interaction between the TFs and the DNA sequences they bind to,
-            called Transcription Factor Binding Sites (TFBSs). Using a Potts
-            model inspired from spin glass physics along with high-throughput
-            binding data for a variety of Drosophilae and mammalian TFs, we
-            show that TFBSs exhibit correlations among nucleotides and that the
-            account of their contribution in the binding energy greatly
-            improves the predictability of genomic TFBSs.  Then, we present an
-            extension to mammalian genomes of a Bayesian, phylogeny-based
-            algorithm designed to computationally identify the Cis-Regulatory
-            Modules (CRMs) that control gene expression in a set of
-            co-regulated genes, and that was previously applied to Drosophila
-            regulation. Starting with a small number of CRMs in a reference
-            species as a training set, but with no a priori knowledge of the
-            factors acting in trans, the algorithm uses the over-representation
-            and conservation of TFBSs among related species to predict putative
-            regulatory elements along with genomic CRMs underlying
-            co-regulation. We present several applications of this algorithm
-            both in Drosophila and vertebrates. We also present an extension of
-            the algorithm to the case of pattern recognition, showing that CRMs
-            with different patterns of expression can be distinguished on the
-            sole basis of their DNA motifs content.  Finally, we present
-            applications of these modeling tools to real biological cases : the
-            trichomes differentiation in Drosophila, and the skeletal muscle
-            differentiation in the mouse. In both cases, predictions were
-            experimentally validated in a joint work with biological teams, and
-            point towards a great flexibility and robustness of the
+            a key issue.  
+
+            In a first part, we study the interaction between the TFs and the
+            DNA sequences they bind to, called Transcription Factor Binding
+            Sites (TFBSs). Using a Potts model inspired from spin glass physics
+            along with high-throughput binding data for a variety of
+            Drosophilae and mammalian TFs, we show that TFBSs exhibit
+            correlations among nucleotides and that the account of their
+            contribution in the binding energy greatly improves the
+            predictability of genomic TFBSs.  
+
+            Then, we present Imogene, an extension to mammalian genomes of
+            a Bayesian, phylogeny-based algorithm designed to computationally
+            identify the Cis-Regulatory Modules (CRMs) that control gene
+            expression in a set of co-regulated genes, and that was previously
+            applied to Drosophila regulation. Starting with a small number of
+            CRMs in a reference species as a training set, but with no a priori
+            knowledge of the factors acting in trans, the algorithm uses the
+            over-representation and conservation of TFBSs among related species
+            to predict putative regulatory elements along with genomic CRMs
+            underlying co-regulation. We present several applications of this
+            algorithm both in Drosophila and vertebrates.  We also present an
+            extension of the algorithm to the case of pattern recognition,
+            showing that CRMs with different patterns of expression can be
+            distinguished on the sole basis of their DNA motifs content.
+
+            Finally, we present applications of these modeling tools to real
+            biological cases: the trichomes differentiation in Drosophila, and
+            the skeletal muscle differentiation in the mouse.  In both cases,
+            predictions were experimentally validated in a joint work with
+            biological teams, and point towards a great flexibility of the
             cis-regulatory processes. 
-	
-         \KeyWords{Gene regulation, Transcription Factor, Potts Model,
-         Phylogeny, Bayesian algorithm, muscle differentiation, trichomes.}
-      \end{EnglishAbstract}
-	
+
+        %Cellular differentiation and tissue specification depend in part on the
+        %establishment of specific transcriptional programs of gene expression.  These
+        %programs result from the interpretation of genomic regulatory information by
+        %sequence-specific transcription factors (TFs). Decoding this information in
+        %sequenced genomes is a key issue.  
+        %In a first part, we study the interaction between the TFs and the DNA sequences
+        %they bind to, called Transcription Factor Binding Sites (TFBSs). Using a Potts
+        %model inspired from spin glass physics along with high-throughput binding data
+        %for a variety of Drosophilae and mammalian TFs, we show that TFBSs exhibit
+        %correlations among nucleotides and that the account of their contribution in
+        %the binding energy greatly improves the predictability of genomic TFBSs.  
+        %Then, we present Imogene, a Bayesian, phylogeny-based algorithm designed to
+        %computationally identify the Cis-Regulatory Modules (CRMs) and their associated
+        %regulatory motifs that control gene expression in a set of co-regulated genes
+        %in fly or mammalian genomes.  We present several applications of this algorithm
+        %both in Drosophila and vertebrates, and show that it can perform pattern
+        %recognition by distinguishing CRMs with different patterns of expression on the
+        %sole basis of their DNA motifs content.
+        %Finally, we present applications of these modeling tools to real biological
+        %cases: the trichomes differentiation in Drosophila, and the skeletal muscle
+        %differentiation in the mouse.  In both cases, predictions were experimentally
+        %validated in a joint work with biological teams, and point towards a great
+        %flexibility of the cis-regulatory processes. 
+
+        \KeyWords{Gene regulation, Transcription Factor, Potts Model,
+        Phylogeny, Bayesian algorithm, muscle differentiation, trichomes.}
+    \end{EnglishAbstract}
+
+    \newpage
+
+    \begin{FrenchAbstract}
+
+        La différenciation cellulaire et la spécification des tissus
+        biologiques dépendent en partie de l'établissement de programmes
+        d'expression génétique caractéristiques.  Ces programmes sont le résultat de
+        l'interprétation de l'information génomique par des Facteurs de
+        Transcription (TFs) se fixant à des séquences d'ADN spécifiques.
+        Décoder cette information dans les génomes séquencés est donc un enjeu
+        majeur.
+
+        Dans une première partie, nous étudions l'interaction entre les TFs et
+        leurs sites de fixation sur l'ADN. L'utilisation d'un modèle de Potts
+        inspiré de la physique des verres de spin et de données de fixation
+        à grande échelle pour plusieurs TFs de la drosophile et des mammifères
+        permet de montrer que les sites de fixation exhibent des corrélations
+        entre nucléotides. Leur prise en compte permet d'améliorer
+        significativement la prédiction des sites de fixations sur le génome.
+
+        Nous présentons ensuite Imogene, l'extension au cas des mammifères d'un
+        algorithme bayésien utilisant la phylogénie afin d'identifier les
+        motifs et modules de cis-régulation (CRMs) contrôlant l'expression d'un
+        ensemble de gènes co-régulés, qui a précédemment été appliqué au cas de
+        la régulation chez les drosophiles. Partant d'un ensemble
+        d'apprentissage constitué d'un petit nombre de CRMs chez une espèce de
+        référence, et sans connaissance \textit{a priori} des TFs s'y fixant,
+        l'algorithme utilise la sur-représentation et la conservation des sites
+        de fixation chez des espèces proches pour prédire des régulateurs
+        putatifs ainsi que les CRMs génomiques sous-tendant la co-régulation.
+        Nous montrons en particulier qu'Imogene peut distinguer des modules de
+        régulation conduisant à différents motifs d'expression génétique sur la
+        seule base de leur séquence ADN.
+
+        Enfin, nous présentons des applications de ces outils de modélisation
+        à des cas biologiques réels : la différenciation des trichomes chez la
+        drosophile, et la différenciation musculaire chez la souris. Dans les
+        deux cas, les prédictions ont été validées expérimentalement en
+        collaboration avec des équipes de biologistes, et pointent vers une
+        grande flexibilité des processus de cis-régulation.
+
+        %La différenciation cellulaire et la spécification des tissus dépendent en
+        %partie de l'établissement de programmes d'expression génétique spécifiques.
+        %Ces programmes sont le résultat de l'interprétation de l'information génomique
+        %par des Facteurs de Transcription (FTs) se fixant à des séquences d'ADN
+        %spécifiques. Décoder de cette information dans les génomes séquencés est donc
+        %un enjeu majeur.
+        %Dans une première partie, nous étudions l'interaction entre les FTs et leurs
+        %sites de fixation sur l'ADN. L'utilisation d'un modèle de Potts inspiré de la
+        %physique des verres de spin et de données de fixation grande échelle pour
+        %plusieurs FTs de la drosophile et des mammifères permet de montrer que les
+        %sites de fixation exhibent des corrélations entre nucléotides et que leur prise
+        %en compte permet d'améliorer considérablement la prédiction des sites de
+        %fixations sur le génome.
+        %Nous présentons ensuite Imogene, un algorithme bayésien utilisant la phylogénie
+        %qui permet d'identifier chez la drosophile ou les mammifères les motifs et
+        %modules de cis-régulation contrôlant l'expression d'un ensemble de gènes
+        %co-régulés. En particulier, nous montrons qu'Imogene peut distinguer des
+        %modules de régulation conduisant à différents motifs d'expression génétique sur
+        %la seule base de leur séquence ADN.
+        %Enfin, nous présentons des applications de ces outils de modélisation à des cas
+        %biologiques réels : la différenciation des trichomes chez la drosophile, et la
+        %différenciation musculaire chez la souris. Dans les deux cas, les prédictions
+        %ont été validées expérimentalement en collaboration avec des équipes de
+        %biologistes, et pointent vers une grande flexibilité des processus de
+        %cis-régulation.
+
+        \KeyWords{Régulation génétique, Facteur de transcription, Modèle de
+        Potts, Phylogénétique, Algorithme bayésien, différenciation musculaire, trichomes.}
+    \end{FrenchAbstract}
+
+
+      %\newpage
+
 \end{ThesisAbstract}
+
+
+
+

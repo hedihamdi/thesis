@@ -1,4 +1,4 @@
-PWD /Users/Marc/Desktop/work/these/manuscript
+PWD /Users/Marc/Desktop/Work/these/manuscript
 INPUT /usr/local/texlive/2012/texmf.cnf
 INPUT /usr/local/texlive/2012/texmf/web2c/texmf.cnf
 INPUT /usr/local/texlive/2012/texmf-var/web2c/pdftex/pdflatex.fmt
@@ -547,6 +547,8 @@ INPUT these.aux
 INPUT these.aux
 INPUT packaging/Avant_Propos.aux
 INPUT packaging/Avant_Propos.aux
+INPUT packaging/abstract.aux
+INPUT packaging/abstract.aux
 OUTPUT these.aux
 INPUT /usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 INPUT /usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -676,6 +678,8 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/wasy/wasy9.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/wasy/wasy7.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/helvetic/phvb8t.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplb9d.tfm
+INPUT packaging/merci.tex
+INPUT packaging/merci.tex
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplb9d.vf
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/mathpazo/fplmb.tfm
@@ -705,6 +709,9 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplr9d.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1ppl.fd
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1ppl.fd
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/adobe/palatino/pplr9d.tfm
 INPUT these.flg
 INPUT these.flg
@@ -2311,6 +2318,9 @@ INPUT these.brf
 INPUT ./these.brf
 INPUT ./these.brf
 OUTPUT these.brf
+OUTPUT packaging/abstract.aux
+INPUT packaging/abstract.tex
+INPUT packaging/abstract.tex
 OUTPUT these.flg
 OUTPUT these.maf
 INPUT these.mtc
@@ -2326,6 +2336,8 @@ INPUT these.mtc1
 INPUT these.aux
 INPUT packaging/Avant_Propos.aux
 INPUT packaging/Avant_Propos.aux
+INPUT packaging/abstract.aux
+INPUT packaging/abstract.aux
 INPUT ./these.out
 INPUT ./these.out
 INPUT ./these.brf
